@@ -1,0 +1,163 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #0B2228;
+    color: white;
+    font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    max-width: 50rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+#logo {
+    display: inline-block;
+}
+
+main {
+    align-items: center;
+    border-bottom: 0.125rem solid #2C89A0;
+    border-top: 0.125rem solid #2C89A0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+section {
+    margin: 2rem;
+}
+
+#links {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50rem;
+    width: 100%;
+}
+
+.install-link {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 50%;
+    text-decoration: none;
+}
+
+.install-link__icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 10rem;
+    margin: 1rem;
+    width: 10rem;
+}
+
+.install-link__text {
+    color: #37ABC8;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.install-link__text strong {
+    color: white;
+    font-weight: 300;
+}
+
+.install-link:hover {
+    background-color: #113A49;
+}
+
+.icon--chrome {
+    background-image: url(images/icon-chrome-256x256.png);
+}
+
+.icon--firefox {
+    background-image: url(images/icon-firefox-300x310.png);
+}
+
+.icon--github {
+    background-image: url(images/icon-github-white-420x420.png);
+    background-size: 125%;
+}
+
+#screenshots {
+    margin: 2rem 0;
+}
+
+#screenshots img {
+    box-shadow: 0 0 2rem black;
+    display: inline-block;
+    max-width: 100%;
+}
+
+footer {
+    margin: 2rem;
+}
+
+footer a {
+    color: #37ABC8;
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    border-bottom: 0.0625rem solid white;
+    color: white;
+}
+
+@media screen and (max-width: 50em) {
+    .install-link__icon {
+        height: 6rem;
+        width: 6rem;
+    }
+    .install-link__text {
+        font-size: 1.5rem;
+    }
+    footer a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    #links {
+        justify-content: flex-start;
+    }
+    .install-link {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .install-link__icon {
+        height: 4rem;
+        width: 4rem;
+    }
+    .install-link__text {
+        margin: 1rem 1rem 1rem 0;
+    }
+    section {
+        margin: 1rem 0;
+    }
+}
