@@ -113,13 +113,16 @@ section {
 }
 
 footer {
-    margin: 2rem;
+    margin: 1rem;
+    max-width: 50rem;
+    text-align: center;
 }
 
 footer a {
     color: #37ABC8;
     display: inline-block;
     font-size: 2rem;
+    margin: 1rem;
     text-decoration: none;
 }
 
