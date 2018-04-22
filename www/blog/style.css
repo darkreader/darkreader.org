@@ -3,6 +3,7 @@ body {
     background-color: #0b2228;
     color: #37abc8;
     font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -31,8 +32,14 @@ li {
 }
 
 figure {
+    margin-left: 0;
+    margin-right: 0;
     max-width: 100%;
     text-align: center;
+}
+
+figure img {
+    max-width: 100%;
 }
 
 figcaption{

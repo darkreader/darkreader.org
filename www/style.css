@@ -9,6 +9,7 @@ body {
     background-color: #0B2228;
     color: white;
     font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-weight: 300;
 }
