@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Introducing Dynamic Theme mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../../images/darkreader-icon-256x256.png" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <meta name="theme-color" content="#0B2228" />
+    <meta name="og:title" content="Dark Reader Dynamic Theme mode" />
+    <meta name="og:image" content="http://darkreader.org/images/darkreader-screenshot-filter.png" />
+</head>
+
+<body>
+    <header>
+        <a class="header-logo" href="../../"></a>
+    </header>
+    <main>
+        <article>
+            <h1>Dark Reader 4: Introducing Dynamic Theme mode</h1>
+            <h6>April 22, 2018</h6>
+
+            <p>
+                CSS filters faithfully served us since 2014. The idea of inverting a web page contents preserving colors hue quickly gained
+                it's popularity. The solution was fast and simple, but several problems were introduced:
+                <ul>
+                    <li>Dark web-site parts become white.</li>
+                    <li>Scrolling performance gets sluggish.</li>
+                    <li>Text becomes blurred.</li>
+                    <li>Popup elements disappear.</li>
+                    <li>Colors get washed-out.</li>
+                    <li>The whole sites are not displayed in recent Chrome and Firefox.</li>
+                </ul>
+                We've received thousands e-mails and reviews describing these problems. Based on your feedback we are introducing the Dynamic
+                Theme mode.
+            </p>
+            <h3>What is the Dynamic Theme mode?</h3>
+            <p>
+                <ul>
+                    <li>Dynamic Theme mode analyzes web-site colors and background images reducing lightness where necessary.</li>
+                    <li>Makes text (or background in Light mode) of a sepia tone reducing harmful blue light.</li>
+                    <li>Leaves photos colors untouched.</li>
+                    <li>Doesn't disable sub-pixel rendering technology leaving text edges sharp.</li>
+                    <li>It is much more performant and works fast even on mobile devices (using Firefox for Android or any Chromium
+                        browser that supports extensions).</li>
+                    <li>You can still adjust brightness and contrast settings.</li>
+                </ul>
+                To activate the Dynamic Theme mode open Dark Reader settings popup, click
+                <strong>More</strong> and choose
+                <strong>Dynamic</strong>. Tune your brightness and contrast settings until you feel comfortable.
+            </p>
+            <p>
+                The work on Dynamic Theme mode is still in progress, your feedback is welcome. See our
+                <a href="https://github.com/darkreader/darkreader/projects/1" target="_blank">roadmap</a> and
+                <a href="https://github.com/darkreader/darkreader/issues" target="_blank">list of bugs and feature suggestions</a>.
+            </p>
+        </article>
+    </main>
+</body>
+
+</html>

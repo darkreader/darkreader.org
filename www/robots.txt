@@ -1,2 +1,2 @@
 User-Agent: *
-Disallow: /privacy.html
+Disallow: /privacy/
