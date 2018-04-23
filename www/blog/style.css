@@ -79,3 +79,13 @@ figcaption{
 .donate-button__image:hover .donate-button__image__hover {
     opacity: 1;
 }
+
+::-moz-selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+::selection {
+    background-color: #e96c4c;
+    color: white;
+}

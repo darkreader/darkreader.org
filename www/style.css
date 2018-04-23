@@ -132,6 +132,16 @@ footer a:hover {
     color: white;
 }
 
+::-moz-selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+::selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
 @media screen and (max-width: 50em) {
     .install-link__icon {
         height: 6rem;
