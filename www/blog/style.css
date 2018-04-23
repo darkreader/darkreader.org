@@ -54,3 +54,28 @@ figcaption{
     text-decoration: none;
     width: 2em;
 }
+
+.donate-button {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+}
+
+.donate-button__text {
+    visibility: hidden;
+}
+
+.donate-button__image {
+    display: inline-block;
+    max-width: 25em;
+    width: 100%;
+}
+
+.donate-button__image__hover {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.donate-button__image:hover .donate-button__image__hover {
+    opacity: 1;
+}
