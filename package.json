@@ -1,0 +1,23 @@
+{
+  "name": "darkreader.org",
+  "version": "0.0.0",
+  "description": "Dark Reader official website",
+  "private": true,
+  "scripts": {
+    "blog": "node tasks/blog.js",
+    "start": "http-server ./www -p 9003"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkreader/darkreader.org.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darkreader/darkreader.org/issues"
+  },
+  "homepage": "https://github.com/darkreader/darkreader.org",
+  "devDependencies": {
+    "fs-extra": "6.0.0",
+    "http-server": "0.11.1",
+    "marked": "0.3.19"
+  }
+}

@@ -15,12 +15,17 @@
 <body>
     <header>
         <a class="header-logo" href="../"></a>
-        <h1>Dark Reader blog</h1>
     </header>
     <nav>
-        <li>
-            <a href="dynamic-theme/">Dynamic Theme mode</a>
-        </li>
+        <ul>
+            $LIST-ITEM-START
+            <li>
+                <a href="$ID/">$DATE –
+                    <strong>$HEADLINE</strong>
+                </a>
+            </li>
+            $LIST-ITEM-END
+        </ul>
     </nav>
 </body>
 
