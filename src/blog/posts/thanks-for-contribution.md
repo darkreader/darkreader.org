@@ -2,7 +2,7 @@
 
 Last week we have started a [crowdfunding campaign](../dynamic-theme/).
 
-Sorry for that disturbing splash screen, that was a hasty decision to open a new tab as soon as app updates.
+Sorry for that disturbing splash screen. That was a hasty decision to open a new tab as soon as app updates.
 
 <figure>
     <img src="/images/intrusive-popup.jpg" alt="Disturbing splash screen" />
