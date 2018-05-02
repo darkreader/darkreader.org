@@ -57,10 +57,12 @@ section {
 
 .install-link {
     align-items: center;
+    background-color: #113A4900;
     display: inline-flex;
     flex-direction: column;
     min-width: 50%;
     text-decoration: none;
+    transition: background-color 125ms;
 }
 
 .install-link__icon {
@@ -120,15 +122,17 @@ footer {
 }
 
 footer a {
+    border-bottom: 0.0625rem solid #ffffff00;
     color: #37ABC8;
     display: inline-block;
     font-size: 2rem;
     margin: 1rem;
     text-decoration: none;
+    transition: color 125ms, border-color 125ms;
 }
 
 footer a:hover {
-    border-bottom: 0.0625rem solid white;
+    border-bottom-color: white;
     color: white;
 }
 
@@ -166,12 +170,20 @@ footer a:hover {
     }
     .install-link__icon {
         height: 4rem;
+        margin-right: 0.5rem;
         width: 4rem;
     }
     .install-link__text {
-        margin: 1rem 1rem 1rem 0;
+        margin: 1rem 0;
     }
     section {
         margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 25em) {
+    .install-link__icon {
+        height: 2.5rem;
+        width: 2.5rem;
     }
 }

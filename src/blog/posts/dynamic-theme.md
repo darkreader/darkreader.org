@@ -14,10 +14,11 @@ We've received thousands e-mails and reviews describing these problems. Based on
 Theme mode.
 
 <figure>
-    <img src="/images/darkreader-dynamic-mode-twitch.png" alt="Dark Reader Dynamic Theme mode" />
+    <img class="no-shadow" src="/images/darkreader-dynamic-mode-twitch.png" alt="Dark Reader Dynamic Theme mode" />
 </figure>
 
 ### What is the Dynamic Theme mode?
+
 - Dynamic Theme mode analyzes web-site colors and background images reducing lightness where necessary.
 - Makes text (or background in Light mode) of a sepia tone reducing harmful blue light.
 - Leaves photos colors untouched.
