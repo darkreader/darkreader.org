@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dark Reader help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../images/darkreader-icon-256x256.png" />
+    <link rel="stylesheet" type="text/css" href="../blog/style.css" />
+    <meta name="theme-color" content="#0B2228" />
+    <meta name="og:title" content="Dark Reader help" />
+    <meta name="og:image" content="http://darkreader.org/images/darkreader-screenshot-filter.png" />
+</head>
+
+<body>
+    <header>
+        <a class="header-logo header-logo--help" href="../"></a>
+    </header>
+    <article>
+        <p>This document will guide you through Dark Reader features.</p>
+        <ul>
+            <li>
+                <a href="#top-section">Top section</a>
+            </li>
+            <li>
+                <a href="#filter-settings">Filter settings</a>
+            </li>
+            <li>
+                <a href="#custom-site-settings">Custom site settings</a>
+            </li>
+            <li>
+                <a href="#site-list">Site list</a>
+            </li>
+            <li>
+                <a href="#more-tab">More tab</a>
+            </li>
+            <li>
+                <a href="#theme-generation-modes">Theme generation modes</a>
+            </li>
+            <li>
+                <a href="#bottom-section">Bottom section</a>
+            </li>
+            <li>
+                <a href="#using-dev-tools">Using the Developer Tools</a>
+            </li>
+            <li>
+                <a href="#contacts">Contacts</a>
+            </li>
+        </ul>
+
+
+        <h2 id="top-section">Top section</h2>
+        <img src="/images/help/darkreader-top-section.png" alt="Dark Reader top section" style="width: 15rem;" />
+
+        <ul>
+            <li>
+                <strong>Toggle site</strong> button adds current site into ignore list (or removes from there).
+            </li>
+            <li>
+                <strong>On/Off</strong> switch enables or disables the extension.
+            </li>
+            <li>
+                Click on the links under the buttons to
+                <strong>setup hotkeys</strong> or modify existing.
+            </li>
+            <li>
+                If the toggle button is greyed-out, it means that browser restricts injecting scripts into current page.
+            </li>
+        </ul>
+
+
+        <h2 id="filter-settings">Filter settings</h2>
+        <img src="/images/help/darkreader-filter-settings.png" alt="Dark Reader filter settings" style="width: 15rem;" />
+
+        <p>Adjust the preferred filter values.</p>
+
+
+        <h2 id="custom-site-settings">Custom site settings</h2>
+        <img src="/images/help/darkreader-custom-site-settings.png" alt="Dark Reader custom settings" style="width: 15rem;" />
+
+        <p>
+            <strong>Apply to site</strong> toggle button makes settings to be applied to the current website only.
+        </p>
+
+        <p>
+            Click the button, adjust the settings, click again to cancel.
+        </p>
+
+
+        <h2 id="site-list">Site list</h2>
+        <img src="/images/help/darkreader-site-list.png" alt="Dark Reader site list" style="width: 15rem;" />
+
+        <ul>
+            <li>
+                <strong>Invert listed only</strong> will affect only listed websites and leave others untouched.
+            </li>
+            <li>
+                <strong>Not invert listed</strong> behaves like ignore list.
+            </li>
+            <li>
+                Possible values are
+                <code>google.com, mail.google.com, google.*, google.com/maps</code> etc.
+            </li>
+            <li>
+                Clicking on
+                <strong>Toggle</strong> button described above adds site into this list.
+            </li>
+        </ul>
+
+
+        <h2 id="more-tab">More tab</h2>
+        <img src="/images/help/darkreader-more-tab.png" alt="Dark Reader more tab" style="width: 15rem;" />
+
+        <ul>
+            <li>
+                <strong>Pick a font</strong> from list (or enter font name on Firefox), click the
+                <strong>checkbox</strong>.
+            </li>
+            <li>
+                Adjust the
+                <strong>text stroke</strong>.
+            </li>
+            <li>
+                Choose a
+                <strong>theme generation mode</strong>.
+            </li>
+        </ul>
+
+
+        <h2 id="theme-generation-modes">Theme generation modes</h2>
+        <ul>
+            <li>
+                <strong>Filter</strong> – initial Dark Reader mode based on CSS filters. It
+                <strong>inverts the whole page</strong> and
+                <strong>reverts some parts</strong> back. Requires GPU resources.
+                <strong>Fast</strong> and powerful, but has several issues: disables text sub-pixel rendering, doesn't handle already
+                dark parts, causes lags on large pages, fails to render some pages in Firefox. MacOS users should update
+                their OS up to 10.13 to prevent rendering bugs.
+            </li>
+            <li>
+                <strong>Filter+</strong> – same as Filter, but is based on custom SVG filters and
+                <strong>handles colors better</strong> making images less dull.
+            </li>
+            <li>
+                <strong>Static</strong> – generates basic stylesheet.
+                <strong>Fast</strong>, but ignores website colors, can hide some icons or other content.
+            </li>
+            <li>
+                <strong>Dynamic</strong> – deeply analyzes website stylesheets, background images, vector graphics. Requires some
+                resources on initial page load, but produces
+                <strong>the best</strong> visual results. The work on this mode is in progress, but it already works well for many
+                modern websites.
+            </li>
+        </ul>
+
+
+        <h2 id="bottom-section">Bottom section</h2>
+        <img src="/images/help/darkreader-footer.png" alt="Dark Reader footer" style="width: 15rem;" />
+
+        <li>
+            Read our
+            <strong>privacy policy</strong>, follow us on
+            <strong>Twitter</strong>.
+        </li>
+        <li>
+            <strong>Donate</strong> – if you like the extension, consider supporting the active Dark Reader development. Payments
+            are held by Open Collective, which uses Stripe at the moment.
+        </li>
+        <li>
+            <strong>News</strong> – notifies about release notes and important events.
+        </li>
+        <li>
+            <strong>Developer tools</strong> – opens a config editor for the current theme mode.
+        </li>
+
+        <h2 id="using-dev-tools">Using the Developer Tools</h2>
+        <p>
+            If you are familiar with CSS selectors, you can suggest a fix for some websites. Read how to use the developer tools
+            <a href="https://github.com/darkreader/darkreader#how-to-contribute">here</a>.
+        </p>
+
+        <h2 id="contacts">Contacts</h2>
+        <p>
+            For any questions e-mail to
+            <a href="mailto:darkreaderapp@gmail.com">darkreaderapp@gmail.com</a>
+        </p>
+    </article>
+</body>
+
+</html>
