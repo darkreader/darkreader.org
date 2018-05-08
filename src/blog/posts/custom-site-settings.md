@@ -10,7 +10,7 @@ Some most requested features were implemented in version 4.4.
 
 It is now possible to set up settings for a specific website.
 
-Click **Apply to example.com** button and adjust the filter settings or switch between Filter/Dynamic/Static mode for current website. Click again to cancel and use global settings.
+Click **Apply to example.com** button and adjust the filter settings or switch between Filter/Dynamic/Static mode for current website. Click again to cancel and use the global settings.
 
 ### iFrames content handling
 
@@ -29,7 +29,9 @@ Now the content inside iFrames is fully processed.
 
 Dark Reader now processes inline styles and SVG images: newsletters, vector icons and charts should look better.
 
-Many other Dynamic Theme mode bugs were fixed, you can track the progress [here](https://github.com/darkreader/darkreader/commits). Dynamic mode became default for new users.
+Many other Dynamic Theme bugs were fixed,
+you can track the progress <a href="https://github.com/darkreader/darkreader/commits" target="_blank">here</a>.
+Dynamic mode became default for new users.
 
 ### Other bug fixes
 - Firefox browser theme will not be changed by default.
