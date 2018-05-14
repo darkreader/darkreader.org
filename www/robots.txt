@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow: /privacy/
+Disallow: /404.html
