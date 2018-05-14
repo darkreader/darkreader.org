@@ -2,7 +2,7 @@
 
 This document will guide you through Dark Reader features.
 
-- [F.A.Q.](#faq)
+- [FAQ](#faq)
 - [Contacts](#contacts)
 - [Top section](#top-section)
 - [Filter settings](#filter-settings)
@@ -47,7 +47,7 @@ Click the button, adjust the settings, click again to cancel.
 - Use **Invert listed only** if you wish Dark Reader to work only on listed websites.
 - **Not invert listed** will prevent the extension from working on listed websites.
 - Possible values are `google.com, mail.google.com, google.*, google.com/maps` etc.
-- Clicking on **Toggle** button described above adds site into this list.
+- Clicking on **Toggle** button adds site into this list.
 
 <h2 id="more-tab">More tab</h2>
 
@@ -65,7 +65,7 @@ Click the button, adjust the settings, click again to cancel.
     <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
 </figure>
 
-- **Filter** – initial Dark Reader mode based on CSS filters.
+- **Filter** is initial Dark Reader mode based on CSS filters.
 It **inverts the whole page** and **reverts some parts** back.
 Requires GPU resources.
 **Fast** and powerful, but has several issues:
@@ -73,11 +73,11 @@ disables text sub-pixel rendering,
 inverts already dark parts into light,
 causes lags on large pages,
 fails to render some pages in Firefox.
-- **Filter+** – same as Filter, but is based on custom SVG filters
+- **Filter+** it the same as Filter, but is based on custom SVG filters
 and **handles colors better** making images less dull.
 Works bad in Firefox.
-- **Static** – rapidly generates basic stylesheet.
-- **Dynamic** – deeply analyzes website stylesheets, background images, vector graphics.
+- **Static** rapidly generates a basic stylesheet.
+- **Dynamic** deeply analyzes website stylesheets, background images, vector graphics.
 Requires some resources on initial page load,
 but produces **the best** visual results.
 The work on this mode is in progress,
@@ -101,9 +101,9 @@ If you are familiar with CSS selectors, you can suggest a fix for some websites.
 Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
 
 
-<h2 id="faq">F.A.Q.</h2>
+<h2 id="faq">FAQ</h2>
 
-#### The extension asks for permissions to read website data and browsing history
+#### The extension asks for permissions to read website data
 
 The extension needs these permissions to be able to analyze and modify website appearence,
 determine if a website is disabled by your settings or use site-specific rules.
@@ -111,7 +111,7 @@ We do not insert ads and do not collect any data or send it anywhere.
 The extension is fully open-source and has no obfuscated code.
 Our monetization is transparent and is based on user's donations.
 
-#### Extensions store page and settings pages remain white
+#### Erweiterungen Store-Seite und Einstellungen Seiten bleiben weiß
 
 The extension has no access to these pages.
 
