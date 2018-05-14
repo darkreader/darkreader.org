@@ -1,0 +1,69 @@
+html,
+body {
+    background-color: #0b2228;
+    color: #37abc8;
+    font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+h1 {
+    color: #e96c4c;
+    font-weight: 300;
+}
+
+a {
+    color: #37abc8;
+    outline: none;
+    transition: color 125ms;
+}
+
+a:hover {
+    color: white;
+}
+
+li {
+    list-style-type: circle;
+}
+
+article img {
+    box-shadow: 0 0.25rem 2.5rem rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    max-width: 100%;
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    text-align: center;
+}
+
+figcaption {
+    font-size: smaller;
+}
+
+.help-header-logo {
+    background-image: url(/images/darkreader-help.svg);
+    background-size: cover;
+    display: inline-block;
+    height: 8em;
+    text-decoration: none;
+    width: 32em;
+}
+
+::-moz-selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+::selection {
+    background-color: #e96c4c;
+    color: white;
+}

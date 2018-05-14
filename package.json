@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "blog": "node tasks/blog.js",
+    "help": "node tasks/help.js",
     "start": "http-server ./www -p 9003"
   },
   "repository": {
