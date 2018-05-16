@@ -35,7 +35,7 @@ Adjust the filter values, that better fit your screen parameters and lighting in
 
 <img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
 
-**Apply to** button makes settings to be applied to the current website only.
+**Only for** button makes settings to be applied to the current website only.
 
 Click the button, adjust the settings, click again to cancel.
 
