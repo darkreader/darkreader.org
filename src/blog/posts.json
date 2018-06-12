@@ -1,5 +1,10 @@
 [
     {
+        "id": "product-hunt",
+        "date": "2018-06-12T17:09Z",
+        "headline": "Dark Reader was featured on Product Hunt, app was translated"
+    },
+    {
         "id": "custom-site-settings",
         "date": "2018-05-08T16:02Z",
         "headline": "v4.4: Custom site settings, invert iFrames, many Dynamic fixes"
