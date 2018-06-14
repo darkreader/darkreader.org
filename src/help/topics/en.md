@@ -111,7 +111,7 @@ We do not insert ads and do not collect any data or send it anywhere.
 The extension is fully open-source and has no obfuscated code.
 Our monetization is transparent and is based on user's donations.
 
-#### Erweiterungen Store-Seite und Einstellungen Seiten bleiben weiß
+#### Extensions' store page and settings pages remain white
 
 The extension has no access to these pages.
 
@@ -119,6 +119,11 @@ The extension has no access to these pages.
 
 The extension cannot change the appearence of a new tab or browser (it can since Firefox 60).
 Install some dark theme or new tab extension from extensions store.
+
+#### Screen flashes white when opening a new tab or navigating a website
+
+Before loading a website, Chrome shows theme background color by default,
+so you should install some dark theme from the store.
 
 #### The extension doesn't work at all
 

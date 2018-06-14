@@ -1,11 +1,11 @@
 # Dark Reader was featured on Product Hunt
 
+Product Hunt is a popular website where you can discover some new apps.
+Today Dark Reader was [featured there](https://www.producthunt.com/posts/dark-reader-2). 🎉
+
 <figure>
     <img src="/images/product-hunt.png" alt="Dark Reader on Product Hunt" />
 </figure>
-
-Product Hunt is a popular website where you can discover some new apps.
-Today Dark Reader was [featured there](https://www.producthunt.com/posts/dark-reader-2).
 
 ### Help page
 

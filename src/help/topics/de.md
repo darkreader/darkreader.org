@@ -121,6 +121,11 @@ Die Erweiterung hat keinen Zugriff auf diese Seiten.
 Die Erweiterung kann nicht das Aussehen einer neuen Registerkarte ändern oder Browser (es kann seit Firefox 60).
 Installieren Sie ein dunkles Design oder eine neue Tab-Erweiterung aus dem Erweiterungsladen.
 
+#### Der Bildschirm blinkt weiß, wenn Sie einen neuen Tab öffnen oder auf einer Website navigieren
+
+Vor dem Laden einer Website zeigt Chrome standardmäßig die Hintergrundfarbe des Themas an.
+Du solltest also ein dunkles Thema aus dem Laden installieren.
+
 #### Die Erweiterung funktioniert überhaupt nicht
 
 Wenn Sie ähnliche Erweiterungen für den dunklen Modus installiert haben, deaktivieren Sie sie, laden die Tabs neu.
