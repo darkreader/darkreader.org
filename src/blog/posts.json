@@ -1,5 +1,10 @@
 [
     {
+        "id": "stylish",
+        "date": "2018-07-04T15:47Z",
+        "headline": "Move your static CSS from Stylish to Dark Reader"
+    },
+    {
         "id": "product-hunt",
         "date": "2018-06-12T17:09Z",
         "headline": "Dark Reader was featured on Product Hunt, app was translated"
