@@ -26,6 +26,15 @@ header {
     display: inline-block;
 }
 
+header h1 {
+    color: #e96c4c;
+    font-size: 2.75rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
 main {
     align-items: center;
     border-bottom: 0.125rem solid #2C89A0;
@@ -156,6 +165,9 @@ footer a:hover {
 }
 
 @media screen and (max-width: 40em) {
+    header h1 {
+        font-size: 2rem;
+    }
     #links {
         justify-content: flex-start;
     }
@@ -178,6 +190,9 @@ footer a:hover {
 }
 
 @media screen and (max-width: 25em) {
+    header h1 {
+        font-size: 1.5rem;
+    }
     .install-link__icon {
         height: 2.5rem;
         width: 2.5rem;
