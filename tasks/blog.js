@@ -42,8 +42,8 @@ async function writeIndex() {
 }
 
 async function copyFiles() {
-    await fs.copyFile('src/blog/style.css', 'www/blog/style.css');
-    await fs.copyFile('src/blog/posts.json', 'www/blog/posts.json');
+    await fs.copy('src/blog/style.css', 'www/blog/style.css');
+    await fs.copy('src/blog/posts.json', 'www/blog/posts.json');
 }
 
 Promise.all([

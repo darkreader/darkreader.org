@@ -63,7 +63,7 @@ async function writeIndex() {
 }
 
 async function copyFiles() {
-    await fs.copyFile('src/help/style.css', 'www/help/style.css');
+    await fs.copy('src/help/style.css', 'www/help/style.css');
 }
 
 Promise.all([
