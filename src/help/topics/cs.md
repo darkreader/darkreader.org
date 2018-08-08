@@ -16,7 +16,7 @@ Tento dokument Vám napomůže v používání rozšíření Dark Reader.
 
 <h2 id="top-section">Horní část</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" />
+<img src="/images/help/darkreader-top-section.png" alt="Horní část" style="width: 15rem;" />
 
 - Tlačítko **Přepnout současnou stránku** přidá současnou stránku do seznamu ignorovaných (nebo ji z něj odstraní).
 - Přepínač **Zap/Vyp** zapne nebo vypne rozšíření.
@@ -26,14 +26,14 @@ Tento dokument Vám napomůže v používání rozšíření Dark Reader.
 
 <h2 id="filter-settings">Nastavení filtru</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" />
+<img src="/images/help/darkreader-filter-settings.png" alt="Nastavení filtru" style="width: 15rem;" />
 
 Upravte nastavení filtru, aby lépe odpovídalo vaší obrazovce a osvětlení v místnosti.
 
 
 <h2 id="custom-site-settings">Vlastní nastavení stránky</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
+<img src="/images/help/darkreader-custom-site-settings.png" alt="Vlastní nastavení stránky" style="width: 15rem;" />
 
 Tlačítko **Pouze pro** slouží pro použití nastavení pouze pro současnou stránku.
 
@@ -42,7 +42,7 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
 
 <h2 id="site-list">Seznam stránek</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" />
+<img src="/images/help/darkreader-site-list.png" alt="Seznam stránek" style="width: 15rem;" />
 
 - Použijte **Invertovat stránky v seznamu** pokud si přejete, aby Dark Reader fungoval pouze a právě na těchto stránkách.
 - **Neinvertovat stránky v seznamu** zabrání rozšíření, aby fungovalo na těchto stránkách.
@@ -51,7 +51,7 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
 
 <h2 id="more-tab">Záložka Více</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" />
+<img src="/images/help/darkreader-more-tab.png" alt="Záložka Více" style="width: 15rem;" />
 
 - **Vybrat písmo** ze seznamu (nebo ve Firefoxu napište jméno), klikněte na **zaškrtávací pole**.
 - Upravte **tloušťku písma**.
@@ -61,7 +61,7 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
 <h2 id="theme-generation-modes">Generátory motivů</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
+    <img src="/images/help/darkreader-theme-modes.png" alt="Filtr+ vs. Statický vs. Dynamický" />
     <figcaption>Filtr+ vs. Statický vs. Dynamický</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ nicméně již nyní funguje spolehlivě na mnoha moderních stránkách.
 
 <h2 id="bottom-section">Dolní část</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" />
+<img src="/images/help/darkreader-footer.png" alt="Dolní část" style="width: 15rem;" />
 
 - Přečtěte si naše **pravidla ochrany soukromí**, sledujte nás na **Twitteru**.
 - **Přispějte** – pokud se Vám rozšíření líbí, zvažte podporu probíhajícího vývoje Dark Readeru.
@@ -145,7 +145,7 @@ Otevřete stránku **chrome://extensions**, nalezněte **Dark Reader**, kliknět
 
 #### Rozšíření nefunguje s místními soubory
 
-Otevřete stránku **chrome://extensions** , nalezněte **Dark Reader**, klikněte na **Povolit přístup k URL souboru**.
+Otevřete stránku **chrome://extensions**, nalezněte **Dark Reader**, klikněte na **Povolit přístup k URL souboru**.
 
 #### Celá stránka zmizí při použití generátoru Filtr
 
@@ -155,4 +155,4 @@ Pokud používáte Firefox, jedná se nejspíše o chybu v prohlížeči, použi
 
 <h2 id="contacts">Kontakt</h2>
 
-Dotazy zasílejte na e-mail [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Dotazy (pouze v angličtině) zasílejte na e-mail [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
