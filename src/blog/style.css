@@ -8,9 +8,14 @@ body {
 }
 
 body {
+    padding: 1em;
+}
+
+header,
+nav,
+main {
     max-width: 40em;
     margin: 0 auto;
-    padding: 1em;
 }
 
 h1 {

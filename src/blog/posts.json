@@ -1,5 +1,10 @@
 [
     {
+        "id": "500k-users",
+        "date": "2018-09-13T14:28Z",
+        "headline": "We have 500,000 users! Security issue fixed in Chrome 69"
+    },
+    {
         "id": "stylish",
         "date": "2018-07-04T15:47Z",
         "headline": "Move your static CSS from Stylish to Dark Reader"
