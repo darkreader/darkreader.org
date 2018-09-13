@@ -1,73 +1,71 @@
 # Hilfe (Deutsch)
 
-###### Help us translate [this help page](https://github.com/darkreader/darkreader.org/blob/master/src/help/topics/de.md) and [the extension](https://github.com/darkreader/darkreader/blob/master/src/_locales/de.config). English help topic is [here](../en/).
-
 Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 - [FAQ](#faq)
-- [Kontakte](#contacts)
+- [Kontakt](#contacts)
 - [Oberer Abschnitt](#top-section)
 - [Filtereinstellungen](#filter-settings)
 - [Benutzerdefinierte Websiteeinstellungen](#custom-site-settings)
 - [Websiteliste](#site-list)
-- [Mehr tab](#more-tab)
-- [Themengenerierungsmodi](#theme-generation-modes)
+- [Mehr-Tab](#more-tab)
+- [Verfahren zur Stylegenerierung](#theme-generation-modes)
 - [Unterer Abschnitt](#bottom-section)
 - [Verwenden der Entwicklerwerkzeuge](#using-dev-tools)
 
 
 <h2 id="top-section">Oberer Abschnitt</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Oberer Abschnitt" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-top-section-de.png" alt="Oberer Abschnitt" style="width: 15rem;" />
 
-- Die **Schalten** Schaltfläche fügt die aktuelle Site in die Ignorierliste ein (oder entfernt sie von dort).
-- **Ein/Aus** -Schalter aktiviert oder deaktiviert die Erweiterung.
-- Klicken Sie auf die Links unter den Schaltflächen, um **Hotkeys** zu ändern.
+- Die Schaltfläche "↻" mit dem Domainnamen fügt die aktuelle (Sub-)Domain in die **Ignorierliste** ein (oder entfernt sie von dort).
+- Der **Ein-Aus-Schalter** aktiviert oder deaktiviert Dark Reader.
+- Klicken Sie auf die Links unter den Schaltflächen, um die **Tastenkürzel** zu ändern.
 - Wenn die Umschaltfläche ausgegraut ist, bedeutet dies, dass der Browser das Einspeisen von Skripten in die aktuelle Seite einschränkt.
 
 
 <h2 id="filter-settings">Filtereinstellungen</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filtereinstellungen" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-filter-settings-de.png" alt="Filtereinstellungen" style="width: 15rem;" />
 
-Passen Sie die Filterwerte an, die Ihren Bildschirmparametern und der Beleuchtung im Raum besser entsprechen.
+Passen Sie die Filterwerte so an, dass sie Ihren Bildschirmparametern und der Beleuchtung im Raum am besten entsprechen.
 
 
 <h2 id="custom-site-settings">Benutzerdefinierte Websiteeinstellungen</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Benutzerdefinierte Websiteeinstellungen" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-custom-site-settings-de.png" alt="Benutzerdefinierte Websiteeinstellungen" style="width: 15rem;" />
 
-Mit der Schaltfläche **Nur für** anwenden werden Einstellungen vorgenommen, die nur auf die aktuelle Website angewendet werden.
+Mit der Schaltfläche **Nur für** werden Einstellungen vorgenommen, die nur auf die aktuelle Website angewendet werden.
 
-Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an, klicken Sie erneut, um abzubrechen.
+Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie erneut, um abzubrechen.
 
 
 <h2 id="site-list">Websiteliste</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Websiteliste" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-site-list-de.png" alt="Websiteliste" style="width: 15rem;" />
 
-- Verwenden Sie **Nur invertiert anzeigen**, wenn Sie möchten, dass Dark Reader nur auf gelisteten Websites funktioniert.
-- **Nicht invertiert anzeigen** verhindert, dass die Erweiterung auf gelisteten Websites funktioniert.
+- Verwenden Sie **Nur invertieren**, wenn Sie möchten, dass Dark Reader nur auf den gelisteten Webseiten funktioniert.
+- **Nicht invertieren** verhindert, dass die Erweiterung auf den gelisteten Webseiten aktiv ist.
 - Mögliche Werte sind `google.com, mail.google.com, google.*, google.com/maps` usw.
-- Ein Klick auf **Schalten** Button fügt die Site in diese Liste ein.
+- Ein Klick auf die Schaltfläche "↻" mit dem Domainnamen fügt die Seite in diese Liste ein.
 
-<h2 id="more-tab">Mehr tab</h2>
+<h2 id="more-tab">Mehr-Tab</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Mehr tab" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-more-tab-de.png" alt="Mehr tab" style="width: 15rem;" />
 
-- **Wählen Sie eine Schrift** aus der Liste (oder geben Sie den Schriftnamen in Firefox ein) und klicken Sie auf das **Kontrollkästchen**.
-- Passen Sie den **Textschlag** an.
-- Wählen Sie einen **Themengenerierungsmodus**.
+- **Wählen Sie eine Schriftart** aus der Liste (oder geben Sie den Schriftnamen in Firefox ein) und klicken Sie auf das Kontrollkästchen.
+- Passen Sie die **Textstärke** an.
+- Wählen Sie ein **Verfahren zur Stylegenerierung**.
 
 
-<h2 id="theme-generation-modes">Themengenerierungsmodi</h2>
+<h2 id="theme-generation-modes">Verfahren zur Stylegenerierung</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Statischer vs. Dynamischer Modus" />
-    <figcaption>Filter+ vs. Statischer vs. Dynamischer Modus</figcaption>
+    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Statisches vs. Dynamisches Verfahren" />
+    <figcaption>Filter+ vs. Statisches vs. Dynamisches Verfahren</figcaption>
 </figure>
 
-- **Filter** ist der Dark Reader-Modus, der auf CSS-Filtern basiert.
+- **Filter** ist das Verfahren, das auf CSS-Filtern basiert.
 Es **invertiert die ganze Seite** und **kehrt einige Teile** zurück.
 Erfordert GPU-Ressourcen.
 **Schnell** und mächtig, hat aber mehrere Probleme:
@@ -76,13 +74,13 @@ invertiert bereits dunkle Teile in Licht,
 verursacht Verzögerungen auf großen Seiten,
 Fehler beim Rendern einiger Seiten in Firefox.
 - **Filter+** ist dasselbe wie Filter, basiert jedoch auf benutzerdefinierten SVG-Filtern
-und ** behandelt Farben besser ** macht Bilder weniger langweilig.
-- **Statisch** generiert schnell ein grundlegendes Stylesheet.
+und **behandelt Farben besser** macht Bilder weniger langweilig.
+- **Statisch** generiert schnell ein einfaches Stylesheet.
 - **Dynamisch** analysiert Website-Stylesheets, Hintergrundbilder, Vektorgrafiken.
 Benötigt einige Ressourcen beim ersten Laden der Seite,
 aber produziert **die besten** visuellen Ergebnisse.
-Die Arbeit an diesem Modus ist in Arbeit,
-aber es funktioniert bereits gut für viele moderne Websites.
+Dieses Verfahren ist noch in Arbeit,
+aber es funktioniert bereits gut für viele moderne Webseiten.
 
 
 <h2 id="bottom-section">Unterer Abschnitt</h2>
@@ -90,55 +88,55 @@ aber es funktioniert bereits gut für viele moderne Websites.
 <img src="/images/help/darkreader-footer.png" alt="Unterer Abschnitt" style="width: 15rem;" />
 
 - Lesen Sie unsere **Datenschutzerklärung**, folgen Sie uns auf Twitter.
-- **Spenden** - Wenn dir die Erweiterung gefällt, sollten Sie die aktive Entwicklung von Dark Reader unterstützen.
-Crowdfunding wird von Open Collective gehalten, das derzeit Stripe für das Halten von Zahlungen verwendet.
-- **Nachricht** - informiert über Versionshinweise und wichtige Ereignisse.
-- **Entwicklerwerkzeuge** - Öffnet einen Konfigurations-Editor für den aktuellen Themenmodus.
+- **Spenden** - Wenn Ihnen die Erweiterung gefällt, sollten Sie die aktive Entwicklung von Dark Reader unterstützen.
+Das Crowdfunding läuft momentan über Open Collective, das derzeit Stripe für Zahlungen verwendet.
+- **Neuigkeiten** - informiert über Versionshinweise und wichtige Ereignisse.
+- **Erweitert** - Öffnet einen Konfigurations-Editor für das aktuelle Verfahren zur Stylegenerierung ("Entwicklerwerkzeuge").
 
 
 <h2 id="using-dev-tools">Verwenden der Entwicklerwerkzeuge</h2>
 
-Wenn Sie mit CSS-Selektoren vertraut sind, können Sie eine Korrektur für einige Websites vorschlagen.
-Lesen Sie, wie Sie die Entwicklerwerkzeuge verwenden [hier](https://github.com/darkreader/darkreader#how-to-contribute).
+Wenn Sie mit CSS-Selektoren vertraut sind, können Sie Korrekturen für Webseiten vorschlagen.
+Lesen Sie [hier](https://github.com/darkreader/darkreader#how-to-contribute), wie Sie die Entwicklerwerkzeuge verwenden.
 
 
 <h2 id="faq">FAQ</h2>
 
 #### Die Erweiterung fragt nach Berechtigungen zum Lesen von Websitedaten und Browserverlauf
 
-Die Erweiterung benötigt diese Berechtigungen, um den Webseitenauftritt zu analysieren und zu modifizieren,
-Bestimmen Sie, ob eine Website durch Ihre Einstellungen deaktiviert ist oder verwenden Sie ortspezifische Regeln.
-Wir fügen keine Anzeigen ein und sammeln keine Daten oder senden sie nirgendwo hin.
+Die Erweiterung benötigt diese Berechtigungen, um das Erscheinungsbild der Seite zu analysieren, zu modifizieren und um zu bestimmen,
+ob Sie spezielle Regeln für diese Seite festgelegt haben.
+Wir fügen keine Werbung ein, sammeln keine Daten oder senden sie irgendwo hin.
 Die Erweiterung ist vollständig Open-Source und hat keinen verschleierten Code.
 Unsere Monetarisierung ist transparent und basiert auf Spenden der Nutzer.
 
-#### Die Seiten für die Erweiterungsladen und die Einstellungsseiten bleiben weiß
+#### Die Seiten für die Addon-Galerien und die Browser-Einstellungsseiten bleiben weiß
 
 Die Erweiterung hat keinen Zugriff auf diese Seiten.
 
-#### Neue tab und Browser-Thema bleiben weiß
+#### Neuer Tab und die Browseroberfläche bleiben weiß
 
-Die Erweiterung kann nicht das Aussehen einer neuen Registerkarte ändern oder Browser (es kann seit Firefox 60).
-Installieren Sie ein dunkles Design oder eine neue Tab-Erweiterung aus dem Erweiterungsladen.
+Die Erweiterung kann nicht das Aussehen eines neuen Tabs ändern oder den Browser selbst (erst ab Firefox 60).
+Installieren Sie ein dunkles Design oder eine entsprechende Erweiterung aus der Addon-Galerie.
 
-#### Der Bildschirm blinkt weiß, wenn Sie einen neuen Tab öffnen oder auf einer Website navigieren
+#### Der Bildschirm blitzt weiß auf, wenn Sie einen neuen Tab öffnen oder auf einer Webseite navigieren
 
-Vor dem Laden einer Website zeigt Chrome standardmäßig die Hintergrundfarbe des Themas an.
-Du solltest also ein dunkles Thema aus dem Laden installieren.
+Vor dem Laden einer Webseite zeigt Chrome standardmäßig die Hintergrundfarbe des Themes an.
+Du solltest also ein dunkles Theme aus dem Laden installieren.
 
 #### Die Erweiterung funktioniert überhaupt nicht
 
-Wenn Sie ähnliche Erweiterungen für den dunklen Modus installiert haben, deaktivieren Sie sie, laden die Tabs neu.
+Wenn Sie ähnliche Erweiterungen für den dunklen Modus installiert haben, deaktivieren Sie sie und laden Sie die Tabs neu.
 Klicken Sie auf das Symbol Dark Reader, prüfen Sie, ob die Schaltfläche oben rechts auf **Ein** eingestellt ist.
-Öffnen Sie die tab **Website-Liste** und prüfen Sie, ob **Nicht umgelistet** ausgewählt ist.
-Wenn nichts hilft, ist etwas Schreckliches passiert, mailen Sie uns.
+Öffnen Sie den Reiter **Websiteliste** und prüfen Sie, ob **Nicht invertieren** ausgewählt ist.
+Wenn nichts hilft und etwas Schlimmes passiert ist, mailen Sie uns.
 
-#### Die Website wird nicht korrekt angezeigt oder funktioniert langsam
+#### Die Webseite wird nicht korrekt angezeigt oder funktioniert nur langsam
 
-Bitte senden Sie die Website-Adresse, den Screenshot, Ihre Betriebssystem- und Browserversion an unsere E-Mail-Adresse.
-Wir werden versuchen, den Grund herauszufinden, zumindest für eine beliebte Website.
-Versuchen Sie auch, den **Themengenerierungsmodus** zu ändern oder versuchen Sie den **Lichtmodus**.
-Überprüfen Sie, ob die Website nicht unter der tab **Websiteliste** aufgeführt ist.
+Bitte senden Sie die Adresse (URL), einen Screenshot, Ihre Betriebssystem-, Browser- und Darkreader-version an unsere E-Mail-Adresse.
+Wir werden versuchen, den Grund herauszufinden, zumindest für beliebte Webseiten.
+Versuchen Sie auch, das **Verfahren zur Stylegenerierung** zu ändern oder versuchen Sie, bei den Filtern den **Lichtmodus** durch Klick auf "Licht" zu aktivieren.
+Überprüfen Sie, dass die Webseite nicht unter **Websiteliste** aufgeführt ist.
 
 #### Die Erweiterung funktioniert nicht im Inkognito-Modus
 
@@ -148,12 +146,12 @@ Versuchen Sie auch, den **Themengenerierungsmodus** zu ändern oder versuchen Si
 
 Öffnen Sie die Seite **chrome://extensions**, suchen Sie nach **Dark Reader**, klicken Sie auf **Zugriff auf Datei-URLs zulassen**.
 
-#### Die gesamte Website wird im Filtermodus nicht angezeigt
+#### Die gesamte Webseite wird im Filtermodus nicht angezeigt
 
 Wenn Sie Chrome für Mac OS verwenden, aktualisieren Sie Mac OS bis 10.13. Dies sollte Ihre Grafiktreiber aktualisieren.
-Wenn Sie Firefox verwenden, handelt es sich höchstwahrscheinlich um einen Browser-Fehler. Verwenden Sie für solche Websites einen anderen Modus.
+Wenn Sie Firefox verwenden, handelt es sich höchstwahrscheinlich um einen Browserfehler. Verwenden Sie für solche Webseiten ein anderes Verfahren zur Stylegenerierung.
 
 
-<h2 id="contacts">Kontakte</h2>
+<h2 id="contacts">Kontakt</h2>
 
-Für Fragen (Wir verstehen nur Englisch) senden Sie uns eine E-Mail an [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Für Fragen (wir verstehen nur Englisch) senden Sie uns eine E-Mail an [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
