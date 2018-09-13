@@ -1,7 +1,5 @@
 # Hilfe (Deutsch)
 
-###### Help us translate [this help page](https://github.com/darkreader/darkreader.org/blob/master/src/help/topics/de.md) and [the extension](https://github.com/darkreader/darkreader/blob/master/src/_locales/de.config). English help topic is [here](../en/).
-
 Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 - [FAQ](#faq)
@@ -18,7 +16,7 @@ Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 <h2 id="top-section">Oberer Abschnitt</h2>
 
-<img src="https://user-images.githubusercontent.com/1388389/45293603-f039a980-b4f8-11e8-96c4-5e054532e2e7.png" alt="Oberer Abschnitt" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-top-section-de.png" alt="Oberer Abschnitt" style="width: 15rem;" />
 
 - Die Schaltfläche "↻" mit dem Domainnamen fügt die aktuelle (Sub-)Domain in die **Ignorierliste** ein (oder entfernt sie von dort).
 - Der **Ein-Aus-Schalter** aktiviert oder deaktiviert Dark Reader.
@@ -28,14 +26,14 @@ Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 <h2 id="filter-settings">Filtereinstellungen</h2>
 
-<img src="https://user-images.githubusercontent.com/1388389/45293599-efa11300-b4f8-11e8-821a-7feddfdaab32.png" alt="Filtereinstellungen" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-filter-settings-de.png" alt="Filtereinstellungen" style="width: 15rem;" />
 
 Passen Sie die Filterwerte so an, dass sie Ihren Bildschirmparametern und der Beleuchtung im Raum am besten entsprechen.
 
 
 <h2 id="custom-site-settings">Benutzerdefinierte Websiteeinstellungen</h2>
 
-<img src="https://user-images.githubusercontent.com/1388389/45293597-efa11300-b4f8-11e8-9d71-3e5a5b0545e5.png" alt="Benutzerdefinierte Websiteeinstellungen" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-custom-site-settings-de.png" alt="Benutzerdefinierte Websiteeinstellungen" style="width: 15rem;" />
 
 Mit der Schaltfläche **Nur für** werden Einstellungen vorgenommen, die nur auf die aktuelle Website angewendet werden.
 
@@ -44,7 +42,7 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
 
 <h2 id="site-list">Websiteliste</h2>
 
-<img src="https://user-images.githubusercontent.com/1388389/45293605-f039a980-b4f8-11e8-8c87-6c7c23270df7.png" alt="Websiteliste" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-site-list-de.png" alt="Websiteliste" style="width: 15rem;" />
 
 - Verwenden Sie **Nur invertieren**, wenn Sie möchten, dass Dark Reader nur auf den gelisteten Webseiten funktioniert.
 - **Nicht invertieren** verhindert, dass die Erweiterung auf den gelisteten Webseiten aktiv ist.
@@ -53,7 +51,7 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
 
 <h2 id="more-tab">Mehr-Tab</h2>
 
-<img src="https://user-images.githubusercontent.com/1388389/45293601-f039a980-b4f8-11e8-8ce4-9e8a8ab86f37.png" alt="Mehr tab" style="width: 15rem;" />
+<img src="/images/help/de/darkreader-more-tab-de.png" alt="Mehr tab" style="width: 15rem;" />
 
 - **Wählen Sie eine Schriftart** aus der Liste (oder geben Sie den Schriftnamen in Firefox ein) und klicken Sie auf das Kontrollkästchen.
 - Passen Sie die **Textstärke** an.
@@ -63,7 +61,7 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
 <h2 id="theme-generation-modes">Verfahren zur Stylegenerierung</h2>
 
 <figure>
-    <img src="https://user-images.githubusercontent.com/1388389/45293598-efa11300-b4f8-11e8-9e70-a252689de884.png" alt="Filter+ vs. Statisches vs. Dynamisches Verfahren" />
+    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Statisches vs. Dynamisches Verfahren" />
     <figcaption>Filter+ vs. Statisches vs. Dynamisches Verfahren</figcaption>
 </figure>
 
