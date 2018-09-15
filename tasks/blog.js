@@ -15,10 +15,17 @@ async function writePosts() {
 
     async function writePost({id, date, headline}) {
         const markdown = await fs.readFile(`src/blog/posts/${id}.md`, {encoding: 'utf8'});
+        const contentHTML = marked(markdown);
+        const imgMatch = contentHTML.match(/<img[\s\S]+?src="(.+?)"/);
+        let previewURL = imgMatch ? imgMatch[1] : '/images/darkreader-dynamic-mode-twitch.png';
+        if (!previewURL.startsWith('http')) {
+            previewURL = `https://darkreader.org/${previewURL.replace(/^\//, '')}`;
+        }
         let result = template;
         result = replace(result, '$HEADLINE', headline);
         result = replace(result, '$DATE', formatDate(date));
-        result = replace(result, '$CONTENT', marked(markdown));
+        result = replace(result, '$PREVIEW', previewURL);
+        result = replace(result, '$CONTENT', contentHTML);
         await fs.outputFile(`www/blog/${id}/index.html`, result, {encoding: 'utf8'});
     }
 
