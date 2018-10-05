@@ -105,6 +105,10 @@ section {
     background-image: url(images/icon-firefox-300x310.png);
 }
 
+.icon--safari {
+    background-image: url(images/icon-safari-1024x1024.png);
+}
+
 .icon--github {
     background-image: url(images/icon-github-white-420x420.png);
     background-size: 125%;
