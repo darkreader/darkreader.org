@@ -1,5 +1,10 @@
 [
     {
+        "id": "safari",
+        "date": "2018-10-10T14:19Z",
+        "headline": "Dark Reader for Safari released, Firefox app was featured"
+    },
+    {
         "id": "500k-users",
         "date": "2018-09-13T14:28Z",
         "headline": "We have 500,000 users! Security issue fixed in Chrome 69"
