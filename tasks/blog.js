@@ -17,8 +17,18 @@ async function writePosts() {
         const markdown = await fs.readFile(`src/blog/posts/${id}.md`, {encoding: 'utf8'});
         const contentHTML = marked(markdown);
 
+        let previewURL;
         const imgMatch = contentHTML.match(/<img[\s\S]+?src="(.+?)"/);
-        let previewURL = imgMatch ? imgMatch[1] : '/images/darkreader-preview-medium.png';
+        if (imgMatch) {
+            previewURL = imgMatch[1];
+        } else {
+            const youtubeMatch = contentHTML.match(/<iframe[\s\S]+?src="https:\/\/www\.youtube\.com\/embed\/(.+?)(\?.+)?"/);
+            if (youtubeMatch) {
+                previewURL = `https://img.youtube.com/vi/${youtubeMatch[1]}/maxresdefault.jpg`;
+            } else {
+                previewURL = '/images/darkreader-preview-medium.png';
+            }
+        }
         if (!previewURL.startsWith('https://')) {
             previewURL = `https://darkreader.org/${previewURL.replace(/^\//, '')}`;
         }
