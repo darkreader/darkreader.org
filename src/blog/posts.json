@@ -1,5 +1,10 @@
 [
     {
+        "id": "time-settings",
+        "date": "2018-12-06T19:17Z",
+        "headline": "v4.7: Time settings, UI and performance improvements"
+    },
+    {
         "id": "safari",
         "date": "2018-10-10T14:19Z",
         "headline": "Dark Reader for Safari released, Firefox app was featured"
