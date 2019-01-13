@@ -1,5 +1,10 @@
 [
     {
+        "id": "product-hunt-golden-kitty-2018",
+        "date": "2019-01-13T17:48Z",
+        "headline": "Dark Reader got nominated for Product Hunt Lifehack 2018"
+    },
+    {
         "id": "time-settings",
         "date": "2018-12-06T19:17Z",
         "headline": "v4.7: Time settings, UI and performance improvements"
