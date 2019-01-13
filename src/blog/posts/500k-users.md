@@ -90,7 +90,7 @@ Taucharts.api.tickFormat.add('m-y', function (x) {
     showGridLines: 'y',
     color: {
       brewer: [
-        '#2c89a0',
+        '#2f7485',
         '#e96c4c'
       ]
     }
@@ -113,7 +113,7 @@ Taucharts.api.tickFormat.add('m-y', function (x) {
         dim: 'Date',
         val: new Date('2015-06-24'),
         text: 'v3',
-        color: '#37abc8'
+        color: '#53a1b3'
       }, {
         dim: 'Date',
         val: new Date('2014-07-07'),
@@ -240,7 +240,7 @@ function getUsersCSV() {
     showGridLines: 'y',
     color: {
       brewer: [
-        '#2c89a0',
+        '#2f7485',
         '#e96c4c'
       ]
     }
@@ -394,7 +394,7 @@ Taucharts.api.tickFormat.add('usd', function (x) { return '$' + x; });
     showGridLines: 'y',
     color: {
       brewer: [
-        '#2c89a0',
+        '#2f7485',
         '#e96c4c'
       ]
     },
@@ -464,7 +464,7 @@ var rect = container.node().getBoundingClientRect();
 var width = rect.width;
 var height = rect.height;
 var color = d3.scaleLinear()
-  .range(['#2c89a0', '#e96c4c'])
+  .range(['#2f7485', '#e96c4c'])
   .domain(d3.extent(data));
 var treemap = d3.treemap()
   .size([width, height])
@@ -568,7 +568,7 @@ function getData(){
 }
 text[data-label="Chrome"],
 text[data-label="Installs"] {
-  fill: #2c89a0 !important;
+  fill: #2f7485 !important;
 }
 text[data-label="Firefox"],
 text[data-label="Uninstalls"] {

@@ -1,7 +1,7 @@
 html,
 body {
-    background-color: #0b2228;
-    color: #37abc8;
+    background-color: #141e24;
+    color: #53a1b3;
     font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ h6 {
 }
 
 a {
-    color: #37abc8;
+    color: #53a1b3;
     outline: none;
     transition: color 125ms;
 }

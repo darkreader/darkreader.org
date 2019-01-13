@@ -11,7 +11,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(11,34,40)",
+      "color": "rgb(20,30,36)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -73,7 +73,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(11,34,40)",
+      "color": "rgb(20,30,36)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -160,7 +160,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(44,137,160)",
+      "color": "rgb(49,110,125)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -215,7 +215,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(44,137,160)",
+      "color": "rgb(49,110,125)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -274,7 +274,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(44,137,160)",
+      "color": "rgb(49,110,125)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -325,7 +325,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(44,137,160)",
+      "color": "rgb(49,110,125)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -376,7 +376,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(44,137,160)",
+      "color": "rgb(49,110,125)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -427,7 +427,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(44,137,160)",
+      "color": "rgb(49,110,125)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -770,7 +770,7 @@
         },
         {
          "offset": 1,
-         "color": "rgb(217,160,109)",
+         "color": "rgb(215,155,102)",
          "doc-model": "ObservableObject"
         }
        ],
@@ -830,7 +830,7 @@
         },
         {
          "offset": 1,
-         "color": "rgb(217,160,109)",
+         "color": "rgb(215,155,102)",
          "doc-model": "ObservableObject"
         }
        ],
@@ -869,7 +869,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(11,34,40)",
+      "color": "rgb(20,30,36)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -912,7 +912,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(11,34,40)",
+      "color": "rgb(20,30,36)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -955,7 +955,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(11,34,40)",
+      "color": "rgb(20,30,36)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -1002,7 +1002,7 @@
     {
      "name": "Curve",
      "fill": {
-      "color": "rgb(11,34,40)",
+      "color": "rgb(20,30,36)",
       "gradient": null,
       "doc-model": "ObservableObject"
      },
@@ -1693,11 +1693,11 @@
  ],
  "rulers": [],
  "colors": [
-  "rgb(11,34,40)",
-  "rgb(44,137,160)",
-  "rgb(175,221,233)",
+  "rgb(20,30,36)",
+  "rgb(49,110,125)",
+  "rgb(139,188,199)",
   "rgb(255,255,255)",
-  "rgb(217,160,109)",
+  "rgb(215,155,102)",
   "rgb(233,108,76)",
   "rgb(200,55,55)",
   "rgb(80,22,22)"

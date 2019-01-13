@@ -1,6 +1,6 @@
 html,
 body {
-    background-color: #0B2228;
+    background-color: #141e24;
     color: white;
     font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
     -moz-osx-font-smoothing: grayscale;
@@ -37,8 +37,8 @@ header h1 {
 
 main {
     align-items: center;
-    border-bottom: 0.125rem solid #2C89A0;
-    border-top: 0.125rem solid #2C89A0;
+    border-bottom: 0.125rem solid #2f7485;
+    border-top: 0.125rem solid #2f7485;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -62,7 +62,7 @@ section {
 
 .install-link {
     align-items: center;
-    background-color: #113A4900;
+    background-color: #19394500;
     display: inline-flex;
     flex-direction: column;
     min-width: 50%;
@@ -81,7 +81,7 @@ section {
 }
 
 .install-link__text {
-    color: #37ABC8;
+    color: #53a1b3;
     display: inline-block;
     font-size: 2rem;
     margin: 0 1rem 1rem 1rem;
@@ -94,7 +94,7 @@ section {
 }
 
 .install-link:hover {
-    background-color: #113A49;
+    background-color: #193945;
 }
 
 .icon--chrome {
@@ -132,7 +132,7 @@ footer {
 
 footer a {
     border-bottom: 0.0625rem solid #ffffff00;
-    color: #37ABC8;
+    color: #53a1b3;
     display: inline-block;
     font-size: 2rem;
     margin: 1rem;
