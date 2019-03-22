@@ -155,4 +155,4 @@ Si vous utilisez Firefox, il s'agit probablement d'un bogue de navigateur. Utili
 
 <h2 id="contacts">Contacts</h2>
 
-Toutes questions peuvent être envoyées par e-mail à [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Toutes questions (nous comprenons seulement l'anglais) peuvent être envoyées par e-mail à [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
