@@ -29,7 +29,8 @@ async function publish() {
     console.info('\x1b[32m', 'Files copied', '\x1b[0m');
     await run(
         [
-            'git add -A',
+            'git pull',
+            '&& git add -A',
             `&& git commit -m "Publish ${(new Date()).toISOString().substring(0, 10)}"`,
             '&& git push',
         ].join(' '),
