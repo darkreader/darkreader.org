@@ -53,9 +53,9 @@ Haga click en el botón, ajuste la configuración, haga click de nuevo para canc
 
 <img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" />
 
-- **Pick a font** from list (or enter font name on Firefox), click the **checkbox**.
-- Adjust the **text stroke**.
-- Choose a **theme generation mode**.
+- **Seleccione una fuente** de la lista (o introduzca el nombre de la fuente en Firefox), haga clic en la **casilla de verificación**.
+- Ajuste el **Trazo del texto**.
+- Elija un **Modo de generación del tema**.
 
 
 <h2 id="theme-generation-modes">Theme generation modes</h2>
