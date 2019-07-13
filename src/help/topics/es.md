@@ -1,6 +1,6 @@
-Ayuda (Español)
+# Ayuda (Español)
 
-Este documento te guiará a través de las características de Dark Reader.
+Este documento le guiará a través de las características de Dark Reader.
 
 - [FAQ](#faq)
 - [Contactos](#contacts)
@@ -20,24 +20,23 @@ Este documento te guiará a través de las características de Dark Reader.
 
 - El Botón de **Alternar sitio** añade el sitio actual a la lista de ignorados (o lo quita).
 - El botón **Sí/No** habilita o deshabilita la extensión.
-- Haz click en los enlaces debajo de los botones para **modificar las teclas de acceso rápido**. 
+- Haga click en los enlaces debajo de los botones para **modificar las teclas de acceso rápido**. 
 - Si el botón de alternar está en gris, significa que el navegador restringe la inyección de scripts en la página actual.
 
 
-<h2 id="filter-settings">Filter settings</h2>
+<h2 id="filter-settings">Ajustes de filtros</h2>
 
 <img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" />
 
-Adjust the filter values, that better fit your screen parameters and lighting in the room.
+Ajuste los valores de los filtros para que se ajusten mejor a los parámetros de la pantalla y a la iluminación de la habitación.
 
-
-<h2 id="custom-site-settings">Custom site settings</h2>
+<h2 id="custom-site-settings">Ajustes de sitios personalizados</h2>
 
 <img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
 
-**Only for** button makes settings to be applied to the current website only.
+El botón **Sólo para** hace que los ajustes se apliquen sólo en el sitio web actual.
 
-Click the button, adjust the settings, click again to cancel.
+Haga click en el botón, ajuste la configuración, haga click de nuevo para cancelar.
 
 
 <h2 id="site-list">Site list</h2>
