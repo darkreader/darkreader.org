@@ -8,7 +8,7 @@ Este documento le guiará a través de las características de Dark Reader.
 - [Ajustes de filtros](#filter-settings)
 - [Ajustes de sitios personalizados](#custom-site-settings)
 - [Lista de sitios](#site-list)
-- [Pestaña más](#more-tab)
+- [Pestaña Más](#more-tab)
 - [Modos de generación de temas](#theme-generation-modes)
 - [Sección inferior](#bottom-section)
 - [Usando las herramientas para desarrolladores](#using-dev-tools)
@@ -30,6 +30,7 @@ Este documento le guiará a través de las características de Dark Reader.
 
 Ajuste los valores de los filtros para que se ajusten mejor a los parámetros de la pantalla y a la iluminación de la habitación.
 
+
 <h2 id="custom-site-settings">Ajustes de sitios personalizados</h2>
 
 <img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
@@ -39,16 +40,16 @@ El botón **Sólo para** hace que los ajustes se apliquen sólo en el sitio web 
 Haga click en el botón, ajuste la configuración, haga click de nuevo para cancelar.
 
 
-<h2 id="site-list">Site list</h2>
+<h2 id="site-list">Lista de sitios</h2>
 
 <img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" />
 
-- Use **Invert listed only** if you wish Dark Reader to work only on listed websites.
-- **Not invert listed** will prevent the extension from working on listed websites.
-- Possible values are `google.com, mail.google.com, google.*, google.com/maps` etc.
-- Clicking on **Toggle** button adds site into this list.
+- Utilice **Invertir sólo listados** si desea que Dark Reader funcione solo en los sitios web de la lista.
+- **No invertir listados** impedirá que la extensión funcione en los sitios web listados.
+- Los valores posibles son `google.com, mail.google.com, google. *, Google.com / maps` etc.
+- Al hacer click en el botón **Alternar sitio** se agrega el sitio a esta lista.
 
-<h2 id="more-tab">More tab</h2>
+<h2 id="more-tab">Pestaña Más</h2>
 
 <img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" />
 
