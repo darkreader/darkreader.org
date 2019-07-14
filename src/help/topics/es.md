@@ -95,64 +95,64 @@ Crowdfunding está mantenido por Open Collective, que utiliza Stripe en el momen
 - **Herramientas** - abre un editor de configuración para el modo de tema actual.
 
 
-<h2 id="using-dev-tools">Using the Developer tools</h2>
+<h2 id="using-dev-tools">Usando las herramientas para desarrolladores</h2>
 
-If you are familiar with CSS selectors, you can suggest a fix for some websites.
-Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
+Si está familiarizado con los selectores de CSS, puede sugerir una solución para algunos sitios web.
+Lea cómo usar las herramientas para desarrolladores [aquí](https://github.com/darkreader/darkreader#how-to-contribute).
 
 
 <h2 id="faq">FAQ</h2>
 
-#### The extension asks for permissions to read website data
+#### La extensión solicita permisos para leer datos del sitio web
 
-The extension needs these permissions to be able to analyze and modify website appearence,
-determine if a website is disabled by your settings or use site-specific rules.
-We do not insert ads and do not collect any data or send it anywhere.
-The extension is fully open-source and has no obfuscated code.
-Our monetization is transparent and is based on user's donations.
+La extensión necesita estos permisos para poder analizar y modificar la apariencia del sitio web,
+determine si un sitio web está deshabilitado por su configuración o utilice reglas específicas del sitio.
+No insertamos anuncios y no recopilamos datos ni los enviamos a ninguna parte.
+La extensión es completamente de código abierto y no tiene ningún código ofuscado.
+Nuestra monetización es transparente y se basa en las donaciones de los usuarios.
 
-#### Extensions' store page and settings pages remain white
+#### La página de la tienda de extensiones y las páginas de configuración permanecen en blanco
 
-The extension has no access to these pages.
+La extensión no tiene acceso a estas páginas.
 
-#### New tab page and browser theme remain white
+#### La página de nueva pestaña y el tema del navegador permanecen en blanco
 
-The extension cannot change the appearence of a new tab or browser (it can since Firefox 60).
-Install some dark theme or new tab extension from extensions store.
+La extensión no puede cambiar la apariencia de una nueva pestaña o navegador (puede hacerlo desde Firefox 60).
+Instale un tema oscuro o una nueva extensión de pestaña desde la tienda de extensiones.
 
-#### Screen flashes white when opening a new tab or navigating a website
+#### La pantalla parpadea en blanco al abrir una nueva pestaña o al navegar por un sitio web
 
-Before loading a website, Chrome shows theme background color by default,
-so you should install some dark theme from the store.
+Antes de cargar un sitio web, Chrome muestra el color de fondo del tema por defecto,
+por lo que debe instalar algún tema oscuro de la tienda.
 
-#### The extension doesn't work at all
+#### La extensión no funciona en absoluto
 
-If you have similar dark mode extensions installed, disable them, reload tabs.
-Click Dark Reader icon, check if top-right button is set to **On**.
-Open **Site list** tab, check that **Not invert listed** is selected.
-If nothing helps, something terrible has happened, e-mail us.
+Si tiene instaladas extensiones de modo oscuro similares, desactívelas, vuelva a cargar las pestañas.
+Haga clic en el icono de Dark Reader, verifique si el botón superior derecho está situado en **On**.
+Abra la pestaña **Lista de sitios**, verifique que esté seleccionado **No invertir listados**.
+Si nada ayuda, algo terrible ha sucedido, envíenos un correo electrónico.
 
-#### The website is displayed incorrectly or works slow
+#### El sitio web se muestra incorrectamente o funciona lento
 
-Please, send the website address, screenshot, your OS and browser versions to our e-mail.
-We will try to investigate the reason, at least for a popular website.
-Also try changing **theme generation mode** or try using **Light mode**.
-Check that website is not listed under **Site list** tab.
+Por favor, envíe la dirección del sitio web, una captura de pantalla, su sistema operativo y las versiones de su navegador a nuestro correo electrónico.
+Intentaremos investigar el motivo, al menos para un sitio web popular.
+También intente cambiar **el modo de generación del tema** o intente usar **Modo claro**.
+Compruebe que el sitio web no aparece en la pestaña **Lista de sitios**.
 
-#### The extension doesn't work in incognito mode
+#### La extensión no funciona en modo incógnito
 
-Open **chrome://extensions** page, find **Dark Reader**, click **Allow in incognito**.
+Abra la página **chrome://extensions**, busque **Dark Reader**, haga click en **Permitir en incógnito**.
 
-#### The extension doesn't work for local files
+#### La extensión no funciona para archivos locales
 
-Open **chrome://extensions** page, find **Dark Reader**, click **Allow access to file URLs**.
+Abra la página **chrome://extensions**, busque **Dark Reader**, haga click en **Permitir el acceso a las URLs de los archivos**.
 
-#### Entire website is not displayed in Filter mode
+#### El sitio web completo no se muestra en el modo de filtro
 
-If you are using Chrome for Mac OS, update Mac OS up to 10.13, this should update your video drivers.
-If you are using Firefox, this is most likely a browser bug, use another mode for such websites.
+Si está utilizando Chrome para Mac OS, actualice Mac OS hasta 10.13, esto debería actualizar sus controladores de video.
+Si está utilizando Firefox, es muy probable que se trate de un error del navegador, utilice otro modo para tales sitios web.
 
 
-<h2 id="contacts">Contacts</h2>
+<h2 id="contacts">Contactos</h2>
 
-For any questions e-mail to [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Para cualquier pregunta, envíe un correo electrónico a [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
