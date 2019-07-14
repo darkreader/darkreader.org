@@ -58,30 +58,30 @@ Haga click en el botón, ajuste la configuración, haga click de nuevo para canc
 - Elija un **Modo de generación del tema**.
 
 
-<h2 id="theme-generation-modes">Theme generation modes</h2>
+<h2 id="theme-generation-modes">Modos de generación de temas</h2>
 
 <figure>
     <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
     <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
 </figure>
 
-- **Filter** is initial Dark Reader mode based on CSS filters.
-It **inverts the whole page** and **reverts some parts** back.
-Requires GPU resources.
-**Fast** and powerful, but has several issues:
-disables text sub-pixel rendering,
-inverts already dark parts into light,
-causes lags on large pages,
-fails to render some pages in Firefox.
-- **Filter+** it the same as Filter, but is based on custom SVG filters
-and **handles colors better** making images less dull.
-Works bad in Firefox.
-- **Static** rapidly generates a basic stylesheet.
-- **Dynamic** deeply analyzes website stylesheets, background images, vector graphics.
-Requires some resources on initial page load,
-but produces **the best** visual results.
-The work on this mode is in progress,
-but it already works well for many modern websites.
+- **Filtro** es el modo inicial de Dark Reader y está basado en filtros CSS.
+**Invierte toda la página** y **revierte algunas partes**.
+Requiere recursos de la GPU.
+**Rápido** y poderoso, pero tiene varios problemas:
+desactiva el renderizado de subpíxeles del texto,
+invierte las partes ya oscuras en claras,
+causa retrasos en páginas grandes,
+falla al renderizar algunas páginas en Firefox.
+- **Filtro+** es igual que Filtro, pero se basa en filtros SVG personalizados
+y **maneja mejor los colores** haciendo las imágenes menos opacas.
+Funciona mal en Firefox.
+- **Estático** genera rápidamente una hoja de estilo básica.
+- **Dinámico** analiza en profundidad las hojas de estilo del sitio web, imágenes de fondo, gráficos vectoriales.
+Requiere algunos recursos en la carga inicial de la página,
+pero produce **los mejores** resultados visuales.
+El trabajo en este modo está en proceso,
+pero ya funciona bien para muchos sitios web modernos.
 
 
 <h2 id="bottom-section">Bottom section</h2>
