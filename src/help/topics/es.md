@@ -84,15 +84,15 @@ El trabajo en este modo está en proceso,
 pero ya funciona bien para muchos sitios web modernos.
 
 
-<h2 id="bottom-section">Bottom section</h2>
+<h2 id="bottom-section">Sección inferior</h2>
 
 <img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" />
 
-- Read our **privacy policy**, follow us on **Twitter**.
-- **Donate** – if you like the extension, consider supporting the active Dark Reader development.
-Crowdfunding is held by Open Collective, which uses Stripe at the moment for helding payments.
-- **News** – notifies about release notes and important events.
-- **Developer tools** – opens a config editor for the current theme mode.
+- Lea nuestra **política de privacidad**, síganos en **Twitter**.
+- **Donar** - si te gusta la extensión, considera apoyar el desarrollo activo de Dark Reader.
+Crowdfunding está mantenido por Open Collective, que utiliza Stripe en el momento de realizar los pagos.
+- **Avisos** - notifica sobre notas de prensa y eventos importantes.
+- **Herramientas** - abre un editor de configuración para el modo de tema actual.
 
 
 <h2 id="using-dev-tools">Using the Developer tools</h2>
