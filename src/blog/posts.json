@@ -1,5 +1,10 @@
 [
     {
+        "id": "automation",
+        "date": "2019-09-12T12:13Z",
+        "headline": "v4.8: Activate after sunset or use system preferences"
+    },
+    {
         "id": "product-hunt-golden-kitty-2018",
         "date": "2019-01-13T17:48Z",
         "headline": "Dark Reader got nominated for Product Hunt Lifehack 2018"
