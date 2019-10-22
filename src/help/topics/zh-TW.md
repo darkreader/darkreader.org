@@ -156,3 +156,4 @@ Firefox 會無法呈現某些網頁。
 <h2 id="contacts">聯絡方式</h2>
 
 有任何疑問請 e-mail 至 [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+（僅限英語）
