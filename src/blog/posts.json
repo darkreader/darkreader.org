@@ -1,5 +1,10 @@
 [
     {
+        "id": "2m-users",
+        "date": "2019-11-01T09:07Z",
+        "headline": "We have 2,000,000 active users! App stats and plans"
+    },
+    {
         "id": "automation",
         "date": "2019-09-12T12:13Z",
         "headline": "v4.8: Activate after sunset or use system preferences"
