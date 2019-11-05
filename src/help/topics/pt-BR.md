@@ -14,7 +14,7 @@ Este documento o guiará pelos recursos do Dark Reader.
 - [Usando as ferramentas de desenvolvedor](#using-dev-tools)
 
 
-<h2 id="Seção superior">Top section</h2>
+<h2 id="top-section">Seção superior</h2>
 
 <img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" />
 
@@ -46,7 +46,7 @@ Clique no botão, ajuste as configurações, clique novamente para cancelar.
 
 - Use o **Inverter listado** caso queira que o Dark Reader somente funcione com os sites listados.
 - **Não invertido listado** irá prevenir a extensão de funcionar em sites listados.
-- Valores possíveis são `google.com, mail.google.com, google.*, google.com/maps`, etc.
+- Valores possíveis são `google.com, mail.google.com, google.*, google.com/maps` etc.
 - Clicar no botão **Alternar site** adiciona sites a essa lista.
 
 <h2 id="more-tab">A aba mais</h2>
@@ -62,7 +62,7 @@ Clique no botão, ajuste as configurações, clique novamente para cancelar.
 
 <figure>
     <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
-    <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
+    <figcaption>Filtro+ vs. Estático vs. mode Dinâmico</figcaption>
 </figure>
 
 - **Filtro** é o modo inicial do Dark Reader, baseado nos filtros CSS.
@@ -106,7 +106,7 @@ Leia como usar as ferramentas de desenvolvedor [aqui](https://github.com/darkrea
 #### A extensão pede permissão para ler os dados dos sites
 
 A extensão precisa dessas permissões para conseguir analisar e modificar a aparência do site,
-determinar se o site está desabilitado pelas suas configurações ou usar um regra específica para o site.
+determinar se o site está desabilitado pelas suas configurações ou usar uma regra específica para o site.
 Nós não inserimos propagandas, não coletamos nenhum dado e nem enviamos nada para lugar nenhum.
 A extensão tem seu código completamente aberto e não possui nenhum código ofuscado.
 Nossa monetização é transparante e é baseada na doação de nossos usuários.
@@ -130,7 +130,7 @@ então você deve instalar algum tema escuro da loja.
 Se você tem outras extensões de modo escuro instaladas, as desabilite, recarregue as guias.
 Clique no ícone do Dark Reader, verifique se o interruptor superior direito está com a opção **Ligar** selecionado.
 Abra a aba **Lista de sites**, verifique se **Não invertido listado** está selecionado.
-Se nada ajudar, alguma coisa terrível está acontecendo, nos envie um e-mail.
+Se nada ajudar, algo terrível está acontecendo, nos envie um e-mail.
 
 #### O site é exibido incorretamente ou apresenta lentidão
 
