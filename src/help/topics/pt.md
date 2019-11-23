@@ -1,4 +1,4 @@
-# Ajuda (Português Brasil)
+# Ajuda (Português)
 
 Este documento o guiará pelos recursos do Dark Reader.
 
