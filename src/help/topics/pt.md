@@ -109,7 +109,7 @@ A extensão precisa dessas permissões para conseguir analisar e modificar a apa
 determinar se o site está desabilitado pelas suas configurações ou usar uma regra específica para o site.
 Nós não inserimos propagandas, não coletamos nenhum dado e nem enviamos nada para lugar nenhum.
 A extensão tem seu código completamente aberto e não possui nenhum código ofuscado.
-Nossa monetização é transparante e é baseada na doação de nossos usuários.
+Nossa monetização é transparente e é baseada na doação de nossos usuários.
 
 #### A página da loja de extensões e a página de configurações continuam brancas
 
