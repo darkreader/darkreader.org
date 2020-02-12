@@ -98,11 +98,11 @@ section {
 }
 
 .icon--chrome {
-    background-image: url(images/icon-chrome-256x256.png);
+    background-image: url(images/icon-chrome-512x512.svg);
 }
 
 .icon--firefox {
-    background-image: url(images/icon-firefox-300x310.png);
+    background-image: url(images/icon-firefox-87x82.svg);
 }
 
 .icon--safari {
