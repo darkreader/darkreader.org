@@ -109,6 +109,11 @@ section {
     background-image: url(images/icon-safari-1024x1024.png);
 }
 
+.icon--edge {
+    background-image: url(images/icon-edge-256x256.svg);
+    background-size: 90%;
+}
+
 .icon--github {
     background-image: url(images/icon-github-white-420x420.png);
     background-size: 125%;
