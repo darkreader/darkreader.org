@@ -19,7 +19,7 @@
   "homepage": "https://github.com/darkreader/darkreader.org",
   "devDependencies": {
     "fs-extra": "8.1.0",
-    "http-server": "0.11.1",
-    "marked": "0.7.0"
+    "http-server": "0.12.1",
+    "marked": "0.8.0"
   }
 }
