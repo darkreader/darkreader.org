@@ -99,6 +99,7 @@ section {
 
 .icon--chrome {
     background-image: url(images/icon-chrome-512x512.svg);
+    background-size: 90%;
 }
 
 .icon--firefox {
