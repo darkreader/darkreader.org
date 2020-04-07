@@ -1,5 +1,10 @@
 [
     {
+        "id": "dr-5-announcement",
+        "date": "2020-04-07T14:17Z",
+        "headline": "Announcing Dark Reader 5"
+    },
+    {
         "id": "2m-users",
         "date": "2019-11-01T09:07Z",
         "headline": "We have 2,000,000 active users! App stats and plans"
