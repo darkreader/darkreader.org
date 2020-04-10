@@ -1,5 +1,7 @@
 const fs = require('fs-extra');
 const marked = require('marked');
+const {createImageProcessor} = require('./utils/image');
+const {getRequest} = require('./utils/network');
 const posts = require('../src/blog/posts.json');
 
 function replace(text, find, replace) {
@@ -11,6 +13,8 @@ function formatDate(date) {
 }
 
 async function writePosts() {
+    const imageProcessor = await createImageProcessor();
+
     const template = await fs.readFile('src/blog/post.html', {encoding: 'utf8'});
 
     async function writePost({id, date, headline}) {
@@ -52,11 +56,30 @@ async function writePosts() {
         result = replace(result, '$DESCRIPTION', description);
         result = replace(result, '$CONTENT', contentHTML);
         await fs.outputFile(`www/blog/${id}/index.html`, result, {encoding: 'utf8'});
+
+        const previewPath = `www/images/blog-previews/${id}-preview-small.jpg`;
+        if (!(await fs.pathExists(previewPath))) {
+            /** @type {Buffer} */let imageBuffer;
+            const webImagesDirectory = 'https://darkreader.org/images/';
+            if (previewURL.startsWith(webImagesDirectory)) {
+                imageBuffer = await fs.readFile(`./www/images/${previewURL.substring(webImagesDirectory.length)}`);
+            } else {
+                imageBuffer = await getRequest(previewURL);
+            }
+            const resizedImage = await imageProcessor.resize(
+                imageBuffer,
+                previewURL.endsWith('.png') ? 'image/png' : 'image/jpeg',
+                256,
+            );
+            await fs.outputFile(`www/images/blog-previews/${id}-preview-small.jpg`, resizedImage);
+        }
     }
 
     for (let post of posts) {
         await writePost(post);
     }
+
+    imageProcessor.destroy();
 }
 
 async function writeIndex() {
