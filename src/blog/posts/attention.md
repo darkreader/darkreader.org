@@ -169,6 +169,39 @@ Then you can give it a try.
 Until the stores find a proper way to filter out extensions,
 **we have to be attentive**.
 
+*UPDATE*
+
+## How to check where did you install extensions from
+
+### Chrome (Chromium)
+
+- Open [chrome://extensions](chrome://extensions) page.
+- For each extension click **Details**.
+- Click **View in Chrome Web Store**.
+- Dark Reader has 2,000,000+ users, extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
+
+### Firefox
+
+- Open [about:addons](about:addons) page.
+- Click on each extension's tile.
+- At the bottom click **reviews** and remove `reviews/` from the URL.
+- Dark Reader has 447,538 users at the moment of writing.
+
+### Edge
+
+- Same steps as for Chrome, click **View in Microsoft Store**.
+- Dark Reader has 51 reviews at the moment of writing,
+extension ID is `ifoakfbpdcdoeenechcleahebpibofpc`.
+
+### Opera
+
+- Open [opera://extensions](opera://extensions) page.
+- Enable **Developer mode**.
+- For each extension click **Details**.
+- Compare extensions' IDs.
+- Dark Reader's extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
+- Disable **Developer mode**.
+
 ## Finally
 
 Don't worry and have a nice day 😅
