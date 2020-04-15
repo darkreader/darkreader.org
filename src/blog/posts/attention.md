@@ -88,7 +88,7 @@ This is a limited set of extensions, picked by Mozilla, that pass a **deep manua
 Extensions' authors have to provide a source code, build steps, and are not allowed to use obfuscated code.
 Every update passes a detailed review and reviewers ask to clarify any moments they don't get.
 
-Chrome Web Store has **Editor's Picks** section and other collections,
+Chrome Web Store has **[Editor's Picks](https://chrome.google.com/webstore/category/collection/editors_picks_extensions)** section and other collections,
 and the company has tightened up its review process,
 but its not clear what exactly happens during the review.
 
