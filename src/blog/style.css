@@ -84,6 +84,14 @@ figcaption {
     background-image: url(/images/darkreader-help.svg);
 }
 
+.text-highlight {
+    color: #e96c4c;
+}
+
+a:hover img {
+    filter: brightness(1.05);
+}
+
 .donate-button {
     display: inline-block;
     text-decoration: none;
