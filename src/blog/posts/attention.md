@@ -202,6 +202,18 @@ extension ID is `ifoakfbpdcdoeenechcleahebpibofpc`.
 - Dark Reader's extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
 - Disable **Developer mode**.
 
+*UPDATE 2*
+
+## This guy is doing harm to Edge users right now
+
+The users of [-Dark Theme for Edge-](https://microsoftedge.microsoft.com/addons/detail/efhbekcgdnfcakddgllfondiaijpncol)
+will not be able to see this notification,
+the guy has disabled this functionality.
+The extension is using absolutely the same technique as described above.
+
+Who knows how many clones of other add-ons are there in Microsoft Store.
+The issue has been reported.
+
 ## Finally
 
 Don't worry and have a nice day 😅
