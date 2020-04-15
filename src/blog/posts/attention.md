@@ -27,7 +27,7 @@ It turned out that similar attacks [happen periodically](https://github.com/rain
 and affect Chrome and Firefox users.
 
 If you were using such an extension,
-or noticed some strange website behavoir,
+or noticed some strange website behavior,
 or remember getting an SMS security code when you were not trying to sign in somewhere,
 **RESET ALL YOUR PASSWORDS**, **REISSUE YOUR CARDS** or contact your bank.
 Check your Google, Microsoft, Amazon, or banking account **activity history**.
