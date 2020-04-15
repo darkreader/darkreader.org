@@ -1,9 +1,9 @@
-# Help (English)
+# Help (Nederlands)
 
 Dit document leidt u door de functies van Dark Reader.
 
 - [FAQ](#faq)
-- [Contacten](#contacts)
+- [Contacten](#contacten)
 - [Top sectie](#top-sectie)
 - [Filter Instellingen](#filter-instellingen)
 - [Aangepaste site instellingen](#aangepaste-site-instellingen)
