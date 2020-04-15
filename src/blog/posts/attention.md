@@ -1,6 +1,6 @@
 # ATTENTION! Check if you were affected by malware clones
 
-Several malware Dark Reader's copies were created,
+Several malicious Dark Reader's copies were created,
 thousands of users were affected.
 Follow this guide to learn how to avoid malware extensions.
 
@@ -14,7 +14,7 @@ An interesting malware technique was revealed recently.
 Multiple Dark Reader copies with similar names and additional code
 [were removed](https://bugzilla.mozilla.org/show_bug.cgi?id=1618814) from Firefox Add-ons.
 
-A [malware code](https://www.dropbox.com/s/kgmvolze4p8dfre/output-malware.js?dl=0) was hidden and encoded in a \*.png file.
+A [malicious code](https://www.dropbox.com/s/kgmvolze4p8dfre/output-malware.js?dl=0) was hidden and encoded in a \*.png file.
 In 5 days it downloaded and executed [another code](https://www.dropbox.com/s/w91smeukjehzm9l/remote-eval.js?dl=0),
 that was **collecting data** from web pages using fake forms,
 and later **sent this data** to a remote server.
