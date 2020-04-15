@@ -154,7 +154,7 @@ it looks suspicious).
 
 Use 2-factor authentification.
 Don't fill in any data on websites, that are not using HTTPS.
-Whenewer you enter a password, check the URL,
+Whenever you enter a password, check the URL,
 especially if you opened a link from a message.
 If it's not obvious, make sure the domain belongs to the company using some Whois service.
 
