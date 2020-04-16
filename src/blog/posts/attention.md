@@ -176,7 +176,8 @@ Until the stores find a proper way to filter out extensions,
 ## How to check where did you install extensions from
 
 The good news is, that *if you've seen Dark Reader's notification,
-you are most likely safe*. Inspected malware has it hidden (see the screenshot below).
+you are most likely safe*.
+The inspected malware has it hidden (see the screenshot below).
 But we strongly recommend you ensure this is true,
 and also check other browser extensions' URLs and other info.
 
@@ -208,6 +209,15 @@ extension ID is `ifoakfbpdcdoeenechcleahebpibofpc`.
 - Compare extensions' IDs.
 - Genuine Dark Reader's extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
 - Disable **Developer mode**.
+
+### Genuine installation links
+
+There can be minor differences depending on your language code.
+- Chrome [https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
+- Firefox [https://addons.mozilla.org/en-US/firefox/addon/darkreader/](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
+- Firefox for Android [https://addons.mozilla.org/en-US/android/addon/darkreader/](https://addons.mozilla.org/en-US/android/addon/darkreader/)
+- Edge [https://microsoftedge.microsoft.com/addons/detail/ifoakfbpdcdoeenechcleahebpibofpc](https://microsoftedge.microsoft.com/addons/detail/ifoakfbpdcdoeenechcleahebpibofpc)
+- Safari [https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180)
 
 <span class="text-highlight">*UPDATE 2*</span>
 
