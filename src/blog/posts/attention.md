@@ -2,7 +2,8 @@
 
 Several malicious Dark Reader's copies were created,
 thousands of users were affected.
-Follow this guide to learn how to avoid malware extensions.
+Follow this guide to learn how to avoid malware extensions,
+and how to check that your Dark Reader copy is valid.
 
 <figure>
     <img src="/images/droids.png" alt="Dark Reader clones" />
@@ -24,7 +25,8 @@ and later **sent this data** to a remote server.
 </figure>
 
 It turned out that similar attacks [happen periodically](https://github.com/rainyrainyday/HomebrewOverlay)
-and affect Chrome and Firefox users.
+and affect Chrome and Firefox users
+*(upd. Edge too)*.
 
 If you were using such an extension,
 or noticed some strange website behavior,
@@ -173,24 +175,29 @@ Until the stores find a proper way to filter out extensions,
 
 ## How to check where did you install extensions from
 
+The good news is, that *if you've seen Dark Reader's notification,
+you are most likely safe*. Inspected malware has it hidden (see the screenshot below).
+But we strongly recommend you ensure this is true,
+and also check other browser extensions' URLs and other info.
+
 ### Chrome (Chromium)
 
 - Open [chrome://extensions](chrome://extensions) page.
 - For each extension click **Details**.
 - Click **View in Chrome Web Store**.
-- Dark Reader has 2,000,000+ users, extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
+- Genuine Dark Reader has 2,000,000+ users, extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
 
 ### Firefox
 
 - Open [about:addons](about:addons) page.
 - Click on each extension's tile.
 - At the bottom click **reviews** and remove `reviews/` from the URL.
-- Dark Reader has 447,538 users at the moment of writing.
+- Genuine Dark Reader has 447,538 users at the moment of writing.
 
 ### Edge
 
 - Same steps as for Chrome, click **View in Microsoft Store**.
-- Dark Reader has 51 reviews at the moment of writing,
+- Genuine Dark Reader has 51 reviews at the moment of writing,
 extension ID is `ifoakfbpdcdoeenechcleahebpibofpc`.
 
 ### Opera
@@ -199,7 +206,7 @@ extension ID is `ifoakfbpdcdoeenechcleahebpibofpc`.
 - Enable **Developer mode**.
 - For each extension click **Details**.
 - Compare extensions' IDs.
-- Dark Reader's extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
+- Genuine Dark Reader's extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
 - Disable **Developer mode**.
 
 <span class="text-highlight">*UPDATE 2*</span>
