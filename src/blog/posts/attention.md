@@ -235,6 +235,16 @@ The extension is using absolutely the same technique as described above.
 Who knows how many clones of other add-ons are there in Microsoft Store.
 The issue has been reported.
 
+<span class="text-highlight">*UPDATE 3*</span>
+
+The discovered malware was taken down,
+you will see a notice on [edge://extensions](edge://extensions) page,
+if you had it installed.
+
+<figure>
+    <img src="/images/malware-taken-down.png" alt="Edge malware screenshot" style="width: 16rem;" />
+</figure>
+
 <span class="text-highlight">*To be continued...*</span>
 
 ## Finally
