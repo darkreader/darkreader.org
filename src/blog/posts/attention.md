@@ -169,7 +169,7 @@ Then you can give it a try.
 Until the stores find a proper way to filter out extensions,
 **we have to be attentive**.
 
-*UPDATE*
+<span class="text-highlight">*UPDATE*</span>
 
 ## How to check where did you install extensions from
 
@@ -202,7 +202,7 @@ extension ID is `ifoakfbpdcdoeenechcleahebpibofpc`.
 - Dark Reader's extension ID is `eimadpbcbfnmbkopoojfekhnkhdbieeh`.
 - Disable **Developer mode**.
 
-*UPDATE 2*
+<span class="text-highlight">*UPDATE 2*</span>
 
 ## This guy is doing harm to Edge users right now
 
@@ -211,8 +211,14 @@ will not be able to see this notification,
 the guy has disabled this functionality.
 The extension is using absolutely the same technique as described above.
 
+<figure>
+    <img src="/images/edge-malware-screenshot.png" alt="Edge malware screenshot" style="width: 16rem;" />
+</figure>
+
 Who knows how many clones of other add-ons are there in Microsoft Store.
 The issue has been reported.
+
+<span class="text-highlight">*To be continued...*</span>
 
 ## Finally
 
