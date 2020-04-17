@@ -30,3 +30,5 @@ Chromium issues
 soon browser frames, menus and address bars will become dark, relaxing our eyes.
 
 *Update: Seems like the work is still in progress, maybe Chrome 72 will get dark mode support?*
+
+*Update: [Chrome now has dark mode support.](https://support.google.com/chrome/answer/9275525)*
