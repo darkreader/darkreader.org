@@ -3,7 +3,8 @@
 Several malicious Dark Reader's copies were created,
 thousands of users were affected.
 Follow this guide to learn how to avoid malware extensions,
-and how to check that your Dark Reader copy is valid.
+and how to check that you've installed Dark Reader
+from the original source.
 
 <figure>
     <img src="/images/droids.png" alt="Dark Reader clones" />
