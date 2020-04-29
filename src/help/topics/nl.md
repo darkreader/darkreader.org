@@ -3,20 +3,20 @@
 Dit document leidt u door de functies van Dark Reader.
 
 - [FAQ](#faq)
-- [Contacten](#contacten)
-- [Top sectie](#top-sectie)
-- [Filter Instellingen](#filter-instellingen)
-- [Aangepaste site instellingen](#aangepaste-site-instellingen)
-- [Site lijst](#site-lijst)
-- [Meer tabblad](#meer-tabblad)
-- [Thema-generatie modus](#thema-generatie-modus)
-- [Onderste gedeelte](#onderste-gedeelte)
-- [Gebruik van de ontwikkelaarshulpmiddelen](#gebruik-van-de-ontwikkelaarshulpmiddelen)
+- [Contacten](#contacts)
+- [Top sectie](#top-section)
+- [Filter Instellingen](#filter-settings)
+- [Aangepaste site instellingen](#custom-site-settings)
+- [Site lijst](#site-list)
+- [Meer tabblad](#more-tab)
+- [Thema-generatie modus](#theme-generation-modes)
+- [Onderste gedeelte](#bottom-section)
+- [Gebruik van de ontwikkelaarshulpmiddelen](#using-dev-tools)
 
 
-<h2 id="top-sectie">Top sectie</h2>
+<h2 id="top-section">Top sectie</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top sectie"+ style="width: 15rem;" />
+<img src="/images/help/darkreader-top-section.png" alt="Top sectie" style="width: 15rem;" />
 
 - **Schakkel site** knop voegt de huidige site toe aan de negeerlijst (of verwijdert deze van de lijst).
 - **Aan/Uit** schakelaar schakelt de uitbreiding in of uit.
@@ -24,23 +24,23 @@ Dit document leidt u door de functies van Dark Reader.
 - Als de toggle-knop grijs is, betekent dit dat de browser het injecteren van scripts in de huidige pagina niet toelaat.
 
 
-<h2 id="filter-instellingen">Filter Instellingen</h2>
+<h2 id="filter-settings">Filter Instellingen</h2>
 
 <img src="/images/help/darkreader-filter-settings.png" alt="Filter instellingen" style="width: 15rem;" />
 
 Pas de filterwaarden aan, die beter passen bij uw schermparameters en de verlichting in de ruimte.
 
 
-<h2 id="aangepaste-site-instellingen">Aangepaste site instellingen</h2>
+<h2 id="custom-site-settings">Aangepaste site instellingen</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="aangepaste-site-instellingen" style="width: 15rem;" />
+<img src="/images/help/darkreader-custom-site-settings.png" alt="Aangepaste site instellingen" style="width: 15rem;" />
 
 **Alleen voor** knop maakt instellingen die alleen op de huidige website moeten worden toegepast.
 
 Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
 
 
-<h2 id="site-lijst">Site lijst</h2>
+<h2 id="site-list">Site lijst</h2>
 
 <img src="/images/help/darkreader-site-list.png" alt="Site lijst" style="width: 15rem;" />
 
@@ -49,7 +49,7 @@ Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
 - Mogelijke waarden zijn `google.com, mail.google.com, google.*, google.com/maps` etc.
 - Door te klikken op de knop **Schakel** voegt u site toe aan deze lijst.
 
-<h2 id="meer-tabblad">Meer tabblad</h2>
+<h2 id="more-tab">Meer tabblad</h2>
 
 <img src="/images/help/darkreader-more-tab.png" alt="Meer tabblad" style="width: 15rem;" />
 
@@ -58,7 +58,7 @@ Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
 - Kies een **thema-generatie modus**.
 
 
-<h2 id="thema-generatie-modus">Thema-generatie modus</h2>
+<h2 id="theme-generation-modes">Thema-generatie modus</h2>
 
 <figure>
     <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
@@ -84,7 +84,7 @@ Het werk aan deze modus is in volle gang,
 maar het werkt al goed voor veel moderne websites.
 
 
-<h2 id="onderste-gedeelte">Onderste gedeelte</h2>
+<h2 id="bottom-section">Onderste gedeelte</h2>
 
 <img src="/images/help/darkreader-footer.png" alt="Onderste gedeelte" style="width: 15rem;" />
 
@@ -95,7 +95,7 @@ Crowdfunding is held by Open Collective, which uses Stripe at the moment for hel
 - **Developer tools** – opens a config editor for the current theme mode.
 
 
-<h2 id="gebruik-van-de-ontwikkelaarshulpmiddelen">Gebruik van de ontwikkelaarshulpmiddelen/h2>
+<h2 id="using-dev-tools">Gebruik van de ontwikkelaarshulpmiddelen</h2>
 
 Als u bekend bent met CSS-selectoren, kunt u voor sommige websites een oplossing voorstellen.
 Lees hoe u de ontwikkelaarshulpmiddelen [hier](https://github.com/darkreader/darkreader#how-to-contribute) kunt gebruiken.
@@ -153,6 +153,7 @@ Als u Chrome voor Mac OS gebruikt, werk dan Mac OS bij tot 10.13, dan moet dit u
 Als u Firefox gebruikt, is dit waarschijnlijk een browserfout, gebruik dan een andere modus voor dergelijke websites.
 
 
-<h2 id="contacten">Contacten</h2>
+<h2 id="contacts">Contacten</h2>
 
 Voor vragen kunt u mailen naar [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+(English only)
