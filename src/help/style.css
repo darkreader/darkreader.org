@@ -58,6 +58,142 @@ figcaption {
     width: 32em;
 }
 
+.sponsors {
+    margin-top: 1.25rem;
+    width: 16rem;
+}
+
+@media screen and (min-width: 60rem) {
+    .sponsors {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 72rem) {
+    .sponsors {
+        position: fixed;
+        right: 1rem;
+        top: 0;
+    }
+}
+
+.sponsors-heading {
+    color: #e96c4c;
+    margin: 0 0 1rem 0;
+    -webkit-text-stroke: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.support-link {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.support-image-container {
+    border-radius: 1.25rem;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.support-link img {
+    display: inline-block;
+    width: 100%;
+}
+
+.support-button {
+    align-items: center;
+    border-radius: 1.25rem;
+    color: white;
+    display: inline-flex;
+    flex-direction: row;
+    height: 2.5rem;
+    justify-content: center;
+    margin-top: 0.25rem;
+    width: 10rem;
+}
+
+.support-button-text {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.25rem;
+    -webkit-text-stroke: 0.0625rem;
+    text-transform: uppercase;
+    transform: skewX(-10deg);
+}
+
+.support-link:hover > .support-image-container,
+.support-link:hover > .support-button {
+    box-shadow: 0 0 0.5rem #53a1b3;
+}
+
+.h-link {
+    position: relative;
+}
+
+.h-logo-message {
+    bottom: 0.5rem;
+    color: white;
+    display: inline-block;
+    font-weight: 400;
+    position: absolute;
+    right: 0.5rem;
+}
+
+.paypal {
+    display: inline-block;
+    font-weight: bold;
+    -webkit-text-stroke: 0.0625rem;
+    transform: skewX(-10deg);
+}
+
+.h-description {
+    color: #f68623;
+}
+
+.h-link:hover .h-description {
+    color: #ffa353;
+}
+
+.usd {
+    color: #53b378;
+}
+
+.h-button {
+    background-color: #f68623;
+    width: 12.5rem;
+}
+
+.h-button-icon {
+    background-image: url(/images/icon-chrome-512x512.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 2rem;
+    margin-right: 0.5rem;
+    width: 2rem;
+}
+
+@-moz-document url-prefix() {
+    .h-button-icon {
+        background-image: url(/images/icon-firefox-87x82.svg);
+    }
+}
+
+.d-button {
+    background-color: #316d7c;
+}
+
 ::-moz-selection {
     background-color: #e96c4c;
     color: white;
