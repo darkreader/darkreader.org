@@ -131,8 +131,8 @@ figcaption {
     transform: skewX(-10deg);
 }
 
-.support-link:hover > .support-image-container,
-.support-link:hover > .support-button {
+.support-link:hover .support-image-container,
+.support-link:hover .support-button {
     box-shadow: 0 0 0.5rem #53a1b3;
 }
 
@@ -188,6 +188,14 @@ figcaption {
     .h-button-icon {
         background-image: url(/images/icon-firefox-87x82.svg);
     }
+}
+
+.d-link:hover .support-image-container {
+    box-shadow: none;
+}
+
+.d-link:hover img {
+    filter: drop-shadow(0 0 0.125rem #53a1b3);
 }
 
 .d-button {
