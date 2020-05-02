@@ -8,9 +8,22 @@ body {
 }
 
 body {
-    max-width: 40em;
+    max-width: 57rem;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1rem;
+}
+
+.help-header-logo {
+    background-image: url(/images/darkreader-help.svg);
+    background-size: cover;
+    display: inline-block;
+    height: 8rem;
+    text-decoration: none;
+    width: 32rem;
+}
+
+article {
+    max-width: 38rem;
 }
 
 h1 {
@@ -49,37 +62,15 @@ figcaption {
     font-size: smaller;
 }
 
-.help-header-logo {
-    background-image: url(/images/darkreader-help.svg);
-    background-size: cover;
-    display: inline-block;
-    height: 8em;
-    text-decoration: none;
-    width: 32em;
-}
-
-.sponsors {
+aside {
     margin-top: 1.25rem;
+    position: fixed;
+    right: calc(50% - 27.5rem);
+    top: 0;
     width: 16rem;
 }
 
-@media screen and (min-width: 60rem) {
-    .sponsors {
-        position: absolute;
-        right: 1rem;
-        top: 0;
-    }
-}
-
-@media screen and (min-width: 72rem) {
-    .sponsors {
-        position: fixed;
-        right: 1rem;
-        top: 0;
-    }
-}
-
-.sponsors-heading {
+.support-us-heading {
     color: #e96c4c;
     margin: 0 0 1rem 0;
     -webkit-text-stroke: 0.0625rem;
@@ -210,4 +201,15 @@ figcaption {
 ::selection {
     background-color: #e96c4c;
     color: white;
+}
+
+@media screen and (max-width: 57rem) {
+    body {
+        max-width: 40rem;
+    }
+
+    aside {
+        position: static;
+        right: unset;
+    }
 }
