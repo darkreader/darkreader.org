@@ -90,7 +90,7 @@ aside {
 
 .support-image-container {
     border-radius: 1.25rem;
-    display: inline-block;
+    display: inline-flex;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -132,7 +132,7 @@ aside {
 }
 
 .h-logo-message {
-    bottom: 0.5rem;
+    bottom: 0.25rem;
     color: white;
     display: inline-block;
     font-weight: 400;
@@ -141,10 +141,15 @@ aside {
 }
 
 .paypal {
+    background-image: url(/images/paypal-logo-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     display: inline-block;
-    font-weight: bold;
-    -webkit-text-stroke: 0.0625rem;
-    transform: skewX(-10deg);
+    height: 1.2rem;
+    text-indent: -999rem;
+    transform: translate(-0.0625rem, 0.0625rem);
+    width: 3.5rem;
 }
 
 .h-description {
