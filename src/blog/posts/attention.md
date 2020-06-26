@@ -1,8 +1,8 @@
-# ATTENTION! Check if you were affected by malware clones
+# ATTENTION! Install Dark Reader only from verified sources
 
-Several malicious Dark Reader's copies were created,
-thousands Firefox and Edge users were affected.
-Follow this guide to learn how to avoid malware extensions,
+Some hackers created malware that was pretending to be Dark Reader,
+and released under different names for Firefox and Edge.
+Follow this guide to learn how to avoid malicious extensions,
 and how to check that you've installed Dark Reader
 from the original source.
 
@@ -248,7 +248,13 @@ if you had it installed.
     <img src="/images/malware-taken-down.png" alt="Edge malware screenshot" style="width: 16rem;" />
 </figure>
 
-<span class="text-highlight">*To be continued...*</span>
+<span class="text-highlight">*UPDATE 4 (June 26, 2020)*</span>
+
+It seems like Microsoft didn't take the problem seriously.
+Similar malicious copy of Dark Reader called **Dark Mode for Reader**
+[is still available](https://microsoftedge.microsoft.com/addons/detail/dark-mode-for-reader/lpnegimedhbgpcoimodfgkdeeaaeehea?hl=en-US)
+in Edge Add-ons even though is was reported on June 24,
+and the support ensured they would take it down immediately on June 25.
 
 ## Finally
 
