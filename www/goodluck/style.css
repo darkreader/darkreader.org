@@ -1,0 +1,150 @@
+html {
+    align-items: center;
+    background-color: #141e24;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    margin: 0;
+    overflow: auto;
+    width: 100%;
+}
+
+body {
+    align-items: center;
+    box-sizing: border-box;
+    color: #53a1b3;
+    display: flex;
+    flex-direction: column;
+    font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 100%;
+}
+
+a {
+    color: #53a1b3;
+}
+
+a:hover {
+    color: #64adbd;
+}
+
+em {
+    font-weight: bold;
+}
+
+.wishes {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    max-width: 24rem;
+    text-align: center;
+    width: 100%;
+}
+
+.mascot {
+    display: inline-block;
+    height: 12rem;
+    width: 16rem;
+}
+
+.wishes-heading {
+    color: #e96c4c;
+    font-weight: 300;
+    margin: 0 0 0.75rem 0;
+}
+
+.feedback-link {
+    color: #e96c4c;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.feedback-link:hover {
+    color: #ec785b;
+}
+
+.recommendations {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    max-width: 30rem;
+    width: 100%;
+}
+
+.recommendations-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.honey-logo-link {
+    flex: none;
+}
+
+.honey-logo {
+    background-image: url(/images/honey-logo.jpg);
+    background-position: center;
+    background-size: 125%;
+    border-radius: 1.25rem;
+    display: inline-block;
+    height: 7rem;
+    text-indent: -999rem;
+    width: 11rem;
+}
+
+.honey-logo-link:hover {
+    filter: brightness(107%);
+}
+
+.honey-name {
+    color: #f68623;
+    font-weight: bold;
+}
+
+.honey-name:hover {
+    color: #f79743;
+    font-weight: bold;
+}
+
+.paypal {
+    font-weight: bold;
+}
+
+.recommendations-description {
+    margin-left: 0.75rem;
+}
+
+.learn-more {
+    margin-top: 0.5rem;
+}
+
+.learn-more-link {
+    font-weight: bold;
+}
+
+@media (max-width: 32rem) {
+    .wishes {
+        width: auto;
+    }
+
+    .recommendations {
+        width: auto;
+    }
+
+    .recommendations-row {
+        flex-direction: column;
+    }
+
+    .recommendations-description {
+        margin-top: 0.75rem;
+    }
+}
