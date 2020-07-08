@@ -70,50 +70,72 @@ aside {
     width: 16rem;
 }
 
-.support-us-heading {
+.rec-heading {
     color: #e96c4c;
     margin: 0 0 1rem 0;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
 }
 
-.support-link {
+.rec {
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.rec-logo-link {
+    align-items: center;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
     display: inline-flex;
     flex-direction: column;
-    font-weight: bold;
-    margin-bottom: 1.25rem;
+    overflow: hidden;
     text-align: center;
     text-decoration: none;
+    transition: box-shadow 250ms;
     width: 100%;
 }
 
-.support-image-container {
-    border-radius: 1.25rem;
-    display: inline-flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+.rec-logo-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0.5), 0 0 0.75rem #53a1b3;
 }
 
-.support-link img {
+.rec-logo-link-image {
     display: inline-block;
     width: 100%;
 }
 
-.support-button {
+.rec-text-link {
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 250ms;
+}
+
+.rec-text-link:hover {
+    color: white;
+}
+
+.rec-button-link {
     align-items: center;
     border-radius: 1.25rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
     color: white;
     display: inline-flex;
     flex-direction: row;
     height: 2.5rem;
     justify-content: center;
     margin-top: 0.25rem;
+    text-decoration: none;
+    transition: box-shadow 250ms;
     width: 10rem;
 }
 
-.support-button-text {
+.rec-button-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0.5), 0 0 0.75rem #53a1b3;
+}
+
+.rec-button-link-text {
     display: inline-block;
     font-weight: bold;
     font-size: 1.25rem;
@@ -122,16 +144,11 @@ aside {
     transform: skewX(-10deg);
 }
 
-.support-link:hover .support-image-container,
-.support-link:hover .support-button {
-    box-shadow: 0 0 0.5rem #53a1b3;
-}
-
-.h-link {
+.hl {
     position: relative;
 }
 
-.h-logo-message {
+.hl-message {
     bottom: 0.25rem;
     color: white;
     display: inline-block;
@@ -140,7 +157,7 @@ aside {
     right: 0.5rem;
 }
 
-.paypal {
+.hl-paypal {
     background-image: url(/images/paypal-logo-white.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -152,24 +169,20 @@ aside {
     width: 3.5rem;
 }
 
-.h-description {
+.ht {
     color: #f68623;
 }
 
-.h-link:hover .h-description {
-    color: #ffa353;
-}
-
-.usd {
+.ht-usd {
     color: #53b378;
 }
 
-.h-button {
+.hb {
     background-color: #f68623;
     width: 12.5rem;
 }
 
-.h-button-icon {
+.hb-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -181,20 +194,26 @@ aside {
 }
 
 @-moz-document url-prefix() {
-    .h-button-icon {
+    .hb-icon {
         background-image: url(/images/icon-firefox-87x82.svg);
     }
 }
 
-.d-link:hover .support-image-container {
+.dl,
+.dl:hover {
     box-shadow: none;
 }
 
-.d-link:hover img {
-    filter: drop-shadow(0 0 0.125rem #53a1b3);
+.dl-image {
+    filter: brightness(1);
+    transition: filter 250ms;
 }
 
-.d-button {
+.dl:hover .dl-image {
+    filter: brightness(1.2);
+}
+
+.db {
     background-color: #316d7c;
 }
 
