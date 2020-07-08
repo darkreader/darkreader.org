@@ -204,15 +204,6 @@ aside {
     box-shadow: none;
 }
 
-.dl-image {
-    filter: brightness(1);
-    transition: filter 250ms;
-}
-
-.dl:hover .dl-image {
-    filter: brightness(1.2);
-}
-
 .db {
     background-color: #316d7c;
 }
