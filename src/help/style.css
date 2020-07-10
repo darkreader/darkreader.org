@@ -204,6 +204,10 @@ aside {
     box-shadow: none;
 }
 
+.dl-graph {
+    width: 100%;
+}
+
 .db {
     background-color: #316d7c;
 }
