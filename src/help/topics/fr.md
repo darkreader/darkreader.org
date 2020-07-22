@@ -5,11 +5,11 @@ Ce document vous aide a découvrir les options de Dark Reader.
 - [FAQ](#faq)
 - [Contacts](#contacts)
 - [Section supérieure](#top-section)
-- [Paramètres filtre](#filter-settings)
-- [Paramètres site particulier](#custom-site-settings)
+- [Paramètres des filtres](#filter-settings)
+- [Paramètres des sites particuliers](#custom-site-settings)
 - [Liste de sites](#site-list)
-- [Onglet plus](#more-tab)
-- [Modes de génération de thème](#theme-generation-modes)
+- [Onglet "Plus"](#more-tab)
+- [Mode de génération de thèmes](#theme-generation-modes)
 - [Section inférieure](#bottom-section)
 - [Utilisation des outils développeur](#using-dev-tools)
 
@@ -19,25 +19,25 @@ Ce document vous aide a découvrir les options de Dark Reader.
 <img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" />
 
 - Le bouton **Basculer le site actuel** ajoute le site à la liste d'ignorés (ou l'enlève).
-- Le bouton **On/Off** met en marche ou en arrêt l'extension.
-- Clickez les liens sous les boutons pour **modifier raccourcis**.
-- Si le boutons est gris, ceci signifie que le navigateur empêche l'injection de scriptes dans la page actuelle.
+- Le bouton **Marche/Arrêt** (On/Off) met en marche ou en arrêt l'extension.
+- Cliquez les liens sous les boutons pour **modifier les raccourcis**.
+- Si le boutons est gris, cela signifie que le navigateur empêche l'injection de scripts dans la page actuelle.
 
 
-<h2 id="filter-settings">Paramètres filtre</h2>
+<h2 id="filter-settings">Paramètres des filtres</h2>
 
 <img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" />
 
 Ajuster les valeurs du filtre, pour mieux convenir aux écrans et éclairage de la salle.
 
 
-<h2 id="custom-site-settings">Paramètres site particulier</h2>
+<h2 id="custom-site-settings">Paramètres des sites particuliers</h2>
 
 <img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
 
 Le bouton **Uniquement pour** applique les paramètres uniquement a ce site particulier.
 
-Clickez pour ajuster les paramètres, reclickez pour annuler.
+Cliquez pour ajuster les paramètres, recliquez pour annuler.
 
 
 <h2 id="site-list">Liste de sites</h2>
@@ -47,13 +47,13 @@ Clickez pour ajuster les paramètres, reclickez pour annuler.
 - Utilisez **Uniquement inversé** si vous souhaitez que Dark Reader fonctionne seulement sur les sites listés.
 - **Non inversé** empechera le fonctionnement de l'extension sur les sites listés.
 - Les valeurs possibles sont `google.com, mail.google.com, google.*, google.com/maps` etc.
-- Clickez sur le bouton **Basculer** pour ajouter un site à cette liste.
+- Cliquez sur le bouton **Basculer** pour ajouter un site à cette liste.
 
-<h2 id="more-tab">Onglet plus</h2>
+<h2 id="more-tab">Onglet "Plus"</h2>
 
 <img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" />
 
-- **Sélectionnez une police** de la liste (ou entrez le nom sur Firefox), clickez la **checkbox**.
+- **Sélectionnez une police** de la liste (ou entrez le nom sur Firefox), puis cochez la **case**.
 - Ajustez le **Trait du texte**.
 - Choisissez un **Mode de génération de thème**.
 
@@ -61,25 +61,25 @@ Clickez pour ajuster les paramètres, reclickez pour annuler.
 <h2 id="theme-generation-modes">Modes de génération de thème</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
-    <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
+    <img src="/images/help/darkreader-theme-modes.png" alt="Filtre+ vs. Statique vs. Mode Dynamique" />
+    <figcaption>Filtre+ vs. Statique vs. Mode Dynamique</figcaption>
 </figure>
 
 - **Filtre** est le mode initial de Dark Reader basé sur les filtres CSS.
-Il **inverse la couleure de la page entière** et **rétablit certaines parties **.
+Il **inverse la couleure de la page entière** et **rétablit certaines parties**.
 Requires GPU resources.
 **Rapide** et puissant, mais a plusieurs problèmes:
 désactive le rendu du texte sous-pixel,
 inverse les parties déjà sombres dans la lumière,
 provoque des retards sur les grandes pages,
 ne parvient pas à rendre certaines pages dans Firefox.
-- ** Filtre + ** identique à Filtre, mais basé sur des filtres SVG personnalisés
-et ** gère mieux les couleurs **, ce qui rend les images moins ternes.
+- **Filtre +** identique à Filtre, mais basé sur des filtres SVG personnalisés
+et **gère mieux les couleurs**, ce qui rend les images moins ternes.
 Fonctionne mal dans Firefox.
-- ** Statique ** génère rapidement une feuille de style de base.
-- ** Dynamique ** analyse en profondeur les feuilles de style de sites Web, les images d’arrière-plan, les graphiques vectoriels.
+- **Statique** génère rapidement une feuille de style de base.
+- **Dynamique** analyse en profondeur les feuilles de style de sites Web, les images d’arrière-plan, les graphiques vectoriels.
 Requiert des ressources lors du chargement initial de la page,
-mais produit ** les ** meilleurs résultats visuels.
+mais produit **les** meilleurs résultats visuels.
 Le travail sur ce mode est en cours,
 mais cela fonctionne déjà bien pour de nombreux sites Web modernes.
 
@@ -128,24 +128,24 @@ vous devez donc installer un thème sombre à partir du magasin.
 #### L'extension ne fonctionne pas du tout
 
 Si vous avez installé des extensions de mode noir similaires, désactivez-les, rechargez les onglets.
-Cliquez sur l'icône Dark Reader, vérifiez si le bouton en haut à droite est défini sur ** On **.
-Ouvrez l'onglet ** Liste de sites **, vérifiez que **Pas inverser la liste** est sélectionné.
+Cliquez sur l'icône Dark Reader, vérifiez si le bouton en haut à droite est défini sur **On**.
+Ouvrez l'onglet **Liste de sites**, vérifiez que **Non inversé** est sélectionné.
 Si rien ne vous aide, quelque chose de terrible est arrivé, envoyez-nous un courrier électronique.
 
 #### Le site Web n'est pas affiché correctement ou fonctionne lentement
 
 S'il vous plaît, envoyez l'adresse de votre site Web, votre capture d'écran, votre version du système d'exploitation et de votre navigateur à notre adresse e-mail.
 Nous allons essayer de rechercher la raison, au moins pour un site Web populaire.
-Essayez également de changer ** le mode de génération de thèmes ** ou d'utiliser **le mode Lumière**.
+Essayez également de changer **le mode de génération de thèmes** ou d'utiliser **le mode Light**.
 Vérifiez que le site Web n'est pas répertorié sous l'onglet **Liste de sites**.
 
 #### L'extension ne fonctionne pas en mode navigation privée
 
-Ouvrez ** chrome: // extensions ** page, recherchez ** Dark Reader **, cliquez sur ** Autoriser en mode navigation privée**.
+Ouvrez **chrome://extensions** page, recherchez **Dark Reader**, cliquez sur **Autoriser en mode navigation privée**.
 
 #### L'extension ne fonctionne pas pour les fichiers locaux
 
-Ouvrez ** chrome: // extensions ** page, recherchez ** Dark Reader **, cliquez sur ** Autoriser l'accès aux URL de fichiers**.
+Ouvrez **chrome://extensions** page, recherchez **Dark Reader**, cliquez sur **Autoriser l'accès aux URL de fichiers**.
 
 #### Tout le site n'est pas affiché en mode filtre
 
