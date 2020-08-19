@@ -8,9 +8,16 @@ body {
 }
 
 body {
-    max-width: 57rem;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    max-width: 57rem;
     padding: 1rem;
+    position: relative;
+}
+
+header {
+    order: 0;
 }
 
 .help-header-logo {
@@ -24,6 +31,7 @@ body {
 
 article {
     max-width: 38rem;
+    order: 1;
 }
 
 h1 {
@@ -62,8 +70,19 @@ figcaption {
     font-size: smaller;
 }
 
-aside {
+::-moz-selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+::selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+.rec-side {
     margin-top: 1.25rem;
+    order: 1;
     position: fixed;
     right: calc(50% - 27.5rem);
     top: 0;
@@ -212,14 +231,14 @@ aside {
     background-color: #316d7c;
 }
 
-::-moz-selection {
-    background-color: #e96c4c;
-    color: white;
+.rec-inplace {
+    max-width: 38rem;
+    order: 0;
 }
 
-::selection {
-    background-color: #e96c4c;
-    color: white;
+.rec-inplace-h {
+    color: #e96c4c;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 57rem) {
@@ -227,7 +246,7 @@ aside {
         max-width: 40rem;
     }
 
-    aside {
+    .rec-side {
         position: static;
         right: unset;
     }
