@@ -15,7 +15,7 @@ Static CSS works faster and requires less resources than dynamic analysis or CSS
 <figure>
     <img src="/images/darkreader-css-edit-button.png" alt="Dark Reader custom CSS edit button" style="width: 16rem;" />
 </figure>
-- Click **Only for** button (dont't click if you want some CSS to be applied to all websites by default).
+- Click **Only for** button (don't click if you want some CSS to be applied to all websites by default).
 - Switch to **Static** mode.
 - Click **Edit** icon under **Static** button.
 - Paste your CSS code into text block.
