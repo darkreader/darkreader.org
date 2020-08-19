@@ -88,12 +88,11 @@ maar het werkt al goed voor veel moderne websites.
 
 <img src="/images/help/darkreader-footer.png" alt="Onderste gedeelte" style="width: 15rem;" />
 
-- Read our **privacy policy**, follow us on **Twitter**.
-- **Donate** – if you like the extension, consider supporting the active Dark Reader development.
-Crowdfunding is held by Open Collective, which uses Stripe at the moment for helding payments.
-- **News** – notifies about release notes and important events.
-- **Developer tools** – opens a config editor for the current theme mode.
-
+- Lees onze **privacy policy**, volg ons op **Twitter**.
+- **Donate** - als de uitbreiding u bevalt, overweeg dan om de actieve ontwikkeling van Dark Reader te ondersteunen.
+Crowdfunding is in handen van Open Collective, dat op dit moment Stripe gebruikt voor holdingbetalingen.
+- **Nieuws** - informeert over release notes en belangrijke gebeurtenissen.
+- **Developer tools** - opent een configuratie-editor voor de huidige themamodus.
 
 <h2 id="using-dev-tools">Gebruik van de ontwikkelaarshulpmiddelen</h2>
 
