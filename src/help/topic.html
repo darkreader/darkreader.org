@@ -22,11 +22,40 @@
         $TOPIC
     </article>
     <aside class="rec-inplace">
-        <strong>Congratulations!</strong>
-        Also try the extension <a href="https://www.joinhoney.com/darkreader" class="rec-inplace-h">Honey</a>,
-        a product of <strong>PayPal</strong>.
-        Automatically apply coupon codes when you make purchases online.
-        <a href="https://www.joinhoney.com/darkreader">Learn more</a>.
+        <div class=h-in-header>
+            Sponsored by
+        </div>
+        <div class="h-in">
+            <a href="https://www.joinhoney.com/darkreader" class="h-in-logo-link">Honey</a>
+            <span class="h-in-text">
+                <a href="https://www.joinhoney.com/darkreader" class="h-in-link">Honey <span
+                        class="h-in-browser">extension</span></a>,
+                a product of <strong>PayPal</strong>.
+                Automatically find and apply discounts when you purchase online.
+                <a href="https://www.joinhoney.com/darkreader">Learn more</a>.
+                <script>
+                    let browserText;
+                    if (navigator.userAgent.includes('Firefox')) {
+                        browserText = 'for Firefox';
+                    } else if (navigator.userAgent.includes('Edg')) {
+                        browserText = 'for Edge';
+                    } else if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom')) {
+                        browserText = 'for Safari';
+                    } else if (navigator.userAgent.includes('OPR')) {
+                        browserText = 'for Opera';
+                    } else if (navigator.userAgent.includes('Chromium')) {
+                        browserText = 'for Chromium';
+                    } else if (navigator.userAgent.includes('Chrome')) {
+                        browserText = 'for Chrome';
+                    }
+                    if (browserText) {
+                        document
+                            .querySelectorAll('.h-in-browser')
+                            .forEach((el) => el.textContent = browserText);
+                    }
+                </script>
+            </span>
+        </div>
     </aside>
     <aside class="rec-side">
         <h2 class="rec-heading">
