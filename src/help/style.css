@@ -167,6 +167,17 @@ figcaption {
     position: relative;
 }
 
+.hl-image {
+    background-color: #f68623;
+    background-image: url(/images/honey-logo-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10rem auto;
+    height: 10.25rem;
+    text-indent: -999rem;
+    width: 16rem;
+}
+
 .hl-message {
     bottom: 0.25rem;
     color: white;
