@@ -38,6 +38,16 @@ strong {
     font-weight: bold;
 }
 
+::-moz-selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+::selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
 .wishes {
     align-items: center;
     display: flex;
@@ -85,9 +95,11 @@ strong {
 }
 
 .honey-logo-link {
-    background-image: url(/images/honey-logo.jpg);
-    background-position: center;
-    background-size: 125%;
+    background-color: #f68623;
+    background-image: url(/images/honey-logo-white.svg);
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+    background-size: 8.5rem auto;
     border-radius: 1.25rem;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
     display: inline-block;

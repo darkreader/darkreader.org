@@ -170,7 +170,7 @@ figcaption {
 .hl-image {
     background-color: #f68623;
     background-image: url(/images/honey-logo-white.svg);
-    background-position: center;
+    background-position: 50% 52%;
     background-repeat: no-repeat;
     background-size: 10rem auto;
     height: 10.25rem;
