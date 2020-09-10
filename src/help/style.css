@@ -36,6 +36,10 @@ header {
     width: 32rem;
 }
 
+.locale-list {
+    grid-area: content;
+}
+
 article {
     grid-area: content;
 }
@@ -270,7 +274,7 @@ figcaption {
 .h-in-logo-link {
     background-color: #f68623;
     background-image: url(/images/honey-logo-white.svg);
-    background-position: 50% 55%;
+    background-position: 50% 52%;
     background-repeat: no-repeat;
     background-size: 6rem auto;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
