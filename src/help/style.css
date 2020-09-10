@@ -8,8 +8,13 @@ body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 0 1rem;
+    grid:
+        "header side" auto
+        "inplace side" auto
+        "content side" auto
+        / auto 16rem;
     margin: 0 auto;
     max-width: 57rem;
     padding: 1rem;
@@ -17,7 +22,7 @@ body {
 }
 
 header {
-    order: 0;
+    grid-area: header;
 }
 
 .help-header-logo {
@@ -25,13 +30,14 @@ header {
     background-size: cover;
     display: inline-block;
     height: 8rem;
+    max-height: calc(25vw - 0.5rem);
+    max-width: calc(100vw - 2rem);
     text-decoration: none;
     width: 32rem;
 }
 
 article {
-    max-width: 38rem;
-    order: 1;
+    grid-area: content;
 }
 
 h1 {
@@ -81,8 +87,8 @@ figcaption {
 }
 
 .rec-side {
+    grid-area: side;
     margin-top: 1.25rem;
-    order: 1;
     position: fixed;
     right: calc(50% - 27.5rem);
     top: 0;
@@ -243,8 +249,7 @@ figcaption {
 }
 
 .rec-inplace {
-    max-width: 38rem;
-    order: 0;
+    grid-area: inplace;
 }
 
 .rec-inplace-h {
@@ -294,12 +299,20 @@ figcaption {
 
 .h-in-header {
     font-style: italic;
-    margin-left: calc(50% - 5rem);
+    max-width: 35.5rem;
+    text-align: center;
     text-transform: uppercase;
 }
 
 @media screen and (max-width: 57rem) {
     body {
+        gap: 0 1rem;
+        grid:
+            "header" auto
+            "inplace" auto
+            "content" auto
+            "side" auto
+            / auto;
         max-width: 40rem;
     }
 
