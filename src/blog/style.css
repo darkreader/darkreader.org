@@ -8,14 +8,20 @@ body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 40em;
     padding: 1em;
 }
 
-header,
+header {
+    order: 1;
+}
+
 nav,
 main {
-    max-width: 40em;
-    margin: 0 auto;
+    order: 2;
 }
 
 h1 {
@@ -71,11 +77,23 @@ figcaption {
     font-size: smaller;
 }
 
+::-moz-selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
+::selection {
+    background-color: #e96c4c;
+    color: white;
+}
+
 .header-logo {
     background-image: url(/images/darkreader-blog.svg);
     background-size: cover;
     display: inline-block;
     height: 8em;
+    max-height: calc(25vw - 0.5rem);
+    max-width: calc(100vw - 2rem);
     text-decoration: none;
     width: 32em;
 }
@@ -179,12 +197,58 @@ a:hover img {
     width: 3.5rem;
 }
 
-::-moz-selection {
-    background-color: #e96c4c;
-    color: white;
+.rec-inplace {
+    order: 1;
 }
 
-::selection {
-    background-color: #e96c4c;
-    color: white;
+.rec-inplace-h {
+    color: #e96c4c;
+    font-weight: bold;
+}
+
+.h-in {
+    align-items: stretch;
+    border: 0.125rem solid #316d7c;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    max-width: 35.5rem;
+}
+
+.h-in-logo-link {
+    background-color: #f68623;
+    background-image: url(/images/honey-logo-white.svg);
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+    background-size: 6rem auto;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
+    border-radius: 0.625rem;
+    display: inline-block;
+    flex: none;
+    margin: 0.25rem 0 0.25rem 0.25rem;
+    text-indent: -999rem;
+    transition: box-shadow 250ms;
+    width: 7.5rem;
+}
+
+.h-in-logo-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #53a1b3;
+}
+
+.h-in-text {
+    flex: auto;
+    padding: 1rem;
+}
+
+.h-in-link {
+    color: #e96c4c;
+    font-weight: bold;
+}
+
+.h-in-header {
+    font-style: italic;
+    max-width: 35.5rem;
+    text-align: center;
+    text-transform: uppercase;
 }
