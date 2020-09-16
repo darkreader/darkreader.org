@@ -1,3 +1,11 @@
+// @ts-check
+
+import {
+    createSVGElement as svg,
+    getCSSText as css,
+    SVG_NS,
+} from './utils.js';
+
 /**
  * @typedef Backer
  * @property {string} name
@@ -8,6 +16,7 @@
 
 /*
 // Load top backers
+// Paste on Open Collective website and run `loadBackers().then(json => ...)`
 const BACKERS_COUNT = 24;
 const URL = `https://opencollective.com/darkreader/members/all.json`;
 
@@ -37,51 +46,20 @@ function getBackers() {
     return JSON.parse(top24BackersJSON);
 }
 
-const SVG_NS = 'http://www.w3.org/2000/svg';
-
 function scale(x, inLow, inHigh, outLow, outHigh) {
     return (x - inLow) * (outHigh - outLow) / (inHigh - inLow) + outLow;
 }
 
 /**
- * @param {string} tag
- * @param {{[attr: string]: any}} [attrs]
- * @param {(SVGElement | string)[]} [children]
- * @returns {SVGElement}
- */
-function createSVGElement(tag, attrs = {}, ...children) {
-    const el = document.createElementNS(SVG_NS, tag);
-    Object.entries(attrs || {}).forEach(([key, value]) => el.setAttribute(key, value));
-    children.filter(c => c != null).forEach(c => el.append(typeof c === 'string' ? document.createTextNode(c) : c));
-    return el;
-}
-
-/**
- * @param {{[selector]: any}} spec
- * @param {string} [indent]
- */
-function getCSSText(spec, indent = '') {
-    return Object.entries(spec).reduce((cssText, [key, value], i) => {
-        if (value == null) return cssText;
-        const isObject = typeof value === 'object';
-        return cssText
-            + (i > 0 ? `\n${isObject ? '\n' : ''}` : '')
-            + (`${indent}${key}${isObject ?
-                ` {\n${getCSSText(value, `${indent}    `)}\n${indent}}` :
-                `: ${value};`}`);
-    }, '');
-}
-
-/**
  * @param {Object} options
- * @param {SVGSVGElement} options.svg
+ * @param {SVGSVGElement} options.svgRoot
  * @param {Backer[]} options.backers
  * @param {number} options.width
  * @param {number} options.height
  * @param {number} options.columns
  * @param {number} options.rows
  */
-function drawBackersGraph({svg, backers, width, height, columns, rows}) {
+function drawBackersGraph({svgRoot, backers, width, height, columns, rows}) {
     const pad = 4;
     const size = Math.floor(Math.min((width - pad * (columns + 1)) / columns, (height - pad * (rows + 1)) / rows));
     const cx = size / 2;
@@ -89,16 +67,16 @@ function drawBackersGraph({svg, backers, width, height, columns, rows}) {
     const r = size / 2;
 
     function createDefs() {
-        return createSVGElement('defs', null,
-            createSVGElement('clipPath', {id: 'circle-clip'},
-                createSVGElement('circle', {cx, cy, r}),
+        return svg('defs', null,
+            svg('clipPath', {id: 'circle-clip'},
+                svg('circle', {cx, cy, r}),
             ),
         );
     }
 
     function createStyle() {
-        return createSVGElement('style', null,
-            getCSSText({
+        return svg('style', null,
+            css({
                 'image': {
                     'clip-path': 'url(#circle-clip)',
                 },
@@ -145,58 +123,58 @@ function drawBackersGraph({svg, backers, width, height, columns, rows}) {
             })();
             const text = (backer.name || '?').split(' ').slice(0, 2).map(s => s.charAt(0).toUpperCase()).join('');
 
-            return createSVGElement('g', {},
-                createSVGElement('circle', {cx, cy, r, fill}),
-                createSVGElement('text', {x: cx, y: cy},
+            return svg('g', {},
+                svg('circle', {cx, cy, r, fill}),
+                svg('text', {x: cx, y: cy},
                     text,
                 ),
             );
         }
 
-        return createSVGElement('a', {href: backer.url, transform: `translate(${x} ${y})`},
+        return svg('a', {href: backer.url, transform: `translate(${x} ${y})`},
             backer.pic ?
-                createSVGElement('image', {href: backer.pic, width: size, height: size}) :
+                svg('image', {href: backer.pic, width: size, height: size}) :
                 fallbackPic(),
-            createSVGElement('circle', {class: 'highlight', cx, cy, r}),
-            createSVGElement('title', {}, title),
+            svg('circle', {class: 'highlight', cx, cy, r}),
+            svg('title', {}, title),
         );
     }
 
     function draw() {
-        while (svg.lastChild) {
-            svg.lastChild.remove();
+        while (svgRoot.lastChild) {
+            svgRoot.lastChild.remove();
         }
 
-        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-        svg.append(createStyle());
-        svg.append(createDefs());
+        svgRoot.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        svgRoot.append(createStyle());
+        svgRoot.append(createDefs());
         backers.forEach((b, i) => {
             const el = createUserPic(b, i);
-            svg.append(el);
+            svgRoot.append(el);
         });
     }
 
     draw();
 }
 
-class BackersElement extends HTMLElement {
+class BackersGraphElement extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({mode: 'open'});
+        const shadowRoot = this.attachShadow({mode: 'closed'});
         this.svgElement = document.createElementNS(SVG_NS, 'svg');
-        this.shadowRoot.append(this.svgElement);
+        shadowRoot.append(this.svgElement);
     }
 
     connectedCallback() {
-        const svg = this.svgElement;
+        const svgRoot = this.svgElement;
         const width = Number(this.getAttribute('width'));
         const height = Number(this.getAttribute('height'));
         const rows = Number(this.getAttribute('rows'));
         const columns = Number(this.getAttribute('columns'));
         const backers = getBackers();
 
-        drawBackersGraph({svg, backers, width, height, rows, columns});
+        drawBackersGraph({svgRoot, backers, width, height, rows, columns});
     }
 }
 
-customElements.define('darkreader-backers', BackersElement);
+customElements.define('darkreader-backers-graph', BackersGraphElement);

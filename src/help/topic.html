@@ -22,72 +22,12 @@
         $TOPIC
     </article>
     <aside class="rec-inplace">
-        <div class=h-in-header>
-            Sponsored by
-        </div>
-        <div class="h-in">
-            <a href="https://www.joinhoney.com/darkreader" class="h-in-logo-link">Honey</a>
-            <span class="h-in-text">
-                <a href="https://www.joinhoney.com/darkreader" class="h-in-link">Honey <span
-                        class="h-in-browser">extension</span></a>,
-                a product of <strong>PayPal</strong>.
-                Automatically find and apply discounts when you purchase online.
-                <a href="https://www.joinhoney.com/darkreader">Learn more</a>.
-                <script>
-                    let browserText;
-                    if (navigator.userAgent.includes('Firefox')) {
-                        browserText = 'for Firefox';
-                    } else if (navigator.userAgent.includes('Edg')) {
-                        browserText = 'for Edge';
-                    } else if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom')) {
-                        browserText = 'for Safari';
-                    } else if (navigator.userAgent.includes('OPR')) {
-                        browserText = 'for Opera';
-                    } else if (navigator.userAgent.includes('Chromium')) {
-                        browserText = 'for Chromium';
-                    } else if (navigator.userAgent.includes('Chrome')) {
-                        browserText = 'for Chrome';
-                    }
-                    if (browserText) {
-                        document
-                            .querySelectorAll('.h-in-browser')
-                            .forEach((el) => el.textContent = browserText);
-                    }
-                </script>
-            </span>
-        </div>
+        <darkreader-backers-header></darkreader-backers-header>
+        <script type="module" src="../../elements/backers-header.js"></script>
     </aside>
     <aside class="rec-side">
-        <h2 class="rec-heading">
-            Support us
-        </h2>
-        <div class="rec hr">
-            <a class="rec-logo-link hl" href="https://www.joinhoney.com/darkreader">
-                <span class="rec-logo-link-image hl-image">Honey</span>
-                <span class="hl-message">
-                    Owned by <span class="hl-paypal">PayPal</span>
-                </span>
-            </a>
-            <a class="rec-text-link ht" href="https://www.joinhoney.com/darkreader">
-                Save <span class="ht-usd">$$$</span> when you shop online
-            </a>
-            <a class="rec-button-link hb" href="https://www.joinhoney.com/darkreader">
-                <span class="hb-icon"></span>
-                <span class="rec-button-link-text hb-text">Join Honey</span>
-            </a>
-        </div>
-        <div class="rec dr">
-            <a class="rec-logo-link dl" href="https://opencollective.com/darkreader">
-                <darkreader-backers class="dl-graph" width="360" height="240" rows="4" columns="6"></darkreader-backers>
-                <script type="module" src="../backers.js"></script>
-            </a>
-            <a class="rec-text-link dt" href="https://opencollective.com/darkreader">
-                Become a sponsor too
-            </a>
-            <a class="rec-button-link db" href="https://opencollective.com/darkreader">
-                <span class="rec-button-link-text">Donate</span>
-            </a>
-        </div>
+        <darkreader-backers-side></darkreader-backers-side>
+        <script type="module" src="../../elements/backers-side.js"></script>
     </aside>
 </body>
 

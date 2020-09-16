@@ -63,7 +63,6 @@ async function writeIndex() {
 }
 
 async function copyFiles() {
-    await fs.copy('src/help/backers.js', 'www/help/backers.js');
     await fs.copy('src/help/style.css', 'www/help/style.css');
 }
 
