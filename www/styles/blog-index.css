@@ -1,0 +1,40 @@
+@import "./shared.css";
+@import "./page-stack.css";
+@import "./blog-shared.css";
+
+.post-tile {
+    background-color: #19394500;
+    display: grid;
+    grid:
+        "preview headline" auto
+        "preview date" 1fr
+        / 8rem auto;
+    grid-gap: 0.5rem;
+    max-width: 32rem;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+    transition: background-color 250ms, color 250ms;
+}
+
+.post-tile:hover {
+    background-color: #193945ff;
+}
+
+.post-tile__preview {
+    align-self: center;
+    grid-area: preview;
+    width: 100%;
+}
+
+.post-tile__headline {
+    font-size: larger;
+    font-weight: bold;
+    grid-area: headline;
+    text-decoration: underline;
+}
+
+.post-tile__date {
+    font-size: smaller;
+    grid-area: date;
+    text-decoration: none;
+}

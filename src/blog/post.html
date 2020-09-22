@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <title>$HEADLINE – Dark Reader blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../../images/darkreader-icon-256x256.png" />
-    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="shortcut icon" href="/images/darkreader-icon-256x256.png" />
+    <link rel="stylesheet" type="text/css" href="/styles/blog-post.css" />
     <meta name="theme-color" content="#141e24" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://darkreader.org/blog/$ID/" />
@@ -15,11 +15,11 @@
     <meta property="og:description" content="$DESCRIPTION" />
 </head>
 
-<body>
-    <header>
+<body class="page-grid-body">
+    <header class="page-grid-header">
         <a class="header-logo" href="../"></a>
     </header>
-    <main>
+    <main class="page-grid-content">
         <article>
             <h6>$DATE</h6>
 
@@ -27,13 +27,17 @@
 
             <p>
                 <darkreader-donate-mascot></darkreader-donate-mascot>
-                <script type="module" src="../../elements/donate-mascot.js"></script>
+                <script type="module" src="/elements/donate-mascot.js"></script>
             </p>
         </article>
     </main>
-    <aside class="rec-inplace">
+    <aside class="page-grid-inside">
         <darkreader-backers-header></darkreader-backers-header>
-        <script type="module" src="../../elements/backers-header.js"></script>
+        <script type="module" src="/elements/backers-header.js"></script>
+    </aside>
+    <aside class="page-grid-side">
+        <darkreader-backers-side></darkreader-backers-side>
+        <script type="module" src="/elements/backers-side.js"></script>
     </aside>
     <script>
         document.querySelectorAll('video').forEach((video) => {

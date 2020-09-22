@@ -1,0 +1,52 @@
+.page-grid-body {
+    display: grid;
+    gap: 0 1rem;
+    grid:
+        "header side" auto
+        "inside side" auto
+        "content side" auto
+        / auto 16rem;
+    margin: 0 auto;
+    max-width: 57rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.page-grid-header {
+    grid-area: header;
+}
+
+.page-grid-inside {
+    grid-area: inside;
+}
+
+.page-grid-content {
+    grid-area: content;
+}
+
+.page-grid-side {
+    grid-area: side;
+    margin-top: 1.25rem;
+    position: fixed;
+    right: calc(50% - 27.5rem);
+    top: 0;
+    width: 16rem;
+}
+
+@media screen and (max-width: 57rem) {
+    .page-grid-body {
+        gap: 0 1rem;
+        grid:
+            "header" auto
+            "inside" auto
+            "content" auto
+            "side" auto
+            / auto;
+        max-width: 40rem;
+    }
+
+    .page-grid-side {
+        position: static;
+        right: unset;
+    }
+}

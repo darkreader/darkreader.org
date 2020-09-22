@@ -38,20 +38,20 @@ const htmlText = `
 
 const cssText = `
 a {
-    color: #53a1b3;
+    color: var(--color-text);
     outline: none;
     transition: color 125ms;
 }
 a:hover {
-    color: white;
+    color: var(--color-text-hover);
 }
 .rec-inplace-h {
-    color: #e96c4c;
+    color: var(--color-hover);
     font-weight: bold;
 }
 .h-content {
     align-items: stretch;
-    border: 0.125rem solid #316d7c;
+    border: 0.125rem solid var(--color-control);
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
@@ -59,13 +59,13 @@ a:hover {
     max-width: 35.5rem;
 }
 .h-logo-link {
-    background-color: #f68623;
+    background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
     background-position: 50% 52%;
     background-repeat: no-repeat;
     background-size: 6rem auto;
     border-radius: 0.625rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     display: inline-block;
     flex: none;
     margin: 0.25rem 0 0.25rem 0.25rem;
@@ -74,14 +74,14 @@ a:hover {
     width: 7.5rem;
 }
 .h-logo-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 .h-text {
     flex: auto;
     padding: 1rem;
 }
 .h-link {
-    color: #e96c4c;
+    color: var(--color-highlight);
     font-weight: bold;
 }
 .h-title {

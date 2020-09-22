@@ -1,6 +1,7 @@
+// @ts-check
+
 const fs = require('fs-extra');
 const marked = require('marked');
-const posts = require('../src/blog/posts.json');
 
 function replace(text, find, replace) {
     return text.split(find).join(replace);
@@ -62,14 +63,9 @@ async function writeIndex() {
     await fs.outputFile(`www/help/index.html`, index.replace(listItemRegex, list), {encoding: 'utf8'});
 }
 
-async function copyFiles() {
-    await fs.copy('src/help/style.css', 'www/help/style.css');
-}
-
 Promise.all([
     writeTopics(),
     writeIndex(),
-    copyFiles(),
 ])
     .then(() => console.info('\x1b[32m', 'Help done', '\x1b[0m'))
     .catch((err) => console.error('\x1b[31m', err, '\x1b[0m'));

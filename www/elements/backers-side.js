@@ -43,18 +43,18 @@ const htmlText = `
 
 const cssText = `
 a {
-    color: #53a1b3;
+    color: var(--color-text);
     outline: none;
     transition: color 125ms;
 }
 a:hover {
-    color: white;
+    color: var(--color-text-hover);
 }
 :host {
     width: 16rem;
 }
 .heading {
-    color: #e96c4c;
+    color: var(--color-highlight);
     margin: 0 0 1rem 0;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
@@ -68,7 +68,7 @@ section {
 .logo-link {
     align-items: center;
     border-radius: 1.25rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     display: inline-flex;
     flex-direction: column;
     overflow: hidden;
@@ -78,7 +78,7 @@ section {
     width: 100%;
 }
 .logo-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 .logo-link-image {
     display: inline-block;
@@ -90,12 +90,12 @@ section {
     transition: color 250ms;
 }
 .text-link:hover {
-    color: white;
+    color: var(--color-text-hover);
 }
 .button-link {
     align-items: center;
     border-radius: 1.25rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     color: white;
     display: inline-flex;
     flex-direction: row;
@@ -107,7 +107,7 @@ section {
     width: 10rem;
 }
 .button-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 .button-link-text {
     display: inline-block;
@@ -121,7 +121,7 @@ section {
     position: relative;
 }
 .hl-image {
-    background-color: #f68623;
+    background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
     background-position: 50% 52%;
     background-repeat: no-repeat;
@@ -150,13 +150,13 @@ section {
     width: 3.5rem;
 }
 .ht {
-    color: #f68623;
+    color: var(--color-honey);
 }
 .ht-usd {
     color: #53b378;
 }
 .hb {
-    background-color: #f68623;
+    background-color: var(--color-honey);
     width: 12.5rem;
 }
 .hb-icon {
@@ -182,7 +182,7 @@ section {
     width: 100%;
 }
 .db {
-    background-color: #316d7c;
+    background-color: var(--color-control);
 }
 `;
 

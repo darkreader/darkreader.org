@@ -1,10 +1,7 @@
+@import "styles/shared.css";
+
 html,
 body {
-    background-color: #141e24;
-    color: white;
-    font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     font-weight: 300;
     margin: 0;
     padding: 0;
@@ -27,7 +24,7 @@ header {
 }
 
 header h1 {
-    color: #e96c4c;
+    color: var(--color-highlight);
     font-size: 2.75rem;
     font-weight: 300;
     margin: 0;
@@ -37,8 +34,8 @@ header h1 {
 
 main {
     align-items: center;
-    border-bottom: 0.125rem solid #2f7485;
-    border-top: 0.125rem solid #2f7485;
+    border-bottom: 0.125rem solid var(--color-control);
+    border-top: 0.125rem solid var(--color-control);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -81,7 +78,7 @@ section {
 }
 
 .install-link__text {
-    color: #53a1b3;
+    color: var(--color-text);
     display: inline-block;
     font-size: 2rem;
     margin: 0 1rem 1rem 1rem;
@@ -138,7 +135,7 @@ footer {
 
 footer a {
     border-bottom: 0.0625rem solid #ffffff00;
-    color: #53a1b3;
+    color: var(--color-text);
     display: inline-block;
     font-size: 2rem;
     margin: 1rem;
@@ -147,18 +144,8 @@ footer a {
 }
 
 footer a:hover {
-    border-bottom-color: white;
-    color: white;
-}
-
-::-moz-selection {
-    background-color: #e96c4c;
-    color: white;
-}
-
-::selection {
-    background-color: #e96c4c;
-    color: white;
+    border-bottom-color: var(--color-text-hover);
+    color: var(--color-text-hover);
 }
 
 @media screen and (max-width: 50em) {

@@ -1,3 +1,5 @@
+// @ts-check
+
 const fs = require('fs-extra');
 const marked = require('marked');
 const {createImageProcessor} = require('./utils/image');
@@ -97,7 +99,6 @@ async function writeIndex() {
 }
 
 async function copyFiles() {
-    await fs.copy('src/blog/style.css', 'www/blog/style.css');
     await fs.copy('src/blog/posts.json', 'www/blog/posts.json');
 }
 

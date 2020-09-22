@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <title>Dark Reader blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../images/darkreader-icon-256x256.png" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="/images/darkreader-icon-256x256.png" />
+    <link rel="stylesheet" type="text/css" href="/styles/blog-index.css" />
     <meta name="theme-color" content="#141e24" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="https://darkreader.org/blog/" />
@@ -15,14 +15,14 @@
     <meta property="og:description" content="Dark Reader news and helpful articles." />
 </head>
 
-<body>
+<body class="page-stack-body">
     <header>
         <a class="header-logo" href="../"></a>
     </header>
     <nav class="posts-list">
         $LIST-ITEM-START
         <a class="post-tile" href="$ID/">
-            <img class="post-tile__preview" src="../images/blog-previews/$ID-preview-small.jpg" loading="lazy" />
+            <img class="post-tile__preview" src="/images/blog-previews/$ID-preview-small.jpg" loading="lazy" />
             <span class="post-tile__headline">$HEADLINE</span>
             <span class="post-tile__date">$DATE</span>
         </a>
