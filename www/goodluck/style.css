@@ -1,6 +1,7 @@
+@import "/styles/shared.css";
+
 html {
     align-items: center;
-    background-color: #141e24;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,39 +14,16 @@ html {
 body {
     align-items: center;
     box-sizing: border-box;
-    color: #53a1b3;
     display: flex;
     flex-direction: column;
-    font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     justify-content: center;
     margin: 0;
     padding: 0.5rem 0 2rem 0;
     width: 100%;
 }
 
-a {
-    color: #53a1b3;
-    transition: color 250ms;
-}
-
-a:hover {
-    color: white;
-}
-
 strong {
     font-weight: bold;
-}
-
-::-moz-selection {
-    background-color: #e96c4c;
-    color: white;
-}
-
-::selection {
-    background-color: #e96c4c;
-    color: white;
 }
 
 .wishes {
@@ -65,13 +43,13 @@ strong {
 }
 
 .wishes-heading {
-    color: #e96c4c;
+    color: var(--color-highlight);
     font-weight: 300;
     margin: 0 0 0.75rem 0;
 }
 
 .feedback-link {
-    color: #e96c4c;
+    color: var(--color-highlight);
     display: inline-block;
     font-size: 1.25rem;
     font-weight: bold;
@@ -95,13 +73,14 @@ strong {
 }
 
 .honey-logo-link {
-    background-color: #f68623;
+    background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
     background-position: 50% 52%;
     background-repeat: no-repeat;
     background-size: 8.5rem auto;
     border-radius: 1.25rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    color: var(--color-honey);
     display: inline-block;
     flex: none;
     height: 7rem;
@@ -111,11 +90,11 @@ strong {
 }
 
 .honey-logo-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #53a1b3;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 
 .honey-name {
-    color: #f68623;
+    color: var(--color-honey);
     font-weight: bold;
 }
 
