@@ -8,6 +8,9 @@ import {
 const hnURL = 'https://www.joinhoney.com/darkreader';
 const ocURL = 'https://opencollective.com/darkreader';
 
+const isEdge = navigator.userAgent.includes('Edg');
+const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
+
 const htmlText = `
 <h2 class="heading">
     Support us
@@ -23,7 +26,7 @@ const htmlText = `
         Save <span class="ht-usd">$$$</span> when you shop online
     </a>
     <a class="button-link hb" href="${hnURL}">
-        <span class="hb-icon"></span>
+        <span class="hb-icon${isEdge ? ' hb-icon--edge' : isSafari ? ' hb-icon--safari' : ''}"></span>
         <span class="button-link-text hb-text">Join Honey</span>
     </a>
 </section>
@@ -173,6 +176,12 @@ section {
     .hb-icon {
         background-image: url(/images/icon-firefox-87x82.svg);
     }
+}
+.hb-icon--edge {
+    background-image: url(/images/icon-edge-256x256.svg);
+}
+.hb-icon--safari {
+    background-image: url(/images/icon-safari-66x66.svg);
 }
 .dl,
 .dl:hover {
