@@ -1,70 +1,75 @@
 @import "styles/shared.css";
+@import "styles/page-grid.css";
 
-html,
-body {
+header {
+    text-align: center;
+}
+
+.main-logo {
+    background-image: url(/images/darkreader-main.svg);
+    background-size: cover;
+    display: inline-block;
+    height: 8rem;
+    margin-left: -0.5rem;
+    max-height: calc(25vw - 0.5rem);
+    max-width: calc(100vw - 2rem);
+    text-decoration: none;
+    text-indent: -999rem;
+    width: 32rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+nav a {
+    border-bottom: 0.0625rem solid #ffffff00;
+    font-size: 1.5rem;
     font-weight: 300;
-    margin: 0;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: all 125ms;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    border-bottom-color: var(--color-text-hover);
+}
+
+.install-links {
+    display: grid;
+    gap: 1rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    justify-items: center;
+    min-width: 16rem;
     padding: 0;
 }
 
-body {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    max-width: 50rem;
-    margin: 2rem 0;
-    width: 100%;
-}
-
-#logo {
-    display: inline-block;
-}
-
-header h1 {
-    color: var(--color-highlight);
-    font-size: 2.75rem;
-    font-weight: 300;
-    margin: 0;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-main {
-    align-items: center;
-    border-bottom: 0.125rem solid var(--color-control);
-    border-top: 0.125rem solid var(--color-control);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-section {
-    margin: 2rem;
-}
-
-#links {
-    align-items: stretch;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 50rem;
-    width: 100%;
+.install-links li {
+    list-style-type: none;
 }
 
 .install-link {
     align-items: center;
-    background-color: #19394500;
+    border: 0.0625rem solid var(--color-control);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 0rem var(--color-text);
+    box-sizing: border-box;
+    color: white;
     display: inline-flex;
-    flex-direction: column;
-    min-width: 50%;
+    flex-direction: row;
+    height: 3.125rem;
+    justify-content: center;
+    min-width: 16rem;
+    padding: 0.5rem;
     text-decoration: none;
-    transition: background-color 125ms;
+    transition: all 250ms;
+}
+
+.install-link:hover {
+    border-color: white;
+    box-shadow: 0 0 0.5rem var(--color-text);
 }
 
 .install-link__icon {
@@ -72,26 +77,18 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    height: 10rem;
-    margin: 1rem;
-    width: 10rem;
+    height: 2rem;
+    width: 2rem;
 }
 
 .install-link__text {
     color: var(--color-text);
     display: inline-block;
-    font-size: 2rem;
-    margin: 0 1rem 1rem 1rem;
-    text-align: center;
+    margin: 0 0.5rem;
 }
 
 .install-link__text strong {
-    color: white;
-    font-weight: 300;
-}
-
-.install-link:hover {
-    background-color: #193945;
+    color: var(--color-text-hover);
 }
 
 .icon--chrome {
@@ -117,81 +114,10 @@ section {
     background-size: 125%;
 }
 
-#screenshots {
-    margin: 2rem 0;
-}
-
-#screenshots img {
+.screenshot {
+    border-radius: 1rem;
     box-shadow: 0 0 2rem black;
     display: inline-block;
     max-width: 100%;
-}
-
-footer {
-    margin: 1rem;
-    max-width: 50rem;
     text-align: center;
-}
-
-footer a {
-    border-bottom: 0.0625rem solid #ffffff00;
-    color: var(--color-text);
-    display: inline-block;
-    font-size: 2rem;
-    margin: 1rem;
-    text-decoration: none;
-    transition: color 125ms, border-color 125ms;
-}
-
-footer a:hover {
-    border-bottom-color: var(--color-text-hover);
-    color: var(--color-text-hover);
-}
-
-@media screen and (max-width: 50em) {
-    .install-link__icon {
-        height: 6rem;
-        width: 6rem;
-    }
-    .install-link__text {
-        font-size: 1.5rem;
-    }
-    footer a {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 40em) {
-    header h1 {
-        font-size: 2rem;
-    }
-    #links {
-        justify-content: flex-start;
-    }
-    .install-link {
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
-    }
-    .install-link__icon {
-        height: 4rem;
-        margin-right: 0.5rem;
-        width: 4rem;
-    }
-    .install-link__text {
-        margin: 1rem 0;
-    }
-    section {
-        margin: 1rem 0;
-    }
-}
-
-@media screen and (max-width: 25em) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    .install-link__icon {
-        height: 2.5rem;
-        width: 2.5rem;
-    }
 }

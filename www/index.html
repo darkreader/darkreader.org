@@ -14,61 +14,94 @@
     <meta property="og:url" content="https://darkreader.org/" />
     <meta property="og:title" content="Dark Reader — dark theme for every website" />
     <meta property="og:image" content="https://darkreader.org/images/darkreader-preview-medium.png" />
-    <meta property="og:description" content="Dark mode on all websites. Care your eyes, use Dark Reader for night and daily browsing. For Chrome and Firefox." />
+    <meta property="og:description"
+        content="Dark mode on all websites. Care your eyes, use Dark Reader for night and daily browsing. For Chrome and Firefox, Edge and Safari." />
 </head>
 
-<body>
-    <header>
-        <img src="images/darkreader-type.svg" alt="Dark Reader" />
-        <h1>Dark mode for everything</h1>
+<body class="page-grid-body">
+    <header class="page-grid-header">
+        <a class="main-logo" href="/">
+            Dark Reader: Dark Mode Everywhere
+        </a>
     </header>
-    <main>
-        <section id="links">
-            <a class="install-link" href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh">
-                <span class="install-link__icon icon--chrome"></span>
-                <span class="install-link__text">Dark Reader for
-                    <strong>Chrome</strong>
-                </span>
-            </a>
-            <a class="install-link" href="https://addons.mozilla.org/en-US/firefox/addon/darkreader/">
-                <span class="install-link__icon icon--firefox"></span>
-                <span class="install-link__text">Dark Reader for
-                    <strong>Firefox</strong>
-                </span>
-            </a>
-            <a class="install-link" href="/safari">
-                <span class="install-link__icon icon--safari"></span>
-                <span class="install-link__text">Dark Reader for
-                    <strong>Safari</strong>
-                </span>
-            </a>
-            <a class="install-link" href="https://microsoftedge.microsoft.com/addons/detail/ifoakfbpdcdoeenechcleahebpibofpc">
-                <span class="install-link__icon icon--edge"></span>
-                <span class="install-link__text">Dark Reader for
-                    <strong>Edge</strong>
-                </span>
-            </a>
-        </section>
-        <section id="screenshots">
-            <img src="images/darkreader-screenshot-filter.png" alt="Dark Reader screenshot" />
+    <main class="page-grid-content">
+        <nav>
+            <a href="help/">Help</a>
+            <a href="blog/">Blog</a>
+            <a href="privacy/">Privacy Policy</a>
+        </nav>
+        <section>
+            <h1>How to enable Dark Mode on Facebook, Amazon, YouTube, Google Search, Wikipedia, Twitter
+                and other websites?</h1>
+            <p>
+                Install <strong>Dark Reader</strong> browser extension.
+                Configure the dark theme: brightness, contrast and sepia.
+                Enable for all or particular websites.
+                Use the following official links:
+            <ul class="install-links">
+                <li>
+                    <a class="install-link"
+                        href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh">
+                        <span class="install-link__icon icon--chrome"></span>
+                        <span class="install-link__text">Dark Reader for
+                            <strong>Chrome</strong>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="install-link" href="https://addons.mozilla.org/en-US/firefox/addon/darkreader/">
+                        <span class="install-link__icon icon--firefox"></span>
+                        <span class="install-link__text">Dark Reader for
+                            <strong>Firefox</strong>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="install-link" href="/safari">
+                        <span class="install-link__icon icon--safari"></span>
+                        <span class="install-link__text">Dark Reader for
+                            <strong>Safari</strong>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="install-link"
+                        href="https://microsoftedge.microsoft.com/addons/detail/ifoakfbpdcdoeenechcleahebpibofpc">
+                        <span class="install-link__icon icon--edge"></span>
+                        <span class="install-link__text">Dark Reader for
+                            <strong>Edge</strong>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            </p>
+            <p>
+                <img class="screenshot" src="images/darkreader-screenshot-v5-preview.png"
+                    alt="Dark Reader screenshot" />
+            </p>
         </section>
         <section>
-            <a class="install-link" href="https://github.com/darkreader/darkreader">
-                <span class="install-link__icon icon--github"></span>
-                <span class="install-link__text">Fork me on
-                    <strong>GitHub</strong>
-                </span>
-            </a>
+            <p>
+                Dark Reader is an <a href="https://github.com/darkreader/darkreader">open source</a> eye-care browser
+                extension.
+                It <a href="privacy/">doesn't send</a> user's data anywhere.
+                Trusted by 3,000,000 users.
+                Developed since 2014.
+                <a href="https://opencollective.com/darkreader">Support us</a>.
+            </p>
         </section>
     </main>
-    <footer>
-        <a href="https://opencollective.com/darkreader">Donate</a>
-        <a href="blog/">Blog</a>
-        <a href="help/">Help</a>
-        <a href="https://twitter.com/darkreaderapp">Twitter</a>
-        <a href="privacy/">Privacy</a>
-        <a href="mailto:darkreaderapp@gmail.com">DarkReaderApp@gmail.com</a>
+    <footer class="page-grid-footer">
+        <nav>
+            <a href="https://github.com/darkreader/darkreader">Github</a>
+            <a href="https://twitter.com/darkreaderapp">Twitter</a>
+            <a href="mailto:darkreaderapp@gmail.com">Contact</a>
+        </nav>
     </footer>
+    <aside class="page-grid-side">
+        <darkreader-backers-side></darkreader-backers-side>
+        <script type="module" src="/elements/backers-side.js"></script>
+    </aside>
 </body>
 
 </html>
