@@ -1,9 +1,8 @@
 // @ts-check
 
 import {
-    createSVGElement as svg,
-    getCSSText as css,
-    SVG_NS,
+    createHTMLElement as html,
+    classes,
 } from './utils.js';
 
 /**
@@ -12,14 +11,35 @@ import {
  * @property {string} url
  * @property {string} pic
  * @property {number} net
+ * @property {'user' | 'org'} type
+ * @property {string} info
  */
+
+/**
+ * @param {string} url
+ * @returns {Promise<any>}
+ */
+async function loadJSON(url) {
+    const response = await fetch(url);
+    return await response.json();
+}
+
+let backersCache;
 
 /**
  * @returns {Promise<Backer[]>}
  */
 async function getBackers() {
-    const response = await fetch('/data/top-backers.json');
-    return await response.json();
+    if (backersCache) {
+        return backersCache;
+    }
+    const [users, organizations] = await Promise.all([
+        loadJSON('/data/top-users.json'),
+        loadJSON('/data/top-organizations.json'),
+    ]);
+    const backers = users.concat(organizations);
+    backersCache = backers;
+    return backers;
 }
 
 function scale(x, inLow, inHigh, outLow, outHigh) {
@@ -27,134 +47,176 @@ function scale(x, inLow, inHigh, outLow, outHigh) {
 }
 
 /**
- * @param {Object} options
- * @param {SVGSVGElement} options.svgRoot
- * @param {Backer[]} options.backers
- * @param {number} options.width
- * @param {number} options.height
- * @param {number} options.columns
- * @param {number} options.rows
+ * @param {Backer[]} backers
+ * @returns {HTMLElement}
  */
-function drawBackersGraph({svgRoot, backers, width, height, columns, rows}) {
-    const pad = 4;
-    const size = Math.floor(Math.min((width - pad * (columns + 1)) / columns, (height - pad * (rows + 1)) / rows));
-    const cx = size / 2;
-    const cy = size / 2;
-    const r = size / 2;
+function createBackersGraph(backers) {
+    const organizations = backers.filter(b => b.type === 'org' && b.pic);
+    const users = backers.filter(b => b.type === 'user').slice(0, 18);
 
-    function createDefs() {
-        return svg('defs', null,
-            svg('clipPath', {id: 'circle-clip'},
-                svg('circle', {cx, cy, r}),
-            ),
-        );
+    function getColor(i) {
+        const fillHue = scale(i, 0, users.length - 1, 120, 240);
+        const fillSaturation = 25;
+        const fillBrightness = scale(i, 0, users.length - 1, 50, 30);
+        return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
     }
 
-    function createStyle() {
-        return svg('style', null,
-            css({
-                'image': {
-                    'clip-path': 'url(#circle-clip)',
-                },
-                'a .highlight': {
-                    'fill': 'none',
-                    'opacity': 0,
-                    'stroke': 'white',
-                    'stroke-width': '1px',
-                    'transition': 'opacity 250ms',
-                },
-                'a:hover .highlight': {
-                    'opacity': 1,
-                },
-                'text': {
-                    'dominant-baseline': 'central',
-                    'fill': 'white',
-                    'font-size': `${Math.floor(size / 2)}px`,
-                    'text-anchor': 'middle',
-                },
-            }),
-        );
-    }
+    organizations[1].pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
 
-    /**
-     * @param {Backer} backer
-     * @param {number} i
-     */
-    function createUserPic(backer, i) {
-        const xi = i % columns;
-        const yi = Math.floor(i / columns);
-
-        const c = (i) => pad + i * (size + pad);
-        const x = c(xi);
-        const y = c(yi);
-
-        const title = `${backer.name} contributed $${backer.net}`;
-
-        function fallbackPic() {
-            const fill = (() => {
-                const fillHue = scale(i, 0, backers.length - 1, 120, 240);
-                const fillSaturation = 25;
-                const fillBrightness = scale(i, 0, backers.length - 1, 50, 30);
-                return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
-            })();
-            const text = (backer.name || '?').split(' ').slice(0, 2).map(s => s.charAt(0).toUpperCase()).join('');
-
-            return svg('g', {},
-                svg('circle', {cx, cy, r, fill}),
-                svg('text', {x: cx, y: cy},
-                    text,
-                ),
-            );
-        }
-
-        return svg('a', {href: backer.url, transform: `translate(${x} ${y})`},
-            backer.pic ?
-                svg('image', {href: backer.pic, width: size, height: size}) :
-                fallbackPic(),
-            svg('circle', {class: 'highlight', cx, cy, r}),
-            svg('title', {}, title),
-        );
-    }
-
-    function draw() {
-        while (svgRoot.lastChild) {
-            svgRoot.lastChild.remove();
-        }
-
-        svgRoot.setAttribute('viewBox', `0 0 ${width} ${height}`);
-        svgRoot.append(createStyle());
-        svgRoot.append(createDefs());
-        backers.forEach((b, i) => {
-            const el = createUserPic(b, i);
-            svgRoot.append(el);
-        });
-    }
-
-    draw();
+    return html('div', {class: 'grid'},
+        // createBackerLink(organizations[1], 'large', '#3a416f'),
+        // createBackerLink(organizations[2], 'medium', null),
+        createBackerLink(organizations[3], 'wide', null),
+        ...users.map((u, i) => createBackerLink(u, 'small', getColor(i))),
+    );
 }
+
+/**
+ * @param {Backer} backer
+ * @param {'small' | 'medium' | 'large' | 'x-large' | 'xx-large' | 'wide'} size
+ * @param {string} color
+ * @returns {HTMLElement}
+ */
+function createBackerLink(backer, size, color) {
+    const picture = html('span', {class: 'backer-pic'});
+    if (backer.pic) {
+        picture.style.backgroundImage = `url("${backer.pic}")`;
+    } else {
+        picture.classList.add('backer-pic--empty');
+        picture.dataset.initials = (backer.name || '?')
+            .split(' ')
+            .slice(0, 2)
+            .map(s => s.charAt(0).toUpperCase())
+            .join('');
+    }
+
+    const link = html('a',
+        {
+            class: classes('backer', `backer--${size}`),
+            href: backer.url,
+            title: backer.info || backer.name,
+            target: '_blank',
+            rel: 'noopener',
+        },
+        picture,
+        html('span', {class: 'backer-name'},
+            backer.name,
+        ),
+    );
+    if (color) {
+        link.style.backgroundColor = color;
+    }
+    return link;
+}
+
+const cssText = `
+.grid {
+    display: grid;
+    gap: 0.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+    grid-auto-rows: 2.5rem;
+    grid-auto-fill: dense;
+}
+.backer {
+    background-color: var(--color-hover);
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+    transition: box-shadow 250ms;
+}
+.backer:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+}
+.backer-pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1.25rem;
+    display: inline-block;
+    flex: none;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.backer-name {
+    align-items: center;
+    display: inline-flex;
+    flex: auto;
+    justify-content: center;
+    overflow: hidden;
+}
+.backer--small .backer-name,
+.backer--medium .backer-name {
+    display: none;
+}
+.backer--medium {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.backer--medium .backer-pic {
+    background-size: 120%;
+    height: 100%;
+    width: 100%;
+}
+.backer--large {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.backer--large .backer-pic,
+.backer--x-large .backer-pic {
+    border-radius: 1.25rem;
+    /*
+    height: 5.2rem;
+    width: 5.2rem;
+    */
+    background-size: 90%;
+    height: 100%;
+    width: 100%;
+}
+.backer--large .backer-name,
+.backer--x-large .backer-name {
+    /*
+    font-size: 1.25rem;
+    font-weight: bold;
+    */
+    display: none;
+}
+.backer--x-large {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+.backer--wide {
+    grid-column: span 6;
+}
+.backer-pic--empty::after {
+    align-items: center;
+    content: attr(data-initials);
+    display: inline-flex;
+    font-size: 1.25rem;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+`;
+
+/** @type {WeakMap<HTMLElement, ShadowRoot>} */
+const roots = new WeakMap();
 
 class BackersGraphElement extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({mode: 'closed'});
-        this.svgElement = document.createElementNS(SVG_NS, 'svg');
-        shadowRoot.append(this.svgElement);
+        const style = html('style', null, cssText);
+        shadowRoot.append(style);
+        roots.set(this, shadowRoot);
     }
 
     connectedCallback() {
-        const svgRoot = this.svgElement;
-        const width = Number(this.getAttribute('width'));
-        const height = Number(this.getAttribute('height'));
-        const rows = Number(this.getAttribute('rows'));
-        const columns = Number(this.getAttribute('columns'));
-
-        svgRoot.setAttribute('viewBox', `0 0 ${width} ${height}`);
-
-        getBackers()
-            .then(topBackers => {
-                const backers = topBackers.slice(0, rows * columns);
-                drawBackersGraph({svgRoot, backers, width, height, rows, columns});
-            });
+        getBackers().then(backers => {
+            const graph = createBackersGraph(backers);
+            roots.get(this).append(graph);
+        });
     }
 }
 

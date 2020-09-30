@@ -74,7 +74,6 @@ section {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     display: inline-flex;
     flex-direction: column;
-    overflow: hidden;
     text-align: center;
     text-decoration: none;
     transition: box-shadow 250ms;
@@ -121,6 +120,7 @@ section {
     transform: skewX(-10deg);
 }
 .hl {
+    overflow: hidden;
     position: relative;
 }
 .hl-image {

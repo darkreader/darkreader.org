@@ -59,3 +59,19 @@ export function getCSSText(spec, indent = '') {
                 `: ${value};`}`);
     }, '');
 }
+
+/**
+ * 
+ * @param  {Array<string | {[cls: string]: any}>} args 
+ */
+export function classes(...args) {
+    const classes = [];
+    args.filter((c) => Boolean(c)).forEach((c) => {
+        if (typeof c === 'string') {
+            classes.push(c);
+        } else if (typeof c === 'object') {
+            classes.push(...Object.keys(c).filter((key) => Boolean(c[key])));
+        }
+    });
+    return classes.join(' ');
+}
