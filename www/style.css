@@ -24,17 +24,19 @@ nav {
 }
 
 nav a {
-    border-bottom: 0.0625rem solid #ffffff00;
+    border: 0.0625rem solid #ffffff00;
     font-size: 1.5rem;
     font-weight: 300;
     margin: 0 1rem;
     text-decoration: none;
     transition: all 125ms;
     white-space: nowrap;
+    padding: .195rem .8rem;
+    border-radius: .1rem .8rem;
 }
 
 nav a:hover {
-    border-bottom-color: var(--color-text-hover);
+    border-color: var(--color-text-hover);
 }
 
 .install-links {
