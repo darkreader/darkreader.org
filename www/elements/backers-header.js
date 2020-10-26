@@ -36,6 +36,25 @@ const htmlText = `
 </div>
 `;
 
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180';
+
+const macHTMLText = htmlText + `
+<div class="h-content">
+    <a href="${safariURL}" class="h-safari-logo-link">Dark Reader for Safari</a>
+    <span class="h-text">
+        Are you a <strong>macOS</strong> user?
+        <strong>Try</strong>
+        <a href="${safariURL}" class="h-safari-link">Dark Reader for Safari</a>.
+    </span>
+</div>
+`;
+
+const svgPlusIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path fill="#53a1b3" d="M3,0 h2 v3 h3 v2 h-3 v3 h-2 v-3 h-3 v-2 h3 z"/></svg>';
+
+function svgDataURL(svgText) {
+    return `url('data:image/svg+xml;utf8,${encodeURIComponent(svgText)}')`;
+}
+
 const cssText = `
 a {
     color: var(--color-text);
@@ -58,6 +77,22 @@ a:hover {
     justify-content: stretch;
     max-width: 35.5rem;
 }
+.h-content + .h-content {
+    margin-top: 0.25rem;
+}
+.h-logo-link,
+.h-safari-logo-link {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    display: inline-block;
+    flex: none;
+    margin: 0.25rem 0 0.25rem 0.25rem;
+    text-indent: -999rem;
+    transition: box-shadow 250ms;
+}
+.h-logo-link:hover,
+.h-safari-logo-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+}
 .h-logo-link {
     background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
@@ -65,22 +100,26 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 6rem auto;
     border-radius: 0.625rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
-    display: inline-block;
-    flex: none;
-    margin: 0.25rem 0 0.25rem 0.25rem;
-    text-indent: -999rem;
-    transition: box-shadow 250ms;
     width: 7.5rem;
 }
-.h-logo-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+.h-safari-logo-link {
+    background-image:
+        url(/images/icon-safari-66x66.svg),
+        ${svgDataURL(svgPlusIcon)},
+        url(/images/darkreader-icon.svg);
+    background-position: 0 50%, center, 4rem 50%;
+    background-repeat: no-repeat;
+    background-size: 3rem, 0.75rem, 3rem;
+    border-radius: 0.625rem;
+    min-height: 3rem;
+    width: 7rem;
 }
 .h-text {
     flex: auto;
     padding: 1rem;
 }
-.h-link {
+.h-link,
+.h-safari-link {
     color: var(--color-highlight);
     font-weight: bold;
 }
@@ -98,7 +137,8 @@ class BackerHeaderElement extends HTMLElement {
         const shadowRoot = this.attachShadow({mode: 'closed'});
         const style = html('style', null, cssText);
         shadowRoot.append(style);
-        style.insertAdjacentHTML('afterend', htmlText);
+        const isMac = navigator.platform.toLowerCase().startsWith('mac');
+        style.insertAdjacentHTML('afterend', isMac ? macHTMLText : htmlText);
     }
 }
 
