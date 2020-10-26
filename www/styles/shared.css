@@ -31,6 +31,7 @@ a {
     color: var(--color-text);
     outline: none;
     transition: color 125ms;
+    word-break: break-word;
 }
 
 a:hover {
