@@ -61,23 +61,32 @@ function createBackersGraph(backers) {
         return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
     }
 
-    organizations[1].pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
+    const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
+
+    // const algoliaOrg = organizations.find(o => o.name.toLowerCase().includes('algolia'));
+    // algoliaOrg.pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
+    // const tripleOrg = organizations.find(o => o.name.toLowerCase().includes('triple'));
+    const displayBackers = backers
+        .filter((b) => b !== icons8Org)
+        .sort((a, b) => b.net - a.net)
+        .slice(0, 18);
 
     return html('div', {class: 'grid'},
-        // createBackerLink(organizations[1], 'large', '#3a416f'),
-        // createBackerLink(organizations[2], 'medium', null),
-        createBackerLink(organizations[3], 'wide', null),
-        ...users.map((u, i) => createBackerLink(u, 'small', getColor(i))),
+        // createBackerLink(algoliaOrg, 'large', '#3a416f'),
+        // createBackerLink(tripleOrg, 'medium', null),
+        createBackerLink(icons8Org, 'wide', null, 'icons8'),
+        ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
     );
 }
 
 /**
  * @param {Backer} backer
  * @param {'small' | 'medium' | 'large' | 'x-large' | 'xx-large' | 'wide'} size
- * @param {string} color
+ * @param {string} [color]
+ * @param {string} [cls]
  * @returns {HTMLElement}
  */
-function createBackerLink(backer, size, color) {
+function createBackerLink(backer, size, color, cls) {
     const picture = html('span', {class: 'backer-pic'});
     if (backer.pic) {
         picture.style.backgroundImage = `url("${backer.pic}")`;
@@ -92,7 +101,7 @@ function createBackerLink(backer, size, color) {
 
     const link = html('a',
         {
-            class: classes('backer', `backer--${size}`),
+            class: classes('backer', `backer--${size}`, cls),
             href: backer.url,
             title: backer.info || backer.name,
             target: '_blank',
@@ -197,6 +206,9 @@ const cssText = `
     height: 100%;
     justify-content: center;
     width: 100%;
+}
+.icons8 .backer-pic {
+    background-color: #1eb141;
 }
 `;
 
