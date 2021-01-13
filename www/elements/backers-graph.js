@@ -51,16 +51,16 @@ function scale(x, inLow, inHigh, outLow, outHigh) {
  * @returns {HTMLElement}
  */
 function createBackersGraph(backers) {
-    const organizations = backers.filter(b => b.type === 'org' && b.pic);
-    const users = backers.filter(b => b.type === 'user').slice(0, 18);
+    const count = 18;
 
     function getColor(i) {
-        const fillHue = scale(i, 0, users.length - 1, 120, 240);
+        const fillHue = scale(i, 0, count - 1, 120, 240);
         const fillSaturation = 25;
-        const fillBrightness = scale(i, 0, users.length - 1, 50, 30);
+        const fillBrightness = scale(i, 0, count - 1, 50, 30);
         return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
     }
 
+    const organizations = backers.filter(b => b.type === 'org' && b.pic);
     const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
 
     // const algoliaOrg = organizations.find(o => o.name.toLowerCase().includes('algolia'));
@@ -69,7 +69,7 @@ function createBackersGraph(backers) {
     const displayBackers = backers
         .filter((b) => b !== icons8Org)
         .sort((a, b) => b.net - a.net)
-        .slice(0, 18);
+        .slice(0, count);
 
     return html('div', {class: 'grid'},
         // createBackerLink(algoliaOrg, 'large', '#3a416f'),

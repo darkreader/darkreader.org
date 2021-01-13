@@ -244,15 +244,18 @@ section {
 .db {
     background-color: var(--color-control);
 }
-@media (max-height: 44rem) {
-    .chrome .dl {
+@media (max-height: 38rem) {
+    .chrome .hb {
         display: none;
     }
 }
-
-@media (max-height: 50rem) {
-    .chrome .hb,
+@media (max-height: 41rem) {
     .chrome .tb {
+        display: none;
+    }
+}
+@media (max-height: 48rem) {
+    .chrome .dl {
         display: none;
     }
 }
