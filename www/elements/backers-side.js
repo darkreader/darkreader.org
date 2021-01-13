@@ -6,6 +6,7 @@ import {
 } from './utils.js';
 
 const hnURL = 'https://www.joinhoney.com/darkreader';
+const tcURL = 'https://jointoucan.com/partners/darkreader';
 const ocURL = 'https://opencollective.com/darkreader';
 
 const isEdge = navigator.userAgent.includes('Edg');
@@ -28,6 +29,18 @@ const htmlText = `
     <a class="button-link hb" href="${hnURL}">
         <span class="hb-icon${isEdge ? ' hb-icon--edge' : isSafari ? ' hb-icon--safari' : ''}"></span>
         <span class="button-link-text hb-text">Join Honey</span>
+    </a>
+</section>
+<section class="tr">
+    <a class="logo-link tl" href="${tcURL}">
+        <span class="logo-link-image tl-image">Toucan</span>
+    </a>
+    <a class="text-link tt" href="${tcURL}">
+        Learn a <span class="tt-tr">nuevo</span> language<br>while you browse
+    </a>
+    <a class="button-link tb" href="${tcURL}">
+        <span class="tb-icon"></span>
+        <span class="button-link-text tb-text">Join Toucan</span>
     </a>
 </section>
 <section class="dr">
@@ -126,10 +139,10 @@ section {
 .hl-image {
     background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
-    background-position: 50% 52%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 10rem auto;
-    height: 10.25rem;
+    height: 10rem;
     text-indent: -999rem;
     width: 16rem;
 }
@@ -183,6 +196,44 @@ section {
 .hb-icon--safari {
     background-image: url(/images/icon-safari-66x66.svg);
 }
+.tr:not(.chrome) {
+    display: none;
+}
+.tl {
+    overflow: hidden;
+}
+.tl-image {
+    background-color: var(--color-toucan);
+    background-image: url(/images/toucan-logo-full.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10rem;
+    text-indent: -999rem;
+    width: 16rem;
+}
+.tt {
+    color: var(--color-toucan-text);
+    text-align: center;
+}
+.tt-tr {
+    color: white;
+    font-style: italic;
+}
+.tb {
+    background-color: var(--color-toucan);
+    width: 12.5rem;
+}
+.tb-icon {
+    background-image: url(/images/icon-chrome-512x512.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 2rem;
+    margin-right: 0.5rem;
+    width: 2rem;
+}
 .dl,
 .dl:hover {
     box-shadow: none;
@@ -193,6 +244,18 @@ section {
 .db {
     background-color: var(--color-control);
 }
+@media (max-height: 44rem) {
+    .chrome .dl {
+        display: none;
+    }
+}
+
+@media (max-height: 50rem) {
+    .chrome .hb,
+    .chrome .tb {
+        display: none;
+    }
+}
 `;
 
 class BackersSideElement extends HTMLElement {
@@ -202,6 +265,9 @@ class BackersSideElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+        if (navigator.userAgent.includes('Chrom')) {
+            shadowRoot.querySelectorAll('section').forEach((s) => s.classList.add('chrome'));
+        }
     }
 }
 
