@@ -61,7 +61,7 @@ strong {
     flex-direction: column;
     font-size: 1.25rem;
     margin-top: 1rem;
-    max-width: 30rem;
+    max-width: 40rem;
     width: 100%;
 }
 
@@ -72,25 +72,31 @@ strong {
     justify-content: center;
 }
 
+.recommendations-row + .recommendations-row {
+    margin-top: 1rem;
+}
+
+.logo-link {
+    border-radius: 1rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    display: inline-block;
+    flex: none;
+    height: 5.5rem;
+    text-indent: -999rem;
+    transition: box-shadow 250ms;
+    width: 8rem;
+}
+
+.logo-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+}
+
 .honey-logo-link {
     background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
-    background-position: 50% 52%;
+    background-position: 50% 55%;
     background-repeat: no-repeat;
-    background-size: 8.5rem auto;
-    border-radius: 1.25rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
-    color: var(--color-honey);
-    display: inline-block;
-    flex: none;
-    height: 7rem;
-    text-indent: -999rem;
-    transition: box-shadow 250ms;
-    width: 11rem;
-}
-
-.honey-logo-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+    background-size: 82% auto;
 }
 
 .honey-name {
@@ -99,6 +105,24 @@ strong {
 }
 
 .paypal {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.toucan-logo-link {
+    background-color: var(--color-toucan);
+    background-image: url(/images/toucan-logo-small.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.toucan-name {
+    color: var(--color-toucan-text);
+    font-weight: bold;
+}
+
+.foreign {
     font-weight: bold;
 }
 
