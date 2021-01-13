@@ -130,7 +130,7 @@ a:hover {
     background-image:
         url(/images/icon-safari-66x66.svg),
         ${svgDataURL(svgPlusIcon)},
-        url(/images/darkreader-icon.svg);
+        url(/images/darkreader-safari-icon-128.png);
     background-position: 0 50%, center, 4.5rem 50%;
     background-repeat: no-repeat;
     background-size: 3rem, 0.75rem, 3rem;
