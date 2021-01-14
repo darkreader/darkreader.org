@@ -244,17 +244,17 @@ section {
 .db {
     background-color: var(--color-control);
 }
-@media (max-height: 38rem) {
+@media (max-height: 38rem) and (min-width: 57rem) {
     .chrome .hb {
         display: none;
     }
 }
-@media (max-height: 41rem) {
+@media (max-height: 41rem) and (min-width: 57rem) {
     .chrome .tb {
         display: none;
     }
 }
-@media (max-height: 48rem) {
+@media (max-height: 48rem) and (min-width: 57rem) {
     .chrome .dl {
         display: none;
     }
