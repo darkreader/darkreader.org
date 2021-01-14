@@ -136,7 +136,7 @@ a:hover {
     background-size: 3rem, 0.75rem, 3rem;
     border-radius: 0.625rem;
     display: inline-block;
-    filter: drop-shadow(0 0 0.0625rem hsla(0, 0%, 100%, 0)) drop-shadow(0 0 0 var(--color-text));
+    filter: drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 0)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 0)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 0)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 0)) drop-shadow(0 0 0 var(--color-text));
     flex: none;
     margin: 0.25rem 0 0.25rem 0.25rem;
     text-indent: -999rem;
@@ -145,7 +145,7 @@ a:hover {
     width: 7.5rem;
 }
 .safari-logo-link:hover {
-    filter: drop-shadow(0 0 0.0625rem hsla(0, 0%, 100%, 1)) drop-shadow(0 0 0.375rem var(--color-text));
+    filter: drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0 0.375rem var(--color-text));
 }
 .up-text {
     flex: auto;
