@@ -54,7 +54,7 @@ const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id143824
 
 const macHTMLText = `
 <div class="up">
-    <a href="${safariURL}" class="up-logo-link h-safari-logo-link">Dark Reader for Safari</a>
+    <a href="${safariURL}" class="safari-logo-link">Dark Reader for Safari</a>
     <span class="up-text">
         Are you a <strong>macOS</strong> user?
         <strong>Try</strong>
@@ -126,7 +126,7 @@ a:hover {
     border-radius: 0.625rem;
     width: 7.5rem;
 }
-.h-safari-logo-link {
+.safari-logo-link {
     background-image:
         url(/images/icon-safari-66x66.svg),
         ${svgDataURL(svgPlusIcon)},
@@ -135,8 +135,17 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 3rem, 0.75rem, 3rem;
     border-radius: 0.625rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 0.0625rem hsla(0, 0%, 100%, 0)) drop-shadow(0 0 0 var(--color-text));
+    flex: none;
+    margin: 0.25rem 0 0.25rem 0.25rem;
+    text-indent: -999rem;
+    transition: filter 250ms;
     min-height: 3rem;
     width: 7.5rem;
+}
+.safari-logo-link:hover {
+    filter: drop-shadow(0 0 0.0625rem hsla(0, 0%, 100%, 1)) drop-shadow(0 0 0.375rem var(--color-text));
 }
 .up-text {
     flex: auto;
@@ -156,7 +165,6 @@ a:hover {
     font-style: italic;
     font-weight: bold;
     position: relative;
-    text-decoration: none;
     transition: all 125ms;
 }
 .tr:hover {
