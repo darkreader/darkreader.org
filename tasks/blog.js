@@ -32,7 +32,7 @@ async function writePosts() {
             if (youtubeMatch) {
                 previewURL = `https://img.youtube.com/vi/${youtubeMatch[1]}/maxresdefault.jpg`;
             } else {
-                previewURL = '/images/darkreader-preview-medium.png';
+                previewURL = '/images/darkreader-screenshot-v5-preview.png';
             }
         }
         if (!previewURL.startsWith('https://')) {
