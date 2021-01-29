@@ -12,9 +12,11 @@ const ocURL = 'https://opencollective.com/darkreader';
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
 
+const outlineFilter = 'drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 1))';
+
 const htmlText = `
 <h2 class="heading">
-    Support us
+    Try more add-ons
 </h2>
 <section class="hr">
     <a class="logo-link hl" href="${hnURL}">
@@ -24,11 +26,13 @@ const htmlText = `
         </span>
     </a>
     <a class="text-link ht" href="${hnURL}">
-        Save <span class="ht-usd">$$$</span> when you shop online
+        Learn more about Honey
     </a>
     <a class="button-link hb" href="${hnURL}">
         <span class="hb-icon${isEdge ? ' hb-icon--edge' : isSafari ? ' hb-icon--safari' : ''}"></span>
-        <span class="button-link-text hb-text">Join Honey</span>
+        <span class="button-link-text hb-text">
+            Save <span class="hb-usd">$$$</span> when<br>you shop online
+        </span>
     </a>
 </section>
 <section class="tr">
@@ -36,11 +40,22 @@ const htmlText = `
         <span class="logo-link-image tl-image">Toucan</span>
     </a>
     <a class="text-link tt" href="${tcURL}">
-        Learn a <span class="tt-tr">nuevo</span> language<br>while you browse
+        Learn more about Toucan
     </a>
     <a class="button-link tb" href="${tcURL}">
         <span class="tb-icon"></span>
-        <span class="button-link-text tb-text">Join Toucan</span>
+        <span class="button-link-text tb-text">
+            <strong>Learn</strong>
+            <span class="tb-flags">
+                <span class="tb-f tb-es">Spanish</span>
+                <span class="tb-f tb-fr">French</span>
+                <span class="tb-f tb-de">German</span>
+                <span class="tb-f tb-pt">Portuguese</span>
+                <span class="tb-f tb-it">Italian</span>
+            </span>
+            <br>
+            <strong>while you browse<strong>
+        </span>
     </a>
 </section>
 <section class="dr">
@@ -71,7 +86,8 @@ a:hover {
 }
 .heading {
     color: var(--color-highlight);
-    margin: 0 0 1rem 0;
+    line-height: 1.25rem;
+    margin: 0 0 0.75rem 0;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
 }
@@ -79,7 +95,8 @@ section {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.75rem;
+    position: relative;
 }
 .logo-link {
     align-items: center;
@@ -126,8 +143,8 @@ section {
 }
 .button-link-text {
     display: inline-block;
-    font-weight: bold;
     font-size: 1.25rem;
+    font-weight: bold;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
     transform: skewX(-10deg);
@@ -139,7 +156,7 @@ section {
 .hl-image {
     background-color: var(--color-honey);
     background-image: url(/images/honey-logo-white.svg);
-    background-position: center;
+    background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: 10rem auto;
     height: 10rem;
@@ -147,12 +164,11 @@ section {
     width: 16rem;
 }
 .hl-message {
-    bottom: 0.25rem;
     color: white;
     display: inline-block;
-    font-weight: 400;
+    left: 1.75rem;
     position: absolute;
-    right: 0.5rem;
+    top: 4.75rem;
 }
 .hl-paypal {
     background-image: url(/images/paypal-logo-white.svg);
@@ -163,17 +179,19 @@ section {
     height: 1.2rem;
     text-indent: -999rem;
     transform: translate(-0.0625rem, 0.0625rem);
-    width: 3.5rem;
+    width: 3.75rem;
 }
 .ht {
     color: var(--color-honey);
-}
-.ht-usd {
-    color: #53b378;
+    display: none;
 }
 .hb {
-    background-color: var(--color-honey);
-    width: 12.5rem;
+    background-color: #f65423;
+    background-image: linear-gradient(135deg, #f65423, var(--color-honey), #f62323);
+    margin-top: 0;
+    position: absolute;
+    top: 6.75rem;
+    width: 14rem;
 }
 .hb-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
@@ -181,9 +199,22 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+    filter: ${outlineFilter};
     height: 2rem;
     margin-right: 0.5rem;
     width: 2rem;
+}
+.hb-text {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.125rem;
+    -webkit-text-stroke: 0.0625rem;
+}
+.hb-usd {
+    background-color: #53b378;
+    display: inline-block;
+    font-weight: normal;
+    padding: 0 0.25rem;
 }
 @-moz-document url-prefix() {
     .hb-icon {
@@ -195,6 +226,7 @@ section {
 }
 .hb-icon--safari {
     background-image: url(/images/icon-safari-66x66.svg);
+    filter: none;
 }
 .tr:not(.chrome) {
     display: none;
@@ -214,6 +246,7 @@ section {
 }
 .tt {
     color: var(--color-toucan-text);
+    display: none;
     text-align: center;
 }
 .tt-tr {
@@ -221,8 +254,12 @@ section {
     font-style: italic;
 }
 .tb {
-    background-color: var(--color-toucan);
-    width: 12.5rem;
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #3ea39add, #2b7670dd);
+    margin-top: 0;
+    position: absolute;
+    top: 7.5rem;
+    width: 16rem;
 }
 .tb-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
@@ -230,9 +267,55 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+    filter: ${outlineFilter};
     height: 2rem;
     margin-right: 0.5rem;
     width: 2rem;
+}
+.tb-text {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    transform: none;
+}
+.tb-text strong {
+    display: inline-block;
+    transform: skewX(-10deg);
+}
+.tb-flags {
+    display: inline-flex;
+    height: 1rem;
+    -webkit-text-stroke: 0;
+}
+.tb-f {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    border-radius: 50%;
+    bottom: 0.125rem;
+    box-shadow: inset 0 0 0 0.0625rem white;
+    display: inline-block;
+    height: 1.25rem;
+    position: relative;
+    text-indent: -999rem;
+    width: 1.25rem;
+}
+.tb-f + .tb-f {
+    margin-left: 0.125rem;
+}
+.tb-es {
+    background-image: url(/images/toucan-spanish.svg);
+}
+.tb-fr {
+    background-image: url(/images/toucan-french.svg);
+}
+.tb-de {
+    background-image: url(/images/toucan-german.svg);
+}
+.tb-pt {
+    background-image: url(/images/toucan-portuguese.svg);
+}
+.tb-it {
+    background-image: url(/images/toucan-italian.svg);
 }
 .dl,
 .dl:hover {
@@ -243,21 +326,6 @@ section {
 }
 .db {
     background-color: var(--color-control);
-}
-@media (max-height: 38rem) and (min-width: 57rem) {
-    .chrome .hb {
-        display: none;
-    }
-}
-@media (max-height: 41rem) and (min-width: 57rem) {
-    .chrome .tb {
-        display: none;
-    }
-}
-@media (max-height: 48rem) and (min-width: 57rem) {
-    .chrome .dl {
-        display: none;
-    }
 }
 `;
 

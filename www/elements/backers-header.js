@@ -21,10 +21,16 @@ if (navigator.userAgent.includes('Firefox')) {
     hBrowserText = 'for Chrome';
 }
 
-const hHTMLText = `
+const titleHTMLText = `
 <div class="up-title">
     Sponsored by
 </div>
+`;
+
+const containerHTMLText = `
+<div class="ups"></div>`;
+
+const hHTMLText = `
 <div class="up">
     <a href="${hURL}" class="up-logo-link h-logo-link">Honey</a>
     <span class="up-text">
@@ -82,17 +88,19 @@ a:hover {
     color: var(--color-hover);
     font-weight: bold;
 }
-.up {
-    align-items: stretch;
+.ups {
     border: 0.125rem solid var(--color-control);
     border-radius: 1rem;
+    max-width: 35.5rem;
+}
+.up {
+    align-items: stretch;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    max-width: 35.5rem;
 }
 .up + .up {
-    margin-top: 0.25rem;
+    border-top: 0.0625rem solid var(--color-control);
 }
 .up-logo-link {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
@@ -207,14 +215,16 @@ class BackerHeaderElement extends HTMLElement {
         const shadowRoot = this.attachShadow({mode: 'closed'});
         const style = html('style', null, cssText);
         shadowRoot.append(style);
-        style.insertAdjacentHTML('afterend', hHTMLText);
+        style.insertAdjacentHTML('afterend', titleHTMLText + containerHTMLText);
+        const container = shadowRoot.querySelector('.ups');
+        container.insertAdjacentHTML('beforeend', hHTMLText);
         const isChromium = navigator.userAgent.includes('Chrom');
         if (isChromium) {
-            shadowRoot.lastElementChild.insertAdjacentHTML('afterend', tHTMLText);
+            container.insertAdjacentHTML('beforeend', tHTMLText);
         }
         const isMac = navigator.platform.toLowerCase().startsWith('mac');
         if (isMac) {
-            shadowRoot.lastElementChild.insertAdjacentHTML('afterend', macHTMLText);
+            container.insertAdjacentHTML('beforeend', macHTMLText);
         }
     }
 }

@@ -51,7 +51,7 @@ function scale(x, inLow, inHigh, outLow, outHigh) {
  * @returns {HTMLElement}
  */
 function createBackersGraph(backers) {
-    const count = 18;
+    const count = 12;
 
     function getColor(i) {
         const fillHue = scale(i, 0, count - 1, 120, 240);
@@ -62,12 +62,15 @@ function createBackersGraph(backers) {
 
     const organizations = backers.filter(b => b.type === 'org' && b.pic);
     const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
+    const vpnBlogOrg = organizations.find(o => o.name.toLowerCase().includes('vpnwelt'));
+    vpnBlogOrg.name = 'VPNwelt: online security products reviews'
 
     // const algoliaOrg = organizations.find(o => o.name.toLowerCase().includes('algolia'));
     // algoliaOrg.pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
     // const tripleOrg = organizations.find(o => o.name.toLowerCase().includes('triple'));
     const displayBackers = backers
-        .filter((b) => b !== icons8Org)
+        .filter((b) => ![icons8Org, vpnBlogOrg].includes(b))
+        .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
 
@@ -75,6 +78,7 @@ function createBackersGraph(backers) {
         // createBackerLink(algoliaOrg, 'large', '#3a416f'),
         // createBackerLink(tripleOrg, 'medium', null),
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
+        createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
     );
 }
@@ -109,7 +113,14 @@ function createBackerLink(backer, size, color, cls) {
         },
         picture,
         html('span', {class: 'backer-name'},
-            backer.name,
+            html('span', null,
+                html('strong', null,
+                    backer.name.split(':')[0],
+                ),
+                backer.name.split(':').length > 1 ?
+                    `:${backer.name.split(':')[1]}` :
+                    null,
+            ),
         ),
     );
     if (color) {
@@ -127,7 +138,7 @@ const cssText = `
     grid-auto-fill: dense;
 }
 .backer {
-    background-color: var(--color-hover);
+    background-color: var(--color-control);
     border-radius: 1.25rem;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     color: white;
@@ -152,6 +163,7 @@ const cssText = `
     align-items: center;
     display: inline-flex;
     flex: auto;
+    font-weight: normal;
     justify-content: center;
     overflow: hidden;
 }
@@ -175,20 +187,12 @@ const cssText = `
 .backer--large .backer-pic,
 .backer--x-large .backer-pic {
     border-radius: 1.25rem;
-    /*
-    height: 5.2rem;
-    width: 5.2rem;
-    */
     background-size: 90%;
     height: 100%;
     width: 100%;
 }
 .backer--large .backer-name,
 .backer--x-large .backer-name {
-    /*
-    font-size: 1.25rem;
-    font-weight: bold;
-    */
     display: none;
 }
 .backer--x-large {
@@ -207,8 +211,14 @@ const cssText = `
     justify-content: center;
     width: 100%;
 }
+.icons8 {
+    background-color: #29795a;
+}
 .icons8 .backer-pic {
     background-color: #1eb141;
+}
+.vpnwelt {
+    background-color: #173054;
 }
 `;
 
