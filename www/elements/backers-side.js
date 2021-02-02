@@ -16,7 +16,7 @@ const outlineFilter = 'drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shad
 
 const htmlText = `
 <h2 class="heading">
-    Try more add-ons
+    Sponsored by
 </h2>
 <section class="hr">
     <a class="logo-link hl" href="${hnURL}">

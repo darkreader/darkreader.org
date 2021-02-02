@@ -23,7 +23,7 @@ if (navigator.userAgent.includes('Firefox')) {
 
 const titleHTMLText = `
 <div class="up-title">
-    Sponsored by
+    Sponsored by these<br><strong>wonderful extensions</strong>
 </div>
 `;
 
@@ -37,6 +37,7 @@ const hHTMLText = `
         <a href="${hURL}" class="up-link">Honey ${hBrowserText}</a>,
         a product of <strong class="h-text-pp">PayPal</strong>.
         Automatically find and apply discounts when you purchase online.
+        Join for <strong>free</strong> and get coupons.
         <a href="${hURL}">Learn more</a>.
     </span>
 </div>
@@ -51,6 +52,7 @@ const tHTMLText = `
         <a href="${tURL}" class="up-link">Toucan for Chrome</a>.
         Learn a language more <a class="tr" data-tr="easy" href="${tURL}">fácilmente</a>.
         Immerse yourself in a new <a class="tr" data-tr="language" href="${tURL}">idioma</a> while you browse the web.
+        Join for <strong>free</strong>.
         <a href="${tURL}"><span class="tr" data-tr="Learn more\nabout Toucan">Learn más</span></a>.
     </span>
 </div>
