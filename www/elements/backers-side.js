@@ -292,7 +292,7 @@ section {
     background-size: 100%;
     border-radius: 0.25rem;
     bottom: 0.125rem;
-    box-shadow: inset 0 0 0 0.0625rem white;
+    box-shadow: 0 0 0 0.0625rem white inset;
     display: inline-block;
     height: 1.25rem;
     position: relative;
