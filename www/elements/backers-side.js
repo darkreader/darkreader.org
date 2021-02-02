@@ -289,15 +289,15 @@ section {
 .tb-f {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 110%;
-    border-radius: 50%;
+    background-size: 100%;
+    border-radius: 0.25rem;
     bottom: 0.125rem;
     box-shadow: inset 0 0 0 0.0625rem white;
     display: inline-block;
     height: 1.25rem;
     position: relative;
     text-indent: -999rem;
-    width: 1.25rem;
+    width: 1.375rem;
 }
 .tb-f + .tb-f {
     margin-left: 0.125rem;
