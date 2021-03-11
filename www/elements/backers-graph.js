@@ -63,13 +63,16 @@ function createBackersGraph(backers) {
     const organizations = backers.filter(b => b.type === 'org' && b.pic);
     const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
     const vpnBlogOrg = organizations.find(o => o.name.toLowerCase().includes('vpnwelt'));
-    vpnBlogOrg.name = 'VPNwelt: online security products reviews'
+    vpnBlogOrg.url = 'https://vpnwelt.com/vpn-kostenlos/';
+    vpnBlogOrg.name = 'VPNwelt: Best VPN Providers Recommended';
+    vpnBlogOrg.info = 'Best Free VPN for Germany';
+    const toucanOrg = organizations.find(o => o.name.toLowerCase().includes('toucan'));
 
     // const algoliaOrg = organizations.find(o => o.name.toLowerCase().includes('algolia'));
     // algoliaOrg.pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
     // const tripleOrg = organizations.find(o => o.name.toLowerCase().includes('triple'));
     const displayBackers = backers
-        .filter((b) => ![icons8Org, vpnBlogOrg].includes(b))
+        .filter((b) => ![icons8Org, vpnBlogOrg, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -166,6 +169,7 @@ const cssText = `
     font-weight: normal;
     justify-content: center;
     overflow: hidden;
+    padding: 0 0.25rem 0 0;
 }
 .backer--small .backer-name,
 .backer--medium .backer-name {
