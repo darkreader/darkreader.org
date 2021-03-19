@@ -22,16 +22,16 @@ const htmlText = `
     <a class="logo-link hl" href="${hnURL}">
         <span class="logo-link-image hl-image">Honey</span>
         <span class="hl-message">
-            Owned by <span class="hl-paypal">PayPal</span>
+            by <span class="hl-paypal">PayPal</span>
         </span>
     </a>
     <a class="text-link ht" href="${hnURL}">
-        Learn more about Honey
+        Save <span class="ht-usd">$$$</span> when you shop online
     </a>
     <a class="button-link hb" href="${hnURL}">
         <span class="hb-icon${isEdge ? ' hb-icon--edge' : isSafari ? ' hb-icon--safari' : ''}"></span>
         <span class="button-link-text hb-text">
-            Save <span class="hb-usd">$$$</span> when<br>you shop online
+            Install
         </span>
     </a>
 </section>
@@ -40,21 +40,20 @@ const htmlText = `
         <span class="logo-link-image tl-image">Toucan</span>
     </a>
     <a class="text-link tt" href="${tcURL}">
-        Learn more about Toucan
+        Learn
+        <span class="tt-flags">
+            <span class="tt-f tt-es">Spanish</span>
+            <span class="tt-f tt-fr">French</span>
+            <span class="tt-f tt-de">German</span>
+            <span class="tt-f tt-pt">Portuguese</span>
+            <span class="tt-f tt-it">Italian</span>
+        </span>
+        while you browse
     </a>
     <a class="button-link tb" href="${tcURL}">
         <span class="tb-icon"></span>
         <span class="button-link-text tb-text">
-            <strong>Learn</strong>
-            <span class="tb-flags">
-                <span class="tb-f tb-es">Spanish</span>
-                <span class="tb-f tb-fr">French</span>
-                <span class="tb-f tb-de">German</span>
-                <span class="tb-f tb-pt">Portuguese</span>
-                <span class="tb-f tb-it">Italian</span>
-            </span>
-            <br>
-            <strong>while you browse<strong>
+            Install
         </span>
     </a>
 </section>
@@ -159,16 +158,16 @@ section {
     background-position: 50% 20%;
     background-repeat: no-repeat;
     background-size: 10rem auto;
-    height: 10rem;
+    height: 8.75rem;
     text-indent: -999rem;
     width: 16rem;
 }
 .hl-message {
     color: white;
     display: inline-block;
-    left: 1.75rem;
+    left: 5.25rem;
     position: absolute;
-    top: 4.75rem;
+    top: 4.5rem;
 }
 .hl-paypal {
     background-image: url(/images/paypal-logo-white.svg);
@@ -182,16 +181,22 @@ section {
     width: 3.75rem;
 }
 .ht {
-    color: var(--color-honey);
-    display: none;
+    color: var(--color-honey-text);
+    text-align: center;
+    width: 100%;
+}
+.ht-usd {
+    color: #53b378;
 }
 .hb {
-    background-color: #f65423;
-    background-image: linear-gradient(135deg, #f65423, var(--color-honey), #f62323);
-    margin-top: 0;
+    background-color: #ea5f2c;
+    margin: 0 auto;
     position: absolute;
-    top: 6.75rem;
-    width: 14rem;
+    top: 6rem;
+    width: 8rem;
+}
+.hb:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #fff800;
 }
 .hb-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
@@ -209,12 +214,6 @@ section {
     font-weight: bold;
     line-height: 1.125rem;
     -webkit-text-stroke: 0.0625rem;
-}
-.hb-usd {
-    background-color: #53b378;
-    display: inline-block;
-    font-weight: normal;
-    padding: 0 0.25rem;
 }
 @-moz-document url-prefix() {
     .hb-icon {
@@ -240,13 +239,12 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 10rem;
+    height: 8.75rem;
     text-indent: -999rem;
     width: 16rem;
 }
 .tt {
     color: var(--color-toucan-text);
-    display: none;
     text-align: center;
 }
 .tt-tr {
@@ -254,12 +252,12 @@ section {
     font-style: italic;
 }
 .tb {
-    background-color: transparent;
-    background-image: linear-gradient(135deg, #3ea39add, #2b7670dd);
+    background-color: #3ea39a;
+    left: 0.5rem;
     margin-top: 0;
     position: absolute;
-    top: 7.5rem;
-    width: 16rem;
+    top: 6rem;
+    width: 8rem;
 }
 .tb-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
@@ -274,48 +272,46 @@ section {
 }
 .tb-text {
     font-size: 1rem;
+    font-weight: bold;
     line-height: 1.125rem;
-    transform: none;
+    -webkit-text-stroke: 0.0625rem;
 }
-.tb-text strong {
-    display: inline-block;
-    transform: skewX(-10deg);
-}
-.tb-flags {
+.tt-flags {
     display: inline-flex;
     height: 1rem;
     -webkit-text-stroke: 0;
 }
-.tb-f {
+.tt-f {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 0.25rem;
-    bottom: 0.125rem;
-    box-shadow: 0 0 0 0.0625rem white inset;
+    bottom: -0.125rem;
     display: inline-block;
-    height: 1.25rem;
+    height: 1rem;
     position: relative;
     text-indent: -999rem;
-    width: 1.375rem;
+    width: 1.25rem;
 }
-.tb-f + .tb-f {
-    margin-left: 0.125rem;
+.tt-f + .tt-f {
+    margin-left: 0.0625rem;
 }
-.tb-es {
+.tt-es {
     background-image: url(/images/toucan-spanish.svg);
 }
-.tb-fr {
+.tt-fr {
     background-image: url(/images/toucan-french.svg);
 }
-.tb-de {
+.tt-de {
     background-image: url(/images/toucan-german.svg);
 }
-.tb-pt {
+.tt-pt {
     background-image: url(/images/toucan-portuguese.svg);
+    display: none;
 }
-.tb-it {
+.tt-it {
     background-image: url(/images/toucan-italian.svg);
+    display: none;
 }
 .dl,
 .dl:hover {

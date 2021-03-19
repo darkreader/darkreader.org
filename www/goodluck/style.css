@@ -100,7 +100,7 @@ strong {
 }
 
 .honey-name {
-    color: var(--color-honey);
+    color: var(--color-honey-text);
     font-weight: bold;
 }
 
