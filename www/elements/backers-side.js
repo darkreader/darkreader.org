@@ -51,7 +51,7 @@ const htmlText = `
         while you browse
     </a>
     <a class="button-link tb" href="${tcURL}">
-        <span class="tb-icon"></span>
+        <span class="tb-icon${isEdge ? ' tb-icon--edge' : ''}"></span>
         <span class="button-link-text tb-text">
             Install
         </span>
@@ -269,6 +269,14 @@ section {
     height: 2rem;
     margin-right: 0.5rem;
     width: 2rem;
+}
+.hb-icon--edge,
+.tb-icon--edge {
+    background-color: white;
+    background-image: url(/images/icon-edge-256x256.svg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.0625rem white;
+    filter: none;
 }
 .tb-text {
     font-size: 1rem;

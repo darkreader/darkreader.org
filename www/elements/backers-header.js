@@ -45,11 +45,20 @@ const hHTMLText = `
 
 const tURL = 'https://jointoucan.com/partners/darkreader';
 
+let tBrowserText = 'extension';
+if (navigator.userAgent.includes('Edg')) {
+    tBrowserText = 'for Edge';
+} else if (navigator.userAgent.includes('Chromium')) {
+    tBrowserText = 'for Chromium';
+} else if (navigator.userAgent.includes('Chrome')) {
+    tBrowserText = 'for Chrome';
+}
+
 const tHTMLText = `
 <div class="up">
     <a href="${tURL}" class="up-logo-link t-logo-link">Toucan</a>
     <span class="up-text t-text">
-        <a href="${tURL}" class="up-link">Toucan for Chrome</a>.
+        <a href="${tURL}" class="up-link">Toucan ${tBrowserText}</a>.
         Learn a language more <a class="tr" data-tr="easy" href="${tURL}">fácilmente</a>.
         Immerse yourself in a new <a class="tr" data-tr="language" href="${tURL}">idioma</a> while you browse the web.
         Join for <strong>free</strong>.
