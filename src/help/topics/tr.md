@@ -35,7 +35,7 @@ Parlaklık,kontrast,sepya ve doygunluk(gri ton) ayarlarını, ekranınıza ve od
 
 <img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
 
-*Sadece* butonu yukarıdaki ayarların sadece bu site için geçerli olduğunu belirtir.
+**Sadece** butonu yukarıdaki ayarların sadece bu site için geçerli olduğunu belirtir.
 
 Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardından arzu ettiğiniz şekilde ayarları bu site için değiştirebilirsiniz.İptal etmek için butona tekrar tıklayın
 
@@ -65,37 +65,37 @@ Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardı
     <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
 </figure>
 
-- **Filter** is the initial Dark Reader mode based on CSS filters.
-It *inverts the whole page* and *reverts some parts* back.
-Requires GPU resources.
-It is *fast* and powerful, but has several issues:
-it disables text sub-pixel rendering,
-inverts already dark parts into light,
-causes lags on large pages,
-and fails to render some pages in Firefox.
-- **Filter+** is the same as Filter, but is based on custom SVG filters
-and *handles colors better* making images less dull.
-Works poorly in Firefox.
-- **Static** rapidly generates a basic stylesheet.
-- **Dynamic** deeply analyzes website stylesheets, background images, and vector graphics.
-Requires some resources on initial page load,
-but produces *the best* visual results.
-The work on this mode is in progress,
-but it already works well for many modern websites.
+- **Filtre** Dark reader için, CSS filtrelerine dayanan temel moddur.
+*Tüm sayfayı* ters çevirir ve ardından *Bazı parçaları* eski haline getirir.
+GPU kullanır.
+*Hızlı* ve güçlüdür ancak birkaç sorun içerir:
+Alt-pixel oluşturmayı devredışı bırakır,
+Halihazırda karanlık olan kısımları aydınlatır,
+Büyük sayfalarda takılmaya neden olur,
+Ve Firefox'ta bazı sayfların hata vermesine neden olabilir.
+- **Filtre+** Filtre ile aynıdır, ama özel SVG filtrelerine dayanır
+Ve Resimleri daha az donuk yapmak için *Rekleri daha iyi işler*
+Firefox'ta pek iyi çalışmaz.
+- **Statik** sürekli basit stil şemaları oluşturur.
+- **Dinamik** Sitenin stil şemalarını, arkaplan resimlerini ve vektör grafiklerini analiz eder.
+Sayfa yüklenirken biraz kaynak kullanımı gerektirir.
+Ama *en iyi* görsel sonucu sağlar
+Bu mod üzerinde halen çalışıyoruz,
+ama şimdiden çoğu modern sitede gayet iyi çalışıyor.
 
 
-<h2 id="bottom-section">Bottom section</h2>
+<h2 id="bottom-section">Alt bölüm</h2>
 
 <img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" />
 
-- Read our **privacy policy**, follow us on **Twitter**, view source and contribute on **Github**, read the **Help** documentation on this page.
-- **Donate** – if you like the extension, please consider supporting the active development of Dark Reader.
-Crowdfunding is powered by Open Collective, which currently uses Stripe for handling payments.
-- **News** – notifies about release notes and important events.
-- **Developer tools** – opens a config editor for the current theme mode.
+- **Gizlilik politikamızı** okuyun, Bizi **Twitter'dan** takip edin, Kaynak kodunu görmek ve katkı sağlamak için **Github**'ı ziyaret edin, bu sayfadan **Yardım** dökümanını okuyun.
+- **Bağış** – eğer eklentiyi beğendiyseniz, lütfen Dark Reader'ın geliştirilmesi için bağış yaparak desteğinizi gösterin.
+Crowdfunding Open Collective tarafından sağlanmaktadır,ödemeler Stripe üzerinden gerçekleşmektedir.
+- **Haberler** – Yeni sürümlerden, notlardan ve geliştirmelerden haber alın.
+- **Geliştirici araçları** – Şimdiki tema modunu düzenlemek için bir düzenleyici açar.
 
 
-<h2 id="using-dev-tools">Using the Developer tools</h2>
+<h2 id="using-dev-tools">Geliştirici ayarlarını kullanma</h2>
 
 If you are familiar with CSS selectors, you can help by suggesting a fix for filtering a website.
 Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
