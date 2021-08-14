@@ -97,62 +97,62 @@ Crowdfunding Open Collective tarafından sağlanmaktadır,ödemeler Stripe üzer
 
 <h2 id="using-dev-tools">Geliştirici ayarlarını kullanma</h2>
 
-If you are familiar with CSS selectors, you can help by suggesting a fix for filtering a website.
-Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
+Eğer CSS Seçicileri hakkında bilgi sahibi iseniz, bir web sitesi için düzeltme önererek yardım edebilirsiniz.
+[Buradan](https://github.com/darkreader/darkreader#how-to-contribute) Geliştirici araçlarını nasıl kullanacağınız hakkında bilgi alabilirsiniz.	
 
 
-<h2 id="faq">FAQ</h2>
+<h2 id="faq">SSS</h2>
 
-#### The extension asks for permissions to read website data
+#### Eklenti web sitesini okumak için izin istiyor
 
-The extension needs these permissions to be able to analyze and modify website appearence,
-determine if a website is disabled by your settings or to use site-specific rules.
-We do not insert ads and do not collect any data or send it anywhere.
-The extension is fully open-source and has no obfuscated code.
-Our monetization is transparent and is based on users' donations.
+Eklenti siteleri analiz etmek ve değiştirmek için bu izne ihtiyaç duyar,
+sitenin sizin ayarlarınızda ne şekilde yer aldığını belirlemek için de.
+Herhangi bir reklam yerleştirmiyor, bilgilerinizi toplamıyor yada bir yere göndermiyoruz.
+Eklenti tamamen açık kaynak kodludur ve gizli bir kod içermez.
+Para kazanma sistemimiz tamamen şeffaftır ve kullanıcıların bağışlarına dayanır.
 
-#### The extensions store page and settings pages remain white
+#### Eklenti mağazası ve ayarlar sayfası beyaz kaldı
 
-The extension has no access to these pages.
+Eklentinin bu sayfalara erişimi yoktur.
 
-#### New tab page and browser theme remain white
+#### Yeni sekme ekranı ve tarayıcı beyaz kaldı
 
-The extension cannot change the appearence of a new tab or browser (though in Firefox it can since version 60).
-We recommend installing a dark theme or new tab extension from extensions store.
+Eklenti yeni sekme yada tarayıcının görünüşünü değiştiremez (Firefox'da versiyon 60'tan itibaren olabilir).
+Eklenti mağazasından karanlık bir tema yada yeni sekme eklentisi yüklemenizi öneriyoruz.
 
-#### Screen flashes white when opening a new tab or navigating to a website
+#### Yeni bir sekme açarken yada sitelerde dolaşırken ekran yanıp-sönüyor
 
-Before loading a website, Chrome shows the theme background color by default.
-We recommend installing a dark theme from the store.
+Bir siteyi yüklemeden önce, Chrome varsayılan olarak tema arkaplanını gösterir.
+Mağazadan karanlık bir tema yüklemenizi öneriyoruz.
 
 #### The extension doesn't work at all
 
-If you have similar dark mode extensions installed, disable them, then reload tabs.
-Click Dark Reader icon, check if top-right button is set to **On** and that **Toggle site** is not excluding the current site.
-Open **Site list** tab, check that **Not invert listed** is selected.
-If nothing helps, something terrible has happened, e-mail us.
+Eğer benzer karanlık mod eklentileriniz varsa, devredışı bırakın, ardından sekmeleri yenileyin.
+Dark Reader ikonuna tıklayın, üst-sağ buton **Açık** olmalıdır ve **Site listesi** siteyi hariç tutmamalıdır.
+**Site listesi** bölümünden, **Çevirilmemiş liste** seçilmelidir.
+Eğer bunlar yardımcı olmadıysa, korkunç bir şey olmuş demektir, bize e-posta atın.
 
-#### The website is displayed incorrectly or works slowly
+#### Site doğru görüntülenmiyor yada çok yavaş
 
-Please send the website address, a screenshot, your OS and browser versions to our e-mail.
-We will try to investigate the reason, at least for a popular website.
-Also try changing **theme generation mode** or try using **Light mode**.
-Check that the website is not listed under **Site list** tab.
+Lütfen sitenin adresini,bir ekran görüntüsünü, İşletim sisteminizin ve tarayıcınızın versiyonunu bize e-posta atın.
+Nedenini araştırmaya çalışacağız, en azından popüler siteler için.
+Ayrıca **Tema oluşturma modunu** da değiştirmeyi yada **Aydınlık modu** deneyin.
+Sitenin, **Site listesinde** listelenmediğinden emin olun.
 
-#### The extension doesn't work in incognito mode
+#### Eklenti gizli modda çalışmıyor
 
-Open **chrome://extensions** page, find **Dark Reader**, click **Allow in incognito**.
+**chrome://extensions** sayfasını açın, **Dark Reader**'ı bulun, **Gizli modda izin ver**i seçin.
 
-#### The extension doesn't work for local files
+#### Eklenti yerel dosyalarda çalışmıyor
 
-Open **chrome://extensions** page, find **Dark Reader**, click **Allow access to file URLs**.
+**chrome://extensions** sayfasını açın,**Dark Reader**'ı bulun, **Dosya URL'lerine erişmeye izin ver** seçeneğini seçin.
 
-#### Entire website is not displayed in Filter mode
+#### Site Filtre modunda tamamen görüntülenmiyor
 
-If you are using Chrome for Mac OS, update Mac OS up to 10.13, this should update your video drivers.
-If you are using Firefox, this is most likely a browser bug, use another mode for such websites.
+Eğer Mac OS için Chrome kullanıyorsanız, Mac OS sürümünüzü 10.13'e güncelleyin, bunu yapmak ekran kartı sürücülerinizi güncelleyecektir.
+Eğer Firefox kullanıyorsanız, bu genellikle tarayıcı hatasıdır, başka bir mod kullanmayı deneyin.
 
 
-<h2 id="contacts">Contacts</h2>
+<h2 id="contacts">İletişim</h2>
 
-For any questions e-mail to [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Sorularınız için[darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com) adresine e-posta atabilirsiniz.
