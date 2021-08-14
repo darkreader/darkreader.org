@@ -125,7 +125,7 @@ Eklenti mağazasından karanlık bir tema yada yeni sekme eklentisi yüklemenizi
 Bir siteyi yüklemeden önce, Chrome varsayılan olarak tema arkaplanını gösterir.
 Mağazadan karanlık bir tema yüklemenizi öneriyoruz.
 
-#### The extension doesn't work at all
+#### Eklenti çalışmıyor
 
 Eğer benzer karanlık mod eklentileriniz varsa, devredışı bırakın, ardından sekmeleri yenileyin.
 Dark Reader ikonuna tıklayın, üst-sağ buton **Açık** olmalıdır ve **Site listesi** siteyi hariç tutmamalıdır.
