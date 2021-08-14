@@ -2,16 +2,16 @@
 
 Bu döküman Dark Reader özellikleri hakkında size rehberlik edecek.
 
-- [FAQ](#faq)
-- [Contacts](#contacts)
-- [Top section](#top-section)
-- [Filter settings](#filter-settings)
-- [Custom site settings](#custom-site-settings)
-- [Site list](#site-list)
-- [More tab](#more-tab)
-- [Theme generation modes](#theme-generation-modes)
-- [Bottom section](#bottom-section)
-- [Using the Developer tools](#using-dev-tools)
+- [SSS](#faq)
+- [İletişim](#contacts)
+- [Üst bölüm](#top-section)
+- [Filtre ayarları](#filter-settings)
+- [Özel site ayarları](#custom-site-settings)
+- [Site listesi](#site-list)
+- [Daha fazla bölümü](#more-tab)
+- [Tema oluşturma modları](#theme-generation-modes)
+- [Üst bölüm](#bottom-section)
+- [Geliştirici araçlarını kullanma](#using-dev-tools)
 
 
 <h2 id="top-section">Üst bölüm</h2>
@@ -44,21 +44,21 @@ Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardı
 
 <img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" />
 
-- Use **Invert listed only** if you wish Dark Reader to work only on listed websites.
-- **Not invert listed** will prevent the extension from working on listed websites.
-- Possible patterns for values are `google.com, mail.google.com, google.*, google.com/maps` etc.
-- Clicking the **Toggle** button (in [Top section](#top-section)) adds the current site into this list.
+- Eğer Dark Reader'ın sadece listelenen sitelerde çalışmasını istiyorsanız **Sadece listedekiler** seçeneğini kullanın.
+- **Hariç tutulanlar** eklentinin listedeki sitelerde çalışmasını önler.
+- Muhtemel alan adı biçimleri: "`google.com, mail.google.com, google.*, google.com/maps`" gibidir.
+- **Aç-kapa** butonu ([Üst bölüm](#top-section)) Şu anki siteyi listeye ekler.
 
-<h2 id="more-tab">More tab</h2>
+<h2 id="more-tab">Daha fazla bölümü</h2>
 
 <img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" />
 
-- **Pick a font** from list (or enter font name on Firefox), click the **checkbox**.
-- Adjust the **text stroke**.
-- Select a **theme generation mode**.
+- Listeden **Font seç** (Yada Firefox için font ismi gir),**İşaret kutusuna** tıkla.
+- **Metin kalınlığını** ayarla.
+- Bir **Tema oluşturma modu seç**.
 
 
-<h2 id="theme-generation-modes">Theme generation modes</h2>
+<h2 id="theme-generation-modes">Tema oluşturma modları</h2>
 
 <figure>
     <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
