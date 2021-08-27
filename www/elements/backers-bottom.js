@@ -27,6 +27,12 @@ const htmlText = `
         Install <strong><a href="${safariURL}">Dark Reader for Safari</a></strong>.
         Good luck!
     </p>
+    <p>
+        Dark Reader is <strong>not</strong> sponsored by
+        <a class="t" href="https://fibery.io/anxiety">Fibery</a>
+        and <a class="" href="https://www.mozilla.org/">Mozilla</a>,
+        they are just cool!
+    </p>
 </div>
 `;
 
