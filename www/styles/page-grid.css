@@ -33,7 +33,7 @@
     grid-area: side;
     margin-top: 1.25rem;
     position: fixed;
-    right: calc(50% - 28.5rem);
+    right: calc(50% - 30rem);
     top: 0;
     width: 16rem;
 }
@@ -54,5 +54,7 @@
     .page-grid-side {
         position: static;
         right: unset;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
