@@ -51,7 +51,7 @@ const htmlText = `
         while you browse
     </a>
     <a class="button-link tb" href="${tcURL}">
-        <span class="tb-icon${isEdge ? ' tb-icon--edge' : ''}"></span>
+        <span class="tb-icon${isEdge ? ' tb-icon--edge' : isSafari ? ' tb-icon--safari' : ''}"></span>
         <span class="button-link-text tb-text">
             Install
         </span>
@@ -215,21 +215,6 @@ section {
     line-height: 1.125rem;
     -webkit-text-stroke: 0.0625rem;
 }
-@-moz-document url-prefix() {
-    .hb-icon {
-        background-image: url(/images/icon-firefox-87x82.svg);
-    }
-}
-.hb-icon--edge {
-    background-image: url(/images/icon-edge-256x256.svg);
-}
-.hb-icon--safari {
-    background-image: url(/images/icon-safari-66x66.svg);
-    filter: none;
-}
-.tr:not(.chrome) {
-    display: none;
-}
 .tl {
     overflow: hidden;
 }
@@ -270,12 +255,23 @@ section {
     margin-right: 0.5rem;
     width: 2rem;
 }
+@-moz-document url-prefix() {
+    .hb-icon,
+    .tb-icon {
+        background-image: url(/images/icon-firefox-87x82.svg);
+    }
+}
 .hb-icon--edge,
 .tb-icon--edge {
     background-color: white;
     background-image: url(/images/icon-edge-256x256.svg);
     border-radius: 50%;
     box-shadow: 0 0 0 0.0625rem white;
+    filter: none;
+}
+.hb-icon--safari,
+.tb-icon--safari {
+    background-image: url(/images/icon-safari-66x66.svg);
     filter: none;
 }
 .tb-text {
@@ -340,9 +336,6 @@ class BackersSideElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
-        if (navigator.userAgent.includes('Chrom')) {
-            shadowRoot.querySelectorAll('section').forEach((s) => s.classList.add('chrome'));
-        }
     }
 }
 

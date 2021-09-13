@@ -6,19 +6,19 @@ import {
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 
-let hBrowserText = 'extension';
+let browserText = 'extension';
 if (navigator.userAgent.includes('Firefox')) {
-    hBrowserText = 'for Firefox';
+    browserText = 'for Firefox';
 } else if (navigator.userAgent.includes('Edg')) {
-    hBrowserText = 'for Edge';
+    browserText = 'for Edge';
 } else if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom')) {
-    hBrowserText = 'for Safari';
+    browserText = 'for Safari';
 } else if (navigator.userAgent.includes('OPR')) {
-    hBrowserText = 'for Opera';
+    browserText = 'for Opera';
 } else if (navigator.userAgent.includes('Chromium')) {
-    hBrowserText = 'for Chromium';
+    browserText = 'for Chromium';
 } else if (navigator.userAgent.includes('Chrome')) {
-    hBrowserText = 'for Chrome';
+    browserText = 'for Chrome';
 }
 
 const titleHTMLText = `
@@ -34,7 +34,7 @@ const hHTMLText = `
 <div class="up">
     <a href="${hURL}" class="up-logo-link h-logo-link">Honey</a>
     <span class="up-text">
-        <a href="${hURL}" class="up-link">Honey ${hBrowserText}</a>,
+        <a href="${hURL}" class="up-link">Honey ${browserText}</a>,
         a product of <strong class="h-text-pp">PayPal</strong>.
         Automatically find and apply discounts when you purchase online.
         Join for <strong>free</strong> and get coupons.
@@ -45,20 +45,11 @@ const hHTMLText = `
 
 const tURL = 'https://jointoucan.com/partners/darkreader';
 
-let tBrowserText = 'extension';
-if (navigator.userAgent.includes('Edg')) {
-    tBrowserText = 'for Edge';
-} else if (navigator.userAgent.includes('Chromium')) {
-    tBrowserText = 'for Chromium';
-} else if (navigator.userAgent.includes('Chrome')) {
-    tBrowserText = 'for Chrome';
-}
-
 const tHTMLText = `
 <div class="up">
     <a href="${tURL}" class="up-logo-link t-logo-link">Toucan</a>
     <span class="up-text t-text">
-        <a href="${tURL}" class="up-link">Toucan ${tBrowserText}</a>.
+        <a href="${tURL}" class="up-link">Toucan ${browserText}</a>.
         Learn a language more <a class="tr" data-tr="easy" href="${tURL}">fácilmente</a>.
         Immerse yourself in a new <a class="tr" data-tr="language" href="${tURL}">idioma</a> while you browse the web.
         Join for <strong>free</strong>.
@@ -229,10 +220,7 @@ class BackerHeaderElement extends HTMLElement {
         style.insertAdjacentHTML('afterend', titleHTMLText + containerHTMLText);
         const container = shadowRoot.querySelector('.ups');
         container.insertAdjacentHTML('beforeend', hHTMLText);
-        const isChromium = navigator.userAgent.includes('Chrom');
-        if (isChromium) {
-            container.insertAdjacentHTML('beforeend', tHTMLText);
-        }
+        container.insertAdjacentHTML('beforeend', tHTMLText);
         const isMac = navigator.platform.toLowerCase().startsWith('mac');
         if (isMac) {
             container.insertAdjacentHTML('beforeend', macHTMLText);
