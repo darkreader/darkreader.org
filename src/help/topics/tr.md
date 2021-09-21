@@ -155,4 +155,4 @@ Eğer Firefox kullanıyorsanız, bu genellikle tarayıcı hatasıdır, başka bi
 
 <h2 id="contacts">İletişim</h2>
 
-Sorularınız için[darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com) adresine e-posta atabilirsiniz.
+Sorularınız için [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com) adresine e-posta atabilirsiniz.
