@@ -58,15 +58,15 @@ const tHTMLText = `
 </div>
 `;
 
-const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180';
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
 
-const macHTMLText = `
+const appleHTMLText = `
 <div class="up">
     <a href="${safariURL}" class="safari-logo-link">Dark Reader for Safari</a>
     <span class="up-text">
-        Are you a <strong>macOS</strong> user?
-        <strong>Try</strong>
-        <a href="${safariURL}" class="up-link">Dark Reader for Safari</a>.
+        <strong>Dark Reader</strong> for
+        <a href="${safariURL}" class="up-link">iOS, iPadOS, macOS</a>
+        is available!
     </span>
 </section>
 `;
@@ -140,7 +140,7 @@ a:hover {
     background-image:
         url(/images/icon-safari-66x66.svg),
         ${svgDataURL(svgPlusIcon)},
-        url(/images/darkreader-safari-icon-128.png);
+        url(/images/darkreader-ios-128.png);
     background-position: 0 50%, center, 4.5rem 50%;
     background-repeat: no-repeat;
     background-size: 3rem, 0.75rem, 3rem;
@@ -221,10 +221,7 @@ class BackerHeaderElement extends HTMLElement {
         const container = shadowRoot.querySelector('.ups');
         container.insertAdjacentHTML('beforeend', hHTMLText);
         container.insertAdjacentHTML('beforeend', tHTMLText);
-        const isMac = navigator.platform.toLowerCase().startsWith('mac');
-        if (isMac) {
-            container.insertAdjacentHTML('beforeend', macHTMLText);
-        }
+        container.insertAdjacentHTML('beforeend', appleHTMLText);
     }
 }
 
