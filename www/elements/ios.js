@@ -53,14 +53,14 @@ section {
 }
 .image-link::after {
     background-image: url(/images/ios-hand.gif);
-    background-size: cover;
+    background-size: 100%;
     content: "";
-    height: 38.31rem;
+    height: 34.25rem;
     left: -4.8rem;
     pointer-events: none;
     position: absolute;
     top: 6.55rem;
-    width: 33.8rem;
+    width: 34.25rem;
 }
 .image-link:hover {
     filter: drop-shadow(0 0 0.125rem var(--color-text-hover)) drop-shadow(0 0 0.25rem var(--color-text));
