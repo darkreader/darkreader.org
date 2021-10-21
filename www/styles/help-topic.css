@@ -1,3 +1,7 @@
 @import "./shared.css";
 @import "./page-grid.css";
 @import "./help-shared.css";
+
+.page-grid-ios {
+    left: calc(50vw - 10rem);
+}

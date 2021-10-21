@@ -56,3 +56,52 @@
         right: unset;
     }
 }
+
+.page-grid-ios {
+    bottom: -26.25rem;
+    left: 1rem;
+    position: fixed;
+    transform: translate(0, 0) rotate(0);
+    transition: transform 500ms ease-in-out;
+}
+
+.page-grid-ios:hover {
+    transform: translate(2rem, -24rem) rotate(15deg);
+}
+
+/*
+.page-grid-ios {
+    display: none;
+}
+
+@media screen and (min-width: 74rem) {
+    .page-grid-body {
+        display: grid;
+        gap: 0 1rem;
+        grid:
+            "ios header side" auto
+            "ios inside side" auto
+            "ios content side" auto
+            "ios footer side" auto
+            / 16rem auto 16rem;
+        margin: 0 auto;
+        max-width: 74rem;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .page-grid-side {
+        right: calc(50% - 37rem);
+    }
+
+    .page-grid-ios {
+        display: block;
+        grid-area: ios;
+        left: calc(50% - 37rem);
+        margin-top: 1.25rem;
+        position: fixed;
+        top: 0;
+        width: 16rem;
+    }
+}
+*/

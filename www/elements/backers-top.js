@@ -61,7 +61,7 @@ const tHTMLText = `
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
 
 const appleHTMLText = `
-<div class="up">
+<div class="up" style="display: none;">
     <a href="${safariURL}" class="safari-logo-link">Dark Reader for Safari</a>
     <span class="up-text">
         <strong>Dark Reader</strong> for
