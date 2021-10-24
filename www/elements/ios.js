@@ -51,7 +51,7 @@ section {
     text-indent: -999rem;
     width: 16rem;
 }
-.image-link::after {
+.image-link::before {
     background-image: url(/images/ios-hand.gif);
     background-size: 100%;
     content: "";
@@ -62,8 +62,26 @@ section {
     top: 6.55rem;
     width: 34.25rem;
 }
+.image-link::after {
+    background-image: url(/images/ios-phone-hover.svg);
+    background-size: 100%;
+    content: "";
+    height: 34.33rem;
+    left: -0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: -0.75rem;
+    transition: opacity 250ms;
+    width: 16.95rem;
+}
+/*
 .image-link:hover {
     filter: drop-shadow(0 0 0.125rem var(--color-text-hover)) drop-shadow(0 0 0.25rem var(--color-text));
+}
+*/
+.image-link:hover::after {
+    opacity: 1;
 }
 /*
 .image-link::after {
