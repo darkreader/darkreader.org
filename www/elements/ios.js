@@ -13,6 +13,7 @@ const htmlText = `
 </h2>
 <section class="i">
     <a class="image-link" href="${safariURL}">
+        Dark Reader for iPhone, iPad and Mac
     </a>
 </section>
 `;
@@ -48,6 +49,7 @@ section {
     filter: drop-shadow(0 0 0.5rem black);
     height: 32.5rem;
     position: relative;
+    text-indent: -999rem;
     /*transition: filter 250ms;*/
     width: 16rem;
 }

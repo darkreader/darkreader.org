@@ -5,3 +5,24 @@
 .page-grid-ios {
     left: calc(50vw - 10rem);
 }
+
+.page-grid-side {
+    display: none;
+}
+
+.page-grid-ios {
+    bottom: initial;
+    grid-area: side;
+    left: initial;
+    margin-top: 1.25rem;
+    position: fixed;
+    right: calc(50% - 28.5rem);
+    top: 0;
+    transform: initial;
+    transition: initial;
+    width: 16rem;
+}
+
+.page-grid-ios:hover {
+    transform: initial;
+}
