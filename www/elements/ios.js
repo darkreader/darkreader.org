@@ -46,11 +46,9 @@ section {
 }
 .image-link {
     background-image: url(/images/ios-phone.svg);
-    filter: drop-shadow(0 0 0.5rem black);
     height: 32.5rem;
     position: relative;
     text-indent: -999rem;
-    /*transition: filter 250ms;*/
     width: 16rem;
 }
 .image-link::after {
