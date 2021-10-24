@@ -122,6 +122,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 6rem auto;
     border-radius: 0.625rem;
+    height: 5rem;
     width: 7.5rem;
 }
 .h-text-pp {
@@ -134,6 +135,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0.625rem;
+    height: 5rem;
     width: 7.5rem;
 }
 .safari-logo-link {
@@ -208,6 +210,21 @@ a:hover {
 ::selection {
     background-color: var(--color-highlight);
     color: var(--color-text-hover);
+}
+@media screen and (max-width: 57rem) {
+    .up {
+        box-sizing: border-box;
+        display: block;
+        min-height: 6rem;
+        padding: 0.25rem;
+    }
+    .up-logo-link {
+        float: left;
+        margin: 0 0.5rem 0.5rem 0;
+    }
+    .up-text {
+        padding: 0;
+    }
 }
 `;
 

@@ -11,18 +11,25 @@
 }
 
 .page-grid-ios {
-    bottom: initial;
+    bottom: unset;
     grid-area: side;
-    left: initial;
+    left: unset;
     margin-top: 1.25rem;
     position: fixed;
     right: calc(50% - 28.5rem);
     top: 0;
-    transform: initial;
-    transition: initial;
+    transform: unset;
+    transition: unset;
     width: 16rem;
 }
 
 .page-grid-ios:hover {
-    transform: initial;
+    transform: unset;
+}
+
+@media screen and (max-width: 57rem) {
+    .page-grid-ios {
+        position: static;
+        right: unset;
+    }
 }
