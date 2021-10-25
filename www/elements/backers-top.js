@@ -61,7 +61,7 @@ const tHTMLText = `
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
 
 const appleHTMLText = `
-<div class="up" style="display: none;">
+<div class="up">
     <a href="${safariURL}" class="safari-logo-link">Dark Reader for Safari</a>
     <span class="up-text">
         <strong>Dark Reader</strong> for
@@ -140,17 +140,16 @@ a:hover {
 }
 .safari-logo-link {
     background-image:
-        url(/images/icon-safari-66x66.svg),
+        url(/images/apple-logo-white.svg),
         ${svgDataURL(svgPlusIcon)},
         url(/images/darkreader-ios-128.png);
-    background-position: 0 50%, center, 4.5rem 50%;
+    background-position: 0.5rem 50%, center, 4.5rem 50%;
     background-repeat: no-repeat;
-    background-size: 3rem, 0.75rem, 3rem;
+    background-size: auto 2.5rem, 0.75rem, 3rem;
     border-radius: 0.625rem;
     display: inline-block;
     filter: drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 0)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 0)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 0)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 0)) drop-shadow(0 0 0 var(--color-text));
     flex: none;
-    margin: 0.25rem 0 0.25rem 0.25rem;
     text-indent: -999rem;
     transition: filter 250ms;
     min-height: 3rem;
@@ -214,16 +213,16 @@ a:hover {
 @media screen and (max-width: 57rem) {
     .up {
         box-sizing: border-box;
-        display: block;
-        min-height: 6rem;
         padding: 0.25rem;
     }
     .up-logo-link {
-        float: left;
         margin: 0 0.5rem 0.5rem 0;
     }
     .up-text {
         padding: 0;
+    }
+    .safari-logo-link {
+        margin: 0 0.5rem 0.5rem 0;
     }
 }
 `;
