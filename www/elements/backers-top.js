@@ -143,7 +143,7 @@ a:hover {
         url(/images/apple-logo-white.svg),
         ${svgDataURL(svgPlusIcon)},
         url(/images/darkreader-ios-128.png);
-    background-position: 0.5rem 50%, center, 4.5rem 50%;
+    background-position: 0.75rem 50%, center, 4.5rem 50%;
     background-repeat: no-repeat;
     background-size: auto 2.5rem, 0.75rem, 3rem;
     border-radius: 0.625rem;
@@ -230,7 +230,7 @@ a:hover {
 class BackerHeaderElement extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
+        const shadowRoot = this.attachShadow({mode: 'open'});
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', titleHTMLText + containerHTMLText);

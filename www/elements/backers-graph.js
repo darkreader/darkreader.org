@@ -232,7 +232,7 @@ const roots = new WeakMap();
 class BackersGraphElement extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
+        const shadowRoot = this.attachShadow({mode: 'open'});
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         roots.set(this, shadowRoot);

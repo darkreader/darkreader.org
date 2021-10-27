@@ -69,6 +69,20 @@ const htmlText = `
         <span class="button-link-text">Donate</span>
     </a>
 </section>
+<section class="nr">
+    <h2 class="nr-heading">Not sponsored by</h2>
+    <div class="nr-links">
+        <a class="nr-logo-link nr-logo-fibery" title="Fibery is a connected workspace for product teams. It unites user research, ideation, strategic planning, product roadmapping, software development and customer feedback aggregation. Escape scattered tools and make better products with Fibery." href="https://fibery.io/">
+            Fibery
+        </a>
+        <a class="nr-logo-link nr-logo-github" title="GitHub is where over 65 million developers shape the future of software, together." href="https://github.com/">
+            GitHub
+        </a>
+        <a class="nr-logo-link nr-logo-mozilla" title="Mozilla is the not-for-profit behind the lightning fast Firefox browser. We put people over profit to give everyone more power online." href="https://www.mozilla.org/">
+            Mozilla
+        </a>
+    </div>
+</section>
 `;
 
 const cssText = `
@@ -327,12 +341,58 @@ section {
 .db {
     background-color: var(--color-control);
 }
+.nr {
+    margin-top: 1.5rem;
+}
+.nr-heading {
+    color: #4c656f;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    white-space: nowrap;
+}
+.nr-links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.nr-logo-link {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    filter: brightness(0.25) contrast(0.75) sepia(1) hue-rotate(152deg);
+    margin: 0 0 0.5rem 0;
+    text-indent: -999rem;
+    transition: filter 250ms;
+    width: 16rem;
+}
+.nr-logo-link:hover {
+    filter: brightness(1) contrast(1) sepia(0) hue-rotate(0deg);
+}
+.nr-logo-fibery {
+    background-image: url(/images/fibery-text.svg), url(/images/fibery-icon.svg);
+    background-position: center;
+    background-size: auto 2rem, contain;
+    height: 4rem;
+    margin: 0;
+}
+.nr-logo-github {
+    background-image: url(/images/github-logo.svg);
+    background-size: auto 1.75rem;
+    height: 2.5rem;
+}
+.nr-logo-mozilla {
+    background-image: url(/images/mozilla-logo.svg);
+    height: 2.5rem;
+}
 `;
 
 class BackersSideElement extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
+        const shadowRoot = this.attachShadow({mode: 'open'});
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);

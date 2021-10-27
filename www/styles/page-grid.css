@@ -52,6 +52,7 @@
     }
 
     .page-grid-side {
+        margin: 0 auto;
         position: static;
         right: unset;
     }

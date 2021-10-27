@@ -34,8 +34,9 @@ const htmlText = `
     </p>
     <p>
         Dark Reader is <strong>not</strong> sponsored by
-        <strong><a class="t" href="https://fibery.io/anxiety">Fibery</a></strong>
-        and <strong><a class="" href="https://www.mozilla.org/">Mozilla</a></strong>,
+        <strong><a class="t" href="https://fibery.io/anxiety">Fibery</a></strong>,
+        <strong><a href="https://github.com/">GitHub</a></strong>
+        and <strong><a href="https://www.mozilla.org/">Mozilla</a></strong>,
         they are just cool!
     </p>
 </div>
@@ -65,7 +66,7 @@ a:hover {
 class SupportUsElement extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: 'closed'});
+        const shadowRoot = this.attachShadow({mode: 'open'});
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
