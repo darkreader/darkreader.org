@@ -64,7 +64,7 @@ A more detailed article will follow soon.
 ### Thanks!
 
 **Check out our sponsors**
-and <span class="text-highlight">trick or treat!</span>
+and <strong><span class="text-highlight">trick or treat!</span></strong>
 🎃
 
 <!--
