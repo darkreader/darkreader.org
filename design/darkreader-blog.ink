@@ -2,7 +2,7 @@
  "name": "darkreader-blog",
  "width": "2048",
  "height": "512",
- "currentLayer": "65",
+ "currentLayer": "909",
  "selectedElements": [],
  "layers": [
   {
@@ -41,14 +41,14 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "1"
+     "doc-model-id": "840"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "2"
+   "doc-model-id": "841"
   },
   {
    "name": "Mascot",
@@ -105,7 +105,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "3"
+       "doc-model-id": "842"
       },
       {
        "name": "Curve",
@@ -180,7 +180,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "4"
+       "doc-model-id": "843"
       },
       {
        "name": "Curve",
@@ -235,7 +235,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "5"
+       "doc-model-id": "844"
       },
       {
        "name": "Curve",
@@ -334,7 +334,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "6"
+       "doc-model-id": "845"
       },
       {
        "name": "Curve",
@@ -389,7 +389,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "7"
+       "doc-model-id": "846"
       },
       {
        "name": "Curve",
@@ -476,7 +476,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "8"
+       "doc-model-id": "847"
       },
       {
        "name": "Curve",
@@ -531,7 +531,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "9"
+       "doc-model-id": "848"
       },
       {
        "name": "Curve",
@@ -590,7 +590,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10"
+       "doc-model-id": "849"
       },
       {
        "name": "Curve",
@@ -641,7 +641,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11"
+       "doc-model-id": "850"
       },
       {
        "name": "Curve",
@@ -692,7 +692,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "12"
+       "doc-model-id": "851"
       },
       {
        "name": "Curve",
@@ -743,7 +743,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "13"
+       "doc-model-id": "852"
       },
       {
        "name": "Curve",
@@ -794,7 +794,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14"
+       "doc-model-id": "853"
       },
       {
        "name": "Curve",
@@ -873,7 +873,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "15"
+       "doc-model-id": "854"
       },
       {
        "name": "Curve",
@@ -952,7 +952,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "16"
+       "doc-model-id": "855"
       },
       {
        "name": "Curve",
@@ -987,7 +987,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "17"
+       "doc-model-id": "856"
       },
       {
        "name": "Curve",
@@ -1022,7 +1022,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "18"
+       "doc-model-id": "857"
       },
       {
        "name": "Curve",
@@ -1065,7 +1065,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "19"
+       "doc-model-id": "858"
       },
       {
        "name": "Curve",
@@ -1125,7 +1125,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "20"
+       "doc-model-id": "859"
       },
       {
        "name": "Curve",
@@ -1185,7 +1185,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "21"
+       "doc-model-id": "860"
       },
       {
        "name": "Curve",
@@ -1228,7 +1228,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "22"
+       "doc-model-id": "861"
       },
       {
        "name": "Curve",
@@ -1271,7 +1271,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "23"
+       "doc-model-id": "862"
       },
       {
        "name": "Curve",
@@ -1318,7 +1318,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "24"
+       "doc-model-id": "863"
       },
       {
        "name": "Curve",
@@ -1365,7 +1365,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "25"
+       "doc-model-id": "864"
       },
       {
        "name": "Curve",
@@ -1424,7 +1424,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "26"
+       "doc-model-id": "865"
       },
       {
        "name": "Curve",
@@ -1483,7 +1483,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "27"
+       "doc-model-id": "866"
       },
       {
        "name": "Curve",
@@ -1542,7 +1542,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "28"
+       "doc-model-id": "867"
       },
       {
        "name": "Curve",
@@ -1617,7 +1617,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "29"
+       "doc-model-id": "868"
       },
       {
        "name": "Curve",
@@ -1668,7 +1668,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "30"
+       "doc-model-id": "869"
       },
       {
        "name": "Curve",
@@ -1711,19 +1711,19 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "31"
+       "doc-model-id": "870"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "32"
+     "doc-model-id": "871"
     }
    ],
    "isExpanded": false,
    "locked": true,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "33"
+   "doc-model-id": "872"
   },
   {
    "name": "Pumpkin",
@@ -1777,7 +1777,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "34"
+     "doc-model-id": "873"
     },
     {
      "name": "Curve",
@@ -1852,7 +1852,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "35"
+     "doc-model-id": "874"
     },
     {
      "name": "Curve",
@@ -1907,161 +1907,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "36"
-    },
-    {
-     "name": "Curve",
-     "fill": {
-      "color": "rgb(139,188,199)",
-      "gradient": null,
-      "doc-model": "ObservableObject"
-     },
-     "stroke": {
-      "color": "transparent",
-      "width": 2,
-      "doc-model": "ObservableObject"
-     },
-     "opacity": 1,
-     "path": [
-      "P",
-      "s",
-      170.41666559216182,
-      449.04268921514375,
-      "C",
-      "s",
-      177.2351842015623,
-      460.80641686332325,
-      "C",
-      "s",
-      188.85167285573357,
-      459.626450562087,
-      "C",
-      "s",
-      193.51813849459342,
-      450.87805813814964,
-      "C",
-      "c",
-      193.29735189142457,
-      444.93319474795186,
-      "C",
-      "s",
-      197.34794139874793,
-      451.0383048361122,
-      "C",
-      "s",
-      201.5257403494394,
-      459.626450562087,
-      "C",
-      "s",
-      208.34425895884002,
-      460.80641686332325,
-      "C",
-      "s",
-      215.06595847406916,
-      456.9217055189212,
-      "C",
-      "c",
-      216.4278747389119,
-      443.02139170302155,
-      "C",
-      "s",
-      224.5993723279678,
-      452.7516113741515,
-      "C",
-      "s",
-      229.08364213035838,
-      458.45446989733585,
-      "C",
-      "s",
-      240.57465062714442,
-      456.1211672774871,
-      "C",
-      "s",
-      241.73777966245174,
-      443.0529555577083,
-      "C",
-      "s",
-      220.5136235334398,
-      416.6107954528125,
-      "C",
-      "s",
-      177.2276552441071,
-      407.88422500239903,
-      "C",
-      "s",
-      154.18389616464242,
-      411.4121454513803,
-      "C",
-      "s",
-      127.90331752413923,
-      430.51110926871195,
-      "C",
-      "s",
-      121.09373619992584,
-      452.7516113741515,
-      "C",
-      "c",
-      140.16056390772317,
-      461.0917996636911,
-      "C"
-     ],
-     "doc-model": "Curve",
-     "doc-model-id": "37"
-    },
-    {
-     "name": "Curve",
-     "fill": {
-      "color": "rgb(49,110,125)",
-      "gradient": null,
-      "doc-model": "ObservableObject"
-     },
-     "stroke": {
-      "color": "transparent",
-      "width": 2,
-      "doc-model": "ObservableObject"
-     },
-     "opacity": 1,
-     "path": [
-      "P",
-      "s",
-      156.503559085835,
-      424.95098374235204,
-      "C",
-      "s",
-      167.3988892045763,
-      437.4612661766621,
-      "C",
-      "c",
-      171.5685296649451,
-      449.51731885488266,
-      "C",
-      "s",
-      161.19883807918612,
-      455.39718626985086,
-      "C",
-      "s",
-      153.13352240137328,
-      461.27705368481924,
-      "C",
-      "s",
-      134.70075407042918,
-      467.21058500386505,
-      "C",
-      "s",
-      123.17887453069673,
-      460.154744105903,
-      "C",
-      "s",
-      119.72039561733895,
-      447.8667157321504,
-      "C",
-      "s",
-      129.26523378898187,
-      433.2911720318921,
-      "C"
-     ],
-     "doc-model": "Curve",
-     "doc-model-id": "38"
+     "doc-model-id": "875"
     },
     {
      "name": "Curve",
@@ -2071,11 +1917,13 @@
        "type": "radial",
        "start": {
         "x": 224.1788781106274,
-        "y": 186.76478591412064
+        "y": 186.76478591412064,
+        "doc-model": "ObservableObject"
        },
        "end": {
         "x": 76.72908811027621,
-        "y": 476.88777564544
+        "y": 476.88777564544,
+        "doc-model": "ObservableObject"
        },
        "stops": [
         {
@@ -2151,7 +1999,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "39"
+     "doc-model-id": "876"
     },
     {
      "name": "Curve",
@@ -2218,7 +2066,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "40"
+     "doc-model-id": "877"
     },
     {
      "name": "Curve",
@@ -2228,11 +2076,13 @@
        "type": "radial",
        "start": {
         "x": 149.59497229130153,
-        "y": 192.1850698163038
+        "y": 192.1850698163038,
+        "doc-model": "ObservableObject"
        },
        "end": {
         "x": -23.88772571174753,
-        "y": 182.3909147559048
+        "y": 182.3909147559048,
+        "doc-model": "ObservableObject"
        },
        "stops": [
         {
@@ -2276,7 +2126,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "41"
+     "doc-model-id": "878"
     },
     {
      "name": "Curve",
@@ -2286,11 +2136,13 @@
        "type": "radial",
        "start": {
         "x": 307.6682808969683,
-        "y": 198.156890343508
+        "y": 198.156890343508,
+        "doc-model": "ObservableObject"
        },
        "end": {
         "x": 500.360573083245,
-        "y": 173.05742420174354
+        "y": 173.05742420174354,
+        "doc-model": "ObservableObject"
        },
        "stops": [
         {
@@ -2334,7 +2186,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "42"
+     "doc-model-id": "879"
     },
     {
      "name": "Curve",
@@ -2377,7 +2229,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "43"
+     "doc-model-id": "880"
     },
     {
      "name": "Curve",
@@ -2428,7 +2280,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "44"
+     "doc-model-id": "881"
     },
     {
      "name": "Curve",
@@ -2487,7 +2339,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "45"
+     "doc-model-id": "882"
     },
     {
      "name": "Curve",
@@ -2538,7 +2390,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "46"
+     "doc-model-id": "883"
     },
     {
      "name": "Curve",
@@ -2585,7 +2437,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "47"
+     "doc-model-id": "884"
     },
     {
      "name": "Curve",
@@ -2664,7 +2516,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "48"
+     "doc-model-id": "885"
     },
     {
      "name": "Curve",
@@ -2743,7 +2595,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "49"
+     "doc-model-id": "886"
     },
     {
      "name": "Curve",
@@ -2778,7 +2630,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "50"
+     "doc-model-id": "887"
     },
     {
      "name": "Curve",
@@ -2813,7 +2665,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "51"
+     "doc-model-id": "888"
     },
     {
      "name": "Curve",
@@ -2856,7 +2708,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "52"
+     "doc-model-id": "889"
     },
     {
      "name": "Curve",
@@ -2865,11 +2717,13 @@
       "gradient": {
        "start": {
         "x": 155.49437813339964,
-        "y": 138.34261761746072
+        "y": 138.34261761746072,
+        "doc-model": "ObservableObject"
        },
        "end": {
         "x": 154.37161760748631,
-        "y": 232.3095796371381
+        "y": 232.3095796371381,
+        "doc-model": "ObservableObject"
        },
        "type": "linear",
        "stops": [
@@ -2914,7 +2768,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "53"
+     "doc-model-id": "890"
     },
     {
      "name": "Curve",
@@ -2923,11 +2777,13 @@
       "gradient": {
        "start": {
         "x": 300.4355833407539,
-        "y": 144.14661238410807
+        "y": 144.14661238410807,
+        "doc-model": "ObservableObject"
        },
        "end": {
         "x": 301.5618181314982,
-        "y": 232.6569225838888
+        "y": 232.6569225838888,
+        "doc-model": "ObservableObject"
        },
        "type": "linear",
        "stops": [
@@ -2972,7 +2828,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "54"
+     "doc-model-id": "891"
     },
     {
      "name": "Curve",
@@ -3015,7 +2871,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "55"
+     "doc-model-id": "892"
     },
     {
      "name": "Curve",
@@ -3058,7 +2914,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "56"
+     "doc-model-id": "893"
     },
     {
      "name": "Curve",
@@ -3109,7 +2965,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "57"
+     "doc-model-id": "894"
     },
     {
      "name": "Curve",
@@ -3156,7 +3012,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "58"
+     "doc-model-id": "895"
     },
     {
      "name": "Curve",
@@ -3215,7 +3071,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "59"
+     "doc-model-id": "896"
     },
     {
      "name": "Curve",
@@ -3274,7 +3130,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "60"
+     "doc-model-id": "897"
     },
     {
      "name": "Curve",
@@ -3333,7 +3189,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "61"
+     "doc-model-id": "898"
     },
     {
      "name": "Curve",
@@ -3408,7 +3264,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "62"
+     "doc-model-id": "899"
     },
     {
      "name": "Curve",
@@ -3459,7 +3315,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "63"
+     "doc-model-id": "900"
     },
     {
      "name": "Curve",
@@ -3502,14 +3358,664 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "64"
+     "doc-model-id": "901"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": {
+       "type": "radial",
+       "start": {
+        "x": 216.1302527168422,
+        "y": 434.01445822182365,
+        "doc-model": "ObservableObject"
+       },
+       "end": {
+        "x": 131.46232421601445,
+        "y": 531.2336276010753,
+        "doc-model": "ObservableObject"
+       },
+       "stops": [
+        {
+         "offset": 0,
+         "color": "rgb(233,108,76)",
+         "doc-model": "ObservableObject"
+        },
+        {
+         "offset": 1,
+         "color": "rgb(20,30,36)",
+         "doc-model": "ObservableObject"
+        }
+       ],
+       "doc-model": "ObservableObject"
+      },
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "s",
+      115.37817122862823,
+      450.49129092473515,
+      "C",
+      "s",
+      118.36125292032133,
+      464.46238641483376,
+      "C",
+      "s",
+      135.10187479659322,
+      467.6423375055743,
+      "C",
+      "c",
+      163.80035087632382,
+      452.3429896008233,
+      "C",
+      "s",
+      169.66965928943495,
+      464.66792095791016,
+      "C",
+      "s",
+      181.25193886093092,
+      472.0426751362185,
+      "C",
+      "c",
+      192.5221294500068,
+      480.86282429288656,
+      "C",
+      "s",
+      190.67238075707394,
+      473.4843466998567,
+      "C",
+      "c",
+      183.4463800826178,
+      466.83642607935707,
+      "C",
+      "s",
+      189.8052606761392,
+      462.21178564770514,
+      "C",
+      "s",
+      188.89755282078778,
+      452.65317087021464,
+      "C",
+      "c",
+      186.11354759310848,
+      445.84782475810954,
+      "C",
+      "s",
+      194.46556327614644,
+      454.19984044114756,
+      "C",
+      "s",
+      199.4149059031319,
+      460.0771848106928,
+      "C",
+      "s",
+      206.44445346657403,
+      462.74908931270363,
+      "C",
+      "c",
+      212.89895635166582,
+      474.3501680132989,
+      "C",
+      "s",
+      213.21543919221386,
+      464.44758933193333,
+      "C",
+      "c",
+      209.14610904567672,
+      458.1982608926084,
+      "C",
+      "s",
+      212.3434398750988,
+      455.29159650222476,
+      "C",
+      "c",
+      212.63410631413717,
+      443.5196057211709,
+      "C",
+      "s",
+      217.7207689973086,
+      448.3156019653039,
+      "C",
+      "s",
+      221.208766265769,
+      455.29159650222476,
+      "C",
+      "s",
+      226.8037890894191,
+      461.8171192842038,
+      "C",
+      "s",
+      228.68294250814733,
+      467.12748436760927,
+      "C",
+      "c",
+      235.60104078790724,
+      470.07216860402883,
+      "C",
+      "s",
+      231.60463795292176,
+      466.06072684302853,
+      "C",
+      "c",
+      232.91628605284382,
+      458.6716434388521,
+      "C",
+      "s",
+      236.94369581214767,
+      455.1852051210124,
+      "C",
+      "s",
+      235.30608855912982,
+      436.1076115256925,
+      "C",
+      "s",
+      200.62008041366522,
+      409.0255120707147,
+      "C",
+      "s",
+      138.06878774135924,
+      416.00939426228285,
+      "C"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "902"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": {
+       "type": "linear",
+       "start": {
+        "x": 87.04828377135722,
+        "y": 277.70817919732207,
+        "doc-model": "ObservableObject"
+       },
+       "end": {
+        "x": 111.27586302728372,
+        "y": 523.8555973929832,
+        "doc-model": "ObservableObject"
+       },
+       "stops": [
+        {
+         "offset": 0,
+         "color": "rgb(233,108,76)",
+         "doc-model": "ObservableObject"
+        },
+        {
+         "offset": 1,
+         "color": "rgb(20,30,36)",
+         "doc-model": "ObservableObject"
+        }
+       ],
+       "doc-model": "ObservableObject"
+      },
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "s",
+      116.60317049182768,
+      450.1850411089353,
+      "C",
+      "s",
+      118.36125292032133,
+      464.46238641483376,
+      "C",
+      "s",
+      135.10187479659322,
+      467.6423375055743,
+      "C",
+      "c",
+      163.80035087632382,
+      452.3429896008233,
+      "C",
+      "s",
+      152.82591942044263,
+      435.2679386411236,
+      "C",
+      "c",
+      136.00136927989467,
+      429.23799991350546,
+      "C",
+      "s",
+      124.28754603036555,
+      436.8343817366734,
+      "C"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "903"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(20,30,36)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "rgb(49,110,125)",
+      "width": 4,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      1056.9319704560296,
+      237.25246963909836,
+      "C",
+      "s",
+      1132.4872335121875,
+      370.5852867970235,
+      "C",
+      "c",
+      1219.1535646648385,
+      463.918258807571
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "904"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(20,30,36)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "rgb(49,110,125)",
+      "width": 4,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      1055.76998197584,
+      236.1125244446328,
+      "C",
+      "s",
+      1260.9498427583637,
+      318.59261480221437,
+      "C",
+      "c",
+      1382.515104068114,
+      342.1277264985647
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "905"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(20,30,36)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "rgb(49,110,125)",
+      "width": 4,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      1321.934410790872,
+      234.84762043409708,
+      "C",
+      "s",
+      1270.3151048671668,
+      253.8297286033909,
+      "C",
+      "c",
+      1234.4158075788607,
+      310.52782025242374,
+      "C",
+      "s",
+      1159.151078904135,
+      325.34441179474067,
+      "C",
+      "c",
+      1129.2327903563591,
+      369.2045609752679,
+      "C",
+      "s",
+      1097.5042036200107,
+      373.316112865898,
+      "C",
+      "c",
+      1070.210358803478,
+      384.9159969129244
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "906"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(20,30,36)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "rgb(49,110,125)",
+      "width": 4,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      1303.580507485376,
+      328.5362803931461,
+      "C",
+      "s",
+      1225.6303999345519,
+      365.7268390614428,
+      "C",
+      "c",
+      1187.5515299393296,
+      435.1668565277761,
+      "C",
+      "s",
+      1130.2348224882548,
+      436.02387600725353,
+      "C",
+      "c",
+      1077.3878711075051,
+      467.93146929374376
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "907"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(20,30,36)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "rgb(49,110,125)",
+      "width": 4,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      1190.4277355662587,
+      230.04100748843862,
+      "C",
+      "s",
+      1169.8180180332379,
+      242.84048228983318,
+      "C",
+      "c",
+      1153.8305930622198,
+      281.07152537928744,
+      "C",
+      "s",
+      1113.5409821018673,
+      292.5566216286185,
+      "C",
+      "c",
+      1096.3561215502048,
+      319.1423607477165
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "908"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      188.15243526036127,
+      285.6436851983145,
+      "S",
+      "c",
+      194.93856167240492,
+      286.4522054672764,
+      "S",
+      "c",
+      194.99011128681406,
+      298.68021987256105,
+      "S",
+      "c",
+      189.5302803885337,
+      298.1502794386485,
+      "S"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "914"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      239.17497828600224,
+      288.71733971500674,
+      "S",
+      "c",
+      239.0417709630332,
+      300.9059696949934,
+      "S",
+      "c",
+      233.09138405613822,
+      301.01195778177606,
+      "S",
+      "c",
+      231.92551510153078,
+      288.61135162822427,
+      "S"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "915"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": {
+       "type": "linear",
+       "start": {
+        "x": 222.27687084511672,
+        "y": 416.7071701165082
+       },
+       "end": {
+        "x": 146.60168880532464,
+        "y": 453.7780767473206
+       },
+       "stops": [
+        {
+         "offset": 0,
+         "color": "rgb(233,108,76)",
+         "doc-model": "ObservableObject"
+        },
+        {
+         "offset": 1,
+         "color": "rgb(20,30,36)",
+         "doc-model": "ObservableObject"
+        }
+       ],
+       "doc-model": "ObservableObject"
+      },
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      186.23413969163497,
+      446.1408843438836,
+      "C",
+      "s",
+      178.03345195463223,
+      431.4326564077386,
+      "C",
+      "c",
+      163.964545450608,
+      421.47944200775214,
+      "C",
+      "s",
+      186.4204083440246,
+      430.1843661843305,
+      "C",
+      "s",
+      195.59476392980318,
+      442.9540915523553,
+      "C",
+      "s",
+      197.00441217688305,
+      454.921352716749,
+      "C",
+      "c",
+      198.67158079586815,
+      459.5238509884417,
+      "C",
+      "s",
+      196.08054336541312,
+      457.01316027662483,
+      "C",
+      "s",
+      190.66739106911103,
+      450.43033225109,
+      "C"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "916"
+    },
+    {
+     "name": "Curve",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": {
+       "type": "linear",
+       "start": {
+        "x": 247.21645761071855,
+        "y": 417.685791357862,
+        "doc-model": "ObservableObject"
+       },
+       "end": {
+        "x": 173.1472472532939,
+        "y": 451.54475462393987,
+        "doc-model": "ObservableObject"
+       },
+       "stops": [
+        {
+         "offset": 0,
+         "color": "rgb(233,108,76)",
+         "doc-model": "ObservableObject"
+        },
+        {
+         "offset": 1,
+         "color": "rgb(20,30,36)",
+         "doc-model": "ObservableObject"
+        }
+       ],
+       "doc-model": "ObservableObject"
+      },
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      212.77969813960422,
+      444.2877429813745,
+      "C",
+      "s",
+      208.92692910288832,
+      433.76464891965924,
+      "C",
+      "c",
+      202.90167219439493,
+      424.0288304546871,
+      "C",
+      "s",
+      214.4877383370942,
+      432.2989627612367,
+      "C",
+      "s",
+      221.91221392124947,
+      441.10095018984623,
+      "C",
+      "s",
+      223.6933922813662,
+      452.2512188440785,
+      "C",
+      "c",
+      225.9636236536838,
+      460.2834372164522,
+      "C",
+      "s",
+      220.93277876095888,
+      455.23605506629013,
+      "C",
+      "s",
+      216.76728441958454,
+      447.1979883338933,
+      "C"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "917"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": true,
    "doc-model": "Layer",
-   "doc-model-id": "65"
+   "doc-model-id": "909"
   },
   {
    "name": "Items",
@@ -3923,7 +4429,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "66"
+     "doc-model-id": "910"
     },
     {
      "name": "Curve",
@@ -4560,14 +5066,14 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "67"
+     "doc-model-id": "911"
     }
    ],
-   "isExpanded": true,
+   "isExpanded": false,
    "locked": true,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "68"
+   "doc-model-id": "912"
   }
  ],
  "rulers": [],

@@ -31,7 +31,10 @@ a:hover {
     width: 16rem;
 }
 .heading {
+    background-color: #141e2477;
+    border-radius: 0.25rem;
     color: var(--color-highlight);
+    display: inline-block;
     line-height: 1.25rem;
     margin: 0 0 0.75rem 2rem;
     -webkit-text-stroke: 0.0625rem;
