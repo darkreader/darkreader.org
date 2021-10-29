@@ -14,7 +14,7 @@ and **500,000** [Microsoft Edge](https://microsoftedge.microsoft.com/addons/deta
 
 <img src="/images/v5-colors-preview.png" alt="Dark Reader v5 color picker preview" style="width: 14rem;" />
 
-We are getting closer to **v5 release** that will bring a newer design and new features.
+We are getting closer to the **v5 release** that will bring a newer design and new features.
 Unfortunately we had a slow down of our progress.
 Due to events in Belarus the project founder had to travel and deal with bureaucracy a lot.
 **Luckily our new team members came for rescue!**
@@ -23,8 +23,8 @@ Due to events in Belarus the project founder had to travel and deal with bureauc
 
 William has done an **ENORMOUS** amount of bug fixes and performance improvements.
 He reviewed hundreds of changes made by other users,
-proposed many optimizations to the Dynamic mode.
-Thanks to William, Dark Reader keeps working fast and reliable.
+and proposed many optimizations to the Dynamic mode.
+Thanks to William, Dark Reader keeps working fast and reliably.
 
 ### Contributor of the month: [Anton Bershanskiy](https://github.com/bershanskiy) 🏆
 
@@ -44,7 +44,7 @@ Preview new design.*
 There are [hundreds of bugs](https://github.com/darkreader/darkreader/issues)
 that need to be resolved,
 and many features that need to be implemented,
-but less than 3,000 of 5,000,000 users supported us through Open Collective since 2018.
+but less than 3,000 of 5,000,000 users have supported us through Open Collective since 2018.
 Just click the [DONATE](https://opencollective.com/darkreader) button.**
 🙏
 
