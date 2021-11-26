@@ -112,6 +112,21 @@ And thanks to many others:
 - Matt Alexander [@mattalexx](https://github.com/mattalexx)
 - And thanks to many others for making a small contribution for Dark Reader, but a giant leap for mankind.
 
+### <span class="text-highlight">Help page translators</span>
+
+Thanks to those who translated our [Manual](https://darkreader.org/help/) in different languages:
+- [@reiscigit](https://github.com/reiscigit)
+- [@Gusted](https://github.com/Gusted)
+- Abdullah Talha @[Underday](https://github.com/Underday)
+- [@DroneBetter](https://github.com/DroneBetter)
+- [@FaelLiberatori](https://github.com/FaelLiberatori)
+- Ramón Morcillo [@reymon359](https://github.com/reymon359)
+- [@multiflexi](https://github.com/multiflexi)
+- Tom [@PsiPhiTheta](https://github.com/PsiPhiTheta)
+- Hao Liu [@Higurashi-kagome](https://github.com/Higurashi-kagome)
+- [@stonecrusher](https://github.com/stonecrusher)
+- Ariel Allon [@arielallon](https://github.com/arielallon)
+
 ### <span class="text-highlight">Companies</span>
 
 Thanks these companies for providing their software and services:
@@ -2238,5 +2253,7 @@ Thanks to our backers and sponsors:
 
 ### <span class="text-highlight">Thank you</span>
 
-Thanks for all our users. Stay tuned for updates.
+Thank you for scrolling so far!
+
+Thanks for all our users, stay tuned for updates.
 We wish you all the best and Good Luck!
