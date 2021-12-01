@@ -13,6 +13,7 @@ import {
  * @property {number} net
  * @property {'user' | 'org'} type
  * @property {string} info
+ * @property {number?} pri
  */
 
 /**
@@ -51,7 +52,7 @@ function scale(x, inLow, inHigh, outLow, outHigh) {
  * @returns {HTMLElement}
  */
 function createBackersGraph(backers) {
-    const count = 12;
+    const count = 24;
 
     function getColor(i) {
         const fillHue = scale(i, 0, count - 1, 120, 240);
@@ -62,10 +63,13 @@ function createBackersGraph(backers) {
 
     const organizations = backers.filter(b => b.type === 'org' && b.pic);
     const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
+    icons8Org.pri = 1;
     const sentryOrg = organizations.find(o => o.name.toLowerCase().includes('sentry'));
+    sentryOrg.pri = 1;
     sentryOrg.name = 'Sentry: We help software teams build better software';
     const vpnBlogOrg = organizations.find(o => o.name.toLowerCase().includes('vpnwelt'));
     vpnBlogOrg.url = 'https://vpnwelt.com/vpn-kostenlos/';
+    vpnBlogOrg.pri = 1;
     vpnBlogOrg.name = 'VPNwelt: Best VPN Providers Recommended';
     vpnBlogOrg.info = 'Best Free VPN for Germany';
     const toucanOrg = organizations.find(o => o.name.toLowerCase().includes('toucan'));
@@ -78,6 +82,15 @@ function createBackersGraph(backers) {
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
+    for (let y = 0; y < 5; y++) {
+        for (let x = 0; x < 6; x++) {
+            const i = y * 6 + x;
+            if (i >= displayBackers.length) {
+                break;
+            }
+            displayBackers[i].pri = y + 2;
+        }
+    }
 
     return html('div', {class: 'grid'},
         // createBackerLink(algoliaOrg, 'large', '#3a416f'),
@@ -129,6 +142,7 @@ function createBackerLink(backer, size, color, cls) {
             ),
         ),
     );
+    link.dataset.pri = String(backer.pri);
     if (color) {
         link.style.backgroundColor = color;
     }
@@ -226,6 +240,31 @@ const cssText = `
 }
 .vpnwelt {
     background-color: #173054;
+}
+@media screen and (min-width: 57rem) and (max-height: 39rem) {
+    .backer[data-pri="2"] {
+        display: none;
+    }
+}
+@media screen and (min-width: 57rem) and (max-height: 48rem) {
+    .backer[data-pri="3"] {
+        display: none;
+    }
+}
+@media screen and (min-width: 57rem) and (max-height: 52rem) {
+    .backer[data-pri="4"] {
+        display: none;
+    }
+}
+@media screen and (min-width: 57rem) and (max-height: 55rem) {
+    .backer[data-pri="5"] {
+        display: none;
+    }
+}
+@media screen and (min-width: 57rem) and (max-height: 58rem) {
+    .backer[data-pri="6"] {
+        display: none;
+    }
 }
 `;
 
