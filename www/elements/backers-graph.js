@@ -62,6 +62,8 @@ function createBackersGraph(backers) {
 
     const organizations = backers.filter(b => b.type === 'org' && b.pic);
     const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
+    const sentryOrg = organizations.find(o => o.name.toLowerCase().includes('sentry'));
+    sentryOrg.name = 'Sentry: We help software teams build better software';
     const vpnBlogOrg = organizations.find(o => o.name.toLowerCase().includes('vpnwelt'));
     vpnBlogOrg.url = 'https://vpnwelt.com/vpn-kostenlos/';
     vpnBlogOrg.name = 'VPNwelt: Best VPN Providers Recommended';
@@ -72,7 +74,7 @@ function createBackersGraph(backers) {
     // algoliaOrg.pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
     // const tripleOrg = organizations.find(o => o.name.toLowerCase().includes('triple'));
     const displayBackers = backers
-        .filter((b) => ![icons8Org, vpnBlogOrg, toucanOrg].includes(b))
+        .filter((b) => ![icons8Org, sentryOrg, vpnBlogOrg, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -81,6 +83,7 @@ function createBackersGraph(backers) {
         // createBackerLink(algoliaOrg, 'large', '#3a416f'),
         // createBackerLink(tripleOrg, 'medium', null),
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
+        createBackerLink(sentryOrg, 'wide', null, 'sentry'),
         createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
     );
