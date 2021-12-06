@@ -43,6 +43,7 @@ const htmlText = `
         Learn
         <span class="tt-flags">
             <span class="tt-f tt-es">Spanish</span>
+            <span class="tt-f tt-jp">Japanese</span>
             <span class="tt-f tt-fr">French</span>
             <span class="tt-f tt-de">German</span>
             <span class="tt-f tt-pt">Portuguese</span>
@@ -322,6 +323,10 @@ section {
 }
 .tt-de {
     background-image: url(/images/toucan-german.svg);
+    display: none;
+}
+.tt-jp {
+    background-image: url(/images/toucan-japanese.svg);
 }
 .tt-pt {
     background-image: url(/images/toucan-portuguese.svg);
