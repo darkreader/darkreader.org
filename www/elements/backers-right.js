@@ -11,6 +11,7 @@ const ocURL = 'https://opencollective.com/darkreader';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
+const language = navigator.language || 'en';
 
 const outlineFilter = 'drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 1))';
 
@@ -40,6 +41,7 @@ const htmlText = `
         <span class="logo-link-image tl-image">Toucan</span>
     </a>
     <a class="text-link tt" href="${tcURL}">
+        ${language.startsWith('en') ? `
         Learn
         <span class="tt-flags">
             <span class="tt-f tt-es">Spanish</span>
@@ -50,6 +52,10 @@ const htmlText = `
             <span class="tt-f tt-it">Italian</span>
         </span>
         while you browse
+        ` : language.startsWith('de') ? 'Englisch mühelos lernen' :
+        language.startsWith('es') ? 'Aprende inglés fácilmente' :
+            language.startsWith('pt') ? 'Aprenda Inglês sem esforço' :
+                'Learn English without even trying'}
     </a>
     <a class="button-link tb" href="${tcURL}">
         <span class="tb-icon${isEdge ? ' tb-icon--edge' : isSafari ? ' tb-icon--safari' : ''}"></span>

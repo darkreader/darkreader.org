@@ -38,11 +38,32 @@
             <a class="logo-link toucan-logo-link" href="https://jointoucan.com/partners/darkreader">
                 Toucan
             </a>
-            <span class="recommendations-description">
+            <span class="recommendations-description" id="js-tr">
                 Learn a <em class="foreign">nuevo</em> language with <a href="https://jointoucan.com/partners/darkreader" class="toucan-name">Toucan</a>.
                 It will teach you Spanish, English, Japanese and other languages without ever opening a textbook.
                 <a class="learn-more-link" href="https://jointoucan.com/partners/darkreader">Learn more</a>.
             </span>
+            <script>
+                const language = navigator.language || 'en';
+                if (!language.startsWith('en')) {
+                    const recommendation = document.getElementById('js-tr');
+                    const link = recommendation.querySelector('.learn-more-link');
+                    let html = '';
+                    if (language.startsWith('de')) {
+                        html += 'Englisch mühelos lernen. Lerne die Erweiterung kennen, die dir dabei hilft, eine neue sprache zu lernen, während du im Internet surfst.';
+                    } else if (language.startsWith('es')) {
+                        html += 'Aprende inglés sin siquiera intentarlo. Conoce la extensión gratuita que te ayuda a aprender un nuevo idioma mientras navegas la red.';
+                    } else if (language.startsWith('pt')) {
+                        html += 'Aprenda inglês sem esforço. Conheça a extensão gratuita que ajuda você a aprender uma nova idioma enquanto navega na web.';
+                    } else {
+                        html += 'Learn English and other languages with <a href="https://jointoucan.com/partners/darkreader" class="toucan-name">Toucan</a> while you browse the web without ever opening a textbook.';
+                    }
+                    recommendation.innerHTML = html;
+                    recommendation.appendChild(document.createTextNode(' '));
+                    recommendation.appendChild(link);
+                    recommendation.appendChild(document.createTextNode('.'));
+                }
+            </script>
         </div>
     </section>
 </body>

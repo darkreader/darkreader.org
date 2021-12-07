@@ -44,16 +44,35 @@ const hHTMLText = `
 `;
 
 const tURL = 'https://jointoucan.com/partners/darkreader';
+const language = navigator.language || 'en';
 
 const tHTMLText = `
 <div class="up">
     <a href="${tURL}" class="up-logo-link t-logo-link">Toucan</a>
     <span class="up-text t-text">
         <a href="${tURL}" class="up-link">Toucan ${browserText}</a>.
+        ${language.startsWith('en') ? `
         Learn a language more <a class="tr" data-tr="easy" href="${tURL}">fácilmente</a>.
         Immerse yourself in a new <a class="tr" data-tr="language" href="${tURL}">idioma</a> while you browse the web.
         Join for <strong>free</strong>.
         <a href="${tURL}"><span class="tr" data-tr="Learn more\nabout Toucan">Learn más</span></a>.
+        ` : language.startsWith('de') ? `
+        <a class="tr" data-tr="Englisch" href="${tURL}">English</a> mühelos lernen.
+        Lerne die kostenlose Erweiterung kennen, die dir dabei hilft, eine neue
+        <a class="tr" data-tr="sprache" href="${tURL}">language</a> zu lernen, während du im Internet surfst.
+        ` : language.startsWith('es') ? `
+        Aprende <a class="tr" data-tr="Inglés" href="${tURL}">English</a> sin siquiera intentarlo.
+        Conoce la extensión gratuita que te ayuda a aprender un nuevo
+        <a class="tr" data-tr="idioma" href="${tURL}">language</a> mientras navegas la red.
+        ` : language.startsWith('pt') ? `
+        Aprenda <a class="tr" data-tr="Inglês" href="${tURL}">English</a> sem esforço.
+        Conheça a extensão gratuita que ajuda você a aprender uma nova
+        <a class="tr" data-tr="idioma" href="${tURL}">language</a> enquanto navega na web.
+        ` : `
+        Learn <strong>English, Spanish, Japanese</strong> without even trying.
+        This extension helps you learn a new language while browsing the web.
+        <a href="${tURL}">Learn more</a>.
+        `}
     </span>
 </div>
 `;
@@ -181,6 +200,7 @@ a:hover {
 .tr:hover {
     background-color: var(--color-toucan);
     color: white;
+    z-index: 1;
 }
 .tr::after {
     background-color: #001b24;
