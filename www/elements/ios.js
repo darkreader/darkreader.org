@@ -36,22 +36,10 @@ a:hover {
     color: var(--color-highlight);
     display: inline-block;
     line-height: 1.25rem;
-    margin: 0 0 0.75rem 3rem;
+    margin: 0 0 0.25rem 2.5rem;
+    padding: 0.25rem;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
-}
-.heading::before {
-    background-image: url(/images/apple-logo-white.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    bottom: -0.125rem;
-    content: "";
-    display: inline-block;
-    filter: brightness(0.7) sepia(1) hue-rotate(-20deg);
-    height: 1.75rem;
-    position: relative;
-    width: 1.75rem;
 }
 section {
     align-items: center;
