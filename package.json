@@ -6,8 +6,8 @@
   "scripts": {
     "blog": "node tasks/blog.js",
     "help": "node tasks/help.js",
-    "publish": "node tasks/publish.js",
-    "start": "http-server ./www -p 9003"
+    "start": "http-server ./www -p 9003",
+    "upload": "node tasks/publish.js"
   },
   "repository": {
     "type": "git",
