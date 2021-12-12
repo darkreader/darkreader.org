@@ -45,7 +45,7 @@ const cssText = `
 }
 .content {
     align-items: center;
-    background-image: linear-gradient(to right, #141e24,#141e24,#245240,#694f0c,#430a20);
+    background-image: linear-gradient(to right, var(--color-bg), var(--color-bg), #2c634e, #e48c10, #b40f4e);;
     border-radius: 1rem;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     box-sizing: border-box;
