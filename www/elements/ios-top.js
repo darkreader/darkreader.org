@@ -11,7 +11,7 @@ const htmlText = `
 <div class="title">
     Dark Mode <strong>for mobile</strong> devices is available
 </div>
-<a class="content" href="${safariURL}">
+<div class="content">
     <span class="mascot"></span>
     <span class="content_right">
         <span class="description">
@@ -19,7 +19,7 @@ const htmlText = `
             on your phone<br>
             Create your own color theme
         </span>
-        <span class="install">
+        <a class="install" href="${safariURL}">
             <i class="install_icon"></i>
             <span class="install_right">
                 <span class="install_top">
@@ -29,11 +29,11 @@ const htmlText = `
                     App Store
                 </span>
             </span>
-        </span>
+        </a>
     </span>
-    <span class="screenshot" id="scr1"></span>
-    <span class="screenshot" id="scr2"></span>
-</a>
+    <a class="screenshot" id="scr1" href="${safariURL}"></a>
+    <a class="screenshot" id="scr2" href="${safariURL}"></a>
+</div>
 `;
 
 const cssText = `
@@ -45,9 +45,8 @@ const cssText = `
 }
 .content {
     align-items: center;
-    background-image: linear-gradient(to right, var(--color-bg), var(--color-bg), #2c634e, #e48c10, #b40f4e);;
+    background-image: linear-gradient(to right, black, #152245, #2c634e, #e48c10, #b40f4e);
     border-radius: 1rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -57,9 +56,6 @@ const cssText = `
     text-decoration: none;
     transition: all 250ms;
     width: calc(100% - 2rem);
-}
-.content:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 .content_right {
     display: inline-flex;
@@ -94,12 +90,10 @@ const cssText = `
     transition: all 250ms;
     user-select: none;
 }
-/*
 .install:hover {
     border-color: white;
     box-shadow: 0 0 1rem var(--color-text);
 }
-*/
 .install_icon {
     background-image: url(/images/apple-logo-white.svg);
     background-position: center;
@@ -131,14 +125,22 @@ const cssText = `
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 0.0625rem solid black;
+    border: 0.1875rem solid black;
     border-radius: 0.5rem;
+    box-shadow: 0 0 0 0.03125rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     box-sizing: border-box;
     display: inline-block;
     height: 9rem;
     margin-left: 1rem;
     position: relative;
+    transform: scale(1);
+    transition: all 250ms;
     width: 4rem;
+}
+.screenshot:hover {
+    box-shadow: 0 0 0 0.03125rem hsla(0, 0%, 100%, 1), 0 0 0.375rem var(--color-text);
+    transform: scale(2);
+    z-index: 1;
 }
 .screenshot::before {
     background-color: black;
@@ -150,7 +152,7 @@ const cssText = `
     left: 1rem;
     position: absolute;
     top: 0;
-    width: 2rem;
+    width: 1.75rem;
 }
 #scr1 {
     background-image: url(/images/ios-mini-1.jpg);
