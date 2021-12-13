@@ -30,6 +30,9 @@ const htmlText = `
                 </span>
             </span>
         </a>
+        <span class="description">
+            Includes <strong>macOS</strong> Safari app
+        </span>
     </span>
     <a class="screenshot" id="scr1" href="${safariURL}"></a>
     <a class="screenshot" id="scr2" href="${safariURL}"></a>
@@ -61,6 +64,9 @@ const cssText = `
     display: inline-flex;
     flex-direction: column;
 }
+.content_right > :not(:last-child) {
+    margin-bottom: 0.5rem;
+}
 .mascot {
     background-image: url(/images/darkreader-mascot-mobile.svg);
     background-position: center;
@@ -73,7 +79,6 @@ const cssText = `
 }
 .description {
     color: white;
-    margin-bottom: 0.5rem;
     text-align: center;
 }
 .install {
