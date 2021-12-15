@@ -16,7 +16,7 @@ const htmlText = `
     <span class="content_right">
         <span class="description">
             <strong>Dark Reader</strong>
-            for your phone!<br>
+            for your <strong>iPhone</strong><br>
             Create your own color theme
         </span>
         <a class="install" href="${safariURL}">
@@ -31,7 +31,7 @@ const htmlText = `
             </span>
         </a>
         <span class="description">
-            <strong>Christmas deal! Just for $4.99*!</strong><br>
+            <strong>Christmas deal</strong> - just for $4.99*<br>
             Includes <strong>macOS</strong> Safari app<br>
             <em style="font-size: 50%">* + VAT in your country</em>
         </span>
@@ -56,11 +56,26 @@ const cssText = `
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     max-width: 36rem;
     padding: 1rem;
+    position: relative;
     text-decoration: none;
     transition: all 250ms;
     width: calc(100% - 2rem);
+}
+.content::after {
+    background-image: url(/images/lights.svg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 50%;
+    left: 12.5%;
+    pointer-events: none;
+    position: absolute;
+    top: 95%;
+    width: 75%;
 }
 .content_right {
     display: inline-flex;
@@ -75,9 +90,10 @@ const cssText = `
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    height: 8rem;
+    height: 10rem;
     margin-right: 0.5rem;
-    width: 7rem;
+    mix-blend-mode: lighten;
+    width: 8rem;
 }
 .description {
     color: white;
@@ -137,16 +153,16 @@ const cssText = `
     box-shadow: 0 0 0 0.03125rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     box-sizing: border-box;
     display: inline-block;
-    height: 9rem;
+    height: 13.5rem;
     margin-left: 1rem;
     position: relative;
     transform: translateY(0%) scale(1);
     transition: all 250ms;
-    width: 4rem;
+    width: 6rem;
 }
 .screenshot:hover {
     box-shadow: 0 0 0 0.03125rem hsla(0, 0%, 100%, 1), 0 0 0.375rem var(--color-text);
-    transform: translateY(50%) scale(2);
+    transform: translateY(15%) scale(130%);
     z-index: 1;
 }
 .screenshot::before {
@@ -163,6 +179,7 @@ const cssText = `
 }
 #scr1 {
     background-image: url(/images/ios-mini-1.jpg);
+    display: none;
 }
 #scr2 {
     background-image: url(/images/ios-mini-3.jpg);
@@ -175,8 +192,8 @@ const cssText = `
         padding-left: 0;
     }
     .mascot {
-        height: 8rem;
         margin-left: 0;
+        width: 5rem;
     }
     .install_icon {
         margin-left: 1rem;
