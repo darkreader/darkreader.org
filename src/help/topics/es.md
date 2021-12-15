@@ -16,7 +16,7 @@ Este documento le guiará a través de las características de Dark Reader.
 
 <h2 id="top-section">Sección superior</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" />
+<img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
 
 - El Botón de **Alternar sitio** añade el sitio actual a la lista de ignorados (o lo quita).
 - El botón **Sí/No** habilita o deshabilita la extensión.
@@ -26,14 +26,14 @@ Este documento le guiará a través de las características de Dark Reader.
 
 <h2 id="filter-settings">Ajustes de filtros</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" />
+<img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
 
 Ajuste los valores de los filtros para que se ajusten mejor a los parámetros de la pantalla y a la iluminación de la habitación.
 
 
 <h2 id="custom-site-settings">Ajustes de sitios personalizados</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" />
+<img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
 
 El botón **Sólo para** hace que los ajustes se apliquen sólo en el sitio web actual.
 
@@ -42,7 +42,7 @@ Haga click en el botón, ajuste la configuración, haga click de nuevo para canc
 
 <h2 id="site-list">Lista de sitios</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" />
+<img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
 
 - Utilice **Invertir sólo listados** si desea que Dark Reader funcione solo en los sitios web de la lista.
 - **No invertir listados** impedirá que la extensión funcione en los sitios web listados.
@@ -51,7 +51,7 @@ Haga click en el botón, ajuste la configuración, haga click de nuevo para canc
 
 <h2 id="more-tab">Pestaña Más</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" />
+<img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
 
 - **Seleccione una fuente** de la lista (o introduzca el nombre de la fuente en Firefox), haga clic en la **casilla de verificación**.
 - Ajuste el **Trazo del texto**.
@@ -61,7 +61,7 @@ Haga click en el botón, ajuste la configuración, haga click de nuevo para canc
 <h2 id="theme-generation-modes">Modos de generación de temas</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
+    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
     <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ pero ya funciona bien para muchos sitios web modernos.
 
 <h2 id="bottom-section">Sección inferior</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" />
+<img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
 
 - Lea nuestra **política de privacidad**, síganos en **Twitter**.
 - **Donar** - si te gusta la extensión, considera apoyar el desarrollo activo de Dark Reader.

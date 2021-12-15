@@ -16,7 +16,7 @@
 
 <h2 id="top-section">Верхняя секцыя</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Верхняя секцыя" style="width: 15rem;" />
+<img src="/images/help/darkreader-top-section.png" alt="Верхняя секцыя" style="width: 15rem;" loading="lazy" />
 
 - Кнопка **Пераключыць** дадае сайт у спіс выключэнняў (альбо дастае адтуль).
 - Пераключальнік **Укл/Выкл** ўключае альбо выключае пашырэнне.
@@ -26,14 +26,14 @@
 
 <h2 id="filter-settings">Налады фільтра</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Налады фільтра" style="width: 15rem;" />
+<img src="/images/help/darkreader-filter-settings.png" alt="Налады фільтра" style="width: 15rem;" loading="lazy" />
 
 Наладзьце значэння фільтра, якія адпавядаюць параметрам вашага экрана і асвятленні ў пакоі.
 
 
 <h2 id="custom-site-settings">Налады для канкрэтнага сайта</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Налады для канкрэтнага сайта" style="width: 15rem;" />
+<img src="/images/help/darkreader-custom-site-settings.png" alt="Налады для канкрэтнага сайта" style="width: 15rem;" loading="lazy" />
 
 Кнопка **Толькі для** прымяняе налады толькі для бягучага сайта.
 
@@ -42,7 +42,7 @@
 
 <h2 id="site-list">Спіс сайтаў</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Спіс сайтаў" style="width: 15rem;" />
+<img src="/images/help/darkreader-site-list.png" alt="Спіс сайтаў" style="width: 15rem;" loading="lazy" />
 
 - Выкарыстоўвайце **Інвертаваць толькі гэтыя**, калі вы хочаце, каб Dark Reader працаваў толькі на сайтах у спісе.
 - **Не інвертаваць** прадухіліць працу пашырэння на сайтах у спісе.
@@ -51,7 +51,7 @@
 
 <h2 id="more-tab">Укладка Яшчэ</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Укладка Яшчэ" style="width: 15rem;" />
+<img src="/images/help/darkreader-more-tab.png" alt="Укладка Яшчэ" style="width: 15rem;" loading="lazy" />
 
 - **Выберыце шрыфт** са спісу (або ўвядзіце поўнае імя шрыфта ў Firefox), націсніце галачку.
 - Наладзьце **абводку тэксту**.
@@ -61,7 +61,7 @@
 <h2 id="theme-generation-modes">Рэжымы генерацыі тэм</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Фільтр + vs. Статычны vs. Дынамічны рэжым" />
+    <img src="/images/help/darkreader-theme-modes.png" alt="Фільтр + vs. Статычны vs. Дынамічны рэжым" loading="lazy" />
     <figcaption>Фільтр + vs. Статычны vs. Дынамічны рэжым</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@
 
 <h2 id="bottom-section">Ніжняя секцыя</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Ніжняя секцыя" style="width: 15rem;" />
+<img src="/images/help/darkreader-footer.png" alt="Ніжняя секцыя" style="width: 15rem;" loading="lazy" />
 
 - Прачытайце нашу **палітыку прыватнасці**, падпісвайцеся на наш **Twitter**.
 - **Падтрымка** - калі вам падабаецца Dark Reader, падтрымайце яго актыўную распрацоўку.

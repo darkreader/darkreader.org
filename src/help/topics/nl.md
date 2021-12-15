@@ -16,7 +16,7 @@ Dit document leidt u door de functies van Dark Reader.
 
 <h2 id="top-section">Top sectie</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top sectie" style="width: 15rem;" />
+<img src="/images/help/darkreader-top-section.png" alt="Top sectie" style="width: 15rem;" loading="lazy" />
 
 - **Schakkel site** knop voegt de huidige site toe aan de negeerlijst (of verwijdert deze van de lijst).
 - **Aan/Uit** schakelaar schakelt de uitbreiding in of uit.
@@ -26,14 +26,14 @@ Dit document leidt u door de functies van Dark Reader.
 
 <h2 id="filter-settings">Filter Instellingen</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filter instellingen" style="width: 15rem;" />
+<img src="/images/help/darkreader-filter-settings.png" alt="Filter instellingen" style="width: 15rem;" loading="lazy" />
 
 Pas de filterwaarden aan, die beter passen bij uw schermparameters en de verlichting in de ruimte.
 
 
 <h2 id="custom-site-settings">Aangepaste site instellingen</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Aangepaste site instellingen" style="width: 15rem;" />
+<img src="/images/help/darkreader-custom-site-settings.png" alt="Aangepaste site instellingen" style="width: 15rem;" loading="lazy" />
 
 **Alleen voor** knop maakt instellingen die alleen op de huidige website moeten worden toegepast.
 
@@ -42,7 +42,7 @@ Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
 
 <h2 id="site-list">Site lijst</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Site lijst" style="width: 15rem;" />
+<img src="/images/help/darkreader-site-list.png" alt="Site lijst" style="width: 15rem;" loading="lazy" />
 
 - Gebruikt **Alleen omkeren** als u wilt dat Dark Reader alleen op vermelde websites werkt.
 - **Niet omkeren** zal voorkomen dat de uitbreiding werkt op genoemde websites.
@@ -51,7 +51,7 @@ Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
 
 <h2 id="more-tab">Meer tabblad</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Meer tabblad" style="width: 15rem;" />
+<img src="/images/help/darkreader-more-tab.png" alt="Meer tabblad" style="width: 15rem;" loading="lazy" />
 
 - **Kies een lettertype** uit de lijst (of voer de naam van het lettertype in op Firefox), klik op het selectievakje **.
 - Pas de **tekststreep** aan.
@@ -61,7 +61,7 @@ Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
 <h2 id="theme-generation-modes">Thema-generatie modus</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" />
+    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
     <figcaption>Filter+ vs. Statisch vs. Dynamisch modus</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ maar het werkt al goed voor veel moderne websites.
 
 <h2 id="bottom-section">Onderste gedeelte</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Onderste gedeelte" style="width: 15rem;" />
+<img src="/images/help/darkreader-footer.png" alt="Onderste gedeelte" style="width: 15rem;" loading="lazy" />
 
 - Lees onze **privacy policy**, volg ons op **Twitter**.
 - **Donate** - als de uitbreiding u bevalt, overweeg dan om de actieve ontwikkeling van Dark Reader te ondersteunen.
