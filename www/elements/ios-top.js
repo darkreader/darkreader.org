@@ -15,8 +15,8 @@ const htmlText = `
     <span class="mascot"></span>
     <span class="content_right">
         <span class="description">
-            Use <strong>Dark Reader</strong>
-            on your phone<br>
+            <strong>Dark Reader</strong>
+            for your phone!<br>
             Create your own color theme
         </span>
         <a class="install" href="${safariURL}">
@@ -31,7 +31,9 @@ const htmlText = `
             </span>
         </a>
         <span class="description">
-            Includes <strong>macOS</strong> Safari app
+            <strong>Christmas deal! Just for $4.99*!</strong><br>
+            Includes <strong>macOS</strong> Safari app<br>
+            <em style="font-size: 50%">* + VAT in your country</em>
         </span>
     </span>
     <a class="screenshot" id="scr1" href="${safariURL}"></a>
@@ -41,8 +43,9 @@ const htmlText = `
 
 const cssText = `
 .title {
+    display: none;
     font-style: italic;
-    max-width: 34.5rem;
+    max-width: 36rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -53,8 +56,7 @@ const cssText = `
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    margin-top: 0.5rem;
-    max-width: 34.5rem;
+    max-width: 36rem;
     padding: 1rem;
     text-decoration: none;
     transition: all 250ms;
@@ -68,14 +70,14 @@ const cssText = `
     margin-bottom: 0.5rem;
 }
 .mascot {
-    background-image: url(/images/darkreader-mascot-mobile.svg);
+    background-image: url(/images/santa-mobile.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     display: inline-block;
     height: 8rem;
     margin-right: 0.5rem;
-    width: 5rem;
+    width: 7rem;
 }
 .description {
     color: white;
@@ -138,13 +140,13 @@ const cssText = `
     height: 9rem;
     margin-left: 1rem;
     position: relative;
-    transform: scale(1);
+    transform: translateY(0%) scale(1);
     transition: all 250ms;
     width: 4rem;
 }
 .screenshot:hover {
     box-shadow: 0 0 0 0.03125rem hsla(0, 0%, 100%, 1), 0 0 0.375rem var(--color-text);
-    transform: scale(2);
+    transform: translateY(50%) scale(2);
     z-index: 1;
 }
 .screenshot::before {
@@ -173,7 +175,7 @@ const cssText = `
         padding-left: 0;
     }
     .mascot {
-        height: 6rem;
+        height: 8rem;
         margin-left: 0;
     }
     .install_icon {

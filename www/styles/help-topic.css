@@ -2,6 +2,10 @@
 @import "./page-grid.css";
 @import "./help-shared.css";
 
+.page-grid-header {
+    display: none;
+}
+
 .page-grid-ios {
     left: calc(50vw - 10rem);
 }
