@@ -121,3 +121,9 @@ nav a:hover {
     max-width: 100%;
     text-align: center;
 }
+
+.copyright-text {
+    font-weight: 300;
+    margin-top: 1.5rem;
+    text-align: center;
+}
