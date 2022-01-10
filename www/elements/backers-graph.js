@@ -34,11 +34,7 @@ async function getBackers() {
     if (backersCache) {
         return backersCache;
     }
-    const [users, organizations] = await Promise.all([
-        loadJSON('/data/top-users.json'),
-        loadJSON('/data/top-organizations.json'),
-    ]);
-    const backers = users.concat(organizations);
+    const backers = await loadJSON('/data/top-backers.json');
     backersCache = backers;
     return backers;
 }
@@ -61,23 +57,22 @@ function createBackersGraph(backers) {
         return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
     }
 
-    const organizations = backers.filter(b => b.type === 'org' && b.pic);
-    const icons8Org = organizations.find(o => o.name.toLowerCase().includes('icons8'));
+    const aapeliOrg = backers.find(o => o.name.toLowerCase().includes('aapeli'));
+    aapeliOrg.name = 'Aapeli: Free online HTML5 games and arcades';
+    aapeliOrg.pri = 1;
+    const icons8Org = backers.find(o => o.name.toLowerCase().includes('icons8'));
     icons8Org.pri = 1;
-    const qulixOrg = organizations.find(o => o.name.toLowerCase().includes('qulix'));
+    const qulixOrg = backers.find(o => o.name.toLowerCase().includes('qulix'));
     qulixOrg.pri = 1;
-    const vpnBlogOrg = organizations.find(o => o.name.toLowerCase().includes('vpnwelt'));
+    const vpnBlogOrg = backers.find(o => o.name.toLowerCase().includes('vpnwelt'));
     vpnBlogOrg.url = 'https://vpnwelt.com/vpn-kostenlos/';
     vpnBlogOrg.pri = 1;
     vpnBlogOrg.name = 'VPNwelt: Best VPN Providers Recommended';
     vpnBlogOrg.info = 'Best Free VPN for Germany';
-    const toucanOrg = organizations.find(o => o.name.toLowerCase().includes('toucan'));
+    const toucanOrg = backers.find(o => o.name.toLowerCase().includes('toucan'));
 
-    // const algoliaOrg = organizations.find(o => o.name.toLowerCase().includes('algolia'));
-    // algoliaOrg.pic = 'https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1599748315/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-white-full.svg';
-    // const tripleOrg = organizations.find(o => o.name.toLowerCase().includes('triple'));
     const displayBackers = backers
-        .filter((b) => ![icons8Org, qulixOrg, vpnBlogOrg, toucanOrg].includes(b))
+        .filter((b) => ![aapeliOrg, icons8Org, qulixOrg, vpnBlogOrg, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -92,9 +87,8 @@ function createBackersGraph(backers) {
     }
 
     return html('div', {class: 'grid'},
-        // createBackerLink(algoliaOrg, 'large', '#3a416f'),
-        // createBackerLink(tripleOrg, 'medium', null),
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
+        createBackerLink(aapeliOrg, 'wide', null, 'aapeli'),
         createBackerLink(qulixOrg, 'wide', null, 'qulix'),
         createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
@@ -237,10 +231,13 @@ const cssText = `
 .icons8 .backer-pic {
     background-color: #1eb141;
 }
+.qulix {
+    background-color: #1e547e;
+}
 .vpnwelt {
     background-color: #173054;
 }
-@media screen and (min-width: 57rem) and (max-height: 39rem) {
+@media screen and (min-width: 57rem) and (max-height: 40rem) {
     .backer[data-pri="2"] {
         display: none;
     }
