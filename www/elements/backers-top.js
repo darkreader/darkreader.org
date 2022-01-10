@@ -23,7 +23,7 @@ if (navigator.userAgent.includes('Firefox')) {
 
 const titleHTMLText = `
 <div class="up-title">
-    Sponsored by these<br><strong>wonderful extensions</strong>
+    Sponsored by these <strong>wonderful extensions</strong>
 </div>
 `;
 
@@ -189,7 +189,6 @@ a:hover {
     font-style: italic;
     max-width: 35.5rem;
     text-align: center;
-    text-transform: uppercase;
 }
 .tr {
     font-style: italic;
