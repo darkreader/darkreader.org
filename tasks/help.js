@@ -1,7 +1,7 @@
 // @ts-check
 
 const fs = require('fs-extra');
-const marked = require('marked');
+const {marked} = require('marked');
 
 function replace(text, find, replace) {
     return text.split(find).join(replace);

@@ -1,7 +1,7 @@
 // @ts-check
 
 const fs = require('fs-extra');
-const marked = require('marked');
+const {marked} = require('marked');
 const {createImageProcessor} = require('./utils/image');
 const {getRequest} = require('./utils/network');
 const posts = require('../src/blog/posts.json');
