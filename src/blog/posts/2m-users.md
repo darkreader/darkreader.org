@@ -32,7 +32,7 @@ Also we have **320** [GitHub contributors](https://github.com/darkreader/darkrea
 The app was [translated](https://github.com/darkreader/darkreader/issues/559) into 20 languages.
 Thank you for your help, you are doing a great thing.
 
-You can also support the project with **PayPal** or other method via [Open Collective](https://opencollective.com/darkreader/contribute),
+You can also support the project with **PayPal** or other method via [Open Collective](https://opencollective.com/darkreader/donate),
 a crowdfunding platform.
 
 ### Dark Reader 5 is on it's way

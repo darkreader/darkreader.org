@@ -4,7 +4,7 @@ import {
     createHTMLElement as html,
 } from './utils.js';
 
-const url = 'https://opencollective.com/darkreader';
+const url = 'https://opencollective.com/darkreader/donate';
 
 const htmlText = `
 <a class="donate-button" href="${url}">

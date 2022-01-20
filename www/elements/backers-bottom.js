@@ -6,7 +6,7 @@ import {
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 const tURL = 'https://jointoucan.com/partners/darkreader';
-const donateURL = 'https://opencollective.com/darkreader';
+const donateURL = 'https://opencollective.com/darkreader/donate';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
 
 const htmlText = `

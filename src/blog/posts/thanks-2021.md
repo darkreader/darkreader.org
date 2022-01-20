@@ -134,7 +134,7 @@ Thanks these companies for providing their software and services:
 - [Google](https://chrome.google.com/webstore/category/extensions) for browser extensions as we know them today.
 - [Apple](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180) for their App Store and extensions support on [iOS](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180).
 - [GitHub](https://github.com/), an open source code platform, where this site is running.
-- [Open Collective](https://opencollective.com/darkreader) for their convenient crowdfunding platform.
+- [Open Collective](https://opencollective.com/darkreader/donate) for their convenient crowdfunding platform.
 - [Microsoft](https://code.visualstudio.com/) for their free VS Code IDE.
 - [Fibery](https://fibery.io/) for support and inspiration.
 

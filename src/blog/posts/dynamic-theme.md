@@ -30,6 +30,6 @@ To activate the Dynamic Theme mode open Dark Reader settings popup,
 click **More** and choose **Dynamic**. Tune your brightness and contrast settings until you feel comfortable.
 
 The work on Dynamic Theme mode is still in progress, your feedback is welcome.
-To continue active Dark Reader development we are starting the [crowdfunding campaign](https://opencollective.com/darkreader).
+To continue active Dark Reader development we are starting the [crowdfunding campaign](https://opencollective.com/darkreader/donate).
 See our <a href="https://github.com/darkreader/darkreader/projects/1" target="_blank">roadmap</a>
 and <a href="https://github.com/darkreader/darkreader/issues" target="_blank">list of bugs and feature suggestions</a>.

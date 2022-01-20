@@ -12,7 +12,7 @@ As you may have noticed, the News section has been added that will highlight imp
 
 ### Our annual budget reached $2000
 
-More than 140 users [made their contributions](https://opencollective.com/darkreader), making it possible to actively overcome the new challenges for the next few months. Thank you all!
+More than 140 users [made their contributions](https://opencollective.com/darkreader/donate), making it possible to actively overcome the new challenges for the next few months. Thank you all!
 
 ### What's next
 

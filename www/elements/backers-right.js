@@ -7,7 +7,7 @@ import {
 
 const hnURL = 'https://www.joinhoney.com/darkreader';
 const tcURL = 'https://jointoucan.com/partners/darkreader';
-const ocURL = 'https://opencollective.com/darkreader';
+const ocURL = 'https://opencollective.com/darkreader/donate';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');

@@ -45,7 +45,7 @@ There are [hundreds of bugs](https://github.com/darkreader/darkreader/issues)
 that need to be resolved,
 and many features that need to be implemented,
 but less than 3,000 of 5,000,000 users have supported us through Open Collective since 2018.
-Just click the [DONATE](https://opencollective.com/darkreader) button.**
+Just click the [DONATE](https://opencollective.com/darkreader/donate) button.**
 🙏
 
 ### iOS release 📱🍎
