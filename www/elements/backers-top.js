@@ -23,7 +23,7 @@ if (navigator.userAgent.includes('Firefox')) {
 
 const titleHTMLText = `
 <div class="up-title">
-    Sponsored by these <strong>wonderful extensions</strong>
+    Check out these wonderful extensions
 </div>
 `;
 
@@ -186,7 +186,9 @@ a:hover {
     font-weight: bold;
 }
 .up-title {
-    font-style: italic;
+    color: var(--color-highlight);
+    font-size: 1.5rem;
+    font-weight: bold;
     max-width: 35.5rem;
     text-align: center;
 }
