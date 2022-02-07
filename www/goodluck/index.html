@@ -31,7 +31,7 @@
                 Try another extension <a href="https://www.joinhoney.com/darkreader" class="honey-name">Honey</a>.
                 Automatically apply coupon codes when you purchase online.<br>
                 Owned by <span class="paypal">PayPal</span>.
-                <a class="learn-more-link" href="https://www.joinhoney.com/darkreader">Learn more</a>.
+                <a class="learn-more-link h-lm" href="https://www.joinhoney.com/darkreader">Learn more</a>.
             </span>
         </div>
         <div class="recommendations-row">
@@ -39,9 +39,10 @@
                 Toucan
             </a>
             <span class="recommendations-description" id="js-tr">
-                Learn a <em class="foreign">nuevo</em> language with <a href="https://jointoucan.com/partners/darkreader" class="toucan-name">Toucan</a>.
+                Learn a <em class="foreign">nuevo</em> language with <a
+                    href="https://jointoucan.com/partners/darkreader" class="toucan-name">Toucan</a>.
                 It will teach you Spanish, English, Japanese and other languages without ever opening a textbook.
-                <a class="learn-more-link" href="https://jointoucan.com/partners/darkreader">Learn more</a>.
+                <a class="learn-more-link t-lm" href="https://jointoucan.com/partners/darkreader">Learn more</a>.
             </span>
             <script>
                 const language = navigator.language || 'en';
@@ -63,6 +64,16 @@
                     recommendation.appendChild(link);
                     recommendation.appendChild(document.createTextNode('.'));
                 }
+                import('../elements/stats.js')
+                    .then(({clicker}) => {
+                        const qs = (s) => document.querySelector(s);
+                        clicker(qs('.honey-logo-link'), 'h-un-logo');
+                        clicker(qs('.honey-name'), 'h-un-name');
+                        clicker(qs('.h-lm'), 'h-un-lm');
+                        clicker(qs('.toucan-logo-link'), 't-un-logo');
+                        clicker(qs('.toucan-name'), 't-un-name');
+                        clicker(qs('.t-lm'), 't-un-lm');
+                    });
             </script>
         </div>
     </section>
