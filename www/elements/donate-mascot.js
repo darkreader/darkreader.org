@@ -3,6 +3,7 @@
 import {
     createHTMLElement as html,
 } from './utils.js';
+import {clicker} from './stats.js';
 
 const url = 'https://opencollective.com/darkreader/donate';
 
@@ -194,6 +195,8 @@ class DonateMascotElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+
+        clicker(shadowRoot.querySelector('.donate-button'), 'mascot-big');
     }
 }
 

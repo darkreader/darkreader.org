@@ -3,6 +3,7 @@
 import {
     createHTMLElement as html,
 } from './utils.js';
+import {clicker} from './stats.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 const tURL = 'https://jointoucan.com/partners/darkreader';
@@ -19,24 +20,24 @@ const htmlText = `
         Become that 2 of 2000, <strong>support us on <a href="${donateURL}">Open Collective</a></strong>.
     </p>
     <p>
-        No money? <strong>Use <a href="${hURL}" class="h">Honey</a></strong>,
+        No money? <strong>Use <a href="${hURL}" class="h hl">Honey</a></strong>,
         an official <strong><em>PayPal</em></strong> extension,
         that will automatically find discounts when you purchase online.
     </p>
         Don't have time on learning a new language?
-        <strong><a href="${tURL}" class="t">Toucan</a> extension</strong>
+        <strong><a href="${tURL}" class="t tl">Toucan</a> extension</strong>
         will show you foreign words in web pages you browse.
     </p>
     <p>
         Do you have <strong>iPhone, iPad or Mac</strong>?
-        Install <strong><a class="d" href="${safariURL}">Dark Reader for Safari</a></strong>.
+        Install <strong><a class="d sl" href="${safariURL}">Dark Reader for Safari</a></strong>.
         Good luck!
     </p>
     <p>
         Dark Reader is <strong>not</strong> sponsored by
-        <strong><a class="t" href="https://fibery.io/anxiety">Fibery</a></strong>,
-        <strong><a href="https://github.com/">GitHub</a></strong>
-        and <strong><a href="https://www.mozilla.org/">Mozilla</a></strong>,
+        <strong><a class="t fl" href="https://fibery.io/anxiety">Fibery</a></strong>,
+        <strong><a class="gl" href="https://github.com/">GitHub</a></strong>
+        and <strong><a class="ml" href="https://www.mozilla.org/">Mozilla</a></strong>,
         they are just cool!
     </p>
 </div>
@@ -70,6 +71,14 @@ class SupportUsElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+
+        const qs = (s) => shadowRoot.querySelector(s);
+        clicker(qs('.hl'), 'h-bottom');
+        clicker(qs('.tl'), 't-bottom');
+        clicker(qs('.sl'), 'safari-bottom');
+        clicker(qs('.fl'), 'fib-bottom');
+        clicker(qs('.gl'), 'gh-bottom');
+        clicker(qs('.ml'), 'moz-bottom');
     }
 }
 

@@ -1,6 +1,7 @@
 // @ts-check
 
 import './backers-graph.js';
+import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
 } from './utils.js';
@@ -103,6 +104,8 @@ class IOSSideElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+
+        clicker(shadowRoot.querySelector('.image-link'), 'ios-hand');
     }
 }
 

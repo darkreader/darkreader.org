@@ -4,6 +4,7 @@ import {
     createHTMLElement as html,
     classes,
 } from './utils.js';
+import {clicker} from './stats.js';
 
 /**
  * @typedef Backer
@@ -138,6 +139,9 @@ function createBackerLink(backer, size, color, cls) {
     link.dataset.pri = String(backer.pri);
     if (color) {
         link.style.backgroundColor = color;
+    }
+    if (cls) {
+        clicker(link, cls);
     }
     return link;
 }

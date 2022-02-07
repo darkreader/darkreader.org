@@ -1,6 +1,7 @@
 // @ts-check
 
 import './backers-graph.js';
+import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
 } from './utils.js';
@@ -407,6 +408,20 @@ class BackersSideElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+
+        const qs = (s) => shadowRoot.querySelector(s);
+        clicker(qs('.hl'), 'h-side-img');
+        clicker(qs('.hb'), 'h-side-btn');
+        clicker(qs('.ht'), 'h-side-txt');
+        clicker(qs('.tl'), 't-side-img');
+        clicker(qs('.tb'), 't-side-btn');
+        clicker(qs('.tt'), 't-side-txt');
+        clicker(qs('.dl'), 'd-side-img');
+        clicker(qs('.db'), 'd-side-btn');
+        clicker(qs('.dt'), 'd-side-txt');
+        clicker(qs('.nr-logo-fibery'), 'ns-side-fibery');
+        clicker(qs('.nr-logo-mozilla'), 'ns-side-mozilla');
+        clicker(qs('.nr-logo-github'), 'ns-side-github');
     }
 }
 

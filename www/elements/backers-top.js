@@ -3,6 +3,7 @@
 import {
     createHTMLElement as html,
 } from './utils.js';
+import {clicker} from './stats.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 
@@ -34,11 +35,11 @@ const hHTMLText = `
 <div class="up">
     <a href="${hURL}" class="up-logo-link h-logo-link">Honey</a>
     <span class="up-text">
-        <a href="${hURL}" class="up-link">Honey ${browserText}</a>,
+        <a href="${hURL}" class="up-link h-link">Honey ${browserText}</a>,
         a product of <strong class="h-text-pp">PayPal</strong>.
         Automatically find and apply discounts when you purchase online.
         Join for <strong>free</strong> and get coupons.
-        <a href="${hURL}">Learn more</a>.
+        <a href="${hURL}" class="h-lm">Learn more</a>.
     </span>
 </div>
 `;
@@ -84,7 +85,7 @@ const appleHTMLText = `
     <a href="${safariURL}" class="safari-logo-link">Dark Reader for Safari</a>
     <span class="up-text">
         <strong>Dark Reader</strong> for
-        <a href="${safariURL}" class="up-link">iOS, iPadOS, macOS</a>
+        <a href="${safariURL}" class="up-link safari-link">iOS, iPadOS, macOS</a>
         is available!
     </span>
 </section>
@@ -259,6 +260,15 @@ class BackerHeaderElement extends HTMLElement {
         container.insertAdjacentHTML('beforeend', hHTMLText);
         container.insertAdjacentHTML('beforeend', tHTMLText);
         container.insertAdjacentHTML('beforeend', appleHTMLText);
+
+        const qs = (s) => shadowRoot.querySelector(s);
+        clicker(qs('.h-logo-link'), 'h-top-logo');
+        clicker(qs('.h-link'), 'h-top-link');
+        clicker(qs('.h-lm'), 'h-top-lm');
+        clicker(qs('.t-logo-link'), 't-top-logo');
+        shadowRoot.querySelectorAll('.t-text a').forEach((el, i) => clicker(el, `t-top-text${i + 1}`))
+        clicker(qs('.safari-logo-link'), 'safari-top-logo');
+        clicker(qs('.safari-link'), 'safari-top-link');
     }
 }
 

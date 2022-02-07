@@ -1,6 +1,7 @@
 // @ts-check
 
 import './backers-graph.js';
+import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
 } from './utils.js';
@@ -217,6 +218,10 @@ class IOSTopElement extends HTMLElement {
         const style = html('style', null, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+
+        clicker(shadowRoot.querySelector('.install'), 'ios-install');
+        clicker(shadowRoot.querySelector('#scr1'), 'ios-scr1');
+        clicker(shadowRoot.querySelector('#scr2'), 'ios-scr2');
     }
 }
 
