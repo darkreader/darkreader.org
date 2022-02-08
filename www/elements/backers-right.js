@@ -416,7 +416,6 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.tl'), 't-side-img');
         clicker(qs('.tb'), 't-side-btn');
         clicker(qs('.tt'), 't-side-txt');
-        clicker(qs('.dl'), 'd-side-img');
         clicker(qs('.db'), 'd-side-btn');
         clicker(qs('.dt'), 'd-side-txt');
         clicker(qs('.nr-logo-fibery'), 'fib-side-ns');
