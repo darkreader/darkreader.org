@@ -196,7 +196,7 @@ class DonateMascotElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        clicker(shadowRoot.querySelector('.donate-button'), 'mascot-big');
+        clicker(shadowRoot.querySelector('.donate-button'), 'd-mascot');
     }
 }
 

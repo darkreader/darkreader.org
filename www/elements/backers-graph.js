@@ -140,9 +140,14 @@ function createBackerLink(backer, size, color, cls) {
     if (color) {
         link.style.backgroundColor = color;
     }
-    if (cls) {
-        clicker(link, cls);
+    let alias = 'backer';
+    if (backer.name) {
+        const match = backer.name.match(/^[a-z0-9]+( [a-z0-9]+)?( [a-z0-9]+)?/i);
+        if (match && match[0]) {
+            alias = match[0].replace(/ /g, '').toLowerCase();
+        }
     }
+    clicker(link, `${alias}-side`);
     return link;
 }
 

@@ -66,10 +66,10 @@ const htmlText = `
     </a>
 </section>
 <section class="dr">
-    <a class="logo-link dl" href="${ocURL}">
+    <span class="logo-link dl">
         <darkreader-backers-graph class="dl-graph" width="360" height="240" rows="4" columns="6">
         </darkreader-backers-graph>
-    </a>
+    </span>
     <a class="text-link dt" href="${ocURL}">
         Become a sponsor too
     </a>
@@ -419,9 +419,9 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.dl'), 'd-side-img');
         clicker(qs('.db'), 'd-side-btn');
         clicker(qs('.dt'), 'd-side-txt');
-        clicker(qs('.nr-logo-fibery'), 'ns-side-fibery');
-        clicker(qs('.nr-logo-mozilla'), 'ns-side-mozilla');
-        clicker(qs('.nr-logo-github'), 'ns-side-github');
+        clicker(qs('.nr-logo-fibery'), 'fib-side-ns');
+        clicker(qs('.nr-logo-mozilla'), 'moz-side-ns');
+        clicker(qs('.nr-logo-github'), 'gh-side-ns');
     }
 }
 
