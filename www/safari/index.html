@@ -52,7 +52,7 @@
     <h3>Update 2021: Dark Reader for iOS is available in App Store.</h3>
     <p>
         This version of Dark Reader works in all Apple devices that support iOS 15 or iPadOS 15.
-        <a href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone">Install Dark Reader for iOS and iPadOS</a>.
+        <a class="i-link" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone">Install Dark Reader for iOS and iPadOS</a>.
     </p>
 
     <p><em>
@@ -64,7 +64,7 @@
     </em></p>
 
     <p>
-        Install Dark Reader for Safari from the <a href="https://itunes.apple.com/us/app/dark-reader-for-safari/id1438243180">App Store</a>.
+        Install Dark Reader for Safari from the <a class="s-link" href="https://itunes.apple.com/us/app/dark-reader-for-safari/id1438243180">App Store</a>.
     </p>
 
     <p>
@@ -143,6 +143,13 @@
     <p>
         For any questions and bug reports please e-mail to <a href="mailto:darkreaderapp@gmail.com?subject=[Safari]%20Your%20question">darkreaderapp@gmail.com</a>
     </p>
+
+    <script>
+        import('../elements/stats.js').then(({clicker}) => {
+            clicker(document.querySelector('.i-link'), 'drios-safaripage');
+            clicker(document.querySelector('.s-link'), 'drsafari-safaripage');
+        });
+    </script>
 
 </body>
 

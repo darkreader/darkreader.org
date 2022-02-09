@@ -75,7 +75,7 @@ class SupportUsElement extends HTMLElement {
         const qs = (s) => shadowRoot.querySelector(s);
         clicker(qs('.hl'), 'h-bottom');
         clicker(qs('.tl'), 't-bottom');
-        clicker(qs('.sl'), 'safari-bottom');
+        clicker(qs('.sl'), 'drsafari-bottom');
         clicker(qs('.fl'), 'fib-bottom');
         clicker(qs('.gl'), 'gh-bottom');
         clicker(qs('.ml'), 'moz-bottom');

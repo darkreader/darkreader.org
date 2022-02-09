@@ -267,8 +267,8 @@ class BackerHeaderElement extends HTMLElement {
         clicker(qs('.h-lm'), 'h-top-lm');
         clicker(qs('.t-logo-link'), 't-top-logo');
         shadowRoot.querySelectorAll('.t-text a').forEach((el, i) => clicker(el, `t-top-text${i + 1}`))
-        clicker(qs('.safari-logo-link'), 'safari-top-logo');
-        clicker(qs('.safari-link'), 'safari-top-link');
+        clicker(qs('.safari-logo-link'), 'drsafari-top-logo');
+        clicker(qs('.safari-link'), 'drsafari-top-link');
     }
 }
 

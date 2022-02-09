@@ -219,9 +219,9 @@ class IOSTopElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        clicker(shadowRoot.querySelector('.install'), 'ios-bigtop-install');
-        clicker(shadowRoot.querySelector('#scr1'), 'ios-bigtop-scr1');
-        clicker(shadowRoot.querySelector('#scr2'), 'ios-bigtop-scr2');
+        clicker(shadowRoot.querySelector('.install'), 'drios-bigtop-install');
+        clicker(shadowRoot.querySelector('#scr1'), 'drios-bigtop-scr1');
+        clicker(shadowRoot.querySelector('#scr2'), 'drios-bigtop-scr2');
     }
 }
 

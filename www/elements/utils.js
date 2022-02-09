@@ -75,3 +75,24 @@ export function classes(...args) {
     });
     return classes.join(' ');
 }
+
+/**
+ * @template {(...args: any[]) => void} T
+ * @param {number} delay
+ * @param {T} fn
+ * @returns {T}
+ */
+export function throttle(delay, fn) {
+    let timeout;
+    /** @type {any} */
+    const throttled = (...args) => {
+        if (timeout) {
+            return;
+        }
+        timeout = setTimeout(() => {
+            timeout = null;
+        }, delay);
+        fn(...args);
+    };
+    return throttled;
+}

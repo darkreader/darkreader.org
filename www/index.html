@@ -40,7 +40,7 @@
                 Use the following official links:
             <ul class="install-links">
                 <li>
-                    <a class="install-link"
+                    <a class="install-link chrome-link"
                         href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh">
                         <span class="install-link__icon icon--chrome"></span>
                         <span class="install-link__text">Dark Reader for
@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="install-link" href="https://addons.mozilla.org/en-US/firefox/addon/darkreader/">
+                    <a class="install-link ff-link" href="https://addons.mozilla.org/en-US/firefox/addon/darkreader/">
                         <span class="install-link__icon icon--firefox"></span>
                         <span class="install-link__text">Dark Reader for
                             <strong>Firefox</strong>
@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="install-link"
+                    <a class="install-link edge-link"
                         href="https://microsoftedge.microsoft.com/addons/detail/ifoakfbpdcdoeenechcleahebpibofpc">
                         <span class="install-link__icon icon--edge"></span>
                         <span class="install-link__text">Dark Reader for
@@ -98,7 +98,7 @@
             <a href="https://twitter.com/darkreaderapp">Twitter</a>
             <a href="mailto:darkreaderapp@gmail.com">Contact</a>
         </nav>
-        <div class="copyright-text">Copyright © 2021 Dark Reader Ltd. All rights reserved.</div>
+        <div class="copyright-text">Copyright © 2022 Dark Reader Ltd. All rights reserved.</div>
     </footer>
     <aside class="page-grid-side">
         <darkreader-backers-side></darkreader-backers-side>
@@ -108,6 +108,13 @@
         <darkreader-ios-side></darkreader-ios-side>
         <script type="module" src="/elements/ios.js"></script>
     </aside>
+    <script>
+        import('/elements/stats.js').then(({clicker}) => {
+            clicker(document.querySelector('.chrome-link'), 'drchrome-main');
+            clicker(document.querySelector('.ff-link'), 'drff-main');
+            clicker(document.querySelector('.edge-link'), 'dredge-main');
+        });
+    </script>
 </body>
 
 </html>

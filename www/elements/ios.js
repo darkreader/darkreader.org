@@ -105,7 +105,7 @@ class IOSSideElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        clicker(shadowRoot.querySelector('.image-link'), 'ios-hand');
+        clicker(shadowRoot.querySelector('.image-link'), 'drios-hand');
     }
 }
 
