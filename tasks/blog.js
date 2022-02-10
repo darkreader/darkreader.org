@@ -66,12 +66,14 @@ async function writePosts() {
             if (previewURL.startsWith(webImagesDirectory)) {
                 imageBuffer = await fs.readFile(`./www/images/${previewURL.substring(webImagesDirectory.length)}`);
             } else {
-                imageBuffer = await getRequest(previewURL);
+                const response = await getRequest(previewURL);
+                imageBuffer = response.buffer();
             }
             const resizedImage = await imageProcessor.resize(
                 imageBuffer,
                 previewURL.endsWith('.png') ? 'image/png' : 'image/jpeg',
                 256,
+                'image/jpeg',
             );
             await fs.outputFile(`www/images/blog-previews/${id}-preview-small.jpg`, resizedImage);
         }

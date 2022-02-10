@@ -1,18 +1,24 @@
-const http = require('http');
+// @ts-check
 const https = require('https');
 
 /**
  * @param {string} url
- * @returns {Promise<Buffer>}
+ * @returns {Promise<{buffer(): Buffer; text(encoding?: string): string; type(): string}>}
  */
 function getRequest(url) {
-    const get = url.startsWith('https:') ? https.get : http.get;
     return new Promise((resolve) => {
         const data = [];
-        get(url, (response) => {
+        https.get(url, (response) => {
             response
                 .on('data', (chunk) => data.push(chunk))
-                .on('end', () => resolve(Buffer.concat(data)));
+                .on('end', () => {
+                    const buffer = Buffer.concat(data)
+                    resolve({
+                        buffer: () => buffer,
+                        text: (/** @type {BufferEncoding} */encoding = 'utf8') => buffer.toString(encoding),
+                        type: () => response.headers['content-type'],
+                    });
+                });
         });
     });
 }

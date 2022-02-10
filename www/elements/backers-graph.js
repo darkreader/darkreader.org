@@ -174,12 +174,15 @@ const cssText = `
 .backer-pic {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-radius: 1.25rem;
     display: inline-block;
     flex: none;
     height: 2.5rem;
     width: 2.5rem;
+}
+.backer-pic:not(.backer-pic--empty) {
+    background-color: black;
 }
 .backer-name {
     align-items: center;
@@ -227,11 +230,16 @@ const cssText = `
 }
 .backer-pic--empty::after {
     align-items: center;
+    color: white;
     content: attr(data-initials);
     display: inline-flex;
     font-size: 1.25rem;
     height: 100%;
     justify-content: center;
+    width: 100%;
+}
+.backer--small .backer-pic {
+    height: 100%;
     width: 100%;
 }
 .icons8 {

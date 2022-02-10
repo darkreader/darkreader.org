@@ -1,4 +1,6 @@
+// @ts-check
 const puppeteer = require('puppeteer-core');
+const {exec} = require('child_process');
 
 async function getChromePath() {
     if (process.platform === 'darwin') {
@@ -26,14 +28,14 @@ async function createImageProcessor() {
     /**
      * @param {Buffer} inputBuffer
      * @param {string} contentType
-     * @param {number} outputWidth
-     * @param {number} outputHeight
+     * @param {number} outputSize
+     * @param {string} [outputType]
      * @returns {Promise<Buffer>}
      */
-    async function resize(inputBuffer, contentType, outputSize) {
+    async function resize(inputBuffer, contentType, outputSize, outputType = contentType) {
         const inputDataURL = `data:image/${contentType};base64,${inputBuffer.toString('base64')}`;
         const outputDataURL = await page.evaluate(
-            (url, size) => {
+            (url, size, type) => {
                 return new Promise((resolve, reject) => {
                     const image = new Image();
                     image.onload = () => {
@@ -57,7 +59,7 @@ async function createImageProcessor() {
                             canvas.height = outH;
                             const context = canvas.getContext('2d');
                             context.drawImage(image, 0, 0, outW, outH);
-                            resolve(canvas.toDataURL('image/jpeg'));
+                            resolve(canvas.toDataURL(type));
                         } catch (err) {
                             reject(err);
                         }
@@ -67,6 +69,7 @@ async function createImageProcessor() {
             },
             inputDataURL,
             outputSize,
+            outputType,
         );
         return Buffer.from(outputDataURL.substring(outputDataURL.indexOf(',') + 1), 'base64');
     }
