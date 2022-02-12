@@ -59,7 +59,7 @@
 }
 
 .page-grid-ios {
-    bottom: -26.25rem;
+    bottom: -24rem;
     left: 1rem;
     position: fixed;
     transform: translate(0, 0) rotate(0);
@@ -67,7 +67,7 @@
 }
 
 .page-grid-ios:hover {
-    transform: translate(2rem, -24rem) rotate(15deg);
+    transform: translate(2rem, -20rem) rotate(15deg);
 }
 
 /*
