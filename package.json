@@ -21,7 +21,7 @@
   "devDependencies": {
     "fs-extra": "10.0.0",
     "http-server": "14.1.0",
-    "marked": "4.0.10",
-    "puppeteer-core": "13.0.1"
+    "marked": "4.0.12",
+    "puppeteer-core": "13.3.1"
   }
 }
