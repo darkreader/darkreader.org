@@ -1,157 +1,170 @@
-@import "/styles/shared.css";
-
 html {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    min-height: 100%;
-    overflow: auto;
-    width: 100%;
+    --color-bg: white;
+    --color-bg2: #eee;
+    --color-text: black;
+    --color-text2: #555;
+    --color-text3: #888;
+    --color-ok-bg: #b5f7b8;
+    --color-ok-text: #265a40;
+    --color-ok-border: #51ec3d;
+    --color-link: #0c4fcc;
+    --font: Segoe UI, Helvetica Neue, Open Sans, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --color-bg: #1d1f20;
+        --color-bg2: #34363a;
+        --color-text: #eee;
+        --color-text2: #aaa;
+        --color-text3: #888;
+        --color-ok-bg: #2e563f;
+        --color-ok-text: #57e977;
+        --color-ok-border: #148657;
+        --color-link: #3d96ff;
+    }
+}
+
+html,
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font);
 }
 
 body {
-    align-items: center;
-    box-sizing: border-box;
+    margin: 1rem auto;
+    max-width: 32rem;
+}
+
+.uninstalled {
+    background-color: var(--color-ok-bg);
+    border: 1px solid var(--color-ok-border);
+    border-radius: 1rem;
+    color: var(--color-ok-text);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5rem 0 2rem 0;
-    width: 100%;
-}
-
-strong {
-    font-weight: bold;
-}
-
-.wishes {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    max-width: 24rem;
-    text-align: center;
-    width: 100%;
-}
-
-.mascot {
-    display: inline-block;
-    height: 12rem;
-    width: 16rem;
-}
-
-.wishes-heading {
-    color: var(--color-highlight);
-    font-weight: 300;
-    margin: 0 0 0.75rem 0;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 .feedback-link {
-    color: var(--color-highlight);
-    display: inline-block;
-    font-size: 1.25rem;
-    font-weight: bold;
+    color: var(--color-text);
+    font-weight: 700;
 }
 
 .recommendations {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    max-width: 40rem;
-    width: 100%;
-}
-
-.recommendations-row {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.recommendations-row + .recommendations-row {
     margin-top: 1rem;
 }
 
-.logo-link {
+.message {
+    color: var(--color-text2);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+}
+
+.disclaimer {
+    color: var(--color-text3);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.ext {
+    display: grid;
+    gap: 1rem;
+    grid: "icon mid" min-content
+          "desc desc" auto
+          / min-content auto;
+    margin-top: 1rem;
+}
+
+.ext + .ext {
+    border-top: 1px solid var(--color-bg2);
+    padding-top: 1rem;
+}
+
+.ext__icon {
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 1rem;
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
-    display: inline-block;
-    flex: none;
-    height: 5.5rem;
-    text-indent: -999rem;
-    transition: box-shadow 250ms;
+    grid-area: icon;
+    height: 8rem;
     width: 8rem;
 }
 
-.logo-link:hover {
-    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+.h-icon {
+    background-color: #f68623;
+    background-image: url(/images/honey-icon-white.svg);
+    background-size: 70%;
 }
 
-.honey-logo-link {
-    background-color: var(--color-honey);
-    background-image: url(/images/honey-logo-white.svg);
-    background-position: 50% 55%;
-    background-repeat: no-repeat;
-    background-size: 82% auto;
+.t-icon {
+    background-color: #0a4730;
+    background-image: url(/images/toucan-icon-256.png);
+    background-size: 100%;
 }
 
-.honey-name {
-    color: var(--color-honey-text);
+.ext__mid {
+    grid-area: mid;
+}
+
+.ext__name {
+    color: var(--color-text);
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.paypal {
-    font-style: italic;
+.ext__quick-description {
+    color: var(--color-text2);
+}
+
+.ext__rating__stars {
+    color: #fc2;
+}
+
+.ext__install {
+    background-color: #196de4;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0), 0 0 0 #008cff;
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
     font-weight: bold;
-}
-
-.toucan-logo-link {
-    background-color: var(--color-toucan);
-    background-image: url(/images/toucan-logo-small.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.toucan-name {
-    color: var(--color-toucan-text);
-    font-weight: bold;
-}
-
-.foreign {
-    font-weight: bold;
-}
-
-.recommendations-description {
-    margin-left: 0.75rem;
-}
-
-.learn-more {
+    height: 2.5rem;
+    line-height: 2.5rem;
     margin-top: 0.5rem;
+    padding: 0 1.5rem;
+    text-decoration: none;
+    transition: box-shadow 250ms, background-color 250ms;
 }
 
-.learn-more-link {
-    font-weight: bold;
+.ext__install:hover {
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 1), 0 0 12px #008cff;
 }
 
-@media (max-width: 32rem) {
-    .wishes {
-        width: auto;
+.ext__learn-more {
+    color: var(--color-link);
+    transition: color 250ms;
+}
+
+.ext__learn-more:hover {
+    color: var(--color-text);
+}
+
+.ext__description {
+    grid-area: desc;
+    color: var(--color-text);
+}
+
+@media (prefers-color-scheme: light) {
+    .ext__icon,
+    .ext__install,
+    .ext__install:hover {
+        box-shadow: 0 2px 12px hsla(0, 0%, 0%, 0.5);
     }
 
-    .recommendations {
-        width: auto;
-    }
-
-    .recommendations-row {
-        flex-direction: column;
-    }
-
-    .recommendations-description {
-        margin-top: 0.75rem;
+    .ext__install:hover {
+        background-color: #005de0;
     }
 }
