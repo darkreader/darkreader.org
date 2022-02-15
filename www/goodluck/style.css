@@ -2,26 +2,26 @@ html {
     --color-bg: white;
     --color-bg2: #eee;
     --color-text: black;
-    --color-text2: #555;
-    --color-text3: #888;
+    --color-text2: rgb(71, 74, 80);
+    --color-text3: rgb(150, 160, 165);
     --color-ok-bg: #b5f7b8;
     --color-ok-text: #265a40;
-    --color-ok-border: #51ec3d;
-    --color-link: #0c4fcc;
+    --color-ok-border: #52b944;
+    --color-link: #0746bb;
     --font: Segoe UI, Helvetica Neue, Open Sans, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
     html {
-        --color-bg: #1d1f20;
-        --color-bg2: #34363a;
-        --color-text: #eee;
-        --color-text2: #aaa;
-        --color-text3: #888;
+        --color-bg: #181c1f;
+        --color-bg2: #3e4549;
+        --color-text: #dae3e7;
+        --color-text2: #8898a5;
+        --color-text3: #5f707e;
         --color-ok-bg: #2e563f;
-        --color-ok-text: #57e977;
+        --color-ok-text: #7ae391;
         --color-ok-border: #148657;
-        --color-link: #3d96ff;
+        --color-link: #50a2ff;
     }
 }
 
@@ -30,10 +30,25 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font);
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 1rem 0;
+}
+
+aside {
+    border-top: 1px solid var(--color-bg2);
+}
+
+section {
+    margin: 0 auto;
     max-width: 32rem;
 }
 
@@ -41,6 +56,7 @@ body {
     background-color: var(--color-ok-bg);
     border: 1px solid var(--color-ok-border);
     border-radius: 1rem;
+    box-sizing: border-box;
     color: var(--color-ok-text);
     display: flex;
     justify-content: space-between;
@@ -50,6 +66,11 @@ body {
 .feedback-link {
     color: var(--color-text);
     font-weight: 700;
+    text-decoration: none;
+}
+
+.feedback-link:hover {
+    text-decoration: underline;
 }
 
 .recommendations {
@@ -59,14 +80,7 @@ body {
 .message {
     color: var(--color-text2);
     font-size: 1.5rem;
-    font-style: italic;
     font-weight: 300;
-    text-align: center;
-}
-
-.disclaimer {
-    color: var(--color-text3);
-    font-size: 0.75rem;
     text-align: center;
 }
 
@@ -123,10 +137,13 @@ body {
     color: #fc2;
 }
 
+.ext__rating__text {
+    color: var(--color-text2);
+}
+
 .ext__install {
     background-color: #196de4;
-    border-radius: 1.25rem;
-    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0), 0 0 0 #008cff;
+    border-radius: 0.5rem;
     box-sizing: border-box;
     color: white;
     display: inline-block;
@@ -136,35 +153,29 @@ body {
     margin-top: 0.5rem;
     padding: 0 1.5rem;
     text-decoration: none;
-    transition: box-shadow 250ms, background-color 250ms;
 }
 
 .ext__install:hover {
-    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 1), 0 0 12px #008cff;
+    background-color: #0e5cca;
 }
 
 .ext__learn-more {
     color: var(--color-link);
-    transition: color 250ms;
+    text-decoration: none;
 }
 
 .ext__learn-more:hover {
-    color: var(--color-text);
+    text-decoration: underline;
 }
 
 .ext__description {
     grid-area: desc;
-    color: var(--color-text);
+    color: var(--color-text2);
 }
 
 @media (prefers-color-scheme: light) {
-    .ext__icon,
     .ext__install,
     .ext__install:hover {
-        box-shadow: 0 2px 12px hsla(0, 0%, 0%, 0.5);
-    }
-
-    .ext__install:hover {
-        background-color: #005de0;
+        box-shadow: none;
     }
 }
