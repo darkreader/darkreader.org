@@ -71,23 +71,23 @@
 }
 
 .page-grid-ios > :first-child {
-    animation: 2s ease 1 move-in;
     bottom: 0;
     left: 0;
     position: absolute;
+    transform: translateY(6rem);
+    transition: transform 500ms;
+}
+
+.page-grid-ios > .ios__show-up {
     transform: translateY(0);
 }
 
-@keyframes move-in {
-    from {
-        transform: translateY(4rem);
-    }
-    50% {
-        transform: translateY(4rem);
-    }
-    to {
-        transform: translateY(0);
-    }
+.page-grid-ios > .ios__scroll-down {
+    transform: translateY(-6rem);
+}
+
+.page-grid-ios > .ios__scroll-up {
+    transform: translateY(2rem);
 }
 
 /*

@@ -106,6 +106,28 @@ class IOSSideElement extends HTMLElement {
         style.insertAdjacentHTML('afterend', htmlText);
 
         clicker(shadowRoot.querySelector('.image-link'), 'drios-hand');
+
+        const parent = this.parentElement;
+        if (parent && parent.matches('.page-grid-ios')) {
+            const classes = {
+                ScrollDown: 'ios__scroll-down',
+                ScrollUp: 'ios__scroll-up',
+                ShowUp: 'ios__show-up',
+            };
+            const scrollContainer = document.documentElement;
+            let lastScrollTop = scrollContainer.scrollTop;
+            document.addEventListener('scroll', () => {
+                const scrollTop = scrollContainer.scrollTop;
+                const dy = scrollTop - lastScrollTop;
+                if (dy !== 0) {
+                    const down = dy > 0;
+                    this.classList.toggle(classes.ScrollDown, down);
+                    this.classList.toggle(classes.ScrollUp, !down);
+                }
+                lastScrollTop = scrollTop;
+            }, {passive: true});
+            requestAnimationFrame(() => this.classList.add(classes.ShowUp));
+        }
     }
 }
 
