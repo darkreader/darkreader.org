@@ -179,3 +179,67 @@ section {
         box-shadow: none;
     }
 }
+
+.eu {
+    background-image: url('/images/bella.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 65.625rem;
+    position: absolute;
+    width: 20rem;
+}
+
+.eu__message {
+    background-color: white;
+    border: 0.25rem solid black;
+    border-radius: 2rem;
+    color: black;
+    font-family: EngraversGothic BT, serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    left: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 6rem;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.eu__message strong {
+    -webkit-text-stroke: 0.05rem black;
+}
+
+.recommendations {
+    margin-top: 8rem;
+}
+
+@media screen and (max-width: 72rem) {
+    section {
+        margin: 0 0 0 20rem;
+    }
+}
+
+@media screen and (max-width: 52rem) {
+    aside {
+        padding: 0 1rem;
+    }
+
+    section {
+        margin: 0 auto;
+    }
+
+    .eu {
+        margin-top: 6rem;
+        position: relative;
+    }
+
+    .eu__message {
+        left: 1rem;
+        top: -5.5rem;
+    }
+    
+    .recommendations {
+        margin-top: 1rem;
+    }
+}
