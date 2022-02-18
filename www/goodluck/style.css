@@ -81,7 +81,7 @@ section {
     background-color: var(--color-bg-panel);
     box-shadow: 0 0 2rem #0000002e;
     border-radius: 2rem;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 1.5rem 2rem;
 }
 
 .message {
@@ -202,9 +202,8 @@ section {
     border: 0.125rem solid black;
     border-radius: 2rem;
     color: black;
-    font-family: EngraversGothic BT, Gill Sans Nova, Rockwell, serif;
+    font-family: EngraversGothic BT, Calibri, serif;
     font-size: 1.25rem;
-    font-weight: bold;
     left: 100%;
     padding: 1rem;
     position: absolute;
@@ -237,7 +236,7 @@ section {
     }
 
     .eu {
-        margin-top: 6rem;
+        margin: 6rem auto 0 auto;
         position: relative;
     }
 
@@ -249,4 +248,14 @@ section {
     .recommendations {
         margin-top: 1rem;
     }
+}
+
+.final {
+    color: var(--color-text);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 2rem auto;
+    max-width: 32rem;
+    text-align: center;
+    text-shadow: 0 0 1rem var(--color-text3);
 }
