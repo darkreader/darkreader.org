@@ -1,33 +1,41 @@
 html {
     --color-bg: white;
-    --color-bg2: #eee;
+    --color-bg-panel: #ffffff7c;
+    --color-border: #a0b6b946;
     --color-text: black;
-    --color-text2: rgb(71, 74, 80);
-    --color-text3: rgb(150, 160, 165);
+    --color-text2: #474a50;
+    --color-text3: #96a0a5;
     --color-ok-bg: #b5f7b8;
     --color-ok-text: #265a40;
-    --color-ok-border: #52b944;
     --color-link: #0746bb;
     --font: Segoe UI, Helvetica Neue, Open Sans, sans-serif;
+    --img-bg: url(/images/bg-radial-gradients.svg);
 }
 
 @media (prefers-color-scheme: dark) {
     html {
         --color-bg: #181c1f;
-        --color-bg2: #3e4549;
+        --color-bg-panel: #00000065;
+        --color-border: #121f277c;
         --color-text: #dae3e7;
-        --color-text2: #8898a5;
-        --color-text3: #5f707e;
+        --color-text2: #929da7;
+        --color-text3: #687580;
         --color-ok-bg: #2e563f;
         --color-ok-text: #7ae391;
-        --color-ok-border: #148657;
         --color-link: #50a2ff;
     }
 }
 
+html {
+    background-attachment: fixed;
+    background-color: var(--color-bg);
+    background-image: var(--img-bg);
+    background-position: center;
+    background-size: cover;
+}
+
 html,
 body {
-    background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font);
     margin: 0;
@@ -43,10 +51,6 @@ main {
     padding: 1rem 0;
 }
 
-aside {
-    border-top: 1px solid var(--color-bg2);
-}
-
 section {
     margin: 0 auto;
     max-width: 32rem;
@@ -54,8 +58,8 @@ section {
 
 .uninstalled {
     background-color: var(--color-ok-bg);
-    border: 1px solid var(--color-ok-border);
     border-radius: 1rem;
+    box-shadow: 0 0 1rem #14dd6e83;
     box-sizing: border-box;
     color: var(--color-ok-text);
     display: flex;
@@ -74,7 +78,10 @@ section {
 }
 
 .recommendations {
-    margin-top: 1rem;
+    background-color: var(--color-bg-panel);
+    box-shadow: 0 0 2rem #0000002e;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
 }
 
 .message {
@@ -94,7 +101,7 @@ section {
 }
 
 .ext + .ext {
-    border-top: 1px solid var(--color-bg2);
+    border-top: 1px solid var(--color-border);
     padding-top: 1rem;
 }
 
@@ -192,16 +199,16 @@ section {
 
 .eu__message {
     background-color: white;
-    border: 0.25rem solid black;
+    border: 0.125rem solid black;
     border-radius: 2rem;
     color: black;
-    font-family: EngraversGothic BT, serif;
+    font-family: EngraversGothic BT, Gill Sans Nova, Rockwell, serif;
     font-size: 1.25rem;
     font-weight: bold;
     left: 100%;
     padding: 1rem;
     position: absolute;
-    top: 6rem;
+    top: 5.5rem;
     white-space: nowrap;
     width: max-content;
 }
@@ -211,7 +218,7 @@ section {
 }
 
 .recommendations {
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 @media screen and (max-width: 72rem) {

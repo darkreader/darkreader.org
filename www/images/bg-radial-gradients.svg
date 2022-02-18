@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>
+  </style>
+  <defs>
+    <radialGradient id="g1">
+      <stop offset="0%" stop-color="hsla(10deg, 75%, 50%, 0.25)"/>
+      <stop offset="100%" stop-color="hsla(45deg, 75%, 75%, 0)"/>
+    </radialGradient>
+    <radialGradient id="g2">
+      <stop offset="0%" stop-color="hsla(200deg, 75%, 50%, 0.25)"/>
+      <stop offset="100%" stop-color="hsla(145deg, 75%, 75%, 0)"/>
+    </radialGradient>
+    <radialGradient id="g3">
+      <stop offset="0%" stop-color="hsla(60deg, 75%, 50%, 0.25)"/>
+      <stop offset="100%" stop-color="hsla(200deg, 75%, 75%, 0)"/>
+    </radialGradient>
+    <radialGradient id="g4">
+      <stop offset="0%" stop-color="hsla(45deg, 75%, 50%, 0.25)"/>
+      <stop offset="100%" stop-color="hsla(180deg, 75%, 75%, 0)"/>
+    </radialGradient>
+    <radialGradient id="g5">
+      <stop offset="0%" stop-color="hsla(260deg, 75%, 50%, 0.25)"/>
+      <stop offset="100%" stop-color="hsla(200deg, 75%, 75%, 0)"/>
+    </radialGradient>
+  </defs>
+  <circle fill="url(#g1)" cx="4" cy="4" r="6" />
+  <circle fill="url(#g2)" cx="12" cy="6" r="5" />
+  <circle fill="url(#g3)" cx="3" cy="12" r="5" />
+  <circle fill="url(#g4)" cx="10" cy="10" r="6" />
+  <circle fill="url(#g5)" cx="6" cy="8" r="5" />
+</svg>
