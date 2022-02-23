@@ -59,7 +59,7 @@ section {
 .uninstalled {
     background-color: var(--color-ok-bg);
     border-radius: 1rem;
-    box-shadow: 0 0 1rem #14dd6e83;
+    box-shadow: 0 0 1rem #06251483;
     box-sizing: border-box;
     color: var(--color-ok-text);
     display: flex;
@@ -207,6 +207,7 @@ section {
     left: 100%;
     padding: 1rem;
     position: absolute;
+    text-align: center;
     top: 5.5rem;
     white-space: nowrap;
     width: max-content;

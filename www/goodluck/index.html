@@ -29,7 +29,7 @@
                     <div class="ext__quick-description">Your smart shopping assistant</div>
                     <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
                             class="ext__rating__text">4.8 of 5</span></div>
-                    <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader">Install</a>
+                    <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader">Learn more</a>
                 </div>
                 <div class="ext__description">
                     Automatically search and apply coupons on 30,000+ websites when you shop online.
@@ -45,7 +45,7 @@
                     <div class="ext__quick-description">Learn a new language</div>
                     <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
                             class="ext__rating__text">4.6 of 5</span></div>
-                    <a class="ext__install t-install" href="https://jointoucan.com/partners/darkreader">Install</a>
+                    <a class="ext__install t-install" href="https://jointoucan.com/partners/darkreader">Learn more</a>
                 </div>
                 <div class="ext__description">
                     Learn a new language just by browsing the internet.
@@ -59,7 +59,7 @@
     <aside class="eu">
         <div class="eu__message">
             I see you've uninstalled Dark Reader?<br>
-            Some extensions can be <strong>really useful</strong>!
+            <strong>Try other useful extensions too</strong>!
         </div>
     </aside>
     <footer>
@@ -74,13 +74,8 @@
         const isSafari = navigator.userAgent.includes('Safari') && !isChrome;
         const hRating = document.querySelector('.h-ext .ext__rating__text');
         const tRating = document.querySelector('.t-ext .ext__rating__text');
-        const installs = document.querySelectorAll('.ext__install');
         hRating.textContent = `${isFirefox || isEdge ? 4.6 : isSafari ? 4.7 : 4.8} out of 5`;
         tRating.textContent = `${isFirefox ? 4.1 : isEdge ? 4.4 : isSafari ? 4.9 : 4.6} out of 5`;
-        installs.forEach((el) => {
-            const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
-            el.textContent = `Add to ${browser}`;
-        });
 
         import('../elements/stats.js')
             .then(({clicker}) => {
