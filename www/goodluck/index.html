@@ -76,6 +76,11 @@
         const tRating = document.querySelector('.t-ext .ext__rating__text');
         hRating.textContent = `${isFirefox || isEdge ? 4.6 : isSafari ? 4.7 : 4.8} out of 5`;
         tRating.textContent = `${isFirefox ? 4.1 : isEdge ? 4.4 : isSafari ? 4.9 : 4.6} out of 5`;
+        const installs = document.querySelectorAll('.ext__install');
+        installs.forEach((el) => {
+            const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
+            el.textContent = `Add to ${browser}`;
+        });
 
         import('../elements/stats.js')
             .then(({clicker}) => {

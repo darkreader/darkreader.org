@@ -202,6 +202,7 @@ section {
     border: 0.125rem solid black;
     border-radius: 2rem;
     color: black;
+    display: none;
     font-family: EngraversGothic BT, Calibri, serif;
     font-size: 1.25rem;
     left: 100%;
@@ -218,7 +219,7 @@ section {
 }
 
 .recommendations {
-    margin-top: 6rem;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 72rem) {
@@ -237,7 +238,7 @@ section {
     }
 
     .eu {
-        margin: 6rem auto 0 auto;
+        margin: 1rem auto 0 auto;
         position: relative;
     }
 
@@ -247,7 +248,8 @@ section {
     }
     
     .recommendations {
-        margin-top: 1rem;
+        margin-top: 0;
+        padding: 1rem;
     }
 }
 
@@ -255,7 +257,7 @@ section {
     color: var(--color-text);
     font-size: 2.5rem;
     font-weight: 900;
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 32rem;
     text-align: center;
     text-shadow: 0 0 1rem var(--color-text3);
