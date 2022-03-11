@@ -1,6 +1,7 @@
 // @ts-check
 
 import './backers-graph.js';
+import {isHCountry, isAliCountry} from './locales.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -9,12 +10,14 @@ import {
 const hnURL = 'https://www.joinhoney.com/darkreader';
 const tcURL = 'https://jointoucan.com/partners/darkreader';
 const ocURL = 'https://opencollective.com/darkreader/donate';
+const alURL = 'https://alitools.io/install?utm_source=partner&utm_medium=darkreader&utm_campaign=dr_welcome';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
 const language = navigator.language || 'en';
 
 const outlineFilter = 'drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 1))';
+const buttonIcon = `<span class="b-icon${isEdge ? ' b-icon--edge' : isSafari ? ' b-icon--safari' : ''}"></span>`;
 
 const htmlText = `
 <h2 class="heading">
@@ -31,8 +34,22 @@ const htmlText = `
         Save <span class="ht-usd">$$$</span> when you shop online
     </a>
     <a class="button-link hb" href="${hnURL}">
-        <span class="hb-icon${isEdge ? ' hb-icon--edge' : isSafari ? ' hb-icon--safari' : ''}"></span>
+        ${buttonIcon}
         <span class="button-link-text hb-text">
+            Install
+        </span>
+    </a>
+</section>
+<section class="ar">
+    <a class="logo-link al" href="${alURL}">
+        <span class="logo-link-image al-image">Alitools</span>
+    </a>
+    <a class="text-link at" href="${alURL}">
+        Save <span class="at-usd">$$$</span> on <span class="at-1">Ali</span><span class="at-2">Express</span>
+    </a>
+    <a class="button-link ab" href="${alURL}">
+        ${buttonIcon}
+        <span class="button-link-text ab-text">
             Install
         </span>
     </a>
@@ -59,7 +76,7 @@ const htmlText = `
                 'Learn English without even trying'}
     </a>
     <a class="button-link tb" href="${tcURL}">
-        <span class="tb-icon${isEdge ? ' tb-icon--edge' : isSafari ? ' tb-icon--safari' : ''}"></span>
+        ${buttonIcon}
         <span class="button-link-text tb-text">
             Install
         </span>
@@ -137,12 +154,14 @@ section {
     display: inline-block;
     width: 100%;
 }
-.text-link {
+.text-link,
+.text-link > * {
     font-weight: bold;
     text-decoration: none;
     transition: color 250ms;
 }
-.text-link:hover {
+.text-link:hover,
+.text-link:hover > * {
     color: var(--color-text-hover);
 }
 .button-link {
@@ -220,17 +239,6 @@ section {
 .hb:hover {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem #fff800;
 }
-.hb-icon {
-    background-image: url(/images/icon-chrome-512x512.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    filter: ${outlineFilter};
-    height: 2rem;
-    margin-right: 0.5rem;
-    width: 2rem;
-}
 .hb-text {
     font-size: 1rem;
     font-weight: bold;
@@ -266,7 +274,7 @@ section {
     top: 6rem;
     width: 8rem;
 }
-.tb-icon {
+.b-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -278,21 +286,18 @@ section {
     width: 2rem;
 }
 @-moz-document url-prefix() {
-    .hb-icon,
-    .tb-icon {
+    .b-icon {
         background-image: url(/images/icon-firefox-87x82.svg);
     }
 }
-.hb-icon--edge,
-.tb-icon--edge {
+.b-icon--edge {
     background-color: white;
     background-image: url(/images/icon-edge-256x256.svg);
     border-radius: 50%;
     box-shadow: 0 0 0 0.0625rem white;
     filter: none;
 }
-.hb-icon--safari,
-.tb-icon--safari {
+.b-icon--safari {
     background-image: url(/images/icon-safari-66x66.svg);
     filter: none;
 }
@@ -342,6 +347,51 @@ section {
 .tt-it {
     background-image: url(/images/toucan-italian.svg);
     display: none;
+}
+.al {
+    overflow: hidden;
+}
+.al-image {
+    background-color: var(--color-ali);
+    background-image: url(/images/alitools-logo.svg);
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    background-size: 12rem auto;
+    filter: hue-rotate(320deg);
+    height: 8.75rem;
+    text-indent: -999rem;
+    width: 16rem;
+}
+.at {
+    color: #61bf71;
+    text-align: center;
+}
+.at-tr {
+    color: white;
+    font-style: italic;
+}
+.at-usd {
+    color: #bfff7b;
+}
+.at-1 {
+    color: #ffdf32;
+}
+.at-2 {
+    color: #ff5326;
+}
+.ab {
+    background-color: #488c54;
+    left: 0.5rem;
+    margin-top: 0;
+    position: absolute;
+    top: 6rem;
+    width: 8rem;
+}
+.ab-text {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.125rem;
+    -webkit-text-stroke: 0.0625rem;
 }
 .dl,
 .dl:hover {
@@ -399,6 +449,13 @@ section {
     background-image: url(/images/mozilla-logo.svg);
     height: 2.5rem;
 }
+:host(:not(.c-h)) .hr {
+    display: none;
+}
+:host(.c-h) .ar,
+:host(:not(.c-ali)) .ar {
+    display: none;
+}
 `;
 
 class BackersSideElement extends HTMLElement {
@@ -418,9 +475,15 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.tt'), 't-side-txt');
         clicker(qs('.db'), 'd-side-btn');
         clicker(qs('.dt'), 'd-side-txt');
+        clicker(qs('.al'), 'ali-side-img');
+        clicker(qs('.ab'), 'ali-side-btn');
+        clicker(qs('.at'), 'ali-side-txt');
         clicker(qs('.nr-logo-fibery'), 'fib-side-ns');
         clicker(qs('.nr-logo-mozilla'), 'moz-side-ns');
         clicker(qs('.nr-logo-github'), 'gh-side-ns');
+
+        shadowRoot.host.classList.toggle('c-h', isHCountry);
+        shadowRoot.host.classList.toggle('c-ali', isAliCountry);
     }
 }
 

@@ -120,6 +120,13 @@ section {
     background-size: 70%;
 }
 
+.a-icon {
+    background-color: #4ebea9;
+    background-image: url(/images/alitools-icon.svg);
+    background-size: 95%;
+    filter: hue-rotate(320deg);
+}
+
 .t-icon {
     background-color: #0a4730;
     background-image: url(/images/toucan-icon-256.png);
@@ -261,4 +268,12 @@ section {
     max-width: 32rem;
     text-align: center;
     text-shadow: 0 0 1rem var(--color-text3);
+}
+
+body:not(.c-h) .h-ext {
+    display: none;
+}
+body.c-h .a-ext,
+body:not(.c-ali) .a-ext {
+    display: none;
 }

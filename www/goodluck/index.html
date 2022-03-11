@@ -38,6 +38,23 @@
                     <a class="ext__learn-more h-lm" href="https://www.joinhoney.com/darkreader">Learn more</a>.
                 </div>
             </div>
+            <div class="ext a-ext">
+                <div class="ext__icon a-icon"></div>
+                <div class="ext__mid">
+                    <div class="ext__name">Alitools</div>
+                    <div class="ext__quick-description">AliExpress shopping assistant</div>
+                    <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
+                            class="ext__rating__text">4.5 of 5</span></div>
+                    <a class="ext__install a-install" href="https://alitools.io/install?utm_source=partner&utm_medium=darkreader&utm_campaign=dr_goodbye">Learn more</a>
+                </div>
+                <div class="ext__description">
+                    Shopping on <em>AliExpress</em>, but haven't started saving money yet?
+                    It's a good time to try <strong>Alitools</strong>.
+                    It automatically activates promo codes and notifies of a price drop.
+                    We're waiting for you!
+                    <a class="ext__learn-more a-lm" href="https://alitools.io/install?utm_source=partner&utm_medium=darkreader&utm_campaign=dr_goodbye">Learn more</a>.
+                </div>
+            </div>
             <div class="ext t-ext">
                 <div class="ext__icon t-icon"></div>
                 <div class="ext__mid">
@@ -74,8 +91,10 @@
         const isSafari = navigator.userAgent.includes('Safari') && !isChrome;
         const hRating = document.querySelector('.h-ext .ext__rating__text');
         const tRating = document.querySelector('.t-ext .ext__rating__text');
+        const aRating = document.querySelector('.a-ext .ext__rating__text');
         hRating.textContent = `${isFirefox || isEdge ? 4.6 : isSafari ? 4.7 : 4.8} out of 5`;
         tRating.textContent = `${isFirefox ? 4.1 : isEdge ? 4.4 : isSafari ? 4.9 : 4.6} out of 5`;
+        aRating.textContent = `${isFirefox ? 4.3 : isEdge ? 4.6 : isSafari ? 4.5 : 4.5} out of 5`;
         const installs = document.querySelectorAll('.ext__install');
         installs.forEach((el) => {
             const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
@@ -89,6 +108,14 @@
                 clicker(qs('.h-lm'), 'h-un-lm');
                 clicker(qs('.t-install'), 't-un-add');
                 clicker(qs('.t-lm'), 't-un-lm');
+                clicker(qs('.a-install'), 'ali-un-add');
+                clicker(qs('.a-lm'), 'ali-un-lm');
+            });
+
+        import('../elements/locales.js')
+            .then(({isHCountry, isAliCountry}) => {
+                document.body.classList.toggle('c-h', isHCountry);
+                document.body.classList.toggle('c-ali', isAliCountry);
             });
     </script>
 </body>
