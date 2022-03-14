@@ -199,6 +199,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    display: none;
     height: 65.625rem;
     position: absolute;
     width: 20rem;
@@ -227,12 +228,6 @@ section {
 
 .recommendations {
     margin-top: 0;
-}
-
-@media screen and (max-width: 72rem) {
-    section {
-        margin: 0 0 0 20rem;
-    }
 }
 
 @media screen and (max-width: 52rem) {
