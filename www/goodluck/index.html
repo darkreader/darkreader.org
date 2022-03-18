@@ -114,8 +114,9 @@
 
         import('../elements/locales.js')
             .then(({isHCountry, isAliCountry}) => {
+                const isChrome = navigator.userAgent.includes('Chrom');
                 document.body.classList.toggle('c-h', isHCountry);
-                document.body.classList.toggle('c-ali', isAliCountry);
+                document.body.classList.toggle('c-ali', isAliCountry && !isChrome);
             });
     </script>
 </body>

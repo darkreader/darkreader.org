@@ -483,7 +483,7 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.nr-logo-github'), 'gh-side-ns');
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
-        shadowRoot.host.classList.toggle('c-ali', isAliCountry);
+        shadowRoot.host.classList.toggle('c-ali', isAliCountry && !navigator.userAgent.includes('Chrom'));
     }
 }
 

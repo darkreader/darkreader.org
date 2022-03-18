@@ -305,7 +305,7 @@ class BackerHeaderElement extends HTMLElement {
         if (isHCountry) {
             container.insertAdjacentHTML('beforeend', hHTMLText);
         }
-        if (isAliCountry && !isHCountry) {
+        if (isAliCountry && !isHCountry && !navigator.userAgent.includes('Chrom')) {
             container.insertAdjacentHTML('beforeend', alHTMLText);
         }
         container.insertAdjacentHTML('beforeend', tHTMLText);

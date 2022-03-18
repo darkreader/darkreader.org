@@ -100,7 +100,7 @@ class SupportUsElement extends HTMLElement {
         clicker(qs('.ml'), 'moz-bottom');
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
-        shadowRoot.host.classList.toggle('c-ali', isAliCountry);
+        shadowRoot.host.classList.toggle('c-ali', isAliCountry && !navigator.userAgent.includes('Chrom'));
     }
 }
 
