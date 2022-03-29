@@ -9,7 +9,7 @@ import {clicker} from './stats.js';
 const hURL = 'https://www.joinhoney.com/darkreader';
 const tURL = 'https://jointoucan.com/partners/darkreader';
 const donateURL = 'https://opencollective.com/darkreader/donate';
-const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 const alURL = 'https://alitools.io/install?utm_source=partner&utm_medium=darkreader&utm_campaign=dr_welcome';
 
 const htmlText = `

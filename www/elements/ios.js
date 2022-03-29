@@ -6,7 +6,7 @@ import {
     createHTMLElement as html,
 } from './utils.js';
 
-const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 
 const htmlText = `
 <h2 class="heading">

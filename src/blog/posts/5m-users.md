@@ -53,7 +53,7 @@ Just click the [DONATE](https://opencollective.com/darkreader/donate) button.**
 <img src="/images/ios-photo.jpg" alt="Dark Reader for iOS photo" style="width: 24rem;" />
 
 Dark Reader has become available for
-[iOS and iPadOS](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone).
+[iOS and iPadOS](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone).
 It brings some new colorful themes.
 A more detailed article will follow soon.
 

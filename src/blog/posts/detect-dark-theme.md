@@ -23,4 +23,4 @@ Now Dark Reader will determine if the website's colors are dark and disable itse
     <img src="/images/detect-dark-theme-button.png" alt="Detect dark theme option" />
 </figure>
 
-The feature is available by default in our [iOS app](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone). Did you know how to activate YouTube's built-in dark mode? [Read it here](../../tips/youtube-dark-mode/).
+The feature is available by default in our [iOS app](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone). Did you know how to activate YouTube's built-in dark mode? [Read it here](../../tips/youtube-dark-mode/).

@@ -93,7 +93,7 @@ const tHTMLText = `
 </div>
 `;
 
-const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone';
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 
 const appleHTMLText = `
 <div class="up">
