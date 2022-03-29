@@ -106,6 +106,15 @@ const appleHTMLText = `
 </section>
 `;
 
+const uaSupportHTMLText = `
+<div class="support-ua">
+    <a href="https://bank.gov.ua/en/about/humanitarian-aid-to-ukraine" target="_blank" rel="noreferrer noopener">
+        <strong>Support Ukraine</strong>
+        (official link)
+    </a>
+</div>
+`;
+
 const uaHTMLText = `
 <h1 class="ua" style="text-align: center;">
     <span style="color: #2d50ff;">Тримайтеся брати!</span><br>
@@ -271,6 +280,23 @@ a:hover {
     background-color: var(--color-highlight);
     color: var(--color-text-hover);
 }
+.support-ua {
+    max-width: 37rem;
+    text-align: center;
+}
+.support-ua::before {
+    border-radius: 50%;
+    border-top: 0.5rem solid #206ff3;
+    border-bottom: 0.5rem solid #e3ce29;
+    bottom: -0.125rem;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    margin-top: 0.25rem;
+    position: relative;
+    width: 1rem;
+}
 @media screen and (max-width: 57rem) {
     .up {
         box-sizing: border-box;
@@ -310,6 +336,7 @@ class BackerHeaderElement extends HTMLElement {
         }
         container.insertAdjacentHTML('beforeend', tHTMLText);
         container.insertAdjacentHTML('beforeend', appleHTMLText);
+        container.insertAdjacentHTML('afterend', uaSupportHTMLText);
 
         const qs = (s) => shadowRoot.querySelector(s);
         clicker(qs('.h-logo-link'), 'h-top-logo');

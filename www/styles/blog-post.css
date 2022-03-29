@@ -26,3 +26,8 @@
     transform: translate(-0.0625rem, 0.0625rem);
     width: 3.5rem;
 }
+
+article h6 {
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}

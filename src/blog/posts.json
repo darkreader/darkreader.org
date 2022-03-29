@@ -1,5 +1,10 @@
 [
     {
+        "id": "detect-dark-theme",
+        "date": "2022-03-29T16:00Z",
+        "headline": "Detecting website's dark theme in version 4.9.47"
+    },
+    {
         "id": "no-war",
         "date": "2022-02-27T09:25Z",
         "headline": "No war! One of our contributors is in the middle of the war in Ukraine"
