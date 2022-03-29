@@ -556,5 +556,8 @@ export const country = (() => {
 const hCountries = ['US', 'GB', 'CA', 'AU', 'DE', 'NL', 'FR'];
 export const isHCountry = hCountries.includes(country);
 
+/*
 const aliCountries = ['BR', 'CL', 'AD', 'AT', 'BE', 'BA', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FO', 'FI', 'FR', 'GR', 'HU', 'HR', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV', 'MC', 'MK', 'MT', 'NO', 'NL', 'PO', 'PT', 'RO', 'SE', 'SI', 'SK', 'SM', 'TR'];
 export const isAliCountry = aliCountries.includes(country);
+*/
+export const isAliCountry = false;
