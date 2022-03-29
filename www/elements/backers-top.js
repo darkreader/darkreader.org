@@ -281,7 +281,7 @@ a:hover {
     color: var(--color-text-hover);
 }
 .support-ua {
-    max-width: 37rem;
+    max-width: 35.5rem;
     text-align: center;
 }
 .support-ua::before {

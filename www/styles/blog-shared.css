@@ -1,5 +1,5 @@
 .header-logo {
-    background-image: url(/images/darkreader-blog-christmas.svg);
+    background-image: url(/images/darkreader-blog.svg);
     background-size: cover;
     display: inline-block;
     height: 8em;
@@ -7,8 +7,4 @@
     max-width: calc(100vw - 2rem);
     text-decoration: none;
     width: 32em;
-}
-
-.header-logo--help {
-    background-image: url(/images/darkreader-help.svg);
 }
