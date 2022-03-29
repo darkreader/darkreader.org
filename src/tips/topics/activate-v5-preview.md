@@ -26,7 +26,7 @@ and by clicking **Settings** button.
 
 We keep improving the design.
 The iOS version of Dark Reader represents the look and feel
-we hope will soon get into the desktop version.
+that we hope will soon get into the desktop version too.
 
 **Do you have iPhone or iPad?**
 **Then check out Dark Reader on the [App Store](https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180#?platform=iphone)**.
