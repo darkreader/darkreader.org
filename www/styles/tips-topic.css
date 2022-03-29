@@ -1,0 +1,15 @@
+@import "./shared.css";
+@import "./page-grid.css";
+@import "./tips-shared.css";
+
+.page-grid-inside {
+    display: none;
+}
+
+.page-grid-ios {
+    left: calc(50vw - 10rem);
+}
+
+article img {
+    border-radius: 0.5rem;
+}

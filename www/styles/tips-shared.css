@@ -1,0 +1,10 @@
+.header-logo {
+    background-image: url(/images/darkreader-tips.svg);
+    background-size: cover;
+    display: inline-block;
+    height: 8rem;
+    max-height: calc(25vw - 0.5rem);
+    max-width: calc(100vw - 2rem);
+    text-decoration: none;
+    width: 32rem;
+}

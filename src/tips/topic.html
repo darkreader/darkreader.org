@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>$TITLE – Dark Reader tips & tricks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/images/icon-256.png" />
+    <link rel="stylesheet" type="text/css" href="/styles/tips-topic.css" />
+    <meta name="theme-color" content="#141e24" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://darkreader.org/tips/$ID/" />
+    <meta property="og:title" content="$TITLE – Dark Reader tips & tricks" />
+    <meta property="og:image" content="https://darkreader.org/images/darkreader-screenshot-v5-preview.png" />
+    <meta property="og:description" content="Tech tips for dark mode lovers" />
+</head>
+
+<body class="page-grid-body">
+    <header class="page-grid-header">
+        <a class="header-logo" href="../"></a>
+    </header>
+    <main class="page-grid-content">
+        <article>
+            $CONTENT
+
+            <p>
+                <darkreader-donate-mascot></darkreader-donate-mascot>
+                <script type="module" src="/elements/donate-mascot.js"></script>
+            </p>
+        </article>
+    </main>
+    <aside class="page-grid-inside">
+        <darkreader-backers-header></darkreader-backers-header>
+        <script type="module" src="/elements/backers-top.js"></script>
+    </aside>
+    <aside class="page-grid-side">
+        <darkreader-backers-side></darkreader-backers-side>
+        <script type="module" src="/elements/backers-right.js"></script>
+    </aside>
+    <aside class="page-grid-ios">
+        <darkreader-ios-side></darkreader-ios-side>
+        <script type="module" src="/elements/ios.js"></script>
+    </aside>
+    <script>
+        document.querySelectorAll('video').forEach((video) => {
+            video.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

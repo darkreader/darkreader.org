@@ -2,7 +2,7 @@
  "name": "darkreader-blog",
  "width": "2048",
  "height": "512",
- "currentLayer": "10704",
+ "currentLayer": "161",
  "selectedElements": [],
  "layers": [
   {
@@ -41,14 +41,14 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10626"
+     "doc-model-id": "1"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "10627"
+   "doc-model-id": "2"
   },
   {
    "name": "Mascot",
@@ -109,7 +109,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10742"
+       "doc-model-id": "3"
       },
       {
        "name": "Curve",
@@ -164,7 +164,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10743"
+       "doc-model-id": "4"
       },
       {
        "name": "Curve",
@@ -263,7 +263,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10744"
+       "doc-model-id": "5"
       },
       {
        "name": "Curve",
@@ -318,7 +318,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10745"
+       "doc-model-id": "6"
       },
       {
        "name": "Curve",
@@ -381,7 +381,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10746"
+       "doc-model-id": "7"
       },
       {
        "name": "Curve",
@@ -428,7 +428,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10747"
+       "doc-model-id": "8"
       },
       {
        "name": "Curve",
@@ -487,7 +487,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10748"
+       "doc-model-id": "9"
       },
       {
        "name": "Curve",
@@ -538,7 +538,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10749"
+       "doc-model-id": "10"
       },
       {
        "name": "Curve",
@@ -589,7 +589,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10750"
+       "doc-model-id": "11"
       },
       {
        "name": "Curve",
@@ -640,7 +640,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10751"
+       "doc-model-id": "12"
       },
       {
        "name": "Curve",
@@ -691,7 +691,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10752"
+       "doc-model-id": "13"
       },
       {
        "name": "Curve",
@@ -770,7 +770,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10753"
+       "doc-model-id": "14"
       },
       {
        "name": "Curve",
@@ -849,7 +849,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10754"
+       "doc-model-id": "15"
       },
       {
        "name": "Curve",
@@ -884,7 +884,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10755"
+       "doc-model-id": "16"
       },
       {
        "name": "Curve",
@@ -919,7 +919,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10756"
+       "doc-model-id": "17"
       },
       {
        "name": "Curve",
@@ -962,7 +962,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10757"
+       "doc-model-id": "18"
       },
       {
        "name": "Curve",
@@ -971,11 +971,13 @@
         "gradient": {
          "start": {
           "x": 164.39875947986414,
-          "y": 134.6884821836872
+          "y": 134.6884821836872,
+          "doc-model": "ObservableObject"
          },
          "end": {
           "x": 163.25008995038579,
-          "y": 228.87938360091846
+          "y": 228.87938360091846,
+          "doc-model": "ObservableObject"
          },
          "type": "linear",
          "stops": [
@@ -1020,7 +1022,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10758"
+       "doc-model-id": "19"
       },
       {
        "name": "Curve",
@@ -1029,11 +1031,13 @@
         "gradient": {
          "start": {
           "x": 312.68465139091353,
-          "y": 140.50630886597287
+          "y": 140.50630886597287,
+          "doc-model": "ObservableObject"
          },
          "end": {
           "x": 313.8368753579205,
-          "y": 229.22755432552387
+          "y": 229.22755432552387,
+          "doc-model": "ObservableObject"
          },
          "type": "linear",
          "stops": [
@@ -1078,7 +1082,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10759"
+       "doc-model-id": "20"
       },
       {
        "name": "Curve",
@@ -1121,7 +1125,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10760"
+       "doc-model-id": "21"
       },
       {
        "name": "Curve",
@@ -1164,7 +1168,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10761"
+       "doc-model-id": "22"
       },
       {
        "name": "Curve",
@@ -1215,7 +1219,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10762"
+       "doc-model-id": "23"
       },
       {
        "name": "Curve",
@@ -1262,7 +1266,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10763"
+       "doc-model-id": "24"
       },
       {
        "name": "Curve",
@@ -1321,7 +1325,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10764"
+       "doc-model-id": "25"
       },
       {
        "name": "Curve",
@@ -1380,7 +1384,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10765"
+       "doc-model-id": "26"
       },
       {
        "name": "Curve",
@@ -1439,7 +1443,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10766"
+       "doc-model-id": "27"
       },
       {
        "name": "Curve",
@@ -1522,7 +1526,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10767"
+       "doc-model-id": "28"
       },
       {
        "name": "Curve",
@@ -1573,7 +1577,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10768"
+       "doc-model-id": "29"
       },
       {
        "name": "Curve",
@@ -1616,19 +1620,19 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "10769"
+       "doc-model-id": "30"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "10826"
+     "doc-model-id": "31"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "10704"
+   "doc-model-id": "32"
   },
   {
    "name": "Pumpkin",
@@ -1682,7 +1686,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10659"
+     "doc-model-id": "33"
     },
     {
      "name": "Curve",
@@ -1757,7 +1761,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10660"
+     "doc-model-id": "34"
     },
     {
      "name": "Curve",
@@ -1812,7 +1816,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10661"
+     "doc-model-id": "35"
     },
     {
      "name": "Curve",
@@ -1904,7 +1908,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10662"
+     "doc-model-id": "36"
     },
     {
      "name": "Curve",
@@ -1971,7 +1975,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10663"
+     "doc-model-id": "37"
     },
     {
      "name": "Curve",
@@ -2031,7 +2035,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10664"
+     "doc-model-id": "38"
     },
     {
      "name": "Curve",
@@ -2091,7 +2095,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10665"
+     "doc-model-id": "39"
     },
     {
      "name": "Curve",
@@ -2134,7 +2138,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10666"
+     "doc-model-id": "40"
     },
     {
      "name": "Curve",
@@ -2185,7 +2189,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10667"
+     "doc-model-id": "41"
     },
     {
      "name": "Curve",
@@ -2244,7 +2248,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10668"
+     "doc-model-id": "42"
     },
     {
      "name": "Curve",
@@ -2295,7 +2299,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10669"
+     "doc-model-id": "43"
     },
     {
      "name": "Curve",
@@ -2342,7 +2346,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10670"
+     "doc-model-id": "44"
     },
     {
      "name": "Curve",
@@ -2421,7 +2425,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10671"
+     "doc-model-id": "45"
     },
     {
      "name": "Curve",
@@ -2500,7 +2504,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10672"
+     "doc-model-id": "46"
     },
     {
      "name": "Curve",
@@ -2535,7 +2539,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10673"
+     "doc-model-id": "47"
     },
     {
      "name": "Curve",
@@ -2570,7 +2574,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10674"
+     "doc-model-id": "48"
     },
     {
      "name": "Curve",
@@ -2613,7 +2617,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10675"
+     "doc-model-id": "49"
     },
     {
      "name": "Curve",
@@ -2673,7 +2677,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10676"
+     "doc-model-id": "50"
     },
     {
      "name": "Curve",
@@ -2733,7 +2737,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10677"
+     "doc-model-id": "51"
     },
     {
      "name": "Curve",
@@ -2776,7 +2780,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10678"
+     "doc-model-id": "52"
     },
     {
      "name": "Curve",
@@ -2819,7 +2823,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10679"
+     "doc-model-id": "53"
     },
     {
      "name": "Curve",
@@ -2870,7 +2874,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10680"
+     "doc-model-id": "54"
     },
     {
      "name": "Curve",
@@ -2917,7 +2921,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10681"
+     "doc-model-id": "55"
     },
     {
      "name": "Curve",
@@ -2976,7 +2980,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10682"
+     "doc-model-id": "56"
     },
     {
      "name": "Curve",
@@ -3035,7 +3039,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10683"
+     "doc-model-id": "57"
     },
     {
      "name": "Curve",
@@ -3094,7 +3098,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10684"
+     "doc-model-id": "58"
     },
     {
      "name": "Curve",
@@ -3169,7 +3173,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10685"
+     "doc-model-id": "59"
     },
     {
      "name": "Curve",
@@ -3220,7 +3224,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10686"
+     "doc-model-id": "60"
     },
     {
      "name": "Curve",
@@ -3263,7 +3267,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10687"
+     "doc-model-id": "61"
     },
     {
      "name": "Curve",
@@ -3431,7 +3435,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10688"
+     "doc-model-id": "62"
     },
     {
      "name": "Curve",
@@ -3503,7 +3507,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10689"
+     "doc-model-id": "63"
     },
     {
      "name": "Curve",
@@ -3533,7 +3537,7 @@
       463.918258807571
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10690"
+     "doc-model-id": "64"
     },
     {
      "name": "Curve",
@@ -3563,7 +3567,7 @@
       342.1277264985647
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10691"
+     "doc-model-id": "65"
     },
     {
      "name": "Curve",
@@ -3609,7 +3613,7 @@
       384.9159969129244
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10692"
+     "doc-model-id": "66"
     },
     {
      "name": "Curve",
@@ -3647,7 +3651,7 @@
       467.93146929374376
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10693"
+     "doc-model-id": "67"
     },
     {
      "name": "Curve",
@@ -3685,7 +3689,7 @@
       319.1423607477165
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10694"
+     "doc-model-id": "68"
     },
     {
      "name": "Curve",
@@ -3720,7 +3724,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10695"
+     "doc-model-id": "69"
     },
     {
      "name": "Curve",
@@ -3755,7 +3759,7 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10696"
+     "doc-model-id": "70"
     },
     {
      "name": "Curve",
@@ -3835,7 +3839,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10697"
+     "doc-model-id": "71"
     },
     {
      "name": "Curve",
@@ -3915,14 +3919,14 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10698"
+     "doc-model-id": "72"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": true,
    "doc-model": "Layer",
-   "doc-model-id": "10699"
+   "doc-model-id": "73"
   },
   {
    "name": "Santa",
@@ -3980,7 +3984,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "11748"
+     "doc-model-id": "74"
     },
     {
      "name": "Curve",
@@ -4047,7 +4051,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "14405"
+     "doc-model-id": "75"
     },
     {
      "name": "Curve",
@@ -4090,7 +4094,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "13036"
+     "doc-model-id": "76"
     },
     {
      "name": "Curve",
@@ -4189,7 +4193,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "11750"
+     "doc-model-id": "77"
     },
     {
      "name": "Curve",
@@ -4244,7 +4248,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "11751"
+     "doc-model-id": "78"
     },
     {
      "name": "Curve",
@@ -4311,7 +4315,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12111"
+     "doc-model-id": "79"
     },
     {
      "name": "Curve",
@@ -4350,7 +4354,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12759"
+     "doc-model-id": "80"
     },
     {
      "name": "Curve",
@@ -4405,7 +4409,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12781"
+     "doc-model-id": "81"
     },
     {
      "name": "Curve",
@@ -4460,7 +4464,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "14425"
+     "doc-model-id": "82"
     },
     {
      "name": "Curve",
@@ -4539,7 +4543,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12065"
+     "doc-model-id": "83"
     },
     {
      "name": "Curve",
@@ -4610,7 +4614,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12723"
+     "doc-model-id": "84"
     },
     {
      "name": "Curve",
@@ -4701,7 +4705,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12880"
+     "doc-model-id": "85"
     },
     {
      "name": "Curve",
@@ -4792,7 +4796,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12928"
+     "doc-model-id": "86"
     },
     {
      "name": "Curve",
@@ -4827,7 +4831,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12833"
+     "doc-model-id": "87"
     },
     {
      "name": "Curve",
@@ -4862,7 +4866,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12843"
+     "doc-model-id": "88"
     },
     {
      "name": "Curve",
@@ -4913,7 +4917,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "12988"
+     "doc-model-id": "89"
     },
     {
      "name": "Curve",
@@ -4960,7 +4964,7 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "13054"
+     "doc-model-id": "90"
     },
     {
      "name": "Group",
@@ -5042,7 +5046,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11759"
+       "doc-model-id": "91"
       },
       {
        "name": "Curve",
@@ -5121,7 +5125,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11760"
+       "doc-model-id": "92"
       },
       {
        "name": "Curve",
@@ -5156,7 +5160,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11761"
+       "doc-model-id": "93"
       },
       {
        "name": "Curve",
@@ -5191,7 +5195,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11762"
+       "doc-model-id": "94"
       },
       {
        "name": "Curve",
@@ -5234,7 +5238,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11763"
+       "doc-model-id": "95"
       },
       {
        "name": "Curve",
@@ -5294,7 +5298,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11764"
+       "doc-model-id": "96"
       },
       {
        "name": "Curve",
@@ -5354,7 +5358,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11765"
+       "doc-model-id": "97"
       },
       {
        "name": "Curve",
@@ -5397,7 +5401,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11766"
+       "doc-model-id": "98"
       },
       {
        "name": "Curve",
@@ -5440,7 +5444,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11767"
+       "doc-model-id": "99"
       },
       {
        "name": "Curve",
@@ -5491,7 +5495,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11768"
+       "doc-model-id": "100"
       },
       {
        "name": "Curve",
@@ -5538,12 +5542,12 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11769"
+       "doc-model-id": "101"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "12694"
+     "doc-model-id": "102"
     },
     {
      "name": "Group",
@@ -5605,7 +5609,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11770"
+       "doc-model-id": "103"
       },
       {
        "name": "Curve",
@@ -5664,7 +5668,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11771"
+       "doc-model-id": "104"
       },
       {
        "name": "Curve",
@@ -5723,7 +5727,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11772"
+       "doc-model-id": "105"
       },
       {
        "name": "Curve",
@@ -5806,7 +5810,7 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11773"
+       "doc-model-id": "106"
       },
       {
        "name": "Curve",
@@ -5857,7 +5861,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11774"
+       "doc-model-id": "107"
       },
       {
        "name": "Curve",
@@ -5900,12 +5904,12 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "11775"
+       "doc-model-id": "108"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "12713"
+     "doc-model-id": "109"
     },
     {
      "name": "Group",
@@ -5943,7 +5947,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "13985"
+       "doc-model-id": "110"
       },
       {
        "name": "Curve",
@@ -5986,7 +5990,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "13486"
+       "doc-model-id": "111"
       },
       {
        "name": "Curve",
@@ -6029,7 +6033,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "13487"
+       "doc-model-id": "112"
       },
       {
        "name": "Curve",
@@ -6088,12 +6092,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "13488"
+       "doc-model-id": "113"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "13489"
+     "doc-model-id": "114"
     },
     {
      "name": "Group",
@@ -6131,7 +6135,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14019"
+       "doc-model-id": "115"
       },
       {
        "name": "Curve",
@@ -6174,7 +6178,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14020"
+       "doc-model-id": "116"
       },
       {
        "name": "Curve",
@@ -6217,7 +6221,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14021"
+       "doc-model-id": "117"
       },
       {
        "name": "Curve",
@@ -6276,12 +6280,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14022"
+       "doc-model-id": "118"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14023"
+     "doc-model-id": "119"
     },
     {
      "name": "Group",
@@ -6319,7 +6323,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14059"
+       "doc-model-id": "120"
       },
       {
        "name": "Curve",
@@ -6362,7 +6366,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14060"
+       "doc-model-id": "121"
       },
       {
        "name": "Curve",
@@ -6405,7 +6409,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14061"
+       "doc-model-id": "122"
       },
       {
        "name": "Curve",
@@ -6464,12 +6468,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14062"
+       "doc-model-id": "123"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14063"
+     "doc-model-id": "124"
     },
     {
      "name": "Group",
@@ -6507,7 +6511,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14064"
+       "doc-model-id": "125"
       },
       {
        "name": "Curve",
@@ -6550,7 +6554,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14065"
+       "doc-model-id": "126"
       },
       {
        "name": "Curve",
@@ -6593,7 +6597,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14066"
+       "doc-model-id": "127"
       },
       {
        "name": "Curve",
@@ -6652,12 +6656,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14067"
+       "doc-model-id": "128"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14068"
+     "doc-model-id": "129"
     },
     {
      "name": "Group",
@@ -6695,7 +6699,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14127"
+       "doc-model-id": "130"
       },
       {
        "name": "Curve",
@@ -6738,7 +6742,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14128"
+       "doc-model-id": "131"
       },
       {
        "name": "Curve",
@@ -6781,7 +6785,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14129"
+       "doc-model-id": "132"
       },
       {
        "name": "Curve",
@@ -6840,12 +6844,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14130"
+       "doc-model-id": "133"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14131"
+     "doc-model-id": "134"
     },
     {
      "name": "Group",
@@ -6883,7 +6887,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14132"
+       "doc-model-id": "135"
       },
       {
        "name": "Curve",
@@ -6926,7 +6930,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14133"
+       "doc-model-id": "136"
       },
       {
        "name": "Curve",
@@ -6969,7 +6973,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14134"
+       "doc-model-id": "137"
       },
       {
        "name": "Curve",
@@ -7028,12 +7032,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14135"
+       "doc-model-id": "138"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14136"
+     "doc-model-id": "139"
     },
     {
      "name": "Group",
@@ -7071,7 +7075,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14137"
+       "doc-model-id": "140"
       },
       {
        "name": "Curve",
@@ -7114,7 +7118,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14138"
+       "doc-model-id": "141"
       },
       {
        "name": "Curve",
@@ -7157,7 +7161,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14139"
+       "doc-model-id": "142"
       },
       {
        "name": "Curve",
@@ -7216,12 +7220,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14140"
+       "doc-model-id": "143"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14141"
+     "doc-model-id": "144"
     },
     {
      "name": "Group",
@@ -7259,7 +7263,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14229"
+       "doc-model-id": "145"
       },
       {
        "name": "Curve",
@@ -7302,7 +7306,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14230"
+       "doc-model-id": "146"
       },
       {
        "name": "Curve",
@@ -7345,7 +7349,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14231"
+       "doc-model-id": "147"
       },
       {
        "name": "Curve",
@@ -7404,12 +7408,12 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14232"
+       "doc-model-id": "148"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14233"
+     "doc-model-id": "149"
     },
     {
      "name": "Group",
@@ -7447,7 +7451,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14234"
+       "doc-model-id": "150"
       },
       {
        "name": "Curve",
@@ -7490,7 +7494,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14235"
+       "doc-model-id": "151"
       },
       {
        "name": "Curve",
@@ -7533,7 +7537,7 @@
         "C"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14236"
+       "doc-model-id": "152"
       },
       {
        "name": "Curve",
@@ -7592,19 +7596,19 @@
         "S"
        ],
        "doc-model": "Curve",
-       "doc-model-id": "14237"
+       "doc-model-id": "153"
       }
      ],
      "isExpanded": false,
      "doc-model": "Group",
-     "doc-model-id": "14238"
+     "doc-model-id": "154"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": true,
    "doc-model": "Layer",
-   "doc-model-id": "11746"
+   "doc-model-id": "155"
   },
   {
    "name": "Label",
@@ -8244,14 +8248,14 @@
       "S"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10701"
+     "doc-model-id": "156"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "10702"
+   "doc-model-id": "157"
   },
   {
    "name": "Help",
@@ -8536,14 +8540,14 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "11257"
+     "doc-model-id": "158"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": true,
    "doc-model": "Layer",
-   "doc-model-id": "11259"
+   "doc-model-id": "159"
   },
   {
    "name": "Blog",
@@ -8957,14 +8961,842 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "10700"
+     "doc-model-id": "160"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": false,
    "doc-model": "Layer",
-   "doc-model-id": "11261"
+   "doc-model-id": "161"
+  },
+  {
+   "name": "Tips",
+   "children": [
+    {
+     "name": "Converted text",
+     "fill": {
+      "color": "rgb(233,108,76)",
+      "gradient": null,
+      "doc-model": "ObservableObject"
+     },
+     "stroke": {
+      "color": "transparent",
+      "width": 2,
+      "doc-model": "ObservableObject"
+     },
+     "opacity": 1,
+     "path": [
+      "P",
+      "c",
+      706.0898437499998,
+      432.14843749999983,
+      "S",
+      "c",
+      695.0253906249998,
+      432.14843749999983,
+      "S",
+      "c",
+      695.0253906249998,
+      285.4101562499999,
+      "S",
+      "c",
+      643.9999999999999,
+      285.4101562499999,
+      "S",
+      "c",
+      643.9999999999999,
+      275.0976562499999,
+      "S",
+      "c",
+      757.1152343749998,
+      275.0976562499999,
+      "S",
+      "c",
+      757.1152343749998,
+      285.4101562499999,
+      "S",
+      "c",
+      706.0898437499998,
+      285.4101562499999,
+      "S",
+      "P",
+      "c",
+      788.3749999999999,
+      432.14843749999983,
+      "S",
+      "c",
+      777.7402343749998,
+      432.14843749999983,
+      "S",
+      "c",
+      777.7402343749998,
+      315.38085937499983,
+      "S",
+      "c",
+      788.3749999999999,
+      315.38085937499983,
+      "S",
+      "P",
+      "s",
+      776.2363281249998,
+      282.9394531249999,
+      "C",
+      "s",
+      778,
+      274.9999999999999,
+      "C",
+      "s",
+      783.0039062499999,
+      272.6269531249999,
+      "C",
+      "s",
+      788.2138671874999,
+      275.3124999999999,
+      "C",
+      "s",
+      790.0937499999999,
+      282.9394531249999,
+      "C",
+      "s",
+      788.2138671874999,
+      290.5664062499999,
+      "C",
+      "s",
+      783.0039062499999,
+      293.3593749999999,
+      "C",
+      "s",
+      778,
+      289.9999999999999,
+      "C",
+      "P",
+      "s",
+      877.4277343749999,
+      434.29687499999983,
+      "C",
+      "c",
+      838.1113281249999,
+      414.10156249999983,
+      "S",
+      "c",
+      837.3593749999999,
+      414.10156249999983,
+      "S",
+      "s",
+      837.6816406249999,
+      423.12499999999983,
+      "a",
+      1.5350972141155728,
+      "C",
+      "s",
+      838.1113281249999,
+      440.52734374999983,
+      "a",
+      1.5707963267948966,
+      "S",
+      "c",
+      838.1113281249999,
+      484.99999999999983,
+      "S",
+      "c",
+      827.4765624999999,
+      484.99999999999983,
+      "S",
+      "c",
+      827.4765624999999,
+      315.38085937499983,
+      "S",
+      "c",
+      836.4999999999999,
+      315.38085937499983,
+      "S",
+      "c",
+      838.5410156249999,
+      332.03124999999983,
+      "S",
+      "c",
+      839.1855468749999,
+      332.03124999999983,
+      "C",
+      "s",
+      853,
+      318.9999999999999,
+      "C",
+      "s",
+      877.6425781249999,
+      313.12499999999983,
+      "C",
+      "s",
+      911,
+      324.9999999999999,
+      "C",
+      "s",
+      926.0898437499999,
+      373.81835937499983,
+      "C",
+      "s",
+      913.0380859374999,
+      418.45214843749983,
+      "C",
+      "P",
+      "s",
+      877.2128906249999,
+      424.84374999999983,
+      "C",
+      "s",
+      904.9814453124999,
+      411.52343749999983,
+      "C",
+      "s",
+      914.8105468749999,
+      374.24804687499983,
+      "C",
+      "s",
+      903,
+      332.9999999999999,
+      "C",
+      "s",
+      877.6425781249999,
+      322.79296874999983,
+      "C",
+      "s",
+      847.6718749999999,
+      334.01855468749983,
+      "C",
+      "s",
+      838.1113281249999,
+      370.59570312499983,
+      "a",
+      1.5707963267948966,
+      "S",
+      "s",
+      838.1113281249999,
+      374.03320312499983,
+      "a",
+      1.5707963267948966,
+      "C",
+      "s",
+      847.2958984374999,
+      413.13476562499983,
+      "C",
+      "P",
+      "s",
+      1030.8261718749995,
+      401.74804687499983,
+      "C",
+      "s",
+      1018.9023437499997,
+      425.86425781249983,
+      "C",
+      "s",
+      985.0644531249999,
+      434.29687499999983,
+      "C",
+      "c",
+      947.8964843749999,
+      427.09960937499983,
+      "S",
+      "c",
+      947.8964843749999,
+      415.60546874999983,
+      "C",
+      "s",
+      985.0644531249999,
+      424.41406249999983,
+      "C",
+      "s",
+      1011.3291015624998,
+      418.66699218749983,
+      "C",
+      "s",
+      1020.2988281249995,
+      403.35937499999983,
+      "C",
+      "s",
+      1013.1552734374998,
+      388.53515624999983,
+      "C",
+      "s",
+      989.6835937499999,
+      376.71874999999983,
+      "C",
+      "s",
+      965.0839843749999,
+      365.81542968749983,
+      "C",
+      "s",
+      954.3955078124999,
+      355.50292968749983,
+      "C",
+      "s",
+      950.7968749999999,
+      341.48437499999983,
+      "C",
+      "s",
+      961.8076171874999,
+      320.75195312499983,
+      "C",
+      "s",
+      992.5839843749999,
+      313.12499999999983,
+      "C",
+      "c",
+      1028.4628906249995,
+      320.21484374999983,
+      "S",
+      "c",
+      1024.4882812499995,
+      329.88281249999983,
+      "C",
+      "s",
+      992.5839843749999,
+      322.79296874999983,
+      "C",
+      "s",
+      969.9179687499999,
+      327.51953124999983,
+      "C",
+      "s",
+      961.5390624999999,
+      340.62499999999983,
+      "C",
+      "s",
+      968.0380859374999,
+      355.23437499999983,
+      "C",
+      "s",
+      993.4433593749999,
+      367.48046874999983,
+      "C",
+      "s",
+      1016.4316406249997,
+      377.73925781249983,
+      "C",
+      "s",
+      1027.2275390624995,
+      388.10546874999983,
+      "C",
+      "P",
+      "s",
+      1111.71484375,
+      392.29492187499983,
+      "C",
+      "s",
+      1119.6103515625,
+      367.05078124999983,
+      "C",
+      "c",
+      1149.09765625,
+      345.02929687499983,
+      "S",
+      "s",
+      1141.041015625,
+      336.22070312499983,
+      "a",
+      3.971547295123451,
+      "C",
+      "s",
+      1130.513671875,
+      321.28906249999983,
+      "C",
+      "s",
+      1127.076171875,
+      306.03515624999983,
+      "C",
+      "s",
+      1137.3349609375,
+      281.6503906249999,
+      "C",
+      "s",
+      1164.888671875,
+      272.6269531249999,
+      "C",
+      "s",
+      1191.2607421875,
+      281.3281249999999,
+      "C",
+      "s",
+      1200.982421875,
+      305.39062499999983,
+      "C",
+      "s",
+      1193.462890625,
+      326.06933593749983,
+      "C",
+      "c",
+      1166.28515625,
+      346.96289062499983,
+      "S",
+      "c",
+      1214.83984375,
+      396.05468749999983,
+      "C",
+      "s",
+      1226.01171875,
+      379.18945312499983,
+      "C",
+      "c",
+      1234.068359375,
+      357.59765624999983,
+      "S",
+      "c",
+      1244.380859375,
+      357.59765624999983,
+      "C",
+      "s",
+      1234,
+      384.9999999999999,
+      "C",
+      "c",
+      1221.9296875,
+      403.35937499999983,
+      "S",
+      "c",
+      1250.50390625,
+      432.14843749999983,
+      "S",
+      "c",
+      1236.001953125,
+      432.14843749999983,
+      "S",
+      "c",
+      1215.26953125,
+      410.98632812499983,
+      "C",
+      "s",
+      1197.65234375,
+      425.11230468749983,
+      "C",
+      "s",
+      1180.7333984375,
+      431.93359374999983,
+      "C",
+      "s",
+      1159.83984375,
+      434.29687499999983,
+      "C",
+      "s",
+      1124.5517578125,
+      423.23242187499983,
+      "C",
+      "P",
+      "s",
+      1160.591796875,
+      424.62890624999983,
+      "C",
+      "s",
+      1185.7822265625,
+      419.95605468749983,
+      "C",
+      "c",
+      1208.287109375,
+      404.21874999999983,
+      "S",
+      "c",
+      1156.40234375,
+      352.11914062499983,
+      "C",
+      "s",
+      1135.2939453125,
+      365.27832031249983,
+      "C",
+      "s",
+      1125.8408203125,
+      377.04101562499983,
+      "C",
+      "s",
+      1122.88671875,
+      391.86523437499983,
+      "C",
+      "s",
+      1132.876953125,
+      415.92773437499983,
+      "C",
+      "P",
+      "s",
+      1138.5703125,
+      305.82031249999983,
+      "C",
+      "s",
+      1142.8671875,
+      321.50390624999983,
+      "C",
+      "c",
+      1159.1953125,
+      340.19531249999983,
+      "C",
+      "s",
+      1182.935546875,
+      323.11523437499983,
+      "C",
+      "s",
+      1189.595703125,
+      304.96093749999983,
+      "C",
+      "s",
+      1182.935546875,
+      288.5791015624999,
+      "C",
+      "s",
+      1164.888671875,
+      282.2949218749999,
+      "C",
+      "s",
+      1145.6064453125,
+      288.5253906249999,
+      "C",
+      "P",
+      "c",
+      1375.650390625,
+      432.14843749999983,
+      "S",
+      "c",
+      1364.5859375,
+      432.14843749999983,
+      "S",
+      "c",
+      1364.5859375,
+      285.4101562499999,
+      "S",
+      "c",
+      1313.560546875,
+      285.4101562499999,
+      "S",
+      "c",
+      1313.560546875,
+      275.0976562499999,
+      "S",
+      "c",
+      1426.67578125,
+      275.0976562499999,
+      "S",
+      "c",
+      1426.67578125,
+      285.4101562499999,
+      "S",
+      "c",
+      1375.650390625,
+      285.4101562499999,
+      "S",
+      "P",
+      "s",
+      1482.3203125,
+      313.12499999999983,
+      "C",
+      "c",
+      1498.21875,
+      314.62890624999983,
+      "S",
+      "c",
+      1496.177734375,
+      324.83398437499983,
+      "C",
+      "s",
+      1481.03125,
+      323.00781249999983,
+      "C",
+      "s",
+      1456.5390625,
+      335.68359374999983,
+      "C",
+      "s",
+      1446.978515625,
+      367.69531249999983,
+      "a",
+      1.5707963267948966,
+      "S",
+      "c",
+      1446.978515625,
+      432.14843749999983,
+      "S",
+      "c",
+      1436.34375,
+      432.14843749999983,
+      "S",
+      "c",
+      1436.34375,
+      315.38085937499983,
+      "S",
+      "c",
+      1445.3671875,
+      315.38085937499983,
+      "S",
+      "c",
+      1446.44140625,
+      336.43554687499983,
+      "S",
+      "c",
+      1447.193359375,
+      336.43554687499983,
+      "C",
+      "s",
+      1462.5546875,
+      318.33496093749983,
+      "C",
+      "P",
+      "c",
+      1532.59375,
+      432.14843749999983,
+      "S",
+      "c",
+      1521.958984375,
+      432.14843749999983,
+      "S",
+      "c",
+      1521.958984375,
+      315.38085937499983,
+      "S",
+      "c",
+      1532.59375,
+      315.38085937499983,
+      "S",
+      "P",
+      "s",
+      1520.455078125,
+      282.9394531249999,
+      "C",
+      "s",
+      1527.22265625,
+      272.6269531249999,
+      "C",
+      "s",
+      1532.4326171875,
+      275.3124999999999,
+      "C",
+      "s",
+      1534.3125,
+      282.9394531249999,
+      "C",
+      "s",
+      1532.4326171875,
+      290.5664062499999,
+      "C",
+      "s",
+      1527.22265625,
+      293.3593749999999,
+      "C",
+      "P",
+      "s",
+      1618.31640625,
+      434.29687499999983,
+      "C",
+      "s",
+      1579.107421875,
+      418.50585937499983,
+      "C",
+      "s",
+      1564.927734375,
+      374.46289062499983,
+      "C",
+      "s",
+      1579.64453125,
+      329.29199218749983,
+      "C",
+      "s",
+      1619.927734375,
+      313.12499999999983,
+      "C",
+      "c",
+      1648.931640625,
+      318.38867187499983,
+      "S",
+      "c",
+      1646.03125,
+      327.84179687499983,
+      "C",
+      "s",
+      1619.712890625,
+      322.79296874999983,
+      "C",
+      "s",
+      1587.1640625,
+      336.05957031249983,
+      "C",
+      "s",
+      1576.099609375,
+      374.24804687499983,
+      "C",
+      "s",
+      1587.1640625,
+      411.25488281249983,
+      "C",
+      "s",
+      1618.1015625,
+      424.62890624999983,
+      "C",
+      "c",
+      1647.642578125,
+      418.93554687499983,
+      "S",
+      "c",
+      1647.642578125,
+      428.81835937499983,
+      "C",
+      "P",
+      "c",
+      1686.63671875,
+      380.90820312499983,
+      "S",
+      "c",
+      1746.255859375,
+      315.38085937499983,
+      "S",
+      "c",
+      1759.146484375,
+      315.38085937499983,
+      "S",
+      "c",
+      1713.169921875,
+      365.22460937499983,
+      "S",
+      "c",
+      1763.12109375,
+      432.14843749999983,
+      "S",
+      "c",
+      1750.337890625,
+      432.14843749999983,
+      "S",
+      "c",
+      1705.97265625,
+      373.17382812499983,
+      "S",
+      "c",
+      1686.8515625,
+      390.57617187499983,
+      "S",
+      "c",
+      1686.8515625,
+      432.14843749999983,
+      "S",
+      "c",
+      1676.216796875,
+      432.14843749999983,
+      "S",
+      "c",
+      1676.216796875,
+      264.9999999999999,
+      "S",
+      "c",
+      1686.8515625,
+      264.9999999999999,
+      "S",
+      "c",
+      1686.8515625,
+      348.78906249999983,
+      "S",
+      "c",
+      1686.099609375,
+      380.90820312499983,
+      "S",
+      "P",
+      "s",
+      1855.07421875,
+      401.74804687499983,
+      "C",
+      "s",
+      1843.150390625,
+      425.86425781249983,
+      "C",
+      "s",
+      1809.3125,
+      434.29687499999983,
+      "C",
+      "c",
+      1772.14453125,
+      427.09960937499983,
+      "S",
+      "c",
+      1772.14453125,
+      415.60546874999983,
+      "C",
+      "s",
+      1809.3125,
+      424.41406249999983,
+      "C",
+      "s",
+      1835.5771484375,
+      418.66699218749983,
+      "C",
+      "s",
+      1844.546875,
+      403.35937499999983,
+      "C",
+      "s",
+      1837.4033203125,
+      388.53515624999983,
+      "C",
+      "s",
+      1813.931640625,
+      376.71874999999983,
+      "C",
+      "s",
+      1789.33203125,
+      365.81542968749983,
+      "C",
+      "s",
+      1778.6435546875,
+      355.50292968749983,
+      "C",
+      "s",
+      1775.044921875,
+      341.48437499999983,
+      "C",
+      "s",
+      1786.0556640625,
+      320.75195312499983,
+      "C",
+      "s",
+      1816.83203125,
+      313.12499999999983,
+      "C",
+      "c",
+      1852.7109375,
+      320.21484374999983,
+      "S",
+      "c",
+      1848.736328125,
+      329.88281249999983,
+      "C",
+      "s",
+      1816.83203125,
+      322.79296874999983,
+      "C",
+      "s",
+      1794.166015625,
+      327.51953124999983,
+      "C",
+      "s",
+      1785.787109375,
+      340.62499999999983,
+      "C",
+      "s",
+      1792.2861328125,
+      355.23437499999983,
+      "C",
+      "s",
+      1817.69140625,
+      367.48046874999983,
+      "C",
+      "s",
+      1840.6796875,
+      377.73925781249983,
+      "C",
+      "s",
+      1851.4755859375,
+      388.10546874999983,
+      "C"
+     ],
+     "doc-model": "Curve",
+     "doc-model-id": "224"
+    }
+   ],
+   "isExpanded": false,
+   "locked": false,
+   "hidden": true,
+   "doc-model": "Layer",
+   "doc-model-id": "165"
   },
   {
    "name": "Everywhere",
@@ -10424,14 +11256,14 @@
       "C"
      ],
      "doc-model": "Curve",
-     "doc-model-id": "11318"
+     "doc-model-id": "162"
     }
    ],
    "isExpanded": false,
    "locked": false,
    "hidden": true,
    "doc-model": "Layer",
-   "doc-model-id": "11286"
+   "doc-model-id": "163"
   }
  ],
  "rulers": [],

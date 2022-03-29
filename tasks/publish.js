@@ -24,6 +24,7 @@ async function publish() {
     await fs.remove('www/help');
     await run('npm run blog');
     await run('npm run help');
+    await run('npm run tips');
     console.info('\x1b[32m', 'Build done', '\x1b[0m')
     await fs.copy('www', '../darkreader.github.io');
     console.info('\x1b[32m', 'Files copied', '\x1b[0m');
