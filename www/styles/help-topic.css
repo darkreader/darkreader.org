@@ -10,6 +10,33 @@
     left: calc(50vw - 10rem);
 }
 
+@media screen and (min-width: 74rem) {
+    .page-grid-body {
+        grid:
+            "left header side" auto
+            "left inside side" auto
+            "left content side" auto
+            "left footer side" auto
+            / 16rem auto 16rem;
+        max-width: 74rem;
+    }
+
+    .page-grid-side {
+        right: calc(50% - 37rem);
+    }
+
+    .page-grid-content > h1 + p + ul {
+        left: calc(50% - 37rem);
+        top: 2rem;
+        position: fixed;
+        width: 12rem;
+    }
+
+    .page-grid-ios {
+        left: calc(50% - 37rem);
+    }
+}
+
 /*
 .page-grid-side {
     display: none;
