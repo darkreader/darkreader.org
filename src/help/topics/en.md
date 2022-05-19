@@ -103,6 +103,13 @@ Read how to use the developer tools [here](https://github.com/darkreader/darkrea
 
 <h2 id="faq">FAQ</h2>
 
+<h4 class="text-highlight">How to support Dark Reader</h4>
+
+1. Install our <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS app</a>.
+2. Install our sponsors' extensions.
+3. <a data-s="d-help-faq" href="https://opencollective.com/darkreader/donate">Donate</a>.
+4. Suggest to friends and colleagues.
+
 #### The extension asks for permissions to read website data
 
 The extension needs these permissions to be able to analyze and modify website appearence,

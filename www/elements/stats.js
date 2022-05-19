@@ -47,3 +47,15 @@ if (document.visibilityState !== 'visible') {
 } else {
     viewer();
 }
+
+function subscribe() {
+    document.querySelectorAll('[data-s]').forEach((el) => {
+        clicker(el, el.getAttribute('data-s'));
+    });
+}
+
+if (document.readyState === 'interactive') {
+    subscribe();
+} else {
+    document.addEventListener('readystatechange', subscribe, {once: true});
+}
