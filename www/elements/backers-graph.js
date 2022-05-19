@@ -63,8 +63,10 @@ function createBackersGraph(backers) {
     aapeliOrg.pri = 1;
     const icons8Org = backers.find(o => o.name.toLowerCase().includes('icons8'));
     icons8Org.pri = 1;
-    const qulixOrg = backers.find(o => o.name.toLowerCase().includes('qulix'));
-    qulixOrg.pri = 1;
+    const instinctools = backers.find(o => o.name.toLowerCase().includes('instinctools'));
+    instinctools.pri = 1;
+    instinctools.name = '*instinctools: Software Development Services';
+    instinctools.info = 'instinctools is a software product development and consulting company focused on digital transformation services headquartered in Germany and USA.';
     const vpnBlogOrg = backers.find(o => o.name.toLowerCase().includes('vpnwelt'));
     vpnBlogOrg.url = 'https://vpnwelt.com/vpn-kostenlos/';
     vpnBlogOrg.pri = 1;
@@ -73,7 +75,7 @@ function createBackersGraph(backers) {
     const toucanOrg = backers.find(o => o.name.toLowerCase().includes('toucan'));
 
     const displayBackers = backers
-        .filter((b) => ![aapeliOrg, icons8Org, qulixOrg, vpnBlogOrg, toucanOrg].includes(b))
+        .filter((b) => ![aapeliOrg, icons8Org, instinctools, vpnBlogOrg, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -90,8 +92,8 @@ function createBackersGraph(backers) {
     return html('div', {class: 'grid'},
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
         createBackerLink(aapeliOrg, 'wide', null, 'aapeli'),
-        createBackerLink(qulixOrg, 'wide', null, 'qulix'),
         createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
+        createBackerLink(instinctools, 'wide', null, 'instinctools'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
     );
 }
@@ -247,6 +249,9 @@ const cssText = `
 }
 .icons8 .backer-pic {
     background-color: #1eb141;
+}
+.instinctools {
+    background-color: #27253d;
 }
 .qulix {
     background-color: #1e547e;

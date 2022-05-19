@@ -31,7 +31,7 @@ async function updateBackers() {
         }))
         .filter((d, i, arr) => arr.slice(0, i).every(x => x.url !== d.url))
         .filter(d => ['user', 'org'].includes(d.type))
-        .slice(0, 50);
+        .slice(0, 60);
 
     const imageProcessor = await createImageProcessor();
     for (const backer of topBackers) {
@@ -57,7 +57,9 @@ async function updateBackers() {
             'image/jpeg': 'jpg',
         }[type];
         if (!extension) {
-            throw new Error(`No extension for ${type}`);
+            console.log(`No extension for ${type}`);
+            backer.pic = null;
+            continue;
         }
 
         const file = `/images/backers/${alias}.${extension}`;
