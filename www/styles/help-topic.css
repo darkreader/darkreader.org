@@ -10,6 +10,31 @@
     left: calc(50vw - 10rem);
 }
 
+.page-grid-left {
+    display: none;
+    grid-area: left;
+    position: fixed;
+    width: 16rem;
+}
+
+.page-grid-left > darkreader-ios-static {
+    position: absolute;
+    transform: translateY(10rem);
+    transition: transform 500ms;
+}
+
+.page-grid-left > darkreader-ios-static.ios__show-up {
+    transform: translateY(1.5rem);
+}
+
+.page-grid-left > darkreader-ios-static.ios__scroll-down {
+    transform: translateY(-0.5rem);
+}
+
+.page-grid-left > darkreader-ios-static.ios__scroll-up {
+    transform: translateY(3.5rem);
+}
+
 @media screen and (min-width: 74rem) {
     .page-grid-body {
         grid:
@@ -25,15 +50,16 @@
         right: calc(50% - 37rem);
     }
 
-    .page-grid-content > h1 + p + ul {
-        left: calc(50% - 37rem);
-        top: 2rem;
-        position: fixed;
-        width: 12rem;
+    .page-grid-left {
+        display: unset;
+    }
+
+    .list-copied {
+        display: none;
     }
 
     .page-grid-ios {
-        left: calc(50% - 37rem);
+        display: none;
     }
 }
 

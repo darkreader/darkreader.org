@@ -34,6 +34,26 @@
         <darkreader-backers-side></darkreader-backers-side>
         <script type="module" src="/elements/backers-right.js"></script>
     </aside>
+    <aside class="page-grid-left">
+        <ul></ul>
+        <script>
+            (() => {
+                const script = document.currentScript;
+                const list = document.querySelector('.page-grid-content > h1 + p + ul');
+                if (!script || !list) {
+                    return;
+                }
+                const parent = script.parentElement;
+                const placeholder = parent.querySelector('ul');
+                const copy = list.cloneNode(true);
+                copy.classList.add('nav');
+                placeholder.replaceWith(copy);
+                list.classList.add('list-copied');
+            })();
+        </script>
+        <darkreader-ios-static></darkreader-ios-static>
+        <script type="module" src="/elements/ios-static.js"></script>
+    </aside>
     <aside class="page-grid-ios">
         <darkreader-ios-side></darkreader-ios-side>
         <script type="module" src="/elements/ios.js"></script>
