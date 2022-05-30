@@ -349,6 +349,7 @@ class BackerHeaderElement extends HTMLElement {
         clicker(qs('.a-lm'), 'ali-top-lm');
         clicker(qs('.safari-logo-link'), 'drsafari-top-logo');
         clicker(qs('.safari-link'), 'drsafari-top-link');
+        clicker(qs('.support-ua a'), 'ua-top-link');
     }
 }
 

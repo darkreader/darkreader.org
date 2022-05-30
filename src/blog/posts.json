@@ -1,8 +1,16 @@
 [
     {
+        "id": "mobile",
+        "date": "2022-05-30T14:45Z",
+        "headline": "Dark Reader for iOS and Android is available",
+        "badge": "@",
+        "icon": "https://darkreader.org/images/mobile-blog-icon.png"
+    },
+    {
         "id": "detect-dark-theme",
         "date": "2022-03-29T16:00Z",
-        "headline": "Detecting website's dark theme in version 4.9.47"
+        "headline": "Detecting website's dark theme in version 4.9.47",
+        "icon": "https://darkreader.org/images/detector-blog-icon.png"
     },
     {
         "id": "no-war",

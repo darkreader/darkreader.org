@@ -90,3 +90,11 @@ video {
 .text-highlight {
     color: var(--color-highlight);
 }
+
+blockquote {
+    background: #211921;
+    border-left: 0.25rem solid var(--color-highlight);
+    font-style: italic;
+    margin-left: 0;
+    padding-left: 2rem;
+}
