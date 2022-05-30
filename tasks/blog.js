@@ -19,7 +19,7 @@ async function writePosts() {
 
     const template = await fs.readFile('src/blog/post.html', {encoding: 'utf8'});
 
-    async function writePost({id, date, headline}) {
+    async function writePost({id, date, headline}, next) {
         const markdown = await fs.readFile(`src/blog/posts/${id}.md`, {encoding: 'utf8'});
         const contentHTML = marked(markdown);
 
@@ -57,6 +57,9 @@ async function writePosts() {
         result = replace(result, '$PREVIEW', previewURL);
         result = replace(result, '$DESCRIPTION', description);
         result = replace(result, '$CONTENT', contentHTML);
+        result = replace(result, '$NEXT-ID', next.id);
+        result = replace(result, '$NEXT-ICON', next.icon || '/images/icon-256.png');
+        result = replace(result, '$NEXT-TITLE', next.headline);
         await fs.outputFile(`www/blog/${id}/index.html`, result, {encoding: 'utf8'});
 
         const previewPath = `www/images/blog-previews/${id}-preview-small.jpg`;
@@ -79,8 +82,10 @@ async function writePosts() {
         }
     }
 
-    for (let post of posts) {
-        await writePost(post);
+    for (let i = 0; i < posts.length; i++) {
+        const post = posts[i];
+        const next = i === posts.length - 1 ? posts[0] : posts[i + 1];
+        await writePost(post, next);
     }
 
     imageProcessor.destroy();

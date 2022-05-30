@@ -31,3 +31,38 @@ article h6 {
     margin-bottom: 0;
     margin-top: 0.5rem;
 }
+
+.read-next {
+    align-items: center;
+    display: grid;
+    gap: 0.25rem;
+    grid: "top top" auto
+          "icon title" auto
+          / min-content auto;
+    margin: 0 0 2rem auto;
+    max-width: 20rem;
+}
+
+.read-next__top {
+    grid-area: top;
+}
+
+.read-next__top::after {
+    content: "→";
+}
+
+.read-next__icon {
+    background-image: linear-gradient(to bottom, var(--color-highlight), var(--color-text));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    grid-area: icon;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.read-next__title {
+    font-size: 1rem;
+    grid-area: title;
+}
