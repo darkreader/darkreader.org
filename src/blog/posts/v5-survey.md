@@ -8,7 +8,7 @@ Please take part in **a short anonymous survey** <a target="_blank" rel="norefer
     <img src="/images/v5-survey.webp" alt="Dark Reader design sketches" />
 </figure>
 
-Just answer a few questions with pre-defined answers.
+Just answer a few questions with pre-defined responses.
 **There is a chance to propose a new feture!**
 After the completion please click **Submit**.
 
