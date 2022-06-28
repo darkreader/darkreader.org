@@ -1,5 +1,11 @@
 [
     {
+        "id": "v5-survey",
+        "date": "2022-06-28T16:45Z",
+        "headline": "Survey! Please leave us feedback or propose a feature",
+        "icon": "https://darkreader.org/images/survey-blog-icon.png"
+    },
+    {
         "id": "mobile",
         "date": "2022-05-30T14:45Z",
         "headline": "Dark Reader for iOS and Android is available",
