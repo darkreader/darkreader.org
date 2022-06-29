@@ -9,7 +9,7 @@ Please take part in **a short anonymous survey** <a target="_blank" rel="norefer
 </figure>
 
 Just answer a few questions with pre-defined responses.
-**There is a chance to propose a new feture!**
+**There is a chance to propose a new feature!**
 After the completion please click **Submit**.
 
 <a target="_blank" rel="noreferrer noopener" class="text-highlight" href="https://docs.google.com/forms/d/e/1FAIpQLSdmWvOPQ2F7Rk2p5-kXPr5omIu0bDoqdl_3jQCiCWzYjNHcJw/viewform?usp=sf_link">Take part in the survey</a>
