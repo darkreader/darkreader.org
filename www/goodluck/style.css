@@ -1,37 +1,17 @@
 html {
-    --color-bg: white;
-    --color-bg-panel: #ffffff7c;
-    --color-border: #a0b6b946;
-    --color-text: black;
-    --color-text2: #474a50;
-    --color-text3: #96a0a5;
-    --color-ok-bg: #b5f7b8;
-    --color-ok-text: #265a40;
-    --color-link: #0746bb;
+    --color-bg: #141e24;
+    --color-hover: #193945;
+    --color-control: #316d7c;
+    --color-text: #53a1b3;
+    --color-text-hover: white;
+    --color-highlight: #e96c4c;
+    --color-honey: #f68623;
     --font: Segoe UI, Helvetica Neue, Open Sans, sans-serif;
-    --img-bg: url(/images/bg-radial-gradients.svg);
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        --color-bg: #181c1f;
-        --color-bg-panel: #00000065;
-        --color-border: #121f277c;
-        --color-text: #dae3e7;
-        --color-text2: #929da7;
-        --color-text3: #687580;
-        --color-ok-bg: #2e563f;
-        --color-ok-text: #7ae391;
-        --color-link: #50a2ff;
-    }
+    color-scheme: dark;
 }
 
 html {
-    background-attachment: fixed;
     background-color: var(--color-bg);
-    background-image: var(--img-bg);
-    background-position: center;
-    background-size: cover;
 }
 
 html,
@@ -53,39 +33,59 @@ main {
 
 section {
     margin: 0 auto;
-    max-width: 32rem;
+    max-width: 27.5rem;
 }
 
 .uninstalled {
-    background-color: var(--color-ok-bg);
     border-radius: 1rem;
-    box-shadow: 0 0 1rem #06251483;
     box-sizing: border-box;
-    color: var(--color-ok-text);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 0 0.5rem;
+    grid: "icon message" auto "icon feedback" auto / auto auto;
+    justify-content: center;
     padding: 1rem;
+}
+
+.uninstalled__message {
+    align-items: center;
+    color: var(--color-highlight);
+    display: inline-flex;
+    font-weight: bold;
+    grid-area: message;
+}
+
+.icon {
+    background-image: url(/images/icon-256.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    grid-area: icon;
+    height: 3rem;
+    position: relative;
+    top: -0.25rem;
+    width: 3rem;
 }
 
 .feedback-link {
     color: var(--color-text);
     font-weight: 700;
-    text-decoration: none;
+    grid-area: feedback;
+    transition: color 250ms;
 }
 
 .feedback-link:hover {
-    text-decoration: underline;
+    color: var(--color-text-hover);
 }
 
 .recommendations {
     background-color: var(--color-bg-panel);
-    box-shadow: 0 0 2rem #0000002e;
     border-radius: 2rem;
     padding: 1rem 2rem 1.5rem 2rem;
 }
 
 .message {
-    color: var(--color-text2);
+    display: none;
     font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
@@ -131,27 +131,23 @@ section {
 }
 
 .ext__name {
-    color: var(--color-text);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.ext__quick-description {
-    color: var(--color-text2);
+.h-ext .ext__name {
+    color: var(--color-honey);
 }
 
 .ext__rating__stars {
     color: #fc2;
 }
 
-.ext__rating__text {
-    color: var(--color-text2);
-}
-
 .ext__install {
-    background-color: #196de4;
+    background-color: var(--color-control);
     border-radius: 0.5rem;
     box-sizing: border-box;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     color: white;
     display: inline-block;
     font-weight: bold;
@@ -160,104 +156,39 @@ section {
     margin-top: 0.5rem;
     padding: 0 1.5rem;
     text-decoration: none;
+    transition: box-shadow 250ms;
 }
 
 .ext__install:hover {
-    background-color: #0e5cca;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 
 .ext__learn-more {
-    color: var(--color-link);
-    text-decoration: none;
+    color: var(--color-text);
+    transition: color 250ms;
 }
 
 .ext__learn-more:hover {
-    text-decoration: underline;
+    color: var(--color-text-hover);
 }
 
 .ext__description {
     grid-area: desc;
-    color: var(--color-text2);
-}
-
-@media (prefers-color-scheme: light) {
-    .ext__install,
-    .ext__install:hover {
-        box-shadow: none;
-    }
-}
-
-.eu {
-    background-image: url('/images/bella.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: none;
-    height: 65.625rem;
-    position: absolute;
-    width: 20rem;
-}
-
-.eu__message {
-    background-color: white;
-    border: 0.125rem solid black;
-    border-radius: 2rem;
-    color: black;
-    display: none;
-    font-family: EngraversGothic BT, Calibri, serif;
-    font-size: 1.25rem;
-    left: 100%;
-    padding: 1rem;
-    position: absolute;
-    text-align: center;
-    top: 5.5rem;
-    white-space: nowrap;
-    width: max-content;
-}
-
-.eu__message strong {
-    -webkit-text-stroke: 0.05rem black;
 }
 
 .recommendations {
     margin-top: 0;
 }
 
-@media screen and (max-width: 52rem) {
-    aside {
-        padding: 0 1rem;
-    }
-
-    section {
-        margin: 0 auto;
-    }
-
-    .eu {
-        margin: 1rem auto 0 auto;
-        position: relative;
-    }
-
-    .eu__message {
-        left: 1rem;
-        top: -5.5rem;
-    }
-    
-    .recommendations {
-        margin-top: 0;
-        padding: 1rem;
-    }
-}
-
-.final {
-    color: var(--color-text);
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin: 1rem auto;
-    max-width: 32rem;
-    text-align: center;
-    text-shadow: 0 0 1rem var(--color-text3);
+.pp-ext__name {
+    font-style: italic;
+    font-weight: 300;
 }
 
 body:not(.c-h) .h-ext {
+    display: none;
+}
+
+.t-ext {
     display: none;
 }

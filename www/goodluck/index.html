@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Extension was uninstalled</title>
+    <title>Thank you! Hope to see you again!</title>
     <meta name="theme-color" content="#141e24" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/images/puzzle-icon.svg" />
@@ -13,7 +13,8 @@
 <body>
     <main>
         <section class="uninstalled">
-            <span class="uninstalled__message">Dark Reader has been successfully uninstalled</span>
+            <i class="icon"></i>
+            <span class="uninstalled__message">Dark Reader wishes you Good Luck!</span>
             <a href="mailto:darkreaderapp@gmail.com?subject=[Uninstall]%20Feedback" class="feedback-link">
                 Leave feedback
             </a>
@@ -21,18 +22,18 @@
     </main>
     <aside class="recommendations-container">
         <section class="recommendations">
-            <div class="message">More recommended extensions</div>
+            <div class="message">Try more wonderful extensions</div>
             <div class="ext h-ext">
                 <div class="ext__icon h-icon"></div>
                 <div class="ext__mid">
-                    <div class="ext__name">Honey</div>
+                    <div class="ext__name">Honey <span class="pp-ext__name">by PayPal</span></div>
                     <div class="ext__quick-description">Your smart shopping assistant</div>
                     <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
                             class="ext__rating__text">4.8 of 5</span></div>
                     <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader">Learn more</a>
                 </div>
                 <div class="ext__description">
-                    Automatically search and apply coupons on 30,000+ websites when you shop online.
+                    <strong>Automatically search and apply coupons</strong> on 30,000+ websites when you shop online.
                     Join 17,000,000 members who shop with confidence.
                     Honey is a part of <strong><em>PayPal</em></strong> family.
                     <a class="ext__learn-more h-lm" href="https://www.joinhoney.com/darkreader">Learn more</a>.
@@ -56,17 +57,6 @@
             </div>
         </section>
     </aside>
-    <aside class="eu">
-        <div class="eu__message">
-            I see you've uninstalled Dark Reader?<br>
-            <strong>Try other useful extensions too</strong>!
-        </div>
-    </aside>
-    <footer>
-        <section class="final">
-            Dark Reader wishes<br>you goodluck!
-        </section>
-    </footer>
     <script>
         const isFirefox = navigator.userAgent.includes('Firefox');
         const isEdge = navigator.userAgent.includes('Edg');
@@ -79,7 +69,7 @@
         const installs = document.querySelectorAll('.ext__install');
         installs.forEach((el) => {
             const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
-            el.textContent = `Add to ${browser}`;
+            // el.textContent = `Add to ${browser}`;
         });
 
         import('../elements/stats.js')
