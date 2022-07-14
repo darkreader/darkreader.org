@@ -3,14 +3,13 @@
 import {
     createHTMLElement as html,
 } from './utils.js';
-import {isHCountry, isAliCountry} from './locales.js';
+import {isHCountry} from './locales.js';
 import {clicker} from './stats.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 const tURL = 'https://jointoucan.com/partners/darkreader';
 const donateURL = 'https://opencollective.com/darkreader/donate';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
-const alURL = 'https://alitools.io/install?utm_source=partner&utm_medium=darkreader&utm_campaign=dr_welcome';
 
 const htmlText = `
 <div class="support-us">
@@ -25,11 +24,6 @@ const htmlText = `
         No money? <strong>Use <a href="${hURL}" class="h hl">Honey</a></strong>,
         an official <strong><em>PayPal</em></strong> extension,
         that will automatically find discounts when you purchase online.
-    </p>
-    <p class="a-tx">
-        Shopping on AliExpress?
-        Save money with <strong><a href="${alURL}" class="al">Alitools</a></strong>.
-        It automatically activates promo codes and notifies of a price drop.
     </p>
     <p class="t-tx">
         Don't have time on learning a new language?
@@ -64,9 +58,6 @@ a:hover {
 .h {
     color: var(--color-honey-text);
 }
-.al {
-    color: var(--color-ali);
-}
 .t {
     color: var(--color-toucan-text);
 }
@@ -76,23 +67,18 @@ a:hover {
 :host(:not(.c-h)) .h-tx {
     display: none;
 }
-:host(.c-h) .a-tx,
-:host(:not(.c-ali)) .a-tx {
-    display: none;
-}
 `;
 
 class SupportUsElement extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({mode: 'open'});
-        const style = html('style', null, cssText);
+        const style = html('style', {}, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
         const qs = (s) => shadowRoot.querySelector(s);
         clicker(qs('.hl'), 'h-bottom');
-        clicker(qs('.al'), 'ali-bottom');
         clicker(qs('.tl'), 't-bottom');
         clicker(qs('.sl'), 'drsafari-bottom');
         clicker(qs('.fl'), 'fib-bottom');
@@ -100,7 +86,6 @@ class SupportUsElement extends HTMLElement {
         clicker(qs('.ml'), 'moz-bottom');
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
-        shadowRoot.host.classList.toggle('c-ali', isAliCountry && !navigator.userAgent.includes('Chrom'));
     }
 }
 

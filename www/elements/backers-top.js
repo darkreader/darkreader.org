@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isHCountry, isAliCountry} from './locales.js';
+import {country, isHCountry} from './locales.js';
 import {
     createHTMLElement as html,
 } from './utils.js';
@@ -41,20 +41,6 @@ const hHTMLText = `
         Automatically find and apply discounts when you purchase online.
         Join for <strong>free</strong> and get coupons.
         <a href="${hURL}" class="h-lm">Learn more</a>.
-    </span>
-</div>
-`;
-
-const alURL = 'https://alitools.io/install?utm_source=partner&utm_medium=darkreader&utm_campaign=dr_welcome';
-const alHTMLText = `
-<div class="up">
-    <a href="${alURL}" class="up-logo-link a-logo-link">Alitools</a>
-    <span class="up-text">
-        <a href="${alURL}" class="up-link a-link">Alitools ${browserText}</a> - 
-        <strong class="a-text-1">Ali</strong><strong class="a-text-2">Express</strong> shopping assistant.
-        Auto-activation of promo codes, price history,
-        seller rating verification, price drop notification.
-        <a href="${alURL}" class="a-lm">Learn more</a>.
     </span>
 </div>
 `;
@@ -189,23 +175,6 @@ a:hover {
     height: 5rem;
     width: 7.5rem;
 }
-.a-logo-link {
-    background-color: var(--color-ali);
-    background-image: url(/images/alitools-logo.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 7rem auto;
-    border-radius: 0.625rem;
-    filter: hue-rotate(320deg);
-    height: 5rem;
-    width: 7.5rem;
-}
-.a-text-1 {
-    color: #ffdf32;
-}
-.a-text-2 {
-    color: #ff5326;
-}
 .safari-logo-link {
     background-image:
         url(/images/apple-logo-white.svg),
@@ -324,15 +293,12 @@ class BackerHeaderElement extends HTMLElement {
             return;
         }
 
-        const style = html('style', null, cssText);
+        const style = html('style', {}, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', titleHTMLText + containerHTMLText);
         const container = shadowRoot.querySelector('.ups');
         if (isHCountry) {
             container.insertAdjacentHTML('beforeend', hHTMLText);
-        }
-        if (isAliCountry && !isHCountry && !navigator.userAgent.includes('Chrom')) {
-            container.insertAdjacentHTML('beforeend', alHTMLText);
         }
         container.insertAdjacentHTML('beforeend', tHTMLText);
         container.insertAdjacentHTML('beforeend', appleHTMLText);
@@ -344,9 +310,6 @@ class BackerHeaderElement extends HTMLElement {
         clicker(qs('.h-lm'), 'h-top-lm');
         clicker(qs('.t-logo-link'), 't-top-logo');
         shadowRoot.querySelectorAll('.t-text a').forEach((el, i) => clicker(el, `t-top-text${i + 1}`))
-        clicker(qs('.a-logo-link'), 'ali-top-logo');
-        clicker(qs('.a-link'), 'ali-top-link');
-        clicker(qs('.a-lm'), 'ali-top-lm');
         clicker(qs('.safari-logo-link'), 'drsafari-top-logo');
         clicker(qs('.safari-link'), 'drsafari-top-link');
         clicker(qs('.support-ua a'), 'ua-top-link');
