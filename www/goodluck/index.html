@@ -30,7 +30,7 @@
                     <div class="ext__quick-description">Your smart shopping assistant</div>
                     <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
                             class="ext__rating__text">4.8 of 5</span></div>
-                    <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader">Learn more</a>
+                    <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader">Install</a>
                 </div>
                 <div class="ext__description">
                     <strong>Automatically search and apply coupons</strong> on 30,000+ websites when you shop online.
@@ -68,8 +68,17 @@
         tRating.textContent = `${isFirefox ? 4.1 : isEdge ? 4.4 : isSafari ? 4.9 : 4.6} out of 5`;
         const installs = document.querySelectorAll('.ext__install');
         installs.forEach((el) => {
-            const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
+            // const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
             // el.textContent = `Add to ${browser}`;
+            if (isFirefox) {
+                el.classList.add('ext__install--firefox');
+            } else if (isEdge) {
+                el.classList.add('ext__install--edge');
+            } else if (isSafari) {
+                el.classList.add('ext__install--safari');
+            } else if (isChrome) {
+                el.classList.add('ext__install--chrome');
+            }
         });
 
         import('../elements/stats.js')

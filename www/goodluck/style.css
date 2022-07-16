@@ -144,17 +144,20 @@ section {
 }
 
 .ext__install {
+    align-items: center;
     background-color: var(--color-control);
     border-radius: 0.5rem;
     box-sizing: border-box;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     color: white;
-    display: inline-block;
+    display: inline-flex;
     font-weight: bold;
     height: 2.5rem;
+    gap: 0.5rem;
+    justify-content: center;
     line-height: 2.5rem;
     margin-top: 0.5rem;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     text-decoration: none;
     transition: box-shadow 250ms;
 }
@@ -163,8 +166,39 @@ section {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 
+.ext__install::before {
+    background-image: url(/images/icon-chrome-512x512.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+.ext__install--chrome::before {
+    background-image: url(/images/icon-chrome-512x512.svg);
+    content: "";
+}
+
+.ext__install--edge::before {
+    background-image: url(/images/icon-edge-256x256.svg);
+    content: "";
+}
+
+.ext__install--firefox::before {
+    background-image: url(/images/icon-firefox-87x82.svg);
+    content: "";
+}
+
+.ext__install--safari::before {
+    background-image: url(/images/icon-safari-66x66.svg);
+    content: "";
+}
+
 .ext__learn-more {
-    color: var(--color-text);
+    color: var(--color-honey);
+    font-weight: bold;
     transition: color 250ms;
 }
 
