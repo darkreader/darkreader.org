@@ -80,7 +80,7 @@ const htmlText = `
     </a>
 </section>
 <section class="nr">
-    <h2 class="nr-heading">Not sponsored by</h2>
+    <h2 class="nr-heading">We also love:</h2>
     <div class="nr-links">
         <a class="nr-logo-link nr-logo-fibery" title="Fibery is a connected workspace for product teams. It unites user research, ideation, strategic planning, product roadmapping, software development and customer feedback aggregation. Escape scattered tools and make better products with Fibery." href="https://fibery.io/">
             Fibery
