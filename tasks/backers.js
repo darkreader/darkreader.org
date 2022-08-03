@@ -31,7 +31,7 @@ async function updateBackers() {
         }))
         .filter((d, i, arr) => arr.slice(0, i).every(x => x.url !== d.url))
         .filter(d => ['user', 'org'].includes(d.type))
-        .slice(0, 60);
+        .filter(d => d.net >= 100);
 
     const imageProcessor = await createImageProcessor();
     for (const backer of topBackers) {
