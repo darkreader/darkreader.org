@@ -28,7 +28,7 @@
 }
 
 .page-grid-left > darkreader-ios-static.ios__scroll-down {
-    transform: translateY(-0.5rem);
+    transform: translateY(0rem);
 }
 
 .page-grid-left > darkreader-ios-static.ios__scroll-up {
