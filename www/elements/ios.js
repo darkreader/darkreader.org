@@ -13,7 +13,7 @@ const htmlText = `
     New app
 </h2>
 <section class="i">
-    <a class="image-link" href="${safariURL}">
+    <a class="image-link" href="${safariURL}" target="_blank" rel="noopener">
         Dark Reader for iPhone, iPad and Mac
     </a>
 </section>

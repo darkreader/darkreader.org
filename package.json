@@ -6,7 +6,7 @@
   "scripts": {
     "blog": "node tasks/blog.js",
     "help": "node tasks/help.js",
-    "start": "http-server ./www -p 9003",
+    "start": "npm run blog && npm run help && npm run tips && http-server ./www -p 9003",
     "tips": "node tasks/tips.js",
     "update-backers": "node tasks/backers.js",
     "upload": "node tasks/publish.js"

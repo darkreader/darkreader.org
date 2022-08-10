@@ -13,12 +13,12 @@ const htmlText = `
     New app
 </h2>
 <div class="subtitle">
-    <a class="text-link" href="${safariURL}">
+    <a class="text-link" href="${safariURL}" target="_blank" rel="noopener">
         Dark Reader for iOS
     </a>
 </div>
 <section class="i">
-    <a class="image-link" href="${safariURL}">
+    <a class="image-link" href="${safariURL}" target="_blank" rel="noopener">
         Dark Reader for iPhone, iPad and Mac
     </a>
 </section>

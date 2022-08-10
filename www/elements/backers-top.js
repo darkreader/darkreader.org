@@ -34,13 +34,17 @@ const containerHTMLText = `
 
 const hHTMLText = `
 <div class="up">
-    <a href="${hURL}" class="up-logo-link h-logo-link">Honey</a>
+    <a href="${hURL}" target="_blank" rel="noopener"
+        class="up-logo-link h-logo-link">Honey</a>
     <span class="up-text">
-        <a href="${hURL}" class="up-link h-link">Honey ${browserText}</a>,
+        <a href="${hURL}" target="_blank" rel="noopener"
+            class="up-link h-link"
+        >Honey ${browserText}</a>,
         a product of <strong class="h-text-pp">PayPal</strong>.
         Automatically find and apply discounts when you purchase online.
         Join for <strong>free</strong> and get coupons.
-        <a href="${hURL}" class="h-lm">Learn more</a>.
+        <a href="${hURL}" target="_blank" rel="noopener"
+            class="h-lm">Learn more</a>.
     </span>
 </div>
 `;
@@ -50,30 +54,41 @@ const language = navigator.language || 'en';
 
 const tHTMLText = `
 <div class="up">
-    <a href="${tURL}" class="up-logo-link t-logo-link">Toucan</a>
+    <a href="${tURL}" target="_blank" rel="noopener"
+        class="up-logo-link t-logo-link">Toucan</a>
     <span class="up-text t-text">
-        <a href="${tURL}" class="up-link">Toucan ${browserText}</a>.
+        <a href="${tURL}" target="_blank" rel="noopener"
+            class="up-link">Toucan ${browserText}</a>.
         ${language.startsWith('en') ? `
-        Learn a language more <a class="tr" data-tr="easy" href="${tURL}">fácilmente</a>.
-        Immerse yourself in a new <a class="tr" data-tr="language" href="${tURL}">idioma</a> while you browse the web.
+        Learn a language more <a class="tr" data-tr="easy"
+            href="${tURL}" target="_blank" rel="noopener">fácilmente</a>.
+        Immerse yourself in a new <a class="tr" data-tr="language"
+            href="${tURL}" target="_blank" rel="noopener">idioma</a> while you browse the web.
         Join for <strong>free</strong>.
-        <a href="${tURL}"><span class="tr" data-tr="Learn more\nabout Toucan">Learn más</span></a>.
+        <a href="${tURL}" target="_blank" rel="noopener"><span
+            class="tr" data-tr="Learn more\nabout Toucan">Learn más</span></a>.
         ` : language.startsWith('de') ? `
-        <a class="tr" data-tr="Englisch" href="${tURL}">English</a> mühelos lernen.
+        <a class="tr" data-tr="Englisch"
+            href="${tURL}" target="_blank" rel="noopener">English</a> mühelos lernen.
         Lerne die kostenlose Erweiterung kennen, die dir dabei hilft, eine neue
-        <a class="tr" data-tr="sprache" href="${tURL}">language</a> zu lernen, während du im Internet surfst.
+        <a class="tr" data-tr="sprache"
+            href="${tURL}" target="_blank" rel="noopener">language</a> zu lernen, während du im Internet surfst.
         ` : language.startsWith('es') ? `
-        Aprende <a class="tr" data-tr="Inglés" href="${tURL}">English</a> sin siquiera intentarlo.
+        Aprende <a class="tr" data-tr="Inglés"
+            href="${tURL}" target="_blank" rel="noopener">English</a> sin siquiera intentarlo.
         Conoce la extensión gratuita que te ayuda a aprender un nuevo
-        <a class="tr" data-tr="idioma" href="${tURL}">language</a> mientras navegas la red.
+        <a class="tr" data-tr="idioma"
+            href="${tURL}" target="_blank" rel="noopener">language</a> mientras navegas la red.
         ` : language.startsWith('pt') ? `
-        Aprenda <a class="tr" data-tr="Inglês" href="${tURL}">English</a> sem esforço.
+        Aprenda <a class="tr" data-tr="Inglês"
+            href="${tURL}" target="_blank" rel="noopener">English</a> sem esforço.
         Conheça a extensão gratuita que ajuda você a aprender uma nova
-        <a class="tr" data-tr="idioma" href="${tURL}">language</a> enquanto navega na web.
+        <a class="tr" data-tr="idioma"
+            href="${tURL}" target="_blank" rel="noopener">language</a> enquanto navega na web.
         ` : `
         Learn <strong>English, Spanish, Japanese</strong> without even trying.
         This extension helps you learn a new language while browsing the web.
-        <a href="${tURL}">Learn more</a>.
+        <a href="${tURL}" target="_blank" rel="noopener">Learn more</a>.
         `}
     </span>
 </div>
@@ -83,10 +98,12 @@ const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id143824
 
 const appleHTMLText = `
 <div class="up">
-    <a href="${safariURL}" class="safari-logo-link">Dark Reader for Safari</a>
+    <a href="${safariURL}" target="_blank" rel="noopener"
+        class="safari-logo-link">Dark Reader for Safari</a>
     <span class="up-text">
         <strong>Dark Reader</strong> for
-        <a href="${safariURL}" class="up-link safari-link">iOS, iPadOS, macOS</a>
+        <a href="${safariURL}" target="_blank" rel="noopener"
+            class="up-link safari-link">iOS, iPadOS, macOS</a>
         is available!
     </span>
 </section>
@@ -94,7 +111,7 @@ const appleHTMLText = `
 
 const uaSupportHTMLText = `
 <div class="support-ua">
-    <a href="https://bank.gov.ua/en/about/humanitarian-aid-to-ukraine" target="_blank" rel="noreferrer noopener">
+    <a href="https://bank.gov.ua/en/about/humanitarian-aid-to-ukraine" target="_blank" rel="noopener">
         <strong>Support Ukraine</strong>
         (official link)
     </a>

@@ -15,7 +15,8 @@
         <section class="uninstalled">
             <i class="icon"></i>
             <span class="uninstalled__message">Dark Reader wishes you Good Luck!</span>
-            <a href="mailto:darkreaderapp@gmail.com?subject=[Uninstall]%20Feedback" class="feedback-link">
+            <a href="mailto:darkreaderapp@gmail.com?subject=[Uninstall]%20Feedback" target="_blank"
+                rel="noopener" class="feedback-link">
                 Leave feedback
             </a>
         </section>
@@ -30,13 +31,15 @@
                     <div class="ext__quick-description">Your smart shopping assistant</div>
                     <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
                             class="ext__rating__text">4.8 of 5</span></div>
-                    <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader">Install</a>
+                    <a class="ext__install h-install" href="https://www.joinhoney.com/darkreader" target="_blank"
+                        rel="noopener">Install</a>
                 </div>
                 <div class="ext__description">
                     <strong>Automatically search and apply coupons</strong> on 30,000+ websites when you shop online.
                     Join 17,000,000 members who shop with confidence.
                     Honey is a part of <strong><em>PayPal</em></strong> family.
-                    <a class="ext__learn-more h-lm" href="https://www.joinhoney.com/darkreader">Learn more</a>.
+                    <a class="ext__learn-more h-lm" href="https://www.joinhoney.com/darkreader" target="_blank"
+                        rel="noopener">Learn more</a>.
                 </div>
             </div>
             <div class="ext t-ext">
@@ -46,13 +49,15 @@
                     <div class="ext__quick-description">Learn a new language</div>
                     <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
                             class="ext__rating__text">4.6 of 5</span></div>
-                    <a class="ext__install t-install" href="https://jointoucan.com/partners/darkreader">Learn more</a>
+                    <a class="ext__install t-install" href="https://jointoucan.com/partners/darkreader" target="_blank"
+                        rel="noopener">Learn more</a>
                 </div>
                 <div class="ext__description">
                     Learn a new language just by browsing the internet.
                     Choose from English, Spanish, French, Japanese and other languages.
                     Just install and go about your day like normal.
-                    <a class="ext__learn-more t-lm" href="https://jointoucan.com/partners/darkreader">Learn more</a>.
+                    <a class="ext__learn-more t-lm" href="https://jointoucan.com/partners/darkreader" target="_blank"
+                        rel="noopener">Learn more</a>.
                 </div>
             </div>
         </section>
@@ -82,7 +87,7 @@
         });
 
         import('../elements/stats.js')
-            .then(({clicker}) => {
+            .then(({ clicker }) => {
                 const qs = (s) => document.querySelector(s);
                 clicker(qs('.h-install'), 'h-un-add');
                 clicker(qs('.h-lm'), 'h-un-lm');
@@ -91,7 +96,7 @@
             });
 
         import('../elements/locales.js')
-            .then(({isHCountry}) => {
+            .then(({ isHCountry }) => {
                 const isChrome = navigator.userAgent.includes('Chrom');
                 document.body.classList.toggle('c-h', isHCountry);
             });

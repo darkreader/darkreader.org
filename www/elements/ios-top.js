@@ -20,7 +20,7 @@ const htmlText = `
             for your <strong>iPhone</strong><br>
             Create your own color theme
         </span>
-        <a class="install" href="${safariURL}">
+        <a class="install" href="${safariURL}" target="_blank" rel="noopener">
             <i class="install_icon"></i>
             <span class="install_right">
                 <span class="install_top">
@@ -37,8 +37,8 @@ const htmlText = `
             <em style="font-size: 50%">* + VAT in your country</em>
         </span>
     </span>
-    <a class="screenshot" id="scr1" href="${safariURL}"></a>
-    <a class="screenshot" id="scr2" href="${safariURL}"></a>
+    <a class="screenshot" id="scr1" href="${safariURL}" target="_blank" rel="noopener"></a>
+    <a class="screenshot" id="scr2" href="${safariURL}" target="_blank" rel="noopener"></a>
 </div>
 `;
 

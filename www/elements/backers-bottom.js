@@ -18,28 +18,33 @@ const htmlText = `
     </h2>
     <p class="d-tx">
         Dark Reader is <strong>free</strong>, but only 1 of 2000 users supports us.
-        Become that 2 of 2000, <strong>support us on <a href="${donateURL}">Open Collective</a></strong>.
+        Become that 2 of 2000, <strong>support us on <a
+            href="${donateURL}"
+            target="_blank"
+            rel="noopener"
+        >Open Collective</a></strong>.
     </p>
     <p class="h-tx">
-        No money? <strong>Use <a href="${hURL}" class="h hl">Honey</a></strong>,
+        No money?
+        <strong>Use <a href="${hURL}" class="h hl" target="_blank" rel="noopener">Honey</a></strong>,
         an official <strong><em>PayPal</em></strong> extension,
         that will automatically find discounts when you purchase online.
     </p>
     <p class="t-tx">
         Don't have time on learning a new language?
-        <strong><a href="${tURL}" class="t tl">Toucan</a> extension</strong>
+        <strong><a href="${tURL}" target="_blank" rel="noopener" class="t tl">Toucan</a> extension</strong>
         will show you foreign words in web pages you browse.
     </p>
     <p class="s-tx">
         Do you have <strong>iPhone, iPad or Mac</strong>?
-        Install <strong><a class="d sl" href="${safariURL}">Dark Reader for Safari</a></strong>.
+        Install <strong><a class="d sl" href="${safariURL}" target="_blank" rel="noopener">Dark Reader for Safari</a></strong>.
         Good luck!
     </p>
     <p class="ns-tx">
         Dark Reader is <strong>not</strong> sponsored by
-        <strong><a class="t fl" href="https://fibery.io/anxiety">Fibery</a></strong>,
-        <strong><a class="gl" href="https://github.com/">GitHub</a></strong>
-        and <strong><a class="ml" href="https://www.mozilla.org/">Mozilla</a></strong>,
+        <strong><a class="t fl" href="https://fibery.io/anxiety" target="_blank" rel="noopener">Fibery</a></strong>,
+        <strong><a class="gl" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></strong>
+        and <strong><a class="ml" href="https://www.mozilla.org/" target="_blank" rel="noopener">Mozilla</a></strong>,
         they are just cool!
     </p>
 </div>

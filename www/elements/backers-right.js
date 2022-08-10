@@ -23,16 +23,16 @@ const htmlText = `
     Sponsored by
 </h2>
 <section class="hr">
-    <a class="logo-link hl" href="${hnURL}">
+    <a class="logo-link hl" href="${hnURL}" target="_blank" rel="noopener">
         <span class="logo-link-image hl-image">Honey</span>
         <span class="hl-message">
             by <span class="hl-paypal">PayPal</span>
         </span>
     </a>
-    <a class="text-link ht" href="${hnURL}">
+    <a class="text-link ht" href="${hnURL}" target="_blank" rel="noopener">
         Save <span class="ht-usd">$$$</span> when you shop online
     </a>
-    <a class="button-link hb" href="${hnURL}">
+    <a class="button-link hb" href="${hnURL}" target="_blank" rel="noopener">
         ${buttonIcon}
         <span class="button-link-text hb-text">
             Install
@@ -40,10 +40,10 @@ const htmlText = `
     </a>
 </section>
 <section class="tr">
-    <a class="logo-link tl" href="${tcURL}">
+    <a class="logo-link tl" href="${tcURL}" target="_blank" rel="noopener">
         <span class="logo-link-image tl-image">Toucan</span>
     </a>
-    <a class="text-link tt" href="${tcURL}">
+    <a class="text-link tt" href="${tcURL}" target="_blank" rel="noopener">
         ${language.startsWith('en') ? `
         Learn
         <span class="tt-flags">
@@ -60,7 +60,7 @@ const htmlText = `
             language.startsWith('pt') ? 'Aprenda Inglês sem esforço' :
                 'Learn English without even trying'}
     </a>
-    <a class="button-link tb" href="${tcURL}">
+    <a class="button-link tb" href="${tcURL}" target="_blank" rel="noopener">
         ${buttonIcon}
         <span class="button-link-text tb-text">
             Install
@@ -72,23 +72,41 @@ const htmlText = `
         <darkreader-backers-graph class="dl-graph" width="360" height="240" rows="4" columns="6">
         </darkreader-backers-graph>
     </span>
-    <a class="text-link dt" href="${ocURL}">
+    <a class="text-link dt" href="${ocURL}" target="_blank" rel="noopener">
         Become a sponsor too
     </a>
-    <a class="button-link db" href="${ocURL}">
+    <a class="button-link db" href="${ocURL}" target="_blank" rel="noopener">
         <span class="button-link-text">Donate</span>
     </a>
 </section>
 <section class="nr">
     <h2 class="nr-heading">Not sponsored by</h2>
     <div class="nr-links">
-        <a class="nr-logo-link nr-logo-fibery" title="Fibery is a connected workspace for product teams. It unites user research, ideation, strategic planning, product roadmapping, software development and customer feedback aggregation. Escape scattered tools and make better products with Fibery." href="https://fibery.io/">
+        <a
+            class="nr-logo-link nr-logo-fibery"
+            title="Fibery is a connected workspace for product teams. It unites user research, ideation, strategic planning, product roadmapping, software development and customer feedback aggregation. Escape scattered tools and make better products with Fibery."
+            href="https://fibery.io/"
+            target="_blank"
+            rel="noopener"
+        >
             Fibery
         </a>
-        <a class="nr-logo-link nr-logo-github" title="GitHub is where over 65 million developers shape the future of software, together." href="https://github.com/">
+        <a
+           class="nr-logo-link nr-logo-github"
+           title="GitHub is where over 65 million developers shape the future of software, together."
+           href="https://github.com/"
+           target="_blank"
+           rel="noopener"
+        >
             GitHub
         </a>
-        <a class="nr-logo-link nr-logo-mozilla" title="Mozilla is the not-for-profit behind the lightning fast Firefox browser. We put people over profit to give everyone more power online." href="https://www.mozilla.org/">
+        <a
+            class="nr-logo-link nr-logo-mozilla"
+            title="Mozilla is the not-for-profit behind the lightning fast Firefox browser. We put people over profit to give everyone more power online."
+            href="https://www.mozilla.org/"
+            target="_blank"
+            rel="noopener"
+        >
             Mozilla
         </a>
     </div>
