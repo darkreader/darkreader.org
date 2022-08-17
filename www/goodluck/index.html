@@ -15,16 +15,19 @@
         <section class="uninstalled">
             <i class="icon"></i>
             <span class="uninstalled__message">Dark Reader wishes you Good Luck!</span>
-            <a href="mailto:darkreaderapp@gmail.com?subject=[Uninstall]%20Feedback" target="_blank"
-                rel="noopener" class="feedback-link">
+            <a href="mailto:darkreaderapp@gmail.com?subject=[Uninstall]%20Feedback" target="_blank" rel="noopener"
+                class="feedback-link">
                 Leave feedback
             </a>
         </section>
     </main>
     <aside class="recommendations-container">
         <section class="recommendations">
-            <div class="message">Try more wonderful extensions</div>
+            <div class="message">Try more browser extensions</div>
             <div class="ext h-ext">
+                <a class="ext__banner h-banner" href="https://www.joinhoney.com/darkreader" target="_blank"
+                    rel="noopener">Save
+                    money with PayPal Honey</a>
                 <div class="ext__icon h-icon"></div>
                 <div class="ext__mid">
                     <div class="ext__name">Honey <span class="pp-ext__name">by PayPal</span></div>
@@ -35,11 +38,20 @@
                         rel="noopener">Install</a>
                 </div>
                 <div class="ext__description">
-                    <strong>Automatically search and apply coupons</strong> on 30,000+ websites when you shop online.
-                    Join 17,000,000 members who shop with confidence.
-                    Honey is a part of <strong><em>PayPal</em></strong> family.
+                    <p>
+                        <strong>Automatically search and apply coupons</strong> on 30,000+ websites when you shop
+                        online.
+                    </p>
+                    <p>
+                        Earn <strong>Cash Back</strong> at your favorite stores.
+                        The app will <strong>detect a price drop</strong> for you.
+                    </p>
+                    <p>
+                        Join <strong>17,000,000 members</strong> who shop with confidence.
+                        Honey is a part of <strong><em>PayPal</em></strong> family.
+                    </p>
                     <a class="ext__learn-more h-lm" href="https://www.joinhoney.com/darkreader" target="_blank"
-                        rel="noopener">Learn more</a>.
+                        rel="noopener">Learn more</a>
                 </div>
             </div>
             <div class="ext t-ext">
@@ -87,7 +99,7 @@
         });
 
         import('../elements/stats.js')
-            .then(({ clicker }) => {
+            .then(({clicker}) => {
                 const qs = (s) => document.querySelector(s);
                 clicker(qs('.h-install'), 'h-un-add');
                 clicker(qs('.h-lm'), 'h-un-lm');
@@ -96,7 +108,7 @@
             });
 
         import('../elements/locales.js')
-            .then(({ isHCountry }) => {
+            .then(({isHCountry}) => {
                 const isChrome = navigator.userAgent.includes('Chrom');
                 document.body.classList.toggle('c-h', isHCountry);
             });

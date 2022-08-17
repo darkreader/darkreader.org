@@ -33,7 +33,7 @@ main {
 
 section {
     margin: 0 auto;
-    max-width: 27.5rem;
+    max-width: 40rem;
 }
 
 .uninstalled {
@@ -86,23 +86,61 @@ section {
 
 .message {
     display: none;
+    color: var(--color-highlight);
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px;
 }
 
 .ext {
     display: grid;
     gap: 1rem;
-    grid: "icon mid" min-content
-          "desc desc" auto
-          / min-content auto;
+    grid: "ban icon mid" auto
+          "ban desc desc" 1fr
+          / min-content min-content auto;
     margin-top: 1rem;
 }
 
 .ext + .ext {
     border-top: 1px solid var(--color-border);
     padding-top: 1rem;
+}
+
+.ext__banner {
+    border-radius: 1.5rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    display: inline-block;
+    grid-area: ban;
+    text-decoration: none;
+    text-indent: -999rem;
+    transition: box-shadow 250ms;
+}
+
+.ext__banner:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+}
+
+.h-banner {
+    background-image: url(/images/honey-banner-smile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 21rem;
+    width: 14rem;
+}
+
+.h-ext .ext__mid {
+    margin-left: -1rem;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 .ext__icon {
@@ -118,6 +156,7 @@ section {
     background-color: #f68623;
     background-image: url(/images/honey-icon-white.svg);
     background-size: 70%;
+    display: none;
 }
 
 .t-icon {
@@ -225,4 +264,18 @@ body:not(.c-h) .h-ext {
 
 .t-ext {
     display: none;
+}
+
+@media screen and (max-width: 40rem) {
+    .h-banner {
+        display: none;
+    }
+
+    .h-icon {
+        display: inline-block;
+    }
+
+    .h-ext .ext__mid {
+        margin-left: 0;
+    }
 }
