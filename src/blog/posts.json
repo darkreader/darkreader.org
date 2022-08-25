@@ -1,5 +1,11 @@
 [
     {
+        "id": "filter-mode",
+        "date": "2022-08-25T08:10Z",
+        "headline": "How to use Filter Mode as a fallback for problematic websites",
+        "icon": "https://darkreader.org/images/filter-blog-icon.png"
+    },
+    {
         "id": "v5-survey",
         "date": "2022-06-28T16:45Z",
         "headline": "Survey! Please leave us feedback or propose a feature",
