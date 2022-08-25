@@ -66,3 +66,56 @@ article h6 {
     font-size: 1rem;
     grid-area: title;
 }
+
+.page-grid-left {
+    display: none;
+    grid-area: left;
+    position: fixed;
+    width: 16rem;
+}
+
+.page-grid-left > darkreader-ios-static {
+    position: absolute;
+    transform: translateY(10rem);
+    transition: transform 500ms;
+}
+
+.page-grid-left > darkreader-ios-static.ios__show-up {
+    transform: translateY(1.5rem);
+}
+
+.page-grid-left > darkreader-ios-static.ios__scroll-down {
+    transform: translateY(0rem);
+}
+
+.page-grid-left > darkreader-ios-static.ios__scroll-up {
+    transform: translateY(3.5rem);
+}
+
+@media screen and (min-width: 74rem) {
+    .page-grid-body {
+        grid:
+            "left header side" auto
+            "left inside side" auto
+            "left content side" auto
+            "left footer side" auto
+            / 16rem auto 16rem;
+        max-width: 74rem;
+    }
+
+    .page-grid-side {
+        right: calc(50% - 37rem);
+    }
+
+    .page-grid-left {
+        display: unset;
+    }
+
+    .list-copied {
+        display: none;
+    }
+
+    .page-grid-ios {
+        display: none;
+    }
+}

@@ -52,6 +52,12 @@ const cssText = `
 .h-banner:hover {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
+@media (max-width: 24rem) {
+    :host {
+        --inside-post-height: 9rem;
+        --inside-post-width: 18rem;
+    }
+}
 `;
 
 class InsidePost extends HTMLElement {
