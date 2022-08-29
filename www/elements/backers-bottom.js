@@ -4,7 +4,7 @@ import {
     createHTMLElement as html,
 } from './utils.js';
 import {isHCountry} from './locales.js';
-import {clicker} from './stats.js';
+import {clicker} from './statistics.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 const tURL = 'https://jointoucan.com/partners/darkreader';

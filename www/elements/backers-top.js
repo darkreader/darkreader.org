@@ -4,7 +4,7 @@ import {country, isHCountry} from './locales.js';
 import {
     createHTMLElement as html,
 } from './utils.js';
-import {clicker} from './stats.js';
+import {clicker} from './statistics.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
 

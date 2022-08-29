@@ -2,7 +2,7 @@
 
 import './backers-graph.js';
 import {isHCountry} from './locales.js';
-import {clicker} from './stats.js';
+import {clicker} from './statistics.js';
 import {
     createHTMLElement as html,
 } from './utils.js';
