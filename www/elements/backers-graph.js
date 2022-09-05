@@ -4,7 +4,7 @@ import {
     createHTMLElement as html,
     classes,
 } from './utils.js';
-import {clicker} from './statistics.js';
+import {clicker} from './stats.js';
 
 /**
  * @typedef Backer

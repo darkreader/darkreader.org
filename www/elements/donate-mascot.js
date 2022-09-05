@@ -3,7 +3,7 @@
 import {
     createHTMLElement as html,
 } from './utils.js';
-import {clicker} from './statistics.js';
+import {clicker} from './stats.js';
 
 const url = 'https://opencollective.com/darkreader/donate';
 
