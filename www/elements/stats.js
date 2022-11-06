@@ -14,7 +14,7 @@ export function clicker(element, name) {
         const lang = navigator.language;
         const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
         const params = encodeParams(name, path, lang, time);
-        fetch(`https://stats.darkreader.app/click/v1/${params}`);
+        fetch(`https://statistics.darkreader.app/click/v1/${params}`);
     }));
 }
 
@@ -23,7 +23,29 @@ function viewer() {
     const lang = navigator.language;
     const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const params = encodeParams(path, lang, time);
-    fetch(`https://stats.darkreader.app/view/v1/${params}`);
+    fetch(`https://statistics.darkreader.app/view/v1/${params}`);
+}
+
+async function checkNetErrors() {
+    const urls = {
+        'net-err-stats': 'https://stats.darkreader.app/',
+        'net-err-statistics': 'https://statistics.darkreader.app/',
+        'net-err-statistics-js': 'https://darkreader.org/elements/statistics.js',
+    };
+    /** @type {string[]} */
+    const errors = [];
+    for (const [alias, url] of Object.entries(urls)) {
+        try {
+            await fetch(url);
+        } catch(err) {
+            errors.push(alias);
+        }
+    }
+    if (errors.length > 0) {
+        const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const params = encodeParams(errors.join(';'), time);
+        fetch(`https://errors.darkreader.app/view/v1/${params}`);
+    }
 }
 
 /**
@@ -41,11 +63,13 @@ if (document.visibilityState !== 'visible') {
         if (document.visibilityState === 'visible') {
             document.removeEventListener('visibilitychange', listener);
             viewer();
+            checkNetErrors();
         }
     };
     document.addEventListener('visibilitychange', listener);
 } else {
     viewer();
+    checkNetErrors();
 }
 
 function subscribe() {
