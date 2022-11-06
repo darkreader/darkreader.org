@@ -44,7 +44,7 @@ async function checkNetErrors() {
     if (errors.length > 0) {
         const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
         const params = encodeParams(errors.join(';'), time);
-        fetch(`https://errors.darkreader.app/view/v1/${params}`);
+        fetch(`https://errors.darkreader.app/errors/v1/${params}`);
     }
 }
 
