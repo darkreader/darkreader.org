@@ -58,19 +58,12 @@ function createBackersGraph(backers) {
         return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
     }
 
-    const aapeliOrg = backers.find(o => o.name.toLowerCase().includes('aapeli'));
-    aapeliOrg.name = 'Aapeli: Free online HTML5 games and arcades';
-    aapeliOrg.pri = 1;
     const icons8Org = backers.find(o => o.name.toLowerCase().includes('icons8'));
     icons8Org.pri = 1;
     const instinctools = backers.find(o => o.name.toLowerCase().includes('instinctools'));
     instinctools.pri = 1;
     instinctools.name = '*instinctools: Software Development Services';
     instinctools.info = 'instinctools is a software product development and consulting company focused on digital transformation services headquartered in Germany and USA.';
-    const slonMedia = backers.find(o => o.name.toLowerCase().includes('slon'));
-    slonMedia.pri = 1;
-    slonMedia.name = 'SLON Media: Video Marketing Company';
-    slonMedia.info = 'We build and grow your digital business';
     const vpnBlogOrg = backers.find(o => o.name.toLowerCase().includes('vpnwelt'));
     vpnBlogOrg.url = 'https://vpnwelt.com/vpn-kostenlos/';
     vpnBlogOrg.pri = 1;
@@ -79,7 +72,7 @@ function createBackersGraph(backers) {
     const toucanOrg = backers.find(o => o.name.toLowerCase().includes('toucan'));
 
     const displayBackers = backers
-        .filter((b) => ![aapeliOrg, icons8Org, instinctools, slonMedia, vpnBlogOrg, toucanOrg].includes(b))
+        .filter((b) => ![icons8Org, instinctools, vpnBlogOrg, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -95,10 +88,8 @@ function createBackersGraph(backers) {
 
     return html('div', {class: 'grid'},
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
-        createBackerLink(aapeliOrg, 'wide', null, 'aapeli'),
         createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
         createBackerLink(instinctools, 'wide', null, 'instinctools'),
-        createBackerLink(slonMedia, 'wide', null, 'slon'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
     );
 }
@@ -264,9 +255,6 @@ const cssText = `
 .vpnwelt {
     background-color: #173054;
 }
-.slon {
-    background-color: #000000;
-}
 @media screen and (min-width: 57rem) and (max-height: 44rem) {
     .grid {
         grid-auto-rows: 2rem;
@@ -277,19 +265,6 @@ const cssText = `
     }
     .backer-name {
         line-height: 1rem;
-    }
-}
-@media screen and (min-width: 57rem) and (max-height: 40rem) {
-    .grid {
-        grid-auto-rows: 1.5rem;
-    }
-    .backer-pic {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-    .backer-name {
-        font-size: 0.75rem;
-        line-height: 0.75rem;
     }
 }
 @media screen and (min-width: 57rem) and (max-height: 45rem) {
