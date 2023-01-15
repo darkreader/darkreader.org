@@ -1,6 +1,8 @@
 // @ts-check
 import {throttle} from './utils.js';
 
+const ERROR_HANDLING_ENABLED = false;
+
 /**
  * @param {Element} element
  * @param {string} name
@@ -27,6 +29,9 @@ function viewer() {
 }
 
 async function checkNetErrors() {
+    if (!ERROR_HANDLING_ENABLED) {
+        return;
+    }
     const urls = {
         'net-err-stats': 'https://stats.darkreader.app/',
         'net-err-statistics': 'https://statistics.darkreader.app/',
