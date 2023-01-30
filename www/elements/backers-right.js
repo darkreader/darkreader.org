@@ -248,6 +248,30 @@ section {
     line-height: 1.125rem;
     -webkit-text-stroke: 0.0625rem;
 }
+.tr {
+    position: relative;
+}
+.tr::before {
+    align-items: center;
+    background-image: linear-gradient(to bottom, hsl(25deg 90% 50%), hsl(340deg 90% 50%));
+    border-radius: 50%;
+    box-shadow: 0 0 1rem hsl(350deg 90% 50%);
+    color: white;
+    content: "-25% Off \\A Premium";
+    display: flex;
+    font-weight: bold;
+    height: 5rem;
+    justify-content: center;
+    left: -1rem;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    -webkit-text-stroke: 0.5px white;
+    top: -0.5rem;
+    transform: rotate(-15deg);
+    white-space: pre;
+    width: 5rem;
+}
 .tl {
     overflow: hidden;
 }
@@ -262,7 +286,7 @@ section {
     width: 16rem;
 }
 .tt {
-    color: var(--color-toucan-text);
+    color: #4db7ff;
     text-align: center;
 }
 .tt-tr {
@@ -270,7 +294,7 @@ section {
     font-style: italic;
 }
 .tb {
-    background-color: #3ea39a;
+    background-color: #148bdc;
     left: 0.5rem;
     margin-top: 0;
     position: absolute;
