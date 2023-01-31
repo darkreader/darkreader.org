@@ -1,5 +1,11 @@
 [
     {
+        "id": "news-2023",
+        "date": "2023-01-30T21:36Z",
+        "headline": "2022/2023 Newsletter: Great Year Beginning",
+        "icon": "https://darkreader.org/images/news-2023-icon.png"
+    },
+    {
         "id": "filter-mode",
         "date": "2022-08-25T08:10Z",
         "headline": "How to use Filter Mode as a fallback for problematic websites",
