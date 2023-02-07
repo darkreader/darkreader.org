@@ -155,4 +155,4 @@ Ako koristite Firefox, u pitanju je najverovatnije bag pregledača, koristite dr
 
 <h2 id="contacts">Kontakti</h2>
 
-Sa bilo kakvim pitanjima obratite nam se na [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Sa bilo kakvim pitanjima obratite nam se na [support@darkreader.org](mailto:support@darkreader.org)

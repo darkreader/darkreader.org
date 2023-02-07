@@ -155,4 +155,4 @@
 
 <h2 id="contacts">Кантакты</h2>
 
-Па ўсіх пытаннях пішыце на [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Па ўсіх пытаннях пішыце на [support@darkreader.org](mailto:support@darkreader.org)

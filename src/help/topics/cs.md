@@ -155,4 +155,4 @@ Pokud používáte Firefox, jedná se nejspíše o chybu v prohlížeči, použi
 
 <h2 id="contacts">Kontakt</h2>
 
-Dotazy (pouze v angličtině) zasílejte na e-mail [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Dotazy (pouze v angličtině) zasílejte na e-mail [support@darkreader.org](mailto:support@darkreader.org)

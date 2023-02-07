@@ -162,4 +162,4 @@ If you are using Firefox, this is most likely a browser bug, use another mode fo
 
 <h2 id="contacts">Contacts</h2>
 
-For any questions e-mail to [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+For any questions e-mail to [support@darkreader.org](mailto:support@darkreader.org)

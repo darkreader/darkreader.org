@@ -155,4 +155,4 @@
 
 <h2 id="contacts">Контакты</h2>
 
-По всем вопросам пишите на [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+По всем вопросам пишите на [support@darkreader.org](mailto:support@darkreader.org)

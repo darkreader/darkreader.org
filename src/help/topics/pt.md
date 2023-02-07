@@ -155,4 +155,4 @@ Se você está usando o Firefox, isso provavelmente é um erro do navegador, use
 
 <h2 id="contacts">Contatos</h2>
 
-Para qualquer dúvida, envie um e-mail (em inglês) para [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Para qualquer dúvida, envie um e-mail (em inglês) para [support@darkreader.org](mailto:support@darkreader.org)

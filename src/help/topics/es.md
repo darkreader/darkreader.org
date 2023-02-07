@@ -155,5 +155,5 @@ Si está utilizando Firefox, es muy probable que se trate de un error del navega
 
 <h2 id="contacts">Contactos</h2>
 
-Para cualquier pregunta, envíe un correo electrónico a [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Para cualquier pregunta, envíe un correo electrónico a [support@darkreader.org](mailto:support@darkreader.org)
 (English only)

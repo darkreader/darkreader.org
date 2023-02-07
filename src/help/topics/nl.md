@@ -154,5 +154,5 @@ Als u Firefox gebruikt, is dit waarschijnlijk een browserfout, gebruik dan een a
 
 <h2 id="contacts">Contacten</h2>
 
-Voor vragen kunt u mailen naar [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Voor vragen kunt u mailen naar [support@darkreader.org](mailto:support@darkreader.org)
 (English only)

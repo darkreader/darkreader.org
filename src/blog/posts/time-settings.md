@@ -36,6 +36,6 @@ Dynamic mode now works faster on sites like new GMail, still slow in Firefox, bu
 ### What's next
 
 This month will be devoted to bug fixes.
-Many issues were submitted on [GitHub](https://github.com/darkreader/darkreader/issues) and by [e-mail](mailto:darkreaderapp@gmail.com).
+Many issues were submitted on [GitHub](https://github.com/darkreader/darkreader/issues) and by [e-mail](mailto:support@darkreader.org).
 The most popular one is the issue with [Google Sheets colors](https://github.com/darkreader/darkreader/issues/490),
 please use **Filter mode** for Google Sheets to ensure that cells colors are properly saved after editing.

@@ -154,4 +154,4 @@ Wenn Sie Firefox verwenden, handelt es sich höchstwahrscheinlich um einen Brows
 
 <h2 id="contacts">Kontakt</h2>
 
-Für Fragen (wir verstehen nur Englisch) senden Sie uns eine E-Mail an [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+Für Fragen (wir verstehen nur Englisch) senden Sie uns eine E-Mail an [support@darkreader.org](mailto:support@darkreader.org)

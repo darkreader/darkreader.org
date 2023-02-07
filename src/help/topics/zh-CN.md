@@ -155,5 +155,5 @@ Firefox 会无法渲染某些网页。
 
 <h2 id="contacts">联络方式</h2>
 
-有任何疑问请 Email 至 [darkreaderapp@gmail.com](mailto:darkreaderapp@gmail.com)
+有任何疑问请 Email 至 [support@darkreader.org](mailto:support@darkreader.org)
 （仅限英语）
