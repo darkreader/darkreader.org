@@ -257,7 +257,7 @@ section {
     border-radius: 50%;
     box-shadow: 0 0 1rem hsl(350deg 90% 50%);
     color: white;
-    content: "-10% Off \\A Premium";
+    content: "10% Off \\A Premium";
     display: flex;
     font-weight: bold;
     height: 5rem;
