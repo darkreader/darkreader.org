@@ -14,5 +14,13 @@
     {
         "id": "disable-change-themeFFX",
         "title": "How to disable change theme in Firefox"
+    },
+    {
+        "id": "UI-errors",
+        "title": "How to check UI errors"
+    },
+    {
+        "id": "console-errFFX",
+        "title": "How to check errors in Firefox console"
     }
 ]
