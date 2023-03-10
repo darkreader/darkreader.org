@@ -49,51 +49,6 @@ const hHTMLText = `
 </div>
 `;
 
-const tURL = 'https://jointoucan.com/partners/darkreader';
-const language = navigator.language || 'en';
-
-const tHTMLText = `
-<div class="up">
-    <a href="${tURL}" target="_blank" rel="noopener"
-        class="up-logo-link t-logo-link">Toucan</a>
-    <span class="up-text t-text">
-        <a href="${tURL}" target="_blank" rel="noopener"
-            class="up-link">Toucan ${browserText}</a>.
-        ${language.startsWith('en') ? `
-        Learn a language more <a class="tr" data-tr="easy"
-            href="${tURL}" target="_blank" rel="noopener">fácilmente</a>.
-        Immerse yourself in a new <a class="tr" data-tr="language"
-            href="${tURL}" target="_blank" rel="noopener">idioma</a> while you browse the web.
-        Join for <strong>free</strong>.
-        <a href="${tURL}" target="_blank" rel="noopener"><span
-            class="tr" data-tr="Learn more\nabout Toucan">Learn más</span></a>.
-        ` : language.startsWith('de') ? `
-        <a class="tr" data-tr="Englisch"
-            href="${tURL}" target="_blank" rel="noopener">English</a> mühelos lernen.
-        Lerne die kostenlose Erweiterung kennen, die dir dabei hilft, eine neue
-        <a class="tr" data-tr="sprache"
-            href="${tURL}" target="_blank" rel="noopener">language</a> zu lernen, während du im Internet surfst.
-        ` : language.startsWith('es') ? `
-        Aprende <a class="tr" data-tr="Inglés"
-            href="${tURL}" target="_blank" rel="noopener">English</a> sin siquiera intentarlo.
-        Conoce la extensión gratuita que te ayuda a aprender un nuevo
-        <a class="tr" data-tr="idioma"
-            href="${tURL}" target="_blank" rel="noopener">language</a> mientras navegas la red.
-        ` : language.startsWith('pt') ? `
-        Aprenda <a class="tr" data-tr="Inglês"
-            href="${tURL}" target="_blank" rel="noopener">English</a> sem esforço.
-        Conheça a extensão gratuita que ajuda você a aprender uma nova
-        <a class="tr" data-tr="idioma"
-            href="${tURL}" target="_blank" rel="noopener">language</a> enquanto navega na web.
-        ` : `
-        Learn <strong>English, Spanish, Japanese</strong> without even trying.
-        This extension helps you learn a new language while browsing the web.
-        <a href="${tURL}" target="_blank" rel="noopener">Learn more</a>.
-        `}
-    </span>
-</div>
-`;
-
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 
 const appleHTMLText = `
@@ -182,16 +137,6 @@ a:hover {
 .h-text-pp {
     font-style: italic;
 }
-.t-logo-link {
-    background-color: var(--color-toucan);
-    background-image: url(/images/toucan-logo-small.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0.625rem;
-    height: 5rem;
-    width: 7.5rem;
-}
 .safari-logo-link {
     background-image:
         url(/images/apple-logo-white.svg),
@@ -226,41 +171,6 @@ a:hover {
     font-weight: bold;
     max-width: 35.5rem;
     text-align: center;
-}
-.tr {
-    font-style: italic;
-    font-weight: bold;
-    position: relative;
-    transition: all 125ms;
-}
-.tr:hover {
-    background-color: var(--color-toucan);
-    color: white;
-    z-index: 1;
-}
-.tr::after {
-    background-color: #001b24;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 -16 16 16"><path fill="%233da097" d="M-9.582-14.165l-2.471 2.965h-2.836c-.369 0-.666.358-.666.8v4.8c0 .441.297.8.666.8h2.836l2.471 2.964c.418.501 1.137.149 1.137-.565v-11.198c0-.716-.72-1.066-1.137-.566zM-3.899-14.846c2.12 1.5 3.385 4.055 3.385 6.835 0 2.779-1.265 5.334-3.385 6.835-.474.335-1.05.126-1.307-.327-.28-.494-.15-1.147.292-1.459 1.569-1.111 2.506-2.998 2.506-5.049 0-2.052-.937-3.939-2.506-5.05-.442-.313-.572-.966-.292-1.459.279-.494.865-.639 1.307-.326zM-6.92-10.95c.253-.508.83-.69 1.287-.413 1.114.68 1.806 1.967 1.806 3.362s-.692 2.683-1.806 3.363c-.456.278-1.033.097-1.287-.413-.252-.508-.085-1.146.373-1.427.509-.31.826-.893.826-1.522s-.317-1.213-.826-1.523c-.459-.281-.626-.919-.373-1.427z" /></svg>');
-    background-position: 0.5rem 0.75rem;
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 0.25rem 0.5rem black;
-    color: white;
-    content: attr(data-tr);
-    display: inline-block;
-    left: 0;
-    opacity: 0;
-    padding: 0.5rem 0.5rem 0.5rem 1.75rem;
-    pointer-events: none;
-    position: absolute;
-    top: 100%;
-    transition: opacity 125ms;
-    white-space: pre;
-}
-.tr:hover::after {
-    opacity: 1;
-    pointer-events: all;
 }
 ::selection {
     background-color: var(--color-highlight);
@@ -317,7 +227,6 @@ class BackerHeaderElement extends HTMLElement {
         if (isHCountry) {
             container.insertAdjacentHTML('beforeend', hHTMLText);
         }
-        container.insertAdjacentHTML('beforeend', tHTMLText);
         container.insertAdjacentHTML('beforeend', appleHTMLText);
         container.insertAdjacentHTML('afterend', uaSupportHTMLText);
 
@@ -325,8 +234,6 @@ class BackerHeaderElement extends HTMLElement {
         clicker(qs('.h-logo-link'), 'h-top-logo');
         clicker(qs('.h-link'), 'h-top-link');
         clicker(qs('.h-lm'), 'h-top-lm');
-        clicker(qs('.t-logo-link'), 't-top-logo');
-        shadowRoot.querySelectorAll('.t-text a').forEach((el, i) => clicker(el, `t-top-text${i + 1}`))
         clicker(qs('.safari-logo-link'), 'drsafari-top-logo');
         clicker(qs('.safari-link'), 'drsafari-top-link');
         clicker(qs('.support-ua a'), 'ua-top-link');

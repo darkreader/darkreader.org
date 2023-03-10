@@ -7,7 +7,6 @@ import {isHCountry} from './locales.js';
 import {clicker} from './stats.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
-const tURL = 'https://jointoucan.com/partners/darkreader';
 const donateURL = 'https://opencollective.com/darkreader/donate';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 
@@ -29,11 +28,6 @@ const htmlText = `
         <strong>Use <a href="${hURL}" class="h hl" target="_blank" rel="noopener">Honey</a></strong>,
         an official <strong><em>PayPal</em></strong> extension,
         that will automatically find discounts when you purchase online.
-    </p>
-    <p class="t-tx">
-        Don't have time on learning a new language?
-        <strong><a href="${tURL}" target="_blank" rel="noopener" class="t tl">Toucan</a> extension</strong>
-        will show you foreign words in web pages you browse.
     </p>
     <p class="s-tx">
         Do you have <strong>iPhone, iPad or Mac</strong>?
@@ -62,9 +56,6 @@ a:hover {
 }
 .h {
     color: var(--color-honey-text);
-}
-.t {
-    color: var(--color-toucan-text);
 }
 .d {
     color: var(--color-highlight);

@@ -159,10 +159,8 @@ Let's wait for the announcement and hope for the best.
 Don't forget to support the ongoing Dark Reader's development.
 Install our
 <a class="text-highlight" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" data-s="drios-blog-mobile">extension for iPhones and iPads</a>.
-Check out our sponsors' extensions
-<a class="text-highlight" href="https://www.joinhoney.com/darkreader" data-s="h-blog-mobile">Honey</a>
-and
-<a class="text-highlight" href="https://jointoucan.com/partners/darkreader" data-s="t-blog-mobile">Toucan</a>.
+Check out our sponsors' extension
+<a class="text-highlight" href="https://www.joinhoney.com/darkreader" data-s="h-blog-mobile">Honey</a>.
 Tell your friends or colleagues about Dark Reader.
 You can also
 <a class="text-highlight" href="https://opencollective.com/darkreader/donate" data-s="d-blog-mobile">support us financially</a>.

@@ -142,13 +142,11 @@ Thanks these companies for providing their software and services:
 
 Thanks to our golden sponsors:
 - [PayPal](https://www.joinhoney.com/darkreader) and their extension [Honey](https://www.joinhoney.com/darkreader) for being supportive.
-- [Toucan](https://jointoucan.com/partners/darkreader) and their extension developers.
 
 Thanks to our backers and sponsors:
 - [Icons8: free icons, photos, illustrations, and music](https://icons8.com)
 - [VPNwelt](https://vpnwelt.com/)
 - [Craig Nagy](https://twitter.com/nagy_craig)
-- [Toucan](https://jointoucan.com/partners/darkreader))
 - [Richard Dawes](https://opencollective.com/richard-dawes)
 - [Team Zero](https://opencollective.com/guest-c7364549)
 - [Rhonda Howard](https://opencollective.com/guest-2103debc)

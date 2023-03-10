@@ -54,24 +54,6 @@
                         rel="noopener">Learn more</a>
                 </div>
             </div>
-            <div class="ext t-ext">
-                <div class="ext__icon t-icon"></div>
-                <div class="ext__mid">
-                    <div class="ext__name">Toucan</div>
-                    <div class="ext__quick-description">Learn a new language</div>
-                    <div class="ext__rating"><span class="ext__rating__stars">★★★★★</span> <span
-                            class="ext__rating__text">4.6 of 5</span></div>
-                    <a class="ext__install t-install" href="https://jointoucan.com/partners/darkreader" target="_blank"
-                        rel="noopener">Learn more</a>
-                </div>
-                <div class="ext__description">
-                    Learn a new language just by browsing the internet.
-                    Choose from English, Spanish, French, Japanese and other languages.
-                    Just install and go about your day like normal.
-                    <a class="ext__learn-more t-lm" href="https://jointoucan.com/partners/darkreader" target="_blank"
-                        rel="noopener">Learn more</a>.
-                </div>
-            </div>
         </section>
     </aside>
     <script>
@@ -80,9 +62,7 @@
         const isChrome = navigator.userAgent.includes('Chrom');
         const isSafari = navigator.userAgent.includes('Safari') && !isChrome;
         const hRating = document.querySelector('.h-ext .ext__rating__text');
-        const tRating = document.querySelector('.t-ext .ext__rating__text');
         hRating.textContent = `${isFirefox || isEdge ? 4.6 : isSafari ? 4.7 : 4.8} out of 5`;
-        tRating.textContent = `${isFirefox ? 4.1 : isEdge ? 4.4 : isSafari ? 4.9 : 4.6} out of 5`;
         const installs = document.querySelectorAll('.ext__install');
         installs.forEach((el) => {
             // const browser = isFirefox ? 'Firefox' : isEdge ? 'Edge' : isSafari ? 'Safari' : isChrome ? 'Chrome' : 'browser';
@@ -103,8 +83,6 @@
                 const qs = (s) => document.querySelector(s);
                 clicker(qs('.h-install'), 'h-un-add');
                 clicker(qs('.h-lm'), 'h-un-lm');
-                clicker(qs('.t-install'), 't-un-add');
-                clicker(qs('.t-lm'), 't-un-lm');
             });
 
         import('../elements/locales.js')

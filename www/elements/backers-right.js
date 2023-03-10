@@ -8,7 +8,6 @@ import {
 } from './utils.js';
 
 const hnURL = 'https://www.joinhoney.com/darkreader';
-const tcURL = 'https://jointoucan.com/partners/darkreader';
 const ocURL = 'https://opencollective.com/darkreader/donate';
 
 const isEdge = navigator.userAgent.includes('Edg');
@@ -35,34 +34,6 @@ const htmlText = `
     <a class="button-link hb" href="${hnURL}" target="_blank" rel="noopener">
         ${buttonIcon}
         <span class="button-link-text hb-text">
-            Install
-        </span>
-    </a>
-</section>
-<section class="tr">
-    <a class="logo-link tl" href="${tcURL}" target="_blank" rel="noopener">
-        <span class="logo-link-image tl-image">Toucan</span>
-    </a>
-    <a class="text-link tt" href="${tcURL}" target="_blank" rel="noopener">
-        ${language.startsWith('en') ? `
-        Learn
-        <span class="tt-flags">
-            <span class="tt-f tt-es">Spanish</span>
-            <span class="tt-f tt-jp">Japanese</span>
-            <span class="tt-f tt-fr">French</span>
-            <span class="tt-f tt-de">German</span>
-            <span class="tt-f tt-pt">Portuguese</span>
-            <span class="tt-f tt-it">Italian</span>
-        </span>
-        while you browse
-        ` : language.startsWith('de') ? 'Englisch mühelos lernen' :
-        language.startsWith('es') ? 'Aprende inglés fácilmente' :
-            language.startsWith('pt') ? 'Aprenda Inglês sem esforço' :
-                'Learn English without even trying'}
-    </a>
-    <a class="button-link tb" href="${tcURL}" target="_blank" rel="noopener">
-        ${buttonIcon}
-        <span class="button-link-text tb-text">
             Install
         </span>
     </a>
@@ -248,59 +219,6 @@ section {
     line-height: 1.125rem;
     -webkit-text-stroke: 0.0625rem;
 }
-.tr {
-    position: relative;
-}
-.tr::before {
-    align-items: center;
-    background-image: linear-gradient(to bottom, hsl(25deg 90% 50%), hsl(340deg 90% 50%));
-    border-radius: 50%;
-    box-shadow: 0 0 1rem hsl(350deg 90% 50%);
-    color: white;
-    content: "10% Off \\A Premium";
-    display: flex;
-    font-weight: bold;
-    height: 5rem;
-    justify-content: center;
-    left: -1rem;
-    pointer-events: none;
-    position: absolute;
-    text-align: center;
-    -webkit-text-stroke: 0.5px white;
-    top: -0.5rem;
-    transform: rotate(-15deg);
-    white-space: pre;
-    width: 5rem;
-}
-.tl {
-    overflow: hidden;
-}
-.tl-image {
-    background-color: var(--color-toucan);
-    background-image: url(/images/toucan-logo-full.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 8.75rem;
-    text-indent: -999rem;
-    width: 16rem;
-}
-.tt {
-    color: #4db7ff;
-    text-align: center;
-}
-.tt-tr {
-    color: white;
-    font-style: italic;
-}
-.tb {
-    background-color: #148bdc;
-    left: 0.5rem;
-    margin-top: 0;
-    position: absolute;
-    top: 6rem;
-    width: 8rem;
-}
 .b-icon {
     background-image: url(/images/icon-chrome-512x512.svg);
     background-position: center;
@@ -327,53 +245,6 @@ section {
 .b-icon--safari {
     background-image: url(/images/icon-safari-66x66.svg);
     filter: none;
-}
-.tb-text {
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.125rem;
-    -webkit-text-stroke: 0.0625rem;
-}
-.tt-flags {
-    display: inline-flex;
-    height: 1rem;
-    -webkit-text-stroke: 0;
-}
-.tt-f {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 0.25rem;
-    bottom: -0.125rem;
-    display: inline-block;
-    height: 1rem;
-    position: relative;
-    text-indent: -999rem;
-    width: 1.25rem;
-}
-.tt-f + .tt-f {
-    margin-left: 0.0625rem;
-}
-.tt-es {
-    background-image: url(/images/toucan-spanish.svg);
-}
-.tt-fr {
-    background-image: url(/images/toucan-french.svg);
-}
-.tt-de {
-    background-image: url(/images/toucan-german.svg);
-    display: none;
-}
-.tt-jp {
-    background-image: url(/images/toucan-japanese.svg);
-}
-.tt-pt {
-    background-image: url(/images/toucan-portuguese.svg);
-    display: none;
-}
-.tt-it {
-    background-image: url(/images/toucan-italian.svg);
-    display: none;
 }
 .dl,
 .dl:hover {
@@ -448,9 +319,6 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.hl'), 'h-side-img');
         clicker(qs('.hb'), 'h-side-btn');
         clicker(qs('.ht'), 'h-side-txt');
-        clicker(qs('.tl'), 't-side-img');
-        clicker(qs('.tb'), 't-side-btn');
-        clicker(qs('.tt'), 't-side-txt');
         clicker(qs('.db'), 'd-side-btn');
         clicker(qs('.dt'), 'd-side-txt');
         clicker(qs('.nr-logo-fibery'), 'fib-side-ns');

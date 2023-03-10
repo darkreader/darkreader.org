@@ -159,12 +159,6 @@ p:last-child {
     display: none;
 }
 
-.t-icon {
-    background-color: #0a4730;
-    background-image: url(/images/toucan-icon-256.png);
-    background-size: 100%;
-}
-
 .ext__mid {
     grid-area: mid;
 }
