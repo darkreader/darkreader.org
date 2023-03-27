@@ -1,4 +1,4 @@
-# How to reset settings
+# How to reset the settings
 
 First you need to activate the new design. You can find out how to do this [here](https://darkreader.org/tips/activate-v5-preview/)
 
@@ -18,7 +18,7 @@ First you need to activate the new design. You can find out how to do this [here
 
     <img src="/images/tips/reset-settings-reset.png" alt="Reset settings reset" style="width: 16rem;" loading="lazy" />
 
-5. In the warning window that appears, click **OK** in order to agree with the reset.
+5. In the appearing warning window click **OK**. Please note you will not be able to restore the settings.
 
     <img src="/images/tips/reset-settings-ok.png" alt="Reset settings OK" style="width: 16rem;" loading="lazy" />
 
