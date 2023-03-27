@@ -6,5 +6,21 @@
     {
         "id": "youtube-dark-mode",
         "title": "How to enable YouTube's dark mode"
+    },
+    {
+        "id": "reset-settings",
+        "title": "How to reset the settings"
+    },
+    {
+        "id": "disable-change-theme-ff",
+        "title": "How to disable Theme Change in Firefox"
+    },
+    {
+        "id": "ui-errors",
+        "title": "How to check for UI errors (Firefox)"
+    },
+    {
+        "id": "console-err-ff",
+        "title": "How to check for errors in Firefox console"
     }
 ]
