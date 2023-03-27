@@ -12,15 +12,15 @@
         "title": "How to reset settings"
     },
     {
-        "id": "disable-change-themeFFX",
+        "id": "disable-change-theme-ff",
         "title": "How to disable change theme in Firefox"
     },
     {
-        "id": "UI-errors",
+        "id": "ui-errors",
         "title": "How to check UI errors"
     },
     {
-        "id": "console-errFFX",
+        "id": "console-err-ff",
         "title": "How to check errors in Firefox console"
     }
 ]
