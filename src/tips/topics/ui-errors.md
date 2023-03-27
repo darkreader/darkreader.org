@@ -1,10 +1,10 @@
-# How to check UI errors
+# How to check for UI errors (Firefox)
 
 1. Click **Dark Reader** icon.
 
     <img src="/images/tips/reset-settings-icon.png" alt="Dark Reader icon" style="width: 16rem;" loading="lazy" />
 
-2. Right-click anywhere in the **Dark Reader** window and select **View Page Sourc**.
+2. Right-click anywhere in the **Dark Reader** window and select **View Page Source**.
 
     <img src="/images/tips/UI-err-viewpage.png" alt="Dark Reader view page sourse" style="width: 16rem;" loading="lazy" />
 
@@ -16,4 +16,4 @@
 
     <img src="/images/tips/UI-err-console.png" alt="Dark Reader UI console" style="width: 16rem;" loading="lazy" />
 
-If you find something write to our support team support@darkreader.org and we will try to help you!
+If you find something please email to our support team support@darkreader.org and we will try to help you!
