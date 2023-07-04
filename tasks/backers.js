@@ -15,8 +15,11 @@ async function writeJSON(dest, json) {
 
 async function updateBackers() {
     console.log('Updating backers...');
-    const response = await getRequest('https://opencollective.com/darkreader/members/all.json');
-    const backers = JSON.parse(response.text());
+    const responseOrgs = await getRequest('https://opencollective.com/darkreader/members/organizations.json');
+    const responseUsers = await getRequest('https://opencollective.com/darkreader/members/users.json');
+    const orgs = JSON.parse(responseOrgs.text());
+    const users = JSON.parse(responseUsers.text());
+    const backers = orgs.concat(users);
     const topBackers = backers
         .sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
         .filter(d => d.lastTransactionAmount >= 0)

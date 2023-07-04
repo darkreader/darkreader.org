@@ -58,6 +58,8 @@ function createBackersGraph(backers) {
         return `hsl(${fillHue}, ${fillSaturation}%, ${fillBrightness}%)`;
     }
 
+    const adblockPro = backers.find(o => o.name.toLowerCase().includes('adblock pro'));
+    adblockPro.name = 'AdBlock Pro: Block ads and trackers in Safari';
     const icons8Org = backers.find(o => o.name.toLowerCase().includes('icons8'));
     icons8Org.pri = 1;
     const instinctools = backers.find(o => o.name.toLowerCase().includes('instinctools'));
@@ -72,7 +74,7 @@ function createBackersGraph(backers) {
     const toucanOrg = backers.find(o => o.name.toLowerCase().includes('toucan'));
 
     const displayBackers = backers
-        .filter((b) => ![icons8Org, instinctools, vpnBlogOrg, toucanOrg].includes(b))
+        .filter((b) => ![adblockPro, icons8Org, instinctools, vpnBlogOrg, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -87,6 +89,7 @@ function createBackersGraph(backers) {
     }
 
     return html('div', {class: 'grid'},
+        createBackerLink(adblockPro, 'wide', null, 'adblock-pro'),
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
         createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
         createBackerLink(instinctools, 'wide', null, 'instinctools'),
@@ -239,6 +242,9 @@ const cssText = `
 .backer--small .backer-pic {
     height: 100%;
     width: 100%;
+}
+.adblock-pro {
+    background-color: #a83556;
 }
 .icons8 {
     background-color: #29795a;
