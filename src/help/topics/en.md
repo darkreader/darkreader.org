@@ -4,6 +4,7 @@ This document will guide you through the features of Dark Reader.
 
 - [FAQ](#faq)
 - [Contacts](#contacts)
+- [Options icon](#options-icon)
 - [Top section](#top-section)
 - [Filter settings](#filter-settings)
 - [Custom site settings](#custom-site-settings)
@@ -12,6 +13,13 @@ This document will guide you through the features of Dark Reader.
 - [Theme generation modes](#theme-generation-modes)
 - [Bottom section](#bottom-section)
 - [Using the Developer tools](#using-dev-tools)
+
+<h2 id="options-icon">Options icon</h2>
+
+Sometimes Dark Reader's icon is hidden after the installation.
+To display the icon click **extensions button** near the address bar and then another button near Dark Reader.
+
+<img src="/images/help/darkreader-icon-edge.png" alt="Hiding icon" style="width: 20rem;" loading="lazy" />
 
 
 <h2 id="top-section">Top section</h2>
