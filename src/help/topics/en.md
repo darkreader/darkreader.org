@@ -4,7 +4,7 @@ This document will guide you through the features of Dark Reader.
 
 - [FAQ](#faq)
 - [Contacts](#contacts)
-- [Hiding icon](#hiding-icon)
+- [Options icon](#options-icon)
 - [Top section](#top-section)
 - [Filter settings](#filter-settings)
 - [Custom site settings](#custom-site-settings)
@@ -14,10 +14,10 @@ This document will guide you through the features of Dark Reader.
 - [Bottom section](#bottom-section)
 - [Using the Developer tools](#using-dev-tools)
 
-<h2 id="hiding-icon">Hiding icon</h2>
+<h2 id="options-icon">Options icon</h2>
 
-The Dark Reader icon is hiding behind the extensions in Chrome and Edge.
-To display the Dark Reader icon on the toolbar click on the extensions button and opposite Dark Reader icon click show in toolbar.
+Sometimes Dark Reader's icon is hidden after the installation.
+To display the icon click **extensions button** near the address bar and then another button near Dark Reader.
 
 <img src="/images/help/darkreader-icon-edge.png" alt="Hiding icon" style="width: 20rem;" loading="lazy" />
 
