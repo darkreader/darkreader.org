@@ -16,10 +16,10 @@ This document will guide you through the features of Dark Reader.
 
 <h2 id="options-icon">Options icon</h2>
 
-Sometimes Dark Reader's icon is hidden after the installation.
-To display the icon click **extensions button** near the address bar and then another button near Dark Reader.
+<img src="/images/help/darkreader-icon-edge.png" alt="Options icon" style="width: 20rem;" loading="lazy" />
 
-<img src="/images/help/darkreader-icon-edge.png" alt="Hiding icon" style="width: 20rem;" loading="lazy" />
+Sometimes the Dark Reader icon is hidden after installation.
+To display the icon, click the **Extensions** button next to the address bar and then another button next to Dark Reader.
 
 
 <h2 id="top-section">Top section</h2>
