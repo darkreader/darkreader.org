@@ -62,7 +62,7 @@ const ddgHTMLText = `
     <span class="up-text">
         <a href="${ddgURL}" target="_blank" rel="noopener"
             class="up-link ddg-link"
-        >DuckDuckGo Private Browser</a>.
+        >Download DuckDuckGo Private Browser</a>.
         Search and browse more privately with the free browser for
         <a href="${ddgIosURL}" target="_blank" rel="noopener"
             class="ddg-link">iOS</a>,
@@ -72,8 +72,6 @@ const ddgHTMLText = `
             class="ddg-link">Mac</a> and
         <a href="${ddgWinURL}" target="_blank" rel="noopener"
             class="ddg-link">Windows</a>.
-        <a href="${ddgURL}" target="_blank" rel="noopener"
-            class="ddg-lm">Learn more</a>.
     </span>
 </div>
 `;
@@ -172,6 +170,15 @@ a:hover {
     border-radius: 0.625rem;
     height: 5rem;
     width: 7.5rem;
+}
+/**
+ * DDG v2
+ */
+ .ddg-logo-link {
+    background-image: url(/images/duckduckgo-small.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .h-text-pp {
     font-style: italic;

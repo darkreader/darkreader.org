@@ -41,7 +41,7 @@ const htmlText = `
 </section>
 <section class="ddgr">
     <a class="logo-link ddgl" href="${ddgURL}" target="_blank" rel="noopener">
-        <span class="logo-link-image ddgl-image">DuckDuckGo</span>
+        <span class="logo-link-image ddgl-image">DuckDuckGo Browser for iOS, Mac, Android & Windows. Download it now!</span>
         <span class="ddgl-message">
             DuckDuckGo Browser
         </span>
@@ -303,6 +303,24 @@ section {
     line-height: 1.125rem;
     -webkit-text-stroke: 0.0625rem;
 }
+/**
+ * DDG v2
+ */
+.ddgl-image {
+    background-image: url(/images/duckduckgo-large.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ddgl-message {
+    display: none;
+}
+.ddgl-message-small {
+    display: none;
+}
+.ddgb {
+    display: none;
+}
 @-moz-document url-prefix() {
     .b-icon {
         background-image: url(/images/icon-firefox-87x82.svg);
@@ -392,6 +410,9 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.hl'), 'h-side-img');
         clicker(qs('.hb'), 'h-side-btn');
         clicker(qs('.ht'), 'h-side-txt');
+        clicker(qs('.ddgl'), 'ddg-side-img');
+        clicker(qs('.ddgb'), 'ddg-side-btn');
+        clicker(qs('.ddgt'), 'ddg-side-txt');
         clicker(qs('.db'), 'd-side-btn');
         clicker(qs('.dt'), 'd-side-txt');
         clicker(qs('.nr-logo-fibery'), 'fib-side-ns');
