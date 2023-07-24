@@ -8,6 +8,7 @@ import {
 } from './utils.js';
 
 const hnURL = 'https://www.joinhoney.com/darkreader';
+const ddgURL = 'https://duckduckgo.com/browser?ref=darkreader';
 const ocURL = 'https://opencollective.com/darkreader/donate';
 
 const isEdge = navigator.userAgent.includes('Edg');
@@ -35,6 +36,25 @@ const htmlText = `
         ${buttonIcon}
         <span class="button-link-text hb-text">
             Install
+        </span>
+    </a>
+</section>
+<section class="ddgr">
+    <a class="logo-link ddgl" href="${ddgURL}" target="_blank" rel="noopener">
+        <span class="logo-link-image ddgl-image">DuckDuckGo</span>
+        <span class="ddgl-message">
+            DuckDuckGo Browser
+        </span>
+        <span class="ddgl-message-small">
+            For iOS, Mac, Android & Windows
+        </span>
+    </a>
+    <a class="text-link ddgt" href="${ddgURL}" target="_blank" rel="noopener">
+        For iOS, Mac, Android & Windows
+    </a>
+    <a class="button-link ddgb" href="${ddgURL}" target="_blank" rel="noopener">
+        <span class="button-link-text ddgb-text">
+            Download Now!
         </span>
     </a>
 </section>
@@ -229,6 +249,59 @@ section {
     height: 2rem;
     margin-right: 0.5rem;
     width: 2rem;
+}
+.ddgl {
+    overflow: hidden;
+    position: relative;
+}
+.ddgl-image {
+    background-color: #DE5833;
+    background-image: url(/images/duckduckgo-icon.svg), linear-gradient(45deg, #FFCC3399, #FFCC3300 50%), linear-gradient(-45deg, #6B4EBA99, #6B4EBA00 50%);
+    background-position: center 5%, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 20% auto, cover, cover;
+    height: 8.75rem;
+    text-indent: -999rem;
+    width: 16rem;
+}
+.ddgl-message {
+    color: white;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    top: 3.5rem;
+}
+.ddgl-message-small {
+    color: white;
+    display: inline-block;
+    font-size: 0.8rem;
+    position: absolute;
+    text-align: center;
+    top: 4.8rem;
+}
+.ddgt {
+    color: #f09935;
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+.ddgb {
+    background-color: #3969EF;
+    margin: 0 auto;
+    position: absolute;
+    top: 6rem;
+    width: 12rem;
+}
+.ddgb:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem cyan;
+}
+.ddgb-text {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.125rem;
+    -webkit-text-stroke: 0.0625rem;
 }
 @-moz-document url-prefix() {
     .b-icon {

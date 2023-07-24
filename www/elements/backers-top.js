@@ -25,7 +25,7 @@ if (navigator.userAgent.includes('Firefox')) {
 
 const titleHTMLText = `
 <div class="up-title">
-    Check out these wonderful extensions
+    Check out these wonderful apps
 </div>
 `;
 
@@ -45,6 +45,35 @@ const hHTMLText = `
         Join for <strong>free</strong> and get coupons.
         <a href="${hURL}" target="_blank" rel="noopener"
             class="h-lm">Learn more</a>.
+    </span>
+</div>
+`;
+
+const ddgURL = 'https://duckduckgo.com/browser?ref=darkreader';
+const ddgIosURL = 'https://apps.apple.com/app/duckduckgo-privacy-browser/id663592361?platform=iphone&ct=darkreader&pt=866401&mt=8';
+const ddgAndroidURL = 'https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3darkreader&ref=darkreader';
+const ddgMacURL = 'https://duckduckgo.com/mac?ref=darkreader';
+const ddgWinURL = 'https://duckduckgo.com/windows?ref=darkreader';
+
+const ddgHTMLText = `
+<div class="up">
+    <a href="${ddgURL}" target="_blank" rel="noopener"
+        class="up-logo-link ddg-logo-link">DuckDuckGo Browser</a>
+    <span class="up-text">
+        <a href="${ddgURL}" target="_blank" rel="noopener"
+            class="up-link ddg-link"
+        >DuckDuckGo Private Browser</a>.
+        Search and browse more privately with the free browser for
+        <a href="${ddgIosURL}" target="_blank" rel="noopener"
+            class="ddg-link">iOS</a>,
+        <a href="${ddgAndroidURL}" target="_blank" rel="noopener"
+            class="ddg-link">Android</a>,
+        <a href="${ddgMacURL}" target="_blank" rel="noopener"
+            class="ddg-link">Mac</a> and
+        <a href="${ddgWinURL}" target="_blank" rel="noopener"
+            class="ddg-link">Windows</a>.
+        <a href="${ddgURL}" target="_blank" rel="noopener"
+            class="ddg-lm">Learn more</a>.
     </span>
 </div>
 `;
@@ -130,6 +159,16 @@ a:hover {
     background-position: 50% 52%;
     background-repeat: no-repeat;
     background-size: 6rem auto;
+    border-radius: 0.625rem;
+    height: 5rem;
+    width: 7.5rem;
+}
+.ddg-logo-link {
+    background-color: #DE5833;
+    background-image: url(/images/duckduckgo-text.svg), url(/images/duckduckgo-icon.svg), linear-gradient(45deg, #FFCC3399, #FFCC3300 50%), linear-gradient(-45deg, #6B4EBA99, #6B4EBA00 50%);
+    background-position: center 92.5%, center 10%, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 75% auto, 50% auto, cover, cover;
     border-radius: 0.625rem;
     height: 5rem;
     width: 7.5rem;
@@ -227,6 +266,7 @@ class BackerHeaderElement extends HTMLElement {
         if (isHCountry) {
             container.insertAdjacentHTML('beforeend', hHTMLText);
         }
+        container.insertAdjacentHTML('beforeend', ddgHTMLText);
         container.insertAdjacentHTML('beforeend', appleHTMLText);
         container.insertAdjacentHTML('afterend', uaSupportHTMLText);
 
@@ -234,6 +274,9 @@ class BackerHeaderElement extends HTMLElement {
         clicker(qs('.h-logo-link'), 'h-top-logo');
         clicker(qs('.h-link'), 'h-top-link');
         clicker(qs('.h-lm'), 'h-top-lm');
+        clicker(qs('.ddg-logo-link'), 'ddg-top-logo');
+        clicker(qs('.ddg-link'), 'ddg-top-link');
+        clicker(qs('.ddg-lm'), 'ddg-top-lm');
         clicker(qs('.safari-logo-link'), 'drsafari-top-logo');
         clicker(qs('.safari-link'), 'drsafari-top-link');
         clicker(qs('.support-ua a'), 'ua-top-link');
