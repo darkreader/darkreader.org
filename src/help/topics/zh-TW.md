@@ -16,7 +16,7 @@
 
 <h2 id="top-section">頂端列</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
 
 - 「**切換網站**」可將目前網站加入忽略列表（或從列表中移除）。
 - 「**開啟／關閉**」可啟用或停用擴充套件。
@@ -26,14 +26,14 @@
 
 <h2 id="filter-settings">濾鏡設定</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
 
 可調整各項濾鏡數值，以適應您的螢幕參數和室內環境亮度。
 
 
 <h2 id="custom-site-settings">個別網站設定</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
 
 「**僅適用於**」按鍵只會將設定值應用於目前網站。
 
@@ -42,7 +42,7 @@
 
 <h2 id="site-list">網站列表</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
 
 - 使用「**反色列表**」讓 Dark Reader 只對列表中的網站有作用。
 - 「**不反色列表**」避免擴充套件應用於列表中的網站。
@@ -51,7 +51,7 @@
 
 <h2 id="more-tab">更多選項</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
 
 - 從列表**選取字型**（或在 Firefox 輸入字型名稱），勾選方框。
 - 調整**文字描邊**（筆畫粗細）。
@@ -61,7 +61,7 @@
 <h2 id="theme-generation-modes">主題生成模式</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
     <figcaption>過濾+、靜態、動態模式之比較</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ Firefox 會無法呈現某些網頁。
 
 <h2 id="bottom-section">底端列</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
 
 - 請閱讀我們的**隱私政策**，追蹤我們的 **Twitter**。
 - 「**捐贈**」──若您喜歡這個擴充套件，請考慮支持活躍的 Dark Reader 開發團隊。

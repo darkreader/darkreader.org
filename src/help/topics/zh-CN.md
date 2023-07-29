@@ -16,7 +16,7 @@
 
 <h2 id="top-section">顶部选项</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
 
 - “**切换网站**”可将目前网站加入忽略列表（或从忽略列表中移除）。
 - “**开启／关闭**”可启用或停用扩展。
@@ -26,14 +26,14 @@
 
 <h2 id="filter-settings">滤镜设置</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
 
 可调整各项滤镜数值，以适应您的屏幕参数和室内环境亮度。
 
 
 <h2 id="custom-site-settings">个别网站设置</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
 
 点击“**仅适用于**”按键将设置值设为仅应用于当前网站。
 
@@ -42,7 +42,7 @@
 
 <h2 id="site-list">网站列表</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
 
 - 使用“**反色列表**”让 Dark Reader 仅对列表中的网站生效。
 - 使用“**不反色列表**”避免扩展应用于列表中的网站。
@@ -51,7 +51,7 @@
 
 <h2 id="more-tab">更多选项</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
 
 - 从列表**选择字体**（或在 Firefox 输入字体名称），勾选方框。
 - 调整**文字描边**。
@@ -61,7 +61,7 @@
 <h2 id="theme-generation-modes">主题生成模式</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
     <figcaption>过滤+、静态、动态模式比较</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ Firefox 会无法渲染某些网页。
 
 <h2 id="bottom-section">底部选项</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
 
 - 阅读我们的**隐私政策**，关注我们的 **Twitter**。
 - “**捐赠**”──若您喜欢这个扩展，请考虑支持活跃的 Dark Reader 开发团队。
