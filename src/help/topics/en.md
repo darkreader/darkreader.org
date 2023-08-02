@@ -4,15 +4,7 @@ This document will guide you through the features of Dark Reader.
 
 - [FAQ](#faq)
 - [Contacts](#contacts)
-- [Options icon](#options-icon)
-- [Top section](#top-section)
-- [Filter settings](#filter-settings)
-- [Custom site settings](#custom-site-settings)
-- [Site list](#site-list)
-- [More tab](#more-tab)
-- [Theme generation modes](#theme-generation-modes)
-- [Bottom section](#bottom-section)
-- [Using the Developer tools](#using-dev-tools)
+- [Tips for advanced users](../../tips/)
 
 <h2 id="options-icon">Options icon</h2>
 
@@ -108,13 +100,17 @@ Crowdfunding is powered by Open Collective, which currently uses Stripe for hand
 If you are familiar with CSS selectors, you can help by suggesting a fix for filtering a website.
 Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
 
+<h2 id="tips">Tips for advanced users</h2>
 
-<h2 id="faq">FAQ</h2>
+Do you want to learn more? Please visit our <a href="../../tips/">Tips & Tricks</a> website section.
+
+
+<h2 id="faq">Frequently Asked Questions</h2>
 
 <h4 class="text-highlight">How to support Dark Reader</h4>
 
 1. Install our <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS app</a>.
-2. Install our sponsors' extensions.
+2. Install our sponsors' apps and extensions.
 3. <a data-s="d-help-faq" href="https://opencollective.com/darkreader/donate">Donate</a>.
 4. Suggest to friends and colleagues.
 
