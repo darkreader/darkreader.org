@@ -22,5 +22,9 @@
     {
         "id": "console-err-ff",
         "title": "How to check for errors in Firefox console"
+    },
+    {
+        "id": "configure-toggle-automation",
+        "title": "How to configure Automation and Site Toggling"
     }
 ]
