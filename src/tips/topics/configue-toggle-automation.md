@@ -12,13 +12,13 @@ In the top menu you will see two options:
 
 <img src="/images/tips/configue-automation.png" style="width: 16rem;" loading="lazy" />
 
-There are several ways to set up automation depending on:
+There are several ways to switch Dark Reader on or off automatically depending on:
 
-1. active hours
+1. Manually specified active hours.
 
-2. location
+2. Sunrise and sunset time in a certain **location** (latitude and longitude).
 
-3. when system dark mode is on
+3. When system dark mode is on.
 
 # Site Toggling
 
