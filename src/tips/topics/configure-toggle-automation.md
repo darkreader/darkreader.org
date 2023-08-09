@@ -6,11 +6,11 @@ Click **Dark Reader** icon.
 
 In the top menu you will see two options:
 
-<img src="/images/tips/configue-main.png" style="width: 16rem;" loading="lazy" />
+<img src="/images/tips/configure-main.png" style="width: 16rem;" loading="lazy" />
 
 # Automation
 
-<img src="/images/tips/configue-automation.png" style="width: 16rem;" loading="lazy" />
+<img src="/images/tips/configure-automation.png" style="width: 16rem;" loading="lazy" />
 
 There are several ways to switch Dark Reader on or off automatically depending on:
 
@@ -24,7 +24,7 @@ There are several ways to switch Dark Reader on or off automatically depending o
 
 Click the Settings button under website URL button.
 
-<img src="/images/tips/configue-site-toggling.png" style="width: 16rem;" loading="lazy" />
+<img src="/images/tips/configure-site-toggling.png" style="width: 16rem;" loading="lazy" />
 
 1. If you want Dark Reader to work only on certain websites, uncheck the **Enabled by default** checkbox.
 
