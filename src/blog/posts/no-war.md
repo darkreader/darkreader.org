@@ -116,7 +116,9 @@ Please support the others with donations and by sharing your knowledge.
 
 <style>
     aside,
-    darkreader-donate-mascot {
+    darkreader-donate-mascot,
+    darkreader-ios-static,
+    darkreader-ios-side {
         display: none;
     }
     .header-logo {

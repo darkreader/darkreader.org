@@ -1,5 +1,9 @@
 [
     {
+        "id": "mobile",
+        "title": "How to install Dark Reader for mobile devices"
+    },
+    {
         "id": "activate-v5-preview",
         "title": "Activating new features preview"
     },
