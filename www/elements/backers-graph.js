@@ -155,7 +155,8 @@ function createBackerLink(backer, size, color, cls) {
 const cssText = `
 .grid {
     display: grid;
-    gap: 0.2rem;
+    column-gap: 0.2rem;
+    row-gap: 0.5rem;
     grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
     grid-auto-rows: 2.5rem;
     grid-auto-fill: dense;

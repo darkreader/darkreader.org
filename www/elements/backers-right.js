@@ -122,6 +122,7 @@ a:hover {
     margin: 0 0 0.75rem 0;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
+    text-align: center;
 }
 section {
     align-items: center;
@@ -129,6 +130,7 @@ section {
     flex-direction: column;
     margin-bottom: 0.75rem;
     position: relative;
+    padding: 5px 0px;
 }
 .logo-link {
     align-items: center;
@@ -340,6 +342,7 @@ section {
 .dl,
 .dl:hover {
     box-shadow: none;
+    margin-bottom: 10px;
 }
 .dl-graph {
     width: 100%;
