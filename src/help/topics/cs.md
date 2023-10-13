@@ -16,7 +16,7 @@ Tento dokument Vám napomůže v používání rozšíření Dark Reader.
 
 <h2 id="top-section">Horní část</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Horní část" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Horní část" style="width: 15rem;" loading="lazy" />
 
 - Tlačítko **Přepnout současnou stránku** přidá současnou stránku do seznamu ignorovaných (nebo ji z něj odstraní).
 - Přepínač **Zap/Vyp** zapne nebo vypne rozšíření.
@@ -26,14 +26,14 @@ Tento dokument Vám napomůže v používání rozšíření Dark Reader.
 
 <h2 id="filter-settings">Nastavení filtru</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Nastavení filtru" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Nastavení filtru" style="width: 15rem;" loading="lazy" />
 
 Upravte nastavení filtru, aby lépe odpovídalo vaší obrazovce a osvětlení v místnosti.
 
 
 <h2 id="custom-site-settings">Vlastní nastavení stránky</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Vlastní nastavení stránky" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Vlastní nastavení stránky" style="width: 15rem;" loading="lazy" />
 
 Tlačítko **Pouze pro** slouží pro použití nastavení pouze pro současnou stránku.
 
@@ -42,7 +42,7 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
 
 <h2 id="site-list">Seznam stránek</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Seznam stránek" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Seznam stránek" style="width: 15rem;" loading="lazy" />
 
 - Použijte **Invertovat stránky v seznamu** pokud si přejete, aby Dark Reader fungoval pouze a právě na těchto stránkách.
 - **Neinvertovat stránky v seznamu** zabrání rozšíření, aby fungovalo na těchto stránkách.
@@ -51,7 +51,7 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
 
 <h2 id="more-tab">Záložka Více</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Záložka Více" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="Záložka Více" style="width: 15rem;" loading="lazy" />
 
 - **Vybrat písmo** ze seznamu (nebo ve Firefoxu napište jméno), klikněte na **zaškrtávací pole**.
 - Upravte **tloušťku písma**.
@@ -61,7 +61,7 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
 <h2 id="theme-generation-modes">Generátory motivů</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filtr+ vs. Statický vs. Dynamický" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Filtr+ vs. Statický vs. Dynamický" loading="lazy" />
     <figcaption>Filtr+ vs. Statický vs. Dynamický</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ nicméně již nyní funguje spolehlivě na mnoha moderních stránkách.
 
 <h2 id="bottom-section">Dolní část</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Dolní část" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Dolní část" style="width: 15rem;" loading="lazy" />
 
 - Přečtěte si naše **pravidla ochrany soukromí**, sledujte nás na **Twitteru**.
 - **Přispějte** – pokud se Vám rozšíření líbí, zvažte podporu probíhajícího vývoje Dark Readeru.

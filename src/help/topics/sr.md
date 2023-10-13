@@ -16,7 +16,7 @@ Ovaj dokument će vas upoznati sa mogućnostima Dark Reader-a.
 
 <h2 id="top-section">Gornji odeljak</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Gornji odeljak" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Gornji odeljak" style="width: 15rem;" loading="lazy" />
 
 - Dugme **Uklj. trenutni sajt** dodaje trenutni sajt u listu izuzetaka (ili ga odatle briše).
 - **Uklj/Isklj** prekidač omogućava ili onemogućava ekstenziju.
@@ -26,14 +26,14 @@ Ovaj dokument će vas upoznati sa mogućnostima Dark Reader-a.
 
 <h2 id="filter-settings">Podešavanja filtera</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Podešavanja filtera" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Podešavanja filtera" style="width: 15rem;" loading="lazy" />
 
 Podesite mod, osvetljenje, kontrast, sepiju i saturaciju ("sivi mod"), tako da bolje odgovara parametrima vašeg ekrana i osvetljenju u sobi.
 
 
 <h2 id="custom-site-settings">Podešavanja za konkretne sajtove</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Podešavanja za konkretne sajtove" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Podešavanja za konkretne sajtove" style="width: 15rem;" loading="lazy" />
 
 Dugme **Samo za** određuje da li podešavanja filtera iznad trebaju da se primene samo za trenutni sajt.
 
@@ -42,7 +42,7 @@ Da biste to podesili, prvo kliknite dugme (koje će se osvetliti), onda podesite
 
 <h2 id="site-list">Lista sajtova</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Lista sajtova" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Lista sajtova" style="width: 15rem;" loading="lazy" />
 
 - Koristite **Invertujte izlistane** ako želite da Dark Reader radi samo sa sajtovima na listi.
 - **Ne invertujte izlistane** će učiniti da ekstenzija ne radi na izlistanim sajtovima.
@@ -51,7 +51,7 @@ Da biste to podesili, prvo kliknite dugme (koje će se osvetliti), onda podesite
 
 <h2 id="more-tab">Kartica "Više"</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Kartica Više" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="Kartica Više" style="width: 15rem;" loading="lazy" />
 
 - **Izaberite font** sa spiska (ili unesite ime fonta u Firefox-u), označite **polje**.
 - Podesite **debljinu teksta**.
@@ -61,7 +61,7 @@ Da biste to podesili, prvo kliknite dugme (koje će se osvetliti), onda podesite
 <h2 id="theme-generation-modes">Modovi generisanja tema</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. statični vs. dinamični mod" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Filter+ vs. statični vs. dinamični mod" loading="lazy" />
     <figcaption>Filter+ vs. statični vs. dinamični mod</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ ali već radi odlično na većini modernih sajtova.
 
 <h2 id="bottom-section">Donji odeljak</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Donji odeljak" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Donji odeljak" style="width: 15rem;" loading="lazy" />
 
 - Pročitajte našu **izjavu o privatnosti**, zapratite nas na **Tviteru**, pogledajte izvorni kod i doprinesite na **GitHub-u**, pročitajte **pomoćnu** dokumentaciju na ovoj stranici.
 - **Donirajte** – ako vam se dopada ekstenzija, molimo razmislite o tome da podržite njen aktivni razvoj.

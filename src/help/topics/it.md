@@ -16,7 +16,7 @@ Questo documento vi guiderà alla scoperta delle funzionalità di Dark Reader.
 
 <h2 id="top-section">Parte principale</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Parte principale" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Parte principale" style="width: 15rem;" loading="lazy" />
 
 - Il pulsante **Inverti sito** aggiunge (o rimuove) il sito attuale alla lista dei siti ignorati.
 - L'interruttore **Accesa/Spenta** abilita o disabilita l'estensione.
@@ -26,14 +26,14 @@ Questo documento vi guiderà alla scoperta delle funzionalità di Dark Reader.
 
 <h2 id="filter-settings">Impostazione dei filtri</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Impostazione dei filtri" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Impostazione dei filtri" style="width: 15rem;" loading="lazy" />
 
 Regola le impostazione dei filtri in modo che si adattino meglio alle impostazioni del tuo schermo e all'illuminazione della stanza.
 
 
 <h2 id="custom-site-settings">Impostazioni personalizzate per sito</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Impostazioni personalizzate per sito" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Impostazioni personalizzate per sito" style="width: 15rem;" loading="lazy" />
 
 Il pulsante **Solo per** applica le impostazioni solamente al sito attuale.
 
@@ -42,7 +42,7 @@ Premi il pulsante, modifica le impostazioni, premi nuovamente per annullare..
 
 <h2 id="site-list">Lista dei siti</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Lista dei siti" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Lista dei siti" style="width: 15rem;" loading="lazy" />
 
 - Utilizza **Inverti solo** per fare in modo che Dark Reader agisca solamente sui siti elencati.
 - Utilizza **Non invertire solo** impedirà all'estensione di agire sui siti elencati.
@@ -51,7 +51,7 @@ Premi il pulsante, modifica le impostazioni, premi nuovamente per annullare..
 
 <h2 id="more-tab">Tab Di più</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Tab Di più" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="Tab Di più" style="width: 15rem;" loading="lazy" />
 
 - **Seleziona un carattere** dalla lista (o scrivi il nome del carattere su Firefox), clicca sulla **spunta**.
 - Modifica il **contorno del testo**.
@@ -61,7 +61,7 @@ Premi il pulsante, modifica le impostazioni, premi nuovamente per annullare..
 <h2 id="theme-generation-modes">Modalità di di generazione del tema</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Modalità Filtro+ vs. Statico vs. Dinamico" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Modalità Filtro+ vs. Statico vs. Dinamico" loading="lazy" />
     <figcaption>Modalità Filtro+ vs. Statico vs. Dinamico</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ ma attualmente funziona già correttamente su molti siti moderni.
 
 <h2 id="bottom-section">Parte inferiore</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Parte inferiore" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Parte inferiore" style="width: 15rem;" loading="lazy" />
 
 - Leggi la nostra **informativa sulla privacy**, seguici su **Twitter**.
 - **Dona** – se ti piace questa estensione, prendi in considerazione di supportare lo sviluppo continuo di Dark Reader.

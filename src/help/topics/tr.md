@@ -16,7 +16,7 @@ Bu döküman Dark Reader özellikleri hakkında size rehberlik edecek.
 
 <h2 id="top-section">Üst bölüm</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Top section" style="width: 15rem;" loading="lazy" />
 
 - **Bu site için aç-kapat** Siteyi görmezden gel (yada tekrar etkinleştir).
 - **Açık-Kapalı** Eklentiyi Açar yada Kapatır.
@@ -26,14 +26,14 @@ Bu döküman Dark Reader özellikleri hakkında size rehberlik edecek.
 
 <h2 id="filter-settings">Filtre ayarları</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
 
 Parlaklık,kontrast,sepya ve doygunluk(gri ton) ayarlarını, ekranınıza ve odanızın aydınlatmasına uyması için değiştirebilirsiniz
 
 
 <h2 id="custom-site-settings">Özel site ayarları</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
 
 **Sadece** butonu yukarıdaki ayarların sadece bu site için geçerli olduğunu belirtir.
 
@@ -42,7 +42,7 @@ Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardı
 
 <h2 id="site-list">Site listesi</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Site list" style="width: 15rem;" loading="lazy" />
 
 - Eğer Dark Reader'ın sadece listelenen sitelerde çalışmasını istiyorsanız **Sadece listedekiler** seçeneğini kullanın.
 - **Hariç tutulanlar** eklentinin listedeki sitelerde çalışmasını önler.
@@ -51,7 +51,7 @@ Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardı
 
 <h2 id="more-tab">Daha fazla bölümü</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
 
 - Listeden **Font seç** (Yada Firefox için font ismi gir),**İşaret kutusuna** tıkla.
 - **Metin kalınlığını** ayarla.
@@ -61,7 +61,7 @@ Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardı
 <h2 id="theme-generation-modes">Tema oluşturma modları</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Static vs. Dynamic mode" loading="lazy" />
     <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ ama şimdiden çoğu modern sitede gayet iyi çalışıyor.
 
 <h2 id="bottom-section">Alt bölüm</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Bottom section" style="width: 15rem;" loading="lazy" />
 
 - **Gizlilik politikamızı** okuyun, Bizi **Twitter'dan** takip edin, Kaynak kodunu görmek ve katkı sağlamak için **Github**'ı ziyaret edin, bu sayfadan **Yardım** dökümanını okuyun.
 - **Bağış** – eğer eklentiyi beğendiyseniz, lütfen Dark Reader'ın geliştirilmesi için bağış yaparak desteğinizi gösterin.

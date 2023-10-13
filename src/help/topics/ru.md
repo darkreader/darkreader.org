@@ -16,7 +16,7 @@
 
 <h2 id="top-section">Верхняя секция</h2>
 
-<img src="/images/help/darkreader-top-section.png" alt="Верхняя секция" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-top-section.png" alt="Верхняя секция" style="width: 15rem;" loading="lazy" />
 
 - Кнопка **Переключить** добавляет сайт в список исключений (либо достаёт оттуда).
 - Переключатель **Вкл/Откл** включает либо отключает расширение.
@@ -26,14 +26,14 @@
 
 <h2 id="filter-settings">Настройки фильтра</h2>
 
-<img src="/images/help/darkreader-filter-settings.png" alt="Настройки фильтра" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-filter-settings.png" alt="Настройки фильтра" style="width: 15rem;" loading="lazy" />
 
 Настройте значения фильтра, которые соответствуют параметрам вашего экрана и освещению в комнате.
 
 
 <h2 id="custom-site-settings">Настройки для определённого сайта</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Настройки для определённого сайта" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-custom-site-settings.png" alt="Настройки для определённого сайта" style="width: 15rem;" loading="lazy" />
 
 Кнопка **Только для** применяет настройки только для текущего сайта.
 
@@ -42,7 +42,7 @@
 
 <h2 id="site-list">Список сайтов</h2>
 
-<img src="/images/help/darkreader-site-list.png" alt="Список сайтов" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-site-list.png" alt="Список сайтов" style="width: 15rem;" loading="lazy" />
 
 - Используйте **Инвертировать только эти**, когда вы хотите, чтобы Dark Reader работал только на сайтах в списке. 
 - **Не инвертировать** предотвратит работу расширения на сайтах в списке.
@@ -51,7 +51,7 @@
 
 <h2 id="more-tab">Вкладка Ещё</h2>
 
-<img src="/images/help/darkreader-more-tab.png" alt="Вкладка Ещё" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-more-tab.png" alt="Вкладка Ещё" style="width: 15rem;" loading="lazy" />
 
 - **Выберите шрифт** из списка (или введите полное имя шрифта в Firefox), нажмите галочку.
 - Настройте **обводку текста**.
@@ -61,7 +61,7 @@
 <h2 id="theme-generation-modes">Режимы генерации тем</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Фильтр+ vs. Статический vs. Динамический режим" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Фильтр+ vs. Статический vs. Динамический режим" loading="lazy" />
     <figcaption>Фильтр+ vs. Статический vs. Динамический режим</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@
 
 <h2 id="bottom-section">Нижняя секция</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Нижняя секция" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Нижняя секция" style="width: 15rem;" loading="lazy" />
 
 - Прочтите нашу **политику конфиденциальности**, подписывайтесь на наш **Twitter**.
 - **Поддержка** – Если вам нравится Dark Reader, поддержите его активную разработку.
