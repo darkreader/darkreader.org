@@ -71,7 +71,7 @@ const htmlText = `
     </a>
 </section>
 <section class="nr">
-    <h2 class="nr-heading">Not sponsored by</h2>
+    <h2 class="nr-heading">We also love:</h2>
     <div class="nr-links">
         <a
             class="nr-logo-link nr-logo-fibery"
