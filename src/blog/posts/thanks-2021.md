@@ -1807,7 +1807,7 @@ Thanks to our backers and sponsors:
 - [Eric S](https://opencollective.com/eric-s)
 - [Linden](https://opencollective.com/guest-29a80738)
 - [JACOPO](https://opencollective.com/guest-6c390a95)
-- [Janessa Ravenwood](https://opencollective.com/guest-0df52e39)
+- [Janessa R.](https://opencollective.com/guest-0df52e39)
 - [KO WS](https://opencollective.com/guest-3c36dbf8)
 - [Collin Sauve](https://opencollective.com/collin-sauve)
 - [Chris Boesch](https://opencollective.com/guest-1b3734d2)
