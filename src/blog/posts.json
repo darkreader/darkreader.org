@@ -1,5 +1,11 @@
 [
     {
+        "id": "thanks-2023",
+        "date": "2023-11-22T15:42Z",
+        "headline": "Big Thanks & Big Apologies",
+        "icon": "https://darkreader.org/images/thanks-blog-icon.png"
+    },
+    {
         "id": "news-2023",
         "date": "2023-01-30T21:36Z",
         "headline": "2022/2023 Newsletter: Great Year Beginning",
