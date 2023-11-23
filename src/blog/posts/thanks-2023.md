@@ -47,7 +47,7 @@ THIS SOFTWARE.
 
 ### Thanks to our sponsors
 
-Speciall thanks to our biggest sponsors
+Special thanks to our biggest sponsors
 <a class="text-highlight" href="https://duckduckgo.com/browser?ref=darkreader" data-s="ddg-blog-thanks2023">DuckDuckGo</a>
 and <a class="text-highlight" href="https://www.joinhoney.com/darkreader" data-s="h-blog-thanks2023">Honey</a>.
 
