@@ -61,6 +61,7 @@ function createBackersGraph(backers) {
     const adblockPro = backers.find(o => o.name.toLowerCase().includes('adblock pro'));
     adblockPro.name = 'AdBlock Pro: Block ads and trackers in Safari';
     const icons8Org = backers.find(o => o.name.toLowerCase().includes('icons8'));
+    icons8Org.name = 'Icons8: Free icons, clipart illustrations and photos';
     icons8Org.pri = 1;
     const instinctools = backers.find(o => o.name.toLowerCase().includes('instinctools'));
     instinctools.pri = 1;
