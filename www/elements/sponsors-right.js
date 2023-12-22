@@ -1,6 +1,6 @@
 // @ts-check
 
-import './backers-graph.js';
+import './sponsors-graph.js';
 import {isHCountry} from './locales.js';
 import {clicker} from './stats.js';
 import {

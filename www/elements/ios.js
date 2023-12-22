@@ -1,6 +1,5 @@
 // @ts-check
 
-import './backers-graph.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,

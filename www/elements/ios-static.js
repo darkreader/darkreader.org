@@ -1,6 +1,5 @@
 // @ts-check
 
-import './backers-graph.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -17,6 +16,13 @@ const htmlText = `
         Dark Reader for iOS
     </a>
 </div>
+<section class="o">
+    <a class="offer-link" href="${safariURL}" target="_blank" rel="noopener">
+        <div class="offer-1">Christmas Offer</div>
+        <div class="offer-2">Only for <strong>$1.99</strong><span class="vat"> (+VAT)</span></div>
+        <div class="offer-3">between <strong>Dec 23</strong> and <strong>Jan 3</strong></div>
+    </a>
+</section>
 <section class="i">
     <a class="image-link" href="${safariURL}" target="_blank" rel="noopener">
         Dark Reader for iPhone, iPad and Mac
@@ -50,6 +56,44 @@ a:hover {
 .subtitle {
     font-weight: bold;
     margin: 0 0 0 2.5rem;
+}
+.offer-link {
+    background-color: #143c1c;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 0.5rem white;
+    color: white;
+    display: inline-block;
+    margin: 1rem 2.5rem 0 2.5rem;
+    outline: dashed 0.5rem #d50e0e;
+    padding: 1rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s;
+    white-space: nowrap;
+    width: auto;
+}
+.offer-link:hover {
+    background-color: #0b3414;
+    outline: dashed 0.5rem #ffbc00;
+}
+.offer-1 {
+    color: #ffbc00;
+    font-size: 1.25rem;
+    font-weight: bold;
+    -webkit-text-stroke: 0.03125rem;
+}
+.offer-2 {
+    font-size: 1.1rem;
+}
+.offer-2 strong {
+    -webkit-text-stroke: 0.03125rem;
+}
+.offer-3 {
+    font-size: 0.75rem;
+    font-style: italic;
+}
+.vat {
+    font-size: 0.75rem;
 }
 section {
     align-items: center;
@@ -97,6 +141,7 @@ class IOSStaticElement extends HTMLElement {
 
         clicker(shadowRoot.querySelector('.image-link'), 'drios-left');
         clicker(shadowRoot.querySelector('.text-link'), 'drios-left');
+        clicker(shadowRoot.querySelector('.offer-link'), 'drios-left');
 
         const parent = this.parentElement;
         if (parent && parent.matches('.page-grid-left')) {
