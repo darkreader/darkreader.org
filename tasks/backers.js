@@ -77,7 +77,7 @@ async function updateBackers() {
         console.log(`> ${file}`);
     }
 
-    const backersFile = 'www/data/top-backers.json';
+    const backersFile = 'www/data/backers.json';
     await writeJSON(backersFile, topBackers);
     console.log('Backers updated');
     await imageProcessor.destroy();

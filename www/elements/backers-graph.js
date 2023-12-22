@@ -35,7 +35,7 @@ async function getBackers() {
     if (backersCache) {
         return backersCache;
     }
-    const backers = await loadJSON('/data/top-backers.json');
+    const backers = await loadJSON('/data/backers.json');
     backersCache = backers;
     return backers;
 }
