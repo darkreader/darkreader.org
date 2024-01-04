@@ -16,7 +16,7 @@ const htmlText = `
         Dark Reader for iOS
     </a>
 </div>
-<section class="o">
+<section class="o" style="display: none">
     <a class="offer-link" href="${safariURL}" target="_blank" rel="noopener">
         <div class="offer-1">Christmas Offer</div>
         <div class="offer-2">Only for <strong>$1.99</strong><span class="vat"> (+VAT)</span></div>

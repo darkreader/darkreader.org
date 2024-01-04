@@ -14,9 +14,6 @@ We want to thank the Google Chrome Web Store team for the quick review of the fi
 We are doing this for you. We continue working on important [bugs](https://raw.githubusercontent.com/darkreader/darkreader/main/CHANGELOG.md)
 and will release an updated user interface in early 2024.
 
-> **~~Thanksgiving~~ Christmas offer**: Dark Reader for iOS only for **$1.99** (+VAT), if you purchase between **December 23 and January 3**.
-> <a class="text-highlight" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" data-s="drios-blog-thanks2023">Learn more</a>.
-
 ### Thanks to our active GitHub contributors
 
 - [Anton Bershanskiy](https://github.com/bershanskiy)
