@@ -47,6 +47,7 @@ To use, first click the button (which will become highlighted), then adjust the 
 - Use **Invert listed only** if you wish Dark Reader to work only on listed websites.
 - **Not invert listed** will prevent the extension from working on listed websites.
 - Possible patterns for values are `google.com, mail.google.com, google.*, google.com/maps` etc.
+- Regular expressions are supported. They should start and end with `/`, like `/www\.google\..*/`.
 - Clicking the **Toggle** button (in [Top section](#top-section)) adds the current site into this list.
 
 <h2 id="more-tab">More tab</h2>
