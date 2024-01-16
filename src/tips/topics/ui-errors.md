@@ -16,4 +16,4 @@
 
     <img src="/images/tips/UI-err-console.png" alt="Dark Reader UI console" style="width: 16rem;" loading="lazy" />
 
-If you find something please email to our support team support@darkreader.org and we will try to help you!
+If you see any errors, please email to our Support Team [support@darkreader.org](mailto:support@darkreader.org) and we will try to help you.
