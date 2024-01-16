@@ -13,4 +13,4 @@
     <img src="/images/tips/cons-errFFX-cons.png" alt="Console" style="width: 24rem;" loading="lazy" />
 
 
-Check if there are any errors and send to support@darkreader.org if necessary.
+If the extension doesn't work as expected and you see the errors, please email to our Support Team [support@darkreader.org](mailto:support@darkreader.org) and we will try to help.
