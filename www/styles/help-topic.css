@@ -2,8 +2,12 @@
 @import "./page-grid.css";
 @import "./help-shared.css";
 
-.page-grid-header {
-    display: none;
+.help-header-logo {
+    text-indent: -999rem;
+}
+
+.page-grid-inside {
+    margin-bottom: 0.5rem;
 }
 
 .page-grid-ios {
@@ -33,6 +37,10 @@
 
 .page-grid-left > darkreader-ios-static.ios__scroll-up {
     transform: translateY(3.5rem);
+}
+
+article > h1:first-child {
+    display: none;
 }
 
 @media screen and (min-width: 74rem) {
