@@ -16,7 +16,7 @@ Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 <h2 id="top-section">Oberer Abschnitt</h2>
 
-<img src="/images/help/de/darkreader-top-section-de.png" alt="Oberer Abschnitt" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/de/darkreader-top-section-de.png" alt="Oberer Abschnitt" style="width: 15rem;" loading="lazy" />
 
 - Die Schaltfläche "↻" mit dem Domainnamen fügt die aktuelle (Sub-)Domain in die **Ignorierliste** ein (oder entfernt sie von dort).
 - Der **Ein-Aus-Schalter** aktiviert oder deaktiviert Dark Reader.
@@ -26,14 +26,14 @@ Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 <h2 id="filter-settings">Filtereinstellungen</h2>
 
-<img src="/images/help/de/darkreader-filter-settings-de.png" alt="Filtereinstellungen" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/de/darkreader-filter-settings-de.png" alt="Filtereinstellungen" style="width: 15rem;" loading="lazy" />
 
 Passen Sie die Filterwerte so an, dass sie Ihren Bildschirmparametern und der Beleuchtung im Raum am besten entsprechen.
 
 
 <h2 id="custom-site-settings">Benutzerdefinierte Websiteeinstellungen</h2>
 
-<img src="/images/help/de/darkreader-custom-site-settings-de.png" alt="Benutzerdefinierte Websiteeinstellungen" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/de/darkreader-custom-site-settings-de.png" alt="Benutzerdefinierte Websiteeinstellungen" style="width: 15rem;" loading="lazy" />
 
 Mit der Schaltfläche **Nur für** werden Einstellungen vorgenommen, die nur auf die aktuelle Website angewendet werden.
 
@@ -42,7 +42,7 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
 
 <h2 id="site-list">Websiteliste</h2>
 
-<img src="/images/help/de/darkreader-site-list-de.png" alt="Websiteliste" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/de/darkreader-site-list-de.png" alt="Websiteliste" style="width: 15rem;" loading="lazy" />
 
 - Verwenden Sie **Nur invertieren**, wenn Sie möchten, dass Dark Reader nur auf den gelisteten Webseiten funktioniert.
 - **Nicht invertieren** verhindert, dass die Erweiterung auf den gelisteten Webseiten aktiv ist.
@@ -51,7 +51,7 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
 
 <h2 id="more-tab">Mehr-Tab</h2>
 
-<img src="/images/help/de/darkreader-more-tab-de.png" alt="Mehr tab" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/de/darkreader-more-tab-de.png" alt="Mehr tab" style="width: 15rem;" loading="lazy" />
 
 - **Wählen Sie eine Schriftart** aus der Liste (oder geben Sie den Schriftnamen in Firefox ein) und klicken Sie auf das Kontrollkästchen.
 - Passen Sie die **Textstärke** an.
@@ -61,7 +61,7 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
 <h2 id="theme-generation-modes">Verfahren zur Stylegenerierung</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Statisches vs. Dynamisches Verfahren" loading="lazy" />
+    <img src="/www/images/help/darkreader-theme-modes.png" alt="Filter+ vs. Statisches vs. Dynamisches Verfahren" loading="lazy" />
     <figcaption>Filter+ vs. Statisches vs. Dynamisches Verfahren</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ aber es funktioniert bereits gut für viele moderne Webseiten.
 
 <h2 id="bottom-section">Unterer Abschnitt</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Unterer Abschnitt" style="width: 15rem;" loading="lazy" />
+<img src="/www/images/help/darkreader-footer.png" alt="Unterer Abschnitt" style="width: 15rem;" loading="lazy" />
 
 - Lesen Sie unsere **Datenschutzerklärung**, folgen Sie uns auf Twitter.
 - **Spenden** - Wenn Ihnen die Erweiterung gefällt, sollten Sie die aktive Entwicklung von Dark Reader unterstützen.
