@@ -14,12 +14,21 @@
     <meta property="og:image" content="https://darkreader.org/images/icon-256.png" />
     <meta property="og:description" content="Support our work on Dark Reader browser extension." />
     <style>
+        :root {
+            --color-background: #141e24;
+            --color-control: #316e7d;
+            --color-control-hover: #193945;
+            --color-text: #53a1b3;
+            --color-text-highlight: white;
+            --color-accent: #e96c4c;
+        }
+
         html {
-            background-color: #141e24;
+            background-color: var(--color-background);
         }
 
         body {
-            color: #53a1b3;
+            color: var(--color-text);
             font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
             max-width: 40em;
             margin: 0 auto;
@@ -28,18 +37,11 @@
 
         h1,
         h2 {
-            color: #e96c4c;
+            color: var(--color-accent);
         }
 
         h3 {
             margin-bottom: 0;
-        }
-
-        .banner,
-        .banner__image {
-            display: inline-block;
-            margin: 0;
-            width: 100%;
         }
 
         a {
@@ -47,7 +49,99 @@
         }
 
         a:hover {
-            color: white;
+            color: var(--color-text-highlight);
+        }
+
+        ::selection {
+            background-color: var(--color-accent);
+            color: var(--color-text-highlight);
+        }
+
+        fieldset {
+            background-color: #121a1f;
+            border: 1px solid var(--color-control);
+            border-radius: 0.25rem;
+            box-shadow: 0 0 1rem rgb(0 0 0 / 0.5);
+        }
+
+        legend {
+            color: var(--color-text-highlight);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .select-region input {
+            display: none;
+        }
+
+        .select-region label {
+            border-radius: 0.25rem;
+            cursor: pointer;
+            display: inline-block;
+            padding: 0.5rem;
+        }
+
+        .select-region label:hover {
+            background-color: var(--color-control-hover);
+        }
+
+        .select-region label:has(:checked) {
+            background-color: var(--color-control);
+            color: var(--color-text-highlight);
+            font-weight: bold;
+        }
+
+        .pay-tabs {
+            margin-top: 0.5rem;
+        }
+
+        [data-region-tab] {
+            display: none;
+        }
+
+        :has([value="region-us"]:checked)~* [data-region-tab="region-us"] {
+            display: block;
+        }
+
+        :has([value="region-uk"]:checked)~* [data-region-tab="region-uk"] {
+            display: block;
+        }
+
+        :has([value="region-eu"]:checked)~* [data-region-tab="region-eu"] {
+            display: block;
+        }
+
+        :has([value="region-other"]:checked)~* [data-region-tab="region-us"] {
+            display: block;
+        }
+
+        [id*="paypal-container-"] {
+            max-width: 16rem;
+        }
+
+        #desc-label {
+            color: var(--color-accent);
+        }
+
+        #price-label {
+            color: var(--color-text-highlight);
+        }
+
+        #quantity {
+            color-scheme: dark;
+        }
+
+        #total {
+            color: var(--color-text-highlight);
+        }
+
+        [id^="zoid-paypal-buttons-"] iframe {
+            filter: invert(1) hue-rotate(180deg);
+        }
+
+        footer {
+            font-size: 0.75rem;
+            margin-top: 1rem;
         }
     </style>
 </head>
@@ -57,47 +151,158 @@
         <img class="banner__image" src="../images/darkreader-main.svg" />
     </a>
 
-    <h2>Ways to support our work</h2>
+    <h2>
+        Pay for using Dark Reader
+    </h2>
 
-    <h3>Donations</h3>
+    <fieldset class="select-region">
+        <legend>
+            Region & Currency
+        </legend>
+        <label>
+            <input type="radio" name="region" value="region-us">
+            🇺🇸 United States $
+        </label>
+        <label>
+            <input type="radio" name="region" value="region-uk">
+            🇬🇧 United Kingdom £
+        </label>
+        <label>
+            <input type="radio" name="region" value="region-eu">
+            🇪🇺 European Union €
+        </label>
+        <label>
+            <input type="radio" name="region" value="region-other">
+            🌎 Other
+        </label>
+    </fieldset>
+    <fieldset class="pay-tabs">
+        <legend>
+            Checkout
+        </legend>
+        <div class="pay-tab" data-region-tab="region-us">
+            <script
+                src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+            <div id="paypal-container-6GUZKB3ZK3ZEE"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "6GUZKB3ZK3ZEE",
+                }).render("#paypal-container-6GUZKB3ZK3ZEE")
+            </script>
+        </div>
+        <div class="pay-tab" data-region-tab="region-uk">
+            <script
+                src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+            <div id="paypal-container-DRE2J7DSGZ3EC"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "DRE2J7DSGZ3EC",
+                }).render("#paypal-container-DRE2J7DSGZ3EC")
+            </script>
+        </div>
+        <div class="pay-tab" data-region-tab="region-eu">
+            <script
+                src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+            <div id="paypal-container-364NSETFEQ4W2"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "364NSETFEQ4W2",
+                }).render("#paypal-container-364NSETFEQ4W2")
+            </script>
+        </div>
+    </fieldset>
 
-    <p>
-        Support us on Open Collective
-        open source crowdfunding platform.
-    </p>
+    <script>
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const t_uk = [
+            'Belfast',
+            'London',
+            'GB',
+        ];
+        const t_us = [
+            'Adak',
+            'Anchorage',
+            'Atka',
+            'Boise',
+            'Chicago',
+            'Denver',
+            'Fort_Wayne',
+            'Indiana',
+            'Juneau',
+            'Kentucky',
+            'Knox_IN',
+            'Los_Angeles',
+            'Louisville',
+            'Menominee',
+            'Metlakatla',
+            'New_York',
+            'Nome',
+            'North_Dakota',
+            'Phoenix',
+            'Shiprock',
+            'Sitka',
+            'Yakutat',
+            'Navajo',
+            'Honolulu',
+            'US/',
+        ];
+        const t_eu = [
+            'Amsterdam',
+            'Athens',
+            'Azores',
+            'Berlin',
+            'Bratislava',
+            'Brussels',
+            'Bucharest',
+            'Budapest',
+            'Busingen',
+            'Canary',
+            'Ceuta',
+            'Copenhagen',
+            'Dublin',
+            'Eire',
+            'Famagusta',
+            'Helsinki',
+            'Lisbon',
+            'Ljubljana',
+            'Luxembourg',
+            'Madeira',
+            'Madrid',
+            'Malta',
+            'Nicosia',
+            'Paris',
+            'Poland',
+            'Portugal',
+            'Prague',
+            'Riga',
+            'Rome',
+            'Stockholm',
+            'Tallinn',
+            'Vienna',
+            'Vilnius',
+            'Warsaw',
+            'Zagreb',
+        ];
+        if (t_uk.some((t) => tz.includes(t))) {
+            document.querySelector('[name="region"][value="region-uk"]').checked = true;
+        } else if (t_us.some((t) => tz.includes(t))) {
+            document.querySelector('[name="region"][value="region-us"]').checked = true;
+        } else if (t_eu.some((t) => tz.includes(t))) {
+            document.querySelector('[name="region"][value="region-eu"]').checked = true;
+        } else {
+            document.querySelector('[name="region"][value="region-other"]').checked = true;
+        }
+    </script>
 
-    <p>
-        <a href="https://opencollective.com/darkreader/donate" target="_blank" rel="noopener" data-s="d-sup-img">
-            <img src="https://opencollective.com/darkreader/donate/button@2x.png?color=blue" width="300">
-        </a>
-    </p>
-
-    <h3>iPhone and iPad apps</h3>
-
-    <p>
-        Take Dark Mode with you.
-        Dark Reader for Safari is available on the App Store.
-    </p>
-
-    <p>
-        <a href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" target="_blank"
-            rel="noopener" data-s="drios-sup-img">
-            <img src="../images/app-store-badge.svg" width="200">
-        </a>
-    </p>
-
-    <h3>Save money with Honey (by PayPal)</h3>
-
-    <p>
-        Honey will automatically apply coupon codes
-        when you make online purchases.
-    </p>
-
-    <p>
-        <a href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener" data-s="h-sup-img">
-            <img src="../images/honey-logo.jpg" width="200" style="border-radius: 1rem;">
-        </a>
-    </p>
+    <footer>
+        <p>
+            © 2024 Dark Reader Ltd
+        </p>
+        <p>
+            Dark Reader Ltd is registered in England and Wales (Company No 13594380), Suite 746 Unit 3A, 34-35 Hatton
+            Garden, London, EC1N 8DX, United Kingdom
+        </p>
+    </footer>
 
     <script type="module" src="../elements/stats.js"></script>
 
