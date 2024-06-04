@@ -95,6 +95,27 @@
             font-weight: bold;
         }
 
+        .flag {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+            height: 0.75rem;
+            width: 1rem;
+        }
+
+        .flag-us {
+            background-image: url('../images/flag-us-24x18.png');
+        }
+
+        .flag-uk {
+            background-image: url('../images/flag-uk-24x18.png');
+        }
+
+        .flag-eu {
+            background-image: url('../images/flag-eu-24x18.png');
+        }
+
         .pay-tabs {
             margin-top: 0.5rem;
         }
@@ -165,19 +186,19 @@
         </legend>
         <label>
             <input type="radio" name="region" value="region-us">
-            🇺🇸 United States $
+            <i class="flag flag-us"></i> United States $
         </label>
         <label>
             <input type="radio" name="region" value="region-uk">
-            🇬🇧 United Kingdom £
+            <i class="flag flag-uk"></i> United Kingdom £
         </label>
         <label>
             <input type="radio" name="region" value="region-eu">
-            🇪🇺 European Union €
+            <i class="flag flag-eu"></i> European Union €
         </label>
         <label>
             <input type="radio" name="region" value="region-other">
-            🌎 Other
+            Other
         </label>
     </fieldset>
     <fieldset class="pay-tabs">
