@@ -31,8 +31,23 @@
         Please choose a payment method that is more convenient to you.
     </p>
 
+    <p class="radio-group tiers">
+        <label class="radio-button">
+            <input type="radio" name="tier" value="tier-regular" checked>
+            Regular User
+        </label>
+        <label class="radio-button">
+            <input type="radio" name="tier" value="tier-corporate">
+            Corporate Users
+        </label>
+        <label class="radio-button">
+            <input type="radio" name="tier" value="tier-discount">
+            Discount %
+        </label>
+    </p>
+
     <div class="fieldset-wrapper">
-        <fieldset>
+        <fieldset data-payment-type="regular">
             <legend>
                 Debit or Credit Card
             </legend>
@@ -47,7 +62,7 @@
             </small>
         </fieldset>
 
-        <fieldset>
+        <fieldset data-payment-type="regular">
             <legend>
                 PayPal
             </legend>
@@ -56,20 +71,20 @@
                 <h4 class="region-title">
                     Region
                 </h4>
-                <p class="regions">
-                    <label class="region-button">
+                <p class="radio-group regions">
+                    <label class="radio-button">
                         <input type="radio" name="region" value="region-us">
                         <i class="flag flag-us"></i> US
                     </label>
-                    <label class="region-button">
+                    <label class="radio-button">
                         <input type="radio" name="region" value="region-uk">
                         <i class="flag flag-uk"></i> UK
                     </label>
-                    <label class="region-button">
+                    <label class="radio-button">
                         <input type="radio" name="region" value="region-eu">
                         <i class="flag flag-eu"></i> EU
                     </label>
-                    <label class="region-button">
+                    <label class="radio-button">
                         <input type="radio" name="region" value="region-other">
                         Other
                     </label>
@@ -106,6 +121,53 @@
                     }).render("#paypal-container-364NSETFEQ4W2")
                 </script>
             </div>
+        </fieldset>
+
+        <fieldset data-payment-type="corporate">
+            <legend>
+                Corporate Users
+            </legend>
+            <p>
+                Annual subscription, price per user
+            </p>
+            <stripe-buy-button buy-button-id="buy_btn_1PO2eyJ3cD62eTibkh6iY28s"
+                publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
+            </stripe-buy-button>
+
+            <small>
+                Powered by <strong>Stripe</strong>
+            </small>
+        </fieldset>
+
+        <fieldset data-payment-type="corporate">
+            <legend>
+                Special Pricing & Conditions
+            </legend>
+            <p>
+                Please contact us for information on individual terms, payment methods (like bank transfer) and advertising on our website.
+            </p>
+            <p>
+                <a href="mailto:support@darkreader.org?subject=[Corporate]%20Your%20Request">support@darkreader.org</a>
+            </p>
+        </fieldset>
+
+        <fieldset data-payment-type="discount">
+            <legend>
+                Discount
+            </legend>
+            <p>
+                Users who cannot pay a regular price can apply for a discount
+            </p>
+            <div>
+                <s class="discount-strike">US$4.99</s>
+            </div>
+            <stripe-buy-button buy-button-id="buy_btn_1PO2MZJ3cD62eTib23eYPQ6D"
+                publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
+            </stripe-buy-button>
+
+            <small>
+                Powered by <strong>Stripe</strong>
+            </small>
         </fieldset>
     </div>
 

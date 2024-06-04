@@ -79,22 +79,22 @@ legend {
     margin: 0.5rem 0 0 0;
 }
 
-.region-button {
+.radio-button {
     border-radius: 0.25rem;
     cursor: pointer;
     display: inline-block;
     padding: 0.5rem;
 }
 
-.region-button input {
+.radio-button input {
     display: none;
 }
 
-.region-button:hover {
+.radio-button:hover {
     background-color: var(--color-control-hover);
 }
 
-.region-button:has(:checked) {
+.radio-button:has(:checked) {
     background-color: var(--color-control);
     color: var(--color-text-highlight);
     font-weight: bold;
@@ -119,6 +119,22 @@ legend {
 
 .flag-eu {
     background-image: url('../images/flag-eu-24x18.png');
+}
+
+[data-payment-type] {
+    display: none;
+}
+
+:has([value="tier-regular"]:checked)~* [data-payment-type="regular"] {
+    display: flex;
+}
+
+:has([value="tier-corporate"]:checked)~* [data-payment-type="corporate"] {
+    display: flex;
+}
+
+:has([value="tier-discount"]:checked)~* [data-payment-type="discount"] {
+    display: flex;
 }
 
 [data-region-tab] {
@@ -166,6 +182,11 @@ legend {
 
 [id^="zoid-paypal-buttons-"] iframe {
     filter: invert(1) hue-rotate(180deg);
+}
+
+.discount-strike {
+    color: var(--color-accent);
+    font-size: 2rem;
 }
 
 footer {
