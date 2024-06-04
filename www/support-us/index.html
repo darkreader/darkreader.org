@@ -53,7 +53,7 @@
             </legend>
             <div>
                 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                <stripe-buy-button buy-button-id="buy_btn_1PNyV1J3cD62eTib1OGUERwp"
+                <stripe-buy-button data-s="d-sup-reg" buy-button-id="buy_btn_1PNyV1J3cD62eTib1OGUERwp"
                     publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
                 </stripe-buy-button>
             </div>
@@ -94,7 +94,7 @@
             <div class="pay-tab" data-region-tab="region-us">
                 <script
                     src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-                <div id="paypal-container-6GUZKB3ZK3ZEE"></div>
+                <div id="paypal-container-6GUZKB3ZK3ZEE" data-s="d-sup-pp"></div>
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "6GUZKB3ZK3ZEE",
@@ -104,7 +104,7 @@
             <div class="pay-tab" data-region-tab="region-uk">
                 <script
                     src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
-                <div id="paypal-container-DRE2J7DSGZ3EC"></div>
+                <div id="paypal-container-DRE2J7DSGZ3EC" data-s="d-sup-pp"></div>
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "DRE2J7DSGZ3EC",
@@ -114,7 +114,7 @@
             <div class="pay-tab" data-region-tab="region-eu">
                 <script
                     src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-                <div id="paypal-container-364NSETFEQ4W2"></div>
+                <div id="paypal-container-364NSETFEQ4W2" data-s="d-sup-pp"></div>
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "364NSETFEQ4W2",
@@ -130,7 +130,7 @@
             <p>
                 Annual subscription, price per user
             </p>
-            <stripe-buy-button buy-button-id="buy_btn_1PO2eyJ3cD62eTibkh6iY28s"
+            <stripe-buy-button data-s="d-sup-corp" buy-button-id="buy_btn_1PO2eyJ3cD62eTibkh6iY28s"
                 publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
             </stripe-buy-button>
 
@@ -144,7 +144,8 @@
                 Special Pricing & Conditions
             </legend>
             <p>
-                Please contact us for information on individual terms, payment methods (like bank transfer) and advertising on our website.
+                Please contact us for information on individual terms, payment methods (like bank transfer) and
+                advertising on our website.
             </p>
             <p>
                 <a href="mailto:support@darkreader.org?subject=[Corporate]%20Your%20Request">support@darkreader.org</a>
@@ -156,18 +157,48 @@
                 Discount
             </legend>
             <p>
-                Users who cannot pay a regular price can apply for a discount
+                You can pay at a reduced price today
             </p>
             <div>
                 <s class="discount-strike">US$4.99</s>
             </div>
-            <stripe-buy-button buy-button-id="buy_btn_1PO2MZJ3cD62eTib23eYPQ6D"
+            <stripe-buy-button data-s="d-sup-disc" buy-button-id="buy_btn_1PO2MZJ3cD62eTib23eYPQ6D"
                 publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
             </stripe-buy-button>
 
             <small>
                 Powered by <strong>Stripe</strong>
             </small>
+        </fieldset>
+
+        <fieldset data-payment-type="discount">
+            <legend>
+                Honey
+            </legend>
+            <div>
+                <p>
+                    Save money with <a class="honey-link" href="https://www.joinhoney.com/darkreader"
+                        target="_blank" rel="noopener" data-s="h-sup-text">PayPal Honey</a>.
+                </p>
+                <p class="honey-logo-wrapper">
+                    <a href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener" data-s="h-sup-img"
+                        class="honey-logo-link">
+                        PayPal Honey
+                    </a>
+                </p>
+                <p>
+                    <strong>Automatically search and apply coupons</strong> on 30,000+ websites when you shop
+                    online.
+                </p>
+                <p>
+                    Earn <strong>Cash Back</strong> at your favorite stores.
+                    The app will <strong>detect a price drop</strong> for you.
+                </p>
+                <p>
+                    <a href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener"
+                        data-s="h-sup-text">Learn more</a>
+                </p>
+            </div>
         </fieldset>
     </div>
 

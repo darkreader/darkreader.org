@@ -5,6 +5,7 @@
     --color-text: #53a1b3;
     --color-text-highlight: white;
     --color-accent: #e96c4c;
+    --color-honey: #f68623;
 }
 
 html {
@@ -187,6 +188,32 @@ legend {
 .discount-strike {
     color: var(--color-accent);
     font-size: 2rem;
+}
+
+.honey-link {
+    color: var(--color-honey);
+    font-weight: bold;
+}
+
+.honey-logo-wrapper {
+    text-align: center;
+}
+
+.honey-logo-link {
+    background-color: var(--color-honey);
+    background-image: url('../images/paypal-honey-white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 62.5%;
+    border-radius: 0.5rem;
+    display: inline-block;
+    height: 10rem;
+    text-indent: -999rem;
+    width: 16rem;
+}
+
+.honey-logo-link:hover {
+    box-shadow: 0 0 0 1px white;
 }
 
 footer {

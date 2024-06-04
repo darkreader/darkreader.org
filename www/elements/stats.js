@@ -1,6 +1,4 @@
 // @ts-check
-import {throttle} from './utils.js';
-
 const ERROR_HANDLING_ENABLED = false;
 
 /**
@@ -11,13 +9,13 @@ export function clicker(element, name) {
     if (!element) {
         return;
     }
-    element.addEventListener('mousedown', throttle(500, () => {
+    element.addEventListener('mousedown', () => {
         const path = location.pathname;
         const lang = navigator.language;
         const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
         const params = encodeParams(name, path, lang, time);
         fetch(`https://count.darkreader.app/click/v1/${params}`);
-    }));
+    }, {once: true});
 }
 
 function viewer() {
