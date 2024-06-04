@@ -2,186 +2,19 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Dark Reader — Support US</title>
-    <meta name="theme-color" content="#141e24" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="../images/icon-256.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Dark Reader" />
-    <meta property="og:url" content="https://darkreader.org/support-us" />
-    <meta property="og:title" content="Dark Reader — Support US" />
-    <meta property="og:image" content="https://darkreader.org/images/icon-256.png" />
-    <meta property="og:description" content="Support our work on Dark Reader browser extension." />
-    <style>
-        :root {
-            --color-background: #141e24;
-            --color-control: #316e7d;
-            --color-control-hover: #193945;
-            --color-text: #53a1b3;
-            --color-text-highlight: white;
-            --color-accent: #e96c4c;
-        }
-
-        html {
-            background-color: var(--color-background);
-        }
-
-        body {
-            color: var(--color-text);
-            font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
-            max-width: 42em;
-            margin: 0 auto;
-            padding: 1em
-        }
-
-        h1,
-        h2 {
-            color: var(--color-accent);
-        }
-
-        h3 {
-            margin-bottom: 0;
-        }
-
-        a {
-            color: #53a1b3;
-        }
-
-        a:hover {
-            color: var(--color-text-highlight);
-        }
-
-        ::selection {
-            background-color: var(--color-accent);
-            color: var(--color-text-highlight);
-        }
-
-        .banner__image {
-            max-width: 32rem;
-        }
-
-        .fieldset-wrapper {
-            align-items: flex-start;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: flex-start;
-        }
-
-        fieldset {
-            align-items: center;
-            background-color: #121a1f;
-            border: 1px solid var(--color-control);
-            border-radius: 0.25rem;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            width: 18rem;
-        }
-
-        legend {
-            color: var(--color-text-highlight);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .region-title {
-            margin-bottom: 0;
-        }
-
-        .region-button {
-            border-radius: 0.25rem;
-            cursor: pointer;
-            display: inline-block;
-            padding: 0.5rem;
-        }
-
-        .region-button input {
-            display: none;
-        }
-
-        .region-button:hover {
-            background-color: var(--color-control-hover);
-        }
-
-        .region-button:has(:checked) {
-            background-color: var(--color-control);
-            color: var(--color-text-highlight);
-            font-weight: bold;
-        }
-
-        .flag {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: inline-block;
-            height: 0.75rem;
-            width: 1rem;
-        }
-
-        .flag-us {
-            background-image: url('../images/flag-us-24x18.png');
-        }
-
-        .flag-uk {
-            background-image: url('../images/flag-uk-24x18.png');
-        }
-
-        .flag-eu {
-            background-image: url('../images/flag-eu-24x18.png');
-        }
-
-        [data-region-tab] {
-            display: none;
-        }
-
-        :has([value="region-us"]:checked)~[data-region-tab="region-us"] {
-            display: block;
-        }
-
-        :has([value="region-uk"]:checked)~[data-region-tab="region-uk"] {
-            display: block;
-        }
-
-        :has([value="region-eu"]:checked)~[data-region-tab="region-eu"] {
-            display: block;
-        }
-
-        :has([value="region-other"]:checked)~[data-region-tab="region-us"] {
-            display: block;
-        }
-
-        [id*="paypal-container-"] {
-            max-width: 16rem;
-        }
-
-        #desc-label {
-            color: var(--color-accent);
-        }
-
-        #price-label {
-            color: var(--color-text-highlight);
-        }
-
-        #quantity {
-            color-scheme: dark;
-        }
-
-        #total {
-            color: var(--color-text-highlight);
-        }
-
-        [id^="zoid-paypal-buttons-"] iframe {
-            filter: invert(1) hue-rotate(180deg);
-        }
-
-        footer {
-            font-size: 0.75rem;
-            margin-top: 1rem;
-        }
-    </style>
+    <meta name="theme-color" content="#141e24">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../images/icon-256.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dark Reader">
+    <meta property="og:url" content="https://darkreader.org/support-us">
+    <meta property="og:title" content="Dark Reader — Support US">
+    <meta property="og:image" content="https://darkreader.org/images/icon-256.png">
+    <meta property="og:description" content="Support our work on Dark Reader browser extension.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -190,18 +23,18 @@
     </a>
 
     <h2>
-        Pay for using Dark Reader
+        Support Our Work
     </h2>
 
     <p>
-        Thank you for supporting our work on Dark Reader.
-        Please choose a convenient payment method.
+        We are happy that you decided to support our work on Dark Reader!
+        Please choose a payment method that is more convenient to you.
     </p>
 
     <div class="fieldset-wrapper">
         <fieldset>
             <legend>
-                Debit/Credit Card
+                Debit or Credit Card
             </legend>
             <div>
                 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
@@ -219,28 +52,29 @@
                 PayPal
             </legend>
 
-            <h4 class="region-title">
-                Region & Currency
-            </h4>
-
-            <p class="regions">
-                <label class="region-button">
-                    <input type="radio" name="region" value="region-us">
-                    <i class="flag flag-us"></i> US $
-                </label>
-                <label class="region-button">
-                    <input type="radio" name="region" value="region-uk">
-                    <i class="flag flag-uk"></i> UK £
-                </label>
-                <label class="region-button">
-                    <input type="radio" name="region" value="region-eu">
-                    <i class="flag flag-eu"></i> EU €
-                </label>
-                <label class="region-button">
-                    <input type="radio" name="region" value="region-other">
-                    Other
-                </label>
-            </p>
+            <div>
+                <h4 class="region-title">
+                    Region
+                </h4>
+                <p class="regions">
+                    <label class="region-button">
+                        <input type="radio" name="region" value="region-us">
+                        <i class="flag flag-us"></i> US
+                    </label>
+                    <label class="region-button">
+                        <input type="radio" name="region" value="region-uk">
+                        <i class="flag flag-uk"></i> UK
+                    </label>
+                    <label class="region-button">
+                        <input type="radio" name="region" value="region-eu">
+                        <i class="flag flag-eu"></i> EU
+                    </label>
+                    <label class="region-button">
+                        <input type="radio" name="region" value="region-other">
+                        Other
+                    </label>
+                </p>
+            </div>
 
             <div class="pay-tab" data-region-tab="region-us">
                 <script
@@ -274,88 +108,6 @@
             </div>
         </fieldset>
     </div>
-
-    <script>
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const t_uk = [
-            'Belfast',
-            'London',
-            'GB',
-        ];
-        const t_us = [
-            'Adak',
-            'Anchorage',
-            'Atka',
-            'Boise',
-            'Chicago',
-            'Denver',
-            'Fort_Wayne',
-            'Indiana',
-            'Juneau',
-            'Kentucky',
-            'Knox_IN',
-            'Los_Angeles',
-            'Louisville',
-            'Menominee',
-            'Metlakatla',
-            'New_York',
-            'Nome',
-            'North_Dakota',
-            'Phoenix',
-            'Shiprock',
-            'Sitka',
-            'Yakutat',
-            'Navajo',
-            'Honolulu',
-            'US/',
-        ];
-        const t_eu = [
-            'Amsterdam',
-            'Athens',
-            'Azores',
-            'Berlin',
-            'Bratislava',
-            'Brussels',
-            'Bucharest',
-            'Budapest',
-            'Busingen',
-            'Canary',
-            'Ceuta',
-            'Copenhagen',
-            'Dublin',
-            'Eire',
-            'Famagusta',
-            'Helsinki',
-            'Lisbon',
-            'Ljubljana',
-            'Luxembourg',
-            'Madeira',
-            'Madrid',
-            'Malta',
-            'Nicosia',
-            'Paris',
-            'Poland',
-            'Portugal',
-            'Prague',
-            'Riga',
-            'Rome',
-            'Stockholm',
-            'Tallinn',
-            'Vienna',
-            'Vilnius',
-            'Warsaw',
-            'Zagreb',
-        ];
-        if (t_uk.some((t) => tz.includes(t))) {
-            document.querySelector('[name="region"][value="region-uk"]').checked = true;
-        } else if (t_us.some((t) => tz.includes(t))) {
-            document.querySelector('[name="region"][value="region-us"]').checked = true;
-        } else if (t_eu.some((t) => tz.includes(t))) {
-            document.querySelector('[name="region"][value="region-eu"]').checked = true;
-        } else {
-            document.querySelector('[name="region"][value="region-other"]').checked = true;
-        }
-    </script>
 
     <footer>
         <p>

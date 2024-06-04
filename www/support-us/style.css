@@ -1,0 +1,174 @@
+:root {
+    --color-background: #141e24;
+    --color-control: #316e7d;
+    --color-control-hover: #193945;
+    --color-text: #53a1b3;
+    --color-text-highlight: white;
+    --color-accent: #e96c4c;
+}
+
+html {
+    background-color: var(--color-background);
+}
+
+body {
+    color: var(--color-text);
+    font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 1em
+}
+
+h1,
+h2 {
+    color: var(--color-accent);
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+a {
+    color: #53a1b3;
+}
+
+a:hover {
+    color: var(--color-text-highlight);
+}
+
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-text-highlight);
+}
+
+.banner__image {
+    max-width: 32rem;
+}
+
+.fieldset-wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+fieldset {
+    align-items: center;
+    background-color: #121a1f;
+    border: 1px solid var(--color-control);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 18rem;
+}
+
+legend {
+    color: var(--color-text-highlight);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.region-title {
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.regions {
+    margin: 0.5rem 0 0 0;
+}
+
+.region-button {
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.region-button input {
+    display: none;
+}
+
+.region-button:hover {
+    background-color: var(--color-control-hover);
+}
+
+.region-button:has(:checked) {
+    background-color: var(--color-control);
+    color: var(--color-text-highlight);
+    font-weight: bold;
+}
+
+.flag {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 0.75rem;
+    width: 1rem;
+}
+
+.flag-us {
+    background-image: url('../images/flag-us-24x18.png');
+}
+
+.flag-uk {
+    background-image: url('../images/flag-uk-24x18.png');
+}
+
+.flag-eu {
+    background-image: url('../images/flag-eu-24x18.png');
+}
+
+[data-region-tab] {
+    display: none;
+}
+
+:has([value="region-us"]:checked)~[data-region-tab="region-us"] {
+    display: block;
+}
+
+:has([value="region-uk"]:checked)~[data-region-tab="region-uk"] {
+    display: block;
+}
+
+:has([value="region-eu"]:checked)~[data-region-tab="region-eu"] {
+    display: block;
+}
+
+:has([value="region-other"]:checked)~[data-region-tab="region-us"] {
+    display: block;
+}
+
+[id*="paypal-container-"] {
+    max-width: 16rem;
+}
+
+#desc-label {
+    color: var(--color-accent);
+    margin: 1rem 0 0 0;
+}
+
+#price-label {
+    color: var(--color-text-highlight);
+    margin: 1rem 0;
+}
+
+#quantity {
+    color-scheme: dark;
+    margin-bottom: 0;
+}
+
+#total {
+    color: var(--color-text-highlight);
+}
+
+[id^="zoid-paypal-buttons-"] iframe {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+footer {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
