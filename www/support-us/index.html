@@ -30,7 +30,7 @@
         body {
             color: var(--color-text);
             font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
-            max-width: 40em;
+            max-width: 42em;
             margin: 0 auto;
             padding: 1em
         }
@@ -61,11 +61,24 @@
             max-width: 32rem;
         }
 
+        .fieldset-wrapper {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+
         fieldset {
+            align-items: center;
             background-color: #121a1f;
             border: 1px solid var(--color-control);
             border-radius: 0.25rem;
-            box-shadow: 0 0 1rem rgb(0 0 0 / 0.5);
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 18rem;
         }
 
         legend {
@@ -74,22 +87,26 @@
             margin-bottom: 0.5rem;
         }
 
-        .select-region input {
-            display: none;
+        .region-title {
+            margin-bottom: 0;
         }
 
-        .select-region label {
+        .region-button {
             border-radius: 0.25rem;
             cursor: pointer;
             display: inline-block;
             padding: 0.5rem;
         }
 
-        .select-region label:hover {
+        .region-button input {
+            display: none;
+        }
+
+        .region-button:hover {
             background-color: var(--color-control-hover);
         }
 
-        .select-region label:has(:checked) {
+        .region-button:has(:checked) {
             background-color: var(--color-control);
             color: var(--color-text-highlight);
             font-weight: bold;
@@ -116,27 +133,23 @@
             background-image: url('../images/flag-eu-24x18.png');
         }
 
-        .pay-tabs {
-            margin-top: 0.5rem;
-        }
-
         [data-region-tab] {
             display: none;
         }
 
-        :has([value="region-us"]:checked)~* [data-region-tab="region-us"] {
+        :has([value="region-us"]:checked)~[data-region-tab="region-us"] {
             display: block;
         }
 
-        :has([value="region-uk"]:checked)~* [data-region-tab="region-uk"] {
+        :has([value="region-uk"]:checked)~[data-region-tab="region-uk"] {
             display: block;
         }
 
-        :has([value="region-eu"]:checked)~* [data-region-tab="region-eu"] {
+        :has([value="region-eu"]:checked)~[data-region-tab="region-eu"] {
             display: block;
         }
 
-        :has([value="region-other"]:checked)~* [data-region-tab="region-us"] {
+        :has([value="region-other"]:checked)~[data-region-tab="region-us"] {
             display: block;
         }
 
@@ -180,62 +193,87 @@
         Pay for using Dark Reader
     </h2>
 
-    <fieldset class="select-region">
-        <legend>
-            Region & Currency
-        </legend>
-        <label>
-            <input type="radio" name="region" value="region-us">
-            <i class="flag flag-us"></i> United States $
-        </label>
-        <label>
-            <input type="radio" name="region" value="region-uk">
-            <i class="flag flag-uk"></i> United Kingdom £
-        </label>
-        <label>
-            <input type="radio" name="region" value="region-eu">
-            <i class="flag flag-eu"></i> European Union €
-        </label>
-        <label>
-            <input type="radio" name="region" value="region-other">
-            Other
-        </label>
-    </fieldset>
-    <fieldset class="pay-tabs">
-        <legend>
-            Checkout
-        </legend>
-        <div class="pay-tab" data-region-tab="region-us">
-            <script
-                src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-            <div id="paypal-container-6GUZKB3ZK3ZEE"></div>
-            <script>
-                paypal.HostedButtons({
-                    hostedButtonId: "6GUZKB3ZK3ZEE",
-                }).render("#paypal-container-6GUZKB3ZK3ZEE")
-            </script>
-        </div>
-        <div class="pay-tab" data-region-tab="region-uk">
-            <script
-                src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
-            <div id="paypal-container-DRE2J7DSGZ3EC"></div>
-            <script>
-                paypal.HostedButtons({
-                    hostedButtonId: "DRE2J7DSGZ3EC",
-                }).render("#paypal-container-DRE2J7DSGZ3EC")
-            </script>
-        </div>
-        <div class="pay-tab" data-region-tab="region-eu">
-            <script
-                src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-            <div id="paypal-container-364NSETFEQ4W2"></div>
-            <script>
-                paypal.HostedButtons({
-                    hostedButtonId: "364NSETFEQ4W2",
-                }).render("#paypal-container-364NSETFEQ4W2")
-            </script>
-        </div>
-    </fieldset>
+    <p>
+        Thank you for supporting our work on Dark Reader.
+        Please choose a convenient payment method.
+    </p>
+
+    <div class="fieldset-wrapper">
+        <fieldset>
+            <legend>
+                Debit/Credit Card
+            </legend>
+            <div>
+                <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                <stripe-buy-button buy-button-id="buy_btn_1PNw2AJ3cD62eTib4FzXC5Fk"
+                    publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
+                </stripe-buy-button>
+            </div>
+            <small>
+                Powered by <strong>Stripe</strong>
+            </small>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                PayPal
+            </legend>
+
+            <h4 class="region-title">
+                Region & Currency
+            </h4>
+
+            <p class="regions">
+                <label class="region-button">
+                    <input type="radio" name="region" value="region-us">
+                    <i class="flag flag-us"></i> US $
+                </label>
+                <label class="region-button">
+                    <input type="radio" name="region" value="region-uk">
+                    <i class="flag flag-uk"></i> UK £
+                </label>
+                <label class="region-button">
+                    <input type="radio" name="region" value="region-eu">
+                    <i class="flag flag-eu"></i> EU €
+                </label>
+                <label class="region-button">
+                    <input type="radio" name="region" value="region-other">
+                    Other
+                </label>
+            </p>
+
+            <div class="pay-tab" data-region-tab="region-us">
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+                <div id="paypal-container-6GUZKB3ZK3ZEE"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "6GUZKB3ZK3ZEE",
+                    }).render("#paypal-container-6GUZKB3ZK3ZEE")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-uk">
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+                <div id="paypal-container-DRE2J7DSGZ3EC"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "DRE2J7DSGZ3EC",
+                    }).render("#paypal-container-DRE2J7DSGZ3EC")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-eu">
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+                <div id="paypal-container-364NSETFEQ4W2"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "364NSETFEQ4W2",
+                    }).render("#paypal-container-364NSETFEQ4W2")
+                </script>
+            </div>
+        </fieldset>
+    </div>
 
     <script>
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
