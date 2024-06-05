@@ -74,6 +74,32 @@ const htmlText = `
     </a>
     -->
 </section>
+<section class="pr">
+    <h4 class="pr-heading">Pay for using Dark Reader</h4>
+    <div class="pr-rates">
+        <label class="pr-rate">
+            <input type="radio" name="rate" value="rate-regular" checked>
+            <span class="pr-rate-desc">Regular use</span>
+            <span class="pr-rate-connect"></span>
+            <span class="pr-rate-price">$4.99</span>
+        </label>
+        <label class="pr-rate">
+            <input type="radio" name="rate" value="rate-reduced">
+            <span class="pr-rate-desc">Occasional use</span>
+            <span class="pr-rate-connect"></span>
+            <span class="pr-rate-price">$1.99</span>
+        </label>
+        <label class="pr-rate">
+            <input type="radio" name="rate" value="rate-corp">
+            <span class="pr-rate-desc">Corporate users</span>
+            <span class="pr-rate-connect"></span>
+            <span class="pr-rate-price">$9.99/yr</span>
+        </label>
+    </div>
+    <a class="button-link pb" href="${payURL}" target="_blank" rel="noopener">
+        <span class="button-link-text">Proceed</span>
+    </a>
+</section>
 <section class="nr">
     <h2 class="nr-heading">Not sponsored by</h2>
     <div class="nr-links">
@@ -350,6 +376,91 @@ section {
 }
 .db {
     background-color: var(--color-control);
+}
+.pr {
+    width: 100%;
+}
+.pr-heading {
+    color: var(--color-highlight);
+    margin: 0;
+    text-align: left;
+    -webkit-text-stroke: 0.0625rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+.pr-rates {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+.pr-rate {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    position: relative;
+    width: 100%;
+}
+.pr-rate input {
+    display: none;
+}
+.pr-rate::before {
+    background-color: transparent;
+    border: 1px solid var(--color-control);
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    flex: none;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    width: 1rem;
+}
+.pr-rate:has(:checked)::before {
+    background-color: var(--color-control);
+}
+.pr-rate:has(:checked)::after {
+    background-color: transparent;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    content: "";
+    flex: none;
+    height: 0.25rem;
+    left: 0.175rem;
+    position: absolute;
+    top: 0.375rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-45deg);
+    width: 0.5rem;
+}
+.pr-rate:has(:checked) {
+    color: white;
+}
+.pr-rate-desc {
+    display: inline-block;
+    flex: none;
+}
+.pr-rate-connect {
+    border-bottom: 1px dotted var(--color-text);
+    display: inline-block;
+    flex: auto;
+    height: 0;
+    opacity: 0.5;
+    width: 100%;
+}
+.pr-rate-price {
+    display: inline-block;
+    flex: none;
+    font-weight: bold;
+    justify-self: flex-end;
+}
+.pb {
+    background-color: var(--color-control);
+    width: 100%
 }
 .nr {
     margin-top: 1.5rem;

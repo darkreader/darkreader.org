@@ -94,7 +94,7 @@ function createBackersGraph(backers) {
 
     return html('div', {class: 'grid'},
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
-        createBackerLink(wordFinder, 'wide', null, 'word-finder'),
+        createBackerLink(wordFinder, 'wide', null, 'word-finder vpnwelt'),
         createBackerLink(instinctools, 'wide', null, 'instinctools'),
         createBackerLink(adblockPro, 'wide', null, 'adblock-pro'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
