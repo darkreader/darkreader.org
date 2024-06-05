@@ -90,7 +90,6 @@ nicméně již nyní funguje spolehlivě na mnoha moderních stránkách.
 
 - Přečtěte si naše **pravidla ochrany soukromí**, sledujte nás na **Twitteru**.
 - **Přispějte** – pokud se Vám rozšíření líbí, zvažte podporu probíhajícího vývoje Dark Readeru.
-Crowdfunding pořádá Open Collective, které nyní využívá Stripe pro příchozí platby.
 - **Novinky** – upozorňuje o poznámkách k vydáním a důležitých událostech.
 - **Vývojářské nástroje** – otevře editor konfigurace aktuálního generátoru motivu.
 

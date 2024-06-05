@@ -90,7 +90,6 @@ ama şimdiden çoğu modern sitede gayet iyi çalışıyor.
 
 - **Gizlilik politikamızı** okuyun, Bizi **Twitter'dan** takip edin, Kaynak kodunu görmek ve katkı sağlamak için **Github**'ı ziyaret edin, bu sayfadan **Yardım** dökümanını okuyun.
 - **Bağış** – eğer eklentiyi beğendiyseniz, lütfen Dark Reader'ın geliştirilmesi için bağış yaparak desteğinizi gösterin.
-Crowdfunding Open Collective tarafından sağlanmaktadır,ödemeler Stripe üzerinden gerçekleşmektedir.
 - **Haberler** – Yeni sürümlerden, notlardan ve geliştirmelerden haber alın.
 - **Geliştirici araçları** – Şimdiki tema modunu düzenlemek için bir düzenleyici açar.
 

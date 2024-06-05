@@ -90,7 +90,6 @@ ali već radi odlično na većini modernih sajtova.
 
 - Pročitajte našu **izjavu o privatnosti**, zapratite nas na **Tviteru**, pogledajte izvorni kod i doprinesite na **GitHub-u**, pročitajte **pomoćnu** dokumentaciju na ovoj stranici.
 - **Donirajte** – ako vam se dopada ekstenzija, molimo razmislite o tome da podržite njen aktivni razvoj.
-Finansiranje se vodi pomoću Open Collective, koji trenutno koristi Stripe za plaćanja.
 - **Vesti** – obaveštava o novim verzijama i važnim događajima.
 - **Alatke za razvoj** – otvara editor konfiguracije trenutnog moda generisanja teme.
 

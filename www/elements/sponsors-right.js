@@ -9,7 +9,7 @@ import {
 
 const hnURL = 'https://www.joinhoney.com/darkreader';
 const ddgURL = 'https://duckduckgo.com/browser?ref=darkreader';
-const ocURL = 'https://opencollective.com/darkreader/donate';
+const payURL = '/support-us';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
@@ -39,6 +39,7 @@ const htmlText = `
         </span>
     </a>
 </section>
+<!--
 <section class="ddgr">
     <a class="logo-link ddgl" href="${ddgURL}" target="_blank" rel="noopener">
         <span class="logo-link-image ddgl-image">DuckDuckGo Browser for iOS, Mac, Android & Windows. Download it now!</span>
@@ -58,17 +59,20 @@ const htmlText = `
         </span>
     </a>
 </section>
+-->
 <section class="dr">
     <span class="logo-link dl">
         <darkreader-backers-graph class="dl-graph" width="360" height="240" rows="4" columns="6">
         </darkreader-backers-graph>
     </span>
-    <a class="text-link dt" href="${ocURL}" target="_blank" rel="noopener">
+    <!--
+    <a class="text-link dt" href="${payURL}" target="_blank" rel="noopener">
         Become a sponsor too
     </a>
-    <a class="button-link db" href="${ocURL}" target="_blank" rel="noopener">
+    <a class="button-link db" href="${payURL}" target="_blank" rel="noopener">
         <span class="button-link-text">Donate</span>
     </a>
+    -->
 </section>
 <section class="nr">
     <h2 class="nr-heading">Not sponsored by</h2>

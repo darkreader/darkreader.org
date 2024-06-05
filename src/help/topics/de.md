@@ -89,7 +89,6 @@ aber es funktioniert bereits gut für viele moderne Webseiten.
 
 - Lesen Sie unsere **Datenschutzerklärung**, folgen Sie uns auf Twitter.
 - **Spenden** - Wenn Ihnen die Erweiterung gefällt, sollten Sie die aktive Entwicklung von Dark Reader unterstützen.
-Das Crowdfunding läuft momentan über Open Collective, das derzeit Stripe für Zahlungen verwendet.
 - **Neuigkeiten** - informiert über Versionshinweise und wichtige Ereignisse.
 - **Erweitert** - Öffnet einen Konfigurations-Editor für das aktuelle Verfahren zur Stylegenerierung ("Entwicklerwerkzeuge").
 

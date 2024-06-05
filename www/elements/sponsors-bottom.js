@@ -7,7 +7,7 @@ import {isHCountry} from './locales.js';
 import {clicker} from './stats.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
-const donateURL = 'https://opencollective.com/darkreader/donate';
+const donateURL = '/support-us';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 
 const htmlText = `
@@ -16,12 +16,11 @@ const htmlText = `
         Support us
     </h2>
     <p class="d-tx">
-        Dark Reader is <strong>free</strong>, but only 1 of 2000 users supports us.
-        Become that 2 of 2000, <strong>support us on <a
+        Please <strong><a
             href="${donateURL}"
             target="_blank"
             rel="noopener"
-        >Open Collective</a></strong>.
+        >pay for using Dark Reader</a></strong>.
     </p>
     <p class="h-tx">
         No money?
@@ -32,7 +31,6 @@ const htmlText = `
     <p class="s-tx">
         Do you have <strong>iPhone, iPad or Mac</strong>?
         Install <strong><a class="d sl" href="${safariURL}" target="_blank" rel="noopener">Dark Reader for Safari</a></strong>.
-        Good luck!
     </p>
     <p class="ns-tx">
         Dark Reader is <strong>not</strong> sponsored by

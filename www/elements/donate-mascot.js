@@ -5,7 +5,7 @@ import {
 } from './utils.js';
 import {clicker} from './stats.js';
 
-const url = 'https://opencollective.com/darkreader/donate';
+const url = 'https://darkreader.org/support-us';
 
 const htmlText = `
 <a class="donate-button" href="${url}">

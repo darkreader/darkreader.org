@@ -49,7 +49,7 @@ function scale(x, inLow, inHigh, outLow, outHigh) {
  * @returns {HTMLElement}
  */
 function createBackersGraph(backers) {
-    const count = 24;
+    const count = 0;
 
     function getColor(i) {
         const fillHue = scale(i, 0, count - 1, 120, 240);
@@ -72,10 +72,13 @@ function createBackersGraph(backers) {
     vpnBlogOrg.pri = 1;
     vpnBlogOrg.name = 'VPNwelt: Best VPN Providers Recommended';
     vpnBlogOrg.info = 'Best Free VPN for Germany';
+    const wordFinder = backers.find(o => o.name.toLowerCase().includes('word finder'));
+    wordFinder.pri = 1;
+    wordFinder.name = `Word Finder: Solve Wordle and other word games`;
     const toucanOrg = backers.find(o => o.name.toLowerCase().includes('toucan'));
 
     const displayBackers = backers
-        .filter((b) => ![adblockPro, icons8Org, instinctools, vpnBlogOrg, toucanOrg].includes(b))
+        .filter((b) => ![adblockPro, icons8Org, instinctools, wordFinder, toucanOrg].includes(b))
         .filter((b) => b.pic != null)
         .sort((a, b) => b.net - a.net)
         .slice(0, count);
@@ -90,10 +93,10 @@ function createBackersGraph(backers) {
     }
 
     return html('div', {class: 'grid'},
-        createBackerLink(adblockPro, 'wide', null, 'adblock-pro'),
         createBackerLink(icons8Org, 'wide', null, 'icons8'),
-        createBackerLink(vpnBlogOrg, 'wide', null, 'vpnwelt'),
+        createBackerLink(wordFinder, 'wide', null, 'word-finder'),
         createBackerLink(instinctools, 'wide', null, 'instinctools'),
+        createBackerLink(adblockPro, 'wide', null, 'adblock-pro'),
         ...displayBackers.map((u, i) => createBackerLink(u, 'small', getColor(i))),
     );
 }
@@ -245,7 +248,7 @@ const cssText = `
     width: 100%;
 }
 .adblock-pro {
-    background-color: #a83556;
+    background-color: #33293f;
 }
 .icons8 {
     background-color: #29795a;
@@ -254,13 +257,13 @@ const cssText = `
     background-color: #1eb141;
 }
 .instinctools {
-    background-color: #27253d;
+    background-color: #232b42;
 }
 .qulix {
     background-color: #1e547e;
 }
-.vpnwelt {
-    background-color: #173054;
+.word-finder {
+    background-color: #2e5374;
 }
 @media screen and (min-width: 57rem) and (max-height: 44rem) {
     .grid {

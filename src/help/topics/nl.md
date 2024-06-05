@@ -90,7 +90,6 @@ maar het werkt al goed voor veel moderne websites.
 
 - Lees onze **privacy policy**, volg ons op **Twitter**.
 - **Donate** - als de uitbreiding u bevalt, overweeg dan om de actieve ontwikkeling van Dark Reader te ondersteunen.
-Crowdfunding is in handen van Open Collective, dat op dit moment Stripe gebruikt voor holdingbetalingen.
 - **Nieuws** - informeert over release notes en belangrijke gebeurtenissen.
 - **Developer tools** - opent een configuratie-editor voor de huidige themamodus.
 

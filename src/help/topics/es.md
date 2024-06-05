@@ -90,7 +90,6 @@ pero ya funciona bien para muchos sitios web modernos.
 
 - Lea nuestra **política de privacidad**, síganos en **Twitter**.
 - **Donar** - si te gusta la extensión, considera apoyar el desarrollo activo de Dark Reader.
-Crowdfunding está mantenido por Open Collective, que utiliza Stripe en el momento de realizar los pagos.
 - **Avisos** - notifica sobre notas de prensa y eventos importantes.
 - **Herramientas** - abre un editor de configuración para el modo de tema actual.
 

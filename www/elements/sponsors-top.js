@@ -56,6 +56,7 @@ const ddgMacURL = 'https://duckduckgo.com/mac?ref=darkreader';
 const ddgWinURL = 'https://duckduckgo.com/windows?ref=darkreader';
 
 const ddgHTMLText = `
+<!--
 <div class="up">
     <a href="${ddgURL}" target="_blank" rel="noopener"
         class="up-logo-link ddg-logo-link">DuckDuckGo Browser</a>
@@ -74,6 +75,7 @@ const ddgHTMLText = `
             class="ddg-link">Windows</a>.
     </span>
 </div>
+-->
 `;
 
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';

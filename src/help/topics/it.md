@@ -90,7 +90,6 @@ ma attualmente funziona già correttamente su molti siti moderni.
 
 - Leggi la nostra **informativa sulla privacy**, seguici su **Twitter**.
 - **Dona** – se ti piace questa estensione, prendi in considerazione di supportare lo sviluppo continuo di Dark Reader.
-Il finanziamento collettivo (crowdfunding) è detenuto da Open Collective, che al momento usa Stripe per finalizzare i pagamenti.
 - **Nuove** – ti notifica sulle note di rilascio ed eventi importanti.
 - **Strumenti per sviluppatori** – apre un editor di configurazione per la modalità di generazione del tema attuale.
 

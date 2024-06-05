@@ -91,7 +91,6 @@ but it already works well for many modern websites.
 
 - Read our **privacy policy**, follow us on **Twitter**, view source and contribute on **Github**, read the **Help** documentation on this page.
 - **Donate** – if you like the extension, please consider supporting the active development of Dark Reader.
-Crowdfunding is powered by Open Collective, which currently uses Stripe for handling payments.
 - **News** – notifies about release notes and important events.
 - **Developer tools** – opens a config editor for the current theme mode.
 
@@ -110,9 +109,9 @@ Do you want to learn more? Please visit our <a href="../../tips/">Tips & Tricks<
 
 <h4 class="text-highlight">How to support Dark Reader</h4>
 
-1. Install our <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS app</a>.
-2. Install our sponsors' apps and extensions.
-3. <a data-s="d-help-faq" href="https://opencollective.com/darkreader/donate">Donate</a>.
+1. <a data-s="d-help-faq" href="https://darkreader.org/support-us">Pay for using Dark Reader</a>.
+2. Install our <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS app</a>.
+3. Install our sponsors' apps and extensions.
 4. Suggest to friends and colleagues.
 
 #### The extension asks for permissions to read website data
