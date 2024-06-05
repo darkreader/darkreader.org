@@ -1,6 +1,23 @@
 // @ts-check
 const ERROR_HANDLING_ENABLED = false;
 
+/** @type {WeakSet<Element>} */
+const handledElements = new WeakSet();
+
+/**
+ * @param {Element} element
+ * @param {string} name
+ */
+function handle(element, name) {
+    if (handledElements.has(element)) return;
+    handledElements.add(element);
+    const path = location.pathname;
+    const lang = navigator.language;
+    const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const params = encodeParams(name, path, lang, time);
+    fetch(`https://count.darkreader.app/click/v1/${params}`);
+}
+
 /**
  * @param {Element} element
  * @param {string} name
@@ -10,11 +27,7 @@ export function clicker(element, name) {
         return;
     }
     element.addEventListener('mousedown', () => {
-        const path = location.pathname;
-        const lang = navigator.language;
-        const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const params = encodeParams(name, path, lang, time);
-        fetch(`https://count.darkreader.app/click/v1/${params}`);
+        handle(element, name)
     }, {once: true});
 }
 
@@ -41,7 +54,7 @@ async function checkNetErrors() {
     for (const [alias, url] of Object.entries(urls)) {
         try {
             await fetch(url);
-        } catch(err) {
+        } catch (err) {
             errors.push(alias);
         }
     }
@@ -76,14 +89,30 @@ if (document.visibilityState !== 'visible') {
     checkNetErrors();
 }
 
-function subscribe() {
-    document.querySelectorAll('[data-s]').forEach((el) => {
-        clicker(el, el.getAttribute('data-s'));
-    });
+/**
+ * @param {EventTarget} node
+ */
+function checkDataAttr(node) {
+    if (node instanceof Element && node.hasAttribute('data-s')) {
+        handle(node, node.getAttribute('data-s') ?? '');
+        return true;
+    }
+    return false;
 }
 
-if (document.readyState === 'interactive') {
-    subscribe();
-} else {
-    document.addEventListener('readystatechange', subscribe, {once: true});
-}
+addEventListener('mousedown', (e) => {
+    e.composedPath().forEach((el) => checkDataAttr(el));
+});
+
+addEventListener('blur', () => {
+    const loop = () => {
+        /** @type {Node | null} */
+        let node = document.activeElement;
+        while (node) {
+            checkDataAttr(node);
+            node = node.parentNode;
+        }
+    };
+    loop();
+    setTimeout(loop);
+});

@@ -47,7 +47,7 @@ a:hover {
 }
 
 .fieldset-wrapper {
-    align-items: flex-start;
+    align-items: stretch;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,12 +72,31 @@ legend {
     margin-bottom: 0.5rem;
 }
 
+legend+* {
+    margin-top: 0.5rem;
+}
+
+fieldset>small:last-child {
+    margin-bottom: 0.5rem;
+}
+
 .region-title {
-    margin: 0.5rem 0 0 0.5rem;
+    margin: 0;
 }
 
 .regions {
     margin: 0.5rem 0 0 0;
+    max-width: 100%;
+    width: 16rem;
+}
+
+.radio-group {
+    left: -0.5rem;
+    position: relative;
+}
+
+.radio-group:has(:first-child > :checked) {
+    left: 0;
 }
 
 .radio-button {
@@ -140,6 +159,7 @@ legend {
 
 [data-region-tab] {
     display: none;
+    min-width: 16rem;
 }
 
 :has([value="region-us"]:checked)~[data-region-tab="region-us"] {
@@ -163,7 +183,7 @@ legend {
 }
 
 #desc-label {
-    color: var(--color-accent);
+    color: var(--color-text-highlight);
     margin: 1rem 0 0 0;
 }
 
@@ -190,6 +210,14 @@ legend {
     font-size: 2rem;
 }
 
+.text-block {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.text-block p:first-child {
+    margin-top: 0;
+}
+
 .honey-link {
     color: var(--color-honey);
     font-weight: bold;
@@ -202,14 +230,14 @@ legend {
 .honey-logo-link {
     background-color: var(--color-honey);
     background-image: url('../images/paypal-honey-white.svg');
-    background-position: center;
+    background-position: center 55%;
     background-repeat: no-repeat;
     background-size: 62.5%;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     display: inline-block;
     height: 10rem;
     text-indent: -999rem;
-    width: 16rem;
+    width: 100%;
 }
 
 .honey-logo-link:hover {

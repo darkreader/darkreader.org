@@ -51,9 +51,12 @@
             <legend>
                 Debit or Credit Card
             </legend>
-            <div>
+            <p>
+                <strong>One-time payment</strong>
+            </p>
+            <div data-s="d-sup-reg">
                 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                <stripe-buy-button data-s="d-sup-reg" buy-button-id="buy_btn_1PNyV1J3cD62eTib1OGUERwp"
+                <stripe-buy-button buy-button-id="buy_btn_1PNyV1J3cD62eTib1OGUERwp"
                     publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
                 </stripe-buy-button>
             </div>
@@ -91,30 +94,30 @@
                 </p>
             </div>
 
-            <div class="pay-tab" data-region-tab="region-us">
+            <div class="pay-tab" data-region-tab="region-us" data-s="d-sup-pp">
                 <script
                     src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-                <div id="paypal-container-6GUZKB3ZK3ZEE" data-s="d-sup-pp"></div>
+                <div id="paypal-container-6GUZKB3ZK3ZEE"></div>
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "6GUZKB3ZK3ZEE",
                     }).render("#paypal-container-6GUZKB3ZK3ZEE")
                 </script>
             </div>
-            <div class="pay-tab" data-region-tab="region-uk">
+            <div class="pay-tab" data-region-tab="region-uk" data-s="d-sup-pp">
                 <script
                     src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
-                <div id="paypal-container-DRE2J7DSGZ3EC" data-s="d-sup-pp"></div>
+                <div id="paypal-container-DRE2J7DSGZ3EC"></div>
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "DRE2J7DSGZ3EC",
                     }).render("#paypal-container-DRE2J7DSGZ3EC")
                 </script>
             </div>
-            <div class="pay-tab" data-region-tab="region-eu">
+            <div class="pay-tab" data-region-tab="region-eu" data-s="d-sup-pp">
                 <script
                     src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-                <div id="paypal-container-364NSETFEQ4W2" data-s="d-sup-pp"></div>
+                <div id="paypal-container-364NSETFEQ4W2"></div>
                 <script>
                     paypal.HostedButtons({
                         hostedButtonId: "364NSETFEQ4W2",
@@ -130,9 +133,11 @@
             <p>
                 Annual subscription, price per user
             </p>
-            <stripe-buy-button data-s="d-sup-corp" buy-button-id="buy_btn_1PO2eyJ3cD62eTibkh6iY28s"
-                publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
-            </stripe-buy-button>
+            <div data-s="d-sup-corp">
+                <stripe-buy-button buy-button-id="buy_btn_1PO2eyJ3cD62eTibkh6iY28s"
+                    publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
+                </stripe-buy-button>
+            </div>
 
             <small>
                 Powered by <strong>Stripe</strong>
@@ -143,13 +148,17 @@
             <legend>
                 Special Pricing & Conditions
             </legend>
-            <p>
-                Please contact us for information on individual terms, payment methods (like bank transfer) and
-                advertising on our website.
-            </p>
-            <p>
-                <a href="mailto:support@darkreader.org?subject=[Corporate]%20Your%20Request">support@darkreader.org</a>
-            </p>
+            <div class="text-block">
+                <p>
+                    Please <strong>contact us</strong> for information on individual terms,
+                    payment methods (like bank transfer) and
+                    advertising on our website.
+                </p>
+                <p>
+                    <strong>Email to</strong>: <a
+                        href="mailto:support@darkreader.org?subject=[Corporate]%20Your%20Request">support@darkreader.org</a>
+                </p>
+            </div>
         </fieldset>
 
         <fieldset data-payment-type="discount">
@@ -162,10 +171,11 @@
             <div>
                 <s class="discount-strike">US$4.99</s>
             </div>
-            <stripe-buy-button data-s="d-sup-disc" buy-button-id="buy_btn_1PO2MZJ3cD62eTib23eYPQ6D"
-                publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
-            </stripe-buy-button>
-
+            <div data-s="d-sup-disc">
+                <stripe-buy-button buy-button-id="buy_btn_1PO2MZJ3cD62eTib23eYPQ6D"
+                    publishable-key="pk_live_51ObohOJ3cD62eTibxbj84lafYC7ZktQKHQwdQ3Aa4iDpmC20JpXrhi3ZUicme54JnqPPeE2mSzigodqHEeb0X9JN0073GoEqiP">
+                </stripe-buy-button>
+            </div>
             <small>
                 Powered by <strong>Stripe</strong>
             </small>
@@ -175,10 +185,10 @@
             <legend>
                 Honey
             </legend>
-            <div>
+            <div class="text-block">
                 <p>
-                    Save money with <a class="honey-link" href="https://www.joinhoney.com/darkreader"
-                        target="_blank" rel="noopener" data-s="h-sup-text">PayPal Honey</a>.
+                    Save money with <a class="honey-link" href="https://www.joinhoney.com/darkreader" target="_blank"
+                        rel="noopener" data-s="h-sup-text">PayPal Honey</a>.
                 </p>
                 <p class="honey-logo-wrapper">
                     <a href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener" data-s="h-sup-img"
@@ -195,8 +205,8 @@
                     The app will <strong>detect a price drop</strong> for you.
                 </p>
                 <p>
-                    <a href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener"
-                        data-s="h-sup-text">Learn more</a>
+                    <strong><a href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener"
+                            data-s="h-sup-text">Learn more</a></strong>
                 </p>
             </div>
         </fieldset>
