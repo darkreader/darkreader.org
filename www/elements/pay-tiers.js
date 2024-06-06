@@ -9,39 +9,52 @@ const payURL = '/support-us';
 
 const htmlText = `
 <section class="pr">
-    <h2 class="heading">Pay for using <span class="heading__darkreader">Dark Reader</span></h4>
-    <div class="tiers">
-        <label class="tier">
-            <input type="radio" name="tier" value="regular" checked>
-            <span class="tier__desc">Regular use</span>
-            <span class="tier__connect"></span>
-            <span class="tier__price">$4.99</span>
-        </label>
-        <label class="tier">
-            <input type="radio" name="tier" value="discount">
-            <span class="tier__desc">Occasional use</span>
-            <span class="tier__connect"></span>
-            <span class="tier__price">$1.99</span>
-        </label>
-        <label class="tier">
-            <input type="radio" name="tier" value="corporate">
-            <span class="tier__desc">Corporate users</span>
-            <span class="tier__connect"></span>
-            <span class="tier__price">$9.99/yr</span>
-        </label>
+    <div class="pr-wrapper">
+        <h2 class="heading">Pay for using <span class="heading__darkreader">Dark Reader</span></h4>
+        <div class="tiers">
+            <label class="tier">
+                <input type="radio" name="tier" value="regular" checked>
+                <span class="tier__desc">Regular use</span>
+                <span class="tier__connect"></span>
+                <span class="tier__price">$4.99</span>
+            </label>
+            <label class="tier">
+                <input type="radio" name="tier" value="discount">
+                <span class="tier__desc">Occasional use</span>
+                <span class="tier__connect"></span>
+                <span class="tier__price">$1.99</span>
+            </label>
+            <label class="tier">
+                <input type="radio" name="tier" value="corporate">
+                <span class="tier__desc">Corporate users</span>
+                <span class="tier__connect"></span>
+                <span class="tier__price">$9.99/yr</span>
+            </label>
+        </div>
+        <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
+            <span class="button-link__text">Proceed</span>
+        </a>
     </div>
-    <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
-        <span class="button-link__text">Proceed</span>
-    </a>
 </section>
 `;
 
 const cssText = `
 :host {
+    background-image: linear-gradient(to left, transparent, black, transparent);
+    display: block;
+    max-width: 35.5rem;
+    min-width: 16rem;
+}
+.pr-wrapper {
+    margin: 0 auto;
     width: 16rem;
 }
 .pr {
-    width: 100%;
+    background-color: var(--color-bg);
+    margin: 0 auto;
+    max-width: 20rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 .heading {
     color: var(--color-highlight);
@@ -86,6 +99,7 @@ const cssText = `
     flex-direction: row;
     gap: 0.25rem;
     position: relative;
+    transition: all 125ms;
     width: 100%;
 }
 .tier input {
@@ -102,10 +116,14 @@ const cssText = `
     height: 1rem;
     line-height: 1rem;
     text-align: center;
+    transition: all 125ms;
     width: 1rem;
 }
 .tier:has(:checked)::before {
     background-color: var(--color-control);
+}
+.tier:has(:checked) .tier__connect {
+    border-bottom-color: white;
 }
 .tier:has(:checked)::after {
     background-color: transparent;
@@ -121,7 +139,8 @@ const cssText = `
     transform: rotate(-45deg);
     width: 0.5rem;
 }
-.tier:has(:checked) {
+.tier:has(:checked),
+.tier:has(:checked):hover {
     color: white;
 }
 .tier__desc {
@@ -141,6 +160,15 @@ const cssText = `
     flex: none;
     font-weight: bold;
     justify-self: flex-end;
+}
+.tier:hover {
+    color: white;
+}
+.tier:hover::before {
+    border-color: white;
+}
+.tier:hover .tier__connect {
+    border-bottom-color: white;
 }
 .button-link {
     align-items: center;

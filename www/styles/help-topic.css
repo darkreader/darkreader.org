@@ -10,6 +10,18 @@
     margin-bottom: 0.5rem;
 }
 
+.page-grid-inside darkreader-pay-tiers {
+    display: none;
+}
+
+.android .page-grid-inside darkreader-pay-tiers {
+    display: block;
+}
+
+.android .page-grid-inside darkreader-backers-header {
+    display: none;
+}
+
 .page-grid-ios {
     left: calc(50vw - 10rem);
 }

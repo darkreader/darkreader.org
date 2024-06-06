@@ -25,6 +25,10 @@
     grid-area: content;
 }
 
+.page-grid-content darkreader-pay-tiers {
+    margin-bottom: 1rem;
+}
+
 .page-grid-footer {
     grid-area: footer;
 }
