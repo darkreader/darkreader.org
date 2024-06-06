@@ -10,7 +10,7 @@ const payURL = '/support-us';
 const htmlText = `
 <section class="pr">
     <div class="pr-wrapper">
-        <h2 class="heading">Pay for using <span class="heading__darkreader">Dark Reader</span></h4>
+        <h2 class="pr-heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h4>
         <div class="tiers">
             <label class="tier">
                 <input type="radio" name="tier" value="regular" checked>
@@ -56,7 +56,7 @@ const cssText = `
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
-.heading {
+.pr-heading {
     color: var(--color-highlight);
     font-size: 1.05rem;
     font-weight: bold;
@@ -68,10 +68,8 @@ const cssText = `
     white-space: nowrap;
     width: 100%;
 }
-.heading__darkreader {
-}
 /*
-.heading::before {
+.pr-heading::before {
     background-image: url("/images/icon-256.png");
     background-position: center;
     background-repeat: no-repeat;
