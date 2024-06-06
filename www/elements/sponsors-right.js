@@ -2,7 +2,7 @@
 
 import './sponsors-graph.js';
 import './pay-tiers.js';
-import {isHCountry} from './locales.js';
+import {country, isEUCountry, isHCountry} from './locales.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -30,7 +30,7 @@ const htmlText = `
         </span>
     </a>
     <a class="text-link ht" href="${hnURL}" target="_blank" rel="noopener">
-        Save <span class="ht-usd">$$$</span> when you shop online
+        Save <span class="ht-currency">$$$</span> when you shop online
     </a>
     <a class="button-link hb" href="${hnURL}" target="_blank" rel="noopener">
         ${buttonIcon}
@@ -229,7 +229,7 @@ section {
     text-align: center;
     width: 100%;
 }
-.ht-usd {
+.ht-currency {
     color: #53b378;
 }
 .hb {
@@ -514,6 +514,12 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.nr-logo-github'), 'gh-side-ns');
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
+        const currency = qs('.ht-currency');
+        if (isEUCountry) {
+            currency.textContent = '€€€';
+        } else if (country === 'GB') {
+            currency.textContent = '£££';
+        }
     }
 }
 

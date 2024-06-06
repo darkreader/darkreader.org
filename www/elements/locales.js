@@ -556,3 +556,33 @@ export const country = (() => {
 // const hCountries = ['US', 'GB', 'CA', 'AU', 'DE', 'NL', 'FR'];
 // export const isHCountry = hCountries.includes(country);
 export const isHCountry = true;
+
+export const isEUCountry = [
+    'AT',
+    'BE',
+    'BG',
+    'CY',
+    'CZ',
+    'DK',
+    'DE',
+    'EE',
+    'EL',
+    'ES',
+    'FI',
+    'FR',
+    'HR',
+    'IE',
+    'IT',
+    'LT',
+    'LU',
+    'LV',
+    'HU',
+    'MT',
+    'NL',
+    'PL',
+    'PT',
+    'RO',
+    'SE',
+    'SI',
+    'SK',
+].includes(country);

@@ -10,24 +10,24 @@ const payURL = '/support-us';
 const htmlText = `
 <section class="pr">
     <h2 class="heading">Pay for using <span class="heading__darkreader">Dark Reader</span></h4>
-    <div class="rates">
-        <label class="rate">
-            <input type="radio" name="rate" value="rate-regular" checked>
-            <span class="rate__desc">Regular use</span>
-            <span class="rate__connect"></span>
-            <span class="rate__price">$4.99</span>
+    <div class="tiers">
+        <label class="tier">
+            <input type="radio" name="tier" value="regular" checked>
+            <span class="tier__desc">Regular use</span>
+            <span class="tier__connect"></span>
+            <span class="tier__price">$4.99</span>
         </label>
-        <label class="rate">
-            <input type="radio" name="rate" value="rate-reduced">
-            <span class="rate__desc">Occasional use</span>
-            <span class="rate__connect"></span>
-            <span class="rate__price">$1.99</span>
+        <label class="tier">
+            <input type="radio" name="tier" value="discount">
+            <span class="tier__desc">Occasional use</span>
+            <span class="tier__connect"></span>
+            <span class="tier__price">$1.99</span>
         </label>
-        <label class="rate">
-            <input type="radio" name="rate" value="rate-corp">
-            <span class="rate__desc">Corporate users</span>
-            <span class="rate__connect"></span>
-            <span class="rate__price">$9.99/yr</span>
+        <label class="tier">
+            <input type="radio" name="tier" value="corporate">
+            <span class="tier__desc">Corporate users</span>
+            <span class="tier__connect"></span>
+            <span class="tier__price">$9.99/yr</span>
         </label>
     </div>
     <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
@@ -72,14 +72,14 @@ const cssText = `
     width: 2.75rem;
 }
 */
-.rates {
+.tiers {
     align-items: stretch;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
     width: 100%;
 }
-.rate {
+.tier {
     align-items: center;
     cursor: pointer;
     display: inline-flex;
@@ -88,10 +88,10 @@ const cssText = `
     position: relative;
     width: 100%;
 }
-.rate input {
+.tier input {
     display: none;
 }
-.rate::before {
+.tier::before {
     background-color: transparent;
     border: 1px solid var(--color-control);
     border-radius: 50%;
@@ -104,10 +104,10 @@ const cssText = `
     text-align: center;
     width: 1rem;
 }
-.rate:has(:checked)::before {
+.tier:has(:checked)::before {
     background-color: var(--color-control);
 }
-.rate:has(:checked)::after {
+.tier:has(:checked)::after {
     background-color: transparent;
     border-left: 2px solid white;
     border-bottom: 2px solid white;
@@ -121,14 +121,14 @@ const cssText = `
     transform: rotate(-45deg);
     width: 0.5rem;
 }
-.rate:has(:checked) {
+.tier:has(:checked) {
     color: white;
 }
-.rate__desc {
+.tier__desc {
     display: inline-block;
     flex: none;
 }
-.rate__connect {
+.tier__connect {
     border-bottom: 1px dotted var(--color-text);
     display: inline-block;
     flex: auto;
@@ -136,7 +136,7 @@ const cssText = `
     opacity: 0.5;
     width: 100%;
 }
-.rate__price {
+.tier__price {
     display: inline-block;
     flex: none;
     font-weight: bold;
@@ -178,8 +178,13 @@ class PayTiersElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        const qs = (s) => shadowRoot.querySelector(s);
-        clicker(qs('.button-link'), 'd-side-btn');
+        const buttonLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.button-link'));
+        clicker(buttonLink, 'd-side-btn');
+
+        shadowRoot.querySelector('.tiers')?.addEventListener('change', () => {
+            const {value} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
+            buttonLink.href = `${payURL}#tier-${value}`;
+        });
     }
 }
 

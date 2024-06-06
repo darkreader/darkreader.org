@@ -145,15 +145,15 @@ fieldset>small:last-child {
     display: none;
 }
 
-:has([value="tier-regular"]:checked)~* [data-payment-type="regular"] {
+:has([name="tier"][value="regular"]:checked)~* [data-payment-type="regular"] {
     display: flex;
 }
 
-:has([value="tier-corporate"]:checked)~* [data-payment-type="corporate"] {
+:has([name="tier"][value="corporate"]:checked)~* [data-payment-type="corporate"] {
     display: flex;
 }
 
-:has([value="tier-discount"]:checked)~* [data-payment-type="discount"] {
+:has([name="tier"][value="discount"]:checked)~* [data-payment-type="discount"] {
     display: flex;
 }
 
