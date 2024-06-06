@@ -96,7 +96,7 @@ const appleHTMLText = `
 const uaSupportHTMLText = `
 <div class="support-ua">
     <a href="https://bank.gov.ua/en/about/humanitarian-aid-to-ukraine" target="_blank" rel="noopener">
-        <strong>Support Ukraine</strong>
+        <strong>Humanitarian aid to Ukraine</strong>
         (official link)
     </a>
 </div>
@@ -139,8 +139,8 @@ a:hover {
     flex-direction: row;
     justify-content: stretch;
 }
-.up + .up {
-    border-top: 0.0625rem solid var(--color-control);
+.up:not(:last-child) {
+    border-bottom: 0.0625rem solid var(--color-control);
 }
 .up-logo-link {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
