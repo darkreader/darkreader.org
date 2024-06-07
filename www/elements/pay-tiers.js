@@ -33,7 +33,7 @@ const htmlText = `
             </label>
         </div>
         <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
-            <span class="button-link__text">Proceed</span>
+            <span class="button-link__text">Pay Now</span>
         </a>
     </div>
 </section>
@@ -123,13 +123,13 @@ const cssText = `
     align-items: stretch;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
     width: 100%;
 }
 .tier {
     align-items: center;
     cursor: pointer;
     display: inline-flex;
+    padding: 0.125rem 0;
     flex-direction: row;
     gap: 0.25rem;
     position: relative;
@@ -168,7 +168,7 @@ const cssText = `
     height: 0.25rem;
     left: 0.175rem;
     position: absolute;
-    top: 0.375rem;
+    top: 0.5rem;
     transform-origin: 50% 50%;
     transform: rotate(-45deg);
     width: 0.5rem;
@@ -195,6 +195,7 @@ const cssText = `
     font-weight: bold;
     justify-self: flex-end;
 }
+/*
 .tier:hover {
     color: white;
 }
@@ -204,6 +205,7 @@ const cssText = `
 .tier:hover .tier__connect {
     border-bottom-color: white;
 }
+*/
 .button-link {
     align-items: center;
     background-color: var(--color-control);
@@ -327,8 +329,9 @@ class PayTiersElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        const buttonLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.button-link'));
+        const buttonLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .button-link'));
         clicker(buttonLink, 'd-side-btn');
+        shadowRoot.querySelectorAll('.card .button-link').forEach((el) => clicker(el, 'd-card-btn'));
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', () => {
             const {value} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));

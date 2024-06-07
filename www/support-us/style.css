@@ -208,6 +208,18 @@ fieldset>small:last-child {
 .discount-strike {
     color: var(--color-accent);
     font-size: 2rem;
+    position: relative;
+    text-decoration: none;
+}
+.discount-strike::after {
+    border-top: 3px solid var(--color-accent);
+    bottom: 0;
+    content: "";
+    height: 40%;
+    left: -5%;
+    position: absolute;
+    transform: rotate(-5deg);
+    width: 110%;
 }
 
 .text-block {

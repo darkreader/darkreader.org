@@ -13,7 +13,12 @@ const htmlText = `
 </h2>
 <div class="subtitle">
     <a class="text-link" href="${safariURL}" target="_blank" rel="noopener">
-        Dark Reader for iOS
+        <span class="text-link__darkreader">Dark Reader</span> for iOS
+    </a>
+</div>
+<div class="badge-wrapper">
+    <a class="badge-link" href="${safariURL}" target="_blank" rel="noopener">
+        <img src="/images/app-store-badge.svg">
     </a>
 </div>
 <section class="o" style="display: none">
@@ -34,7 +39,7 @@ const cssText = `
 a {
     color: var(--color-text);
     outline: none;
-    transition: color 125ms;
+    transition: all 125ms;
 }
 a:hover {
     color: var(--color-text-hover);
@@ -56,6 +61,46 @@ a:hover {
 .subtitle {
     font-weight: bold;
     margin: 0 0 0 2.5rem;
+}
+.heading {
+    display: none;
+}
+.subtitle a {
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-text-stroke: 0.0625rem;
+    white-space: nowrap;
+}
+.text-link__darkreader {
+    color: var(--color-highlight);
+    text-transform: uppercase;
+    transition: color 125ms;
+}
+.subtitle a:hover {
+    border-bottom-color: var(--color-text-hover);
+}
+.subtitle a:hover .text-link__darkreader {
+    color: var(--color-text-hover);
+}
+.badge-wrapper {
+    margin: 0 0 0 2.5rem;
+}
+.badge-link {
+    border-radius: 0.675rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    display: inline-flex;
+    position: relative;
+    top: 0.5rem;
+    width: 11rem;
+}
+.badge-link img {
+    display: inline-block;
+    width: 100%;
+}
+.badge-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 .offer-link {
     background-color: #143c1c;
@@ -141,6 +186,7 @@ class IOSStaticElement extends HTMLElement {
 
         clicker(shadowRoot.querySelector('.image-link'), 'drios-left');
         clicker(shadowRoot.querySelector('.text-link'), 'drios-left');
+        clicker(shadowRoot.querySelector('.badge-link'), 'drios-left');
         clicker(shadowRoot.querySelector('.offer-link'), 'drios-left');
 
         const parent = this.parentElement;

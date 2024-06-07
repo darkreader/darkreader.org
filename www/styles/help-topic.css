@@ -19,6 +19,10 @@
     display: block;
 }
 
+.page-grid-inside darkreader-backers-header {
+    display: none;
+}
+
 .android .page-grid-inside darkreader-backers-header,
 .android darkreader-ios-static,
 .android darkreader-ios-side {
