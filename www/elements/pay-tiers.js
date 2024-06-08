@@ -17,13 +17,13 @@ const htmlText = `
                 <input type="radio" name="tier" value="regular" checked>
                 <span class="tier__desc">Regular use</span>
                 <span class="tier__connect"></span>
-                <span class="tier__price">$4.99</span>
+                <span class="tier__price">$9.99</span>
             </label>
             <label class="tier">
                 <input type="radio" name="tier" value="discount">
                 <span class="tier__desc">Occasional use</span>
                 <span class="tier__connect"></span>
-                <span class="tier__price">$1.99</span>
+                <span class="tier__price">$4.99</span>
             </label>
             <label class="tier">
                 <input type="radio" name="tier" value="corporate">
@@ -42,14 +42,14 @@ const htmlText = `
     <div class="pr-horizontal-wrapper">
         <span class="card card--selected">
             <span class="card__desc">Regular use</span>
-            <span class="card__price">$4.99</span>
+            <span class="card__price">$9.99</span>
             <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Occasional use</span>
-            <span class="card__price"><s class="card__price__strike">$4.99 </s>$1.99</span>
+            <span class="card__price"><s class="card__price__strike">$9.99 </s>$4.99</span>
             <a class="button-link" href="${payURL}#tier-discount" target="_blank" rel="noopener">
                 <span class="button-link__text">Pay</span>
             </a>

@@ -218,7 +218,7 @@ fieldset>small:last-child {
     height: 40%;
     left: -5%;
     position: absolute;
-    transform: rotate(-5deg);
+    transform: rotate(-10deg);
     width: 110%;
 }
 
