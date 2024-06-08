@@ -158,7 +158,7 @@
 
         <fieldset data-payment-type="discount">
             <legend>
-                Discount
+                Debit or Credit Card
             </legend>
             <p>
                 You can pay at a reduced price today
@@ -176,6 +176,74 @@
             </small>
         </fieldset>
 
+        <fieldset data-payment-type="discount">
+            <legend>
+                PayPal
+            </legend>
+
+            <div>
+                <h4 class="region-title">
+                    Region
+                </h4>
+                <p class="radio-group regions">
+                    <label class="radio-button">
+                        <input type="radio" name="region2" value="region-us">
+                        <i class="flag flag-us"></i> US
+                    </label>
+                    <label class="radio-button">
+                        <input type="radio" name="region2" value="region-uk">
+                        <i class="flag flag-uk"></i> UK
+                    </label>
+                    <label class="radio-button">
+                        <input type="radio" name="region2" value="region-eu">
+                        <i class="flag flag-eu"></i> EU
+                    </label>
+                    <label class="radio-button">
+                        <input type="radio" name="region2" value="region-other">
+                        Other
+                    </label>
+                </p>
+            </div>
+
+            <div class="pay-tab" data-region-tab="region-us" data-s="d-sup-ppred">
+                <!--
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+                -->
+                <div id="paypal-container-ZGRN4ZD3CYWN8"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "ZGRN4ZD3CYWN8",
+                    }).render("#paypal-container-ZGRN4ZD3CYWN8")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-uk" data-s="d-sup-ppred">
+                <!--
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+                -->
+                <div id="paypal-container-FDVGKHYKNG7N4"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "FDVGKHYKNG7N4",
+                    }).render("#paypal-container-FDVGKHYKNG7N4")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-eu" data-s="d-sup-ppred">
+                <!--
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+                -->
+                <div id="paypal-container-FCHJZYGTLWAF2"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "FCHJZYGTLWAF2",
+                    }).render("#paypal-container-FCHJZYGTLWAF2")
+                </script>
+            </div>
+        </fieldset>
+
+        <!--
         <fieldset data-payment-type="discount">
             <legend>
                 Honey
@@ -205,6 +273,7 @@
                 </p>
             </div>
         </fieldset>
+        -->
     </div>
 
     <footer>

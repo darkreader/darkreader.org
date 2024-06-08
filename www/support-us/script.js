@@ -1,13 +1,13 @@
 import {country, isEUCountry} from '../elements/locales.js';
 
 if (country === 'GB') {
-    document.querySelector('[name="region"][value="region-uk"]').checked = true;
+    document.querySelectorAll('[value="region-uk"]').forEach((el) => el.checked = true);
 } else if (country === 'US') {
-    document.querySelector('[name="region"][value="region-us"]').checked = true;
+    document.querySelectorAll('[value="region-us"]').forEach((el) => el.checked = true);
 } else if (isEUCountry) {
-    document.querySelector('[name="region"][value="region-eu"]').checked = true;
+    document.querySelectorAll('[value="region-eu"]').forEach((el) => el.checked = true);
 } else {
-    document.querySelector('[name="region"][value="region-other"]').checked = true;
+    document.querySelectorAll('[value="region-other"]').forEach((el) => el.checked = true);
 }
 
 function setTier(name) {
