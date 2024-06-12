@@ -325,6 +325,11 @@ class PayTiersElement extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({mode: 'open'});
+
+        if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom')) {
+            return;
+        }
+
         const style = html('style', {}, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
