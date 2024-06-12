@@ -170,6 +170,14 @@ fieldset>small:last-child {
     display: block;
 }
 
+:has([value="region-uk"]:checked)~[data-region-tab="region-uk"] #price-label  {
+    display: none;
+}
+
+:has([value="region-uk"]:checked)~[data-region-tab="region-uk"] #desc-label  {
+    margin: 1rem 0;
+}
+
 :has([value="region-eu"]:checked)~[data-region-tab="region-eu"] {
     display: block;
 }
