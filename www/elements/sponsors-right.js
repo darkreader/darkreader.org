@@ -19,8 +19,12 @@ const language = navigator.language || 'en';
 const buttonIcon = `<span class="b-icon${isEdge ? ' b-icon--edge' : isSafari ? ' b-icon--safari' : ''}"></span>`;
 
 const htmlText = `
+<section class="pr">
+    <darkreader-pay-tiers></darkreader-pay-tiers>
+</section>
 <h2 class="heading">
-    Sponsored by
+    Using for Free?<br>
+    Checkout our sponsors
 </h2>
 <section class="hr">
     <a class="logo-link hl" href="${hnURL}" target="_blank" rel="noopener">
@@ -74,9 +78,6 @@ const htmlText = `
     </a>
     -->
 </section>
-<section class="pr">
-    <darkreader-pay-tiers></darkreader-pay-tiers>
-</section>
 <section class="nr">
     <h2 class="nr-heading">Not sponsored by</h2>
     <div class="nr-links">
@@ -127,6 +128,7 @@ a:hover {
 }
 .heading {
     color: var(--color-highlight);
+    font-size: 1.05rem;
     line-height: 1.25rem;
     margin: 0 0 0.75rem 0;
     -webkit-text-stroke: 0.0625rem;
