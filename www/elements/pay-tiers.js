@@ -360,11 +360,13 @@ const cssText = `
     display: none;
 }
 .button-link__card-icon {
-    background-color: #4c996f;
+    background-color: var(--color-control);
+    background-image: linear-gradient(165deg, #ffffff55, transparent);
     border-radius: 0.2rem;
+    box-shadow: 0 1px 2px black;
     display: inline-block;
     height: 1rem;
-    margin-right: 0.25rem;
+    margin-right: 0.375rem;
     overflow: hidden;
     position: relative;
     width: 1.5rem;
@@ -373,7 +375,7 @@ const cssText = `
     background-color: black;
     content: "";
     display: inline-block;
-    height: 0.2rem;
+    height: 0.125rem;
     left: 0;
     position: absolute;
     top: 0.2rem;
@@ -387,7 +389,7 @@ const cssText = `
     content: "";
     display: inline-block;
     height: 0.4rem;
-    left: 0.2rem;
+    left: 0.6rem;
     position: absolute;
     width: 0.4rem;
 }
