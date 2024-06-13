@@ -121,7 +121,10 @@ const htmlText = `
         </div>
         <div class="button-wrapper">
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
-                <span class="button-link__card-icon"></span>
+                <span class="button-link__card-icons">
+                    <span class="button-link__card-icon button-link__card-icon--visa"></span>
+                    <span class="button-link__card-icon button-link__card-icon--mastercard"></span>
+                </span>
                 <span class="button-link__text">Card</span>
             </a>
             <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
@@ -359,25 +362,49 @@ const cssText = `
 .button-link--inactive {
     display: none;
 }
+.button-link__card-icons {
+    display: inline-block;
+    height: 1.2rem;
+    margin-right: 0.25rem;
+    position: relative;
+    width: 1.75rem;
+}
 .button-link__card-icon {
-    background-color: #ffce44;
+    background-color: #2851af;
     border-radius: 0.2rem;
     display: inline-block;
     height: 1rem;
-    margin-right: 0.25rem;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     width: 1.5rem;
 }
-.button-link__card-icon::after {
-    background-color: black;
+.button-link__card-icon--visa {
+    bottom: 0;
+    left: 0;
+}
+.button-link__card-icon--mastercard {
+    background-color: white;
+    right: 0;
+    top: 0;
+}
+.button-link__card-icon--mastercard::before,
+.button-link__card-icon--mastercard::after {
+    border-radius: 50%;
     content: "";
     display: inline-block;
-    height: 0.25rem;
-    left: 0;
+    height: 0.8rem;
     position: absolute;
-    top: 0.25rem;
-    width: 1.5rem;
+    top: 0.1rem;
+    width: 0.8rem;
+}
+.button-link__card-icon--mastercard::before {
+    background-color: #dd5044;
+    box-shadow: 0.5rem 0 0 #ffce42;
+    left: 0.1rem;
+}
+.button-link__card-icon--mastercard::after {
+    background-color: #ffce4288;
+    right: 0.1rem;
 }
 .button-link--card .button-link__text {
     text-transform: none;
