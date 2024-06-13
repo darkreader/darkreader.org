@@ -31,11 +31,15 @@ const Links = {
             USD: 'https://www.paypal.com/ncp/payment/6GUZKB3ZK3ZEE',
             GBP: 'https://www.paypal.com/ncp/payment/DRE2J7DSGZ3EC',
             EUR: 'https://www.paypal.com/ncp/payment/364NSETFEQ4W2',
+            JPY: 'https://www.paypal.com/ncp/payment/BSDYGW4MNC5WU',
+            CAD: 'https://www.paypal.com/ncp/payment/6HZMLYQT9KTQA',
         },
         DISCOUNT: {
             USD: 'https://www.paypal.com/ncp/payment/ZGRN4ZD3CYWN8',
             GBP: 'https://www.paypal.com/ncp/payment/FDVGKHYKNG7N4',
             EUR: 'https://www.paypal.com/ncp/payment/FCHJZYGTLWAF2',
+            JPY: 'https://www.paypal.com/ncp/payment/WX44HW8PNN6TN',
+            CAD: 'https://www.paypal.com/ncp/payment/T632CCSRBWBBU',
         },
     },
 };
@@ -45,16 +49,22 @@ const Prices = {
         USD: '$9.99',
         GBP: '£7.99',
         EUR: '€9.99',
+        JPY: '¥1,500',
+        CAD: 'C$12.99',
     },
     DISCOUNT: {
         USD: '$4.99',
         GBP: '£3.99',
         EUR: '€4.99',
+        JPY: '¥700',
+        CAD: 'C$6.99',
     },
     CORPORATE: {
         USD: '$9.99/yr',
         GBP: '£7.99/yr',
         EUR: '€9.99/yr',
+        JPY: '¥1,500/年',
+        CAD: 'C$12.99/yr',
     },
 };
 
@@ -86,6 +96,8 @@ const htmlText = `
             ${currencyButton('USD', 'flag-us')}
             ${currencyButton('EUR', 'flag-eu')}
             ${currencyButton('GBP', 'flag-uk')}
+            ${currencyButton('JPY', 'flag-jp')}
+            ${currencyButton('CAD', 'flag-ca')}
         </div>
         <div class="tiers">
             <label class="tier">
@@ -213,7 +225,7 @@ const cssText = `
     align-items: center;
     cursor: pointer;
     display: inline-flex;
-    padding: 0.125rem 0;
+    height: 1.5rem;
     flex-direction: row;
     gap: 0.25rem;
     position: relative;
@@ -410,7 +422,7 @@ const cssText = `
 .flag {
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size: calc(24px * 4) 18px;
+    background-size: calc(24px * 5) 18px;
     border-radius: 0.25rem;
     display: inline-block;
     height: 18px;
@@ -419,15 +431,23 @@ const cssText = `
 }
 .flag-us {
     background-image: url('/images/flags.svg');
-    background-position-x: -12px;
+    background-position-x: 0px;
 }
 .flag-uk {
     background-image: url('/images/flags.svg');
-    background-position-x: -36px;
+    background-position-x: -24px;
 }
 .flag-eu {
     background-image: url('/images/flags.svg');
-    background-position-x: -60px;
+    background-position-x: -48px;
+}
+.flag-jp {
+    background-image: url('/images/flags.svg');
+    background-position-x: -72px;
+}
+.flag-ca {
+    background-image: url('/images/flags.svg');
+    background-position-x: -96px;
 }
 .pr-horizontal {
     display: none;
