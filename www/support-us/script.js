@@ -4,6 +4,10 @@ if (country === 'GB') {
     document.querySelectorAll('[value="region-uk"]').forEach((el) => el.checked = true);
 } else if (country === 'US') {
     document.querySelectorAll('[value="region-us"]').forEach((el) => el.checked = true);
+} else if (country === 'CA') {
+    document.querySelectorAll('[value="region-ca"]').forEach((el) => el.checked = true);
+} else if (country === 'JP') {
+    document.querySelectorAll('[value="region-jp"]').forEach((el) => el.checked = true);
 } else if (isEUCountry) {
     document.querySelectorAll('[value="region-eu"]').forEach((el) => el.checked = true);
 } else {

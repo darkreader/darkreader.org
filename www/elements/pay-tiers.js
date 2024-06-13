@@ -68,7 +68,7 @@ const Prices = {
     },
 };
 
-const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : isEUCountry ? 'EUR' : 'USD';
+const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : isEUCountry ? 'EUR' : 'USD';
 const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
@@ -420,6 +420,7 @@ const cssText = `
     filter: none;
 }
 .flag {
+    background-image: url('/images/flags.svg');
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: calc(24px * 5) 18px;
@@ -430,23 +431,18 @@ const cssText = `
     width: 24px;
 }
 .flag-us {
-    background-image: url('/images/flags.svg');
     background-position-x: 0px;
 }
 .flag-uk {
-    background-image: url('/images/flags.svg');
     background-position-x: -24px;
 }
 .flag-eu {
-    background-image: url('/images/flags.svg');
     background-position-x: -48px;
 }
 .flag-jp {
-    background-image: url('/images/flags.svg');
     background-position-x: -72px;
 }
 .flag-ca {
-    background-image: url('/images/flags.svg');
     background-position-x: -96px;
 }
 .pr-horizontal {

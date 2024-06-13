@@ -83,6 +83,14 @@
                         <i class="flag flag-eu"></i> EU
                     </label>
                     <label class="radio-button">
+                        <input type="radio" name="region" value="region-jp">
+                        <i class="flag flag-jp"></i> JP
+                    </label>
+                    <label class="radio-button">
+                        <input type="radio" name="region" value="region-ca">
+                        <i class="flag flag-ca"></i> CA
+                    </label>
+                    <label class="radio-button">
                         <input type="radio" name="region" value="region-other">
                         Other
                     </label>
@@ -117,6 +125,26 @@
                     paypal.HostedButtons({
                         hostedButtonId: "364NSETFEQ4W2",
                     }).render("#paypal-container-364NSETFEQ4W2")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-jp" data-s="d-sup-pp">
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=JPY"></script>
+                <div id="paypal-container-BSDYGW4MNC5WU"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "BSDYGW4MNC5WU",
+                    }).render("#paypal-container-BSDYGW4MNC5WU")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-ca" data-s="d-sup-pp">
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=CAD"></script>
+                <div id="paypal-container-6HZMLYQT9KTQA"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "6HZMLYQT9KTQA",
+                    }).render("#paypal-container-6HZMLYQT9KTQA")
                 </script>
             </div>
         </fieldset>
@@ -199,6 +227,14 @@
                         <i class="flag flag-eu"></i> EU
                     </label>
                     <label class="radio-button">
+                        <input type="radio" name="region2" value="region-jp">
+                        <i class="flag flag-jp"></i> JP
+                    </label>
+                    <label class="radio-button">
+                        <input type="radio" name="region2" value="region-ca">
+                        <i class="flag flag-ca"></i> CA
+                    </label>
+                    <label class="radio-button">
                         <input type="radio" name="region2" value="region-other">
                         Other
                     </label>
@@ -239,6 +275,22 @@
                     paypal.HostedButtons({
                         hostedButtonId: "FCHJZYGTLWAF2",
                     }).render("#paypal-container-FCHJZYGTLWAF2")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-jp" data-s="d-sup-ppred">
+                <div id="paypal-container-WX44HW8PNN6TN"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "WX44HW8PNN6TN",
+                    }).render("#paypal-container-WX44HW8PNN6TN")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-ca" data-s="d-sup-ppred">
+                <div id="paypal-container-T632CCSRBWBBU"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "T632CCSRBWBBU",
+                    }).render("#paypal-container-T632CCSRBWBBU")
                 </script>
             </div>
         </fieldset>

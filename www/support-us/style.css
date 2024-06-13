@@ -121,24 +121,33 @@ fieldset>small:last-child {
 }
 
 .flag {
-    background-position: center;
+    background-image: url('/images/flags.svg');
+    background-position-y: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 5rem 0.75rem;
     display: inline-block;
     height: 0.75rem;
     width: 1rem;
 }
 
 .flag-us {
-    background-image: url('../images/flag-us-24x18.png');
+    background-position-x: 0rem;
 }
 
 .flag-uk {
-    background-image: url('../images/flag-uk-24x18.png');
+    background-position-x: -1rem;
 }
 
 .flag-eu {
-    background-image: url('../images/flag-eu-24x18.png');
+    background-position-x: -2rem;
+}
+
+.flag-jp {
+    background-position-x: -3rem;
+}
+
+.flag-ca {
+    background-position-x: -4rem;
 }
 
 [data-payment-type] {
@@ -179,6 +188,14 @@ fieldset>small:last-child {
 }
 
 :has([value="region-eu"]:checked)~[data-region-tab="region-eu"] {
+    display: block;
+}
+
+:has([value="region-jp"]:checked)~[data-region-tab="region-jp"] {
+    display: block;
+}
+
+:has([value="region-ca"]:checked)~[data-region-tab="region-ca"] {
     display: block;
 }
 
