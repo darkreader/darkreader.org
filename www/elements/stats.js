@@ -19,7 +19,7 @@ function handle(element, name) {
 }
 
 /**
- * @param {Element} element
+ * @param {Element | null} element
  * @param {string} name
  */
 export function clicker(element, name) {

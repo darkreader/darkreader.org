@@ -1,11 +1,68 @@
 // @ts-check
 
+import {country, isEUCountry} from './locales.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
+    $,
 } from './utils.js';
 
 const payURL = '/support-us';
+
+const Tiers = {
+    REGULAR: 'regular',
+    DISCOUNT: 'discount',
+    CORPORATE: 'corporate',
+};
+
+const Links = {
+    Redirect: {
+        REGULAR: payURL,
+        DISCOUNT: `${payURL}#tier-discount`,
+        CORPORATE: `${payURL}#tier-corporate`,
+    },
+    Stripe: {
+        REGULAR: 'https://buy.stripe.com/fZe15k7um5Em7scdQX',
+        DISCOUNT: 'https://buy.stripe.com/aEU5lA4ia4Ai27SeV2',
+        CORPORATE: 'https://buy.stripe.com/aEUcO29CueaS5k44gq',
+    },
+    PayPal: {
+        REGULAR: {
+            USD: 'https://www.paypal.com/ncp/payment/6GUZKB3ZK3ZEE',
+            GBP: 'https://www.paypal.com/ncp/payment/DRE2J7DSGZ3EC',
+            EUR: 'https://www.paypal.com/ncp/payment/364NSETFEQ4W2',
+        },
+        DISCOUNT: {
+            USD: 'https://www.paypal.com/ncp/payment/ZGRN4ZD3CYWN8',
+            GBP: 'https://www.paypal.com/ncp/payment/FDVGKHYKNG7N4',
+            EUR: 'https://www.paypal.com/ncp/payment/FCHJZYGTLWAF2',
+        },
+    },
+};
+
+const Prices = {
+    REGULAR: {
+        USD: '$9.99',
+        GBP: '£7.99',
+        EUR: '€9.99',
+    },
+    DISCOUNT: {
+        USD: '$4.99',
+        GBP: '£3.99',
+        EUR: '€4.99',
+    },
+    CORPORATE: {
+        USD: '$9.99/yr',
+        GBP: '£7.99/yr',
+        EUR: '€9.99/yr',
+    },
+};
+
+const DEFAULT_PRICE_REGULAR = country === 'GB' ? Prices.REGULAR.GBP : isEUCountry ? Prices.REGULAR.EUR : Prices.REGULAR.USD;
+const DEFAULT_PRICE_DISCOUNT = country === 'GB' ? Prices.DISCOUNT.GBP : isEUCountry ? Prices.DISCOUNT.EUR : Prices.DISCOUNT.USD;
+const DEFAULT_PRICE_CORP = country === 'GB' ? Prices.CORPORATE.GBP : isEUCountry ? Prices.CORPORATE.EUR : Prices.CORPORATE.USD;
+const DEFAULT_LINK_STRIPE = Links.Stripe.REGULAR;
+const DEFAULT_LINK_PAYPAL = country === 'GB' ? Links.PayPal.REGULAR.GBP : isEUCountry ? Links.PayPal.REGULAR.EUR : Links.PayPal.REGULAR.USD;
 
 const htmlText = `
 <div class="bg"></div>
@@ -14,27 +71,36 @@ const htmlText = `
         <h2 class="pr-heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
         <div class="tiers">
             <label class="tier">
-                <input type="radio" name="tier" value="regular" checked>
+                <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
                 <span class="tier__desc">Regular use</span>
                 <span class="tier__connect"></span>
-                <span class="tier__price">$9.99</span>
+                <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
             </label>
             <label class="tier">
-                <input type="radio" name="tier" value="discount">
+                <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
                 <span class="tier__desc">Occasional use</span>
                 <span class="tier__connect"></span>
-                <span class="tier__price">$4.99</span>
+                <span class="tier__price" js-price-discount>${DEFAULT_PRICE_DISCOUNT}</span>
             </label>
             <label class="tier">
-                <input type="radio" name="tier" value="corporate">
+                <input type="radio" name="tier" value="${Tiers.CORPORATE}">
                 <span class="tier__desc">Corporate users</span>
                 <span class="tier__connect"></span>
-                <span class="tier__price">$9.99/yr</span>
+                <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
             </label>
         </div>
-        <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
-            <span class="button-link__text">Pay Now</span>
-        </a>
+        <div class="button-wrapper">
+            <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
+                <span class="button-link__card-icon"></span>
+                <span class="button-link__text">Pay</span>
+            </a>
+            <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
+                <span class="button-link__text">PayPal</span>
+            </a>
+            <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
+                <span class="button-link__text">More options</span>
+            </a>
+        </div>
     </div>
 </section>
 <section class="pr-horizontal">
@@ -217,20 +283,92 @@ const cssText = `
     height: 2.5rem;
     justify-content: center;
     margin-top: 0.25rem;
+    position: relative;
     text-decoration: none;
     transition: box-shadow 250ms;
     width: 100%
 }
 .button-link:hover {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+    z-index: 1;
 }
 .button-link__text {
     display: inline-block;
     font-size: 1.25rem;
     font-weight: bold;
+    overflow: hidden;
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
     transform: skewX(-10deg);
+}
+.button-wrapper {
+    align-items: center;
+    background-color: var(--color-control);
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.button-wrapper .button-link {
+    margin: 0;
+}
+.button-wrapper .button-link:not(:first-child)::before {
+    border-left: 1px solid white;
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    transition: opacity 250ms;
+    width: 0;
+}
+.button-wrapper:hover .button-link:not(:first-child)::before {
+    opacity: 0;
+}
+.button-link--inactive {
+    display: none;
+}
+.button-link__card-icon {
+    background-color: #ffce44;
+    border-radius: 0.2rem;
+    display: inline-block;
+    height: 1rem;
+    margin-right: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    width: 1.5rem;
+}
+.button-link__card-icon::after {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    top: 0.25rem;
+    width: 1.5rem;
+}
+.button-link--card .button-link__text {
+    text-transform: none;
+    transform: none;
+}
+.button-link--paypal {
+    background-image: url("/images/paypal-logo-white.svg");
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+}
+.button-link--paypal .button-link__text {
+    opacity: 0;
+}
+.button-link--other .button-link__text {
+    font-size: 1rem;
+    font-weight: normal;
+    -webkit-text-stroke: initial;
+    text-decoration: underline;
+    text-transform: none;
+    transform: none;
 }
 .pr-horizontal {
     display: none;
@@ -334,13 +472,32 @@ class PayTiersElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        const buttonLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .button-link'));
-        clicker(buttonLink, 'd-side-btn');
-        shadowRoot.querySelectorAll('.card .button-link').forEach((el) => clicker(el, 'd-card-btn'));
+        const stripeLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-stripe'));
+        clicker(stripeLink, 'd-side-stripe');
+
+        const paypalLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-paypal'));
+        clicker(stripeLink, 'd-side-paypal');
+
+        const otherLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-other'));
+        clicker(otherLink, 'd-side-other');
+
+        $(shadowRoot).find('.card .button-link').each((el) => clicker(el, 'd-card-btn'));
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', () => {
             const {value} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
-            buttonLink.href = `${payURL}#tier-${value}`;
+            
+            if (value === Tiers.REGULAR) {
+                stripeLink.href = Links.Stripe.REGULAR;
+                paypalLink.href = country === 'GB' ? Links.PayPal.REGULAR.GBP : isEUCountry ? Links.PayPal.REGULAR.EUR : Links.PayPal.REGULAR.USD;
+            } else if (value === Tiers.DISCOUNT) {
+                stripeLink.href = Links.Stripe.DISCOUNT;
+                paypalLink.href = country === 'GB' ? Links.PayPal.DISCOUNT.GBP : isEUCountry ? Links.PayPal.DISCOUNT.EUR : Links.PayPal.DISCOUNT.USD;
+            } else if (value === Tiers.CORPORATE) {
+                stripeLink.href = Links.Stripe.DISCOUNT;
+                paypalLink.href = country === 'GB' ? Links.PayPal.REGULAR.GBP : isEUCountry ? Links.PayPal.REGULAR.EUR : Links.PayPal.REGULAR.USD;
+            }
+            paypalLink.classList.toggle('button-link--inactive', value === Tiers.CORPORATE);
+            otherLink.classList.toggle('button-link--inactive', value !== Tiers.CORPORATE);
         });
     }
 }
