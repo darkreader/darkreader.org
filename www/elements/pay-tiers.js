@@ -10,9 +10,9 @@ import {
 const payURL = '/support-us';
 
 const Tiers = {
-    REGULAR: 'regular',
-    DISCOUNT: 'discount',
-    CORPORATE: 'corporate',
+    REGULAR: 'REGULAR',
+    DISCOUNT: 'DISCOUNT',
+    CORPORATE: 'CORPORATE',
 };
 
 const Links = {
@@ -58,17 +58,35 @@ const Prices = {
     },
 };
 
-const DEFAULT_PRICE_REGULAR = country === 'GB' ? Prices.REGULAR.GBP : isEUCountry ? Prices.REGULAR.EUR : Prices.REGULAR.USD;
-const DEFAULT_PRICE_DISCOUNT = country === 'GB' ? Prices.DISCOUNT.GBP : isEUCountry ? Prices.DISCOUNT.EUR : Prices.DISCOUNT.USD;
-const DEFAULT_PRICE_CORP = country === 'GB' ? Prices.CORPORATE.GBP : isEUCountry ? Prices.CORPORATE.EUR : Prices.CORPORATE.USD;
+const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : isEUCountry ? 'EUR' : 'USD';
+const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
+const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
+const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
 const DEFAULT_LINK_STRIPE = Links.Stripe.REGULAR;
-const DEFAULT_LINK_PAYPAL = country === 'GB' ? Links.PayPal.REGULAR.GBP : isEUCountry ? Links.PayPal.REGULAR.EUR : Links.PayPal.REGULAR.USD;
+const DEFAULT_LINK_PAYPAL = Links.PayPal.REGULAR[DEFAULT_CURRENCY];
+
+/**
+ * @param {string} currency
+ * @param {string} flagCls
+ * @returns {string}
+ */
+function currencyButton(currency, flagCls) {
+    return `<label class="currency-button">
+                <input type="radio" name="currency" value="${currency}"${DEFAULT_CURRENCY === currency ? ' checked' : ''}>
+                <i class="flag ${flagCls}">${currency}</i>
+            </label>`;
+}
 
 const htmlText = `
 <div class="bg"></div>
 <section class="pr">
     <div class="pr-wrapper">
         <h2 class="pr-heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
+        <div class="currencies">
+            ${currencyButton('USD', 'flag-us')}
+            ${currencyButton('EUR', 'flag-eu')}
+            ${currencyButton('GBP', 'flag-uk')}
+        </div>
         <div class="tiers">
             <label class="tier">
                 <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
@@ -80,7 +98,7 @@ const htmlText = `
                 <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
                 <span class="tier__desc">Occasional use</span>
                 <span class="tier__connect"></span>
-                <span class="tier__price" js-price-discount>${DEFAULT_PRICE_DISCOUNT}</span>
+                <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
             </label>
             <label class="tier">
                 <input type="radio" name="tier" value="${Tiers.CORPORATE}">
@@ -109,21 +127,21 @@ const htmlText = `
         <span class="card card--selected">
             <span class="card__desc">Regular use</span>
             <span class="card__price">$9.99</span>
-            <a class="button-link" href="${payURL}" target="_blank" rel="noopener">
+            <a class="button-link" href="${Links.Redirect.REGULAR}" target="_blank" rel="noopener">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Occasional use</span>
             <span class="card__price"><s class="card__price__strike">$9.99 </s>$4.99</span>
-            <a class="button-link" href="${payURL}#tier-discount" target="_blank" rel="noopener">
+            <a class="button-link" href="${Links.Redirect.DISCOUNT}" target="_blank" rel="noopener">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Corporate users</span>
             <span class="card__price">$9.99<span class="card__price__time">/year</span></span>
-            <a class="button-link" href="${payURL}#tier-corporate" target="_blank" rel="noopener">
+            <a class="button-link" href="$${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
@@ -370,6 +388,47 @@ const cssText = `
     text-transform: none;
     transform: none;
 }
+.currencies {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.currency-button {
+    cursor: pointer;
+    display: inline-block;
+    filter: grayscale(1) brightness(0.75);
+}
+.currency-button input {
+    display: none;
+}
+.currency-button:has(:checked) {
+    filter: none;
+}
+.currency-button:not(:has(:checked)):hover {
+    filter: none;
+}
+.flag {
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: calc(24px * 4) 18px;
+    border-radius: 0.25rem;
+    display: inline-block;
+    height: 18px;
+    text-indent: -999rem;
+    width: 24px;
+}
+.flag-us {
+    background-image: url('/images/flags.svg');
+    background-position-x: -12px;
+}
+.flag-uk {
+    background-image: url('/images/flags.svg');
+    background-position-x: -36px;
+}
+.flag-eu {
+    background-image: url('/images/flags.svg');
+    background-position-x: -60px;
+}
 .pr-horizontal {
     display: none;
 }
@@ -483,22 +542,23 @@ class PayTiersElement extends HTMLElement {
 
         $(shadowRoot).find('.card .button-link').each((el) => clicker(el, 'd-card-btn'));
 
-        shadowRoot.querySelector('.tiers')?.addEventListener('change', () => {
-            const {value} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
-            
-            if (value === Tiers.REGULAR) {
-                stripeLink.href = Links.Stripe.REGULAR;
-                paypalLink.href = country === 'GB' ? Links.PayPal.REGULAR.GBP : isEUCountry ? Links.PayPal.REGULAR.EUR : Links.PayPal.REGULAR.USD;
-            } else if (value === Tiers.DISCOUNT) {
-                stripeLink.href = Links.Stripe.DISCOUNT;
-                paypalLink.href = country === 'GB' ? Links.PayPal.DISCOUNT.GBP : isEUCountry ? Links.PayPal.DISCOUNT.EUR : Links.PayPal.DISCOUNT.USD;
-            } else if (value === Tiers.CORPORATE) {
-                stripeLink.href = Links.Stripe.DISCOUNT;
-                paypalLink.href = country === 'GB' ? Links.PayPal.REGULAR.GBP : isEUCountry ? Links.PayPal.REGULAR.EUR : Links.PayPal.REGULAR.USD;
-            }
-            paypalLink.classList.toggle('button-link--inactive', value === Tiers.CORPORATE);
-            otherLink.classList.toggle('button-link--inactive', value !== Tiers.CORPORATE);
-        });
+        const update = () => {
+            const {value: tier} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
+            const {value: currency} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="currency"]:checked'));
+
+            stripeLink.href = tier === Tiers.DISCOUNT ? Links.Stripe.DISCOUNT : tier === Tiers.CORPORATE ? Links.Stripe.CORPORATE : Links.Stripe.REGULAR;
+            paypalLink.href = tier === Tiers.DISCOUNT ? Links.PayPal.DISCOUNT[currency] : Links.PayPal.REGULAR[currency];
+            paypalLink.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE);
+            otherLink.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE);
+            $(shadowRoot).find('.js-price-regular').node().textContent = Prices.REGULAR[currency];
+            $(shadowRoot).find('.js-price-discount').node().textContent = Prices.DISCOUNT[currency];
+            $(shadowRoot).find('.js-price-corporate').node().textContent = Prices.CORPORATE[currency];
+        };
+
+        shadowRoot.querySelector('.tiers')?.addEventListener('change', update);
+        shadowRoot.querySelector('.currencies')?.addEventListener('change', update);
+
+        update();
     }
 }
 
