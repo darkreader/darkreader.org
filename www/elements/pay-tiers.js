@@ -476,7 +476,7 @@ class PayTiersElement extends HTMLElement {
         clicker(stripeLink, 'd-side-stripe');
 
         const paypalLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-paypal'));
-        clicker(stripeLink, 'd-side-paypal');
+        clicker(paypalLink, 'd-side-paypal');
 
         const otherLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-other'));
         clicker(otherLink, 'd-side-other');
