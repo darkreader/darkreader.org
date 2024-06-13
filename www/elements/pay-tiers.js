@@ -122,7 +122,7 @@ const htmlText = `
         <div class="button-wrapper">
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
                 <span class="button-link__card-icon"></span>
-                <span class="button-link__text">Pay</span>
+                <span class="button-link__text">Card</span>
             </a>
             <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
                 <span class="button-link__text">PayPal</span>
