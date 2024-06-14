@@ -50,21 +50,21 @@ const Prices = {
         GBP: '£7.99',
         EUR: '€9.99',
         JPY: '¥1,500',
-        CAD: 'C$12.99',
+        CAD: '$12.99',
     },
     DISCOUNT: {
         USD: '$4.99',
         GBP: '£3.99',
         EUR: '€4.99',
         JPY: '¥700',
-        CAD: 'C$6.99',
+        CAD: '$6.99',
     },
     CORPORATE: {
         USD: '$9.99/yr',
         GBP: '£7.99/yr',
         EUR: '€9.99/yr',
         JPY: '¥1,500/年',
-        CAD: 'C$12.99/yr',
+        CAD: '$12.99/yr',
     },
 };
 
@@ -98,6 +98,8 @@ const htmlText = `
             ${currencyButton('GBP', 'flag-uk')}
             ${currencyButton('JPY', 'flag-jp')}
             ${currencyButton('CAD', 'flag-ca')}
+            <span class="currencies__currency-connect"></span>
+            <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
         </div>
         <div class="tiers">
             <label class="tier">
@@ -405,6 +407,7 @@ const cssText = `
     transform: none;
 }
 .currencies {
+    align-items: center;
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -413,6 +416,7 @@ const cssText = `
     cursor: pointer;
     display: inline-block;
     filter: grayscale(1) brightness(0.75);
+    flex: none;
 }
 .currency-button input {
     display: none;
@@ -422,6 +426,19 @@ const cssText = `
 }
 .currency-button:not(:has(:checked)):hover {
     filter: none;
+}
+.currencies__currency-connect {
+    border-bottom: 1px dotted var(--color-text);
+    display: inline-block;
+    flex: auto;
+    height: 0;
+    opacity: 0.25;
+    width: 100%;
+}
+.currencies__currency-text {
+    display: inline-block;
+    flex: none;
+    font-weight: 300;
 }
 .flag {
     background-image: url('/images/flags.svg');
@@ -573,6 +590,7 @@ class PayTiersElement extends HTMLElement {
             $(shadowRoot).find('.js-price-regular').node().textContent = Prices.REGULAR[currency];
             $(shadowRoot).find('.js-price-discount').node().textContent = Prices.DISCOUNT[currency];
             $(shadowRoot).find('.js-price-corporate').node().textContent = Prices.CORPORATE[currency];
+            $(shadowRoot).find('.js-currency-text').node().textContent = currency;
         };
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', update);
