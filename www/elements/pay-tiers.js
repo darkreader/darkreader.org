@@ -120,12 +120,12 @@ const htmlText = `
             </label>
         </div>
         <div class="button-wrapper">
+            <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
+                <span class="button-link__text">Pay with <span class="button-link__text--paypal">PayPal</span></span>
+            </a>
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
                 <i class="button-link__card-icon"></i>
-                <span class="button-link__text">Card</span>
-            </a>
-            <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
-                <span class="button-link__text">PayPal</span>
+                <span class="button-link__text">Debit or Credit Card</span>
             </a>
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
                 <span class="button-link__text">More options</span>
@@ -307,6 +307,7 @@ const cssText = `
     background-color: var(--color-control);
     border-radius: 1.25rem;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    box-sizing: border-box;
     color: white;
     display: inline-flex;
     flex-direction: row;
@@ -322,39 +323,27 @@ const cssText = `
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
     z-index: 1;
 }
+.button-link:not(.button-link--inactive) + .button-link {
+    background-color: transparent;
+    border: 1px solid var(--color-control);
+}
 .button-link__text {
-    display: inline-block;
-    font-size: 1.25rem;
-    font-weight: bold;
+    align-items: center;
+    display: inline-flex;
+    font-size: 1rem;
+    justify-content: center;
+    gap: 0.25rem;
     overflow: hidden;
-    -webkit-text-stroke: 0.0625rem;
-    text-transform: uppercase;
-    transform: skewX(-10deg);
 }
 .button-wrapper {
     align-items: center;
-    background-color: var(--color-control);
-    border-radius: 1.25rem;
     display: flex;
-    flex-direction: row;
-    gap: 2px;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
 }
 .button-wrapper .button-link {
     margin: 0;
-}
-.button-wrapper .button-link:not(:first-child)::before {
-    border-left: 1px solid white;
-    content: "";
-    display: inline-block;
-    height: 1.5rem;
-    left: 0;
-    opacity: 0.2;
-    position: absolute;
-    transition: opacity 250ms;
-    width: 0;
-}
-.button-wrapper:hover .button-link:not(:first-child)::before {
-    opacity: 0;
 }
 .button-link--inactive {
     display: none;
@@ -397,14 +386,15 @@ const cssText = `
     text-transform: none;
     transform: none;
 }
-.button-link--paypal {
+.button-link__text--paypal {
     background-image: url("/images/paypal-logo-white.svg");
     background-position: center 60%;
     background-repeat: no-repeat;
     background-size: auto 50%;
-}
-.button-link--paypal .button-link__text {
-    opacity: 0;
+    display: inline-block;
+    height: 2.5rem;
+    text-indent: -999rem;
+    width: 5rem;
 }
 .button-link--other .button-link__text {
     font-size: 1rem;
