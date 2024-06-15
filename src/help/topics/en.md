@@ -11,6 +11,15 @@ Ready? Let's go.
 - [Contacts](#contacts)
 - [Tips for advanced users](../../tips/)
 
+<script id="edge-message-script">
+    if (navigator.userAgent.includes('Edg') && navigator.userAgent.includes('Mobile')) {
+        const script = document.getElementById('edge-message-script');
+        const paragraph = document.createElement('blockquote');
+        paragraph.textContent = 'Dear Microsoft Edge users. The built-in dark mode interferes with Dark Reader. Please go to Menu → Settings → Appearance → Dark theme for all web pages, and if it is enabled, click to disable.';
+        script.parentElement.insertBefore(paragraph, script);
+    }
+</script>
+
 <h2 id="options-icon">Toolbar icon</h2>
 
 <img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Options icon" style="width: 20rem;" loading="lazy" />

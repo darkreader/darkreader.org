@@ -10,6 +10,15 @@ Dark Reader 是一套快速高效的算法。
 - [联络方式](#contacts)
 - [高级用户提示](../../tips/)
 
+<script id="edge-message-script">
+    if (navigator.userAgent.includes('Edg') && navigator.userAgent.includes('Mobile')) {
+        const script = document.getElementById('edge-message-script');
+        const paragraph = document.createElement('blockquote');
+        paragraph.textContent = '尊敬的 Microsoft Edge 用户。内置的暗黑模式会干扰 Dark Reader。请前往菜单 → 设置 → 外观 → 所有网页的暗黑主题，如果已启用，请点击禁用。';
+        script.parentElement.insertBefore(paragraph, script);
+    }
+</script>
+
 
 <h2 id="top-section">顶部选项</h2>
 
