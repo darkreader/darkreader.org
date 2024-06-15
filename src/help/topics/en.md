@@ -1,5 +1,14 @@
 # Help (English)
 
+<script id="edge-message-script">
+    if (navigator.userAgent.includes('Edg') && navigator.userAgent.includes('Mobile')) {
+        const script = document.getElementById('edge-message-script');
+        const paragraph = document.createElement('blockquote');
+        paragraph.textContent = 'Dear Microsoft Edge users. The built-in dark mode interferes with Dark Reader. Please go to Menu → Settings → Appearance → Dark theme for all web pages, and if it is enabled, click to disable.';
+        script.parentElement.insertBefore(paragraph, script);
+    }
+</script>
+
 Dark Reader is a set of fast and efficient algorithms.
 We work hard on improvements.
 Important that you <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
@@ -10,15 +19,6 @@ Ready? Let's go.
 - [FAQ](#faq)
 - [Contacts](#contacts)
 - [Tips for advanced users](../../tips/)
-
-<script id="edge-message-script">
-    if (navigator.userAgent.includes('Edg') && navigator.userAgent.includes('Mobile')) {
-        const script = document.getElementById('edge-message-script');
-        const paragraph = document.createElement('blockquote');
-        paragraph.textContent = 'Dear Microsoft Edge users. The built-in dark mode interferes with Dark Reader. Please go to Menu → Settings → Appearance → Dark theme for all web pages, and if it is enabled, click to disable.';
-        script.parentElement.insertBefore(paragraph, script);
-    }
-</script>
 
 <h2 id="options-icon">Toolbar icon</h2>
 
