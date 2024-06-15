@@ -1,17 +1,14 @@
 # 说明 (简体中文)
 
-本文将带您认识 Dark Reader 的各项功能。
+Dark Reader 是一套快速高效的算法。
+我们努力改进。
+重要的是您<a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">为使用扩展程序付费</a>并支持我们的工作。
+安装我们的<a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">iPhone 和 iPad 应用程序</a>。
+准备好了吗？我们开始吧。
 
 - [常见问题](#faq)
 - [联络方式](#contacts)
-- [顶部选项](#top-section)
-- [滤镜设置](#filter-settings)
-- [个别网站设置](#custom-site-settings)
-- [网站列表](#site-list)
-- [更多选项](#more-tab)
-- [主题生成模式](#theme-generation-modes)
-- [底部选项](#bottom-section)
-- [开发者工具](#using-dev-tools)
+- [高级用户提示](../../tips/)
 
 
 <h2 id="top-section">顶部选项</h2>
