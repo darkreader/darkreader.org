@@ -143,7 +143,7 @@ const htmlText = `
                 <span class="button-link__text">Pay with <span class="button-link__text--paypal">PayPal</span></span>
             </a>
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
-                <i class="button-link__card-icon"></i>
+                <i class="button-link__card-icon js-card-icon"></i>
                 <span class="button-link__text" data-text="card">Debit or Credit Card</span>
             </a>
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
@@ -401,6 +401,22 @@ const cssText = `
     position: absolute;
     width: 0.4rem;
 }
+.button-link__card-icon--union-pay {
+    background-color: #edae44;
+}
+.button-link__card-icon--union-pay::after {
+    background-color: #229ead;
+    box-shadow: -0.2rem 0 0 #304da5, -0.4rem 0 0 #e00e5b;
+    border-radius: 0.05rem;
+    bottom: 0.1rem;
+    content: "";
+    display: inline-block;
+    height: 0.4rem;
+    left: 1.1rem;
+    position: absolute;
+    transform: skewX(-10deg);
+    width: 0.25rem;
+}
 .button-link--card .button-link__text {
     text-transform: none;
     transform: none;
@@ -634,6 +650,7 @@ class PayTiersElement extends HTMLElement {
             Object.entries(locales.cn).forEach(([key, text]) => {
                 s(`[data-text="${key}"]`).each((node) => node.textContent = text);
             });
+            s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--union-pay'));
         }
     }
 }
