@@ -1,6 +1,11 @@
 # Help (English)
 
-This document will guide you through the features of Dark Reader.
+Dark Reader is a set of fast and efficient algorithms.
+We work hard on improvements.
+Important that you <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
+Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">iPhone and iPad apps</a>.
+Automatically search and apply discounts with <a data-s="h-help-top" href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener">PayPal Honey</a> extension.
+Ready? Let's go.
 
 - [FAQ](#faq)
 - [Contacts](#contacts)
