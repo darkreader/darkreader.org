@@ -2,6 +2,11 @@
 
 ## iOS and iPadOS
 
+<a href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" target="_blank"
+    rel="noopener" data-s="drios-tips-badge">
+    <img src="/images/app-store-badge.svg" width="200">
+</a>
+
 Download Dark Reader from the <a href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" data-s="drios-tips-mobile">App Store</a>.
 iOS 15 is required.
 
