@@ -124,7 +124,7 @@ fieldset>small:last-child {
     background-image: url('/images/flags.svg');
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size: 5rem 0.75rem;
+    background-size: 6rem 0.75rem;
     display: inline-block;
     height: 0.75rem;
     width: 1rem;
@@ -148,6 +148,10 @@ fieldset>small:last-child {
 
 .flag-ca {
     background-position-x: -4rem;
+}
+
+.flag-cn {
+    background-position-x: -5rem;
 }
 
 [data-payment-type] {

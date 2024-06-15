@@ -33,6 +33,7 @@ const Links = {
             EUR: 'https://www.paypal.com/ncp/payment/364NSETFEQ4W2',
             JPY: 'https://www.paypal.com/ncp/payment/BSDYGW4MNC5WU',
             CAD: 'https://www.paypal.com/ncp/payment/6HZMLYQT9KTQA',
+            CNY: 'https://www.paypal.com/ncp/payment/6GUZKB3ZK3ZEE',
         },
         DISCOUNT: {
             USD: 'https://www.paypal.com/ncp/payment/ZGRN4ZD3CYWN8',
@@ -40,6 +41,7 @@ const Links = {
             EUR: 'https://www.paypal.com/ncp/payment/FCHJZYGTLWAF2',
             JPY: 'https://www.paypal.com/ncp/payment/WX44HW8PNN6TN',
             CAD: 'https://www.paypal.com/ncp/payment/T632CCSRBWBBU',
+            CNY: 'https://www.paypal.com/ncp/payment/ZGRN4ZD3CYWN8',
         },
     },
 };
@@ -51,6 +53,7 @@ const Prices = {
         EUR: '€9.99',
         JPY: '¥1,500',
         CAD: '$12.99',
+        CNY: '¥68.00',
     },
     DISCOUNT: {
         USD: '$4.99',
@@ -58,6 +61,7 @@ const Prices = {
         EUR: '€4.99',
         JPY: '¥700',
         CAD: '$6.99',
+        CNY: '¥38.00',
     },
     CORPORATE: {
         USD: '$9.99/yr',
@@ -65,10 +69,11 @@ const Prices = {
         EUR: '€9.99/yr',
         JPY: '¥1,500/年',
         CAD: '$12.99/yr',
+        CNY: '¥68.00/年',
     },
 };
 
-const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : isEUCountry ? 'EUR' : 'USD';
+const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
 const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
@@ -87,36 +92,48 @@ function currencyButton(currency, flagCls) {
             </label>`;
 }
 
+const locales = {
+    cn: {
+        heading: '支付 Dark Reader 使用费',
+        regular: '定期使用',
+        discount: '偶尔使用',
+        corporate: '企业用户',
+        card: '借记卡或信用卡',
+        more: '更多的选择',
+    },
+};
+
 const htmlText = `
 <div class="bg"></div>
 <section class="pr">
     <div class="pr-wrapper">
-        <h2 class="pr-heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
+        <h2 class="pr-heading" data-text="heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
         <div class="currencies">
             ${currencyButton('USD', 'flag-us')}
             ${currencyButton('EUR', 'flag-eu')}
             ${currencyButton('GBP', 'flag-uk')}
             ${currencyButton('JPY', 'flag-jp')}
             ${currencyButton('CAD', 'flag-ca')}
+            ${currencyButton('CNY', 'flag-cn')}
             <span class="currencies__currency-connect"></span>
             <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
         </div>
         <div class="tiers">
             <label class="tier">
                 <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
-                <span class="tier__desc">Regular use</span>
+                <span class="tier__desc" data-text="regular">Regular use</span>
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
             </label>
             <label class="tier">
                 <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
-                <span class="tier__desc">Occasional use</span>
+                <span class="tier__desc" data-text="discount">Occasional use</span>
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
             </label>
             <label class="tier">
                 <input type="radio" name="tier" value="${Tiers.CORPORATE}">
-                <span class="tier__desc">Corporate users</span>
+                <span class="tier__desc" data-text="corporate">Corporate users</span>
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
             </label>
@@ -127,10 +144,10 @@ const htmlText = `
             </a>
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
                 <i class="button-link__card-icon"></i>
-                <span class="button-link__text">Debit or Credit Card</span>
+                <span class="button-link__text" data-text="card">Debit or Credit Card</span>
             </a>
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
-                <span class="button-link__text">More options</span>
+                <span class="button-link__text" data-text="more">More options</span>
             </a>
         </div>
     </div>
@@ -444,7 +461,7 @@ const cssText = `
     background-image: url('/images/flags.svg');
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size: calc(24px * 5) 18px;
+    background-size: calc(24px * 6) 18px;
     border-radius: 0.25rem;
     display: inline-block;
     height: 18px;
@@ -465,6 +482,9 @@ const cssText = `
 }
 .flag-ca {
     background-position-x: -96px;
+}
+.flag-cn {
+    background-position-x: -120px;
 }
 .pr-horizontal {
     display: none;
@@ -552,6 +572,12 @@ const cssText = `
         background-color: var(--color-bg);
         border: 1px solid var(--color-control);
     }
+    .button-link__text {
+        font-size: 1.25rem;
+        font-weight: bold;
+        -webkit-text-stroke: 0.0625rem;
+        transform: skewX(-10deg);
+    }
 }
 `;
 
@@ -563,6 +589,8 @@ class PayTiersElement extends HTMLElement {
         if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom')) {
             return;
         }
+
+        const s = (/** @type {string} */x) => $(shadowRoot).find(x);
 
         const style = html('style', {}, cssText);
         shadowRoot.append(style);
@@ -577,26 +605,36 @@ class PayTiersElement extends HTMLElement {
         const otherLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-other'));
         clicker(otherLink, 'd-side-other');
 
-        $(shadowRoot).find('.card .button-link').each((el) => clicker(el, 'd-card-btn'));
+        s('.card .button-link').each((el) => clicker(el, 'd-card-btn'));
 
         const update = () => {
             const {value: tier} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
             const {value: currency} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="currency"]:checked'));
 
             stripeLink.href = tier === Tiers.DISCOUNT ? Links.Stripe.DISCOUNT : tier === Tiers.CORPORATE ? Links.Stripe.CORPORATE : Links.Stripe.REGULAR;
+
             paypalLink.href = tier === Tiers.DISCOUNT ? Links.PayPal.DISCOUNT[currency] : Links.PayPal.REGULAR[currency];
-            paypalLink.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE);
-            otherLink.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE);
-            $(shadowRoot).find('.js-price-regular').node().textContent = Prices.REGULAR[currency];
-            $(shadowRoot).find('.js-price-discount').node().textContent = Prices.DISCOUNT[currency];
-            $(shadowRoot).find('.js-price-corporate').node().textContent = Prices.CORPORATE[currency];
-            $(shadowRoot).find('.js-currency-text').node().textContent = currency;
+            paypalLink.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE || currency === 'CNY');
+
+            otherLink.href = tier === Tiers.DISCOUNT ? Links.Redirect.DISCOUNT : tier === Tiers.CORPORATE ? Links.Redirect.CORPORATE : Links.Redirect.REGULAR;
+            otherLink.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE && currency !== 'CNY');
+
+            s('.js-price-regular').node().textContent = Prices.REGULAR[currency];
+            s('.js-price-discount').node().textContent = Prices.DISCOUNT[currency];
+            s('.js-price-corporate').node().textContent = Prices.CORPORATE[currency];
+            s('.js-currency-text').node().textContent = currency;
         };
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', update);
         shadowRoot.querySelector('.currencies')?.addEventListener('change', update);
 
         update();
+
+        if (document.documentElement.lang === 'zh-CN') {
+            Object.entries(locales.cn).forEach(([key, text]) => {
+                s(`[data-text="${key}"]`).each((node) => node.textContent = text);
+            });
+        }
     }
 }
 
