@@ -8,7 +8,7 @@ Dark Reader の機能を解説します。
 
 <h2 id="options-icon">オプション用アイコン</h2>
 
-<img src="/images/help/darkreader-icon-edge.png" alt="オプション用アイコン" style="width: 20rem;" loading="lazy" />
+<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="オプション用アイコン" style="width: 20rem;" loading="lazy" />
 
 インストール後に Dark Reader のアイコンが表示されないことがあります。
 表示するには、 アドレスバーの右にある**拡張機能**ボタンをクリックし、Dark Reader の横のボタンをクリックします（解説が古い？）。
@@ -90,7 +90,6 @@ Firefox ではうまく動作しません。
 
 - **個人情報**は、私たちの個人情報保護方針です。**Twitter**をフォローしてね。**Github**でソースは貢献者をご覧ください。このページの**ヘルプ**もあります。
 - **寄付する** – 拡張機能を気に入っていただけたら、Dark Reader の開発支援をご検討ください。
-クラウドファンディングには Open Collective を使っていて、支払い処理に現在 Stripe を使用しています。
 - **ニュース** – 更新履歴と重要なイベントをお知らせします。
 - **開発ツール** – 現在のテーマのモードの設定編集ウィンドウを開きます。
 
@@ -109,9 +108,9 @@ CSS セレクタを理解されているなら、サイトのフィルターの�
 
 <h4 class="text-highlight">Dark Reader を支援する方法</h4>
 
-1. <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS のアプリ</a>を購入しインストールします。
-2. スポンサー用のアプリと拡張機能をインストールします。
-3. <a data-s="d-help-faq" href="https://opencollective.com/darkreader/donate">寄付します</a>。
+1. <a data-s="d-help-faq" href="https://darkreader.org/support-us">Dark Readerの使用料を支払う</a>。
+2. <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS のアプリ</a>を購入しインストールします。
+3. スポンサー用のアプリと拡張機能をインストールします。
 4. 友達や仕事仲間に紹介してください。
 
 #### 拡張機能がサイトのデータを読み取る権限を要求しています
@@ -166,4 +165,4 @@ Mac OS で Chrome を使っていれば、Mac OS を10.13にアップデート�
 
 <h2 id="contacts">問い合わせ先</h2>
 
-質問は英語でこちらへ: [support@darkreader.org](mailto:support@darkreader.org)
+質問は英語でこちらへ: [support@darkreader.org](mailto:support@darkreader.org)（英語で）
