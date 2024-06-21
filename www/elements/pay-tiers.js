@@ -95,10 +95,12 @@ function currencyButton(currency, flagCls) {
 const locales = {
     cn: {
         heading: '支付 Dark Reader 使用费',
+        heading_short: '使用费',
         regular: '定期使用',
         discount: '偶尔使用',
         corporate: '企业用户',
         card: '借记卡或信用卡',
+        card_short: '使用卡付款',
         more: '更多的选择',
     },
 };
@@ -176,6 +178,23 @@ const htmlText = `
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
+    </div>
+</section>
+<section class="pr-small">
+    <span class="pr-optional">Optional</span>
+    <h2 class="pr-heading" data-text="heading_short">User Fee</h2>
+    <div class="price-small js-price-regular">${DEFAULT_PRICE_REGULAR}</div>
+    <div class="button-wrapper">
+        <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
+            <span class="button-link__text"><span class="button-link__text--paypal">PayPal</span></span>
+        </a>
+        <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
+            <i class="button-link__card-icon js-card-icon"></i>
+            <span class="button-link__text" data-text="card_short">Pay with Card</span>
+        </a>
+        <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
+            <span class="button-link__text" data-text="more">More options</span>
+        </a>
     </div>
 </section>
 `;
@@ -595,6 +614,79 @@ const cssText = `
         transform: skewX(-10deg);
     }
 }
+
+.pr-small {
+    display: none;
+}
+:host([small]) .pr {
+    display: none;
+}
+:host([small]) .pr-horizontal {
+    display: none;
+}
+:host([small]) .bg {
+    display: none;
+}
+:host([small]) .pr-small {
+    align-items: center;
+    column-gap: 0.5rem;
+    display: grid;
+    grid:
+        "heading price" auto
+        "buttons buttons" auto
+        "optional optional" auto
+        / auto auto;
+    row-gap: 0.25rem;
+    width: 7rem;
+}
+.pr-small .pr-heading {
+    font-size: 1.5rem;
+    grid-area: heading;
+    text-align: center;
+    text-transform: none;
+}
+.pr-small .pr-optional {
+    display: inline-block;
+    display: none;
+    font-size: 0.75rem;
+    font-weight: normal;
+    grid-area: optional;
+    margin: 0;
+    text-align: center;
+}
+.pr-small .price-small {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-area: price;
+}
+.pr-small .button-wrapper {
+    grid-area: buttons;
+    margin: 0;
+    width: 100%;
+}
+.pr-small .button-link {
+    font-size: 1rem;
+    height: 2rem;
+    width: 100%;
+}
+.pr-small .button-link__text {
+    font-size: 1rem;
+    font-weight: bold;
+    -webkit-text-stroke: unset;
+    transform: none;
+}
+.pr-small .button-link:not(.button-link--inactive) + .button-link {
+    border: none;
+    box-shadow: none;
+    color: var(--color-text);
+    height: 1.25rem;
+    text-decoration: underline;
+    transition: color 125ms;
+}
+.pr-small .button-link:not(.button-link--inactive) + .button-link:hover {
+    color: white;
+}
 `;
 
 class PayTiersElement extends HTMLElement {
@@ -606,39 +698,38 @@ class PayTiersElement extends HTMLElement {
             return;
         }
 
-        const s = (/** @type {string} */x) => $(shadowRoot).find(x);
+        /** @type {(selector: string) => ReturnType<$>} */
+        const s = (selector) => $(shadowRoot).find(selector);
 
         const style = html('style', {}, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        const stripeLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-stripe'));
-        clicker(stripeLink, 'd-side-stripe');
-
-        const paypalLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-paypal'));
-        clicker(paypalLink, 'd-side-paypal');
-
-        const otherLink = /** @type {HTMLAnchorElement} */(shadowRoot.querySelector('.pr .js-link-other'));
-        clicker(otherLink, 'd-side-other');
-
+        s('.js-link-stripe').each((node) => clicker(node, 'd-side-stripe'));
+        s('.js-link-paypal').each((node) => clicker(node, 'd-side-paypal'));
+        s('.js-link-other').each((node) => clicker(node, 'd-side-other'));
         s('.card .button-link').each((el) => clicker(el, 'd-card-btn'));
 
         const update = () => {
             const {value: tier} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
             const {value: currency} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="currency"]:checked'));
 
-            stripeLink.href = tier === Tiers.DISCOUNT ? Links.Stripe.DISCOUNT : tier === Tiers.CORPORATE ? Links.Stripe.CORPORATE : Links.Stripe.REGULAR;
+            s('.js-link-stripe').each((node) => {
+                /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.Stripe.DISCOUNT : tier === Tiers.CORPORATE ? Links.Stripe.CORPORATE : Links.Stripe.REGULAR;
+            });
+            s('.js-link-paypal').each((node) => {
+                /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.PayPal.DISCOUNT[currency] : Links.PayPal.REGULAR[currency];
+                node.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE || currency === 'CNY');
+            });
+            s('.js-link-other').each((node) => {
+                /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.Redirect.DISCOUNT : tier === Tiers.CORPORATE ? Links.Redirect.CORPORATE : Links.Redirect.REGULAR;
+                node.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE && currency !== 'CNY');
+            });
 
-            paypalLink.href = tier === Tiers.DISCOUNT ? Links.PayPal.DISCOUNT[currency] : Links.PayPal.REGULAR[currency];
-            paypalLink.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE || currency === 'CNY');
-
-            otherLink.href = tier === Tiers.DISCOUNT ? Links.Redirect.DISCOUNT : tier === Tiers.CORPORATE ? Links.Redirect.CORPORATE : Links.Redirect.REGULAR;
-            otherLink.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE && currency !== 'CNY');
-
-            s('.js-price-regular').node().textContent = Prices.REGULAR[currency];
-            s('.js-price-discount').node().textContent = Prices.DISCOUNT[currency];
-            s('.js-price-corporate').node().textContent = Prices.CORPORATE[currency];
-            s('.js-currency-text').node().textContent = currency;
+            s('.js-price-regular').each((node) => node.textContent = Prices.REGULAR[currency]);
+            s('.js-price-discount').each((node) => node.textContent = Prices.DISCOUNT[currency]);
+            s('.js-price-corporate').each((node) => node.textContent = Prices.CORPORATE[currency]);
+            s('.js-price-currency-text').each((node) => node.textContent = currency);
         };
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', update);
