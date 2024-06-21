@@ -34,7 +34,17 @@ click the **Extensions** button next to the address bar and then another button 
 
 - **Toggle site** button adds the current site into the ignore list (or removes it from there).
 - **On/Off** switch enables or disables the extension.
-- Click on the links under the buttons to **modify the hotkeys** for the extension.
+- Click on the links under the buttons to make extra configuration changes.
+    <img src="/images/help/darkreader-site-toggling.png" alt="Site toggling" style="width: 15rem;" loading="lazy" />
+    - **Configure website toggling** 
+        - **Detect dark theme** button enables or disables the ability for DarkReader to auto-detect and apply a website's built-in dark theme. 
+        - **Keyboard shortcut** button lets you modify the hotkey for adding the current website to the [site list](#site-list).
+    <img src="/images/help/darkreader-automation.png" alt="automation" style="width: 15rem;" loading="lazy" />
+    - **Configure automation** link enables the ability to specify conditions for activation of the extension. 
+        - **Set active hours** lets you specify a certain timeframe when the extension will be on.
+        - **Set location** lets you specify a certain location when the extension will turn on.
+        - **Use system color scheme** lets you detect and follow your system's current color scheme.
+        - **Keyboard shortcut** button lets you modify the hotkey for turning on/off the extension.
 - Note: If the toggle button is greyed-out, it means that browser restricts injecting scripts into current page.
 
 
@@ -43,13 +53,18 @@ click the **Extensions** button next to the address bar and then another button 
 <img src="/images/help/darkreader-filter-settings.png" alt="Filter settings" style="width: 15rem;" loading="lazy" />
 
 Adjust the mode, brightness, contrast, sepia, and saturation ("grayscale") settings. This can be used to better suit your screen parameters and the lighting in the room.
+- **Mode** allows you to toggle between dark and light mode for the current site.
+- **Brightness** allows you to adjust the brightness of the current site by increments/decrements of 5.
+- **Contrast** allows you to adjust the contrast of the current site by increments/decrements of 5.
+- **Sepia** allows you to adjust the sepia-ness, i.e., the red/brownish-ness of the current site by increments/decrements of 5. The default is 0.
+- **Grayscale** allows you to adjust the gray-scale of the current site by increments/decrements of 5. The default is 0. Note: Images, videos, and other media components of a website will not be influenced by this setting.
 
 
 <h2 id="custom-site-settings">Custom site settings</h2>
 
 <img src="/images/help/darkreader-custom-site-settings.png" alt="Custom settings" style="width: 15rem;" loading="lazy" />
 
-The **Only for** button determines whether the above filter settings should only be applied to the current website.
+The **Only for** buttons in the Filter and More tabs determine whether the specified settings in those tabs should only be applied to the current website.
 
 To use, first click the button (which will become highlighted), then adjust the settings as desired for the current website. Click the button again to cancel.
 
@@ -68,8 +83,8 @@ To use, first click the button (which will become highlighted), then adjust the 
 
 <img src="/images/help/darkreader-more-tab.png" alt="More tab" style="width: 15rem;" loading="lazy" />
 
-- **Pick a font** from list (or enter font name on Firefox), click the **checkbox**.
-- Adjust the **text stroke**.
+- **Pick a font** from the list (or if on Firefox, enter a font name). Click the **checkbox** to enable or disable the selected font to be used across all websites.
+- Adjust the **text stroke** i.e., the width of the text across all websites.
 - Select a **theme generation mode**.
 
 
