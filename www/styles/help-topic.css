@@ -34,6 +34,11 @@
     display: none;
 }
 
+.page-grid-content darkreader-backers-header,
+.page-grid-content darkreader-support-us {
+    display: none;
+}
+
 .page-grid-ios {
     left: calc(50vw - 10rem);
 }
