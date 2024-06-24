@@ -34,7 +34,8 @@ const htmlText = `
         </span>
     </a>
     <a class="text-link ht" href="${hnURL}" target="_blank" rel="noopener">
-        Save <span class="ht-currency">$$$</span> when you shop online
+        Automatically search & apply coupon
+        codes & discounts
     </a>
     <a class="button-link hb" href="${hnURL}" target="_blank" rel="noopener">
         ${buttonIcon}
