@@ -141,14 +141,14 @@ const htmlText = `
             </label>
         </div>
         <div class="button-wrapper">
-            <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
+            <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
                 <span class="button-link__text">Pay with <span class="button-link__text--paypal">PayPal</span></span>
             </a>
-            <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
+            <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
                 <i class="button-link__card-icon js-card-icon"></i>
                 <span class="button-link__text" data-text="card">Debit or Credit Card</span>
             </a>
-            <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
+            <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
                 <span class="button-link__text" data-text="more">More options</span>
             </a>
         </div>
@@ -160,21 +160,21 @@ const htmlText = `
         <span class="card card--selected">
             <span class="card__desc">Regular use</span>
             <span class="card__price">$9.99</span>
-            <a class="button-link" href="${Links.Redirect.REGULAR}" target="_blank" rel="noopener">
+            <a class="button-link" href="${Links.Redirect.REGULAR}" target="_blank" rel="noopener" data-s="d-card-regular">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Occasional use</span>
             <span class="card__price"><s class="card__price__strike">$9.99 </s>$4.99</span>
-            <a class="button-link" href="${Links.Redirect.DISCOUNT}" target="_blank" rel="noopener">
+            <a class="button-link" href="${Links.Redirect.DISCOUNT}" target="_blank" rel="noopener" data-s="d-card-discount">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Corporate users</span>
             <span class="card__price">$9.99<span class="card__price__time">/year</span></span>
-            <a class="button-link" href="$${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
+            <a class="button-link" href="$${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-card-corp">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
@@ -185,14 +185,14 @@ const htmlText = `
     <h2 class="pr-heading" data-text="heading_short">User Fee</h2>
     <div class="price-small js-price-regular">${DEFAULT_PRICE_REGULAR}</div>
     <div class="button-wrapper">
-        <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener">
+        <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-small-paypal">
             <span class="button-link__text"><span class="button-link__text--paypal">PayPal</span></span>
         </a>
-        <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener">
+        <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-small-stripe">
             <i class="button-link__card-icon js-card-icon"></i>
             <span class="button-link__text" data-text="card_short">Pay with Card</span>
         </a>
-        <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener">
+        <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-top-other">
             <span class="button-link__text" data-text="more">More options</span>
         </a>
     </div>
@@ -705,10 +705,7 @@ class PayTiersElement extends HTMLElement {
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
 
-        s('.js-link-stripe').each((node) => clicker(node, 'd-side-stripe'));
-        s('.js-link-paypal').each((node) => clicker(node, 'd-side-paypal'));
-        s('.js-link-other').each((node) => clicker(node, 'd-side-other'));
-        s('.card .button-link').each((el) => clicker(el, 'd-card-btn'));
+        $(shadowRoot).find('[data-s]').each((node) => clicker(node, node.getAttribute('data-s') ?? ''));
 
         const update = () => {
             const {value: tier} = /** @type {HTMLInputElement} */(shadowRoot.querySelector('[name="tier"]:checked'));
