@@ -130,7 +130,7 @@ Do you want to learn more? Please visit our <a href="../../tips/">Tips & Tricks<
 
 #### The extension asks for permissions to read website data
 
-The extension needs these permissions to be able to analyze and modify website appearence,
+The extension needs these permissions to be able to analyze and modify website appearance,
 determine if a website is disabled by your settings or to use site-specific rules.
 We do not insert ads and do not collect any data or send it anywhere.
 The extension is fully open-source and has no obfuscated code.
@@ -142,8 +142,8 @@ The extension has no access to these pages.
 
 #### New tab page and browser theme remain white
 
-The extension cannot change the appearence of a new tab or browser (though in Firefox it can since version 60).
-We recommend installing a dark theme or new tab extension from extensions store.
+The extension cannot change the appearance of a new tab or browser (though in Firefox it can since version 60).
+We recommend installing a dark theme or a new tab extension from the extensions store.
 
 #### Screen flashes white when opening a new tab or navigating to a website
 
