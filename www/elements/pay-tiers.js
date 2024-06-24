@@ -667,7 +667,7 @@ const cssText = `
 }
 .pr-small .button-link {
     font-size: 1rem;
-    height: 2rem;
+    height: 2.5rem;
     width: 100%;
 }
 .pr-small .button-link__text {
