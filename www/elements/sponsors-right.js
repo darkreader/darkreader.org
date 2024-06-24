@@ -517,12 +517,6 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.nr-logo-github'), 'gh-side-ns');
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
-        const currency = qs('.ht-currency');
-        if (isEUCountry) {
-            currency.textContent = '€€€';
-        } else if (country === 'GB') {
-            currency.textContent = '£££';
-        }
     }
 }
 
