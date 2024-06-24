@@ -30,6 +30,10 @@ const htmlText = `
                 Install
             </span>
         </a>
+        <br>
+        <a class="text-link" href="${hURL}" target="_blank" rel="noopener" data-s="h-top-txt">
+            Learn more
+        </a>
     </div>
 </section>`;
 
@@ -118,6 +122,16 @@ const cssText = `
 .b-icon--safari {
     background-image: url(/images/icon-safari-66x66.svg);
     filter: none;
+}
+.text-link {
+    color: var(--color-text);
+    transition: color 125ms;
+}
+.text-link:hover {
+    color: white;
+}
+::selection {
+    background-color: black;
 }
 `;
 

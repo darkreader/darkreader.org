@@ -29,7 +29,8 @@
 
 .android .page-grid-inside darkreader-backers-header,
 .android darkreader-ios-static,
-.android darkreader-ios-side {
+.android darkreader-ios-side,
+.android darkreader-backers-top-short {
     display: none;
 }
 
