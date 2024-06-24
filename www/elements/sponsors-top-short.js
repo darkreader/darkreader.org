@@ -16,7 +16,7 @@ const buttonIcon = `<span class="b-icon${isEdge ? ' b-icon--edge' : isSafari ? '
 const htmlText = `
 <section class="container">
     <div class="top">
-        <span class="h-heading h-heading-1">Save money</span>
+        <span class="h-heading h-heading-1">Save Money</span>
         <span class="h-heading h-heading-2">with</span>
         <span class="paypal-honey">PayPal Honey</span>
     </div>

@@ -10,7 +10,7 @@ const hURL = 'https://www.joinhoney.com/darkreader';
 const htmlText = `
 <div>
     <a href="${hURL}" target="_blank" rel="noopener"
-        class="h-banner">PayPal presents: Save money with Honel</a>
+        class="h-banner">PayPal presents: Save money with Honey</a>
 </div>
 <div>
     <a href="${hURL}" target="_blank" rel="noopener"
