@@ -37,8 +37,6 @@ const htmlText = `
     </div>
 </section>`;
 
-const outlineFilter = 'drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 1))';
-
 const cssText = `
 .top {
     height: 2rem;
@@ -72,9 +70,11 @@ const cssText = `
 }
 .button-link {
     align-items: center;
-    background-color: var(--color-control);
+    background-color: transparent;
+    border: 0.0625rem solid var(--color-control);
     border-radius: 1.25rem;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    box-sizing: border-box;
     color: white;
     display: inline-flex;
     flex-direction: row;
@@ -102,7 +102,6 @@ const cssText = `
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    filter: ${outlineFilter};
     height: 2rem;
     margin-right: 0.5rem;
     width: 2rem;
