@@ -159,21 +159,21 @@ const htmlText = `
     <div class="pr-horizontal-wrapper">
         <span class="card card--selected">
             <span class="card__desc">Regular use</span>
-            <span class="card__price">$9.99</span>
+            <span class="card__price">${DEFAULT_PRICE_REGULAR}</span>
             <a class="button-link" href="${Links.Redirect.REGULAR}" target="_blank" rel="noopener" data-s="d-card-regular">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Occasional use</span>
-            <span class="card__price"><s class="card__price__strike">$9.99 </s>$4.99</span>
+            <span class="card__price"><s class="card__price__strike"> ${DEFAULT_PRICE_REGULAR} </s>${DEFAULT_PRICE_DISCOUNT}</span>
             <a class="button-link" href="${Links.Redirect.DISCOUNT}" target="_blank" rel="noopener" data-s="d-card-discount">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
             <span class="card__desc">Corporate users</span>
-            <span class="card__price">$9.99<span class="card__price__time">/year</span></span>
+            <span class="card__price">${DEFAULT_PRICE_CORP.split('/')[0]}<span class="card__price__time">/year</span></span>
             <a class="button-link" href="$${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-card-corp">
                 <span class="button-link__text">Pay</span>
             </a>
@@ -183,7 +183,7 @@ const htmlText = `
 <section class="pr-small">
     <span class="pr-optional">Optional</span>
     <h2 class="pr-heading" data-text="heading_short">User Fee</h2>
-    <div class="price-small js-price-regular">${DEFAULT_PRICE_REGULAR}</div>
+    <div class="price-small"><s class="price-small__strike js-price-regular">${DEFAULT_PRICE_REGULAR}</s> <span class="price-small__final js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span></div>
     <div class="button-wrapper">
         <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-small-paypal">
             <span class="button-link__text"><span class="button-link__text--paypal">PayPal</span></span>
@@ -572,7 +572,7 @@ const cssText = `
         font-size: 1rem;
     }
     .card__price__strike {
-        color: var(--color-highlight);
+        color: var(--color-text);
         font-size: 1rem;
         position: relative;
         text-decoration: none;
@@ -659,6 +659,23 @@ const cssText = `
     font-size: 1.5rem;
     font-weight: bold;
     grid-area: price;
+    white-space: nowrap;
+}
+.pr-small .price-small__strike {
+    color: var(--color-text);
+    font-size: 1rem;
+    position: relative;
+    text-decoration: none;
+}
+.pr-small .price-small__strike::after {
+    border-top: 2px solid var(--color-highlight);
+    bottom: 0;
+    content: "";
+    height: 40%;
+    left: -0.125rem;
+    position: absolute;
+    transform: rotate(-10deg);
+    width: calc(100% + 0.25rem);
 }
 .pr-small .button-wrapper {
     grid-area: buttons;

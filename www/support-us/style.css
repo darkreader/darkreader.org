@@ -235,7 +235,7 @@ fieldset>small:last-child {
 }
 
 .discount-strike {
-    color: var(--color-accent);
+    color: var(--color-text);
     font-size: 2rem;
     position: relative;
     text-decoration: none;
