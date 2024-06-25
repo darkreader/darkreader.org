@@ -689,20 +689,9 @@ const cssText = `
 }
 .pr-small .button-link__text {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal;
     -webkit-text-stroke: unset;
     transform: none;
-}
-.pr-small .button-link:not(.button-link--inactive) + .button-link {
-    border: none;
-    box-shadow: none;
-    color: var(--color-text);
-    height: 1.25rem;
-    text-decoration: underline;
-    transition: color 125ms;
-}
-.pr-small .button-link:not(.button-link--inactive) + .button-link:hover {
-    color: white;
 }
 `;
 
