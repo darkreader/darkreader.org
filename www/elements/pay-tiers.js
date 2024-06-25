@@ -732,7 +732,7 @@ class PayTiersElement extends HTMLElement {
             s('.js-price-regular').each((node) => node.textContent = Prices.REGULAR[currency]);
             s('.js-price-discount').each((node) => node.textContent = Prices.DISCOUNT[currency]);
             s('.js-price-corporate').each((node) => node.textContent = Prices.CORPORATE[currency]);
-            s('.js-price-currency-text').each((node) => node.textContent = currency);
+            s('.js-currency-text').each((node) => node.textContent = currency);
         };
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', update);
