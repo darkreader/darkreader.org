@@ -112,10 +112,8 @@ const cssText = `
     }
 }
 .b-icon--edge {
-    background-color: white;
     background-image: url(/images/icon-edge-256x256.svg);
     border-radius: 50%;
-    box-shadow: 0 0 0 0.0625rem white;
     filter: none;
 }
 .b-icon--safari {
