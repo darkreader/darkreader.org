@@ -192,7 +192,7 @@ const htmlText = `
             <i class="button-link__card-icon js-card-icon"></i>
             <span class="button-link__text" data-text="card_short">Pay with Card</span>
         </a>
-        <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-top-other">
+        <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-small-other">
             <span class="button-link__text" data-text="more">More options</span>
         </a>
     </div>
