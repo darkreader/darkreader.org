@@ -119,7 +119,8 @@ Please support the others with donations and by sharing your knowledge.
     darkreader-donate-mascot,
     darkreader-ios-static,
     darkreader-ios-side,
-    darkreader-pay-tiers {
+    darkreader-pay-tiers,
+    darkreader-backers-top-short {
         display: none;
     }
     .header-logo {
