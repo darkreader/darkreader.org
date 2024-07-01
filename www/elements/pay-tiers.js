@@ -180,7 +180,7 @@ const htmlText = `
         <span class="card">
             <span class="card__desc">Corporate users</span>
             <span class="card__price">${DEFAULT_PRICE_CORP.split('/')[0]}<span class="card__price__time">/year</span></span>
-            <a class="button-link" href="$${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-card-corp">
+            <a class="button-link" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-card-corp">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
