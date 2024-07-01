@@ -153,19 +153,20 @@ nav a:hover {
     transform: translateY(3.5rem);
 }
 
-@media screen and (min-width: 74rem) {
+@media screen and (min-width: 75rem) {
     .page-grid-body {
+        column-gap: 2rem;
         grid:
             "left header side" auto
             "left inside side" auto
             "left content side" auto
             "left footer side" auto
             / 16rem auto 16rem;
-        max-width: 74rem;
+        max-width: 75rem;
     }
 
     .page-grid-side {
-        right: calc(50% - 37rem);
+        right: calc(50% - 37.5rem);
     }
 
     .page-grid-left {
