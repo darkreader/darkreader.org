@@ -487,7 +487,8 @@ const cssText = `
 }
 .currencies__currency-connect {
     border-bottom: 1px dotted var(--color-text);
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
     flex: auto;
     height: 0;
     opacity: 0.25;
