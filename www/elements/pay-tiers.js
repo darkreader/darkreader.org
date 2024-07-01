@@ -27,7 +27,7 @@ const Links = {
         CORPORATE: 'https://buy.stripe.com/aEUcO29CueaS5k44gq',
     },
     PayPal: {
-    REGULAR: {
+        REGULAR: {
             USD: 'https://www.paypal.com/ncp/payment/6GUZKB3ZK3ZEE',
             GBP: 'https://www.paypal.com/ncp/payment/DRE2J7DSGZ3EC',
             EUR: 'https://www.paypal.com/ncp/payment/364NSETFEQ4W2',
