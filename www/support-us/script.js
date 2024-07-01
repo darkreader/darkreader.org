@@ -8,6 +8,8 @@ if (country === 'GB') {
     document.querySelectorAll('[value="region-ca"]').forEach((el) => el.checked = true);
 } else if (country === 'JP') {
     document.querySelectorAll('[value="region-jp"]').forEach((el) => el.checked = true);
+} else if (country === 'AU') {
+    document.querySelectorAll('[value="region-au"]').forEach((el) => el.checked = true);
 } else if (isEUCountry) {
     document.querySelectorAll('[value="region-eu"]').forEach((el) => el.checked = true);
 } else {

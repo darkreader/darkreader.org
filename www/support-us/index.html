@@ -91,6 +91,10 @@
                         <i class="flag flag-ca"></i> CA
                     </label>
                     <label class="radio-button">
+                        <input type="radio" name="region" value="region-au">
+                        <i class="flag flag-au"></i> AU
+                    </label>
+                    <label class="radio-button">
                         <input type="radio" name="region" value="region-other">
                         Other
                     </label>
@@ -145,6 +149,16 @@
                     paypal.HostedButtons({
                         hostedButtonId: "6HZMLYQT9KTQA",
                     }).render("#paypal-container-6HZMLYQT9KTQA")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-au" data-s="d-sup-pp">
+                <script
+                    src="https://www.paypal.com/sdk/js?client-id=BAA-OLPq9GbKnbQlmUeauRL56qmH0iFUCnoYQEQfZ_l5_M5ICrlamnuNe5JxTyQb4ApuoPXsHp60xCmIdA&components=hosted-buttons&disable-funding=venmo&currency=AUD"></script>
+                <div id="paypal-container-V2YBJBHKLR4N4"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "V2YBJBHKLR4N4",
+                    }).render("#paypal-container-V2YBJBHKLR4N4")
                 </script>
             </div>
         </fieldset>
@@ -235,6 +249,10 @@
                         <i class="flag flag-ca"></i> CA
                     </label>
                     <label class="radio-button">
+                        <input type="radio" name="region2" value="region-au">
+                        <i class="flag flag-au"></i> AU
+                    </label>
+                    <label class="radio-button">
                         <input type="radio" name="region2" value="region-other">
                         Other
                     </label>
@@ -291,6 +309,14 @@
                     paypal.HostedButtons({
                         hostedButtonId: "T632CCSRBWBBU",
                     }).render("#paypal-container-T632CCSRBWBBU")
+                </script>
+            </div>
+            <div class="pay-tab" data-region-tab="region-au" data-s="d-sup-ppred">
+                <div id="paypal-container-3XLHYERV96SLN"></div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "3XLHYERV96SLN",
+                    }).render("#paypal-container-3XLHYERV96SLN")
                 </script>
             </div>
         </fieldset>

@@ -124,7 +124,7 @@ fieldset>small:last-child {
     background-image: url('/images/flags.svg');
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size: 6rem 0.75rem;
+    background-size: 7rem 0.75rem;
     display: inline-block;
     height: 0.75rem;
     width: 1rem;
@@ -152,6 +152,10 @@ fieldset>small:last-child {
 
 .flag-cn {
     background-position-x: -5rem;
+}
+
+.flag-au {
+    background-position-x: -6rem;
 }
 
 [data-payment-type] {
@@ -200,6 +204,10 @@ fieldset>small:last-child {
 }
 
 :has([value="region-ca"]:checked)~[data-region-tab="region-ca"] {
+    display: block;
+}
+
+:has([value="region-au"]:checked)~[data-region-tab="region-au"] {
     display: block;
 }
 

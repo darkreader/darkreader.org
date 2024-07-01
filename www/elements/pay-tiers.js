@@ -27,13 +27,14 @@ const Links = {
         CORPORATE: 'https://buy.stripe.com/aEUcO29CueaS5k44gq',
     },
     PayPal: {
-        REGULAR: {
+    REGULAR: {
             USD: 'https://www.paypal.com/ncp/payment/6GUZKB3ZK3ZEE',
             GBP: 'https://www.paypal.com/ncp/payment/DRE2J7DSGZ3EC',
             EUR: 'https://www.paypal.com/ncp/payment/364NSETFEQ4W2',
             JPY: 'https://www.paypal.com/ncp/payment/BSDYGW4MNC5WU',
             CAD: 'https://www.paypal.com/ncp/payment/6HZMLYQT9KTQA',
             CNY: 'https://www.paypal.com/ncp/payment/6GUZKB3ZK3ZEE',
+            AUD: 'https://www.paypal.com/ncp/payment/V2YBJBHKLR4N4',
         },
         DISCOUNT: {
             USD: 'https://www.paypal.com/ncp/payment/ZGRN4ZD3CYWN8',
@@ -42,6 +43,7 @@ const Links = {
             JPY: 'https://www.paypal.com/ncp/payment/WX44HW8PNN6TN',
             CAD: 'https://www.paypal.com/ncp/payment/T632CCSRBWBBU',
             CNY: 'https://www.paypal.com/ncp/payment/ZGRN4ZD3CYWN8',
+            AUD: 'https://www.paypal.com/ncp/payment/3XLHYERV96SLN',
         },
     },
 };
@@ -54,6 +56,7 @@ const Prices = {
         JPY: '¥1,500',
         CAD: '$12.99',
         CNY: '¥68.00',
+        AUD: '$14.99',
     },
     DISCOUNT: {
         USD: '$4.99',
@@ -62,6 +65,7 @@ const Prices = {
         JPY: '¥700',
         CAD: '$6.99',
         CNY: '¥38.00',
+        AUD: '$7.99',
     },
     CORPORATE: {
         USD: '$9.99/yr',
@@ -70,10 +74,11 @@ const Prices = {
         JPY: '¥1,500/年',
         CAD: '$12.99/yr',
         CNY: '¥68.00/年',
+        AUD: '$14.99/yr',
     },
 };
 
-const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
+const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
 const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
@@ -117,6 +122,7 @@ const htmlText = `
             ${currencyButton('JPY', 'flag-jp')}
             ${currencyButton('CAD', 'flag-ca')}
             ${currencyButton('CNY', 'flag-cn')}
+            ${currencyButton('AUD', 'flag-au')}
             <span class="currencies__currency-connect"></span>
             <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
         </div>
@@ -496,7 +502,7 @@ const cssText = `
     background-image: url('/images/flags.svg');
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size: calc(24px * 6) 18px;
+    background-size: calc(24px * 7) 18px;
     border-radius: 0.25rem;
     display: inline-block;
     height: 18px;
@@ -520,6 +526,9 @@ const cssText = `
 }
 .flag-cn {
     background-position-x: -120px;
+}
+.flag-au {
+    background-position-x: -144px;
 }
 .pr-horizontal {
     display: none;
