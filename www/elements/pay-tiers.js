@@ -105,7 +105,7 @@ const locales = {
         discount: '偶尔使用',
         corporate: '企业用户',
         card: '借记卡或信用卡',
-        card_short: '使用卡付款',
+        card_short: '支付',
         more: '更多的选择',
     },
 };
@@ -426,21 +426,48 @@ const cssText = `
     position: absolute;
     width: 0.4rem;
 }
-.button-link__card-icon--union-pay {
-    background-color: #edae44;
+.button-link__card-icon--cn {
+    align-items: center;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    height: auto;
+    justify-content: center;
+    position: static;
+    width: auto;
 }
-.button-link__card-icon--union-pay::after {
-    background-color: #229ead;
-    box-shadow: -0.2rem 0 0 #304da5, -0.4rem 0 0 #e00e5b;
-    border-radius: 0.05rem;
-    bottom: 0.1rem;
+.button-link__card-icon--cn::before {
+    background-color: transparent;
+    background-image: url("/images/alipay-logo-white.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 0;
+    box-shadow: none;
     content: "";
     display: inline-block;
-    height: 0.4rem;
-    left: 1.1rem;
-    position: absolute;
-    transform: skewX(-10deg);
-    width: 0.25rem;
+    height: 1rem;
+    position: static;
+    width: 4rem;
+}
+.button-link__card-icon--cn::after {
+    background-color: transparent;
+    background-image: url("/images/unionpay-logo.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 0;
+    box-shadow: none;
+    content: "";
+    display: inline-block;
+    height: 1.25rem;
+    position: static;
+    width: 2rem;
+}
+.button-link__card-icon--cn + .button-link__text {
+    display: none;
 }
 .button-link--card .button-link__text {
     text-transform: none;
@@ -754,7 +781,7 @@ class PayTiersElement extends HTMLElement {
             Object.entries(locales.cn).forEach(([key, text]) => {
                 s(`[data-text="${key}"]`).each((node) => node.textContent = text);
             });
-            s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--union-pay'));
+            s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
         }
     }
 }
