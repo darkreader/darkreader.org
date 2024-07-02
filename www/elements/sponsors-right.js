@@ -24,7 +24,7 @@ const htmlText = `
 </section>
 <h2 class="heading">
     <span class="heading__first-line">Using for Free?<br></span>
-    Checkout our sponsors
+    Check out our sponsors
 </h2>
 <section class="hr">
     <a class="logo-link hl" href="${hnURL}" target="_blank" rel="noopener">
