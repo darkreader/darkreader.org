@@ -412,6 +412,7 @@ const timeZones = {
     'Europe/Kaliningrad': ['RU'],
     'Europe/Kiev': ['UA'],
     'Europe/Kirov': ['RU'],
+    'Europe/Kyiv': ['UA'],
     'Europe/Lisbon': ['PT'],
     'Europe/Ljubljana': ['SI'],
     'Europe/London': ['GB', 'GG', 'IM', 'JE'],
@@ -544,13 +545,62 @@ const timeZones = {
     'W-SU': ['RU'],
 };
 
+const knownCountries = (() => {
+    const set = new Set();
+    Object.values(timeZones).forEach((countries) => {
+        countries.forEach((c) => set.add(c));
+    });
+    return set;
+})();
+
+/** @type {{[lang: string]: string[]}} */
+const shortLangCodes = {
+    'de': ['DE', 'AT', 'CH'],
+    'en': ['US', 'GB', 'CA', 'AU', 'NZ', 'IE'],
+    'ja': ['JP'],
+    'ru': ['RU', 'UA', 'BY'],
+    'fr': ['FR', 'BE', 'CA', 'CH', 'MA'],
+    'es': ['ES', 'AG', 'PE', 'CO', 'MX', 'CL', 'BO', 'VE', 'US'],
+    'ko': ['KR', 'KP'],
+    'vi': ['VN'],
+    'ar': ['SA', 'EG', 'SY', 'AE', 'OM', 'JO', 'KW', 'MA', 'QA', 'BH'],
+    'pl': ['PL'],
+    'tr': ['TR'],
+    'nl': ['NL', 'BE'],
+    'id': ['ID'],
+    'it': ['IT'],
+    'th': ['TH'],
+    'uk': ['UA'],
+    'cs': ['CZ'],
+    'zh': ['CN'],
+    'pt': ['BR', 'PT'],
+    'sv': ['SE'],
+    // ...
+};
+
+/** @type {string} */
 export const country = (() => {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const codes = timeZones[tz];
-    if (!codes || codes.length === 0) {
-        return '';
+    const codes = timeZones[tz] ?? [];
+    if (codes.length !== 1) {
+        for (const lang of navigator.languages) {
+            const c = lang.split('-')[1];
+            if (!c) continue;
+            if (
+                (codes.length > 1 && codes.includes(c)) ||
+                (codes.length === 0 && knownCountries.has(c))) {
+                return c;
+            }
+        }
+        if (codes.length > 0) {
+            return codes[0];
+        }
+        const l = navigator.language.split('-')[0];
+        if (l && l in shortLangCodes) {
+            return shortLangCodes[l][0];
+        }
     }
-    return codes[0];
+    return codes[0] ?? '';
 })();
 
 // const hCountries = ['US', 'GB', 'CA', 'AU', 'DE', 'NL', 'FR'];
