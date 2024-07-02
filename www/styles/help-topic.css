@@ -73,6 +73,10 @@ article > h1:first-child {
     display: none;
 }
 
+html[lang="zh-CN"] darkreader-backers-top-short {
+    display: none;
+}
+
 @media screen and (min-width: 74rem) {
     .page-grid-body {
         grid:

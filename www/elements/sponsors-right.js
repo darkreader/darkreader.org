@@ -23,7 +23,7 @@ const htmlText = `
     <darkreader-pay-tiers></darkreader-pay-tiers>
 </section>
 <h2 class="heading">
-    Using for Free?<br>
+    <span class="heading__first-line">Using for Free?<br></span>
     Checkout our sponsors
 </h2>
 <section class="hr">
@@ -493,6 +493,10 @@ section {
 :host(:not(.c-h)) .hr {
     display: none;
 }
+:host(.c-cn) .heading__first-line,
+:host(.c-cn) .hr {
+    display: none;
+}
 `;
 
 class BackersSideElement extends HTMLElement {
@@ -517,6 +521,7 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.nr-logo-github'), 'gh-side-ns');
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
+        shadowRoot.host.classList.toggle('c-cn', document.documentElement.lang === 'zh-CN');
     }
 }
 
