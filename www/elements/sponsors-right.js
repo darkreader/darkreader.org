@@ -493,7 +493,7 @@ section {
 :host(:not(.c-h)) .hr {
     display: none;
 }
-:host(.c-cn) .heading__first-line,
+.heading__first-line,
 :host(.c-cn) .hr {
     display: none;
 }
