@@ -38,14 +38,18 @@ const htmlText = `
 </section>`;
 
 const cssText = `
+.container {
+    padding-top: 0.625rem;
+}
 .top {
     height: 2rem;
+    white-space: nowrap;
 }
 .h-heading {
     font-size: 1.5rem;
 }
 .h-heading-1 {
-    color: var(--color-highlight);
+    color: var(--color-honey-text);
     font-weight: bold;
     -webkit-text-stroke: 0.0625rem;
 }

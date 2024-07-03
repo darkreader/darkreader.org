@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    justify-content: space-between;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
@@ -103,34 +104,15 @@ html[lang="zh-CN"] darkreader-backers-top-short {
     .page-grid-ios {
         display: none;
     }
-}
 
-/*
-.page-grid-side {
-    display: none;
-}
-
-.page-grid-ios {
-    bottom: unset;
-    grid-area: side;
-    left: unset;
-    margin-top: 1.25rem;
-    position: fixed;
-    right: calc(50% - 28.5rem);
-    top: 0;
-    transform: unset;
-    transition: unset;
-    width: 16rem;
-}
-
-.page-grid-ios:hover {
-    transform: unset;
-}
-
-@media screen and (max-width: 57rem) {
-    .page-grid-ios {
-        position: static;
-        right: unset;
+    .page-grid-side {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 500ms;
+    }
+    
+    .page-grid-side--visible {
+        opacity: 1;
+        pointer-events: all;
     }
 }
-*/
