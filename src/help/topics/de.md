@@ -4,14 +4,7 @@ Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
 - [FAQ](#faq)
 - [Kontakt](#contacts)
-- [Oberer Abschnitt](#top-section)
-- [Filtereinstellungen](#filter-settings)
-- [Benutzerdefinierte Websiteeinstellungen](#custom-site-settings)
-- [Websiteliste](#site-list)
-- [Mehr-Tab](#more-tab)
-- [Verfahren zur Stylegenerierung](#theme-generation-modes)
-- [Unterer Abschnitt](#bottom-section)
-- [Verwenden der Entwicklerwerkzeuge](#using-dev-tools)
+- [Hinweise für erfahrene Anwender](../../tips/)
 
 
 <h2 id="top-section">Oberer Abschnitt</h2>
@@ -65,6 +58,9 @@ Klicken Sie auf die Schaltfläche, passen Sie die Einstellungen an; klicken Sie 
     <figcaption>Filter+ vs. Statisches vs. Dynamisches Verfahren</figcaption>
 </figure>
 
+- **Dynamisch** analysiert Website-Stylesheets, Hintergrundbilder, Vektorgrafiken.
+Benötigt einige Ressourcen beim ersten Laden der Seite,
+aber produziert **die besten** visuellen Ergebnisse.
 - **Filter** ist das Verfahren, das auf CSS-Filtern basiert.
 Es **invertiert die ganze Seite** und **kehrt einige Teile** zurück.
 Erfordert GPU-Ressourcen.
@@ -76,11 +72,6 @@ Fehler beim Rendern einiger Seiten in Firefox.
 - **Filter+** ist dasselbe wie Filter, basiert jedoch auf benutzerdefinierten SVG-Filtern
 und **behandelt Farben besser** macht Bilder weniger langweilig.
 - **Statisch** generiert schnell ein einfaches Stylesheet.
-- **Dynamisch** analysiert Website-Stylesheets, Hintergrundbilder, Vektorgrafiken.
-Benötigt einige Ressourcen beim ersten Laden der Seite,
-aber produziert **die besten** visuellen Ergebnisse.
-Dieses Verfahren ist noch in Arbeit,
-aber es funktioniert bereits gut für viele moderne Webseiten.
 
 
 <h2 id="bottom-section">Unterer Abschnitt</h2>
@@ -106,8 +97,6 @@ Lesen Sie [hier](https://github.com/darkreader/darkreader#how-to-contribute), wi
 Die Erweiterung benötigt diese Berechtigungen, um das Erscheinungsbild der Seite zu analysieren, zu modifizieren und um zu bestimmen,
 ob Sie spezielle Regeln für diese Seite festgelegt haben.
 Wir fügen keine Werbung ein, sammeln keine Daten oder senden sie irgendwo hin.
-Die Erweiterung ist vollständig Open-Source und hat keinen verschleierten Code.
-Unsere Monetarisierung ist transparent und basiert auf Spenden der Nutzer.
 
 #### Die Seiten für die Addon-Galerien und die Browser-Einstellungsseiten bleiben weiß
 
@@ -144,11 +133,6 @@ Versuchen Sie auch, das **Verfahren zur Stylegenerierung** zu ändern oder versu
 #### Die Erweiterung funktioniert nicht für lokale Dateien
 
 Öffnen Sie die Seite **chrome://extensions**, suchen Sie nach **Dark Reader**, klicken Sie auf **Zugriff auf Datei-URLs zulassen**.
-
-#### Die gesamte Webseite wird im Filtermodus nicht angezeigt
-
-Wenn Sie Chrome für Mac OS verwenden, aktualisieren Sie Mac OS bis 10.13. Dies sollte Ihre Grafiktreiber aktualisieren.
-Wenn Sie Firefox verwenden, handelt es sich höchstwahrscheinlich um einen Browserfehler. Verwenden Sie für solche Webseiten ein anderes Verfahren zur Stylegenerierung.
 
 
 <h2 id="contacts">Kontakt</h2>

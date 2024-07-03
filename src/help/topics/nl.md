@@ -4,14 +4,7 @@ Dit document leidt u door de functies van Dark Reader.
 
 - [FAQ](#faq)
 - [Contacten](#contacts)
-- [Top sectie](#top-section)
-- [Filter Instellingen](#filter-settings)
-- [Aangepaste site instellingen](#custom-site-settings)
-- [Site lijst](#site-list)
-- [Meer tabblad](#more-tab)
-- [Thema-generatie modus](#theme-generation-modes)
-- [Onderste gedeelte](#bottom-section)
-- [Gebruik van de ontwikkelaarshulpmiddelen](#using-dev-tools)
+- [Tips voor ervaren gebruikers](../../tips/)
 
 
 <h2 id="top-section">Top sectie</h2>
@@ -65,6 +58,9 @@ Klik op de knop, pas de instellingen aan, klik nogmaals om te annuleren.
     <figcaption>Filter+ vs. Statisch vs. Dynamisch modus</figcaption>
 </figure>
 
+- **Dynamisch** analyseert de stylesheets van de website, de achtergrondafbeeldingen en de vectorafbeeldingen diepgaand.
+Vereist enkele bronnen bij de eerste paginalading,
+maar levert **de beste** visuele resultaten op.
 - **Filter** is de initiële Dark Reader-modus op basis van CSS-filters.
 Het **keert de hele pagina** en **keert sommige delen** terug.
 Vereist GPU-bronnen.
@@ -77,11 +73,6 @@ slaagt er niet in om sommige pagina's in Firefox weer te geven.
 en **kleuren beter behandelt** waardoor beelden minder saai worden.
 Werkt slecht in Firefox.
 - **Statisch** genereert snel een basis stylesheet.
-- **Dynamisch** analyseert de stylesheets van de website, de achtergrondafbeeldingen en de vectorafbeeldingen diepgaand.
-Vereist enkele bronnen bij de eerste paginalading,
-maar levert **de beste** visuele resultaten op.
-Het werk aan deze modus is in volle gang,
-maar het werkt al goed voor veel moderne websites.
 
 
 <h2 id="bottom-section">Onderste gedeelte</h2>
@@ -106,8 +97,6 @@ Lees hoe u de ontwikkelaarshulpmiddelen [hier](https://github.com/darkreader/dar
 De uitbreiding heeft deze rechten nodig om het uiterlijk van de website te kunnen analyseren en wijzigen,
 bepaal of een website is uitgeschakeld door uw instellingen of gebruik site-specifieke regels.
 Wij voegen geen advertenties in en verzamelen of versturen geen gegevens.
-De extensie is volledig open source en heeft geen verdoezelde code.
-Onze monetisatie is transparant en is gebaseerd op de donaties van de gebruiker.
 
 #### De pagina met uitbreidingen en instellingen blijven wit.
 
@@ -144,11 +133,6 @@ Open **chrome://extension** pagina, zoek **Dark Reader**, klik **Toestaan in inc
 #### De extensie werkt niet voor lokale bestanden
 
 Open **chrome://extension** pagina, zoek **DarkReader**, klik **Toegang tot bestands-URL's**.
-
-#### Hele website wordt niet weergegeven in de filtermodus
-
-Als u Chrome voor Mac OS gebruikt, werk dan Mac OS bij tot 10.13, dan moet dit uw videostuurprogramma's bijwerken.
-Als u Firefox gebruikt, is dit waarschijnlijk een browserfout, gebruik dan een andere modus voor dergelijke websites.
 
 
 <h2 id="contacts">Contacten</h2>

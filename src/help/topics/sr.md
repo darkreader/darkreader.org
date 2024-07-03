@@ -4,14 +4,7 @@ Ovaj dokument će vas upoznati sa mogućnostima Dark Reader-a.
 
 - [Često postavljana pitanja](#faq)
 - [Kontakti](#contacts)
-- [Gornji odeljak](#top-section)
-- [Podešavanja filtera](#filter-settings)
-- [Podešavanja za konkretne sajtove](#custom-site-settings)
-- [Lista sajtova](#site-list)
-- [Kartica "Više"](#more-tab)
-- [Modovi generisanja tema](#theme-generation-modes)
-- [Donji odeljak](#bottom-section)
-- [Korišćenje alatki za razvoj](#using-dev-tools)
+- [Saveti iskusnim korisnicima](../../tips/)
 
 
 <h2 id="top-section">Gornji odeljak</h2>
@@ -65,6 +58,9 @@ Da biste to podesili, prvo kliknite dugme (koje će se osvetliti), onda podesite
     <figcaption>Filter+ vs. statični vs. dinamični mod</figcaption>
 </figure>
 
+- **Dinamično** analizira stilove trenutne stranice, pozadinske slike, vektorsku grafiku.
+Zahteva nešto više resursa pri početnom učitavanju stranice,
+ali daje vizuelno *najbolje* rezultate.
 - **Filter** je početni mod Dark Reader-a, zasnovani na CSS filterima.
 *Invertuje celu stranu*, pa *invertuje neke delove* nazad.
 Zahtevan je prema grafičkoj jedinici.
@@ -77,11 +73,6 @@ i ne renderuje neke strane u Firefox-u.
 i *bolje obrađuje boje,* čineći slike manje mutnim.
 Loše radi u Firefox-u.
 - **Statično** brzo generiše jednostavnu temu.
-- **Dinamično** analizira stilove trenutne stranice, pozadinske slike, vektorsku grafiku.
-Zahteva nešto više resursa pri početnom učitavanju stranice,
-ali daje vizuelno *najbolje* rezultate.
-Na ovom modu se još radi,
-ali već radi odlično na većini modernih sajtova.
 
 
 <h2 id="bottom-section">Donji odeljak</h2>
@@ -107,8 +98,6 @@ Kako se koriste alatke za razvoj možete pročitati [ovde](https://github.com/da
 Ekstenziji su potrebne te dozvole da bi mogla da analizira i menja izgled sajtova,
 odredi da li je sajt izuzet u vašim podešavanjima, ili koristi posebna pravila za trenutni sajt.
 Ne ugrađujemo reklame, ne sakupljamo vaše podatke, i nigde ih ne šaljemo.
-Ekstenzija je u potpunosti otvorenog koda i ne sadrži nikakav maskirani kod.
-Naša monetizacija je transparentna i zasnovana na donacijama korisnika.
 
 #### Prodavnica sa dodacima i stranice sa podešavanjima su i dalje bele
 
@@ -145,11 +134,6 @@ Otvorite stranu **chrome://extensions**, nađite **Dark Reader**, uključite **O
 #### Ekstenzija ne radi za lokalne fajlove
 
 Otvorite stranu **chrome://extensions**, nađite **Dark Reader**, uključite **Dozvoli pristup URL adresama datoteka**.
-
-#### Sajt se uopšte ne prikazuje u modu Filter
-
-Ako koristite Chrome za Mac OS, ažurirajte Mac OS na verziju 10.13 ili višu, to bi trebalo da ažurira video drajvere.
-Ako koristite Firefox, u pitanju je najverovatnije bag pregledača, koristite drugi mod za takve sajtove.
 
 
 <h2 id="contacts">Kontakti</h2>

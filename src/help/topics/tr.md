@@ -4,14 +4,7 @@ Bu döküman Dark Reader özellikleri hakkında size rehberlik edecek.
 
 - [SSS](#faq)
 - [İletişim](#contacts)
-- [Üst bölüm](#top-section)
-- [Filtre ayarları](#filter-settings)
-- [Özel site ayarları](#custom-site-settings)
-- [Site listesi](#site-list)
-- [Daha fazla bölümü](#more-tab)
-- [Tema oluşturma modları](#theme-generation-modes)
-- [Üst bölüm](#bottom-section)
-- [Geliştirici araçlarını kullanma](#using-dev-tools)
+- [Deneyimli kullanıcılar için tavsiyeler](../../tips/)
 
 
 <h2 id="top-section">Üst bölüm</h2>
@@ -65,6 +58,9 @@ Kullanmak için: Öncelikle butona tıklayın(Vurgulanmış hale gelmeli), ardı
     <figcaption>Filter+ vs. Static vs. Dynamic mode</figcaption>
 </figure>
 
+- **Dinamik** Sitenin stil şemalarını, arkaplan resimlerini ve vektör grafiklerini analiz eder.
+Sayfa yüklenirken biraz kaynak kullanımı gerektirir.
+Ama *en iyi* görsel sonucu sağlar.
 - **Filtre** Dark reader için, CSS filtrelerine dayanan temel moddur.
 *Tüm sayfayı* ters çevirir ve ardından *Bazı parçaları* eski haline getirir.
 GPU kullanır.
@@ -77,11 +73,6 @@ Ve Firefox'ta bazı sayfların hata vermesine neden olabilir.
 Ve Resimleri daha az donuk yapmak için *Rekleri daha iyi işler*
 Firefox'ta pek iyi çalışmaz.
 - **Statik** sürekli basit stil şemaları oluşturur.
-- **Dinamik** Sitenin stil şemalarını, arkaplan resimlerini ve vektör grafiklerini analiz eder.
-Sayfa yüklenirken biraz kaynak kullanımı gerektirir.
-Ama *en iyi* görsel sonucu sağlar
-Bu mod üzerinde halen çalışıyoruz,
-ama şimdiden çoğu modern sitede gayet iyi çalışıyor.
 
 
 <h2 id="bottom-section">Alt bölüm</h2>
@@ -107,8 +98,6 @@ Eğer CSS Seçicileri hakkında bilgi sahibi iseniz, bir web sitesi için düzel
 Eklenti siteleri analiz etmek ve değiştirmek için bu izne ihtiyaç duyar,
 sitenin sizin ayarlarınızda ne şekilde yer aldığını belirlemek için de.
 Herhangi bir reklam yerleştirmiyor, bilgilerinizi toplamıyor yada bir yere göndermiyoruz.
-Eklenti tamamen açık kaynak kodludur ve gizli bir kod içermez.
-Para kazanma sistemimiz tamamen şeffaftır ve kullanıcıların bağışlarına dayanır.
 
 #### Eklenti mağazası ve ayarlar sayfası beyaz kaldı
 
@@ -145,11 +134,6 @@ Sitenin, **Site listesinde** listelenmediğinden emin olun.
 #### Eklenti yerel dosyalarda çalışmıyor
 
 **chrome://extensions** sayfasını açın,**Dark Reader**'ı bulun, **Dosya URL'lerine erişmeye izin ver** seçeneğini seçin.
-
-#### Site Filtre modunda tamamen görüntülenmiyor
-
-Eğer Mac OS için Chrome kullanıyorsanız, Mac OS sürümünüzü 10.13'e güncelleyin, bunu yapmak ekran kartı sürücülerinizi güncelleyecektir.
-Eğer Firefox kullanıyorsanız, bu genellikle tarayıcı hatasıdır, başka bir mod kullanmayı deneyin.
 
 
 <h2 id="contacts">İletişim</h2>

@@ -4,14 +4,7 @@ Este documento o guiará pelos recursos do Dark Reader.
 
 - [FAQ](#faq)
 - [Contatos](#contacts)
-- [Seção superior](#top-section)
-- [Configurações de filtro](#filter-settings)
-- [Configurações personalizadas para sites](#custom-site-settings)
-- [Lista de sites](#site-list)
-- [A aba mais](#more-tab)
-- [Modos de geração de temas](#theme-generation-modes)
-- [Seção inferior](#bottom-section)
-- [Usando as ferramentas de desenvolvedor](#using-dev-tools)
+- [Conselhos para usuários experientes](../../tips/)
 
 
 <h2 id="top-section">Seção superior</h2>
@@ -65,6 +58,9 @@ Clique no botão, ajuste as configurações, clique novamente para cancelar.
     <figcaption>Filtro+ vs. Estático vs. mode Dinâmico</figcaption>
 </figure>
 
+- **Dinâmico** analisa profundamente a folha de estilo da página, imagens de fundo, gráficos vetoriais.
+Requer o consumo de alguns recursos para o carregamento inicial da página,
+mas produz **o melhor** resultado visual.
 - **Filtro** é o modo inicial do Dark Reader, baseado nos filtros CSS.
 Ele **inverte a página inteira** e **reverte algumas partes** de volta.
 Requer consumo de recursos da GPU.
@@ -77,11 +73,6 @@ falha em renderizar algumas páginas no Firefox.
 e **lida melhor com cores**, tornando as imagens menos opacas.
 funciona mal no Firefox.
 - **Estático** rapidamente gera uma folha de estilo básica.
-- **Dinâmico** analisa profundamente a folha de estilo da página, imagens de fundo, gráficos vetoriais.
-Requer o consumo de alguns recursos para o carregamento inicial da página,
-mas produz **o melhor** resultado visual.
-O desenvolvimento desse modo ainda está em progresso,
-mas ele já funciona bem para muitos sites modernos.
 
 
 <h2 id="bottom-section">Seção inferior</h2>
@@ -107,8 +98,6 @@ Leia como usar as ferramentas de desenvolvedor [aqui](https://github.com/darkrea
 A extensão precisa dessas permissões para conseguir analisar e modificar a aparência do site,
 determinar se o site está desabilitado pelas suas configurações ou usar uma regra específica para o site.
 Nós não inserimos propagandas, não coletamos nenhum dado e nem enviamos nada para lugar nenhum.
-A extensão tem seu código completamente aberto e não possui nenhum código ofuscado.
-Nossa monetização é transparente e é baseada na doação de nossos usuários.
 
 #### A página da loja de extensões e a página de configurações continuam brancas
 
@@ -145,11 +134,6 @@ Abra a página **chrome://extensions**, encontre o **Dark Reader**, clique em **
 #### A extensão não funciona em arquivos locais
 
 Abra a página **chrome://extensions**, encontre o **Dark Reader**, clique em **Habilitar acesso a URLs de arquivos**.
-
-#### Um site inteiro não é exibido no modo Filtro
-
-Se você está usando Chrome para Mac OS, atualize o Mac OS até a versão 10.13, isso deve atualizar seus drivers de vídeo.
-Se você está usando o Firefox, isso provavelmente é um erro do navegador, use outro modo para este site.
 
 
 <h2 id="contacts">Contatos</h2>

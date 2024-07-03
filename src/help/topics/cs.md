@@ -4,14 +4,7 @@ Tento dokument Vám napomůže v používání rozšíření Dark Reader.
 
 - [ČKD](#faq)
 - [Kontakt](#contacts)
-- [Horní část](#top-section)
-- [Nastavení filtrů](#filter-settings)
-- [Vlastní nastavení stránky](#custom-site-settings)
-- [Seznam stránek](#site-list)
-- [Záložka Více](#more-tab)
-- [Generátory motivů](#theme-generation-modes)
-- [Dolní část](#bottom-section)
-- [Vývojářské nástroje](#using-dev-tools)
+- [Rady zkušeným uživatelům](../../tips/)
 
 
 <h2 id="top-section">Horní část</h2>
@@ -65,6 +58,9 @@ Klikněte na tlačítko, upravte nastavení, klikněte znovu pro zrušení.
     <figcaption>Filtr+ vs. Statický vs. Dynamický</figcaption>
 </figure>
 
+- **Dynamický** hlouběji analyzuje CSS stránky, pozadí a vektorovou grafiku.
+Vyžaduje více prostředků při prvním renderování stránky,
+ale dosahuje **nejlepších** vizuálních výsledků.
 - **Filtr** je základním generátorem Dark Readeru založeným na CSS filtrech.
 **Invertuje celou stránku** a **vrátí některé části** zpět.
 Vyžaduje GPU.
@@ -77,11 +73,6 @@ zobrazení některých stránek ve Firefoxu selhává.
 a **pracuje lépe s barvami** a tudíž jsou stránky pestřejší.
 Špatně funguje ve Firefoxu.
 - **Statický** rychle generuje jednoduché CSS styly.
-- **Dynamický** hlouběji analyzuje CSS stránky, pozadí a vektorovou grafiku.
-Vyžaduje více prostředků při prvním renderování stránky,
-ale dosahuje **nejlepších** vizuálních výsledků.
-Vývoj tohoto generátoru stále pokračuje,
-nicméně již nyní funguje spolehlivě na mnoha moderních stránkách.
 
 
 <h2 id="bottom-section">Dolní část</h2>
@@ -107,8 +98,6 @@ Přečtěte si jak používat vývojářské nástroje [zde](https://github.com/
 Rozšíření potřebuje tato povolení, aby mohlo analyzovat a upravovat vzhled stránky,
 rozhodnout jestli je stránka ignorována Vaším nastavením nebo je nutné aplikovat pro stránku specifická pravidla.
 Nikdy nikam nevkládáme reklamy a nesbíráme jakákoliv data ani je nikam neposíláme.
-Rozšíření je plně open-source a neobsahuje žádný zatemněný kód.
-Naše financování je transparentní a závisí na příspěvcích uživatelů.
 
 #### Stránka rozšíření v obchodu a stránka nastavení zůstává bílá
 
@@ -145,11 +134,6 @@ Otevřete stránku **chrome://extensions**, nalezněte **Dark Reader**, kliknět
 #### Rozšíření nefunguje s místními soubory
 
 Otevřete stránku **chrome://extensions**, nalezněte **Dark Reader**, klikněte na **Povolit přístup k URL souboru**.
-
-#### Celá stránka zmizí při použití generátoru Filtr
-
-Pokud používáte Chrome na Mac OS, aktualizujte Mac OS na verzi 10.13, tímto by měly být aktualizovány grafické ovladače.
-Pokud používáte Firefox, jedná se nejspíše o chybu v prohlížeči, použijte jiný generátor pro tyto stránky.
 
 
 <h2 id="contacts">Kontakt</h2>
