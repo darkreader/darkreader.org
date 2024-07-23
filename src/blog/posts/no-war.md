@@ -120,7 +120,8 @@ Please support the others with donations and by sharing your knowledge.
     darkreader-ios-static,
     darkreader-ios-side,
     darkreader-pay-tiers,
-    darkreader-backers-top-short {
+    darkreader-backers-top-short,
+    darkreader-mobile-top-short {
         display: none;
     }
     .header-logo {
