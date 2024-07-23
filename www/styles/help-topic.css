@@ -78,6 +78,18 @@ html[lang="zh-CN"] darkreader-backers-top-short {
     display: none;
 }
 
+darkreader-mobile-top-short {
+    display: none;
+}
+
+html[lang="zh-CN"] darkreader-mobile-top-short {
+    display: block;
+}
+
+html[lang="zh-CN"].android darkreader-mobile-top-short {
+    display: none;
+}
+
 @media screen and (min-width: 74rem) {
     .page-grid-body {
         grid:
