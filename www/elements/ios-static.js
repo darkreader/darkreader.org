@@ -33,6 +33,12 @@ const htmlText = `
         Dark Reader for iPhone, iPad and Mac
     </a>
 </section>
+<section class="q">
+    <p>
+        Download for iPhone<br>
+        <img src="/images/qr-code-ios.png">
+    </p>
+</section>
 `;
 
 const cssText = `
@@ -173,6 +179,16 @@ section {
 }
 .image-link:hover::before {
     opacity: 1;
+}
+.q p {
+    font-weight: bold;
+    text-align: center;
+}
+.q img {
+    display: block;
+    height: 10rem;
+    margin: 0.5rem auto;
+    width: 10rem;
 }
 `;
 
