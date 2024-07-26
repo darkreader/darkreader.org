@@ -180,6 +180,12 @@ section {
 .image-link:hover::before {
     opacity: 1;
 }
+.q {
+    background-image: linear-gradient(to bottom, #141e2400, #141e24aa 1rem);
+    bottom: 2rem;
+    padding: 1rem 0;
+    position: sticky;
+}
 .q p {
     font-weight: bold;
     text-align: center;
