@@ -35,8 +35,8 @@ const htmlText = `
 </section>
 <section class="q">
     <p>
-        Download for iPhone<br>
-        <img src="/images/qr-code-ios.png">
+        Scan & Install<br>
+        <img src="/images/qr-code.png">
     </p>
 </section>
 `;
@@ -51,6 +51,7 @@ a:hover {
     color: var(--color-text-hover);
 }
 :host {
+    position: relative;
     width: 16rem;
 }
 .heading {
@@ -181,20 +182,22 @@ section {
     opacity: 1;
 }
 .q {
-    background-image: linear-gradient(to bottom, #141e2400, #141e24aa 1rem);
-    bottom: 2rem;
-    padding: 1rem 0;
-    position: sticky;
+    left: -4rem;
+    position: absolute;
+    top: -1.2rem;
 }
 .q p {
+    font-size: 0.75rem;
     font-weight: bold;
+    margin: 0;
     text-align: center;
 }
 .q img {
+    border-radius: 5%;
     display: block;
-    height: 10rem;
+    height: 5rem;
     margin: 0.5rem auto;
-    width: 10rem;
+    width: 5rem;
 }
 `;
 

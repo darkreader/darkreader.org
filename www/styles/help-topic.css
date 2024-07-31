@@ -74,19 +74,15 @@ article > h1:first-child {
     display: none;
 }
 
-html[lang="zh-CN"] darkreader-backers-top-short {
+darkreader-backers-top-short {
     display: none;
 }
 
-darkreader-mobile-top-short {
+.android darkreader-mobile-top-short {
     display: none;
 }
 
-html[lang="zh-CN"] darkreader-mobile-top-short {
-    display: block;
-}
-
-html[lang="zh-CN"].android darkreader-mobile-top-short {
+.page-grid-ios {
     display: none;
 }
 
@@ -112,11 +108,9 @@ html[lang="zh-CN"].android darkreader-mobile-top-short {
     .list-copied {
         display: none;
     }
+}
 
-    .page-grid-ios {
-        display: none;
-    }
-
+@media screen and (min-width: 57rem) {
     .page-grid-side {
         opacity: 0;
         pointer-events: none;

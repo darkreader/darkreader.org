@@ -497,6 +497,13 @@ section {
 :host(.c-cn) .hr {
     display: none;
 }
+
+.heading,
+.hr,
+.dr,
+.nr {
+    display: none;
+}
 `;
 
 class BackersSideElement extends HTMLElement {

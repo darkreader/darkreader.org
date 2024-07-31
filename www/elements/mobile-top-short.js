@@ -22,13 +22,17 @@ const htmlText = `
                 <span class="mobile">for iOS</span>
             </div>
             <div class="text js-text">
-                Take care of your eyes when browsing your phone
+                Take care of your eyes when browsing on your phone
             </div>
             <div class="badge-wrapper">
                 <a class="badge-link" href="${safariURL}" target="_blank" rel="noopener" data-s="drios-top-short">
                     <img src="/images/app-store-badge.svg">
                 </a>
             </div>
+        </div>
+        <div class="qr">
+            Scan & Install<br>
+            <img src="/images/qr-code.png">
         </div>
     </div>
 </section>`;
@@ -37,6 +41,9 @@ const cssText = `
 :host {
     --bezel: 0.125rem;
     --color-bezel: var(--color-control, #316d7c);
+}
+.container {
+    position: relative;
 }
 .phone {
     background-color: black;
@@ -95,6 +102,10 @@ const cssText = `
     -webkit-text-stroke: 0.0625rem;
     text-transform: uppercase;
 }
+.top .mobile {
+    color: white;
+    font-weight: 400;
+}
 .text {
     margin-top: 0.25rem;
     text-align: center;
@@ -117,6 +128,22 @@ const cssText = `
 }
 .badge-link:hover {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+}
+.qr {
+    bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    right: -7.5rem;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+}
+.qr img {
+    border-radius: 5%;
+    display: block;
+    height: 5rem;
+    margin: 0.5rem auto;
+    width: 5rem;
 }
 `;
 

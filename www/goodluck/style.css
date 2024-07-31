@@ -273,3 +273,7 @@ body:not(.c-h) .h-ext {
         margin-left: 0;
     }
 }
+
+.recommendations {
+    display: none;
+}

@@ -13,8 +13,6 @@ Dark Reader is a set of fast and efficient algorithms.
 We work hard on improvements.
 Please <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
 Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">mobile apps</a>.
-Automatically apply discounts with <a data-s="h-help-top" href="https://www.joinhoney.com/darkreader" target="_blank" rel="noopener">PayPal Honey</a> extension.
-Ready? Let's go.
 
 - [FAQ](#faq)
 - [Contacts](#contacts)
@@ -123,8 +121,7 @@ Do you want to learn more? Please visit our <a href="../../tips/">Tips & Tricks<
 
 1. <a data-s="d-help-faq" href="https://darkreader.org/support-us">Pay for using Dark Reader</a>.
 2. Install our <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS app</a>.
-3. Install our sponsors' apps and extensions.
-4. Suggest to friends and colleagues.
+3. Suggest to friends and colleagues.
 
 #### The extension asks for permissions to read website data
 

@@ -256,6 +256,10 @@ a:hover {
         margin: 0 0.5rem 0.5rem 0;
     }
 }
+
+.ups .up:first-child {
+    display: none;
+}
 `;
 
 class BackerHeaderElement extends HTMLElement {
