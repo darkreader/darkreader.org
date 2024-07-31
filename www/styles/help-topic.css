@@ -32,7 +32,8 @@
 .android .page-grid-inside darkreader-backers-header,
 .android darkreader-ios-static,
 .android darkreader-ios-side,
-.android darkreader-backers-top-short {
+.android darkreader-backers-top-short,
+.android article darkreader-pay-tiers {
     display: none;
 }
 
@@ -120,5 +121,14 @@ darkreader-backers-top-short {
     .page-grid-side--visible {
         opacity: 1;
         pointer-events: all;
+    }
+    
+    .page-grid-side--visible::before {
+        background-color: var(--color-bg);
+        content: "";
+        height: 2rem;
+        position: absolute;
+        top: -2rem;
+        width: 100%;
     }
 }
