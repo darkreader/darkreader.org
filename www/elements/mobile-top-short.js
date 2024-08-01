@@ -94,7 +94,7 @@ const cssText = `
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 0.5rem;
+    top: 1rem;
     width: 4rem;
 }
 .top {
