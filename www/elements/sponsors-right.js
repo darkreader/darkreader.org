@@ -562,6 +562,7 @@ section {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     display: inline-flex;
     position: relative;
+    transition: all 125ms;
     width: 11rem;
 }
 .mob-badge-link img {

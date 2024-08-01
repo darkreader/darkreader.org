@@ -121,6 +121,7 @@ const cssText = `
     display: inline-flex;
     position: relative;
     top: 1rem;
+    transition: all 125ms;
     width: 11rem;
     z-index: 1;
 }
