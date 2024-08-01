@@ -645,6 +645,7 @@ class BackersSideElement extends HTMLElement {
         clicker(qs('.nr-logo-fibery'), 'fib-side-ns');
         clicker(qs('.nr-logo-mozilla'), 'moz-side-ns');
         clicker(qs('.nr-logo-github'), 'gh-side-ns');
+        shadowRoot.querySelectorAll('[data-s]').forEach((node) => clicker(node, node.getAttribute('data-s') ?? ''));
 
         shadowRoot.host.classList.toggle('c-h', isHCountry);
         shadowRoot.host.classList.toggle('c-cn', document.documentElement.lang === 'zh-CN');
