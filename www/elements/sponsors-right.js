@@ -11,6 +11,7 @@ import {
 const hnURL = 'https://www.joinhoney.com/darkreader';
 const ddgURL = 'https://duckduckgo.com/browser?ref=darkreader';
 const payURL = '/support-us';
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
@@ -21,6 +22,29 @@ const buttonIcon = `<span class="b-icon${isEdge ? ' b-icon--edge' : isSafari ? '
 const htmlText = `
 <section class="pr">
     <darkreader-pay-tiers></darkreader-pay-tiers>
+</section>
+<section class="mob">
+    <div class="mob-subtitle">
+        <a class="mob-text-link" href="${safariURL}" target="_blank" rel="noopener" data-s="drios-side-text">
+            <span class="mob-text-link__darkreader">Dark Reader</span> for iOS
+        </a>
+    </div>
+    <div class="mob-badge-wrapper">
+        <a class="mob-badge-link" href="${safariURL}" target="_blank" rel="noopener" data-s="drios-side-badge">
+            <img src="/images/app-store-badge.svg">
+        </a>
+    </div>
+    <div class="mob-description">
+        <strong>Take care of your eyes</strong><br>
+        Install Dark Reader for
+        your iPhone and iPad
+    </div>
+    <div class="mob-qr">
+        <div class="mob-qr-wrapper">
+            <img src="/images/qr-code.png">
+            Scan & Install
+        </div>
+    </div>
 </section>
 <h2 class="heading">
     <span class="heading__first-line">Using for Free?<br></span>
@@ -503,6 +527,100 @@ section {
 .dr,
 .nr {
     display: none;
+}
+
+.mob {
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.mob-subtitle {
+    font-weight: bold;
+    text-align: center;
+}
+.mob-text-link {
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-text-stroke: 0.0625rem;
+    white-space: nowrap;
+}
+.mob-text-link__darkreader {
+    color: var(--color-highlight);
+    text-transform: uppercase;
+    transition: color 125ms;
+}
+.mob-text-link:hover {
+    border-bottom-color: var(--color-text-hover);
+    transition: all 125ms;
+}
+.mob-text-link:hover .mob-text-link__darkreader {
+    color: var(--color-text-hover);
+}
+.mob-badge-link {
+    border-radius: 0.675rem;
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
+    display: inline-flex;
+    position: relative;
+    width: 11rem;
+}
+.mob-badge-link img {
+    display: inline-block;
+    width: 100%;
+}
+.mob-badge-link:hover {
+    box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
+}
+.mob-description {
+    text-align: center;
+    width: 11rem;
+}
+.mob-qr {
+    align-items: center;
+    background-image: linear-gradient(150deg, var(--color-control), var(--color-bg));
+    bottom: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem black;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    font-weight: bold;
+    height: 12rem;
+    justify-content: center;
+    right: -2rem;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 0rem;
+    width: 6rem;
+}
+.mob-qr-wrapper {
+    align-items: center;
+    background-image: linear-gradient(150deg, var(--color-bg), black);
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 11.8rem;
+    justify-content: center;
+    position: relative;
+    top: 0rem;
+    width: 5.8rem;
+}
+.mob-qr-wrapper::before {
+    background-color: black;
+    border-radius: 0.175rem;
+    content: "";
+    height: 0.375rem;
+    position: absolute;
+    top: 0.5rem;
+    width: 1.75rem;
+}
+.mob-qr img {
+    border-radius: 5%;
+    display: block;
+    height: 5rem;
+    width: 5rem;
 }
 `;
 

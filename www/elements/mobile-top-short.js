@@ -69,7 +69,7 @@ const cssText = `
 }
 .screen {
     align-items: center;
-    background-image: linear-gradient(to bottom, #182832, var(--color-bg));
+    background-image: linear-gradient(to bottom, var(--color-bg), black);
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
     box-sizing: border-box;
