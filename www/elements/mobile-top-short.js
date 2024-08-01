@@ -46,42 +46,44 @@ const cssText = `
     position: relative;
 }
 .phone {
-    background-color: black;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--color-bezel), var(--color-bg));
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
-    border-left: var(--bezel) solid var(--color-bezel);
-    border-right: var(--bezel) solid var(--color-bezel);
-    border-top: var(--bezel) solid var(--color-bezel);
+    box-shadow: 0 0 1rem black;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     height: 12.5rem;
+    justify-content: center;
     margin-right: 1rem;
-    margin-top: calc(1rem + var(--bezel));
+    margin-top: 1rem;
     position: relative;
     width: 16rem;
 }
 .phone::after {
-    background-image: linear-gradient(to top, var(--color-bg), #141e2400);
-    bottom: 0;
+    background-image: linear-gradient(to top, var(--color-bg) 1rem, #141e2400);
+    bottom: -1rem;
     content: "";
     display: block;
-    height: 2rem;
-    left: calc(-1 * var(--bezel));
+    height: 4rem;
+    left: -1rem;
     position: absolute;
-    width: calc(16rem + 2 * var(--bezel));
+    width: 18rem;
 }
 .screen {
     align-items: center;
     background-image: linear-gradient(to bottom, var(--color-bg), black);
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
+    box-shadow: 0 0 0 0.375rem black;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 11.5rem;
+    height: 12rem;
     justify-content: flex-start;
     margin: 0.5rem auto 0 auto;
     padding: 2rem 1rem 0 1rem;
-    position: relative;
     width: 15rem;
 }
 .notch {
@@ -143,6 +145,7 @@ const cssText = `
 }
 .qr img {
     border-radius: 5%;
+    box-shadow: 0 0 1rem black;
     display: block;
     height: 7rem;
     margin: 0.5rem auto;
