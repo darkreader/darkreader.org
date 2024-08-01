@@ -52,8 +52,10 @@ const cssText = `
     border-left: var(--bezel) solid var(--color-bezel);
     border-right: var(--bezel) solid var(--color-bezel);
     border-top: var(--bezel) solid var(--color-bezel);
-    height: 12rem;
-    margin-top: 1rem;
+    box-sizing: border-box;
+    height: 12.5rem;
+    margin-right: 1rem;
+    margin-top: calc(1rem + var(--bezel));
     position: relative;
     width: 16rem;
 }
@@ -131,9 +133,9 @@ const cssText = `
 }
 .qr {
     bottom: 0.5rem;
-    font-size: 0.75rem;
-    font-weight: bold;
-    right: -7.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    right: -11rem;
     margin: 0;
     position: absolute;
     text-align: center;
@@ -141,9 +143,9 @@ const cssText = `
 .qr img {
     border-radius: 5%;
     display: block;
-    height: 5rem;
+    height: 7rem;
     margin: 0.5rem auto;
-    width: 5rem;
+    width: 7rem;
 }
 `;
 
