@@ -45,9 +45,9 @@ First of all, there are extensions that are **owned by large well-known companie
 that value their reputation and are absolutely not interested in doing any harm to you.
 Here are a few examples:
 
-#### <a class="text-highlight" href="https://www.joinhoney.com/darkreader">Honey</a>
+#### Honey
 
-[<img src="/images/honey-logo.jpg" alt="Honey logo" style="width: 12rem;" />](https://www.joinhoney.com/darkreader)
+<img src="/images/honey-logo.jpg" alt="Honey logo" style="width: 12rem;" />
 <br/>
 ★★★★★
 
@@ -55,9 +55,6 @@ Owned by **PayPal**, Honey **automatically searches and applies coupon codes** w
 It is currently used by more than 20,000,000 people and states it doesn't sell your data,
 but charges a small fee from your saved amount instead.
 Savings **can be huge** sometimes.
-
-**Join Honey using <a class="text-highlight" href="https://www.joinhoney.com/darkreader">this link</a>**
-and Dark Reader will get some sponsorship.
 
 <figure>
     <img src="/images/honey-screenshot.png" alt="Honey screenshot" style="width: 16rem;" />
@@ -259,6 +256,3 @@ and the support ensured they would take it down immediately on June 25.
 ## Finally
 
 Don't worry and have a nice day 😅
-
-And **<a class="text-highlight" href="https://www.joinhoney.com/darkreader">check out</a>** our sponsor's extension
-**<a class="text-highlight" href="https://www.joinhoney.com/darkreader">Honey</a>**. And become a sponsor too.

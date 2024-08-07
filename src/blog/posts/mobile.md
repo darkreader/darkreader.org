@@ -80,15 +80,13 @@ The company has earned much trust for its openness and privacy practices.
 > By the way,
 <a href="https://www.mozilla.org/" data-s="moz-blog-mobile">Mozilla</a>'s team,
 along with
-<a href="https://www.joinhoney.com/darkreader" data-s="h-blog-mobile">PayPal (Honey)</a>
+PayPal (Honey)
 and
 <a href="https://fibery.io/" data-s="fib-blog-mobile">Fibery</a> (a collaboration tool),
 have helped Dark Reader to move its headquarters to the UK.
 So please,
 download the <a href="https://www.mozilla.org/" data-s="moz-blog-mobile">Firefox browser</a>,
 help them compete with huge corporations,
-save money with
-<a href="https://www.joinhoney.com/darkreader" data-s="h-blog-mobile">Honey</a>,
 and organize your team's or company's work through
 <a href="https://fibery.io/" data-s="fib-blog-mobile">Fibery</a>:
 a wonderful online workspace.
@@ -159,8 +157,6 @@ Let's wait for the announcement and hope for the best.
 Don't forget to support the ongoing Dark Reader's development.
 Install our
 <a class="text-highlight" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" data-s="drios-blog-mobile">extension for iPhones and iPads</a>.
-Check out our sponsors' extension
-<a class="text-highlight" href="https://www.joinhoney.com/darkreader" data-s="h-blog-mobile">Honey</a>.
 Tell your friends or colleagues about Dark Reader.
 You can also
 <a class="text-highlight" href="https://opencollective.com/darkreader/donate" data-s="d-blog-mobile">support us financially</a>.

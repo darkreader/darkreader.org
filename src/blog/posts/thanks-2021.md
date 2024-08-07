@@ -140,9 +140,6 @@ Thanks these companies for providing their software and services:
 
 ### <span class="text-highlight">Sponsors</span>
 
-Thanks to our golden sponsors:
-- [PayPal](https://www.joinhoney.com/darkreader) and their extension [Honey](https://www.joinhoney.com/darkreader) for being supportive.
-
 Thanks to our backers and sponsors:
 - [Icons8: free icons, photos, illustrations, and music](https://icons8.com)
 - [VPNwelt](https://vpnwelt.com/)
