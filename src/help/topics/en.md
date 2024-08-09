@@ -14,6 +14,15 @@ We work hard on improvements.
 Please <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
 Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">mobile apps</a>.
 
+- [Toolbar Icon](#options-icon)
+- [Top Section](#top-section)
+- [Filter Settings](#filter-settings)
+- [Custom Site Settings](#custom-site-settings)
+- [Site List](#site-list)
+- [More Tab](#more-tab)
+- [Theme Generation Modes](#theme-generation-modes)
+- [Bottom Section](#bottom-section)
+- [Using the Developer Tools](#using-dev-tools)
 - [FAQ](#faq)
 - [Contacts](#contacts)
 - [Tips for advanced users](../../tips/)
