@@ -76,6 +76,10 @@ article > h1:first-child {
 }
 
 darkreader-backers-top-short {
+    /* display: none; */
+}
+
+darkreader-mobile-top-short {
     display: none;
 }
 
