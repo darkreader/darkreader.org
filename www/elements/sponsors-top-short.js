@@ -56,8 +56,9 @@ const htmlText = `
     </div>
     <div class="bottom pie-bottom">
         <div class="pie-top-message">
-            Hide ads on every website or
-            get paid for seeing ads.
+            Simply browse ad-free with Pie.<br>
+            You deserve to get paid if you<br>
+            opt into ads.
             <a class="text-link" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-text">
                 Learn more
             </a>
@@ -204,7 +205,7 @@ const cssText = `
 .pie-button-link {
     background-image: linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
     border: none;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
     padding: 0.0625rem;
     width: auto;
 }
@@ -250,8 +251,8 @@ const cssText = `
     background-repeat: no-repeat, no-repeat;
     background-size: 65% auto, contain;
     display: inline-block;
-    height: 6rem;
-    width: 6rem;
+    height: 5.5rem;
+    width: 5.5rem;
 }
 .pie-text {
     color: white;
