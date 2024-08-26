@@ -136,3 +136,14 @@ darkreader-mobile-top-short {
         width: 100%;
     }
 }
+
+.small-pie-logo {
+    background-image: url(/images/pie-logo-white.svg), url(/images/pie-badge.svg);
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 65% auto, contain;
+    float: left;
+    height: 4rem;
+    margin-right: 1rem;
+    width: 4rem;
+}
