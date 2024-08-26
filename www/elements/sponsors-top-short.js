@@ -55,6 +55,13 @@ const htmlText = `
         </span>
     </div>
     <div class="bottom pie-bottom">
+        <div class="pie-top-message">
+            Hide ads on every website or
+            get paid for seeing ads.
+            <a class="text-link" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-text">
+                Learn more
+            </a>
+        </div>
         <a class="button-link pie-button-link" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-btn">
             <div class="pie-button-link-wrapper">
                 ${buttonIcon}
@@ -63,15 +70,12 @@ const htmlText = `
                 </span>
             </div>
         </a>
-        <a class="text-link" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-text">
-            Learn more about Pie
-        </a>
     </div>
 </section>`;
 
 const cssText = `
 .container {
-    padding-top: 1rem;
+    padding-top: 0.75rem;
 }
 .top {
     height: 2rem;
@@ -195,10 +199,12 @@ const cssText = `
     flex-direction: column;
     gap: 0;
     justify-content: center;
+    margin-top: 0.5rem;
 }
 .pie-button-link {
     background-image: linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
     border: none;
+    margin-top: 0.75rem;
     padding: 0.0625rem;
     width: auto;
 }
@@ -211,7 +217,8 @@ const cssText = `
     gap: 0.5rem;
     height: 100%;
     justify-content: center;
-    padding: 0 0.25rem;
+    max-width: 16rem;
+    padding: 0 0.5rem;
 }
 .pie-button-link .button-link-text {
     font-style: normal;
@@ -219,6 +226,10 @@ const cssText = `
     -webkit-text-stroke: unset;
     text-transform: none;
     transform: none;
+}
+.pie-button-link .b-icon {
+    height: 1.5rem;
+    width: 1.5rem;
 }
 .pie-button-link .b-icon {
     margin: 0;
@@ -239,23 +250,31 @@ const cssText = `
     background-repeat: no-repeat, no-repeat;
     background-size: 65% auto, contain;
     display: inline-block;
-    height: 7rem;
-    width: 7rem;
+    height: 6rem;
+    width: 6rem;
 }
 .pie-text {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
 }
 .pie-text-strong {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     text-transform: uppercase;
 }
-.pie-bottom .text-link {
-    margin-top: 0.25rem;
+.pie-top-message {
+    text-align: center;
+    width: 16rem;
+}
+.pie-top-message .text-link {
+    color: inherit;
+    font-weight: bold;
+}
+.pie-top-message .text-link:hover {
+    color: white;
 }
 `;
 
