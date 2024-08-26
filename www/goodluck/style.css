@@ -85,7 +85,6 @@ section {
 }
 
 .message {
-    display: none;
     color: var(--color-highlight);
     font-size: 1.5rem;
     font-weight: bold;
@@ -274,6 +273,50 @@ body:not(.c-h) .h-ext {
     }
 }
 
-.recommendations {
-    display: none;
+.text-link {
+    color: var(--color-text);
+    transition: color 250ms;
+}
+
+.text-link:hover {
+    color: var(--color-text-hover);
+}
+
+.centered {
+    text-align: center;
+}
+
+.pie-badge {
+    background-image: url(/images/pie-logo-white.svg), url(/images/pie-badge.svg);
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 65% auto, contain;
+    display: inline-block;
+    height: 8rem;
+    width: 8rem;
+}
+
+.pie-slogan {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.ext__install {
+    background-color: var(--color-bg);
+    border-radius: 1.25rem;
+    margin-top: 0;
+    width: 20rem;
+}
+
+.ext__install-wrapper {
+    background-image: linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
+    border-radius: calc(1.25rem + 0.0625rem);
+    display: inline-block;
+    padding: 0.0625rem;
+}
+
+section {
+    max-width: 30rem;
 }
