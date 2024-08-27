@@ -578,10 +578,11 @@ const shortLangCodes = {
     // ...
 };
 
+const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 /** @type {string} */
 export const country = (() => {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const codes = timeZones[tz] ?? [];
+    const codes = timeZones[timeZone] ?? [];
     if (codes.length !== 1) {
         for (const lang of navigator.languages) {
             const c = lang.split('-')[1];
@@ -608,7 +609,7 @@ export const country = (() => {
 export const isHCountry = true;
 
 const isFirefox = navigator.userAgent.includes('Firefox');
-export const isPCountry = ['US', 'GB', 'CA', 'AU', 'DE'].includes(country) && !isFirefox;
+export const isPCountry = (['US', 'GB', 'CA', 'AU', 'DE'].includes(country) || timeZone === 'UTC') && !isFirefox;
 
 export const isEUCountry = [
     'AT',
