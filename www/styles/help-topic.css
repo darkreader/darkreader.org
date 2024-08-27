@@ -79,7 +79,11 @@ article > h1:first-child {
     margin-top: 1rem;
 }
 
-darkreader-mobile-top-short {
+html[data-p="p"] darkreader-mobile-top-short {
+    display: none;
+}
+
+html:not([data-p="p"]) darkreader-backers-top-short {
     display: none;
 }
 
@@ -150,6 +154,7 @@ darkreader-mobile-top-short {
     text-indent: -999rem;
     width: 4rem;
 }
+
 .small-pie-logo::after {
     background-image: url(/images/pie-logo-color.svg), url(/images/pie-badge-light.svg);
     background-position: center, center;
@@ -165,9 +170,15 @@ darkreader-mobile-top-short {
     transition: 250ms;
     width: 100%;
 }
+
 .small-pie-logo:hover::after {
     opacity: 1;
 }
+
 blockquote:has(.small-pie-logo) {
     min-height: 4rem;
+}
+
+html:not([data-p="p"]) .pie-help {
+    display: none;
 }

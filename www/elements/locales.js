@@ -607,6 +607,8 @@ export const country = (() => {
 // export const isHCountry = hCountries.includes(country);
 export const isHCountry = true;
 
+export const isPCountry = ['US', 'GB', 'CA', 'AU', 'DE'].includes(country);
+
 export const isEUCountry = [
     'AT',
     'BE',
