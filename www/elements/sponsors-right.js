@@ -1,6 +1,7 @@
 // @ts-check
 
 import './sponsors-graph.js';
+import './sponsors-top-short.js';
 import './pay-tiers.js';
 import {country, isEUCountry, isHCountry, isPCountry} from './locales.js';
 import {clicker} from './stats.js';
