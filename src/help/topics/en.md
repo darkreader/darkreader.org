@@ -13,10 +13,21 @@ Dark Reader is a set of fast and efficient algorithms.
 We work hard on improvements.
 Please <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
 Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">mobile apps</a>.
-
-> <span class="small-pie-logo"></span>Check out **[Pie](https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na)**, our partner extension.
-> It blocks ads on every website and enables you to get paid if you choose to opt into ads.
-**[Learn more](https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na)**.
+<blockquote class="pie-help">
+    <p>
+        <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-help-badge"
+            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            Pie
+        </a>
+        Check out <strong><a target="_blank" rel="noopener" data-s="pie-help-text"
+            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+                Pie</a></strong>, our partner extension.
+        It blocks ads on every website and enables you to get paid if you choose to opt into ads.
+        <strong><a target="_blank" rel="noopener" data-s="pie-help-text"
+            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+                Learn more</a></strong>.
+    </p>
+</blockquote>
 
 - [FAQ](#faq)
 - [Contacts](#contacts)
