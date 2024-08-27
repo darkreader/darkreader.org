@@ -1,4 +1,6 @@
 // @ts-check
+import {isPCountry} from './locales.js';
+
 const ERROR_HANDLING_ENABLED = false;
 
 /** @type {WeakSet<Element>} */
@@ -116,3 +118,7 @@ addEventListener('blur', () => {
     loop();
     setTimeout(loop);
 });
+
+if (isPCountry) {
+    document.documentElement.dataset.p = 'p';
+}

@@ -286,6 +286,10 @@ body:not(.c-h) .h-ext {
     text-align: center;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .pie-badge-link {
     background-image: url(/images/pie-logo-white.svg), url(/images/pie-badge.svg);
     background-position: center, center;
@@ -350,4 +354,12 @@ body:not(.c-h) .h-ext {
 
 section {
     max-width: 30rem;
+}
+
+html:not([data-p="p"]) .recommendations > .come-again {
+    text-align: center;
+}
+
+html:not([data-p="p"]) .recommendations > :not(.come-again) {
+    display: none;
 }
