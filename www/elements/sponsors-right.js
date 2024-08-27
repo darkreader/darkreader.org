@@ -23,6 +23,9 @@ const htmlText = `
 <section class="pr">
     <darkreader-pay-tiers></darkreader-pay-tiers>
 </section>
+<section class="pie">
+    <darkreader-backers-top-short side></darkreader-backers-top-short>
+</section>
 <section class="mob">
     <div class="mob-subtitle">
         <a class="mob-text-link" href="${safariURL}" target="_blank" rel="noopener" data-s="drios-side-text">
@@ -622,6 +625,9 @@ section {
     display: block;
     height: 5rem;
     width: 5rem;
+}
+.pie {
+    margin-bottom: 2rem;
 }
 `;
 

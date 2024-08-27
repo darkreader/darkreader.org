@@ -47,11 +47,18 @@ const htmlText = `
     <div class="pie-image-link">
     </div>
     <div class="pie-block">
-        <span class="pie-badge">
-        </span>
+        <a class="pie-badge-link" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-badge">
+            <span class="pie-badge">
+                Pie
+            </span>
+        </a>
         <span class="pie-text">
-            Block ads<br>
-            <span class="pie-text-strong">get paid</span>
+            <a class="pie-text-link" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-text">
+                Block ads
+            </a><br>
+            <a class="pie-text-link pie-text-strong" href="${pieURL}" target="_blank" rel="noopener" data-s="pie-top-text">
+                get paid
+            </a><br>
         </span>
     </div>
     <div class="bottom pie-bottom">
@@ -76,7 +83,7 @@ const htmlText = `
 
 const cssText = `
 .container {
-    padding-top: 0.75rem;
+    padding-top: 0;
 }
 .top {
     height: 2rem;
@@ -200,12 +207,12 @@ const cssText = `
     flex-direction: column;
     gap: 0;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 0.125rem;
 }
 .pie-button-link {
     background-image: linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
     border: none;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
     padding: 0.0625rem;
     width: auto;
 }
@@ -245,20 +252,76 @@ const cssText = `
     gap: 1rem;
     justify-content: center;
 }
+.pie-badge-link {
+    display: inline-block;
+    height: 6rem;
+    position: relative;
+    text-decoration: none;
+    width: 6rem;
+}
+.pie-badge-link::before {
+    border-radius: 50%;
+    box-shadow: 0 0 1rem #598bd4;
+    content: "";
+    display: inline-block;
+    height: 95%;
+    left: 0;
+    margin: 2.5%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 250ms;
+    width: 95%;
+}
+.pie-badge-link:hover::before {
+    opacity: 1;
+}
 .pie-badge {
     background-image: url(/images/pie-logo-white.svg), url(/images/pie-badge.svg);
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: 65% auto, contain;
     display: inline-block;
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-indent: -999rem;
+    top: 0;
+    transition: filter 250ms;
+    width: 100%;
+}
+.pie-badge-link::after {
+    background-image: url(/images/pie-logo-color.svg), url(/images/pie-badge-light.svg);
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 65% auto, contain;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 250ms;
+    width: 100%;
+}
+.pie-badge-link:hover::after {
+    opacity: 1;
 }
 .pie-text {
     color: white;
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
+}
+.pie-text-link {
+    border-bottom: 1px solid #fff0;
+    color: white;
+    text-decoration: none;
+    transition: border-color 250ms;
+}
+.pie-text-link:hover {
+    border-color: #ffff;
 }
 .pie-text-strong {
     color: white;
@@ -287,6 +350,13 @@ class BackerTopShortElement extends HTMLElement {
         const style = html('style', {}, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+
+        if (this.hasAttribute('side')) {
+            shadowRoot.querySelectorAll('[data-s]').forEach((node) => {
+                const s = node.getAttribute('data-s') ?? '';
+                node.setAttribute('data-s', s.replace('-top-', '-side-'));
+            });
+        }
 
         $(shadowRoot).find('[data-s]').each((node) => clicker(node, node.getAttribute('data-s') ?? ''));
     }
