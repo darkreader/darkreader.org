@@ -607,7 +607,8 @@ export const country = (() => {
 // export const isHCountry = hCountries.includes(country);
 export const isHCountry = true;
 
-export const isPCountry = ['US', 'GB', 'CA', 'AU', 'DE'].includes(country);
+const isFirefox = navigator.userAgent.includes('Firefox');
+export const isPCountry = ['US', 'GB', 'CA', 'AU', 'DE'].includes(country) && !isFirefox;
 
 export const isEUCountry = [
     'AT',
