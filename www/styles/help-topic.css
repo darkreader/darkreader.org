@@ -187,10 +187,12 @@ darkreader-questions {
     display: none;
 }
 
-[data-c="GB"]:not(.android) darkreader-questions {
+[data-c="GB"]:not(.android) darkreader-questions,
+[data-c="CA"]:not(.android) darkreader-questions {
     display: unset;
 }
 
-[data-c="GB"] darkreader-ios-static {
+[data-c="GB"] darkreader-ios-static,
+[data-c="CA"] darkreader-ios-static {
     display: none;
 }

@@ -95,10 +95,14 @@ class BackerTopShortElement extends HTMLElement {
             `![Assistant](/images/darkreader-icon-edges.png)`,
             `Hey there! Let me assist you today. Just a few things you should know:`,
             `1. Please read this manual or scroll down and watch a 1 minute video showing how to use Dark Reader ▶️.`,
-            `2. Please support our hard work by making a small payment. Please do it now or you will forget to do it later.`,
+            `2. ${} Please support our hard work by making a small payment. Please do it now or you will forget to do it later.`,
             `3. Install our app on your iPhone. Simply scan the QR code.`,
             `![QR code](/images/qr-code.png)`,
             `Have a wonderful day!`,
+            ...(isSafari ? [] : [
+                `P.S. Our friends from Pie developed an extension that removes ads from websites. You can get paid, if you opt into ads.`,
+                `[Learn more](${pieURL})`,
+            ]),
         ];
 
         /** @type {(delay: number) => Promise<void>} */
@@ -128,6 +132,9 @@ class BackerTopShortElement extends HTMLElement {
                 const el = document.createElement(linkMatch ? 'a' : 'p');
                 if (linkMatch) {
                     el.setAttribute('href', url);
+                }
+                if (url && url.includes('pie.org')) {
+                    el.setAttribute('data-s', 'pie-assist-text');
                 }
                 const textShow = document.createElement('span');
                 const textPrint = document.createElement('span');
