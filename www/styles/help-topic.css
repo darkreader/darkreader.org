@@ -196,3 +196,7 @@ darkreader-questions {
 [data-c="CA"] darkreader-ios-static {
     display: none;
 }
+
+iframe {
+    max-width: calc(100vw - 2rem);
+}

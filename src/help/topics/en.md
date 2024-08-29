@@ -28,7 +28,7 @@ click the **Extensions** button next to the address bar and then another button 
 
 <h2 id="video">1-Minute Video Guide</h2>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/849mznBKmIQ?si=QpEUoKvD1KwpdOqx" title="Dark Reader quick guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/849mznBKmIQ?si=QpEUoKvD1KwpdOqx" title="Dark Reader quick guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 <blockquote class="pie-help">
     <p>

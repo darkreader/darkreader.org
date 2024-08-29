@@ -119,3 +119,7 @@ article h6 {
         display: none;
     }
 }
+
+iframe {
+    max-width: calc(100vw - 2rem);
+}
