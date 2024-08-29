@@ -13,6 +13,23 @@ Dark Reader is a set of fast and efficient algorithms.
 We work hard on improvements.
 Please <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
 Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">mobile apps</a>.
+
+- [FAQ](#faq)
+- [Contacts](#contacts)
+- [Tips for advanced users](../../tips/)
+
+<h2 id="options-icon">Toolbar Icon</h2>
+
+<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Options icon" style="width: 20rem;" loading="lazy" />
+
+If the Dark Reader **icon is hidden** after installation,
+click the **Extensions** button next to the address bar and then another button next to Dark Reader.
+
+
+<h2 id="video">1-Minute Video Guide</h2>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/849mznBKmIQ?si=QpEUoKvD1KwpdOqx" title="Dark Reader quick guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <blockquote class="pie-help">
     <p>
         <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-help-badge"
@@ -28,17 +45,6 @@ Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-
                 Learn more</a></strong>.
     </p>
 </blockquote>
-
-- [FAQ](#faq)
-- [Contacts](#contacts)
-- [Tips for advanced users](../../tips/)
-
-<h2 id="options-icon">Toolbar Icon</h2>
-
-<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Options icon" style="width: 20rem;" loading="lazy" />
-
-If the Dark Reader **icon is hidden** after installation,
-click the **Extensions** button next to the address bar and then another button next to Dark Reader.
 
 
 <h2 id="top-section">Top Section</h2>
@@ -124,6 +130,7 @@ Works poorly in Firefox.
 
 If you are familiar with CSS selectors, you can help by suggesting a fix for filtering a website.
 Read how to use the developer tools [here](https://github.com/darkreader/darkreader#how-to-contribute).
+
 
 <h2 id="tips">Tips for Advanced Users</h2>
 
