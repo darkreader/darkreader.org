@@ -1,5 +1,5 @@
 // @ts-check
-import {isPCountry} from './locales.js';
+import {country, isPCountry} from './locales.js';
 
 const ERROR_HANDLING_ENABLED = false;
 
@@ -122,3 +122,4 @@ addEventListener('blur', () => {
 if (isPCountry) {
     document.documentElement.dataset.p = 'p';
 }
+document.documentElement.dataset.c = country;

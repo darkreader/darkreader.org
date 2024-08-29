@@ -182,3 +182,15 @@ blockquote:has(.small-pie-logo) {
 html:not([data-p="p"]) .pie-help {
     display: none;
 }
+
+darkreader-questions {
+    display: none;
+}
+
+[data-c="GB"]:not(.android) darkreader-questions {
+    display: unset;
+}
+
+[data-c="GB"] darkreader-ios-static {
+    display: none;
+}
