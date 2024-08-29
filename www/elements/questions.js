@@ -11,6 +11,7 @@ const isFirefox = navigator.userAgent.includes('Firefox');
 const isChrome = navigator.userAgent.includes('Chrom');
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !isChrome;
+const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180';
 const pieURL = 'https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na';
 
 const htmlText = `
@@ -95,11 +96,11 @@ class BackerTopShortElement extends HTMLElement {
             `![Assistant](/images/darkreader-icon-edges.png)`,
             `Hey there! Let me assist you today. Just a few things you should know:`,
             `1. Please read this manual or scroll down and watch a 1 minute video showing how to use Dark Reader ▶️.`,
-            `2. ${} Please support our hard work by making a small payment. Please do it now or you will forget to do it later.`,
+            isSafari ? `[2. Install Dark Reader for Safari.](${safariURL})` : `2. Please support our hard work by making a small payment. Please do it now.`,
             `3. Install our app on your iPhone. Simply scan the QR code.`,
             `![QR code](/images/qr-code.png)`,
             `Have a wonderful day!`,
-            ...(isSafari ? [] : [
+            ...(isFirefox ? [] : [
                 `P.S. Our friends from Pie developed an extension that removes ads from websites. You can get paid, if you opt into ads.`,
                 `[Learn more](${pieURL})`,
             ]),
