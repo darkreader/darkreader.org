@@ -24,10 +24,14 @@ const cssText = `
 .container {
     background-color: var(--color-bg);
 }
-p, a {
+p {
     color: #53b39f;
     font-family: monospace;
+    font-weight: bold;
     width: 16rem;
+}
+a {
+    color: #53b39f;
 }
 .print {
     color: white;
@@ -108,7 +112,7 @@ class BackerTopShortElement extends HTMLElement {
             `![QR code](/images/qr-code.png)`,
             `Enjoy browsing with dark mode!`,
             ...(isPCountry ? [
-                `P.S. If you are a fan of our extension and want to continue supporting us, please visit our friends at Pie. They are a browser extension that allows you to block ads and get paid. Check it out for a more seamless browsing experience.`,
+                `P.S. Our friends at Pie created a browser extension that allows you to block ads and get paid.`,
                 `[Learn more](${pieURL})`,
             ] : []),
         ];
