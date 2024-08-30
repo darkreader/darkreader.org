@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country} from './locales.js';
+import {country, isPCountry} from './locales.js';
 import {
     createHTMLElement as html,
     $,
@@ -12,6 +12,8 @@ const isChrome = navigator.userAgent.includes('Chrom');
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !isChrome;
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180';
+const iosURL = `${safariURL}?platform=iphone`;
+const supportURL = '/support-us';
 const pieURL = 'https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na';
 
 const htmlText = `
@@ -96,14 +98,19 @@ class BackerTopShortElement extends HTMLElement {
             `![Assistant](/images/darkreader-icon-edges.png)`,
             `Hey there! Let me assist you today. Just a few things you should know:`,
             `1. Please read this manual or scroll down and watch a 1 minute video showing how to use Dark Reader ▶️.`,
-            isSafari ? `[2. Install Dark Reader for Safari.](${safariURL})` : `2. Please support our hard work by making a small payment. Please do it now.`,
+            ...(isSafari ? [
+                `[2. Install Dark Reader for Safari.](${safariURL})`,
+            ] : [
+                `[2. Please support our hard work by making a small payment.](${supportURL})`,
+                `[Pay now](${supportURL})`,
+            ]),
             `3. Install our app on your iPhone. Simply scan the QR code.`,
             `![QR code](/images/qr-code.png)`,
-            `Have a wonderful day!`,
-            ...(isFirefox ? [] : [
-                `P.S. Our friends from Pie developed an extension that removes ads from websites. You can get paid, if you opt into ads.`,
+            `Enjoy browsing with dark mode!`,
+            ...(isPCountry ? [
+                `P.S. If you are a fan of our extension and want to continue supporting us, please visit our friends at Pie. They are a browser extension that allows you to block ads and get paid. Check it out for a more seamless browsing experience.`,
                 `[Learn more](${pieURL})`,
-            ]),
+            ] : []),
         ];
 
         /** @type {(delay: number) => Promise<void>} */
@@ -130,12 +137,17 @@ class BackerTopShortElement extends HTMLElement {
                     url = linkMatch[2];
                 }
                 await timeout(1000);
-                const el = document.createElement(linkMatch ? 'a' : 'p');
-                if (linkMatch) {
-                    el.setAttribute('href', url);
-                }
-                if (url && url.includes('pie.org')) {
-                    el.setAttribute('data-s', 'pie-assist-text');
+                const p = document.createElement('p');
+                const a = document.createElement('a');
+                a.href = url;
+                if (url.includes('pie.org')) {
+                    a.dataset.s = 'pie-assist-text';
+                } else if (url.includes('iphone')) {
+                    a.dataset.s = 'drios-assist-text';
+                } else if (url.includes('apple.com')) {
+                    a.dataset.s = 'drsafari-assist-text';
+                } else if (url.includes('support')) {
+                    a.dataset.s = 'd-assist-text';
                 }
                 const textShow = document.createElement('span');
                 const textPrint = document.createElement('span');
@@ -143,10 +155,14 @@ class BackerTopShortElement extends HTMLElement {
                 textPrint.classList.add('print');
                 textHide.classList.add('hide');
                 textHide.textContent = text;
+                const el = url ? a : p;
                 el.append(textShow);
                 el.append(textPrint);
                 el.append(textHide);
-                container.append(el);
+                if (url) {
+                    p.append(a);
+                }
+                container.append(p);
                 for (let i = 0; i <= text.length; i++) {
                     await timeout(20);
                     const c = text[i] ?? '';

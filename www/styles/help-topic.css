@@ -183,6 +183,7 @@ html:not([data-p="p"]) .pie-help {
     display: none;
 }
 
+/*
 darkreader-questions {
     display: none;
 }
@@ -194,6 +195,12 @@ darkreader-questions {
 
 [data-c="GB"] darkreader-ios-static,
 [data-c="CA"] darkreader-ios-static {
+    display: none;
+}
+*/
+
+darkreader-ios-static,
+.android darkreader-questions {
     display: none;
 }
 
