@@ -39,7 +39,7 @@ Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-
     </p>
 </blockquote>
 
-<h2 id="mobile-video" class="text-highlight">30-Seconds Video Guide (iOS)</h2>
+<h2 id="mobile-video" class="text-highlight">30-Seconds Video Guide (mobile app)</h2>
 
 <iframe width="320" height="480" src="https://www.youtube-nocookie.com/embed/9nQjBBe8K44?si=QpEUoKvD1KwpdOqx" title="Dark Reader iOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
