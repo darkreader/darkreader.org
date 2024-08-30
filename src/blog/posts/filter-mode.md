@@ -38,11 +38,6 @@ But it may be useful in some cases.
 **Filter+** is based on SVG filters. It produces more vivid colors,
 may be a bit slower and usually fails to work in Firefox.
 
-<div>
-    <darkreader-inside-post></darkreader-inside-post>
-    <script type="module" src="/elements/inside-post.js"></script>
-</div>
-
 ### Activating Filter mode in v5 Design Preview
 
 If you haven't seen the v5 features preview yet, you can read the instructions [here](../../tips/activate-v5-preview/).
