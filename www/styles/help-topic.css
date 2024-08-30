@@ -120,24 +120,35 @@ html:not([data-p="p"]) darkreader-backers-top-short {
 }
 
 @media screen and (min-width: 57rem) {
-    .page-grid-side {
+    .page-grid-side darkreader-backers-side {
         opacity: 0;
         pointer-events: none;
         transition: opacity 500ms;
     }
     
-    .page-grid-side--visible {
+    .page-grid-side--visible darkreader-backers-side {
         opacity: 1;
         pointer-events: all;
     }
     
-    .page-grid-side--visible::before {
+    .page-grid-side--visible::before darkreader-backers-side {
         background-color: var(--color-bg);
         content: "";
         height: 2rem;
         position: absolute;
         top: -2rem;
         width: 100%;
+    }
+
+    .page-grid-side darkreader-questions {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity 500ms;
+    }
+    
+    .page-grid-side--visible darkreader-questions {
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
@@ -183,23 +194,14 @@ html:not([data-p="p"]) .pie-help {
     display: none;
 }
 
-/*
 darkreader-questions {
-    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16rem;
+    z-index: -1;
 }
 
-[data-c="GB"]:not(.android) darkreader-questions,
-[data-c="CA"]:not(.android) darkreader-questions {
-    display: unset;
-}
-
-[data-c="GB"] darkreader-ios-static,
-[data-c="CA"] darkreader-ios-static {
-    display: none;
-}
-*/
-
-darkreader-ios-static,
 .android darkreader-questions {
     display: none;
 }

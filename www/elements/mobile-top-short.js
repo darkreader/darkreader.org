@@ -151,6 +151,9 @@ const cssText = `
     margin: 0.5rem auto;
     width: 7rem;
 }
+.qr {
+    display: none;
+}
 `;
 
 class MobileTopShortElement extends HTMLElement {

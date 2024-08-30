@@ -199,6 +199,9 @@ section {
     margin: 0.5rem auto;
     width: 5rem;
 }
+.q {
+    display: none;
+}
 `;
 
 class IOSStaticElement extends HTMLElement {
