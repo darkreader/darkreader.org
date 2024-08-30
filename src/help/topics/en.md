@@ -18,17 +18,10 @@ Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-
 - [Contacts](#contacts)
 - [Tips for advanced users](../../tips/)
 
-<h2 id="options-icon">Toolbar Icon</h2>
 
-<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Options icon" style="width: 20rem;" loading="lazy" />
+<h2 id="video" class="text-highlight">1-Minute Video Guide</h2>
 
-If the Dark Reader **icon is hidden** after installation,
-click the **Extensions** button next to the address bar and then another button next to Dark Reader.
-
-
-<h2 id="video">1-Minute Video Guide</h2>
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/849mznBKmIQ?si=QpEUoKvD1KwpdOqx" title="Dark Reader quick guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<iframe width="560" height="320" src="https://www.youtube-nocookie.com/embed/849mznBKmIQ?si=QpEUoKvD1KwpdOqx" title="Dark Reader quick guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 <blockquote class="pie-help">
     <p>
@@ -45,6 +38,19 @@ click the **Extensions** button next to the address bar and then another button 
                 Learn more</a></strong>.
     </p>
 </blockquote>
+
+<h2 id="mobile-video" class="text-highlight">30-Seconds Video Guide (iOS)</h2>
+
+<iframe width="320" height="480" src="https://www.youtube-nocookie.com/embed/9nQjBBe8K44?si=QpEUoKvD1KwpdOqx" title="Dark Reader iOS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+<a data-s="drios-video-text" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" target="_blank" rel="noopener">Download on the App Store</a>
+
+<h2 id="options-icon">Toolbar Icon</h2>
+
+<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Options icon" style="width: 20rem;" loading="lazy" />
+
+If the Dark Reader **icon is hidden** after installation,
+click the **Extensions** button next to the address bar and then another button next to Dark Reader.
 
 
 <h2 id="top-section">Top Section</h2>
