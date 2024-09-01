@@ -42,7 +42,7 @@ a:hover {
 }
 
 li {
-    list-style-type: circle;
+    /* list-style-type: circle; */
 }
 
 ::-moz-selection {
@@ -90,6 +90,7 @@ video {
 }
 
 blockquote {
+    color: #b599f5;
     background: #211921;
     border-left: 0.25rem solid var(--color-highlight);
     font-style: italic;

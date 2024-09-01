@@ -123,3 +123,55 @@ article h6 {
 iframe {
     max-width: calc(100vw - 2rem);
 }
+
+html:not([data-p="p"]) .pie-help {
+    display: none;
+}
+
+.pie-help {
+    color: #baa2f0;
+}
+
+.pie-help a:not(:hover) {
+    color: #baa2f0;
+}
+
+.small-pie-logo {
+    background-image: url(/images/pie-logo-white.svg), url(/images/pie-badge.svg);
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 65% auto, contain;
+    display: block;
+    float: left;
+    height: 6rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    position: relative;
+    text-indent: -999rem;
+    width: 6rem;
+}
+
+.small-pie-logo::after {
+    background-image: url(/images/pie-logo-color.svg), url(/images/pie-badge-light.svg);
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 65% auto, contain;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 250ms;
+    width: 100%;
+}
+
+.small-pie-logo:hover::after {
+    opacity: 1;
+}
+
+blockquote:has(.small-pie-logo) {
+    min-height: 4rem;
+}

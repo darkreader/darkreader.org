@@ -747,6 +747,14 @@ class PayTiersElement extends HTMLElement {
         const style = html('style', {}, cssText);
         shadowRoot.append(style);
         style.insertAdjacentHTML('afterend', htmlText);
+        if (this.hasAttribute('blog')) {
+            $(shadowRoot).find('[data-s]').each((node) => {
+                const s = node.getAttribute('data-s') ?? '';
+                if (s.includes('-side-')) {
+                    node.setAttribute('data-s', s.replace('-side-', '-blog-'));
+                }
+            });
+        }
 
         $(shadowRoot).find('[data-s]').each((node) => clicker(node, node.getAttribute('data-s') ?? ''));
 

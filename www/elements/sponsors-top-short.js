@@ -340,6 +340,33 @@ const cssText = `
 .pie-top-message .text-link:hover {
     color: white;
 }
+:host([horizontal]) .container {
+    height: 9rem;
+    padding: 1rem;
+    position: relative;
+}
+:host([horizontal]) br {
+    display: none;
+}
+:host([horizontal]) .pie-block {
+    align-items: flex-start;
+}
+:host([horizontal]) .pie-text {
+    width: 20rem;
+}
+:host([horizontal]) .pie-bottom {
+    align-items: flex-start;
+    left: calc(50% - 6.5rem);
+    position: absolute;
+    top: 3.5rem;
+}
+:host([horizontal]) .pie-top-message {
+    text-align: left;
+    width: 20rem;
+}
+:host([horizontal]) .pie-button-link {
+    margin-top: 0.5rem;
+}
 `;
 
 class BackerTopShortElement extends HTMLElement {
