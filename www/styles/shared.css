@@ -97,3 +97,7 @@ blockquote {
     margin-left: 0;
     padding-left: 2rem;
 }
+
+blockquote a:not(:hover) {
+    color: #baa2f0;
+}
