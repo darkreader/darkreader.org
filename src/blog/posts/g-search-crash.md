@@ -88,6 +88,8 @@ and are currently awaiting manual review from the Google and Microsoft Store tea
 
 ### How to fix the problem
 
+*Update for Microsoft Edge: the version 4.9.90 has passed the review 🎉🎉🎉 and should be available in the Store shortly!*
+
 There are several solutions, choose what suits you better.
 
 1. **Simply wait for a few days until the patch arrives**.
@@ -119,6 +121,7 @@ s.get(['theme'],x=>s.set({theme:{...x.theme,scrollbarColor:''}},
 
 4. If Google Search appears with its own dark theme,
 activate **Dark Theme Detection** option in Dark Reader.
+This feature was significantly improved in latest releases.
 
 <figure>
     <img src="/images/detect-dark-theme-menu.png" alt="Dark Theme Detection" style="max-width: 18rem;">
