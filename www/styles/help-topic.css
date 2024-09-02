@@ -198,6 +198,14 @@ html:not([data-p="p"]) .pie-help {
     display: none;
 }
 
+.pie-help {
+    color: #baa2f0;
+}
+
+.pie-help a:not(:hover) {
+    color: #baa2f0;
+}
+
 darkreader-questions {
     left: 0;
     position: absolute;
