@@ -124,6 +124,7 @@ iframe {
     max-width: calc(100vw - 2rem);
 }
 
+html:not([data-p="p"]) darkreader-backers-top-short,
 html:not([data-p="p"]) .pie-help {
     display: none;
 }
