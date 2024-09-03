@@ -55,7 +55,7 @@ If you ask, **"How can I support such a great service?"** we have an answer. Weâ
     <img src="/images/chromium-aw-snap.gif" alt="Demonstration of the Aw,Snap issue">
 </figure>
 
-The problem occurs on the Google Search website and primarily **affects Windows user**.
+The problem occurs due to a **scrollbar color change** on the Google Search website and primarily **affects Windows user**.
 If your browser **window is small**, you may encounter the "Aw, Snap" error when switching between the Google Search menus.
 The Chromium bug has been reported and number [363544341](https://issues.chromium.org/issues/363544341) was assigned.
 You can **star the issue to draw more attention from the Chromium developers**.
