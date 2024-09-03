@@ -88,7 +88,7 @@ and are currently awaiting manual review from the Google and Microsoft Store tea
 
 ### How to fix the problem
 
-*Update for Microsoft Edge: the version 4.9.90 has passed the review 🎉🎉🎉 and should be available in the Store shortly!*
+*Update for Microsoft Edge: the version 4.9.90 has passed the review after our request on September 2 and should be available in the Store shortly 🎉🎉🎉! Google refused to perform an expedited review, despite the issue being on Google's side. The fix hasn't been reviewed since the morning of September 1.*
 
 There are several solutions, choose what suits you better.
 
