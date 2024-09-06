@@ -3,25 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>iOS QR code — Dark Reader</title>
+    <title>QR code — Dark Reader</title>
     <meta name="theme-color" content="#141e24">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/images/icon-256.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dark Reader">
-    <meta property="og:url" content="https://darkreader.org/timeline">
-    <meta property="og:title" content="iOS QR code — Download Dark Reader for Safari">
-    <meta property="og:image" content="https://darkreader.org/images/icon-256.png">
-    <meta property="og:description" content="We develop Dark Reader since 2014. Explore a timeline of our journey.">
-    <meta name="description" content="We develop Dark Reader since 2014. Explore a timeline of our journey.">
-    <meta http-equiv="refresh" content="1; url=https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" />
+    <meta property="og:url" content="https://darkreader.org/qr">
+    <meta property="og:title" content="QR code — Download Dark Reader Mobile">
+    <meta property="og:image" content="https://darkreader.org/images/qr-code.png">
+    <meta property="og:description" content="Scan QR code and download Dark Reader.">
+    <meta name="description" content="Scan QR code and download Dark Reader.">
+    <!-- <meta http-equiv="refresh" content="1; url=https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" /> -->
     <style>
         html {
-            background-color: #1d1e22;
+            background-color: #141e24;
         }
 
         body {
-            background-color: #1d1e22;
+            background-color: #141e24;
             color: #c2bcb8;
             font-family: Helvetica Neue, sans-serif;
             max-width: 40em;
@@ -29,7 +29,10 @@
             padding: 1em
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3,
+        h4 {
             color: #e96c4c;
         }
 
@@ -41,23 +44,34 @@
         }
 
         a {
-            color: #68aed7;
+            color: #53a1b3;
         }
     </style>
 </head>
 
 <body>
     <a class="banner" href="/">
-        <img class="banner__image" src="/images/darkreader-safari-banner.svg" />
+        <img class="banner__image" src="/images/darkreader-main.svg" />
     </a>
 
-    <h2>
-        Dark Reader for iOS
-    </h2>
+    <h3>
+        Please wait while you are being redirected...
+    </h3>
 
     <p>
-        Please wait while you are being redirected to<br>
-        <a href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone">https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone</a>
+        If you haven't been redirected automatically, please use the following installation links:
+    </p>
+
+    <h3>Android</h3>
+    <p>
+        <a
+            href="https://microsoftedgewelcome.microsoft.com/emmx/DarkReaderCollaboration">https://microsoftedgewelcome.microsoft.com/emmx/DarkReaderCollaboration</a>
+    </p>
+
+    <h3>iOS & iPadOS</h3>
+    <p>
+        <a
+            href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone">https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone</a>
     </p>
 
     <footer>
@@ -67,6 +81,17 @@
     </footer>
 
     <script type="module" src="/elements/stats.js"></script>
+
+    <script defer>
+        setTimeout(() => {
+            const ua = navigator.userAgent.toLocaleLowerCase();
+            if (ua.includes('iphone') || ua.includes('macintosh')) {
+                location.replace('https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone');
+            } else if (ua.includes('android')) {
+                location.replace('https://microsoftedgewelcome.microsoft.com/emmx/DarkReaderCollaboration');
+            }
+        }, 2000);
+    </script>
 
 </body>
 
