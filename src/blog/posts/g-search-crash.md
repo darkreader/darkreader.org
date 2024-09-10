@@ -66,11 +66,11 @@ and are currently awaiting manual review from the Google and Microsoft Store tea
 <blockquote class="pie-help">
     <p>
         <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-blog-badge"
-            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            href="https://pie.org/darkreader">
             Pie
         </a>
         Check Out Our Friends at <strong><a target="_blank" rel="noopener" data-s="pie-blog-text"
-            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            href="https://pie.org/darkreader">
                 Pie</a></strong>!
     </p>
     <p>
@@ -81,7 +81,7 @@ and are currently awaiting manual review from the Google and Microsoft Store tea
     <p>
         And the best part? Pie is  <strong>completely free</strong> and gives you <strong>premium features at no cost</strong>.
         <strong><a target="_blank" rel="noopener" data-s="pie-blog-text"
-            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            href="https://pie.org/darkreader">
                 Learn more</a></strong>.
     </p>
 </blockquote>

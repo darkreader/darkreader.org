@@ -8,7 +8,7 @@ import {
 import {clicker} from './stats.js';
 
 const hURL = 'https://www.joinhoney.com/darkreader';
-const pieURL = 'https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na';
+const pieURL = 'https://pie.org/darkreader';
 const isFirefox = navigator.userAgent.includes('Firefox');
 const isChrome = navigator.userAgent.includes('Chrom');
 const isEdge = navigator.userAgent.includes('Edg');

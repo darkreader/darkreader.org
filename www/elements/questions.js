@@ -14,7 +14,7 @@ const isSafari = navigator.userAgent.includes('Safari') && !isChrome;
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180';
 const iosURL = `${safariURL}?platform=iphone`;
 const supportURL = '/support-us';
-const pieURL = 'https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na';
+const pieURL = 'https://pie.org/darkreader';
 
 const htmlText = `
 <section class="container">

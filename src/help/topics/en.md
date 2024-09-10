@@ -26,15 +26,15 @@ Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-
 <blockquote class="pie-help">
     <p>
         <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-help-badge"
-            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            href="https://pie.org/darkreader">
             Pie
         </a>
         Check out <strong><a target="_blank" rel="noopener" data-s="pie-help-text"
-            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            href="https://pie.org/darkreader">
                 Pie</a></strong>, our partner extension.
         It blocks ads on every website and enables you to get paid if you choose to opt into ads.
         <strong><a target="_blank" rel="noopener" data-s="pie-help-text"
-            href="https://pie.org/adblock?utm_source=bizdev&utm_medium=cpc&utm_campaign=na_na_us_bizdev_na_na_na_na_adblock&utm_term=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader&utm_content=na_na_us_bizdev_na_na_na_na_adblock_na_na_na_na_all_na_darkreader_na_na_na_na_na_na_na">
+            href="https://pie.org/darkreader">
                 Learn more</a></strong>.
     </p>
 </blockquote>
