@@ -38,12 +38,12 @@ const Links = {
         },
         PLUS: {
             USD: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
-            GBP: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
-            EUR: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
-            JPY: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
-            CAD: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
+            GBP: 'https://www.paypal.com/ncp/payment/H6ER99HMUKX5C',
+            EUR: 'https://www.paypal.com/ncp/payment/HP64T8TLHEA4Y',
+            JPY: 'https://www.paypal.com/ncp/payment/3LGSYRECU9D4W',
+            CAD: 'https://www.paypal.com/ncp/payment/7ZA6AFVEH78GA',
             CNY: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
-            AUD: 'https://www.paypal.com/ncp/payment/TF2894W2SJP24',
+            AUD: 'https://www.paypal.com/ncp/payment/93PF2RDCAMADC',
         },
     },
 };
