@@ -1,10 +1,10 @@
 :root {
-    --color-background: #1b191d;
+    --color-background: #000000;
     --color-control: #316e7d;
     --color-control-hover: #193945;
-    --color-text: #ac96bb;
+    --color-text: #656ee2;
     --color-text-highlight: white;
-    --color-accent: #e96c4c;
+    --color-accent: #e9594c;
 }
 
 html {
@@ -59,11 +59,19 @@ footer {
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: 1.25rem;
     text-align: center;
 }
 
+.name {
+    font-size: 1.75rem;
+    line-height: 1;
+    position: relative;
+    top: 0.25rem;
+}
+
 .title-darkreader {
+    color: var(--color-accent);
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -76,26 +84,23 @@ h2 {
 }
 
 p {
-    color: white;
+    color: #7981e6;
+    font-size: 1.08rem;
+    line-height: 1;
     text-align: center;
-    text-shadow: 0 0 1rem var(--color-text), 0 0 0.5rem var(--color-text);
 }
 
 .slogan {
-    color: white;
-    font-size: 2.5rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-clip: text;
+    font-size: 3rem;
     font-weight: 100;
+    margin: 1rem;
     text-align: center;
 }
 
-.slogan-1 {
-    text-shadow: 0 0 1rem hsl(283, 100%, 50%), 0 0 0.5rem hsl(283, 100%, 50%);
-}
-
-.slogan-2 {
-    text-shadow: 0 0 1rem hsl(188, 100%, 50%), 0 0 0.5rem hsl(188, 100%, 50%);
-}
-
-.slogan-3 {
-    text-shadow: 0 0 1rem hsl(204, 100%, 50%), 0 0 0.5rem hsl(204, 100%, 50%);
+.title {
+    font-size: 2.2rem;
+    text-align: center;
 }
