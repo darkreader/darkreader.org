@@ -1,16 +1,20 @@
-# Help (English)
+# Mobile Help (English)
 
-## How to Use Dark Reader on a Mobile Phone
-
-### Activating Dark Reader
+### How to use Dark Reader
 
 - Click **☰** to open the **browser menu**.
 
-- Click the 🧩 **Extensions** option.
+<img src="/images/help/edge-menu-1.png" alt="Click Edge menu icon" style="width: 15rem;" loading="lazy" />
+
+- Click the 🧩 **Extensions** menu option.
+
+<img src="/images/help/edge-menu-2.png" alt="Click Edge Extensions button" style="width: 15rem;" loading="lazy" />
 
 - Click **Dark Reader** to open the extension's options.
 
-- Make sure Dark Reader is turned on and activated for the current website.
+- Make sure Dark Reader is **turned on** and activated for the current website.
+
+<img src="/images/help/edge-menu-3.png" alt="Dark Reader menu" style="width: 15rem;" loading="lazy" />
 
 ### Changing color theme
 
@@ -49,5 +53,9 @@ For any questions, please contact us at [support@darkreader.org](mailto:support@
     darkreader-backers-top-short,
     darkreader-mobile-top-short {
         display: none;
+    }
+
+    article img {
+        margin-left: 2.5rem;
     }
 </style>
