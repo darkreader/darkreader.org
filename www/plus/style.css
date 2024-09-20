@@ -1,0 +1,101 @@
+:root {
+    --color-background: #1b191d;
+    --color-control: #316e7d;
+    --color-control-hover: #193945;
+    --color-text: #ac96bb;
+    --color-text-highlight: white;
+    --color-accent: #e96c4c;
+}
+
+html {
+    background-color: var(--color-background);
+}
+
+body {
+    color: var(--color-text);
+    font-family: system-ui;
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 1em
+}
+
+h1,
+h2 {
+    color: var(--color-accent);
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+a {
+    color: #53a1b3;
+}
+
+a:hover {
+    color: var(--color-text-highlight);
+}
+
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-text-highlight);
+}
+
+.banner__image {
+    display: none;
+    max-width: 32rem;
+}
+
+footer {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+
+.screenshot {
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem black;
+    max-width: 100%;
+    width: 24rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.title-darkreader {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.title-plus {
+    color: white;
+    font-weight: 100;
+    text-shadow: 0 0 1rem var(--color-text), 0 0 0.5rem var(--color-text);
+    text-transform: uppercase;
+}
+
+p {
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 1rem var(--color-text), 0 0 0.5rem var(--color-text);
+}
+
+.slogan {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.slogan-1 {
+    text-shadow: 0 0 1rem hsl(283, 100%, 50%), 0 0 0.5rem hsl(283, 100%, 50%);
+}
+
+.slogan-2 {
+    text-shadow: 0 0 1rem hsl(188, 100%, 50%), 0 0 0.5rem hsl(188, 100%, 50%);
+}
+
+.slogan-3 {
+    text-shadow: 0 0 1rem hsl(204, 100%, 50%), 0 0 0.5rem hsl(204, 100%, 50%);
+}
