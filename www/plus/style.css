@@ -84,7 +84,9 @@ h2 {
     text-transform: uppercase;
 }
 
-p {
+p,
+a,
+a:visited {
     color: var(--color-text);
     font-size: 1.08rem;
     line-height: 1;
