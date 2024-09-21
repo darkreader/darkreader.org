@@ -80,7 +80,7 @@ h2 {
 .title-plus {
     color: white;
     font-weight: 100;
-    text-shadow: 0 0 1rem var(--color-text), 0 0 0.5rem var(--color-text);
+    text-shadow: 0 0 1rem var(--color-text), 0 0 0.5rem var(--color-text), 0 0 0.25rem var(--color-text);
     text-transform: uppercase;
 }
 
@@ -99,7 +99,7 @@ a:visited {
     background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
     background-clip: text;
     font-size: 3rem;
-    font-weight: 100;
+    font-weight: 300;
     margin: 0rem;
     text-align: center;
 }
