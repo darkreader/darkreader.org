@@ -55,6 +55,7 @@ footer {
 .screenshot {
     border-radius: 1.5rem;
     box-shadow: 0 0 1rem black;
+    margin: 1rem 0 0.75rem 0;
     max-width: 100%;
     width: 24rem;
 }
@@ -72,7 +73,9 @@ h2 {
 }
 
 .title-darkreader {
-    color: var(--color-accent);
+    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-clip: text;
+    color: transparent;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -95,11 +98,11 @@ a:visited {
 }
 
 .slogan {
-    color: transparent;
     background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
     background-clip: text;
-    font-size: 3rem;
-    font-weight: 300;
+    color: transparent;
+    font-size: 2.5rem;
+    font-weight: 900;
     margin: 0rem;
     text-align: center;
 }
