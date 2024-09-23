@@ -91,7 +91,7 @@ p,
 a,
 a:visited {
     color: var(--color-text);
-    font-size: 1.08rem;
+    font-size: 1rem;
     line-height: 1;
     margin: 0;
     text-align: center;
@@ -101,16 +101,21 @@ a:visited {
     background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
     background-clip: text;
     color: transparent;
+    display: none;
     font-size: 2.5rem;
-    font-weight: 900;
+    font-weight: 100;
     margin: 0rem;
     text-align: center;
 }
 
 .title {
-    font-size: 2.2rem;
+    font-size: 2.15rem;
     margin: 0;
     text-align: center;
+}
+
+.description {
+    font-size: 1.4rem;
 }
 
 section {
