@@ -200,7 +200,7 @@ const cssText = `
     align-items: center;
     cursor: pointer;
     display: inline-flex;
-    height: 1.5em;
+    height: 2em;
     flex-direction: row;
     gap: 0.25em;
     position: relative;
@@ -218,11 +218,11 @@ const cssText = `
     content: "";
     display: inline-block;
     flex: none;
-    height: 1em;
-    line-height: 1em;
+    height: 1.5em;
+    line-height: 1.5em;
     text-align: center;
     transition: all 125ms;
-    width: 1em;
+    width: 1.5em;
 }
 .tier:has(:checked)::before {
     background-color: var(--color-control);
@@ -236,13 +236,13 @@ const cssText = `
     border-bottom: 2px solid white;
     content: "";
     flex: none;
-    height: 0.25em;
-    left: 0.175em;
+    height: 0.375em;
+    left: 0.3125em;
     position: absolute;
-    top: 0.5em;
+    top: 0.625em;
     transform-origin: 50% 50%;
     transform: rotate(-45deg);
-    width: 0.5em;
+    width: 0.75em;
 }
 .tier:has(:checked),
 .tier:has(:checked):hover {

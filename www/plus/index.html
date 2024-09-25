@@ -40,9 +40,70 @@
         Color Your World
     </h3>
 
-    <p>
-        <img class="screenshot" src="/images/plus-palette-shorter.png" alt="Dark Reader color palette">
-    </p>
+    <div class="carousel">
+        <div class="carousel-wrapper">
+            <template id="carousel-card-template">
+                <div class="carousel-card__name">
+                    Dark Reader Times
+                </div>
+                <div class="carousel-card__date">
+                    September 25, 2024
+                </div>
+                <div class="carousel-card__heading">
+                    Incredible Dark Mode
+                </div>
+                <div class="carousel-card__article">
+                    Trusted by <strong>9,000,000 users</strong>.
+                    Rating 4.7 ★★★★★.
+                    Developed since 2014.
+                </div>
+                <div class="carousel-card__heading">
+                    Custom Colors
+                </div>
+                <div class="carousel-card__article">
+                    Set background and text color <strong>comfortable</strong> for your eyes.
+                </div>
+                <div class="carousel-card__heading">
+                    Premium Themes
+                </div>
+                <div class="carousel-card__article">
+                    Choose from professionally configured <strong>theme presets</strong>.
+                </div>
+            </template>
+            <script>
+                function insertCarouselCard() {
+                    /** @type {HTMLTemplateElement} */
+                    const template = document.getElementById('carousel-card-template');
+                    const clone = template.content.cloneNode(true);
+                    const script = document.currentScript;
+                    script.parentElement.insertBefore(clone, script.nextElementSibling);
+                }
+            </script>
+            <div class="carousel-card" style="--bg: hsl(260, 30%, 10%); --text: hsl(255, 25%, 60%);">
+                <script>
+                    insertCarouselCard();
+                </script>
+            </div>
+            <div class="carousel-card" style="--bg: hsl(165, 25%, 10%); --text: hsl(80, 25%, 50%);">
+                <script>
+                    insertCarouselCard();
+                </script>
+                <div class="carousel-card__app">
+                    <img src="/images/plus-palette.png">
+                </div>
+            </div>
+            <div class="carousel-card" style="--bg: hsl(31, 15%, 54%); --text: hsl(0, 0%, 0%);">
+                <script>
+                    insertCarouselCard();
+                </script>
+            </div>
+            <div class="carousel-card" style="--bg: hsl(0, 0%, 0%); --text: hsl(200, 5%, 55%);">
+                <script>
+                    insertCarouselCard();
+                </script>
+            </div>
+        </div>
+    </div>
 
     <section>
         <p>
