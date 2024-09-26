@@ -182,21 +182,21 @@ const htmlText = `
     <h2 class="pr-heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
     <div class="pr-horizontal-wrapper">
         <span class="card card--selected">
-            <span class="card__desc">Regular use</span>
+            <span class="card__desc">Individual use</span>
             <span class="card__price">${DEFAULT_PRICE_REGULAR}</span>
             <a class="button-link" href="${Links.Redirect.REGULAR}" target="_blank" rel="noopener" data-s="d-card-regular">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
-            <span class="card__desc">Occasional use</span>
+            <span class="card__desc">Discount</span>
             <span class="card__price"><s class="card__price__strike"> ${DEFAULT_PRICE_REGULAR} </s>${DEFAULT_PRICE_DISCOUNT}</span>
             <a class="button-link" href="${Links.Redirect.DISCOUNT}" target="_blank" rel="noopener" data-s="d-card-discount">
                 <span class="button-link__text">Pay</span>
             </a>
         </span>
         <span class="card">
-            <span class="card__desc">Corporate users</span>
+            <span class="card__desc">Organizations</span>
             <span class="card__price">${DEFAULT_PRICE_CORP.split('/')[0]}<span class="card__price__time">/year</span></span>
             <a class="button-link" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-card-corp">
                 <span class="button-link__text">Pay</span>
