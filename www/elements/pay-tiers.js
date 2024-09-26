@@ -101,12 +101,15 @@ const locales = {
     cn: {
         heading: '支付 Dark Reader 使用费',
         heading_short: '使用费',
-        regular: '定期使用',
-        discount: '偶尔使用',
-        corporate: '企业用户',
+        regular: '个人使用',
+        discount: '折扣',
+        corporate: '对于组织',
         card: '借记卡或信用卡',
         card_short: '支付',
         more: '更多的选择',
+        one_time: '一次性付款',
+        pay_with: '',
+        price_per_user: '每位用户价格',
     },
 };
 
@@ -128,27 +131,42 @@ const htmlText = `
         </div>
         <div class="tiers">
             <label class="tier">
-                <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
-                <span class="tier__desc" data-text="regular">Regular use</span>
-                <span class="tier__connect"></span>
-                <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                <div class="tier__top">
+                    <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
+                    <span class="tier__desc" data-text="regular">Individual use</span>
+                    <span class="tier__connect"></span>
+                    <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                </div>
+                <div class="tier__bottom" data-text="one_time">
+                    One-time payment
+                </div>
+            </label>
+            <label class="tier" style="display: none;">
+                <div class="tier__top">
+                    <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
+                    <span class="tier__desc" data-text="discount">Discount</span>
+                    <span class="tier__connect"></span>
+                    <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
+                </div>
+                <div class="tier__bottom" data-text="one_time">
+                    One-time payment
+                </div>
             </label>
             <label class="tier">
-                <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
-                <span class="tier__desc" data-text="discount">Occasional use</span>
-                <span class="tier__connect"></span>
-                <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
-            </label>
-            <label class="tier">
-                <input type="radio" name="tier" value="${Tiers.CORPORATE}">
-                <span class="tier__desc" data-text="corporate">Corporate users</span>
-                <span class="tier__connect"></span>
-                <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
+                <div class="tier__top">
+                    <input type="radio" name="tier" value="${Tiers.CORPORATE}">
+                    <span class="tier__desc" data-text="corporate">Organizations</span>
+                    <span class="tier__connect"></span>
+                    <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
+                </div>
+                <div class="tier__bottom" data-text="price_per_user">
+                    Price per user
+                </div>
             </label>
         </div>
         <div class="button-wrapper">
             <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
-                <span class="button-link__text">Pay with <span class="button-link__text--paypal">PayPal</span></span>
+                <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
             </a>
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
                 <i class="button-link__card-icon js-card-icon"></i>
@@ -266,20 +284,30 @@ const cssText = `
     width: 100%;
 }
 .tier {
-    align-items: center;
     cursor: pointer;
     display: inline-flex;
-    height: 1.5rem;
+    flex-direction: column;
+    padding: 0.25rem 0;
+}
+.tier__top {
+    align-items: center;
+    display: flex;
     flex-direction: row;
     gap: 0.25rem;
+    line-height: 1;
     position: relative;
     transition: all 125ms;
     width: 100%;
 }
+.tier__bottom {
+    font-size: 0.75rem;
+    line-height: 1;
+    margin-left: 1.25rem;
+}
 .tier input {
     display: none;
 }
-.tier::before {
+.tier__top::before {
     background-color: transparent;
     border: 1px solid var(--color-control);
     border-radius: 50%;
@@ -289,17 +317,19 @@ const cssText = `
     flex: none;
     height: 1rem;
     line-height: 1rem;
+    position: relative;
     text-align: center;
+    top: 0.375rem;
     transition: all 125ms;
     width: 1rem;
 }
-.tier:has(:checked)::before {
+.tier__top:has(:checked)::before {
     background-color: var(--color-control);
 }
-.tier:has(:checked) .tier__connect {
+.tier__top:has(:checked) .tier__connect {
     border-bottom-color: white;
 }
-.tier:has(:checked)::after {
+.tier__top:has(:checked)::after {
     background-color: transparent;
     border-left: 2px solid white;
     border-bottom: 2px solid white;
@@ -308,7 +338,7 @@ const cssText = `
     height: 0.25rem;
     left: 0.175rem;
     position: absolute;
-    top: 0.5rem;
+    top: 0.625rem;
     transform-origin: 50% 50%;
     transform: rotate(-45deg);
     width: 0.5rem;
@@ -327,6 +357,8 @@ const cssText = `
     flex: auto;
     height: 0;
     opacity: 0.5;
+    position: relative;
+    top: 0.375rem;
     width: 100%;
 }
 .tier__price {
@@ -334,6 +366,8 @@ const cssText = `
     flex: none;
     font-weight: bold;
     justify-self: flex-end;
+    position: relative;
+    top: 0.375rem;
 }
 /*
 .tier:hover {
@@ -500,17 +534,20 @@ const cssText = `
 .currency-button {
     cursor: pointer;
     display: inline-block;
-    filter: grayscale(1) brightness(0.75);
+    filter: grayscale(1);
     flex: none;
+    opacity: 0.5;
 }
 .currency-button input {
     display: none;
 }
 .currency-button:has(:checked) {
     filter: none;
+    opacity: 1;
 }
 .currency-button:not(:has(:checked)):hover {
     filter: none;
+    opacity: 0.75;
 }
 .currencies__currency-connect {
     border-bottom: 1px dotted var(--color-text);
@@ -767,11 +804,11 @@ class PayTiersElement extends HTMLElement {
             });
             s('.js-link-paypal').each((node) => {
                 /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.PayPal.DISCOUNT[currency] : Links.PayPal.REGULAR[currency];
-                node.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE || currency === 'CNY');
+                node.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE);
             });
             s('.js-link-other').each((node) => {
                 /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.Redirect.DISCOUNT : tier === Tiers.CORPORATE ? Links.Redirect.CORPORATE : Links.Redirect.REGULAR;
-                node.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE && currency !== 'CNY');
+                node.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE);
             });
 
             s('.js-price-regular').each((node) => node.textContent = Prices.REGULAR[currency]);
