@@ -143,6 +143,7 @@ footer {
     overflow: auto;
     padding-bottom: 1rem;
     scroll-snap-type: x mandatory;
+    touch-action: pan-x;
     width: 20rem;
 }
 
@@ -151,80 +152,14 @@ footer {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1rem;
+    touch-action: pan-x;
 }
 
-.carousel-card {
-    background-color: var(--bg);
+.carousel-screenshot {
     border: 1px solid rgb(49, 46, 58);
     border-radius: 1rem;
     box-shadow: inset 0 0 0 0.25rem black;
-    color: var(--text);
+    display: inline-block;
     flex: none;
-    height: 20rem;
-    overflow: hidden;
-    position: relative;
-    scroll-snap-align: start;
     width: 12rem;
-}
-
-.carousel-card__name {
-    font-family: serif;
-    font-weight: 900;
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.carousel-card__date {
-    background-color: color-mix(in srgb, var(--bg), var(--text) 10%);
-    font-family: system-ui;
-    font-weight: bold;
-    font-size: 0.5rem;
-    line-height: 0.5rem;
-    margin: 0.5rem 0.25rem;
-    padding: 0.5rem 0.75rem;
-    position: relative;
-    text-align: left;
-
-    &::after {
-        content: "☰";
-        display: inline-block;
-        font-size: 0.75rem;
-        line-height: 0.5rem;
-        position: absolute;
-        right: 1rem;
-    }
-}
-
-.carousel-card__heading {
-    font-family: system-ui;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: 0.5rem 1rem;
-    text-align: left;
-}
-
-.carousel-card__article {
-    color: color-mix(in srgb, var(--text), var(--bg) 20%);
-    font-family: system-ui;
-    font-weight: normal;
-    font-size: 0.75rem;
-    margin: 0 1rem;
-    text-align: left;
-}
-
-.carousel-card__app {
-    background-color: black;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-
-    img {
-        border-top: 1px solid rgb(49, 46, 58);
-        display: inline-block;
-        width: 95%;
-    }
 }
