@@ -9,10 +9,12 @@
     }
 </script>
 
-Dark Reader is a set of fast and efficient algorithms.
-We work hard on improvements.
-Please <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">pay for using the extension</a> and support our work.
-Install our <a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">mobile apps</a>.
+<div class="intro">
+    Dear Reader,
+    we've put a lot of love and effort into creating this app, making it efficient and easy to use.
+    Your <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">payment</a>
+    helps us continue improving it with new features and improvements.
+</div>
 
 - [FAQ](#faq)
 - [Contacts](#contacts)

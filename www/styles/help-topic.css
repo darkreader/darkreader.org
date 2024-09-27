@@ -10,6 +10,11 @@ h2 {
     text-indent: -999rem;
 }
 
+.intro::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+}
+
 .page-grid-inside {
     display: flex;
     flex-direction: row;
