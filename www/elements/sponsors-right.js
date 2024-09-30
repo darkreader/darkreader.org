@@ -13,6 +13,7 @@ const hnURL = 'https://www.joinhoney.com/darkreader';
 const ddgURL = 'https://duckduckgo.com/browser?ref=darkreader';
 const payURL = '/support-us';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
+const edgeURL = 'https://www.microsoft.com/edge/emmx/darkreadercollaboration';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
@@ -30,7 +31,7 @@ const htmlText = `
 <section class="mob">
     <div class="mob-subtitle">
         <a class="mob-text-link" href="${safariURL}" target="_blank" rel="noopener" data-s="drios-side-text">
-            <span class="mob-text-link__darkreader">Dark Reader</span> for iOS
+            <span class="mob-text-link__darkreader">Dark Reader</span> Mobile
         </a>
     </div>
     <div class="mob-badge-wrapper">
@@ -38,10 +39,14 @@ const htmlText = `
             <img src="/images/app-store-badge.svg">
         </a>
     </div>
+    <div class="mob-badge-wrapper">
+        <a class="mob-badge-link mob-badge-link--android" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-badge">
+            <img src="/images/google-play-badge.svg">
+        </a>
+    </div>
     <div class="mob-description">
-        <strong>Take care of your eyes</strong><br>
-        Install Dark Reader for
-        your iPhone and iPad
+        <strong>Install Dark Reader</strong>
+        for your phone or tablet
     </div>
     <div class="mob-qr">
         <div class="mob-qr-wrapper">
@@ -568,6 +573,9 @@ section {
     position: relative;
     transition: all 125ms;
     width: 11rem;
+}
+.mob-badge-link--android {
+    border-radius: 0.4rem;
 }
 .mob-badge-link img {
     display: inline-block;

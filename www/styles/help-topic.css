@@ -22,6 +22,7 @@ h2 {
     justify-content: space-between;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    max-width: 36rem;
 }
 
 /*
@@ -149,13 +150,13 @@ html:not([data-p="p"]) darkreader-backers-top-short {
         width: 100%;
     }
 
-    .page-grid-side darkreader-questions {
+    .page-grid-side darkreader-mobile-side {
         opacity: 1;
         pointer-events: all;
         transition: opacity 500ms;
     }
     
-    .page-grid-side--visible darkreader-questions {
+    .page-grid-side--visible darkreader-mobile-side {
         opacity: 0;
         pointer-events: none;
     }
@@ -211,7 +212,7 @@ html:not([data-p="p"]) .pie-help {
     color: #baa2f0;
 }
 
-darkreader-questions {
+darkreader-mobile-side {
     left: 0;
     position: absolute;
     top: 0;
@@ -219,7 +220,7 @@ darkreader-questions {
     z-index: -1;
 }
 
-.android darkreader-questions {
+.android darkreader-mobile-side {
     display: none;
 }
 

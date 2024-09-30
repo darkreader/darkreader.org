@@ -108,7 +108,7 @@ class BackerTopShortElement extends HTMLElement {
                 `[2. Please support our hard work by making a small payment.](${supportURL})`,
                 `[Pay now](${supportURL})`,
             ]),
-            `3. Install our app on your iPhone. Simply scan the QR code.`,
+            `3. Install our app on your phone. Simply scan the QR code.`,
             `![QR code](/images/qr-code.png)`,
             `Enjoy browsing with dark mode!`,
             ...(isPCountry ? [
