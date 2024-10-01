@@ -3,7 +3,6 @@
 import './sponsors-graph.js';
 import './sponsors-top-short.js';
 import './pay-tiers.js';
-import {country, isEUCountry, isHCountry, isPCountry} from './locales.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -12,20 +11,23 @@ import {
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 const edgeURL = 'https://www.microsoft.com/edge/emmx/darkreadercollaboration';
 
-const isEdge = navigator.userAgent.includes('Edg');
-const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');
-const language = navigator.language || 'en';
-
-const buttonIcon = `<span class="b-icon${isEdge ? ' b-icon--edge' : isSafari ? ' b-icon--safari' : ''}"></span>`;
+const locales = {
+    cn: {
+        breaking_news: '突发新闻',
+        is_now_available_for: '突发新闻',
+        check_out_exclusive: '查看独家高级主题和自定义颜色',
+        simply_scan: '只需扫描二维码即可在手机上安装',
+    },
+};
 
 const htmlText = `
 <section class="mob">
     <div class="mob-subtitle">
-        <div class="mob-subtitle__news">
+        <div class="mob-subtitle__news" data-text="breaking_news">
             Breaking News
         </div>
         <a class="mob-text-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text">
-            <span class="mob-text-link__darkreader">Dark Reader</span> is now<br>available for
+            <span class="mob-text-link__darkreader">Dark Reader</span> <span data-text="is_now_available_for">is now<br>available for</span>
             <span class="mob-text-link__android">Android</span>!
         </a>
     </div>
@@ -35,13 +37,13 @@ const htmlText = `
         </a>
     </div>
     <div class="mob-description">
-        <a href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text">
+        <a href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text" data-text="check_out_exclusive">
             Check out exclusive <strong>Premium Themes & Custom Colors</strong>
         </a>
     </div>
     <div class="mob-qr-2">
         <img class="just-qr" src="/images/qr-code.png">
-        <div class="mob-description">
+        <div class="mob-description" data-text="simply_scan">
             Simply <strong>scan the QR code</strong> to install on your phone
         </div>
     </div>
@@ -65,8 +67,6 @@ const htmlText = `
     </div>
 </section>
 `;
-
-const outlineFilter = 'drop-shadow(0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(-0.0625rem 0 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 0.0625rem 0 hsla(0, 0%, 100%, 1)) drop-shadow(0 -0.0625rem 0 hsla(0, 0%, 100%, 1))';
 
 const cssText = `
 a {
@@ -269,6 +269,12 @@ class MobileSideElement extends HTMLElement {
                 el.classList.toggle('mob-screenshot--visible', i === j);
             });
         }, 4000);
+
+        if (document.documentElement.lang === 'zh-CN') {
+            Object.entries(locales.cn).forEach(([key, text]) => {
+                shadowRoot.querySelectorAll(`[data-text="${key}"]`).forEach((node) => node.textContent = text);
+            });
+        }
     }
 }
 

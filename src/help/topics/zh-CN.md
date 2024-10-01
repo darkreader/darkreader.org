@@ -9,11 +9,9 @@
     }
 </script>
 
-Dark Reader 是一套快速高效的算法。
-我们努力改进。
-重要的是您<a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">为使用扩展程序付费</a>并支持我们的工作。
-安装我们的<a data-s="drios-help-top" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180" target="_blank" rel="noopener">iPhone 和 iPad 应用程序</a>。
-准备好了吗？我们开始吧。
+亲爱的读者，我们投入了大量心血和精力来打造这款应用，让它变得高效易用。您的
+<a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">付款</a>
+有助于我们继续改进它，推出新功能和改进。
 
 - [常见问题](#faq)
 - [联络方式](#contacts)
