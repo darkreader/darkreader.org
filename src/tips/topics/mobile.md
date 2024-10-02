@@ -1,5 +1,14 @@
 # How to install Dark Reader for mobile devices
 
+## QR Code
+
+Simply scan the following QR code with your phone.
+
+<img src="/images/qr-code.png" style="width: 10rem;">
+
+You will be prompted to install our iOS app from the App Store,
+or Microsoft Edge browser for Android that will include our extension.
+
 ## iOS and iPadOS
 
 <a href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone" target="_blank"
@@ -58,19 +67,31 @@ You can choose from many color presets, or set lovely text and background colors
 
 ## Android
 
-### Firefox
+### Microsoft Edge
 
-Mozilla Firefox for Android supports mobile extensions.
+<a href="https://www.microsoft.com/edge/emmx/darkreadercollaboration" target="_blank"
+    rel="noopener" data-s="drand-tips-badge">
+    <img src="/images/google-play-badge.svg" width="200">
+</a>
+
+Microsoft Edge for Android **supports Chromium extensions**.
+
+- Scan the following QR code with your Android phone:
+
+<img src="/images/qr-code.png" style="margin-left: 2.5rem; width: 5rem;">
+
+- You will be redirected to Google Play. Click **Install**.
+- Follow the initial setup. Dark Reader should be included by default.
 
 <div>
     <span class="blog-mobile-android-scr">
-        <img src="/images/dr-ff-android-1.png">
+        <img src="/images/plus-screen-1.png">
     </span>
     <span class="blog-mobile-android-scr">
-        <img src="/images/dr-ff-android-2.png">
+        <img src="/images/plus-screen-3.png">
     </span>
     <span class="blog-mobile-android-scr">
-        <img src="/images/dr-ff-android-3.webp">
+        <img src="/images/plus-screen-2.png">
     </span>
 </div>
 <style>
@@ -89,31 +110,47 @@ Mozilla Firefox for Android supports mobile extensions.
         content: "";
         display: inline-block;
         height: 0.75rem;
-        left: 0.375rem;
+        left: calc(50% - 0.375rem);
         position: absolute;
         top: 0.375rem;
         width: 0.75rem;
+    }
+    .blog-mobile-android-scr--left-notch::after {
+        left: 0.375rem;
     }
     .blog-mobile-android-scr img {
         width: 11rem;
     }
 </style>
 
+If you already have Edge for Android installed,
+go to **Extensions** menu and install Dark Reader from the list.
+
+*If you haven't been redirected automatically, simply install Edge from the
+<a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" target="_blank"
+    rel="noopener" data-s="drand-tips-link">Play Store</a>.*
+
+### Firefox
+
+Mozilla Firefox for Android supports mobile extensions.
+
+<div>
+    <span class="blog-mobile-android-scr">
+        <img src="/images/dr-ff-android-1.png">
+    </span>
+    <span class="blog-mobile-android-scr">
+        <img src="/images/dr-ff-android-2.png">
+    </span>
+    <span class="blog-mobile-android-scr">
+        <img src="/images/dr-ff-android-3.webp">
+    </span>
+</div>
+
 - First you need to [install Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox).
 - Open the browser, click **Menu icon** (three dots in the bottom-right corner).
 - Click **Add-ons**, find Dark Reader in the list, click **+** (plus icon).
 - Alternatively you can visit [Dark Reader's page](https://addons.mozilla.org/en-US/firefox/addon/darkreader/) in the Firefox Add-ons store.
 - Now click **Menu icon**, **Add-ons**. Dark Reader will appear there.
-
-### Kiwi
-
-Kiwi is another Android browser, which supports Chromium extensions. It has many good reviews.
-
-- [Install Kiwi from Google Play](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser).
-- Open the browser.
-- Go to [Dark Reader's Chrome Web Store page](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh).
-- Click **Install for Chrome**.
-- The extension will appear at the bottom of the browser's Menu.
 
 <style>
     darkreader-ios-static,
