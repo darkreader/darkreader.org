@@ -13,7 +13,7 @@
     Dear Reader,
     we've put a lot of love and effort into creating this app, making it efficient and easy to use.
     Your <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">payment</a>
-    helps us continue improving it with new features and improvements.
+    helps us continue enhancing it with new features and improvements.
 </div>
 
 - [FAQ](#faq)
