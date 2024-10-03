@@ -114,7 +114,6 @@ const locales = {
 };
 
 const htmlText = `
-<div class="bg"></div>
 <section class="pr">
     <div class="pr-wrapper">
         <h2 class="pr-heading" data-text="heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
@@ -178,32 +177,6 @@ const htmlText = `
         </div>
     </div>
 </section>
-<section class="pr-horizontal">
-    <h2 class="pr-heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
-    <div class="pr-horizontal-wrapper">
-        <span class="card card--selected">
-            <span class="card__desc">Individual use</span>
-            <span class="card__price">${DEFAULT_PRICE_REGULAR}</span>
-            <a class="button-link" href="${Links.Redirect.REGULAR}" target="_blank" rel="noopener" data-s="d-card-regular">
-                <span class="button-link__text">Pay</span>
-            </a>
-        </span>
-        <span class="card">
-            <span class="card__desc">Discount</span>
-            <span class="card__price"><s class="card__price__strike"> ${DEFAULT_PRICE_REGULAR} </s>${DEFAULT_PRICE_DISCOUNT}</span>
-            <a class="button-link" href="${Links.Redirect.DISCOUNT}" target="_blank" rel="noopener" data-s="d-card-discount">
-                <span class="button-link__text">Pay</span>
-            </a>
-        </span>
-        <span class="card">
-            <span class="card__desc">Organizations</span>
-            <span class="card__price">${DEFAULT_PRICE_CORP.split('/')[0]}<span class="card__price__time">/year</span></span>
-            <a class="button-link" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-card-corp">
-                <span class="button-link__text">Pay</span>
-            </a>
-        </span>
-    </div>
-</section>
 <section class="pr-small">
     <span class="pr-optional">Optional</span>
     <h2 class="pr-heading" data-text="heading_short">User Fee</h2>
@@ -229,15 +202,6 @@ const cssText = `
     max-width: 35.5rem;
     min-width: 16rem;
     position: relative;
-}
-.bg {
-    background-image: linear-gradient(to left, transparent, black, transparent);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
 }
 .pr-wrapper {
     margin: 0 auto;
@@ -595,107 +559,14 @@ const cssText = `
 .flag-au {
     background-position-x: -144px;
 }
-.pr-horizontal {
-    display: none;
-}
 :host {
     container-type: inline-size;
-}
-@container (width > 32rem) {
-    .bg {
-        display: none;
-    }
-    .pr {
-        display: none;
-    }
-    .pr-horizontal {
-        display: block;
-    }
-    .pr-heading {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .pr-horizontal-wrapper {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: space-evenly;
-        margin-top: 0.5rem;
-    }
-    .card {
-        align-items: center;
-        background-color: #121a1f;
-        border: 1px solid var(--color-control);
-        border-radius: 0.25rem;
-        box-shadow: 0 0 1rem rgb(0 0 0 / 50%);
-        display: flex;
-        flex-direction: column;
-        max-width: 10rem;
-        min-width: 8.5rem;
-    }
-    .card__price {
-        color: white;
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 1rem 0;
-    }
-    .card__price__time {
-        color: var(--color-text);
-        font-size: 1rem;
-    }
-    .card__price__strike {
-        color: var(--color-text);
-        font-size: 1rem;
-        position: relative;
-        text-decoration: none;
-    }
-    .card__price__strike::after {
-        border-top: 2px solid var(--color-highlight);
-        bottom: 0;
-        content: "";
-        height: 40%;
-        left: 0;
-        position: absolute;
-        transform: rotate(-10deg);
-        width: 100%;
-    }
-    .card__desc {
-        border-bottom: 1px solid var(--color-control);
-        color: white;
-        display: inline-block;
-        font-weight: bold;
-        padding: 0.5rem 0;
-        text-align: center;
-        width: 100%;
-    }
-    .card--selected .card__desc {
-        background-color: var(--color-control);
-    }
-    .button-link {
-        margin: 0 1rem 1rem 1rem;
-        width: 8rem;
-    }
-    .card:not(.card--selected) .button-link {
-        background-color: var(--color-bg);
-        border: 1px solid var(--color-control);
-    }
-    .button-link__text {
-        font-size: 1.25rem;
-        font-weight: bold;
-        -webkit-text-stroke: 0.0625rem;
-        transform: skewX(-10deg);
-    }
 }
 
 .pr-small {
     display: none;
 }
 :host([small]) .pr {
-    display: none;
-}
-:host([small]) .pr-horizontal {
     display: none;
 }
 :host([small]) .bg {
