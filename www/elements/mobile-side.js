@@ -22,21 +22,22 @@ const locales = {
 
 const htmlText = `
 <section class="mob">
-    <div class="mob-subtitle">
-        <div class="mob-subtitle__news" data-text="breaking_news">
-            Breaking News
-        </div>
+    <div class="mob-picture">
+        <div class="mob-picture__text mob-picture__text-1">Reduce the brightness<br>of your screen</div>
+        <div class="mob-picture__text mob-picture__text-2">with <strong>Dark Reader Mobile</strong></div>
+    </div>
+    <div class="mob-subtitle" style="display: none;">
         <a class="mob-text-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text">
-            <span class="mob-text-link__darkreader">Dark Reader</span> <span data-text="is_now_available_for">is now<br>available for</span>
+            <span class="mob-text-link__darkreader">Now available for</span>
             <span class="mob-text-link__android">Android</span>!
         </a>
     </div>
-    <div class="mob-badge-wrapper">
+    <div class="mob-badge-wrapper" style="display: none;">
         <a class="mob-badge-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-badge">
             <img src="/images/google-play-badge.svg">
         </a>
     </div>
-    <div class="mob-description">
+    <div class="mob-description" style="display: none;">
         <a href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text" data-text="check_out_exclusive">
             Check out exclusive <strong>Premium Themes & Custom Colors</strong>
         </a>
@@ -54,13 +55,18 @@ const htmlText = `
             <img src="/images/plus-screen-2.png" class="mob-screenshot">
         </div>
     </div>
+    <div class="mob-badge-wrapper">
+        <a class="mob-badge-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-badge">
+            <img src="/images/google-play-badge.svg">
+        </a>
+    </div>
     <div class="mob-description">
         Browser extensions for Android
         are brought to you by<br>
         <i class="mob-description__edge-icon"></i> <strong>Microsoft Edge</strong>
     </div>
-    <div class="mob-description">
-        Having iPhone or iPad?
+    <div class="mob-description mob-description--last">
+        Having iPhone or iPad?<br>
         <a href="${safariURL}" target="_blank" rel="noopener" data-s="drios-side-text">
             Download on the App Store
         </a>
@@ -69,6 +75,11 @@ const htmlText = `
 `;
 
 const cssText = `
+:host {
+    --color-bg: black;
+    --color-text: white;
+    color: var(--color-text);
+}
 a {
     color: var(--color-text);
     outline: none;
@@ -98,9 +109,12 @@ section {
 
 .mob {
     align-items: center;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
     gap: 1rem;
     margin-top: 1rem;
-    width: 14rem;
+    padding-bottom: 1.5rem;
+    width: 16rem;
 }
 .mob-subtitle {
     font-weight: bold;
@@ -163,6 +177,8 @@ section {
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 1), 0 0 0.75rem var(--color-text);
 }
 .mob-description {
+    box-sizing: border-box;
+    padding: 0 0.5rem;
     text-align: center;
     width: 100%;
 }
@@ -175,10 +191,21 @@ section {
     height: 1rem;
     width: 1rem;
 }
+.mob-description--last {
+    color: #ffffff88;
+    font-size: 0.75rem;
+    a {
+        color: #ffffff88;
+    }
+    a:hover {
+        color: white;
+    }
+}
 .mob-qr-2 {
     align-items: center;
     display: flex;
     flex-direction: row;
+    padding: 0.5rem 0.75rem;
 }
 .just-qr {
     border-radius: 5%;
@@ -243,6 +270,44 @@ section {
 }
 .mob-screenshot:not(:first-child).mob-screenshot--visible {
     opacity: 1;
+}
+.mob-picture {
+    background-image: url(/images/night-reading.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 16rem;
+    /* mix-blend-mode: lighten; */
+    position: relative;
+    width: 16rem;
+}
+.mob-picture__text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 1rem black, 0 0 0.5rem black;
+    width: 100%;
+}
+.mob-picture__text-1 {
+    top: 0.5rem;
+}
+.mob-picture__text-2 {
+    bottom: 0rem;
+}
+.mob-picture__text strong {
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* -webkit-text-stroke: 0.0625rem; */
+}
+
+@media (max-height: 50rem) {
+    .mob-qr {
+        display: none;
+    }
 }
 `;
 
