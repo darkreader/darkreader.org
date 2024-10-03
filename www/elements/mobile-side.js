@@ -17,14 +17,20 @@ const locales = {
         is_now_available_for: '突发新闻',
         check_out_exclusive: '查看独家高级主题和自定义颜色',
         simply_scan: '只需扫描二维码即可在手机上安装',
+        reduce_brightness: '降低手机屏幕亮度',
+        with_dark_mobile: '使用我们的手机应用'
     },
 };
 
 const htmlText = `
 <section class="mob">
     <div class="mob-picture">
-        <div class="mob-picture__text mob-picture__text-1">Reduce the brightness<br>of your screen</div>
-        <div class="mob-picture__text mob-picture__text-2">with <strong>Dark Reader Mobile</strong></div>
+        <div class="mob-picture__text mob-picture__text-1" data-text="reduce_brightness">
+            Reduce your phone screen brightness
+        </div>
+        <div class="mob-picture__text mob-picture__text-2" data-text="with_dark_mobile">
+            with <strong>Dark Reader Mobile app</strong>
+        </div>
     </div>
     <div class="mob-subtitle" style="display: none;">
         <a class="mob-text-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text">
