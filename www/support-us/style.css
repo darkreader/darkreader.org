@@ -22,7 +22,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     color: var(--color-accent);
 }
 
@@ -38,6 +39,10 @@ a:hover {
     color: var(--color-text-highlight);
 }
 
+ul {
+    padding-left: 1rem;
+}
+
 ::selection {
     background-color: var(--color-accent);
     color: var(--color-text-highlight);
@@ -49,6 +54,14 @@ a:hover {
 
 darkreader-pay-tiers {
     width: min-content;
+}
+
+.horizontal-container {
+    column-gap: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0rem;
 }
 
 footer {
