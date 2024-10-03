@@ -17,9 +17,9 @@ const Tiers = {
 
 const Links = {
     Redirect: {
-        REGULAR: payURL,
-        DISCOUNT: `${payURL}#tier-discount`,
-        CORPORATE: `${payURL}#tier-corporate`,
+        REGULAR: 'mailto:support@darkreader.org?subject=[Payment]%20Your%20Question',
+        DISCOUNT: `mailto:support@darkreader.org?subject=[Discount]%20Your%20Question`,
+        CORPORATE: `mailto:support@darkreader.org?subject=[Corporate]%20Your%20Request`,
     },
     Stripe: {
         REGULAR: 'https://buy.stripe.com/fZe15k7um5Em7scdQX',
@@ -172,7 +172,7 @@ const htmlText = `
                 <span class="button-link__text" data-text="card">Debit or Credit Card</span>
             </a>
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
-                <span class="button-link__text" data-text="more">More options</span>
+                <span class="button-link__text" data-text="more">Contact us</span>
             </a>
         </div>
     </div>
@@ -190,7 +190,7 @@ const htmlText = `
             <span class="button-link__text" data-text="card_short">Pay with Card</span>
         </a>
         <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-small-other">
-            <span class="button-link__text" data-text="more">More options</span>
+            <span class="button-link__text" data-text="more">Contact us</span>
         </a>
     </div>
 </section>
