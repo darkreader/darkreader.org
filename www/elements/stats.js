@@ -1,7 +1,7 @@
 // @ts-check
 import {country, isPCountry} from './locales.js';
 
-const ERROR_HANDLING_ENABLED = false;
+const ERROR_HANDLING_ENABLED = true;
 
 /** @type {WeakSet<Element>} */
 const handledElements = new WeakSet();
