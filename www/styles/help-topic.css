@@ -382,3 +382,11 @@ html:not([data-p="p"]) .v2-banner-pie {
 html:not([data-p="p"]) .v2-banner-mobile {
     width: 100%;
 }
+
+.android .v2-secondary-banner {
+    display: none;
+}
+
+.android .v2-help-tiers {
+    --color-bg: unset;
+}
