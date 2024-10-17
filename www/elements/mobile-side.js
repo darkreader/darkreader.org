@@ -310,10 +310,15 @@ section {
     /* -webkit-text-stroke: 0.0625rem; */
 }
 
+/*
 @media (max-height: 50rem) {
     .mob-qr {
         display: none;
     }
+}
+*/
+.mob-qr {
+    display: none;
 }
 `;
 

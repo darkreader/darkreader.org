@@ -78,6 +78,9 @@ const htmlText = `
                 </span>
             </div>
         </a>
+        <div class="pie-rating">
+            <span class="stars">★★★★★</span> 4.8 stars on Chrome Web Store
+        </div>
     </div>
 </section>`;
 
@@ -330,6 +333,7 @@ const cssText = `
     text-transform: uppercase;
 }
 .pie-top-message {
+    color: var(--color-text);
     text-align: center;
     width: 16rem;
 }
@@ -339,6 +343,15 @@ const cssText = `
 }
 .pie-top-message .text-link:hover {
     color: white;
+}
+.pie-rating {
+    color: var(--color-text);
+    font-size: 0.75rem;
+    line-height: 1;
+    margin-top: 0.25rem;
+}
+.stars {
+    color: #fd2;
 }
 :host([horizontal]) .container {
     height: 9rem;

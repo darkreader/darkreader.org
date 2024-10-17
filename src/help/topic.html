@@ -20,12 +20,55 @@
 </head>
 
 <body class="page-grid-body">
+    <div class="v2-help-body">
+        <div class="v2-help-header">
+            <span class="v2-help-header-wrapper">
+                <a class="v2-help-logo-link" href="../">$HELP - Dark Reader</a>
+                <span class="v2-help-title">$HELP</span>
+            </span>
+            <span class="v2-help-header-nav"></span>
+        </div>
+        <div class="v2-help-banners">
+            <div class="v2-help-tiers">
+                <darkreader-pay-tiers verbose></darkreader-pay-tiers>
+                <script type="module" src="/elements/pay-tiers.js"></script>
+            </div>
+            <div class="v2-secondary-banners">
+                <div class="v2-secondary-banner v2-banner-mobile">
+                    <darkreader-mobile-top-short></darkreader-mobile-top-short>
+                    <script type="module" src="/elements/mobile-top-short.js"></script>
+                </div>
+                <div class="v2-secondary-banner v2-banner-pie">
+                    <darkreader-backers-top-short></darkreader-backers-top-short>
+                    <script type="module" src="/elements/sponsors-top-short.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="page-grid-header">
-        <a class="help-header-logo" href="../">$HELP – Dark Reader</a>
+        <a class="help-header-logo" href="../">$HELP - Dark Reader</a>
     </header>
     <article class="page-grid-content">
         <h1>$HELP — Dark Reader</h1>
         $TOPIC
+        <script>
+            (() => {
+                const script = document.currentScript;
+                const list = document.querySelector('.page-grid-content > ul');
+                if (!script || !list) {
+                    return;
+                }
+                const nav = document.querySelector('.v2-help-header-nav');
+                list.querySelectorAll('a').forEach((a) => {
+                    const copy = document.createElement('a');
+                    copy.classList.add('v2-help-header-link');
+                    copy.href = a.getAttribute('href');
+                    copy.textContent = a.textContent;
+                    nav.append(copy);
+                });
+                list.classList.add('v2-list-copied');
+            })();
+        </script>
         <darkreader-pay-tiers></darkreader-pay-tiers>
         <script type="module" src="/elements/pay-tiers.js"></script>
         <darkreader-backers-header></darkreader-backers-header>
@@ -51,7 +94,7 @@
         <script defer>
             (() => {
                 const check = () => {
-                    const box = document.querySelector('.page-grid-inside').getBoundingClientRect();
+                    const box = document.querySelector('.page-grid-content').getBoundingClientRect();
                     document.querySelector('.page-grid-side').classList.toggle('page-grid-side--visible', box.top < 0);
                 };
 
@@ -63,22 +106,6 @@
         </script>
     </aside>
     <aside class="page-grid-left">
-        <ul></ul>
-        <script>
-            (() => {
-                const script = document.currentScript;
-                const list = document.querySelector('.page-grid-content > ul');
-                if (!script || !list) {
-                    return;
-                }
-                const parent = script.parentElement;
-                const placeholder = parent.querySelector('ul');
-                const copy = list.cloneNode(true);
-                copy.classList.add('nav');
-                placeholder.replaceWith(copy);
-                list.classList.add('list-copied');
-            })();
-        </script>
         <darkreader-ios-static></darkreader-ios-static>
         <script type="module" src="/elements/ios-static.js"></script>
     </aside>

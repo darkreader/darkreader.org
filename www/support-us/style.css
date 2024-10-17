@@ -16,7 +16,7 @@ html {
 body {
     color: var(--color-text);
     font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
-    max-width: 48em;
+    max-width: 32em;
     margin: 0 auto;
     padding: 1em
 }
@@ -67,4 +67,5 @@ darkreader-pay-tiers {
 footer {
     font-size: 0.75rem;
     margin-top: 1rem;
+    max-width: 32rem;
 }

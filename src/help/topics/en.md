@@ -16,6 +16,7 @@
     helps us continue enhancing it with new features and improvements.
 </div>
 
+- [Quick Guide](#video)
 - [FAQ](#faq)
 - [Contacts](#contacts)
 - [Tips for advanced users](../../tips/)

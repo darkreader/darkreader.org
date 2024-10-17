@@ -110,6 +110,8 @@ const locales = {
         one_time: '一次性付款',
         pay_with: '',
         price_per_user: '每位用户价格',
+        region_currency: '货币',
+        we_take_care: '我们呵护您的眼睛，并提供尽可能最佳的暗黑模式。您的付款可帮助我们继续改进。',
     },
 };
 
@@ -117,7 +119,12 @@ const htmlText = `
 <section class="pr">
     <div class="pr-wrapper">
         <h2 class="pr-heading" data-text="heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
+        <div class="pr-description" data-text="we_take_care">
+            We take care of your eyes and provide the best dark mode possible.
+            Your payment helps us continue making enhancements.
+        </div>
         <div class="currencies">
+            <span class="currencies__text" data-text="region_currency">Currency</span>
             ${currencyButton('USD', 'flag-us')}
             ${currencyButton('EUR', 'flag-eu')}
             ${currencyButton('GBP', 'flag-uk')}
@@ -241,6 +248,12 @@ const cssText = `
     width: 2.75rem;
 }
 */
+.pr-description {
+    display: none;
+    line-height: 1;
+    margin: 0.25rem 0 0.5rem 0;
+    text-align: center;
+}
 .tiers {
     align-items: stretch;
     display: flex;
@@ -513,6 +526,10 @@ const cssText = `
     filter: none;
     opacity: 0.75;
 }
+.currencies__text {
+    display: none;
+    font-weight: 300;
+}
 .currencies__currency-connect {
     border-bottom: 1px dotted var(--color-text);
     /* display: inline-block; */
@@ -637,6 +654,47 @@ const cssText = `
     font-weight: normal;
     -webkit-text-stroke: unset;
     transform: none;
+}
+
+/* Verbose */
+:host([verbose]) {
+    container-type: normal;
+
+    .pr {
+        max-width: 100%;
+    }
+    .pr-wrapper {
+        margin: 0 auto;
+        max-width: 100%;
+        width: 32rem;
+    }
+    .pr-heading {
+        font-size: 2.1rem;
+        line-height: 1;
+        text-align: center;
+        -webkit-text-stroke: 0.125rem;
+    }
+    .pr-description {
+        display: block;
+    }
+    .currencies {
+        justify-content: center;
+    }
+    .currencies__text {
+        display: inline-block;
+    }
+    .tiers {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+    .tier {
+        padding: 0 1rem;
+        width: 100%;
+    }
+    .button-wrapper {
+        flex-direction: row;
+    }
 }
 `;
 

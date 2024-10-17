@@ -2,6 +2,7 @@
     display: grid;
     gap: 0 2rem;
     grid:
+        "v2 v2" auto
         "header side" auto
         "inside side" auto
         "content side" auto
@@ -46,6 +47,7 @@
     .page-grid-body {
         gap: 0 1rem;
         grid:
+            "v2" auto
             "header" auto
             "inside" auto
             "content" auto
