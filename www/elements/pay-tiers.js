@@ -209,6 +209,7 @@ const cssText = `
     max-width: 35.5rem;
     min-width: 16rem;
     position: relative;
+    width: 100%;
 }
 .pr-wrapper {
     margin: 0 auto;
@@ -576,9 +577,6 @@ const cssText = `
 .flag-au {
     background-position-x: -144px;
 }
-:host {
-    container-type: inline-size;
-}
 
 .pr-small {
     display: none;
@@ -656,10 +654,11 @@ const cssText = `
     transform: none;
 }
 
-/* Verbose */
-:host([verbose]) {
-    container-type: normal;
-
+/* Wide */
+:host {
+    container-type: inline-size;
+}
+@container (width >= 32rem) {
     .pr {
         max-width: 100%;
     }

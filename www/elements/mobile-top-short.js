@@ -62,8 +62,11 @@ const cssText = `
     --phone-width: 15rem;
 }
 .container {
+    align-items: center;
     display: flex;
     flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
     position: relative;
 }
 .phone {
@@ -78,7 +81,6 @@ const cssText = `
     flex-direction: column;
     height: var(--phone-height);
     justify-content: center;
-    margin-right: 2rem;
     position: relative;
     width: var(--phone-width);
 }
@@ -199,6 +201,20 @@ const cssText = `
     color: var(--color-highlight);
     font-size: 1.2rem;
     -webkit-text-stroke: 0.0625rem;
+}
+:host {
+    container-type: inline-size;
+    width: 100%;
+}
+@container (width < 28rem) {
+    .container {
+        gap: 1rem;
+    }
+}
+@container (width < 25rem) {
+    .links-block {
+        display: none;
+    }
 }
 `;
 

@@ -16,7 +16,7 @@ html {
 body {
     color: var(--color-text);
     font-family: Open Sans, Helvetica Neue, Segoe UI, Ubuntu, sans-serif;
-    max-width: 32em;
+    max-width: 39em;
     margin: 0 auto;
     padding: 1em
 }
@@ -50,10 +50,6 @@ ul {
 
 .banner__image {
     max-width: 32rem;
-}
-
-darkreader-pay-tiers {
-    width: min-content;
 }
 
 .horizontal-container {

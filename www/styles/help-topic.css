@@ -300,7 +300,7 @@ iframe {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     row-gap: 0.5rem;
 }
 

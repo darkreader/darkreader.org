@@ -196,7 +196,7 @@ const cssText = `
 }
 .pie-image-link {
     background-color: var(--color-pie);
-    background-image: url(/images/pie-logo-white.svg), linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
+    background-image: url(/images/pie-logo-white.svg), linear-gradient(135deg, #de7aec 14%, #696af6 58%, #38b4a8);
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: 6rem auto, cover;
@@ -215,7 +215,7 @@ const cssText = `
 .pie-button-link {
     background-image: linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
     border: none;
-    margin-top: 0.25rem;
+    margin: 0.5rem 0;
     padding: 0.0625rem;
     width: auto;
 }
@@ -348,37 +348,46 @@ const cssText = `
     color: var(--color-text);
     font-size: 0.75rem;
     line-height: 1;
-    margin-top: 0.25rem;
 }
 .stars {
     color: #fd2;
 }
-:host([horizontal]) .container {
-    height: 9rem;
-    padding: 1rem;
-    position: relative;
+:host {
+    container-type: inline-size;
+    width: 100%;
 }
-:host([horizontal]) br {
-    display: none;
-}
-:host([horizontal]) .pie-block {
-    align-items: flex-start;
-}
-:host([horizontal]) .pie-text {
-    width: 20rem;
-}
-:host([horizontal]) .pie-bottom {
-    align-items: flex-start;
-    left: calc(50% - 6.5rem);
-    position: absolute;
-    top: 3.5rem;
-}
-:host([horizontal]) .pie-top-message {
-    text-align: left;
-    width: 20rem;
-}
-:host([horizontal]) .pie-button-link {
-    margin-top: 0.5rem;
+@container (width >= 28rem) {
+    .container {
+        height: 9rem;
+        padding: 1rem;
+        position: relative;
+    }
+    br {
+        display: none;
+    }
+    .pie-block {
+        align-items: flex-start;
+    }
+    .pie-text {
+        width: 20rem;
+    }
+    .pie-bottom {
+        align-items: flex-start;
+        left: calc(50% - 6rem);
+        position: absolute;
+        top: 3.5rem;
+    }
+    .pie-top-message {
+        text-align: left;
+        width: 20rem;
+    }
+    .pie-button-link {
+        margin-top: 0.5rem;
+    }
+    .pie-badge-link {
+        height: 7rem;
+        width: 7rem;
+    }                            
 }
 `;
 
