@@ -409,3 +409,7 @@ html:not([data-p="p"]) .v2-banner-mobile {
     grid-area: left;
     width: 100%;
 }
+
+html:not([data-p="p"]) .v2-help-banners {
+    grid: "large" auto "right" auto / auto;
+}
