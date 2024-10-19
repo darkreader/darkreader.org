@@ -384,12 +384,14 @@ const cssText = `
     }
     .pie-button-link {
         margin: 1rem 0;
-        padding: 1rem;
+    }
+    .pie-button-link-wrapper {
+        padding: 0 1.25rem;
     }
     .pie-badge-link {
         height: 7rem;
         width: 7rem;
-    }                            
+    }
 }
 `;
 
