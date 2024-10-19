@@ -38,7 +38,7 @@ const htmlText = `
             supports browser<br>
             add-ons on <i class="android-icon"></i> <strong>Android</strong>
             <div class="badge-wrapper">
-                <a class="badge-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-top-short">
+                <a class="badge-link badge-link--android" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-top-short">
                     <img src="/images/google-play-badge.svg">
                 </a>
             </div>
@@ -151,6 +151,9 @@ const cssText = `
     transition: all 125ms;
     width: 11rem;
     z-index: 1;
+}
+.badge-link--android {
+    border-radius: 0.4rem;
 }
 .badge-link img {
     display: inline-block;
