@@ -213,7 +213,8 @@ const cssText = `
     margin-top: 0.125rem;
 }
 .pie-button-link {
-    background-image: linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8);
+    background-color: var(--color-bg);
+    background-image: var(--pie-gradient, linear-gradient(135deg, #ad4abb 14%, #696af6 58%, #38b4a8));
     border: none;
     margin: 0.5rem 0;
     padding: 0.0625rem;

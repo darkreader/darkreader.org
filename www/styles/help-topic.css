@@ -321,10 +321,6 @@ iframe {
     color: white;
 }
 
-.v2-help-banners {
-    margin: 1rem 0;
-}
-
 .v2-help-tiers {
     --color-bg: #0f1319;
     align-items: center;
@@ -355,8 +351,13 @@ iframe {
 }
 
 .v2-banner-pie {
-    --color-bg: #29275f;
-    --color-text: #a3a9ff;
+    --color-bg: #1f2342;
+    --color-text: #a3b7ff;
+
+    darkreader-backers-top-short {
+        --color-bg: #653fa0;
+        --pie-gradient: none;
+    }
 }
 
 html:not([data-p="p"]) .v2-banner-pie {
@@ -387,6 +388,24 @@ html:not([data-p="p"]) .v2-banner-mobile {
     display: none;
 }
 
-.android .v2-help-tiers {
-    --color-bg: unset;
+.v2-help-banners {
+    display: grid;
+    gap: 1rem;
+    grid: "large large" auto "left right" auto / auto auto;
+    margin: 1rem 0;
+}
+
+.v2-help-tiers {
+    grid-area: large;
+    width: 100%;
+}
+
+.v2-banner-mobile {
+    grid-area: right;
+    width: 100%;
+}
+
+.v2-banner-pie {
+    grid-area: left;
+    width: 100%;
 }
