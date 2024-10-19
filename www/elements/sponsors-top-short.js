@@ -383,7 +383,8 @@ const cssText = `
         width: 20rem;
     }
     .pie-button-link {
-        margin-top: 0.5rem;
+        margin: 1rem 0;
+        padding: 1rem;
     }
     .pie-badge-link {
         height: 7rem;
