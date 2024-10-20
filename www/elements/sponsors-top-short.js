@@ -347,6 +347,7 @@ const cssText = `
 }
 .pie-rating {
     color: var(--color-text);
+    display: none;
     font-size: 0.75rem;
     line-height: 1;
 }
