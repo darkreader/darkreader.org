@@ -18,12 +18,13 @@
     <style>
         html {
             background-color: #141e24;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background-color: #141e24;
-            color: #c2bcb8;
-            font-family: Helvetica Neue, sans-serif;
+            color: #adaca5;
+            font-family: system-ui, sans-serif;
             max-width: 40em;
             margin: 0 auto;
             padding: 1em
@@ -36,43 +37,137 @@
             color: #e96c4c;
         }
 
-        .banner,
-        .banner__image {
-            display: inline-block;
+        .title {
+            font-size: 2.15rem;
             margin: 0;
-            width: 100%;
+        }
+
+        .title-darkreader {
+            color: #e96c4c;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .title-mobile {
+            color: white;
+            font-weight: 100;
+            text-transform: uppercase;
         }
 
         a {
             color: #53a1b3;
+            word-break: break-word;
+        }
+
+        strong {
+            color: #d2d1ca;
+        }
+
+        .store-badge {
+            display: inline-block;
+            margin: 1rem 0;
+            width: 16rem;
+        }
+
+        .mini-instruction {
+            align-items: center;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            font-size: 3rem;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .mini-instruction-icon {
+            display: inline-block;
+            height: 4rem;
+            width: 4rem;
         }
     </style>
 </head>
 
 <body>
-    <a class="banner" href="/">
-        <img class="banner__image" src="/images/darkreader-main.svg" />
-    </a>
+    <h1 class="title">
+        <span class="title-darkreader">Dark Reader</span> <span class="title-mobile">Mobile</span>
+    </h1>
 
-    <h3>
-        Please wait while you are being redirected...
-    </h3>
+    <section id="ios-redirect" style="display: none;">
+        <h3>
+            Please wait while you are being redirected to the App Store
+        </h3>
+        <p>
+            If you haven't been redirected automatically, please use the following link:<br>
+            <a data-s="drios-qr-manual"
+                href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone">
+                <img src="/images/app-store-badge.svg" class="store-badge">
+            </a><br>
+            <a data-s="drios-qr-manual"
+                href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">
+                https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180
+            </a>
+        </p>
+    </section>
 
-    <p>
-        If you haven't been redirected automatically, please use the following installation links:
-    </p>
+    <section id="android-static" style="display: none;">
+        <h3>Dark Reader for Android</h3>
+        <p class="mini-instruction">
+            <img class="mini-instruction-icon" src="/images/icon-android-dark.svg">
+            ➡
+            <img class="mini-instruction-icon" src="/images/icon-edge-256x256.svg">
+            ➡
+            <img class="mini-instruction-icon" src="/images/icon-256.png">
+        </p>
+        <p>
+            Please follow this link to install <strong style="white-space: pre;">Microsoft Edge</strong> browser
+            with <strong style="white-space: pre;">Dark Reader</strong> included:<br>
+            <a data-s="drand-qr-badge"
+                href="https://www.microsoft.com/edge/emmx/darkreadercollaboration">
+                <img src="/images/google-play-badge.svg" class="store-badge">
+            </a><br>
+            <a data-s="drand-qr-text"
+                href="https://www.microsoft.com/edge/emmx/darkreadercollaboration">
+                https://www.microsoft.com/edge/emmx/darkreadercollaboration
+            </a>
+        </p>
+    </section>
 
-    <h3>Android</h3>
-    <p>
-        <a
-            href="https://www.microsoft.com/edge/emmx/darkreadercollaboration">https://www.microsoft.com/edge/emmx/darkreadercollaboration</a>
-    </p>
-
-    <h3>iOS & iPadOS</h3>
-    <p>
-        <a
-            href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone">https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone</a>
-    </p>
+    <section id="unrecognized">
+        <h3>
+            iOS & iPadOS
+        </h3>
+        <p>
+            Please use the following link:<br>
+            <a data-s="drios-qr-badge"
+                href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">
+                <img src="/images/app-store-badge.svg" class="store-badge">
+            </a><br>
+            <a data-s="drios-qr-text"
+                href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">
+                https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180
+            </a>
+        </p>
+        <h3>Android</h3>
+        <p class="mini-instruction">
+            <img class="mini-instruction-icon" src="/images/icon-android-dark.svg">
+            ➡
+            <img class="mini-instruction-icon" src="/images/icon-edge-256x256.svg">
+            ➡
+            <img class="mini-instruction-icon" src="/images/icon-256.png">
+        </p>
+        <p>
+            Please use the following link to install <strong style="white-space: pre;">Microsoft Edge</strong> browser
+            with <strong style="white-space: pre;">Dark Reader</strong> included:<br>
+            <a data-s="drand-qr-badge"
+                href="https://www.microsoft.com/edge/emmx/darkreadercollaboration">
+                <img src="/images/google-play-badge.svg" class="store-badge">
+            </a><br>
+            <a data-s="drand-qr-text"
+                href="https://www.microsoft.com/edge/emmx/darkreadercollaboration">
+                https://www.microsoft.com/edge/emmx/darkreadercollaboration
+            </a>
+        </p>
+    </section>
 
     <footer>
         <p>
@@ -80,15 +175,31 @@
         </p>
     </footer>
 
+    <script>
+        (() => {
+            const sectionIosRedirect = document.getElementById('ios-redirect');
+            const sectionAndroidStatic = document.getElementById('android-static');
+            const sectionUnrecognized = document.getElementById('unrecognized');
+            const ua = navigator.userAgent.toLocaleLowerCase();
+            if (ua.includes('iphone')) {
+                sectionIosRedirect.style.display = 'block';
+                sectionAndroidStatic.style.display = 'none';
+                sectionUnrecognized.style.display = 'none';
+            } else if (ua.includes('android')) {
+                sectionIosRedirect.style.display = 'none';
+                sectionAndroidStatic.style.display = 'block';
+                sectionUnrecognized.style.display = 'none';
+            }
+        })();
+    </script>
+
     <script type="module" src="/elements/stats.js"></script>
 
     <script defer>
         setTimeout(() => {
             const ua = navigator.userAgent.toLocaleLowerCase();
-            if (ua.includes('iphone') || ua.includes('macintosh')) {
+            if (ua.includes('iphone')) {
                 location.replace('https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone');
-            } else if (ua.includes('android')) {
-                location.replace('https://www.microsoft.com/edge/emmx/darkreadercollaboration');
             }
         }, 2000);
     </script>
