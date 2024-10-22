@@ -3,44 +3,44 @@
         "id": "g-search-crash",
         "date": "2024-09-01T21:05Z",
         "headline": "How to fix the recent Google Search issue",
-        "icon": "https://darkreader.org/images/search-blog-icon.png",
+        "icon": "https://cdn.darkreader.app/images/search-blog-icon.png",
         "important": true
     },
     {
         "id": "thanks-2023",
         "date": "2023-11-22T15:42Z",
         "headline": "Big Thanks & Big Apologies",
-        "icon": "https://darkreader.org/images/thanks-blog-icon.png"
+        "icon": "https://cdn.darkreader.app/images/thanks-blog-icon.png"
     },
     {
         "id": "news-2023",
         "date": "2023-01-30T21:36Z",
         "headline": "2022/2023 Newsletter: Great Year Beginning",
-        "icon": "https://darkreader.org/images/news-2023-icon.png"
+        "icon": "https://cdn.darkreader.app/images/news-2023-icon.png"
     },
     {
         "id": "filter-mode",
         "date": "2022-08-25T08:10Z",
         "headline": "How to use Filter Mode as a fallback for problematic websites",
-        "icon": "https://darkreader.org/images/filter-blog-icon.png"
+        "icon": "https://cdn.darkreader.app/images/filter-blog-icon.png"
     },
     {
         "id": "v5-survey",
         "date": "2022-06-28T16:45Z",
         "headline": "Survey! Please leave us feedback or propose a feature",
-        "icon": "https://darkreader.org/images/survey-blog-icon.png"
+        "icon": "https://cdn.darkreader.app/images/survey-blog-icon.png"
     },
     {
         "id": "mobile",
         "date": "2022-05-30T14:45Z",
         "headline": "Dark Reader for iOS and Android is available",
-        "icon": "https://darkreader.org/images/mobile-blog-icon.png"
+        "icon": "https://cdn.darkreader.app/images/mobile-blog-icon.png"
     },
     {
         "id": "detect-dark-theme",
         "date": "2022-03-29T16:00Z",
         "headline": "Detecting website's dark theme in version 4.9.47",
-        "icon": "https://darkreader.org/images/detector-blog-icon.png"
+        "icon": "https://cdn.darkreader.app/images/detector-blog-icon.png"
     },
     {
         "id": "no-war",
