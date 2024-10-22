@@ -116,7 +116,7 @@ section {
 .mob {
     align-items: center;
     background-color: var(--color-bg);
-    border-radius: 1rem;
+    border-radius: 2rem;
     gap: 1rem;
     margin-top: 1rem;
     padding-bottom: 1.5rem;
@@ -281,8 +281,8 @@ section {
     background-image: url(/images/night-reading.jpg);
     background-position: center;
     background-size: cover;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     height: 16rem;
     /* mix-blend-mode: lighten; */
     position: relative;

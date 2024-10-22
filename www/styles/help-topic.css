@@ -413,3 +413,44 @@ html:not([data-p="p"]) .v2-banner-mobile {
 html:not([data-p="p"]) .v2-help-banners {
     grid: "large" auto "right" auto / auto;
 }
+
+/* V2.1 */
+
+.v2-banner-mobile,
+.v2-banner-pie {
+    display: none;
+}
+
+.v2-help-banners {
+    grid: "large" auto / auto;
+    margin-bottom: 0;
+}
+
+html[data-p="p"] .page-grid-inside {
+    --color-bg: #1f2342;
+    --color-text: #a3b7ff;
+    background-color: var(--color-bg);
+    border-radius: 2rem;
+    display: flex;
+    margin-top: 1rem;
+}
+
+html[data-p="p"] .page-grid-inside > :not(darkreader-backers-top-short) {
+    display: none;
+}
+
+html[data-p="p"] .page-grid-inside > darkreader-backers-top-short {
+    --color-bg: #653fa0;
+    --pie-gradient: none;
+}
+
+.page-grid-side {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 74rem) {
+    .page-grid-inside {
+        max-width: 100%;
+        width: 100%;
+    }
+}
