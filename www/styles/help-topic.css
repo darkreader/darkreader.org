@@ -454,3 +454,7 @@ html[data-p="p"] .page-grid-inside > darkreader-backers-top-short {
         width: 100%;
     }
 }
+
+html:not(.android) .intro {
+    display: none;
+}
