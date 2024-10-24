@@ -18,19 +18,25 @@ const locales = {
         check_out_exclusive: '查看独家高级主题和自定义颜色',
         simply_scan: '只需扫描二维码即可在手机上安装',
         reduce_brightness: '降低手机屏幕亮度',
-        with_dark_mobile: '使用我们的手机应用'
+        with_dark_mobile: '使用我们的手机应用',
+        mobile_app: '移动应用',
     },
 };
 
 const htmlText = `
 <section class="mob">
     <div class="mob-picture">
-        <div class="mob-picture__text mob-picture__text-1" data-text="reduce_brightness">
-            Reduce your phone screen brightness
+        <div class="mob-picture__text mob-picture__text-1" data-text="dark_reader_mobile">
+            <span class="mob-picture__text--darkreader-mobile">
+                <span class="mob-picture__text--darkreader">Dark Reader</span>
+                <span class="mob-picture__text--mobile" data-text="mobile_app">Mobile</span>
+            </span>
         </div>
+        <!--
         <div class="mob-picture__text mob-picture__text-2" data-text="with_dark_mobile">
             with <strong>Dark Reader Mobile app</strong>
         </div>
+        -->
     </div>
     <div class="mob-subtitle" style="display: none;">
         <a class="mob-text-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-text">
@@ -295,7 +301,7 @@ section {
     left: 0;
     position: absolute;
     text-align: center;
-    text-shadow: 0 0 1rem black, 0 0 0.5rem black;
+    text-shadow: 0 0 1rem black, 0 0 0.5rem black, 0 0 0.25rem black;
     width: 100%;
 }
 .mob-picture__text-1 {
@@ -308,6 +314,25 @@ section {
     font-size: 1.5rem;
     font-weight: 400;
     /* -webkit-text-stroke: 0.0625rem; */
+}
+.mob-picture__text--darkreader-mobile {
+    display: inline-block;
+    font-family: system-ui, sans-serif;
+    font-size: 1.3125rem;
+    font-weight: 900;
+    margin-top: 0.4375rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.0625rem;
+}
+.mob-picture__text--darkreader {
+    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-clip: text;
+    color: transparent;
+    margin-top: 0.25rem;
+    text-shadow: none;
+}
+.mob-picture__text--mobile {
+    font-weight: 100;
 }
 
 /*
