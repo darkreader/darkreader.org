@@ -440,8 +440,8 @@ html[data-p="p"] .page-grid-inside > :not(darkreader-backers-top-short) {
 }
 
 html[data-p="p"] .page-grid-inside > darkreader-backers-top-short {
-    --color-bg: #653fa0;
-    --pie-gradient: none;
+    --color-bg: #7245c6;
+    --pie-gradient: linear-gradient(135deg, #d98be4 14%, #7575f4 58%, #38b4a8);
 }
 
 .page-grid-side {
