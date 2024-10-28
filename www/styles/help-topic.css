@@ -426,9 +426,13 @@ html:not([data-p="p"]) .v2-help-banners {
     margin-bottom: 0;
 }
 
-html[data-p="p"] .page-grid-inside {
+.page-grid-inside {
     display: flex;
     margin-top: 1rem;
+}
+
+.page-grid-inside darkreader-mobile-top-short {
+    display: none;
 }
 
 html[data-p="p"] .page-grid-inside > :not(darkreader-pay-tiers) {
