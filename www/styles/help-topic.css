@@ -417,31 +417,22 @@ html:not([data-p="p"]) .v2-help-banners {
 /* V2.1 */
 
 .v2-banner-mobile,
-.v2-banner-pie {
+.v2-help-tiers {
     display: none;
 }
 
 .v2-help-banners {
-    grid: "large" auto / auto;
+    grid: "left" auto / auto;
     margin-bottom: 0;
 }
 
 html[data-p="p"] .page-grid-inside {
-    --color-bg: #1f2342;
-    --color-text: #a3b7ff;
-    background-color: var(--color-bg);
-    border-radius: 2rem;
     display: flex;
     margin-top: 1rem;
 }
 
-html[data-p="p"] .page-grid-inside > :not(darkreader-backers-top-short) {
+html[data-p="p"] .page-grid-inside > :not(darkreader-pay-tiers) {
     display: none;
-}
-
-html[data-p="p"] .page-grid-inside > darkreader-backers-top-short {
-    --color-bg: #7245c6;
-    --pie-gradient: linear-gradient(135deg, #d98be4 14%, #7575f4 58%, #38b4a8);
 }
 
 .page-grid-side {

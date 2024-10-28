@@ -391,6 +391,8 @@ const cssText = `
     }
     .pie-badge-link {
         height: 7rem;
+        position: relative;
+        top: 0.5rem;
         width: 7rem;
     }
 }
