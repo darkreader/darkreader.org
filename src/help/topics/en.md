@@ -24,7 +24,7 @@
 
 <h2 id="options-icon">Toolbar Icon</h2>
 
-<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Options icon" style="width: 20rem;" loading="lazy" />
+<img src="/images/help/darkreader-pin-toolbar-icon.gif" alt="Options icon" style="width: 20rem;" loading="lazy" />
 
 If the Dark Reader **icon is hidden** after installation,
 click the **Extensions** button next to the address bar and then another button next to Dark Reader.

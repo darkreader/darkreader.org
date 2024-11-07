@@ -8,7 +8,7 @@ Dark Reader の機能を解説します。
 
 <h2 id="options-icon">オプション用アイコン</h2>
 
-<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="オプション用アイコン" style="width: 20rem;" loading="lazy" />
+<img src="/images/help/darkreader-pin-toolbar-icon.gif" alt="オプション用アイコン" style="width: 20rem;" loading="lazy" />
 
 インストール後に Dark Reader のアイコンが表示されないことがあります。
 表示するには、 アドレスバーの右にある**拡張機能**ボタンをクリックし、Dark Reader の横のボタンをクリックします（解説が古い？）。
