@@ -123,3 +123,6 @@ if (isPCountry) {
     document.documentElement.dataset.p = 'p';
 }
 document.documentElement.dataset.c = country;
+if (navigator.userAgent.toLowerCase().includes('mac')) {
+    document.documentElement.dataset.o = 'mac';
+}

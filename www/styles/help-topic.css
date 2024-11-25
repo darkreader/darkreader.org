@@ -458,3 +458,17 @@ html[data-p="p"] .page-grid-inside > :not(darkreader-pay-tiers) {
 html:not(.android) .intro {
     display: none;
 }
+
+.v2-banner-safari {
+    --color-text: #5ea7d5;
+    background-color: #182636;
+    background-image: radial-gradient(#202f47, #151a28);
+    display: none;
+    grid-area: large;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+html:not([data-p="p"])[data-o="mac"] .v2-banner-safari {
+    display: block;
+}
