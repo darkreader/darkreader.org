@@ -229,6 +229,11 @@ iframe {
     max-width: calc(100vw - 2rem);
 }
 
+#video + ul li {
+    list-style-type: "▶️";
+    padding-left: 0.5rem;
+}
+
 /* V2 */
 
 .page-grid-header {

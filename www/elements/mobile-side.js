@@ -60,6 +60,7 @@ const htmlText = `
             Simply <strong>scan the QR code</strong> to install on your phone
         </div>
     </div>
+    <!--
     <div class="mob-qr">
         <div class="mob-qr-wrapper">
             <img src="/images/plus-screen-1.png" class="mob-screenshot mob-screenshot--visible">
@@ -67,6 +68,7 @@ const htmlText = `
             <img src="/images/plus-screen-2.png" class="mob-screenshot">
         </div>
     </div>
+    -->
     <div class="mob-badge-wrapper">
         <a class="mob-badge-link" href="${edgeURL}" target="_blank" rel="noopener" data-s="drand-side-badge">
             <img src="/images/google-play-badge.svg">

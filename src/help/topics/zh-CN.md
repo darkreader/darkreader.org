@@ -13,7 +13,6 @@
 <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">付款</a>
 有助于我们继续改进它，推出新功能和改进。
 
-- [快速指南](#video)
 - [常见问题](#faq)
 - [联络方式](#contacts)
 - [高级用户提示](../../tips/)
