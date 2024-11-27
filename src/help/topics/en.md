@@ -17,7 +17,7 @@
 </div>
 
 - [Quick Guide & FAQ](#video)
-- [Terms of Service](../../terms/)
+- [Terms of Use](../../terms/)
 - [Privacy Policy](../../privacy/)
 - [Contacts](#contacts)
 
