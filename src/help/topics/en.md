@@ -16,10 +16,10 @@
     helps us continue enhancing it with new features and improvements.
 </div>
 
-- [Quick Guide](#video)
-- [FAQ](#faq)
+- [Quick Guide & FAQ](#video)
+- [Terms of Service](../../terms/)
+- [Privacy Policy](../../privacy/)
 - [Contacts](#contacts)
-- [Tips for advanced users](../../tips/)
 
 
 <h2 id="options-icon">Toolbar Icon</h2>
@@ -190,6 +190,10 @@ Open **chrome://extensions** page, find **Dark Reader**, click **Allow in incogn
 #### The extension doesn't work for local files
 
 Open **chrome://extensions** page, find **Dark Reader**, click **Allow access to file URLs**.
+
+<h2 id="more">More</h2>
+
+See [Tips for Advanced Users](../../tips/) for more information.
 
 
 <h2 id="contacts">Contacts</h2>
