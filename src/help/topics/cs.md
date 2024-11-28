@@ -2,9 +2,10 @@
 
 Tento dokument Vám napomůže v používání rozšíření Dark Reader.
 
-- [ČKD](#faq)
-- [Kontakt](#contacts)
-- [Rady zkušeným uživatelům](../../tips/)
+- [Rychlý průvodce a časté dotazy](#video)
+- [Podmínky použití](../../terms/)
+- [Zásady ochrany osobních údajů](../../privacy/)
+- [Kontakty](#contacts)
 
 
 <h2 id="top-section">Horní část</h2>

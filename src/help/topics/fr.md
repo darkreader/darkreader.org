@@ -2,9 +2,10 @@
 
 Ce document vous aide a découvrir les options de Dark Reader.
 
-- [FAQ](#faq)
+- [Guide rapide et FAQ](#video)
+- [Conditions d'utilisation](../../terms/)
+- [Politique de confidentialité](../../privacy/)
 - [Contacts](#contacts)
-- [Conseils pour les utilisateurs expérimentés](../../tips/)
 
 
 <h2 id="top-section">Section supérieure</h2>

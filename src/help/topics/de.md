@@ -2,9 +2,10 @@
 
 Dieses Dokument führt Sie durch die Funktionen von Dark Reader.
 
-- [FAQ](#faq)
-- [Kontakt](#contacts)
-- [Hinweise für erfahrene Anwender](../../tips/)
+- [Kurzanleitung und FAQ](#video)
+- [Nutzungsbedingungen](../../terms/)
+- [Datenschutzrichtlinie](../../privacy/)
+- [Kontakte](#contacts)
 
 
 <h2 id="top-section">Oberer Abschnitt</h2>

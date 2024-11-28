@@ -2,9 +2,10 @@
 
 Bu döküman Dark Reader özellikleri hakkında size rehberlik edecek.
 
-- [SSS](#faq)
+- [Hızlı Kılavuz ve SSS](#video)
+- [Kullanım Koşulları](../../terms/)
+- [Gizlilik Politikası](../../privacy/)
 - [İletişim](#contacts)
-- [Deneyimli kullanıcılar için tavsiyeler](../../tips/)
 
 
 <h2 id="top-section">Üst bölüm</h2>

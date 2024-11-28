@@ -2,9 +2,10 @@
 
 Ovaj dokument će vas upoznati sa mogućnostima Dark Reader-a.
 
-- [Često postavljana pitanja](#faq)
+- [Brzi vodič i česta pitanja](#video)
+- [Uslovi korišćenja](../../terms/)
+- [Politika privatnosti](../../privacy/)
 - [Kontakti](#contacts)
-- [Saveti iskusnim korisnicima](../../tips/)
 
 
 <h2 id="top-section">Gornji odeljak</h2>

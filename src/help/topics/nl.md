@@ -2,9 +2,10 @@
 
 Dit document leidt u door de functies van Dark Reader.
 
-- [FAQ](#faq)
+- [Beknopte handleiding en veelgestelde vragen](#video)
+- [Gebruiksvoorwaarden](../../terms/)
+- [Privacybeleid](../../privacy/)
 - [Contacten](#contacts)
-- [Tips voor ervaren gebruikers](../../tips/)
 
 
 <h2 id="top-section">Top sectie</h2>

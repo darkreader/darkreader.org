@@ -13,9 +13,10 @@
 <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">付款</a>
 有助于我们继续改进它，推出新功能和改进。
 
-- [常见问题](#faq)
-- [联络方式](#contacts)
-- [高级用户提示](../../tips/)
+- [快速指南和常见问题解答](#video)
+- [使用条款](../../terms/)
+- [隐私政策](../../privacy/)
+- [联系方式](#contacts)
 
 
 <h2 id="top-section">顶部选项</h2>

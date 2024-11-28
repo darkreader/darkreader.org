@@ -2,9 +2,10 @@
 
 Questo documento vi guiderà alla scoperta delle funzionalità di Dark Reader.
 
-- [FAQ](#faq)
+- [Guida rapida e domande frequenti](#video)
+- [Termini di utilizzo](../../terms/)
+- [Politica sulla riservatezza](../../privacy/)
 - [Contatti](#contacts)
-- [Consigli per utenti esperti](../../tips/)
 
 
 <h2 id="top-section">Parte principale</h2>
