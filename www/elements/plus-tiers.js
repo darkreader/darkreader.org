@@ -634,7 +634,7 @@ async function initPaddle(element) {
         // @ts-ignore
         await import('https://cdn.paddle.com/paddle/v2/paddle.js');
         Paddle = /** @type {any} */(window).Paddle;
-        Paddle.initialize({
+        Paddle.Initialize({
             token: 'live_b32a4d21e35479ee3ea2b849be9',
         });
     }
