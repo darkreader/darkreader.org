@@ -58,6 +58,7 @@ const Prices = {
         CNY: '¥68.00',
         AUD: '$14.99',
     },
+    /*
     PLUS: {
         USD: '$4.99',
         GBP: '£3.99',
@@ -66,6 +67,16 @@ const Prices = {
         CAD: '$6.99',
         CNY: '¥38.00',
         AUD: '$7.99',
+    },
+    */
+    PLUS: {
+        USD: '$9.99',
+        GBP: '£7.99',
+        EUR: '€9.99',
+        JPY: '¥1,500',
+        CAD: '$12.99',
+        CNY: '¥68.00',
+        AUD: '$14.99',
     },
     CORPORATE: {
         USD: '$9.99/yr',
@@ -146,6 +157,7 @@ const htmlText = `
             </label>
         </div>
         <div class="button-wrapper">
+            <!--
             <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-plus-paypal">
                 <span class="button-link__text">Pay with <span class="button-link__text--paypal">PayPal</span></span>
             </a>
@@ -156,6 +168,20 @@ const htmlText = `
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-plus-other">
                 <span class="button-link__text" data-text="more">More options</span>
             </a>
+            -->
+            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
+                <span class="button-link__text">
+                    <span data-text="pay">Pay</span>
+                    <span class="js-price-regular">${DEFAULT_PRICE_PLUS}</span>
+                </span>
+            </a>
+        </div>
+        <div class="payment-methods">
+            <i class="payment-methods__paypal"></i>
+            <i class="payment-methods__gpay"></i>
+            <i class="payment-methods__visa"></i>
+            <i class="payment-methods__mastercard"></i>
+            <i class="payment-methods__amex"></i>
         </div>
     </div>
 </section>
@@ -411,6 +437,9 @@ const cssText = `
     text-transform: none;
     transform: none;
 }
+.button-link--paddle {
+    font-weight: bold;
+}
 .currencies {
     align-items: center;
     display: flex;
@@ -447,6 +476,7 @@ const cssText = `
     flex: none;
     font-weight: 300;
 }
+
 .flag {
     background-image: url('/images/flags.svg');
     background-position-y: center;
@@ -479,6 +509,47 @@ const cssText = `
 .flag-au {
     background-position-x: -9em;
 }
+
+.payment-methods {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+.payment-methods i {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+.payment-methods__paypal {
+    aspect-ratio: 101 / 32;
+    background-image: url(/images/paypal-logo-white.svg);
+    height: 1rem;
+}
+.payment-methods__gpay {
+    aspect-ratio: 41 / 17;
+    background-image: url(/images/icon-gpay.svg);
+    height: 1rem;
+}
+.payment-methods__visa {
+    aspect-ratio: 1 / 1;
+    background-image: url('https://buy.paddle.com/images/icons/visa.svg');
+    height: 1.5rem;
+}
+.payment-methods__mastercard {
+    aspect-ratio: 1 / 1;
+    background-image: url('https://buy.paddle.com/images/icons/mastercard.svg');
+    height: 1.5rem;
+}
+.payment-methods__amex {
+    aspect-ratio: 1 / 1;
+    background-image: url('https://buy.paddle.com/images/icons/amex.svg');
+    height: 1.5rem;
+}
+
 :host {
     container-type: inline-size;
     font-size: 1.25rem;
@@ -545,6 +616,41 @@ class PlusTiersElement extends HTMLElement {
             s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
         }
     }
+}
+
+/** @typedef {any} Paddle */
+
+let didInitializePaddle = false;
+
+/**
+ * @param {PlusTiersElement} element
+ */
+async function initPaddle(element) {
+    /** @type {any} */
+    let Paddle;
+    if (!didInitializePaddle) {
+        // @ts-ignore
+        await import('https://cdn.paddle.com/paddle/v2/paddle.js');
+        Paddle = /** @type {any} */(window).Paddle;
+        // Paddle.initialize({
+        //     token: 'live_b32a4d21e35479ee3ea2b849be9',
+        // });
+    }
+    element.shadowRoot?.querySelector('.js-link-paddle')?.addEventListener('click', () => {
+        Paddle.Checkout.open({
+            token: 'live_b32a4d21e35479ee3ea2b849be9',
+            settings: {
+                displayMode: 'overlay',
+                variant: 'one-page',
+            },
+            items: [
+                {
+                    priceId: 'pri_01je4ebmn474jsee5eh2gmfan9',
+                    quantity: 1,
+                },
+            ],
+        });
+    });
 }
 
 customElements.define('darkreader-plus-tiers', PlusTiersElement);
