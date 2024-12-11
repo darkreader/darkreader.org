@@ -169,7 +169,7 @@ const htmlText = `
                 <span class="button-link__text" data-text="more">More options</span>
             </a>
             -->
-            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
+            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
                 <span class="button-link__text">
                     <span data-text="pay">Pay</span>
                     <span class="js-price-regular">${DEFAULT_PRICE_PLUS}</span>
@@ -615,6 +615,8 @@ class PlusTiersElement extends HTMLElement {
             });
             s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
         }
+
+        initPaddle(this);
     }
 }
 
