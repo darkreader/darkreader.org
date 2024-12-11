@@ -643,6 +643,7 @@ async function initPaddle(element) {
             token: 'live_b32a4d21e35479ee3ea2b849be9',
             settings: {
                 displayMode: 'overlay',
+                theme: 'dark',
                 variant: 'one-page',
             },
             items: [
