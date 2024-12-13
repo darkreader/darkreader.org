@@ -1,10 +1,15 @@
 [
     {
+        "id": "firefox-bugs",
+        "date": "2024-12-13T19:43Z",
+        "headline": "Firefox fixes and upcoming performance improvements",
+        "icon": "https://cdn.darkreader.app/images/firefox-reddit-blog-icon.png"
+    },
+    {
         "id": "g-search-crash",
         "date": "2024-09-01T21:05Z",
         "headline": "How to fix the recent Google Search issue",
-        "icon": "https://cdn.darkreader.app/images/search-blog-icon.png",
-        "important": true
+        "icon": "https://cdn.darkreader.app/images/search-blog-icon.png"
     },
     {
         "id": "thanks-2023",
