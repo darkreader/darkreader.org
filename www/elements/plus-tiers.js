@@ -1,6 +1,7 @@
 // @ts-check
 
 import {country, isEUCountry} from './locales.js';
+import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -616,44 +617,10 @@ class PlusTiersElement extends HTMLElement {
             s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
         }
 
-        initPaddle(this);
-    }
-}
-
-/** @typedef {any} Paddle */
-
-let didInitializePaddle = false;
-
-/**
- * @param {PlusTiersElement} element
- */
-async function initPaddle(element) {
-    /** @type {any} */
-    let Paddle;
-    if (!didInitializePaddle) {
-        // @ts-ignore
-        await import('https://cdn.paddle.com/paddle/v2/paddle.js');
-        Paddle = /** @type {any} */(window).Paddle;
-        Paddle.Initialize({
-            token: 'live_b32a4d21e35479ee3ea2b849be9',
+        initPaddle({
+            plusButton: shadowRoot.querySelector('.js-link-paddle'),
         });
     }
-    element.shadowRoot?.querySelector('.js-link-paddle')?.addEventListener('click', () => {
-        Paddle.Checkout.open({
-            token: 'live_b32a4d21e35479ee3ea2b849be9',
-            settings: {
-                displayMode: 'overlay',
-                theme: 'dark',
-                variant: 'one-page',
-            },
-            items: [
-                {
-                    priceId: 'pri_01je4ebmn474jsee5eh2gmfan9',
-                    quantity: 1,
-                },
-            ],
-        });
-    });
 }
 
 customElements.define('darkreader-plus-tiers', PlusTiersElement);

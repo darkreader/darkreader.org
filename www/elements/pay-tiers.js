@@ -1,6 +1,7 @@
 // @ts-check
 
 import {country, isEUCountry} from './locales.js';
+import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -170,17 +171,35 @@ const htmlText = `
                 </div>
             </label>
         </div>
-        <div class="button-wrapper">
-            <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
+        <div class="button-wrapper button-wrapper-paddle">
+            <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
                 <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
             </a>
-            <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
+            <a class="button-link button-link--card button-link--inactive js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
                 <i class="button-link__card-icon js-card-icon"></i>
                 <span class="button-link__text" data-text="card">Debit or Credit Card</span>
             </a>
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
                 <span class="button-link__text" data-text="more">Contact us</span>
             </a>
+            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
+                <span class="button-link__text">
+                    <span data-text="pay">Pay</span>
+                    <span class="js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                </span>
+            </a>
+            <a class="button-link button-link--paddle js-link-paddle-corp" href="#pay-corp" data-s="d-side-paddlecorp" style="display:none;">
+                <span class="button-link__text">
+                    <span data-text="subscribe">Pay <span class="js-price-corporate">${DEFAULT_PRICE_CORP}</span></span>
+                </span>
+            </a>
+        </div>
+        <div class="payment-methods">
+            <i class="payment-methods__paypal"></i>
+            <i class="payment-methods__gpay"></i>
+            <i class="payment-methods__visa"></i>
+            <i class="payment-methods__mastercard"></i>
+            <i class="payment-methods__amex"></i>
         </div>
     </div>
 </section>
@@ -396,10 +415,12 @@ const cssText = `
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    justify-content: center;
     margin-top: 0.25rem;
 }
 .button-wrapper .button-link {
     margin: 0;
+    max-width: 20rem;
 }
 .button-link--inactive {
     display: none;
@@ -503,6 +524,10 @@ const cssText = `
     text-transform: none;
     transform: none;
 }
+.button-link--paddle {
+    background-color: var(--color-control) !important;
+    font-weight: bold;
+}
 .currencies {
     align-items: center;
     display: flex;
@@ -576,6 +601,46 @@ const cssText = `
 }
 .flag-au {
     background-position-x: -144px;
+}
+
+.payment-methods {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.25rem;
+}
+.payment-methods i {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+.payment-methods__paypal {
+    aspect-ratio: 101 / 32;
+    background-image: url(/images/paypal-logo-white.svg);
+    height: 1rem;
+}
+.payment-methods__gpay {
+    aspect-ratio: 41 / 17;
+    background-image: url(/images/icon-gpay.svg);
+    height: 1rem;
+}
+.payment-methods__visa {
+    aspect-ratio: 1 / 1;
+    background-image: url('https://buy.paddle.com/images/icons/visa.svg');
+    height: 1.5rem;
+}
+.payment-methods__mastercard {
+    aspect-ratio: 1 / 1;
+    background-image: url('https://buy.paddle.com/images/icons/mastercard.svg');
+    height: 1.5rem;
+}
+.payment-methods__amex {
+    aspect-ratio: 1 / 1;
+    background-image: url('https://buy.paddle.com/images/icons/amex.svg');
+    height: 1.5rem;
 }
 
 .pr-small {
@@ -684,12 +749,15 @@ const cssText = `
     }
     .tiers {
         flex-direction: row;
-        justify-content: space-between;
-        margin: 1rem 0;
+        gap: 1rem;
+        justify-content: center;
+        margin: 0.5rem 0rem;
+        width: 100%;
     }
     .tier {
-        padding: 0 1rem;
-        width: 100%;
+        flex: none;
+        min-width: 13rem;
+        padding: 0rem;
     }
     .button-wrapper {
         flex-direction: row;
@@ -701,6 +769,8 @@ class PayTiersElement extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({mode: 'open'});
+
+        const PADDLE_MODE = true;
 
         if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom')) {
             return;
@@ -732,12 +802,18 @@ class PayTiersElement extends HTMLElement {
             });
             s('.js-link-paypal').each((node) => {
                 /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.PayPal.DISCOUNT[currency] : Links.PayPal.REGULAR[currency];
-                node.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE);
+                if (!PADDLE_MODE) {
+                    node.classList.toggle('button-link--inactive', tier === Tiers.CORPORATE);
+                }
             });
             s('.js-link-other').each((node) => {
                 /** @type {HTMLAnchorElement} */(node).href = tier === Tiers.DISCOUNT ? Links.Redirect.DISCOUNT : tier === Tiers.CORPORATE ? Links.Redirect.CORPORATE : Links.Redirect.REGULAR;
-                node.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE);
+                if (!PADDLE_MODE) {
+                    node.classList.toggle('button-link--inactive', tier !== Tiers.CORPORATE);
+                }
             });
+            s('.js-link-paddle').each((node) => node.style.display = tier === Tiers.CORPORATE ? 'none' : '');
+            s('.js-link-paddle-corp').each((node) => node.style.display = tier === Tiers.CORPORATE ? '' : 'none');
 
             s('.js-price-regular').each((node) => node.textContent = Prices.REGULAR[currency]);
             s('.js-price-discount').each((node) => node.textContent = Prices.DISCOUNT[currency]);
@@ -755,6 +831,13 @@ class PayTiersElement extends HTMLElement {
                 s(`[data-text="${key}"]`).each((node) => node.textContent = text);
             });
             s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
+        }
+
+        if (PADDLE_MODE) {
+            initPaddle({
+                feeButton: shadowRoot.querySelector('.js-link-paddle'),
+                corpButton: shadowRoot.querySelector('.js-link-paddle-corp'),
+            });
         }
     }
 }
