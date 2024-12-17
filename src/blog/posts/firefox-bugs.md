@@ -45,6 +45,8 @@ This approach significantly reduces memory consumption (up to 10GB for certain w
 
 ### Firefox browser theme bug
 
+*Update: Mozilla approved our update 4.9.99 on December 17. The issue is fixed now.*
+
 Releasing software updates on Friday 13 is considered bad luck, but Mozilla decided on the timing for us.
 We started receiving the first complaints in the evening.
 
