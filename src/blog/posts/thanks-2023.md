@@ -44,9 +44,8 @@ THIS SOFTWARE.
 
 ### Thanks to our sponsors
 
-Special thanks to our biggest sponsors
-<a class="text-highlight" href="https://duckduckgo.com/browser?ref=darkreader" data-s="ddg-blog-thanks2023">DuckDuckGo</a>
-and Honey.
+Special thanks to our biggest sponsor
+<a class="text-highlight" href="https://duckduckgo.com/browser?ref=darkreader" data-s="ddg-blog-thanks2023">DuckDuckGo</a>.
 
 <div id="chart-donations" class="chart" style="background: #1c2128; width: 40rem; height: 20rem; max-width: calc(100vw - 2rem);"></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@5.7.0/dist/d3.min.js" defer></script>
