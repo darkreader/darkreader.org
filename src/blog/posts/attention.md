@@ -45,21 +45,6 @@ First of all, there are extensions that are **owned by large well-known companie
 that value their reputation and are absolutely not interested in doing any harm to you.
 Here are a few examples:
 
-#### Honey
-
-<img src="/images/honey-logo.jpg" alt="Honey logo" style="width: 12rem;" />
-<br/>
-★★★★★
-
-Owned by **PayPal**, Honey **automatically searches and applies coupon codes** while you are making online purchases.
-It is currently used by more than 20,000,000 people and states it doesn't sell your data,
-but charges a small fee from your saved amount instead.
-Savings **can be huge** sometimes.
-
-<figure>
-    <img src="/images/honey-screenshot.png" alt="Honey screenshot" style="width: 16rem;" />
-</figure>
-
 #### Google Translate
 
 [<img src="/images/google-translate-logo.jpg" alt="Google Translate logo" style="width: 12rem;" />](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
