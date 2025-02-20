@@ -356,10 +356,33 @@ section {
     max-width: 30rem;
 }
 
-html:not([data-p="p"]) .recommendations > .come-again {
+html:not([data-p="p"]) .come-again {
     text-align: center;
 }
 
-html:not([data-p="p"]) .recommendations > :not(.come-again) {
+html:not([data-p="p"]) .rec-pie {
     display: none;
+}
+
+html[data-p="p"] .rec-inker {
+    display: none;
+}
+
+.rec-inker {
+    --color-text: #f2b747;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.rec-inker img {
+    max-width: 32rem;
+}
+
+.rec-inker a {
+    color: var(--color-text);
+    transition: 250ms;
+}
+
+.rec-inker a:hover {
+    color: var(--color-text-hover);
 }
