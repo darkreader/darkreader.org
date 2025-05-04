@@ -35,6 +35,7 @@ click the **Extensions** button next to the address bar and then another button 
 - <a target="_blank" rel="noopener" data-s="dryt-help-text" href="https://www.youtube.com/watch?v=849mznBKmIQ">1-Minute Video Guide</a>
 - <a target="_blank" rel="noopener" data-s="dryt-help-text" href="https://www.youtube.com/shorts/9nQjBBe8K44">30-Seconds Video Guide (mobile app)</a>
 
+<!--
 <blockquote class="pie-help">
     <p>
         <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-help-badge"
@@ -50,6 +51,7 @@ click the **Extensions** button next to the address bar and then another button 
                 Learn more</a></strong>.
     </p>
 </blockquote>
+-->
 
 
 <h2 id="top-section">Top Section</h2>

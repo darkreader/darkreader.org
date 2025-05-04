@@ -41,6 +41,7 @@ const htmlText = `
         </a>
     </div>
     -->
+    <!--
     <div class="top pie-top">
         Block ads, <span class="pie-top__highlight">get paid</span>
     </div>
@@ -82,9 +83,13 @@ const htmlText = `
             <span class="stars">★★★★★</span> 4.8 stars on Chrome Web Store
         </div>
     </div>
+    -->
 </section>`;
 
 const cssText = `
+:host {
+    display: none;
+}
 .container {
     padding-top: 0;
 }

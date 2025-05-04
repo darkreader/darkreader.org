@@ -63,6 +63,7 @@ You can **star the issue to draw more attention from the Chromium developers**.
 We have already **made a patch in version 4.9.90** 🎉🎉🎉
 and are currently awaiting manual review from the Google and Microsoft Store teams.
 
+<!--
 <blockquote class="pie-help">
     <p>
         <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-blog-badge"
@@ -85,6 +86,7 @@ and are currently awaiting manual review from the Google and Microsoft Store tea
                 Learn more</a></strong>.
     </p>
 </blockquote>
+-->
 
 ### How to fix the problem
 
