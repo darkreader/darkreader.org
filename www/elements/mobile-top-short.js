@@ -7,7 +7,7 @@ import {
 } from './utils.js';
 import {clicker} from './stats.js';
 
-const edgeURL = 'https://www.microsoft.com/edge/emmx/darkreadercollaboration';
+const edgeURL = 'https://edgemobileapp.microsoft.com?adjustId=1mx06n3g_1mzfnnc1';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
 // const isEdge = navigator.userAgent.includes('Edg');
 const isMobile = navigator.userAgent.includes('Mobile');

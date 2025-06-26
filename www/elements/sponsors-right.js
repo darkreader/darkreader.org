@@ -13,7 +13,7 @@ const hnURL = 'https://www.joinhoney.com/darkreader';
 const ddgURL = 'https://duckduckgo.com/browser?ref=darkreader';
 const payURL = '/support-us';
 const safariURL = 'https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180?platform=iphone';
-const edgeURL = 'https://www.microsoft.com/edge/emmx/darkreadercollaboration';
+const edgeURL = 'https://edgemobileapp.microsoft.com?adjustId=1mx06n3g_1mzfnnc1';
 
 const isEdge = navigator.userAgent.includes('Edg');
 const isSafari = navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrom');

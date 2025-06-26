@@ -69,7 +69,7 @@ You can choose from many color presets, or set lovely text and background colors
 
 ### Microsoft Edge
 
-<a href="https://www.microsoft.com/edge/emmx/darkreadercollaboration" target="_blank"
+<a href="https://edgemobileapp.microsoft.com?adjustId=1mx06n3g_1mzfnnc1" target="_blank"
     rel="noopener" data-s="drand-tips-badge">
     <img src="/images/google-play-badge.svg" width="200">
 </a>
