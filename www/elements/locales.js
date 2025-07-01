@@ -609,10 +609,7 @@ export const country = (() => {
 export const isHCountry = true;
 
 const isFirefox = navigator.userAgent.includes('Firefox');
-/*
 export const isPCountry = (['US', 'GB', 'CA', 'AU', 'DE'].includes(country) || timeZone === 'UTC') && !isFirefox;
-*/
-export const isPCountry = false;
 
 export const isEUCountry = [
     'AT',

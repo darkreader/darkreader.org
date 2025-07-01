@@ -25,11 +25,9 @@ const htmlText = `
 <section class="pr">
     <darkreader-pay-tiers></darkreader-pay-tiers>
 </section>
-<!--
 <section class="pie">
     <darkreader-backers-top-short side></darkreader-backers-top-short>
 </section>
--->
 <section class="mob">
     <div class="mob-subtitle">
         <a class="mob-text-link" href="${safariURL}" target="_blank" rel="noopener" data-s="drios-side-text">
