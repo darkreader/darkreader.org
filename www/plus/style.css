@@ -9,6 +9,7 @@
 
 html {
     background-color: var(--color-background);
+    color-scheme: dark;
     -webkit-tap-highlight-color: transparent;
 }
 
