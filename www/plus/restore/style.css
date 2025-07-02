@@ -1,0 +1,38 @@
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    gap: 0.5em;
+    margin: 1rem auto;
+    text-align: center;
+    width: 16em;
+}
+
+button,
+input {
+    border: none;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1em;
+    height: 2.5em;
+    margin: 0;
+    width: 100%;
+}
+
+input {
+    background-color: #ffffff33;
+    padding: 0 1em;
+}
+
+button {
+    background-color: var(--color-control);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label {
+    color: #98e487;
+    display: inline-block;
+    min-height: 2.5em;
+}
