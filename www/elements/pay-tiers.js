@@ -630,6 +630,7 @@ const cssText = `
 .payment-methods__visa {
     aspect-ratio: 1 / 1;
     background-image: url('https://buy.paddle.com/images/icons/visa.svg');
+    filter: brightness(3);
     height: 1.5rem;
 }
 .payment-methods__mastercard {
