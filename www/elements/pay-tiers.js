@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isEUCountry} from './locales.js';
+import {country, isDCountry, isEUCountry} from './locales.js';
 import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
@@ -116,13 +116,30 @@ const locales = {
     },
 };
 
+const takeCareMsg = (isDCountry ?
+    (
+        country === 'GB' ?
+        [
+            'Please complete the payment within <strong>24 hours</strong> of trying the app',
+            'to support development and receive updates sooner.',
+        ] :
+        [
+            'If you find the app useful, <strong>please complete the payment</strong>',
+            'to support development and receive updates sooner. We rely on your kindness.',
+        ]
+    ) :
+    [
+        'We take care of your eyes and provide the best dark mode possible.',
+        'Your payment helps us continue making enhancements.',
+    ]
+).join('\n');
+
 const htmlText = `
 <section class="pr">
     <div class="pr-wrapper">
         <h2 class="pr-heading" data-text="heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
         <div class="pr-description" data-text="we_take_care">
-            We take care of your eyes and provide the best dark mode possible.
-            Your payment helps us continue making enhancements.
+            ${takeCareMsg}
         </div>
         <div class="currencies">
             <span class="currencies__text" data-text="region_currency">Currency</span>
