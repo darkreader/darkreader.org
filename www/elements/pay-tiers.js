@@ -99,6 +99,16 @@ function currencyButton(currency, flagCls) {
             </label>`;
 }
 
+const today = new Date();
+const usDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+
+const takeCareMsg = [
+    `Today is <strong>${usDate}</strong>, and we're kindly asking you to complete the payment to keep Dark Reader going.`,
+    `For <strong>over 10 years</strong>, Dark Reader has helped millions of people with migraines, photophobia, and light sensitivity.`,
+    `Please <strong>make a payment now</strong> or soon after trying it.`,
+    `Take part in spreading dark mode across the internet and help making the web easier on everyone's eyes.`,
+].join(' ');
+
 const locales = {
     cn: {
         heading: '支付 Dark Reader 使用费',
@@ -116,8 +126,6 @@ const locales = {
         we_take_care: '我们呵护您的眼睛，并提供尽可能最佳的暗黑模式。您的付款可帮助我们继续改进。',
     },
 };
-
-const takeCareMsg = 'Dear User, we provide the best dark mode possible. <strong>Please complete the payment now</strong> to support continuous Dark Reader development.';
 
 const htmlText = `
 <section class="pr">
@@ -277,7 +285,9 @@ const cssText = `
     display: none;
     line-height: 1;
     margin: 0.25rem 0 0.5rem 0;
+    /*
     text-align: center;
+    */
 }
 .tiers {
     align-items: stretch;
@@ -786,13 +796,14 @@ darkreader-donate-mascot {
     }
     .payment-wrapper {
         margin-left: 8rem;
+        margin-top: 0.5rem;
         position: relative;
     }
     darkreader-donate-mascot {
         display: inline-block;
         position: absolute;
         right: 100%;
-        top: 0;
+        top: -0.5rem;
         width: 10rem;
     }
 }
@@ -873,18 +884,21 @@ class PayTiersElement extends HTMLElement {
                 feeButton,
                 corpButton,
             });
-        }
 
-        shadowRoot.host.addEventListener('mouseenter', (e) => {
-            if (e.target === shadowRoot.host) {
-                shadowRoot.querySelector('darkreader-donate-mascot')?.setAttribute('hover', '');
-            }
-        });
-        shadowRoot.host.addEventListener('mouseleave', (e) => {
-            if (e.target === shadowRoot.host) {
-                shadowRoot.querySelector('darkreader-donate-mascot')?.removeAttribute('hover');
-            }
-        });
+            [feeButton, corpButton].forEach((button) => {
+                if (!button) return;
+                button.addEventListener('mouseenter', (e) => {
+                    if (e.target === button) {
+                        shadowRoot.querySelector('darkreader-donate-mascot')?.setAttribute('hover', '');
+                    }
+                });
+                button.addEventListener('mouseleave', (e) => {
+                    if (e.target === button) {
+                        shadowRoot.querySelector('darkreader-donate-mascot')?.removeAttribute('hover');
+                    }
+                });
+            });
+        }
     }
 }
 
