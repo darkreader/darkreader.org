@@ -7,6 +7,7 @@ import {
     createHTMLElement as html,
     $,
 } from './utils.js';
+import './donate-mascot.js'
 
 const payURL = '/support-us';
 
@@ -69,13 +70,13 @@ const Prices = {
         AUD: '$7.99',
     },
     CORPORATE: {
-        USD: '$9.99/yr',
-        GBP: '£7.99/yr',
-        EUR: '€9.99/yr',
-        JPY: '¥1,500/年',
-        CAD: '$12.99/yr',
-        CNY: '¥68.00/年',
-        AUD: '$14.99/yr',
+        USD: '$19.99',
+        GBP: '£15.99',
+        EUR: '€19.99',
+        JPY: '¥3,000',
+        CAD: '$25.99',
+        CNY: '¥138.00',
+        AUD: '$29.99',
     },
 };
 
@@ -116,23 +117,7 @@ const locales = {
     },
 };
 
-const takeCareMsg = (isDCountry ?
-    (
-        country === 'GB' ?
-        [
-            'Please complete the payment within <strong>24 hours</strong> of trying the app',
-            'to support development and receive updates sooner.',
-        ] :
-        [
-            'If you find the app useful, <strong>please complete the payment</strong>',
-            'to support development and receive updates sooner. We rely on your kindness.',
-        ]
-    ) :
-    [
-        'We take care of your eyes and provide the best dark mode possible.',
-        'Your payment helps us continue making enhancements.',
-    ]
-).join('\n');
+const takeCareMsg = 'Dear User, we provide the best dark mode possible. <strong>Please complete the payment now</strong> to support continuous Dark Reader development.';
 
 const htmlText = `
 <section class="pr">
@@ -141,83 +126,86 @@ const htmlText = `
         <div class="pr-description" data-text="we_take_care">
             ${takeCareMsg}
         </div>
-        <div class="currencies">
-            <span class="currencies__text" data-text="region_currency">Currency</span>
-            ${currencyButton('USD', 'flag-us')}
-            ${currencyButton('EUR', 'flag-eu')}
-            ${currencyButton('GBP', 'flag-uk')}
-            ${currencyButton('JPY', 'flag-jp')}
-            ${currencyButton('CAD', 'flag-ca')}
-            ${currencyButton('CNY', 'flag-cn')}
-            ${currencyButton('AUD', 'flag-au')}
-            <span class="currencies__currency-connect"></span>
-            <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
-        </div>
-        <div class="tiers">
-            <label class="tier">
-                <div class="tier__top">
-                    <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
-                    <span class="tier__desc" data-text="regular">Individual use</span>
-                    <span class="tier__connect"></span>
-                    <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
-                </div>
-                <div class="tier__bottom" data-text="one_time">
-                    One-time payment
-                </div>
-            </label>
-            <label class="tier" style="display: none;">
-                <div class="tier__top">
-                    <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
-                    <span class="tier__desc" data-text="discount">Discount</span>
-                    <span class="tier__connect"></span>
-                    <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
-                </div>
-                <div class="tier__bottom" data-text="one_time">
-                    One-time payment
-                </div>
-            </label>
-            <label class="tier">
-                <div class="tier__top">
-                    <input type="radio" name="tier" value="${Tiers.CORPORATE}">
-                    <span class="tier__desc" data-text="corporate">Organizations</span>
-                    <span class="tier__connect"></span>
-                    <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
-                </div>
-                <div class="tier__bottom" data-text="price_per_user">
-                    Price per user
-                </div>
-            </label>
-        </div>
-        <div class="button-wrapper button-wrapper-paddle">
-            <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
-                <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
-            </a>
-            <a class="button-link button-link--card button-link--inactive js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
-                <i class="button-link__card-icon js-card-icon"></i>
-                <span class="button-link__text" data-text="card">Debit or Credit Card</span>
-            </a>
-            <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
-                <span class="button-link__text" data-text="more">Contact us</span>
-            </a>
-            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
-                <span class="button-link__text">
-                    <span data-text="pay">Pay</span>
-                    <span class="js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
-                </span>
-            </a>
-            <a class="button-link button-link--paddle js-link-paddle-corp" href="#pay-corp" data-s="d-side-paddlecorp" style="display:none;">
-                <span class="button-link__text">
-                    <span data-text="subscribe">Pay <span class="js-price-corporate">${DEFAULT_PRICE_CORP}</span></span>
-                </span>
-            </a>
-        </div>
-        <div class="payment-methods">
-            <i class="payment-methods__paypal"></i>
-            <i class="payment-methods__gpay"></i>
-            <i class="payment-methods__visa"></i>
-            <i class="payment-methods__mastercard"></i>
-            <i class="payment-methods__amex"></i>
-        </div>
+        <section class="payment-wrapper">
+            <div class="currencies">
+                <span class="currencies__text" data-text="region_currency">Currency</span>
+                ${currencyButton('USD', 'flag-us')}
+                ${currencyButton('EUR', 'flag-eu')}
+                ${currencyButton('GBP', 'flag-uk')}
+                ${currencyButton('JPY', 'flag-jp')}
+                ${currencyButton('CAD', 'flag-ca')}
+                ${currencyButton('CNY', 'flag-cn')}
+                ${currencyButton('AUD', 'flag-au')}
+                <span class="currencies__currency-connect"></span>
+                <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
+            </div>
+            <div class="tiers">
+                <label class="tier">
+                    <div class="tier__top">
+                        <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
+                        <span class="tier__desc" data-text="regular">Individual use</span>
+                        <span class="tier__connect"></span>
+                        <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                    </div>
+                    <div class="tier__bottom" data-text="one_time">
+                        One-time payment
+                    </div>
+                </label>
+                <label class="tier" style="display: none;">
+                    <div class="tier__top">
+                        <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
+                        <span class="tier__desc" data-text="discount">Discount</span>
+                        <span class="tier__connect"></span>
+                        <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
+                    </div>
+                    <div class="tier__bottom" data-text="one_time">
+                        One-time payment
+                    </div>
+                </label>
+                <label class="tier">
+                    <div class="tier__top">
+                        <input type="radio" name="tier" value="${Tiers.CORPORATE}">
+                        <span class="tier__desc" data-text="corporate">Organizations</span>
+                        <span class="tier__connect"></span>
+                        <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
+                    </div>
+                    <div class="tier__bottom" data-text="price_per_user">
+                        Price per user
+                    </div>
+                </label>
+            </div>
+            <div class="button-wrapper button-wrapper-paddle">
+                <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
+                    <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
+                </a>
+                <a class="button-link button-link--card button-link--inactive js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
+                    <i class="button-link__card-icon js-card-icon"></i>
+                    <span class="button-link__text" data-text="card">Debit or Credit Card</span>
+                </a>
+                <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
+                    <span class="button-link__text" data-text="more">Contact us</span>
+                </a>
+                <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
+                    <span class="button-link__text">
+                        <span data-text="pay">Pay</span>
+                        <span class="js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                    </span>
+                </a>
+                <a class="button-link button-link--paddle js-link-paddle-corp" href="#pay-corp" data-s="d-side-paddlecorp" style="display:none;">
+                    <span class="button-link__text">
+                        <span data-text="subscribe">Pay <span class="js-price-corporate">${DEFAULT_PRICE_CORP}</span></span>
+                    </span>
+                </a>
+            </div>
+            <div class="payment-methods">
+                <i class="payment-methods__paypal"></i>
+                <i class="payment-methods__gpay"></i>
+                <i class="payment-methods__visa"></i>
+                <i class="payment-methods__mastercard"></i>
+                <i class="payment-methods__amex"></i>
+            </div>
+            <darkreader-donate-mascot narrow></darkreader-donate-mascot>
+        </section>
     </div>
 </section>
 <section class="pr-small">
@@ -736,6 +724,12 @@ const cssText = `
     -webkit-text-stroke: unset;
     transform: none;
 }
+.payment-wrapper {
+    width: 16rem;
+}
+darkreader-donate-mascot {
+    display: none;
+}
 
 /* Wide */
 :host {
@@ -746,6 +740,9 @@ const cssText = `
         max-width: 100%;
     }
     .pr-wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         margin: 0 auto;
         max-width: 100%;
         width: 32rem;
@@ -759,15 +756,19 @@ const cssText = `
     .pr-description {
         display: block;
     }
+    /*
     .currencies {
         justify-content: center;
     }
     .currencies__text {
         display: inline-block;
     }
+    */
     .tiers {
+        /*
         flex-direction: row;
         gap: 1rem;
+        */
         justify-content: center;
         margin: 0.5rem 0rem;
         width: 100%;
@@ -775,10 +776,23 @@ const cssText = `
     .tier {
         flex: none;
         min-width: 13rem;
+        /*
         padding: 0rem;
+        */
     }
     .button-wrapper {
         flex-direction: row;
+    }
+    .payment-wrapper {
+        margin-left: 8rem;
+        position: relative;
+    }
+    darkreader-donate-mascot {
+        display: inline-block;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 10rem;
     }
 }
 `;

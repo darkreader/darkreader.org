@@ -48,6 +48,6 @@ export async function initPaddle(options) {
         initClick(options.feeButton, 'pri_01jf039mt65me4f2exbgpg3p9m');
     }
     if (options.corpButton) {
-        initClick(options.corpButton, 'pri_01jf03sd119pqskcgmj48e0zq2');
+        initClick(options.corpButton, 'pri_01k0skrfeyprpcmxvfsp5vfnw5');
     }
 }
