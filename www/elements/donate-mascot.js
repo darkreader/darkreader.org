@@ -183,7 +183,8 @@ const cssText = `
     opacity: 0;
     transition: opacity 500ms;
 }
-.donate-button:hover .donate-button__image__hover {
+.donate-button:hover .donate-button__image__hover,
+:host([hover]) .donate-button__image__hover {
     opacity: 1;
 }
 :host([narrow]) {

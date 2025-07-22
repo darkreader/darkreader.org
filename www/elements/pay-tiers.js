@@ -729,6 +729,7 @@ const cssText = `
 }
 darkreader-donate-mascot {
     display: none;
+    pointer-events: none;
 }
 
 /* Wide */
@@ -866,11 +867,24 @@ class PayTiersElement extends HTMLElement {
         }
 
         if (PADDLE_MODE) {
+            const feeButton = shadowRoot.querySelector('.js-link-paddle');
+            const corpButton = shadowRoot.querySelector('.js-link-paddle-corp');
             initPaddle({
-                feeButton: shadowRoot.querySelector('.js-link-paddle'),
-                corpButton: shadowRoot.querySelector('.js-link-paddle-corp'),
+                feeButton,
+                corpButton,
             });
         }
+
+        shadowRoot.host.addEventListener('mouseenter', (e) => {
+            if (e.target === shadowRoot.host) {
+                shadowRoot.querySelector('darkreader-donate-mascot')?.setAttribute('hover', '');
+            }
+        });
+        shadowRoot.host.addEventListener('mouseleave', (e) => {
+            if (e.target === shadowRoot.host) {
+                shadowRoot.querySelector('darkreader-donate-mascot')?.removeAttribute('hover');
+            }
+        });
     }
 }
 
