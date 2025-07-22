@@ -122,7 +122,7 @@ const takeCareMsg = 'Dear User, we provide the best dark mode possible. <strong>
 const htmlText = `
 <section class="pr">
     <div class="pr-wrapper">
-        <h2 class="pr-heading" data-text="heading">Pay for using <span class="pr-heading__darkreader">Dark Reader</span></h2>
+        <h2 class="pr-heading" data-text="heading">Please pay for <span class="pr-heading__darkreader">Dark Reader</span></h2>
         <div class="pr-description" data-text="we_take_care">
             ${takeCareMsg}
         </div>
@@ -749,7 +749,7 @@ darkreader-donate-mascot {
         width: 32rem;
     }
     .pr-heading {
-        font-size: 2.1rem;
+        font-size: 2rem;
         line-height: 1;
         text-align: center;
         -webkit-text-stroke: 0.125rem;
