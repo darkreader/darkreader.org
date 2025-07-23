@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isDCountry, isEUCountry} from './locales.js';
+import {country, isEUCountry} from './locales.js';
 import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
@@ -761,7 +761,8 @@ darkreader-donate-mascot {
     .pr-heading {
         font-size: 2rem;
         line-height: 1;
-        text-align: center;
+        text-align: justify;
+        text-align-last: justify;
         -webkit-text-stroke: 0.125rem;
     }
     .pr-description {

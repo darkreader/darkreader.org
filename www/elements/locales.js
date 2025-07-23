@@ -611,10 +611,7 @@ export const isHCountry = true;
 const isFirefox = navigator.userAgent.includes('Firefox');
 const isEdge = navigator.userAgent.includes('Edg');
 // export const isPCountry = (['US', 'GB', 'CA', 'AU', 'DE'].includes(country) || timeZone === 'UTC') && !isFirefox;
-// export const isPCountry = (['US', 'GB', 'CA', 'AU', 'DE'].includes(country) || timeZone === 'UTC') && !isFirefox;
 export const isPCountry = (['US'].includes(country) || timeZone === 'UTC') && !isFirefox;
-
-export const isDCountry = (['GB', 'CA', 'AU', 'DE', 'NL'].includes(country) || isFirefox) && !isEdge;
 
 export const isEUCountry = [
     'AT',
