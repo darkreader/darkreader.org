@@ -105,7 +105,7 @@ const usDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric'
 const takeCareMsg = [
     `Today is <strong>${usDate}</strong>, and we're kindly asking you to complete the payment to keep Dark Reader going.`,
     `For <strong>over 10 years</strong>, Dark Reader has helped millions of people with migraines, photophobia, and light sensitivity.`,
-    `Please <strong>make a payment now</strong> or soon after trying it.`,
+    `Please <strong>make a payment now</strong> or soon after trying the app.`,
     `Take part in spreading dark mode across the internet and help making the web easier on everyone's eyes.`,
 ].join(' ');
 
