@@ -762,7 +762,6 @@ darkreader-donate-mascot {
         font-size: 2rem;
         line-height: 1;
         text-align: justify;
-        text-align-last: justify;
         -webkit-text-stroke: 0.125rem;
     }
     .pr-description {
