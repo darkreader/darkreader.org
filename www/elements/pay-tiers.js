@@ -256,7 +256,7 @@ const cssText = `
 }
 .pr-heading {
     color: var(--color-highlight);
-    font-size: 1.05rem;
+    font-size: 1.0rem;
     font-weight: bold;
     margin: 0;
     position: relative;
