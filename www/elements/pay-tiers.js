@@ -101,6 +101,9 @@ function currencyButton(currency, flagCls) {
 
 const today = new Date();
 const usDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+const deDate = today.toLocaleDateString('de', { month: 'long', day: 'numeric' });
+const frDate = today.toLocaleDateString('fr', { month: 'long', day: 'numeric' });
+
 
 const takeCareMsg = [
     `Today is <strong>${usDate}</strong>, and we're kindly asking you to complete the payment to keep Dark Reader going.`,
@@ -124,6 +127,34 @@ const locales = {
         price_per_user: '每位用户价格',
         region_currency: '货币',
         we_take_care: '我们呵护您的眼睛，并提供尽可能最佳的暗黑模式。您的付款可帮助我们继续改进。',
+    },
+    de: {
+        heading: 'Bezahlen für Dark Reader',
+        regular: 'Einzelner Benutzer',
+        corporate: 'Organisationen',
+        one_time: 'Einmalzahlung',
+        price_per_user: 'Preis pro Benutzer',
+        pay: 'Zahlen',
+        we_take_care: [
+            `Heute ist <strong>${deDate}</strong>, und wir bitten Sie höflich, die Zahlung abzuschließen, damit Dark Reader weiterlaufen kann.`,
+            `Sei <strong>über 10 Jahren</strong>, hilft Dark Reader Millionen von Menschen mit Migräne, Photophobie und Lichtempfindlichkeit.`,
+            `Bitte <strong>tätigen Sie jetzt oder</strong> kurz nach dem Ausprobieren der App eine Zahlung.`,
+            `Beteiligen Sie sich an der Verbreitung des Dunkelmodus im Internet und helfen Sie dabei, das Web für alle Augen angenehmer zu gestalten.`,
+        ].join(' '),
+    },
+    fr: {
+        heading: 'Payer pour Dark Reader',
+        regular: 'Usage individuel',
+        corporate: 'Organisations',
+        one_time: 'Paiement unique',
+        price_per_user: 'Prix par utilisateur',
+        pay: 'Payer',
+        we_take_care: [
+            `Aujourd'hui c'est <strong>${frDate}</strong>, et nous vous demandons de bien vouloir effectuer le paiement pour que Dark Reader continue.`,
+            `Depuis <strong>plus de 10 ans</strong>, Dark Reader a aidé des millions de personnes souffrant de migraines, de photophobie et de sensibilité à la lumière.`,
+            `Veuillez <strong>effectuer un paiement maintenan</strong> ou peu de temps après avoir essayé l'application..`,
+            `Participez à la diffusion du mode sombre sur Internet et contribuez à rendre le Web plus agréable pour les yeux de tous.`,
+        ].join(' '),
     },
 };
 
@@ -201,7 +232,8 @@ const htmlText = `
                 </a>
                 <a class="button-link button-link--paddle js-link-paddle-corp" href="#pay-corp" data-s="d-side-paddlecorp" style="display:none;">
                     <span class="button-link__text">
-                        <span data-text="subscribe">Pay <span class="js-price-corporate">${DEFAULT_PRICE_CORP}</span></span>
+                        <span data-text="pay">Pay</span>
+                        <span class="js-price-corporate">${DEFAULT_PRICE_CORP}</span>
                     </span>
                 </a>
             </div>
@@ -875,6 +907,15 @@ class PayTiersElement extends HTMLElement {
                 s(`[data-text="${key}"]`).each((node) => node.textContent = text);
             });
             s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
+        } else if (document.documentElement.lang === 'de') {
+            Object.entries(locales.de).forEach(([key, text]) => {
+                s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
+            });
+        } else if (document.documentElement.lang === 'fr') {
+            Object.entries(locales.fr).forEach(([key, text]) => {
+                s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
+            });
+            
         }
 
         if (PADDLE_MODE) {
