@@ -103,6 +103,9 @@ const today = new Date();
 const usDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
 const deDate = today.toLocaleDateString('de', { month: 'long', day: 'numeric' });
 const frDate = today.toLocaleDateString('fr', { month: 'long', day: 'numeric' });
+const esDate = today.toLocaleDateString('es', { month: 'long', day: 'numeric' });
+const nlDate = today.toLocaleDateString('nl', { month: 'long', day: 'numeric' });
+const jaDate = today.toLocaleDateString('ja', { month: 'long', day: 'numeric' });
 
 
 const takeCareMsg = [
@@ -154,6 +157,48 @@ const locales = {
             `Depuis <strong>plus de 10 ans</strong>, Dark Reader a aidé des millions de personnes souffrant de migraines, de photophobie et de sensibilité à la lumière.`,
             `Veuillez <strong>effectuer un paiement maintenan</strong> ou peu de temps après avoir essayé l'application..`,
             `Participez à la diffusion du mode sombre sur Internet et contribuez à rendre le Web plus agréable pour les yeux de tous.`,
+        ].join(' '),
+    },
+    es: {
+        heading: 'Pague por Dark Reader',
+        regular: 'Uso individual',
+        corporate: 'Organizaciones',
+        one_time: 'Pago único',
+        price_per_user: 'Precio por usuario',
+        pay: 'Pagar',
+        we_take_care: [ 
+            `Hoy es <strong>${esDate}</strong>, y te pedimos que completes el pago para que Dark Reader siga funcionando.`,
+            `For <strong>más de 10 años</strong>, Dark Reader ha ayudado a millones de personas con migrañas, fotofobia y sensibilidad a la luz.`,
+            `Por favor, <strong>realiza el pago ahora</strong> o poco después de probar la app.`,
+            `Participa en la difusión del modo oscuro en internet y ayuda a que la web sea más cómoda para todos.`,
+        ].join(' '),
+    },
+    nl: {
+        heading: 'Betaal voor Dark Reader',
+        regular: 'Individueel gebruik',
+        corporate: 'Organisaties',
+        one_time: 'Eenmalige betaling',
+        price_per_user: 'Prijs per gebruiker',
+        pay: 'Betaling',
+        we_take_care: [ 
+            `Vandaag is het <strong>${nlDate}</strong>, en we vragen u vriendelijk om de betaling te voltooien om Dark Reader te kunnen blijven gebruiken.`,
+            `Dark Reader helpt <strong>al meer dan 10 jaar</strong>, miljoenen mensen met migraine, fotofobie en lichtgevoeligheid.`,
+            `Doe nu of kort na het uitproberen van de app een betaling.`,
+            `Doe mee aan de verspreiding van de donkere modus op internet en help het web prettiger te maken voor iedereen.`,
+        ].join(' '),
+    },
+    ja: {
+        heading: 'Dark Reader の料金を支払う',
+        regular: '個人使用',
+        corporate: '組織',
+        one_time: '1回限りの支払い',
+        price_per_user: 'ユーザーあたりの価格',
+        pay: '支払う',
+        we_take_care: [ 
+            `今日は <strong>${jaDate}</strong>, Dark Readerを継続するために、お支払いを完了していただきますようお願いいたします。`,
+            `Dark Readerは10年以上にわたり、片頭痛、羞明、光過敏症に悩む何百万人もの方々を支援してきました。`,
+            `今すぐ、またはアプリをお試しいただいた後すぐにお支払いください。`,
+            `インターネット上でダークモードを広め、皆様の目に優しいウェブ環境づくりにご協力ください。`,
         ].join(' '),
     },
 };
@@ -915,7 +960,18 @@ class PayTiersElement extends HTMLElement {
             Object.entries(locales.fr).forEach(([key, text]) => {
                 s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
             });
-            
+        } else if (document.documentElement.lang === 'es') {
+            Object.entries(locales.es).forEach(([key, text]) => {
+                s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
+            });
+        } else if (document.documentElement.lang === 'nl') {
+            Object.entries(locales.nl).forEach(([key, text]) => {
+                s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
+            });
+        } else if (document.documentElement.lang === 'ja') {
+            Object.entries(locales.ja).forEach(([key, text]) => {
+                s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
+            });
         }
 
         if (PADDLE_MODE) {
