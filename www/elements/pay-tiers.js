@@ -972,7 +972,6 @@ class PayTiersElement extends HTMLElement {
             Object.entries(locales.ja).forEach(([key, text]) => {
                 s(`[data-text="${key}"]`).each((node) => node.innerHTML = text);
             });
-            
         }
 
         if (PADDLE_MODE) {
