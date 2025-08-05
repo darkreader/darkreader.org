@@ -351,7 +351,7 @@ iframe {
     display: flex;
     justify-content: center;
     min-height: 8rem;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 1rem;
     width: 50%;
 }
 
