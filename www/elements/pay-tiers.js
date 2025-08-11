@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isEUCountry} from './locales.js';
+import {country, isEdge, isEUCountry} from './locales.js';
 import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
@@ -286,6 +286,13 @@ const htmlText = `
             </div>
             <darkreader-donate-mascot narrow></darkreader-donate-mascot>
         </section>
+        <div class="pr-description pr-edge-plus" data-text="edge_plus" style="${isEdge ? '' : 'display: none;'}">
+            <i class="pr-edge-plus__edge-icon"></i>
+            Microsoft Edge users will get early access to
+            <span class="pr-edge-plus__title"><span class="pr-edge-plus__title--dr">Dark Reader</span> <span class="pr-edge-plus__title--plus">Plus</span></span>.
+            New user interface, premium themes & custom colors.
+            <a href="/plus/" target="_blank">Learn more.</a>
+        </div>
     </div>
 </section>
 <section class="pr-small">
@@ -330,7 +337,7 @@ const cssText = `
     color: var(--color-highlight);
     font-size: 1.0rem;
     font-weight: bold;
-    margin: 0;
+    margin: 0 0 0.25rem 0;
     position: relative;
     text-align: left;
     -webkit-text-stroke: 0.0625rem;
@@ -359,6 +366,44 @@ const cssText = `
     margin: 0.25rem 0 0.5rem 0;
     /*
     text-align: center;
+    */
+}
+.pr-edge-plus {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    text-indent: -1.25rem;
+
+    a {
+        color: var(--color-text);
+    }
+}
+.pr-edge-plus__edge-icon {
+    background-image: url(/images/icon-edge-256x256.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -0.125rem;
+    display: inline-block;
+    height: 1rem;
+    position: relative;
+    width: 1rem;
+}
+.pr-edge-plus__title {
+    font-family: system-ui;
+    text-transform: uppercase;
+}
+.pr-edge-plus__title--dr {
+    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px;
+}
+.pr-edge-plus__title--plus {
+    color: white;
+    font-weight: 300;
+    /*
+    text-shadow: 0 0 1rem var(--color-text), 0 0 0.75rem var(--color-text), 0 0 0.5rem var(--color-text), 0 0 0.25rem var(--color-text);
     */
 }
 .tiers {
