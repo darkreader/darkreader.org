@@ -104,6 +104,11 @@ a:visited {
     text-align: center;
 }
 
+p,
+footer {
+    text-wrap: balance;
+}
+
 .slogan {
     background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
     background-clip: text;
@@ -129,7 +134,7 @@ section {
     margin: 1rem 0;
 }
 
-em {
+.text-secondary {
     opacity: 0.75;
 }
 
@@ -140,6 +145,7 @@ footer {
 }
 
 .carousel {
+    display: none;
     margin: 1rem auto 0 auto;
     overflow: auto;
     padding-bottom: 1rem;
@@ -163,4 +169,37 @@ footer {
     display: inline-block;
     flex: none;
     width: 8rem;
+}
+
+.desktop-promo {
+    padding-left: 10%;
+}
+
+.desktop-promo-image {
+    aspect-ratio: 2;
+    object-fit: cover;
+    object-position: 50% 54%;
+    width: 100%;
+}
+
+.edge-icon {
+    background-image: url(/images/icon-edge-256x256.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -0.125rem;
+    display: inline-block;
+    height: 1rem;
+    position: relative;
+    width: 1rem;
+}
+
+@media (min-width: 45rem) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
 }
