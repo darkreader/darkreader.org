@@ -175,11 +175,39 @@ footer {
     padding-left: 10%;
 }
 
+.desktop-promo-wrapper {
+    position: relative;
+}
+
 .desktop-promo-image {
-    aspect-ratio: 2;
-    object-fit: cover;
-    object-position: 50% 54%;
     width: 100%;
+}
+
+.desktop-promo-image:not(:first-child) {
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.desktop-promo-image:nth-child(2) {
+    animation-name: promo-image-1;
+}
+
+.desktop-promo-image:nth-child(3) {
+    animation-name: promo-image-2;
+}
+
+.desktop-promo-image:nth-child(4) {
+    animation-name: promo-image-3;
+}
+
+.desktop-promo-image:nth-child(5) {
+    animation-name: promo-image-4;
 }
 
 .edge-icon {
@@ -201,5 +229,65 @@ footer {
 
     .description {
         font-size: 2rem;
+    }
+}
+
+@keyframes promo-image-1 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    41% {
+        opacity: 0;
+    }
+}
+
+@keyframes promo-image-2 {
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    61% {
+        opacity: 0;
+    }
+}
+
+@keyframes promo-image-3 {
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    81% {
+        opacity: 0;
+    }
+}
+
+@keyframes promo-image-4 {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
