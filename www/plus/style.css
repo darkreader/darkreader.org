@@ -75,6 +75,12 @@ h2 {
     top: 0.25rem;
 }
 
+.title {
+    font-size: 2.15rem;
+    margin: 0;
+    text-align: center;
+}
+
 .title-darkreader {
     background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
     background-clip: text;
@@ -92,6 +98,19 @@ h2 {
         0 0 0.5rem var(--color-text),
         0 0 0.25rem var(--color-text);
     text-transform: uppercase;
+}
+
+.title-secondary {
+    font-size: 2.15rem;
+    margin: 0;
+    text-align: center;
+}
+
+.title-secondary-text {
+    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-clip: text;
+    color: transparent;
+    font-weight: 100;
 }
 
 p,
@@ -120,14 +139,13 @@ footer {
     text-align: center;
 }
 
-.title {
-    font-size: 2.15rem;
-    margin: 0;
-    text-align: center;
-}
-
 .description {
     font-size: 1.3rem;
+}
+
+.description-tier {
+    margin: 0 auto;
+    max-width: 40rem;
 }
 
 section {
@@ -139,13 +157,12 @@ section {
 }
 
 footer {
-    opacity: 0.5;
+    opacity: 0.75;
     padding: 0.75rem;
     text-align: center;
 }
 
 .carousel {
-    display: none;
     margin: 1rem auto 0 auto;
     overflow: auto;
     padding-bottom: 1rem;
@@ -184,7 +201,7 @@ footer {
 }
 
 .desktop-promo-image:not(:first-child) {
-    animation-duration: 10s;
+    animation-duration: 7.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
@@ -227,8 +244,24 @@ footer {
         font-size: 4rem;
     }
 
+    .title-secondary {
+        font-size: 3rem;
+    }
+
     .description {
         font-size: 2rem;
+    }
+
+    .title-secondary + .description {
+        font-size: 1.5rem;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-wrapper {
+        justify-content: center;
     }
 }
 

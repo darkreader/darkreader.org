@@ -556,6 +556,14 @@ const cssText = `
     container-type: inline-size;
     font-size: 1.25rem;
 }
+
+:host([minimalist]) {
+    .currencies,
+    .tiers,
+    .payment-methods {
+        display: none;
+    }
+}
 `;
 
 class PlusTiersElement extends HTMLElement {
