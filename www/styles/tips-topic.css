@@ -13,3 +13,8 @@
 article img {
     border-radius: 0.5rem;
 }
+
+ol {
+    list-style: inside decimal;
+    padding-left: 0;
+}
