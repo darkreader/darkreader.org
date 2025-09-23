@@ -1,0 +1,77 @@
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    gap: 0.5em;
+    margin: 1rem auto;
+    max-width: 24em;
+    text-align: center;
+}
+
+button {
+    background-color: var(--color-control);
+    border: none;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    height: 2.5em;
+    margin: 0 auto;
+    max-width: 16em;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+label {
+    color: #98e487;
+    display: inline-block;
+    min-height: 2.5em;
+}
+
+.line {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.button-progress {
+    background-color: #696faa;
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1000ms;
+    width: 0%;
+}
+
+.button-text {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.button-loading {
+    pointer-events: none;
+
+    .button-progress {
+        width: 75%;
+    }
+}
+
+.button-success {
+    background-color: #236f75;
+}
+
+.button-failure {
+    background-color: #803449;
+}
