@@ -169,10 +169,13 @@ section:nth-child(4) {
 
 footer {
     background-color: hsl(212, 45%, 10%);
-    color: color-mix(in srgb, hsl(212, 45%, 12%), var(--color-text));
     font-size: 0.75rem;
     padding: 0.75rem;
     text-align: center;
+}
+
+.promo-footer {
+    color: color-mix(in srgb, hsl(212, 45%, 12%), var(--color-text));
 }
 
 .carousel {
