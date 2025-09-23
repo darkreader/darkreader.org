@@ -1,10 +1,11 @@
 :root {
     --color-background: #000000;
-    --color-control: #4d5492;
-    --color-control-hover: #193945;
-    --color-text: #6587e2;
+    --color-control: #2f496b;
+    --color-control-hover: #2b6074;
+    --color-text: #5681bd;
     --color-text-highlight: white;
     --color-accent: #e9594c;
+    --gradient-accent: linear-gradient(to right, #c45c49, #c23d4a, #4577b9);
 }
 
 html {
@@ -82,7 +83,7 @@ h2 {
 }
 
 .title-darkreader {
-    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-image: var(--gradient-accent);
     background-clip: text;
     color: transparent;
     font-weight: 900;
@@ -107,7 +108,7 @@ h2 {
 }
 
 .title-secondary-text {
-    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-image: var(--gradient-accent);
     background-clip: text;
     color: transparent;
     font-weight: 100;
@@ -129,7 +130,7 @@ footer {
 }
 
 .slogan {
-    background-image: linear-gradient(to right, #e7573b, #af6ce9, #40a6e5);
+    background-image: var(--gradient-accent);
     background-clip: text;
     color: transparent;
     display: none;
