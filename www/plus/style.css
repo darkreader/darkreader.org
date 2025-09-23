@@ -1,11 +1,11 @@
 :root {
-    --color-background: #000000;
-    --color-control: #2f496b;
-    --color-control-hover: #2b6074;
-    --color-text: #5681bd;
-    --color-text-highlight: white;
-    --color-accent: #e9594c;
-    --gradient-accent: linear-gradient(to right, #c45c49, #c23d4a, #4577b9);
+    --color-background: hsl(0, 0%, 0%);
+    --color-control: hsl(214, 39%, 30%);
+    --color-control-hover: hsl(196, 46%, 31%);
+    --color-text: hsl(215, 44%, 54%);
+    --color-text-highlight: #ffffff;
+    --color-accent: hsl(5, 78%, 61%);
+    --gradient-accent: linear-gradient(to right, hsl(9, 51%, 53%), hsl(354, 52%, 50%), hsl(214, 46%, 50%));
 }
 
 html {
@@ -17,9 +17,15 @@ html {
 body {
     color: var(--color-text);
     font-family: system-ui;
-    max-width: 42em;
-    margin: 0 auto;
-    padding: 1em
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1,
@@ -47,11 +53,6 @@ a:hover {
 .banner__image {
     display: none;
     max-width: 32rem;
-}
-
-footer {
-    font-size: 0.75rem;
-    margin-top: 1rem;
 }
 
 .screenshot {
@@ -146,19 +147,30 @@ footer {
 
 .description-tier {
     margin: 0 auto;
-    max-width: 40rem;
+    max-width: 32rem;
 }
 
 section {
-    margin: 1rem 0;
+    margin: 0;
+    padding: 2rem 0;
 }
 
-.text-secondary {
-    opacity: 0.75;
+section:nth-child(2) {
+    background-color: hsl(212, 45%, 7%);
+}
+
+section:nth-child(3) {
+    background-color: hsl(212, 45%, 10%);
+}
+
+section:nth-child(4) {
+    background-color: hsl(212, 45%, 10%);
 }
 
 footer {
-    opacity: 0.75;
+    background-color: hsl(212, 45%, 10%);
+    color: color-mix(in srgb, hsl(212, 45%, 12%), var(--color-text));
+    font-size: 0.75rem;
     padding: 0.75rem;
     text-align: center;
 }
@@ -183,14 +195,16 @@ footer {
 .carousel-screenshot {
     border: 1px solid rgb(49, 46, 58);
     border-radius: 1rem;
-    box-shadow: inset 0 0 0 0.25rem black;
+    box-shadow: inset 0 0 0 0.25rem black, 0 0 1rem black;
     display: inline-block;
     flex: none;
     width: 8rem;
 }
 
 .desktop-promo {
-    padding-left: 10%;
+    max-width: 42em;
+    padding-left: 2.5%;
+    position: relative;
 }
 
 .desktop-promo-wrapper {
