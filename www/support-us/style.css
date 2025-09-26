@@ -60,6 +60,10 @@ ul {
     row-gap: 0rem;
 }
 
+p {
+    max-width: 32rem;
+}
+
 footer {
     font-size: 0.75rem;
     margin-top: 1rem;
