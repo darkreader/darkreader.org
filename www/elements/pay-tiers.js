@@ -924,6 +924,12 @@ darkreader-donate-mascot {
         width: 10rem;
     }
 }
+:host([align-left]) {
+    .pr,
+    .pr-wrapper {
+        margin: 0;
+    }
+}
 `;
 
 class PayTiersElement extends HTMLElement {
