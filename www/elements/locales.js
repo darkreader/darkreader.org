@@ -606,13 +606,14 @@ export const country = (() => {
 
 // const hCountries = ['US', 'GB', 'CA', 'AU', 'DE', 'NL', 'FR'];
 // export const isHCountry = hCountries.includes(country);
-export const isHCountry = true;
+export const isHCountry = false;
 
-const isFirefox = navigator.userAgent.includes('Firefox');
+// const isFirefox = navigator.userAgent.includes('Firefox');
 export const isEdge = navigator.userAgent.includes('Edg');
 // export const isPCountry = (['US', 'GB', 'CA', 'AU', 'DE'].includes(country) || timeZone === 'UTC') && !isFirefox;
 // export const isPCountry = (['US'].includes(country) || timeZone === 'UTC') && !isFirefox;
-export const isPCountry = (['US', 'GB', 'CA', 'AU'].includes(country) || timeZone === 'UTC') && !isFirefox;
+// export const isPCountry = (['US', 'GB', 'CA', 'AU'].includes(country) || timeZone === 'UTC') && !isFirefox;
+export const isPCountry = false;
 
 export const isEUCountry = [
     'AT',
