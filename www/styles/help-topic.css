@@ -462,7 +462,7 @@ html:not(.android) .intro {
 .v2-banner-safari {
     --color-text: #5ea7d5;
     background-color: #182636;
-    background-image: radial-gradient(#202f47, #151a28);
+    background-image: linear-gradient(to top, #131d2e 0%, #151a28 20%, black);
     display: none;
     grid-area: large;
     padding: 3rem 2rem;
