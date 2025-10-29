@@ -75,3 +75,20 @@ label {
 .button-failure {
     background-color: #803449;
 }
+
+.copy-button {
+    height: 2em;
+    min-width: 5em;
+    width: auto;
+
+    &::before {
+        content: '⎘ ';
+        font-size: 125%;
+    }
+
+    &.copy-button--copied {
+        &::before {
+            display: none;
+        }
+    }
+}
