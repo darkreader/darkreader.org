@@ -2,14 +2,19 @@ const elEmail = document.querySelector('.js-email');
 const submit = document.querySelector('button');
 const label = document.querySelector('label');
 
-const params = new URLSearchParams(location.search);
-elEmail.textContent = params.get('email');
+const hash = location.hash;
+let email = '';
+let key = '';
+if (hash.startsWith('#v1=')) {
+    [email, key] = atob(hash.slice(4)).split('::');
+    elEmail.textContent = email;
+    location.hash = '';
+    history.pushState('', document.title, location.pathname);
+}
 
 submit.addEventListener('click', async (e) => {
     e.preventDefault();
     label.textContent = '';
-    const email = params.get('email');
-    const key = params.get('key');
     if (email.includes('@') && key) {
         submit.classList.add('button-loading');
         setTimeout(() => {
