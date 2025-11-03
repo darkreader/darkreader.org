@@ -470,10 +470,6 @@ html:not(.android) .intro {
 }
 
 html:not([data-p="p"])[data-o="mac"] .v2-banner-safari {
-    display: none;
-}
-
-html:not([data-p="p"]) .v2-banner-jump {
     display: block;
 }
 
