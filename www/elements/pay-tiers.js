@@ -78,6 +78,15 @@ const Prices = {
         CNY: '¥138.00',
         AUD: '$29.99',
     },
+    SAVE: {
+        USD: '$10.00',
+        GBP: '£8.00',
+        EUR: '€10.00',
+        JPY: '¥1,500',
+        CAD: '$13.00',
+        CNY: '¥70.00',
+        AUD: '$15.00',
+    },
 };
 
 const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
@@ -104,10 +113,10 @@ const today = new Date();
 const formatDate = (locale) => today.toLocaleDateString(locale, { month: 'long', day: 'numeric' });
 
 const takeCareMsgEnUS = [
-    `Today is <strong>${formatDate('en-US')}</strong>, and we're kindly asking you to complete the payment to keep Dark Reader going.`,
-    `For <strong>over 10 years</strong>, Dark Reader has helped millions of people with migraines, photophobia, and light sensitivity.`,
+    `Today is <strong>${formatDate('en-US')}</strong>, and we kindly ask you to complete the payment to keep Dark Reader going.`,
+    `<strong>Every day</strong>, Dark Reader helps millions of people with migraines, photophobia, and light sensitivity.`,
     `Please <strong>make a payment now</strong> or soon after trying the app.`,
-    `Take part in spreading dark mode across the internet and help making the web easier on everyone's eyes.`,
+    `Take part in spreading dark mode and making the internet easier on everyone's eyes.`,
 ].join(' ');
 
 const locales = {
@@ -124,6 +133,9 @@ const locales = {
         pay_with: '',
         price_per_user: '每位用户价格',
         region_currency: '货币',
+        pay: '支付',
+        save: '节省',
+        hint: '在工作中使用？<br>请老板支付<br>辅助功能软件的费用。',
         we_take_care: '我们呵护您的眼睛，并提供尽可能最佳的暗黑模式。您的付款可帮助我们继续改进。',
     },
     de: {
@@ -133,11 +145,13 @@ const locales = {
         one_time: 'Einmalzahlung',
         price_per_user: 'Preis pro Benutzer',
         pay: 'Zahlen',
+        save: 'Sparen',
+        hint: 'Nutzung am Arbeitsplatz?<br>Bitten Sie Ihren Chef,<br>die Kosten für<br>Barrierefreiheits-<br>Software zu übernehmen.',
         we_take_care: [
             `Heute ist <strong>${formatDate('de')}</strong>, und wir bitten Sie höflich, die Zahlung abzuschließen, damit Dark Reader weiterlaufen kann.`,
-            `Sei <strong>über 10 Jahren</strong>, hilft Dark Reader Millionen von Menschen mit Migräne, Photophobie und Lichtempfindlichkeit.`,
+            `<strong>Tagtäglich</strong> hilft Dark Reader Millionen von Menschen mit Migräne, Photophobie und Lichtempfindlichkeit.`,
             `Bitte <strong>tätigen Sie jetzt oder</strong> kurz nach dem Ausprobieren der App eine Zahlung.`,
-            `Beteiligen Sie sich an der Verbreitung des Dunkelmodus im Internet und helfen Sie dabei, das Web für alle Augen angenehmer zu gestalten.`,
+            `Hilf mit, den Dunkelmodus zu verbreiten und das Internet augenschonender zu gestalten.`,
         ].join(' '),
     },
     fr: {
@@ -147,6 +161,8 @@ const locales = {
         one_time: 'Paiement unique',
         price_per_user: 'Prix par utilisateur',
         pay: 'Payer',
+        save: 'Économisez',
+        hint: `Vous l'utilisez au travail?<br>Demandez à votre patron<br>de payer le logiciel<br>d'accessibilité.`,
         we_take_care: [
             `Aujourd'hui c'est <strong>${formatDate('fr')}</strong>, et nous vous demandons de bien vouloir effectuer le paiement pour que Dark Reader continue.`,
             `Depuis <strong>plus de 10 ans</strong>, Dark Reader a aidé des millions de personnes souffrant de migraines, de photophobie et de sensibilité à la lumière.`,
@@ -161,6 +177,8 @@ const locales = {
         one_time: 'Pago único',
         price_per_user: 'Precio por usuario',
         pay: 'Pagar',
+        save: 'Ahorra',
+        hint: '¿Lo usas en el trabajo?<br>Pídele a tu jefe que<br>pague el software de<br>accesibilidad.',
         we_take_care: [ 
             `Hoy es <strong>${formatDate('es')}</strong>, y te pedimos que completes el pago para que Dark Reader siga funcionando.`,
             `For <strong>más de 10 años</strong>, Dark Reader ha ayudado a millones de personas con migrañas, fotofobia y sensibilidad a la luz.`,
@@ -175,6 +193,8 @@ const locales = {
         one_time: 'Eenmalige betaling',
         price_per_user: 'Prijs per gebruiker',
         pay: 'Betaling',
+        save: 'Bespaar',
+        hint: 'Gebruikt u het op het werk?<br>Vraag uw baas om<br>te betalen voor<br>toegankelijkheidssoftware.',
         we_take_care: [ 
             `Vandaag is het <strong>${formatDate('nl')}</strong>, en we vragen u vriendelijk om de betaling te voltooien om Dark Reader te kunnen blijven gebruiken.`,
             `Dark Reader helpt <strong>al meer dan 10 jaar</strong>, miljoenen mensen met migraine, fotofobie en lichtgevoeligheid.`,
@@ -189,6 +209,8 @@ const locales = {
         one_time: '1回限りの支払い',
         price_per_user: 'ユーザーあたりの価格',
         pay: '支払う',
+        save: '節約',
+        hint: '職場で使用していますか?<br>上司にアクセシビリティ<br>ソフトウェアの費用を負担<br>してもらいます。',
         we_take_care: [ 
             `今日は <strong>${formatDate('ja')}</strong>, Dark Readerを継続するために、お支払いを完了していただきますようお願いいたします。`,
             `Dark Readerは10年以上にわたり、片頭痛、羞明、光過敏症に悩む何百万人もの方々を支援してきました。`,
@@ -225,6 +247,7 @@ const htmlText = `
                         <span class="tier__desc" data-text="regular">Individual use</span>
                         <span class="tier__connect"></span>
                         <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                        <span class="tier__save"><span data-text="save">Save</span> <strong class="js-price-save">${Prices.SAVE[DEFAULT_CURRENCY]}</strong></span>
                     </div>
                     <div class="tier__bottom" data-text="one_time">
                         One-time payment
@@ -247,6 +270,7 @@ const htmlText = `
                         <span class="tier__desc" data-text="corporate">Organizations</span>
                         <span class="tier__connect"></span>
                         <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
+                        <span class="tier__hint" data-text="hint">Using at work?<br>Ask boss to pay<br>for accessibility<br>software.</span>
                     </div>
                     <div class="tier__bottom" data-text="price_per_user">
                         Price per user
@@ -497,6 +521,31 @@ const cssText = `
     justify-self: flex-end;
     position: relative;
     top: 0.375rem;
+}
+.tier__save {
+    background-color: hsl(165, 65%, 25%);
+    border-radius: 0.25rem;
+    color: hsl(130, 60%, 75%);
+    display: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    left: calc(100% + 0.5rem);
+    padding: 0.5rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+}
+.tier__hint {
+    display: none;
+    font-size: 0.75rem;
+    left: calc(100% + 0.5rem);
+    line-height: 1;
+    height: 1.5rem;
+    position: absolute;
+    text-align: left;
+    top: 0.125rem;
+    white-space: pre;
 }
 /*
 .tier:hover {
@@ -908,11 +957,17 @@ darkreader-donate-mascot {
         padding: 0rem;
         */
     }
+    .tier__save {
+        display: inline-block;
+    }
+    .tier__hint {
+        display: inline-block;
+    }
     .button-wrapper {
         flex-direction: row;
     }
     .payment-wrapper {
-        margin-left: 8rem;
+        margin-left: 4rem;
         margin-top: 0.5rem;
         position: relative;
     }
@@ -985,6 +1040,7 @@ class PayTiersElement extends HTMLElement {
             s('.js-price-regular').each((node) => node.textContent = Prices.REGULAR[currency]);
             s('.js-price-discount').each((node) => node.textContent = Prices.DISCOUNT[currency]);
             s('.js-price-corporate').each((node) => node.textContent = Prices.CORPORATE[currency]);
+            s('.js-price-save').each((node) => node.textContent = Prices.SAVE[currency]);
             s('.js-currency-text').each((node) => node.textContent = currency);
         };
 
