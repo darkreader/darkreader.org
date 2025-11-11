@@ -958,7 +958,10 @@ darkreader-donate-mascot {
         */
     }
     .tier__save {
+        /*
         display: inline-block;
+        */
+        display: none;
     }
     .tier__hint {
         display: inline-block;
