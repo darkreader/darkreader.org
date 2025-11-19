@@ -964,13 +964,19 @@ darkreader-donate-mascot {
         display: none;
     }
     .tier__hint {
+        /*
         display: inline-block;
+        */
+        display: none;
     }
     .button-wrapper {
         flex-direction: row;
     }
     .payment-wrapper {
+        /*
         margin-left: 4rem;
+        */
+        margin-left: 6rem;
         margin-top: 0.5rem;
         position: relative;
     }
