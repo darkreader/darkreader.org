@@ -136,7 +136,12 @@ const locales = {
         pay: '支付',
         save: '节省',
         hint: '在工作中使用？<br>请老板支付<br>辅助功能软件的费用。',
-        we_take_care: '我们呵护您的眼睛，并提供尽可能最佳的暗黑模式。您的付款可帮助我们继续改进。',
+        we_take_care: [
+            `今天是<strong>${formatDate('zh-CN')}</strong>，我们恳请您完成付款，以支持Dark Reader的持续运营。`,
+            `<strong>每天</strong>，Dark Reader帮助数百万用户缓解偏头痛、畏光和光敏感症状。`,
+            `请<strong>立即付款</strong>。`,
+            `加入我们，共同推广暗黑模式，让网络世界更加呵护您的双眼。`,
+        ],
     },
     de: {
         heading: 'Bezahlen für Dark Reader',
@@ -150,7 +155,7 @@ const locales = {
         we_take_care: [
             `Heute ist <strong>${formatDate('de')}</strong>, und wir bitten Sie höflich, die Zahlung abzuschließen, damit Dark Reader weiterlaufen kann.`,
             `<strong>Tagtäglich</strong> hilft Dark Reader Millionen von Menschen mit Migräne, Photophobie und Lichtempfindlichkeit.`,
-            `Bitte <strong>tätigen Sie jetzt oder</strong> kurz nach dem Ausprobieren der App eine Zahlung.`,
+            `Bitte <strong>zahlen Sie jetzt</strong>.`,
             `Hilf mit, den Dunkelmodus zu verbreiten und das Internet augenschonender zu gestalten.`,
         ].join(' '),
     },
@@ -165,9 +170,9 @@ const locales = {
         hint: `Vous l'utilisez au travail?<br>Demandez à votre patron<br>de payer le logiciel<br>d'accessibilité.`,
         we_take_care: [
             `Aujourd'hui c'est <strong>${formatDate('fr')}</strong>, et nous vous demandons de bien vouloir effectuer le paiement pour que Dark Reader continue.`,
-            `Depuis <strong>plus de 10 ans</strong>, Dark Reader a aidé des millions de personnes souffrant de migraines, de photophobie et de sensibilité à la lumière.`,
-            `Veuillez <strong>effectuer un paiement maintenan</strong> ou peu de temps après avoir essayé l'application..`,
-            `Participez à la diffusion du mode sombre sur Internet et contribuez à rendre le Web plus agréable pour les yeux de tous.`,
+            `<strong>Chaque jour</strong>, Dark Reader aide des millions de personnes souffrant de migraines, de photophobie et de sensibilité à la lumière.`,
+            `Veuillez <strong>effectuer votre paiement dès maintenant</strong>.`,
+            `Contribuez à rendre Internet plus agréable pour les yeux de tous.`,
         ].join(' '),
     },
     es: {
@@ -181,8 +186,8 @@ const locales = {
         hint: '¿Lo usas en el trabajo?<br>Pídele a tu jefe que<br>pague el software de<br>accesibilidad.',
         we_take_care: [ 
             `Hoy es <strong>${formatDate('es')}</strong>, y te pedimos que completes el pago para que Dark Reader siga funcionando.`,
-            `For <strong>más de 10 años</strong>, Dark Reader ha ayudado a millones de personas con migrañas, fotofobia y sensibilidad a la luz.`,
-            `Por favor, <strong>realiza el pago ahora</strong> o poco después de probar la app.`,
+            `<strong>Cada día</strong>, Dark Reader ayuda a millones de personas con migrañas, fotofobia y sensibilidad a la luz.`,
+            `Por favor, <strong>realicen el pago ahora</strong>.`,
             `Participa en la difusión del modo oscuro en internet y ayuda a que la web sea más cómoda para todos.`,
         ].join(' '),
     },
@@ -197,9 +202,9 @@ const locales = {
         hint: 'Gebruikt u het op het werk?<br>Vraag uw baas om<br>te betalen voor<br>toegankelijkheidssoftware.',
         we_take_care: [ 
             `Vandaag is het <strong>${formatDate('nl')}</strong>, en we vragen u vriendelijk om de betaling te voltooien om Dark Reader te kunnen blijven gebruiken.`,
-            `Dark Reader helpt <strong>al meer dan 10 jaar</strong>, miljoenen mensen met migraine, fotofobie en lichtgevoeligheid.`,
-            `Doe nu of kort na het uitproberen van de app een betaling.`,
-            `Doe mee aan de verspreiding van de donkere modus op internet en help het web prettiger te maken voor iedereen.`,
+            `<strong>Dark Reader helpt dagelijks</strong> miljoenen mensen met migraine, fotofobie en lichtgevoeligheid.`,
+            `Doe alstublieft <strong>nu een betaling</strong>.`,
+            `Draag bij aan de verspreiding van de donkere modus en maak het internet prettiger voor iedereen.`,
         ].join(' '),
     },
     ja: {
@@ -213,9 +218,9 @@ const locales = {
         hint: '職場で使用していますか?<br>上司にアクセシビリティ<br>ソフトウェアの費用を負担<br>してもらいます。',
         we_take_care: [ 
             `今日は <strong>${formatDate('ja')}</strong>, Dark Readerを継続するために、お支払いを完了していただきますようお願いいたします。`,
-            `Dark Readerは10年以上にわたり、片頭痛、羞明、光過敏症に悩む何百万人もの方々を支援してきました。`,
-            `今すぐ、またはアプリをお試しいただいた後すぐにお支払いください。`,
-            `インターネット上でダークモードを広め、皆様の目に優しいウェブ環境づくりにご協力ください。`,
+            `Dark Readerは、<strong>毎日</strong>、片頭痛、羞明、光過敏症に悩む何百万人もの方々を支援しています。`,
+            `<strong>今すぐお支払い</strong>ください。`,
+            `ダークモードの普及にご協力いただき、インターネットを誰にとっても目に優しいものにしましょう。`,
         ].join(' '),
     },
 };
