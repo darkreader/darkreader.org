@@ -115,7 +115,7 @@ const formatDate = (locale) => today.toLocaleDateString(locale, { month: 'long',
 const takeCareMsgEnUS = [
     `Today is <strong>${formatDate('en-US')}</strong>, and we kindly ask you to complete the payment to keep Dark Reader going.`,
     `<strong>Every day</strong>, Dark Reader helps millions of people with migraines, photophobia, and light sensitivity.`,
-    `Please <strong>make a payment now</strong> or soon after trying the app.`,
+    `Please <strong>make a payment now</strong>.`,
     `Take part in spreading dark mode and making the internet easier on everyone's eyes.`,
 ].join(' ');
 
