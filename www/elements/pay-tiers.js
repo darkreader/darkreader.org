@@ -223,6 +223,38 @@ const locales = {
             `ダークモードの普及にご協力いただき、インターネットを誰にとっても目に優しいものにしましょう。`,
         ].join(' '),
     },
+    sr: {
+        heading: 'Молимо платите за Dark Reader',
+        regular: 'Индивидуална употреба',
+        corporate: 'Организације',
+        one_time: 'Једнократна уплата',
+        price_per_user: 'Цена по кориснику',
+        pay: 'Плати',
+        save: 'Сачувај',
+        hint: 'Користите на послу?<br>Замолите шефа да плати за<br>приступ<br>софтверу.',
+        we_take_care: [
+            `Данас је <strong>${formatDate('sr-Cyrl')}</strong> и љубазно вас молимо да извршите уплату да бисте одржали Dark Reader.`,
+            `<strong>Сваког дана</strong>, Dark Reader помаже милионима људи са мигренама, фотофобијом и осетљивошћу на светлост.`,
+            `Молимо <strong>извршите уплату сада</strong>.`,
+            `Заузмите место у ширењу тамног режима и учините интернет лакшим за свачије око.`,
+        ].join(' '),
+    },
+    'sr-Latn': {
+        heading: 'Molimo platite za Dark Reader',
+        regular: 'Individualna upotreba',
+        corporate: 'Organizacije',
+        one_time: 'Jednokratna uplata',
+        price_per_user: 'Cena po korisniku',
+        pay: 'Plati',
+        save: 'Sačuvaj',
+        hint: 'Koristite na poslu?<br>Zamolite šefa da plati za<br>pristup<br>softveru.',
+        we_take_care: [
+            `Danas je <strong>${formatDate('sr-Latn')}</strong> i ljubazno vas molimo da izvršite uplatu da biste održali Dark Reader.`,
+            `<strong>Svakog dana</strong>, Dark Reader pomaže milionima ljudi sa migrenama, fotofobijom i osetljivošću na svetlost.`,
+            `Molimo <strong>izvršite uplatu sada</strong>.`,
+            `Zauzmite mesto u širenju tamnog režima i učinite internet lakšim za svačije oko.`,
+        ].join(' '),
+    },
 };
 
 const htmlText = `
