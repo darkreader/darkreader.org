@@ -1,5 +1,7 @@
 # Pomoć (srpski)
 
+<!-- Authors: https://github.com/bzzrak, Radoš Milićev (https://github.com/rammba) -->
+
 <script id="edge-message-script">
     if (navigator.userAgent.includes('Edg') && navigator.userAgent.includes('Mobile')) {
         const script = document.getElementById('edge-message-script');

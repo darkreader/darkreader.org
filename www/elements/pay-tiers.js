@@ -223,6 +223,7 @@ const locales = {
             `ダークモードの普及にご協力いただき、インターネットを誰にとっても目に優しいものにしましょう。`,
         ].join(' '),
     },
+    // Authors: Radoš Milićev (https://github.com/rammba)
     sr: {
         heading: 'Молимо платите за Dark Reader',
         regular: 'Индивидуална употреба',
@@ -239,6 +240,7 @@ const locales = {
             `Заузмите место у ширењу тамног режима и учините интернет лакшим за свачије око.`,
         ].join(' '),
     },
+    // Authors: Radoš Milićev (https://github.com/rammba)
     'sr-Latn': {
         heading: 'Molimo platite za Dark Reader',
         regular: 'Individualna upotreba',
