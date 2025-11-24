@@ -1,141 +1,201 @@
-# Pomoć (srpski)
+# Помоћ (српски)
 
-Ovaj dokument će vas upoznati sa mogućnostima Dark Reader-a.
+<script id="edge-message-script">
+    if (navigator.userAgent.includes('Edg') && navigator.userAgent.includes('Mobile')) {
+        const script = document.getElementById('edge-message-script');
+        const paragraph = document.createElement('blockquote');
+        paragraph.textContent = 'Драги корисници Microsoft Edge-а. Уграђени тамни режим омета рад Dark Reader-а. Молимо идите на Menu → Settings → Appearance → Dark theme for all web pages и искључите ако је укључено.';
+        script.parentElement.insertBefore(paragraph, script);
+    }
+</script>
 
-- [Često postavljana pitanja](#faq)
-- [Kontakti](#contacts)
-- [Saveti iskusnim korisnicima](../../tips/)
+<div class="intro">
+    Драги читаоче,
+    уложили смо много љубави и труда да бисмо ову апликацију направили ефикасном и лаком за употребу.
+    Ваша <a data-s="d-help-top" href="https://darkreader.org/support-us" target="_blank">донација</a>
+    нам помаже да наставимо да је унапређујемо и додајемо нове функционалности.
+</div>
 
-
-<h2 id="top-section">Gornji odeljak</h2>
-
-<img src="/images/help/darkreader-top-section.png" alt="Gornji odeljak" style="width: 15rem;" loading="lazy" />
-
-- Dugme **Uklj. trenutni sajt** dodaje trenutni sajt u listu izuzetaka (ili ga odatle briše).
-- **Uklj/Isklj** prekidač omogućava ili onemogućava ekstenziju.
-- Kliknite na veze ispod dugmadi da **promenite tasterske prečice** za ekstenziju.
-- Napomena: ako je prekidač izbledeo, onda pregledač ne dâ da se na trenutnu stranicu ubacuju skripte.
-
-
-<h2 id="filter-settings">Podešavanja filtera</h2>
-
-<img src="/images/help/darkreader-filter-settings.png" alt="Podešavanja filtera" style="width: 15rem;" loading="lazy" />
-
-Podesite mod, osvetljenje, kontrast, sepiju i saturaciju ("sivi mod"), tako da bolje odgovara parametrima vašeg ekrana i osvetljenju u sobi.
+- [Кратак увод и често постављана питања](#video)
+- [Услови коришћења](../../terms/)
+- [Политика приватности](../../privacy/)
+- [Контакти](#contacts)
 
 
-<h2 id="custom-site-settings">Podešavanja za konkretne sajtove</h2>
+<h2 id="options-icon">Иконица у траци са алатима</h2>
 
-<img src="/images/help/darkreader-custom-site-settings.png" alt="Podešavanja za konkretne sajtove" style="width: 15rem;" loading="lazy" />
+<img src="/images/help/darkreader-pin-toolbar-icon.png" alt="Иконица опција" style="width: 20rem;" loading="lazy" />
 
-Dugme **Samo za** određuje da li podešavanja filtera iznad trebaju da se primene samo za trenutni sajt.
-
-Da biste to podesili, prvo kliknite dugme (koje će se osvetliti), onda podesite filtere kako želite za trenutni sajt. Kliknite dugme opet da otkažete.
-
-
-<h2 id="site-list">Lista sajtova</h2>
-
-<img src="/images/help/darkreader-site-list.png" alt="Lista sajtova" style="width: 15rem;" loading="lazy" />
-
-- Koristite **Invertujte izlistane** ako želite da Dark Reader radi samo sa sajtovima na listi.
-- **Ne invertujte izlistane** će učiniti da ekstenzija ne radi na izlistanim sajtovima.
-- Primeri mogućih značenja su `google.com, mail.google.com, google.*, google.com/maps` itd.
-- Klik na dugme **Uklj. trenutni sajt** (u [gornjem odeljku](#top-section)) dodaje trenutni sajt na ovu listu.
-
-<h2 id="more-tab">Kartica "Više"</h2>
-
-<img src="/images/help/darkreader-more-tab.png" alt="Kartica Više" style="width: 15rem;" loading="lazy" />
-
-- **Izaberite font** sa spiska (ili unesite ime fonta u Firefox-u), označite **polje**.
-- Podesite **debljinu teksta**.
-- Izaberite **mod generisanja tema**.
+Ако је Dark Reader **иконица скривена** након инсталације,
+кликните на дугме **Extensions** поред адресне траке, а онда на дугме поред Dark Reader.
 
 
-<h2 id="theme-generation-modes">Modovi generisanja tema</h2>
+<h2 id="video" class="text-highlight">Кратка видео упутства</h2>
+
+- <a target="_blank" rel="noopener" data-s="dryt-help-text" href="https://www.youtube.com/watch?v=849mznBKmIQ">Видео упутство (1 минут)</a>
+- <a target="_blank" rel="noopener" data-s="dryt-help-text" href="https://www.youtube.com/shorts/9nQjBBe8K44">Видео упутство за мобилну апликацију (30 секунди)</a>
+
+<blockquote class="pie-help">
+    <p>
+        <a class="small-pie-logo" target="_blank" rel="noopener" data-s="pie-help-badge"
+            href="https://pie.org/darkreader">
+            Pie
+        </a>
+        Погледајте <strong><a target="_blank" rel="noopener" data-s="pie-help-text"
+            href="https://pie.org/darkreader">
+                Pie</a></strong>, наше пријатељско проширење.
+        Блокира рекламе на сваком сајту и омогућава да будете плаћени ако се одлучите за рекламе.
+        <strong><a target="_blank" rel="noopener" data-s="pie-help-text"
+            href="https://pie.org/darkreader">
+                Сазнај више</a></strong>.
+    </p>
+</blockquote>
+
+
+<h2 id="top-section">Горњи одељак</h2>
+
+<img src="/images/help/darkreader-top-section.png" alt="Горњи одељак" style="width: 15rem;" loading="lazy" />
+
+- Дугме **Укљ./Искљ.** додаје тренутни сајт у листу игнорисаних сајтова (или га одатле брише).
+- **Укљ./Искљ.** прекидач омогућава или онемогућава проширење.
+- Кликните на линкове испод дугмића да **промените пречице** за проширење.
+- Напомена: ако је прекидач избледео, то значи да претраживач не дозвољава убацивање скрипти на тренутну страницу.
+
+
+<h2 id="filter-settings">Подешавања филтера</h2>
+
+<img src="/images/help/darkreader-filter-settings.png" alt="Подешавања филтера" style="width: 15rem;" loading="lazy" />
+
+Подесите режим, осветљеност, контраст, сепију и сатурацију ("grayscale"). Ово може бити коришћено да боље одговара параметрима вашег екрана и осветљењу у соби.
+
+
+<h2 id="custom-site-settings">Подешавања за прилагођене сајтове</h2>
+
+<img src="/images/help/darkreader-custom-site-settings.png" alt="Подешавања за прилагођене сајтове" style="width: 15rem;" loading="lazy" />
+
+Дугме **Само за** одређује да ли подешавања филтера изнад требају да се примене само за тренутни сајт.
+
+Да бисте то подесили, прво кликните дугме (које ће се осветлити), а онда подесите филтере како желите за тренутни сајт. Кликните дугме поново да откажете.
+
+
+<h2 id="site-list">Листа сајтова</h2>
+
+<img src="/images/help/darkreader-site-list.png" alt="Листа сајтова" style="width: 15rem;" loading="lazy" />
+
+- Користите **Инвертуј само излистане** ако желите да Dark Reader ради само на сајтовима са листе.
+- **Не инвертуј излистане** ће учинити да проширење не ради на излистаним сајтовима.
+- Неки од примера вредности су `google.com, mail.google.com, google.*, google.com/maps` итд.
+- Подржани су регуларни изрази. Требају почети и завршавати се са `/`, нпр. `/www\.google\..*/`.
+- Кликом на дугме **Укљ./Искљ.** (у [горњем одељку](#top-section)) додајете тренутни сајт у ову листу.
+
+<h2 id="more-tab">Картица Више</h2>
+
+<img src="/images/help/darkreader-more-tab.png" alt="Картица Више" style="width: 15rem;" loading="lazy" />
+
+- **Одаберите фонт** са списка (или унесите име фонта у Firefox-у), означите **checkbox**.
+- Подесите **дебљину текста**.
+- Одаберите **режим генерисања тема**.
+
+
+<h2 id="theme-generation-modes">Режими генерисања тема</h2>
 
 <figure>
-    <img src="/images/help/darkreader-theme-modes.png" alt="Filter+ vs. statični vs. dinamični mod" loading="lazy" />
-    <figcaption>Filter+ vs. statični vs. dinamični mod</figcaption>
+    <img src="/images/help/darkreader-theme-modes.png" alt="Филтер+ vs. Статични vs. Динамични режим" loading="lazy" />
+    <figcaption>Филтер+ vs. Статични vs. Динамични режим</figcaption>
 </figure>
 
-- **Dinamično** analizira stilove trenutne stranice, pozadinske slike, vektorsku grafiku.
-Zahteva nešto više resursa pri početnom učitavanju stranice,
-ali daje vizuelno *najbolje* rezultate.
-- **Filter** je početni mod Dark Reader-a, zasnovani na CSS filterima.
-*Invertuje celu stranu*, pa *invertuje neke delove* nazad.
-Zahtevan je prema grafičkoj jedinici.
-*Brz* je, ali ima par mana:
-onemogućava potpikselno renderovanje teksta,
-invertuje već tamne delove u svetle,
-izaziva usporavanja na većim stranicama,
-i ne renderuje neke strane u Firefox-u.
-- **Filter+** je isto što i Filter, ali je zasnovano na posebnim SVG filterima
-i *bolje obrađuje boje,* čineći slike manje mutnim.
-Loše radi u Firefox-u.
-- **Statično** brzo generiše jednostavnu temu.
+- **Динамично** анализира стилове тренутне странице, позадинске слике и векторску графику.
+Захтева нешто више ресурса при почетном учитавању странице,
+али даје визуелно *најбоље* резултате.
+- **Филтер** режим је заснован на CSS филтерима.
+*Инвертује целу страницу*, па *враћа неке делове* назад.
+Захтева ресурсе графичке картице (GPU).
+*Брз* је и моћан, али има пар проблема:
+онемогућава потпикселно рендеровање текста,
+инвертује већ тамне делове у светле,
+изазива lag-ове на великим страницама
+и не успева да рендерује неке странице у Firefox-у.
+- **Филтер+** је исти као и Филтер, али је заснован на посебним SVG филтерима
+и *боље обрађује боје*, чинећи слике мање мутним.
+Ради лоше у Firefox-у.
+- **Статично** брзо генерише основне стилове.
 
 
-<h2 id="bottom-section">Donji odeljak</h2>
+<h2 id="bottom-section">Доњи одељак</h2>
 
-<img src="/images/help/darkreader-footer.png" alt="Donji odeljak" style="width: 15rem;" loading="lazy" />
+<img src="/images/help/darkreader-footer.png" alt="Доњи одељак" style="width: 15rem;" loading="lazy" />
 
-- Pročitajte našu **izjavu o privatnosti**, zapratite nas na **Tviteru**, pogledajte izvorni kod i doprinesite na **GitHub-u**, pročitajte **pomoćnu** dokumentaciju na ovoj stranici.
-- **Donirajte** – ako vam se dopada ekstenzija, molimo razmislite o tome da podržite njen aktivni razvoj.
-- **Vesti** – obaveštava o novim verzijama i važnim događajima.
-- **Alatke za razvoj** – otvara editor konfiguracije trenutnog moda generisanja teme.
-
-
-<h2 id="using-dev-tools">Korišćenje alatki za razvoj</h2>
-
-Ako ste upoznati sa CSS selektorima, možete pomoći tako što ćete predložiti ispravku za filtriranje nekog sajta.
-Kako se koriste alatke za razvoj možete pročitati [ovde](https://github.com/darkreader/darkreader#how-to-contribute).
+- Прочитајте нашу **политику приватности**, запратите нас на **Twitter-у**, погледајте изворни код и допринесите на **GitHub-у**, прочитајте **помоћну** документацију на овој страници.
+- **Донирајте** – ако вам се допада проширење, молимо размислите о томе да подржите њен активни развој.
+- **Вести** – обавештења о новим верзијама и важним догађајима.
+- **Алатке за развој** – отвара едитор конфигурације тренутног режима генерисања теме.
 
 
-<h2 id="faq">Često postavljana pitanja</h2>
+<h2 id="using-dev-tools">Коришћење алатки за развој</h2>
 
-#### Ekstenzija zahteva dozvole za pristup sajtovima
-
-Ekstenziji su potrebne te dozvole da bi mogla da analizira i menja izgled sajtova,
-odredi da li je sajt izuzet u vašim podešavanjima, ili koristi posebna pravila za trenutni sajt.
-Ne ugrađujemo reklame, ne sakupljamo vaše podatke, i nigde ih ne šaljemo.
-
-#### Prodavnica sa dodacima i stranice sa podešavanjima su i dalje bele
-
-Ekstenzija nema pristup tim stranicama.
-
-#### Stranica nove kartice i tema pregledača su i dalje bele
-
-Ekstenzija ne može da menja izgled nove kartice ili pregledača (osim na Firefox-u od verzije 60).
-Preporučujemo vam da instalirate neku tamnu temu ili ekstenziju za nove kartice iz vaše prodavnice sa dodacima.
-
-#### Ekran bljesne belom pri otvaranju nove kartice ili stranice
-
-Pre učitavanja stranice, Chrome pokazuje pozadinsku boju trenutne teme.
-Preporučujemo vam da instalirate neku tamnu temu iz vaše prodavnice sa dodacima.
-
-#### Ekstenzija uopšte ne radi
-
-Ako imate slične ekstenzije za tamnu temu instalirane, onemogućite ih, pa ponovo učitajte kartice.
-Kliknite na ikonicu Dark Reader-a i uverite se da je prekidač u gornjem desnom uglu podešen na **Uklj**, i da **Uklj. trenutni sajt** ne izuzima trenutni sajt.
-Otvorite karticu **Lista sajtova** i uverite se da je **Ne invertujte izlistane** odabrano.
-Ako ništa ne pomaže, onda je sve baš loše, pošaljite nam imejl.
-
-#### Sajt se prikazuje pogrešno ili radi sporo
-
-Molimo vas, pošaljite nam adresu sajta, snimak ekrana, verzije vašeg pregledača i OS na naš imejl.
-Probaćemo da nađemo razlog, bar za popularnije sajtove.
-Takođe probajte da promenite **mod generisanja tema** ili probajte **Svetli mod**.
-Uverite se da sajt nije na kartici **Lista sajtova**
-
-#### Ekstenzija ne radi u inkognito režimu
-
-Otvorite stranu **chrome://extensions**, nađite **Dark Reader**, uključite **Omogući u režimu bez arhiviranja**.
-
-#### Ekstenzija ne radi za lokalne fajlove
-
-Otvorite stranu **chrome://extensions**, nađite **Dark Reader**, uključite **Dozvoli pristup URL adresama datoteka**.
+Ако сте упознати са CSS селекторима, можете помоћи тако што ћете предложити исправку за филтрирање неког сајта.
+Како се користе алатке за развој можете прочитати [овде](https://github.com/darkreader/darkreader#how-to-contribute).
 
 
-<h2 id="contacts">Kontakti</h2>
+<h2 id="tips">Савети за напредне кориснике</h2>
 
-Sa bilo kakvim pitanjima obratite nam se na [support@darkreader.org](mailto:support@darkreader.org)
+Желите ли још да научите? Посетите секцију <a href="../../tips/">Савети и трикови</a>.
+
+
+<h2 id="faq">Често постављана питања</h2>
+
+<h4 class="text-highlight">Како подржати Dark Reader</h4>
+
+1. <a data-s="d-help-faq" href="https://darkreader.org/support-us">Платите коришћење Dark Reader-а</a>.
+2. Инсталирајте <a data-s="drios-help-faq" href="https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180">iOS/macOS апликацију</a>.
+3. Предложите апликацију пријатељима и колегама.
+
+#### Проширење тражи дозволе за читање података са сајта
+
+Проширењу су потребне те дозволе како би могло да анализира и мења изглед сајтова
+и примени посебна правила за сајт.
+Не уграђујемо рекламе, не сакупљамо ваше податке и нигде их не шаљемо.
+
+#### Продавница додатака и странице са подешавањима су и даље беле
+
+Проширење нема приступ тим страницама.
+
+#### Страница нове картице и тема претраживача остају беле
+
+Одаберите тамну тему у подешавањима вашег претраживача.
+
+#### Екран бљесне белом бојом при отварању нове картице или странице
+
+Пре учитавања сајта, претраживач подразумевано приказује позадинску боју тренутне теме.
+Одаберите тамну тему у подешавањима вашег претраживача.
+
+#### Проширење уопште не ради
+
+Ажурирајте ваш претраживач.
+Кликните на иконицу Dark Reader-а, уверите се да је прекидач у горњем десном углу подешен на **Укљ.** и да **Укљ./Искљ.** не изузима тренутни сајт.
+Отворите картицу **Листа сајтова** и уверите се да је **Не инвертуј излистане** одабрано.
+Ако ништа не помаже, десило се нешто баш лоше, пошаљите нам e-mail.
+
+#### Сајт се приказује погрешно или ради споро
+
+Молимо вас, пошаљите нам адресу сајта, снимак екрана, верзије вашег претраживача и оперативног система на наш e-mail.
+Пробаћемо да нађемо разлог, барем за популарније сајтове.
+Покушајте користити **филтер режим** или **светли режим** за специфичан сајт.
+Уверите се да сајт није излистан на картици **Листа сајтова**.
+
+#### Проширење не ради у Incognito режиму
+
+Отворите страницу **chrome://extensions**, пронађите **Dark Reader**, укључите **Allow in incognito**.
+
+#### Проширење не ради за локалне фајлове
+
+Отворите страницу **chrome://extensions**, пронађите **Dark Reader**, укључите **Allow access to file URLs**.
+
+<h2 id="more">Још</h2>
+
+Погледајте [Савети за напредне кориснике](../../tips/) за још информација.
+
+
+<h2 id="contacts">Контакти</h2>
+
+За било каква питања пошаљите нам e-mail на [support@darkreader.org](mailto:support@darkreader.org)
