@@ -12,6 +12,7 @@ const payURL = '/support-us';
 
 const Tiers = {
     REGULAR: 'REGULAR',
+    DISCOUNT: 'DISCOUNT',
     PLUS: 'PLUS',
     CORPORATE: 'CORPORATE',
 };
@@ -59,8 +60,7 @@ const Prices = {
         CNY: '¥68.00',
         AUD: '$14.99',
     },
-    /*
-    PLUS: {
+    DISCOUNT: {
         USD: '$4.99',
         GBP: '£3.99',
         EUR: '€4.99',
@@ -69,7 +69,6 @@ const Prices = {
         CNY: '¥38.00',
         AUD: '$7.99',
     },
-    */
     PLUS: {
         USD: '$9.99',
         GBP: '£7.99',
@@ -92,6 +91,7 @@ const Prices = {
 
 const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
 const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
+const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_PLUS = Prices.PLUS[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
 const DEFAULT_LINK_STRIPE = Links.Stripe.REGULAR;
@@ -144,11 +144,17 @@ const htmlText = `
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
             </label>
-            <label class="tier">
-                <input type="radio" name="tier" value="${Tiers.PLUS}" checked>
+            <label class="tier" style="display: none;">
+                <input type="radio" name="tier" value="${Tiers.PLUS}">
                 <span class="tier__desc" data-text="plus">One-time payment</span>
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-plus">${DEFAULT_PRICE_PLUS}</span>
+            </label>
+            <label class="tier">
+                <input type="radio" name="tier" value="${Tiers.DISCOUNT}" checked>
+                <span class="tier__desc" data-text="plus">One-time payment</span>
+                <span class="tier__connect"></span>
+                <span class="tier__price js-price-plus">${DEFAULT_PRICE_DISCOUNT}</span>
             </label>
             <label class="tier" style="display: none;">
                 <input type="radio" name="tier" value="${Tiers.CORPORATE}">
@@ -156,6 +162,9 @@ const htmlText = `
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-corporate">${DEFAULT_PRICE_CORP}</span>
             </label>
+        </div>
+        <div class="discount-description">
+            50% off until December 1
         </div>
         <div class="button-wrapper">
             <!--
@@ -170,10 +179,18 @@ const htmlText = `
                 <span class="button-link__text" data-text="more">More options</span>
             </a>
             -->
+            <!--
             <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
                 <span class="button-link__text">
                     <span data-text="pay">Pay</span>
                     <span class="js-price-regular">${DEFAULT_PRICE_PLUS}</span>
+                </span>
+            </a>
+            -->
+            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
+                <span class="button-link__text">
+                    <span data-text="pay">Pay</span>
+                    <span class="js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
                 </span>
             </a>
         </div>
@@ -552,6 +569,12 @@ const cssText = `
     height: 1.5rem;
 }
 
+.discount-description {
+    color: #63b79f;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
 :host {
     container-type: inline-size;
     font-size: 1.25rem;
@@ -610,6 +633,7 @@ class PlusTiersElement extends HTMLElement {
 
             s('.js-price-regular').each((node) => node.textContent = Prices.REGULAR[currency]);
             s('.js-price-plus').each((node) => node.textContent = Prices.PLUS[currency]);
+            s('.js-price-discount').each((node) => node.textContent = Prices.DISCOUNT[currency]);
             s('.js-price-corporate').each((node) => node.textContent = Prices.CORPORATE[currency]);
             s('.js-currency-text').each((node) => node.textContent = currency);
         };
