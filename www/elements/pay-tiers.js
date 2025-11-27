@@ -293,6 +293,9 @@ const htmlText = `
                     </div>
                 </label>
             </div>
+            <div class="discount-description js-discount-description">
+                50% off until December 1
+            </div>
             <div class="button-wrapper button-wrapper-paddle">
                 <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
                     <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
@@ -537,6 +540,9 @@ const cssText = `
     justify-self: flex-end;
     position: relative;
     top: 0.375rem;
+}
+.tier__price--cross {
+    font-weight: normal;
 }
 .tier__price--cross::after {
     background-color: hsla(355deg, 80%, 50%, 0.8);
@@ -935,6 +941,13 @@ darkreader-donate-mascot {
     pointer-events: none;
 }
 
+.discount-description {
+    color: #63b79f;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* Wide */
 :host {
     container-type: inline-size;
@@ -988,10 +1001,7 @@ darkreader-donate-mascot {
         /*
         display: inline-block;
         */
-        /*
         display: none;
-        */
-        display: inline-block;
     }
     .tier__hint {
         /*
@@ -1082,6 +1092,8 @@ class PayTiersElement extends HTMLElement {
             s('.js-price-save').each((node) => node.textContent = Prices.SAVE[currency]);
             s('.js-price-save-2').each((node) => node.textContent = Prices.SAVE_2[currency]);
             s('.js-currency-text').each((node) => node.textContent = currency);
+
+            s('.js-discount-description').each((node) => node.style.display = tier === Tiers.DISCOUNT ? '' : 'none');
         };
 
         shadowRoot.querySelector('.tiers')?.addEventListener('change', update);
