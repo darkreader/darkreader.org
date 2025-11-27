@@ -207,6 +207,7 @@ section {
 }
 .discount-description {
     color: #63b79f;
+    display: none;
     font-size: 0.875rem;
     font-weight: bold;
     text-align: center;
