@@ -16,6 +16,9 @@ const htmlText = `
         <span class="text-link__darkreader">Dark Reader</span> for iOS
     </a>
 </div>
+<div class="discount-description">
+    50% off until December 1
+</div>
 <div class="badge-wrapper">
     <a class="badge-link" href="${safariURL}" target="_blank" rel="noopener">
         <img src="/images/app-store-badge.svg">
@@ -201,6 +204,12 @@ section {
 }
 .q {
     display: none;
+}
+.discount-description {
+    color: #63b79f;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: center;
 }
 `;
 
