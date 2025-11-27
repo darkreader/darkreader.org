@@ -87,6 +87,15 @@ const Prices = {
         CNY: '¥70.00',
         AUD: '$15.00',
     },
+    SAVE_2: {
+        USD: '$5.00',
+        GBP: '£4.00',
+        EUR: '€5.00',
+        JPY: '¥800',
+        CAD: '$6.00',
+        CNY: '¥30.00',
+        AUD: '$7.00',
+    },
 };
 
 const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
@@ -246,9 +255,9 @@ const htmlText = `
                 <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
             </div>
             <div class="tiers">
-                <label class="tier">
+                <label class="tier" style="display: none;">
                     <div class="tier__top">
-                        <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
+                        <input type="radio" name="tier" value="${Tiers.REGULAR}">
                         <span class="tier__desc" data-text="regular">Individual use</span>
                         <span class="tier__connect"></span>
                         <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
@@ -258,12 +267,14 @@ const htmlText = `
                         One-time payment
                     </div>
                 </label>
-                <label class="tier" style="display: none;">
+                <label class="tier">
                     <div class="tier__top">
-                        <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
-                        <span class="tier__desc" data-text="discount">Discount</span>
+                        <input type="radio" name="tier" value="${Tiers.DISCOUNT}" checked>
+                        <span class="tier__desc" data-text="discount">Individual use</span>
                         <span class="tier__connect"></span>
+                        <span class="tier__price js-price-regular tier__price--cross">${DEFAULT_PRICE_REGULAR}</span>
                         <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
+                        <span class="tier__save"><strong class="js-price-save-2">${Prices.SAVE_2[DEFAULT_CURRENCY]}</strong> <span data-text="off">off</span> <span data-text="dec-1">until<br>December 1</span></span>
                     </div>
                     <div class="tier__bottom" data-text="one_time">
                         One-time payment
@@ -296,7 +307,7 @@ const htmlText = `
                 <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
                     <span class="button-link__text">
                         <span data-text="pay">Pay</span>
-                        <span class="js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                        <span class="js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
                     </span>
                 </a>
                 <a class="button-link button-link--paddle js-link-paddle-corp" href="#pay-corp" data-s="d-side-paddlecorp" style="display:none;">
@@ -526,6 +537,17 @@ const cssText = `
     justify-self: flex-end;
     position: relative;
     top: 0.375rem;
+}
+.tier__price--cross::after {
+    background-color: hsla(355deg, 80%, 50%, 0.8);
+    content: "";
+    display: inline-block;
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-15deg);
+    width: 100%;
 }
 .tier__save {
     background-color: hsl(165, 65%, 25%);
@@ -966,7 +988,10 @@ darkreader-donate-mascot {
         /*
         display: inline-block;
         */
+        /*
         display: none;
+        */
+        display: inline-block;
     }
     .tier__hint {
         /*
@@ -1055,6 +1080,7 @@ class PayTiersElement extends HTMLElement {
             s('.js-price-discount').each((node) => node.textContent = Prices.DISCOUNT[currency]);
             s('.js-price-corporate').each((node) => node.textContent = Prices.CORPORATE[currency]);
             s('.js-price-save').each((node) => node.textContent = Prices.SAVE[currency]);
+            s('.js-price-save-2').each((node) => node.textContent = Prices.SAVE_2[currency]);
             s('.js-currency-text').each((node) => node.textContent = currency);
         };
 
