@@ -179,20 +179,20 @@ const htmlText = `
                 <span class="button-link__text" data-text="more">More options</span>
             </a>
             -->
-            <!--
             <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
                 <span class="button-link__text">
                     <span data-text="pay">Pay</span>
                     <span class="js-price-regular">${DEFAULT_PRICE_PLUS}</span>
                 </span>
             </a>
-            -->
+            <!--
             <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
                 <span class="button-link__text">
                     <span data-text="pay">Pay</span>
                     <span class="js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
                 </span>
             </a>
+            -->
         </div>
         <div class="payment-methods">
             <i class="payment-methods__paypal"></i>
@@ -571,6 +571,7 @@ const cssText = `
 
 .discount-description {
     color: #63b79f;
+    display: none;
     font-size: 0.875rem;
     font-weight: bold;
 }

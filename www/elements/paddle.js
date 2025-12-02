@@ -42,12 +42,10 @@ export async function initPaddle(options) {
     };
 
     if (options.plusButton) {
-        // initClick(options.plusButton, 'pri_01je4ebmn474jsee5eh2gmfan9');
-        initClick(options.plusButton, 'pri_01kb2xz6ag8gjgz8cc2kjzentm');
+        initClick(options.plusButton, 'pri_01je4ebmn474jsee5eh2gmfan9');
     }
     if (options.feeButton) {
-        // initClick(options.feeButton, 'pri_01jf039mt65me4f2exbgpg3p9m');
-        initClick(options.feeButton, 'pri_01kb2rp90dtwcfdbj9b72zgtg3');
+        initClick(options.feeButton, 'pri_01jf039mt65me4f2exbgpg3p9m');
     }
     if (options.corpButton) {
         initClick(options.corpButton, 'pri_01k0skrfeyprpcmxvfsp5vfnw5');
