@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isEdge, isEUCountry} from './locales.js';
+import {country, isEdge, isEUCountry, offer} from './locales.js';
 import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
@@ -255,9 +255,9 @@ const htmlText = `
                 <span class="currencies__currency-text js-currency-text">${DEFAULT_CURRENCY}</span>
             </div>
             <div class="tiers">
-                <label class="tier">
+                <label class="tier"${offer ? ' style="display: none;"' : ''}>
                     <div class="tier__top">
-                        <input type="radio" name="tier" value="${Tiers.REGULAR}" checked>
+                        <input type="radio" name="tier" value="${Tiers.REGULAR}"${offer ? '' : ' checked'}>
                         <span class="tier__desc" data-text="regular">Individual use</span>
                         <span class="tier__connect"></span>
                         <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
@@ -267,14 +267,14 @@ const htmlText = `
                         One-time payment
                     </div>
                 </label>
-                <label class="tier" style="display: none;">
+                <label class="tier"${offer ? '' : ' style="display: none;"'}>
                     <div class="tier__top">
-                        <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
+                        <input type="radio" name="tier" value="${Tiers.DISCOUNT}"${offer ? ' checked' : ''}>
                         <span class="tier__desc" data-text="discount">Individual use</span>
                         <span class="tier__connect"></span>
                         <span class="tier__price js-price-regular tier__price--cross">${DEFAULT_PRICE_REGULAR}</span>
                         <span class="tier__price js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
-                        <span class="tier__save"><strong class="js-price-save-2">${Prices.SAVE_2[DEFAULT_CURRENCY]}</strong> <span data-text="off">off</span> <span data-text="dec-1">until<br>December 1</span></span>
+                        <span class="tier__save"><strong class="js-price-save-2">${Prices.SAVE_2[DEFAULT_CURRENCY]}</strong> <span data-text="off">off</span> <span data-text="dec-1">until<br>${offer?.end}</span></span>
                     </div>
                     <div class="tier__bottom" data-text="one_time">
                         One-time payment
@@ -294,7 +294,7 @@ const htmlText = `
                 </label>
             </div>
             <div class="discount-description js-discount-description">
-                50% off until December 1
+                50% off until ${offer?.end}
             </div>
             <div class="button-wrapper button-wrapper-paddle">
                 <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
@@ -310,7 +310,7 @@ const htmlText = `
                 <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
                     <span class="button-link__text">
                         <span data-text="pay">Pay</span>
-                        <span class="js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                        <span class="${offer ? 'js-price-discount' : 'js-price-regular'}">${offer ? DEFAULT_PRICE_DISCOUNT : DEFAULT_PRICE_REGULAR}</span>
                     </span>
                 </a>
                 <a class="button-link button-link--paddle js-link-paddle-corp" href="#pay-corp" data-s="d-side-paddlecorp" style="display:none;">
@@ -943,7 +943,7 @@ darkreader-donate-mascot {
 
 .discount-description {
     color: #63b79f;
-    display: none;
+    display: ${offer ? 'block' : 'none'};
     font-size: 0.875rem;
     font-weight: bold;
     text-align: center;

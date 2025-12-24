@@ -1,5 +1,6 @@
 // @ts-check
 
+import {offer} from './locales.js';
 import {clicker} from './stats.js';
 import {
     createHTMLElement as html,
@@ -17,7 +18,7 @@ const htmlText = `
     </a>
 </div>
 <div class="discount-description">
-    50% off until December 1
+    50% off until ${offer?.end}
 </div>
 <div class="badge-wrapper">
     <a class="badge-link" href="${safariURL}" target="_blank" rel="noopener">

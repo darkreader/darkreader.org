@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isEUCountry} from './locales.js';
+import {country, isEUCountry, offer} from './locales.js';
 import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
@@ -164,7 +164,7 @@ const htmlText = `
             </label>
         </div>
         <div class="discount-description">
-            50% off until December 1
+            50% off until ${offer?.end}
         </div>
         <div class="button-wrapper">
             <!--
@@ -182,17 +182,9 @@ const htmlText = `
             <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
                 <span class="button-link__text">
                     <span data-text="pay">Pay</span>
-                    <span class="js-price-regular">${DEFAULT_PRICE_PLUS}</span>
+                    <span class="${offer ? 'js-price-discount' : 'js-price-regular'}">${offer ? DEFAULT_PRICE_DISCOUNT : DEFAULT_PRICE_PLUS}</span>
                 </span>
             </a>
-            <!--
-            <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
-                <span class="button-link__text">
-                    <span data-text="pay">Pay</span>
-                    <span class="js-price-discount">${DEFAULT_PRICE_DISCOUNT}</span>
-                </span>
-            </a>
-            -->
         </div>
         <div class="payment-methods">
             <i class="payment-methods__paypal"></i>
@@ -571,7 +563,7 @@ const cssText = `
 
 .discount-description {
     color: #63b79f;
-    display: none;
+    display: ${offer ? 'block' : 'none'};
     font-size: 0.875rem;
     font-weight: bold;
 }

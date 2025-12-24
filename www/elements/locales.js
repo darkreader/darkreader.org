@@ -644,3 +644,11 @@ export const isEUCountry = [
     'SI',
     'SK',
 ].includes(country);
+
+export const offer = (() => {
+    const date = new Date();
+    const y = date.getFullYear();
+    const m = date.getMonth() + 1;
+    const d = date.getDate();
+    return y === 2025 && m === 12 && (d >= 25 && d < 27) ? {end: 'December 26'} : null;
+})();
