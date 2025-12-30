@@ -650,5 +650,5 @@ export const offer = (() => {
     const y = date.getFullYear();
     const m = date.getMonth() + 1;
     const d = date.getDate();
-    return y === 2025 && m === 12 && (d >= 25 && d < 27) ? {end: 'December 26'} : null;
+    return (y === 2025 && m === 12 && d === 31) || (y === 2026 && m === 1 && d === 1) ? {end: 'January 1'} : null;
 })();
