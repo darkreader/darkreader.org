@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/darkreader/darkreader.org",
   "devDependencies": {
-    "fs-extra": "11.3.2",
+    "fs-extra": "11.3.3",
     "http-server": "14.1.1",
-    "marked": "16.3.0",
-    "puppeteer-core": "24.22.0"
+    "marked": "17.0.1",
+    "puppeteer-core": "24.34.0"
   }
 }
