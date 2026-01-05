@@ -634,8 +634,7 @@ const cssText = `
     flex-direction: column;
     gap: 0.25rem;
     justify-content: center;
-    /* margin-top: 0.25rem; */
-    margin-top: 1.5rem;
+    margin-top: 0.25rem;
 }
 .button-wrapper .button-link {
     margin: 0;
@@ -829,7 +828,6 @@ const cssText = `
     flex-direction: row;
     gap: 0.75rem;
     justify-content: center;
-    margin-bottom: 2.5rem;
     margin-top: 0.25rem;
 }
 .payment-methods i {
@@ -1019,13 +1017,11 @@ darkreader-donate-mascot {
     }
     .button-wrapper {
         flex-direction: row;
+        margin-top: 2.5rem;
     }
     .payment-wrapper {
-        /*
-        margin-left: 4rem;
-        */
+        margin-bottom: 2.5rem;
         margin-left: 6rem;
-        margin-top: 0.5rem;
         position: relative;
     }
     darkreader-donate-mascot {
