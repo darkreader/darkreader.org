@@ -451,7 +451,8 @@ const cssText = `
 }
 .tiers {
     align-items: stretch;
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     width: 100%;
 }
@@ -594,13 +595,15 @@ const cssText = `
 .button-link {
     align-items: center;
     background-color: var(--color-control);
-    border-radius: 1.25rem;
+    /* border-radius: 1.25rem; */
+    border-radius: 2rem;
     box-shadow: 0 0 0 0.0625rem hsla(0, 0%, 100%, 0), 0 0 0 var(--color-text);
     box-sizing: border-box;
     color: white;
     display: inline-flex;
     flex-direction: row;
-    height: 2.5rem;
+    /* height: 2.5rem; */
+    height: 4rem;
     justify-content: center;
     margin-top: 0.25rem;
     position: relative;
@@ -619,7 +622,8 @@ const cssText = `
 .button-link__text {
     align-items: center;
     display: inline-flex;
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    font-size: 1.5rem;
     justify-content: center;
     gap: 0.25rem;
     overflow: hidden;
@@ -630,7 +634,8 @@ const cssText = `
     flex-direction: column;
     gap: 0.25rem;
     justify-content: center;
-    margin-top: 0.25rem;
+    /* margin-top: 0.25rem; */
+    margin-top: 1.5rem;
 }
 .button-wrapper .button-link {
     margin: 0;
@@ -744,7 +749,8 @@ const cssText = `
 }
 .currencies {
     align-items: center;
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: row;
     gap: 0.5rem;
 }
@@ -823,6 +829,7 @@ const cssText = `
     flex-direction: row;
     gap: 0.75rem;
     justify-content: center;
+    margin-bottom: 2.5rem;
     margin-top: 0.25rem;
 }
 .payment-methods i {
