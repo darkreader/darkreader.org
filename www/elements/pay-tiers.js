@@ -293,7 +293,17 @@ const htmlText = `
                     </div>
                 </label>
             </div>
-            <div class="discount-description js-discount-description">
+            <div class="payment-description">
+                <i class="payment-description__checkmark">
+                    <svg viewBox="-5 -5 10 10">
+                        <path d="m-3 0 l2 2 l4 -4" />
+                    </svg>
+                </i>
+                <span data-text="payment_description">
+                    One-time payment per user
+                </span>
+            </div>
+            <div class="discount-description js-discount-description" style="display: none;">
                 50% off until ${offer?.end}
             </div>
             <div class="button-wrapper button-wrapper-paddle">
@@ -946,6 +956,43 @@ darkreader-donate-mascot {
     pointer-events: none;
 }
 
+.payment-description {
+    align-items: center;
+    color: #63b79f;
+    display: ${offer ? 'none' : 'flex'};
+    font-size: 0.875rem;
+    font-weight: bold;
+    gap: 0.25rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.payment-description__checkmark {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #63b79f;
+    border-radius: 50%;
+    color: #63b79f;
+    content: "";
+    display: inline-flex;
+    height: 0.75rem;
+    justify-content: center;
+    text-align: center;
+    width: 0.75rem;
+}
+
+.payment-description__checkmark svg {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.payment-description__checkmark path {
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 1.5px;
+}
+
 .discount-description {
     color: #63b79f;
     display: ${offer ? 'block' : 'none'};
@@ -1017,7 +1064,9 @@ darkreader-donate-mascot {
     }
     .button-wrapper {
         flex-direction: row;
-        margin-top: 2.5rem;
+    }
+    .payment-description {
+        margin-top: 2rem;
     }
     .payment-wrapper {
         margin-bottom: 2.5rem;
