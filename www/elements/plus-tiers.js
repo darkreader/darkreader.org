@@ -171,25 +171,35 @@ const htmlText = `
             <a class="button-link button-link--paypal js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-plus-paypal">
                 <span class="button-link__text">Pay with <span class="button-link__text--paypal">PayPal</span></span>
             </a>
+            -->
             <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-plus-stripe">
+                <!--
                 <i class="button-link__card-icon js-card-icon"></i>
                 <span class="button-link__text" data-text="card">Debit or Credit Card</span>
+                -->
+                <span class="button-link__text">
+                    <span data-text="pay">Pay</span>
+                    <span class="js-price-regular">${DEFAULT_PRICE_PLUS}</span>
+                </span>
             </a>
+            <!--
             <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-plus-other">
                 <span class="button-link__text" data-text="more">More options</span>
             </a>
-            -->
             <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-plus-paddle">
                 <span class="button-link__text">
                     <span data-text="pay">Pay</span>
                     <span class="${offer ? 'js-price-discount' : 'js-price-regular'}">${offer ? DEFAULT_PRICE_DISCOUNT : DEFAULT_PRICE_PLUS}</span>
                 </span>
             </a>
+            -->
         </div>
         <div class="payment-methods">
+            <!--
             <i class="payment-methods__paypal"></i>
             <i class="payment-methods__gpay"></i>
             <i class="payment-methods__visa"></i>
+            -->
             <i class="payment-methods__mastercard"></i>
             <i class="payment-methods__amex"></i>
         </div>
@@ -426,6 +436,7 @@ const cssText = `
     display: none;
 }
 .button-link--card .button-link__text {
+    font-weight: bold;
     text-transform: none;
     transform: none;
 }
