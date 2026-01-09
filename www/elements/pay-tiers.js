@@ -316,14 +316,19 @@ const htmlText = `
                 <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
                     <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
                 </a>
-                <a class="button-link button-link--card button-link--inactive js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
+                <a class="button-link button-link--card js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
+                    <!--
                     <i class="button-link__card-icon js-card-icon"></i>
-                    <span class="button-link__text" data-text="card">Debit or Credit Card</span>
+                    -->
+                    <span class="button-link__text ">
+                        <span data-text="pay">Pay</span>
+                        <span class="js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
+                    </span>
                 </a>
                 <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
                     <span class="button-link__text" data-text="more">Contact us</span>
                 </a>
-                <a class="button-link button-link--paddle js-link-paddle" href="#pay" data-s="d-side-paddle">
+                <a class="button-link button-link--paddle button-link--inactive js-link-paddle" href="#pay" data-s="d-side-paddle">
                     <span class="button-link__text">
                         <span data-text="pay">Pay</span>
                         <span class="${offer ? 'js-price-discount' : 'js-price-regular'}">${offer ? DEFAULT_PRICE_DISCOUNT : DEFAULT_PRICE_REGULAR}</span>
@@ -737,6 +742,7 @@ const cssText = `
     display: none;
 }
 .button-link--card .button-link__text {
+    font-weight: bold;
     text-transform: none;
     transform: none;
 }
@@ -855,11 +861,13 @@ const cssText = `
 .payment-methods__paypal {
     aspect-ratio: 101 / 32;
     background-image: url(/images/paypal-logo-white.svg);
+    display: none !important;
     height: 1rem;
 }
 .payment-methods__gpay {
     aspect-ratio: 41 / 17;
     background-image: url(/images/icon-gpay.svg);
+    display: none !important;
     height: 1rem;
 }
 .payment-methods__visa {
