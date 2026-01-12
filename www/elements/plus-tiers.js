@@ -25,7 +25,7 @@ const Links = {
     },
     Stripe: {
         REGULAR: 'https://buy.stripe.com/fZe15k7um5Em7scdQX',
-        PLUS: 'https://buy.stripe.com/eVa3dsbKCfeWaEo14f',
+        PLUS: 'https://buy.stripe.com/00waEY4nB89oepKb9lgbm0c',
         CORPORATE: 'https://buy.stripe.com/aEUcO29CueaS5k44gq',
     },
     PayPal: {
@@ -94,7 +94,7 @@ const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_PLUS = Prices.PLUS[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
-const DEFAULT_LINK_STRIPE = Links.Stripe.REGULAR;
+const DEFAULT_LINK_STRIPE = Links.Stripe.PLUS;
 const DEFAULT_LINK_PAYPAL = Links.PayPal.REGULAR[DEFAULT_CURRENCY];
 
 /**
@@ -144,14 +144,14 @@ const htmlText = `
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-regular">${DEFAULT_PRICE_REGULAR}</span>
             </label>
-            <label class="tier" style="display: none;">
-                <input type="radio" name="tier" value="${Tiers.PLUS}">
+            <label class="tier">
+                <input type="radio" name="tier" value="${Tiers.PLUS}" checked>
                 <span class="tier__desc" data-text="plus">One-time payment</span>
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-plus">${DEFAULT_PRICE_PLUS}</span>
             </label>
-            <label class="tier">
-                <input type="radio" name="tier" value="${Tiers.DISCOUNT}" checked>
+            <label class="tier" style="display: none;">
+                <input type="radio" name="tier" value="${Tiers.DISCOUNT}">
                 <span class="tier__desc" data-text="plus">One-time payment</span>
                 <span class="tier__connect"></span>
                 <span class="tier__price js-price-plus">${DEFAULT_PRICE_DISCOUNT}</span>
