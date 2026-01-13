@@ -861,7 +861,6 @@ const cssText = `
 .payment-methods__paypal {
     aspect-ratio: 101 / 32;
     background-image: url(/images/paypal-logo-white.svg);
-    display: none !important;
     height: 1rem;
 }
 .payment-methods__gpay {
