@@ -645,6 +645,29 @@ export const isEUCountry = [
     'SK',
 ].includes(country);
 
+const stripeCountries = [
+    'US',
+    'GB',
+    'GG',
+    'IM',
+    'JE',
+    'AU',
+    'JP',
+    'TW',
+    'CN',
+    'NO',
+    'SJ',
+    'NZ',
+    'TH',
+    'HK',
+    'SG',
+    'MY',
+    'ZA',
+];
+
+export const isStripeCountry = stripeCountries.includes(country);
+export const isPaddleCountry = !isStripeCountry;
+
 export const offer = (() => {
     return null;
     /*
