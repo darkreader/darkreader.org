@@ -37,7 +37,8 @@ function viewer() {
     const path = location.pathname;
     const lang = navigator.language;
     const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const params = encodeParams(path, lang, time);
+    const ref = document.referrer.replace(/^.*:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
+    const params = encodeParams(path, lang, time, ref);
     fetch(`https://count.darkreader.app/view/v1/${params}`);
 }
 
