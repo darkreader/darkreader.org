@@ -1,0 +1,66 @@
+:root {
+    --color-background: hsl(0, 0%, 0%);
+    --color-background-article: hsl(212, 45%, 7%);
+    --color-control: hsl(214, 39%, 30%);
+    --color-control-hover: hsl(196, 46%, 31%);
+    --color-text: hsl(215, 44%, 54%);
+    --color-text-highlight: #ffffff;
+    --color-accent: hsl(5, 78%, 61%);
+    --gradient-accent: linear-gradient(to right, hsl(9, 51%, 53%), hsl(354, 52%, 50%), hsl(214, 46%, 50%));
+}
+
+html,
+body {
+    color: var(--color-text);
+    font-family: system-ui, sans-serif;
+}
+
+html {
+    background-color: var(--color-background-article);
+    position: relative;
+}
+
+html::before {
+    background-color: var(--color-background);
+    content: "";
+    display: block;
+    height: 3.5rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+body {
+    background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-text);
+}
+
+h2,
+h3 {
+    font-weight: 300;
+}
+
+a,
+.v2-help-header-link {
+    color: var(--color-text);
+}
+
+.v2-help-logo-link {
+    background-image: var(--gradient-accent);
+    mask-image: url(/images/darkreader-type.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+
+.v2-help-title {
+    color: var(--color-text-highlight);
+}

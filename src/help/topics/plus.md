@@ -1,6 +1,8 @@
 # Help (Plus)
 
 <style>
+    @import "../../styles/help-plus.css";
+
     aside,
     .v2-help-banners,
     darkreader-donate-mascot,
@@ -48,20 +50,19 @@ click the **Extensions** button next to the address bar and then click the pin o
 
 - You can adjust the **Background**, **Text**, and **Filter** mode settings. This can be used to better suit your screen parameters and the lighting in the room.
 
+### 1. Background
 
 <img src="/images/help/plus/darkreader-background.png" alt="Customize your theme" style="width: 15rem;" loading="lazy" />
 
-### 1. Background
+### 2. Text
 
 <img src="/images/help/plus/darkreader-text.png" alt="Customize your theme" style="width: 15rem;" loading="lazy" />
 
-### 2. Text
+### 3. Filter
 
 <img src="/images/help/plus/darkreader-filter.png" alt="Customize your theme" style="width: 15rem;" loading="lazy" />
 
-### 3. Filter
-
-<h2 id="custom-site-settings">Custom Site Settings</h2>
+<h2 id="custom-site-settings">Settings</h2>
 
 <img src="/images/help/plus/darkreader-site-settings.png" alt="Custom site settings" style="width: 15rem;" loading="lazy" />
 
@@ -72,7 +73,7 @@ For a more convenient experience when using Dark Reader, you can customize
 - **4 - Advanced**
 - You can also click on **About** to learn more about us and our work.
 
-<h2 id="custom-site-settings">Site List</h2>
+<h2 id="site-list">Site List</h2>
 
 <img src="/images/help/plus/darkreader-site-list.png" alt="Site List" style="width: 15rem;" loading="lazy" />
 
@@ -95,3 +96,7 @@ For a more convenient experience when using Dark Reader, you can customize
 - **Synchronize settings** across your devices.
 - **Reset all settings** to default.
 - If you're familiar with CSS selectors, you can contribute by suggesting fixes for filtering specific websites. You can open **Developer Tools** and add your own fix.
+
+<h2 id="contacts">Contacts</h2>
+
+For any questions e-mail to [support@darkreader.org](mailto:support@darkreader.org)
