@@ -1184,8 +1184,11 @@ class PayTiersElement extends HTMLElement {
                 feeButton,
                 corpButton,
             });
+        }
 
-            [feeButton, corpButton].forEach((button) => {
+        shadowRoot
+            .querySelectorAll('.button-link')
+            .forEach((button) => {
                 if (!button) return;
                 button.addEventListener('mouseenter', (e) => {
                     if (e.target === button) {
@@ -1198,7 +1201,6 @@ class PayTiersElement extends HTMLElement {
                     }
                 });
             });
-        }
     }
 }
 
