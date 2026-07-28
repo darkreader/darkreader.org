@@ -1,3 +1,58 @@
+body {
+    font-family: system-ui;
+}
+
+.title {
+    font-size: 2.15rem;
+    margin: 0;
+    text-align: center;
+}
+
+.title-darkreader {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 1.3rem;
+}
+
+p,
+a {
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+footer {
+    font-size: 0.75rem;
+    margin: 0 auto;
+    max-width: 28rem;
+    padding: 0.75rem;
+    text-align: center;
+    text-wrap: balance;
+}
+
+@media (min-width: 45rem) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -39,7 +94,7 @@ label {
 }
 
 .button-progress {
-    background-color: #696faa;
+    background-color: color-mix(in srgb, var(--color-control), white 15%);
     display: inline-block;
     height: 100%;
     left: 0;
@@ -74,26 +129,4 @@ label {
 
 .button-failure {
     background-color: #803449;
-}
-
-.copy-button {
-    height: 2em;
-    min-width: 5em;
-    width: auto;
-
-    &::before {
-        content: '⎘ ';
-        font-size: 125%;
-    }
-
-    &.copy-button--copied {
-        &::before {
-            display: none;
-        }
-    }
-}
-
-footer {
-    margin: 0 auto;
-    max-width: 28rem;
 }
