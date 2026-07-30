@@ -98,7 +98,7 @@ const Prices = {
     },
 };
 
-const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry ? 'EUR' : 'USD';
+const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry() ? 'EUR' : 'USD';
 const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
@@ -316,7 +316,7 @@ const htmlText = `
                 <a class="button-link button-link--paypal button-link--inactive js-link-paypal" href="${DEFAULT_LINK_PAYPAL}" target="_blank" rel="noopener" data-s="d-side-paypal">
                     <span class="button-link__text"><span data-text="pay_with">Pay with</span> <span class="button-link__text--paypal">PayPal</span></span>
                 </a>
-                <a class="button-link button-link--card ${isStripeCountry ? '' : 'button-link--inactive '}js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
+                <a class="button-link button-link--card ${isStripeCountry() ? '' : 'button-link--inactive '}js-link-stripe" href="${DEFAULT_LINK_STRIPE}" target="_blank" rel="noopener" data-s="d-side-stripe">
                     <!--
                     <i class="button-link__card-icon js-card-icon"></i>
                     -->
@@ -328,7 +328,7 @@ const htmlText = `
                 <a class="button-link button-link--other button-link--inactive js-link-other" href="${Links.Redirect.CORPORATE}" target="_blank" rel="noopener" data-s="d-side-other">
                     <span class="button-link__text" data-text="more">Contact us</span>
                 </a>
-                <a class="button-link button-link--paddle ${isPaddleCountry ? '' : 'button-link--inactive '}js-link-paddle" href="#pay" data-s="d-side-paddle">
+                <a class="button-link button-link--paddle ${isPaddleCountry() ? '' : 'button-link--inactive '}js-link-paddle" href="#pay" data-s="d-side-paddle">
                     <span class="button-link__text">
                         <span data-text="pay">Pay</span>
                         <span class="${offer ? 'js-price-discount' : 'js-price-regular'}">${offer ? DEFAULT_PRICE_DISCOUNT : DEFAULT_PRICE_REGULAR}</span>

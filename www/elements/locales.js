@@ -615,7 +615,7 @@ export const isEdge = navigator.userAgent.includes('Edg');
 // export const isPCountry = (['US', 'GB', 'CA', 'AU'].includes(country) || timeZone === 'UTC') && !isFirefox;
 export const isPCountry = false;
 
-export const isEUCountry = [
+const euCountries = [
     'AT',
     'BE',
     'BG',
@@ -643,7 +643,7 @@ export const isEUCountry = [
     'SE',
     'SI',
     'SK',
-].includes(country);
+];
 
 const stripeCountries = [
     'US',
@@ -665,8 +665,58 @@ const stripeCountries = [
     'ZA',
 ];
 
-export const isStripeCountry = stripeCountries.includes(country);
-export const isPaddleCountry = !isStripeCountry;
+const paddleUSStates = [
+    'GA',
+    'VA',
+    'OH',
+    'NJ',
+    'MD',
+    'MN',
+    'NV',
+    'KY',
+];
+
+const paddleCAStates = [
+    'SK',
+    'MB',
+];
+
+export let taxCountry = '';
+export let taxState = '';
+
+fetch('https://geo.darkreader.app/tax-location')
+    .then((r) => (r.ok ? r.text() : ''))
+    .then(async (text) => {
+        taxCountry = text.trim().toUpperCase();
+        if (taxCountry === 'US') {
+            const r = await fetch('https://geo.darkreader.app/tax-location/us');
+            taxState = await r.text(); 
+        } else if (taxCountry === 'CA') {
+            const r = await fetch('https://geo.darkreader.app/tax-location/ca');
+            taxState = await r.text(); 
+        }
+    })
+    .catch(() => {
+        taxCountry = '';
+    });
+
+export function isEUCountry() {
+    return euCountries.includes(taxCountry || country);
+}
+
+export function isStripeCountry() {
+    if (taxCountry === 'US' && taxState) {
+        return !paddleUSStates.includes(taxState);
+    }
+    if (taxCountry === 'CA' && taxState) {
+        return !paddleCAStates.includes(taxState);
+    }
+    return stripeCountries.includes(taxCountry || country);
+}
+
+export function isPaddleCountry() {
+    return !isStripeCountry();
+}
 
 export const offer = (() => {
     return null;
