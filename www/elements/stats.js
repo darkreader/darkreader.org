@@ -1,5 +1,5 @@
 // @ts-check
-import {country, isPCountry} from './locales.js';
+import {country, isPCountry, onLocationChange} from './locales.js';
 
 const ERROR_HANDLING_ENABLED = false;
 
@@ -124,6 +124,9 @@ if (isPCountry) {
     document.documentElement.dataset.p = 'p';
 }
 document.documentElement.dataset.c = country;
+onLocationChange((taxCountry) => {
+    document.documentElement.dataset.c = taxCountry;
+});
 if (navigator.userAgent.toLowerCase().includes('mac')) {
     document.documentElement.dataset.o = 'mac';
 }

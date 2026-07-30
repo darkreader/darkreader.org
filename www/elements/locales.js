@@ -684,10 +684,10 @@ const paddleCAStates = [
 export let taxCountry = '';
 export let taxState = '';
 
-/** @type {Array<() => void>} */
+/** @type {Array<(country: string, state: string) => void>} */
 const locationChangeListeners = [];
 
-/** @type {(callback: () => void) => void} */
+/** @type {(callback: (country: string, state: string) => void) => void} */
 export function onLocationChange(listener) {
     locationChangeListeners.push(listener);
 }
@@ -706,7 +706,7 @@ export function onLocationChange(listener) {
             const rs = await fetch('https://geo.darkreader.app/tax-location/ca');
             taxState = await rs.text();
         }
-        locationChangeListeners.forEach((listener) => listener());
+        locationChangeListeners.forEach((listener) => listener(taxCountry || country, taxState));
     } catch (err) {
     }
 })();
