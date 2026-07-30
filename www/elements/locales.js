@@ -684,21 +684,32 @@ const paddleCAStates = [
 export let taxCountry = '';
 export let taxState = '';
 
-fetch('https://geo.darkreader.app/tax-location')
-    .then((r) => (r.ok ? r.text() : ''))
-    .then(async (text) => {
-        taxCountry = text.trim().toUpperCase();
-        if (taxCountry === 'US') {
-            const r = await fetch('https://geo.darkreader.app/tax-location/us');
-            taxState = await r.text(); 
-        } else if (taxCountry === 'CA') {
-            const r = await fetch('https://geo.darkreader.app/tax-location/ca');
-            taxState = await r.text(); 
+/** @type {Array<() => void>} */
+const locationChangeListeners = [];
+
+/** @type {(callback: () => void) => void} */
+export function onLocationChange(listener) {
+    locationChangeListeners.push(listener);
+}
+
+(async () => {
+    try {
+        const r = await fetch('https://geo.darkreader.app/tax-location');
+        taxCountry = (await r.text()).trim().toUpperCase();
+        if (!taxCountry) {
+            return;
         }
-    })
-    .catch(() => {
-        taxCountry = '';
-    });
+        if (taxCountry === 'US') {
+            const rs = await fetch('https://geo.darkreader.app/tax-location/us');
+            taxState = await rs.text();
+        } else if (taxCountry === 'CA') {
+            const rs = await fetch('https://geo.darkreader.app/tax-location/ca');
+            taxState = await rs.text();
+        }
+        locationChangeListeners.forEach((listener) => listener());
+    } catch (err) {
+    }
+})();
 
 export function isEUCountry() {
     return euCountries.includes(taxCountry || country);
@@ -716,6 +727,26 @@ export function isStripeCountry() {
 
 export function isPaddleCountry() {
     return !isStripeCountry();
+}
+
+/** @type {Record<string, string>} */
+const localCurrencies = {
+    GB: 'GBP',
+    JP: 'JPY',
+    CA: 'CAD',
+    AU: 'AUD',
+    CN: 'CNY',
+};
+
+export function currency() {
+    const c = taxCountry || country;
+    if (localCurrencies.hasOwnProperty(c)) {
+        return localCurrencies[c];
+    }
+    if (isEUCountry()) {
+        return 'EUR';
+    }
+    return 'USD';
 }
 
 export const offer = (() => {

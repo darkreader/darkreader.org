@@ -1,6 +1,6 @@
 // @ts-check
 
-import {country, isEdge, isEUCountry, isPaddleCountry, isStripeCountry, offer} from './locales.js';
+import {currency, isEdge, isPaddleCountry, isStripeCountry, offer, onLocationChange} from './locales.js';
 import {initPaddle} from './paddle.js';
 import {clicker} from './stats.js';
 import {
@@ -98,7 +98,7 @@ const Prices = {
     },
 };
 
-const DEFAULT_CURRENCY = country === 'GB' ? 'GBP' : country === 'JP' ? 'JPY' : country === 'CA' ? 'CAD' : country === 'AU' ? 'AUD' : country === 'CN' ? 'CNY' : isEUCountry() ? 'EUR' : 'USD';
+const DEFAULT_CURRENCY = currency();
 const DEFAULT_PRICE_REGULAR = Prices.REGULAR[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_DISCOUNT = Prices.DISCOUNT[DEFAULT_CURRENCY];
 const DEFAULT_PRICE_CORP = Prices.CORPORATE[DEFAULT_CURRENCY];
@@ -1166,6 +1166,16 @@ class PayTiersElement extends HTMLElement {
         shadowRoot.querySelector('.currencies')?.addEventListener('change', update);
 
         update();
+
+        onLocationChange(() => {
+            const selected = /** @type {HTMLInputElement | null} */(shadowRoot.querySelector(`[name="currency"][value="${currency()}"]`));
+            if (selected) {
+                selected.checked = true;
+            }
+            s('.button-wrapper-paddle .js-link-stripe').each((node) => node.classList.toggle('button-link--inactive', !isStripeCountry()));
+            s('.button-wrapper-paddle .js-link-paddle').each((node) => node.classList.toggle('button-link--inactive', !isPaddleCountry()));
+            update();
+        });
 
         if (document.documentElement.lang === 'zh-CN') {
             s('.js-card-icon').each((node) => node.classList.add('button-link__card-icon--cn'));
