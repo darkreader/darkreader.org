@@ -716,7 +716,14 @@ export function isEUCountry() {
 }
 
 export function isStripeCountry() {
-    if (taxCountry === 'US' && taxState) {
+    if (taxCountry === 'US' || country === 'US') {
+        if (
+            !taxState ||
+            !taxCountry ||
+            country !== 'US'
+        ) {
+            return false;
+        }
         return !paddleUSStates.includes(taxState);
     }
     if (taxCountry === 'CA' && taxState) {
