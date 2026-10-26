@@ -127,6 +127,8 @@ document.documentElement.dataset.c = country;
 onLocationChange((taxCountry) => {
     document.documentElement.dataset.c = taxCountry;
 });
-if (navigator.userAgent.toLowerCase().includes('mac')) {
+if (navigator.userAgent.toLowerCase().includes('iphone')) {
+    document.documentElement.dataset.o = 'ios';
+} else if (navigator.userAgent.toLowerCase().includes('mac')) {
     document.documentElement.dataset.o = 'mac';
 }
