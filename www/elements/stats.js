@@ -42,6 +42,19 @@ function viewer() {
     fetch(`https://count.darkreader.app/view/v1/${params}`);
 }
 
+let didLoad = false;
+
+function loader() {
+    if (didLoad) return;
+    const path = location.pathname;
+    const lang = navigator.language;
+    const time = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const ref = document.referrer.replace(/^.*:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
+    const params = encodeParams(path, lang, time, ref);
+    fetch(`https://events.darkreader.app/load/v1/${params}`);
+    didLoad = true;
+}
+
 async function checkNetErrors() {
     if (!ERROR_HANDLING_ENABLED) {
         return;
@@ -132,3 +145,5 @@ if (navigator.userAgent.toLowerCase().includes('iphone')) {
 } else if (navigator.userAgent.toLowerCase().includes('mac')) {
     document.documentElement.dataset.o = 'mac';
 }
+
+loader();
